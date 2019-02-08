@@ -20,28 +20,66 @@ jobs:
   manifest:
     docker:
     - image: circleci/golang:1.11.5
-    working_directory: /go/src/github.com/stackrox/kernel-packer
+    environment:
+    - GOPATH: /home/circleci/go
+    working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
     - checkout
     - run:
         name: Generate manifest
-        command: make manifest | tee manifest.yml
+        command: make manifest
     - persist_to_workspace:
         root: .
         paths:
-        - manifest.yml
+        - .build-data
 
   repackage:
-    docker:
-      - image: circleci/golang:1.11.5
-    working_directory: /go/src/github.com/stackrox/kernel-packer
+    machine: true
+    parallelism: 3
+    environment:
+    - GOPATH: /home/circleci/go
+    working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
-      - checkout
-      - attach_workspace:
-          at: /go/src/github.com/stackrox/kernel-packer
-      - run:
-          name: Print manifest
-          command: cat manifest.yml
+    - checkout
+    - attach_workspace:
+        at: .
+    - run:
+        name: Sanity check manifest
+        command: cat .build-data/manifest.yml
+    - run:
+        name: Download cache
+        command: |
+          mkdir -p .build-data/fragments
+          touch .build-data/cache.yml
+    - run:
+        name: Repackage kernels
+        command: make repackage
+    - persist_to_workspace:
+        root: .
+        paths:
+          - .build-data
+
+  combine:
+    docker:
+    - image: circleci/golang:1.11.5
+    environment:
+    - GOPATH: /home/circleci/go
+    working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
+    steps:
+    - checkout
+    - attach_workspace:
+        at: .
+    - run:
+        name: Sanity check fragments
+        command: ls -lh .build-data/fragments
+    - run:
+        name: Combine cache fragments
+        command: |
+          make combine-cache
+          make clean-cache
+    - run:
+        name: Upload cache
+        command: cat .build-data/cache.yml
 
 workflows:
   version: 2
@@ -52,3 +90,6 @@ workflows:
     - repackage:
         requires:
         - manifest
+    - combine:
+        requires:
+        - repackage

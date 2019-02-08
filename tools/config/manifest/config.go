@@ -31,6 +31,9 @@ type Manifest struct {
 	Build       bool
 	Id          string
 	URL         string
+	Version     string
+	Git         string
+	Artifact    string
 }
 
 // Load reads the given filename as yaml and parses the content into a list of
@@ -61,4 +64,30 @@ func ChecksumPackageNames(packages []string) string {
 	}
 
 	return fmt.Sprintf("%x", s.Sum(nil))
+}
+
+// Manifests iterates across the given Builders and returns a consistently
+// ordered list of build manifests as a cross-product.
+func (b *Builders) Manifests() []*Manifest {
+	var manifests = make([]*Manifest, 0, 512)
+
+	for name, builder := range *b {
+		for id, packages := range builder.Packages {
+			manifest := Manifest{
+				Builder:     name,
+				Description: builder.Description,
+				Kind:        builder.Kind,
+				Packages:    packages,
+				Build:       false,
+				Id:          id,
+			}
+			manifests = append(manifests, &manifest)
+		}
+	}
+
+	sort.SliceStable(manifests, func(i, j int) bool {
+		return manifests[i].Id < manifests[j].Id
+	})
+
+	return manifests
 }
