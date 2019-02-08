@@ -32,16 +32,52 @@ jobs:
         command: go test -v ./...
 
   repackage:
-    docker:
-      - image: circleci/golang:1.11.5
-    working_directory: /go/src/github.com/stackrox/kernel-packer
+    machine: true
+    parallelism: 3
+    environment:
+    - GOPATH: /home/circleci/go
+    working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
-      - checkout
-      - attach_workspace:
-          at: /go/src/github.com/stackrox/kernel-packer
-      - run:
-          name: Print manifest
-          command: cat kernel-package-lists/manifest.yml
+    - checkout
+    - attach_workspace:
+        at: .
+    - run:
+        name: Sanity check manifest
+        command: cat kernel-package-lists/manifest.yml
+    - run:
+        name: Download cache
+        command: |
+          mkdir -p .build-data/cache
+          touch .build-data/cache/cache.yml
+    - run:
+        name: Repackage kernels
+        command: make repackage
+    - persist_to_workspace:
+        root: .
+        paths:
+          - .build-data
+
+  combine:
+    docker:
+    - image: circleci/golang:1.11.5
+    environment:
+    - GOPATH: /home/circleci/go
+    working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
+    steps:
+    - checkout
+    - attach_workspace:
+        at: .
+    - run:
+        name: Sanity check fragments
+        command: ls -lh .build-data/cache
+    - run:
+        name: Combine cache fragments
+        command: |
+          make combine-cache
+          make clean-cache
+    - run:
+        name: Upload cache
+        command: cat .build-data/cache/cache.yml
 
   crawl:
     machine: true
@@ -73,11 +109,14 @@ workflows:
     jobs:
     - lint
     - repackage
+    - combine:
+        requires:
+        - repackage
     - crawl:
         filters:
           branches:
             only:
-              - /.*dev-crawl.*/
+            - /.*dev-crawl.*/
 
   cron:
     jobs:
