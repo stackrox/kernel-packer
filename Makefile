@@ -2,3 +2,7 @@
 .PHONY: crawl
 crawl:
 	make -C kernel-crawler crawl
+
+.PHONY: manifest
+manifest:
+	@go run ./tools/generate-manifest -config kernel-package-lists/reformat.yml

@@ -1,0 +1,54 @@
+version: 2
+
+jobs:
+  lint:
+    docker:
+    - image: circleci/golang:1.11.5
+    working_directory: /go/src/github.com/stackrox/kernel-packer
+    steps:
+    - checkout
+    - run:
+        name: Install dependencies
+        command: |
+          go get golang.org/x/tools/cmd/goimports
+    - run:
+        name: Run tests
+        command: |
+          gofiles="$(find . -name '*.go' | grep -v /vendor/)"
+          test -z "$(goimports -l -local github.com/stackrox/kernel-packer $gofiles)"
+
+  manifest:
+    docker:
+    - image: circleci/golang:1.11.5
+    working_directory: /go/src/github.com/stackrox/kernel-packer
+    steps:
+    - checkout
+    - run:
+        name: Generate manifest
+        command: make manifest | tee manifest.yml
+    - persist_to_workspace:
+        root: .
+        paths:
+        - manifest.yml
+
+  repackage:
+    docker:
+      - image: circleci/golang:1.11.5
+    working_directory: /go/src/github.com/stackrox/kernel-packer
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /go/src/github.com/stackrox/kernel-packer
+      - run:
+          name: Print manifest
+          command: cat manifest.yml
+
+workflows:
+  version: 2
+  build:
+    jobs:
+    - lint
+    - manifest
+    - repackage:
+        requires:
+        - manifest
