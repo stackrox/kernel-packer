@@ -28,3 +28,7 @@ combine-cache:
 .PHONY: clean-cache
 clean-cache:
 	@rm -rf .build-data/fragments
+
+.PHONY: robo-commit
+robo-commit:
+	@make -C kernel-crawler commit
