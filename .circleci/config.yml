@@ -43,8 +43,22 @@ jobs:
           name: Print manifest
           command: cat manifest.yml
 
+  crawl:
+    docker:
+    - image: circleci/golang:1.11.5
+    steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Crawl package repositories
+        command: make crawl
+    - run:
+        name: Push any changes
+        command: make robo-commit
+
 workflows:
   version: 2
+
   build:
     jobs:
     - lint
@@ -52,3 +66,14 @@ workflows:
     - repackage:
         requires:
         - manifest
+
+  cron:
+    jobs:
+    - crawl
+    triggers:
+    - schedule:
+        cron: "0 0,3,6,9,12,15,18,21 * * *"
+        filters:
+          branches:
+            only:
+            - master
