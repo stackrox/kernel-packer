@@ -10,3 +10,7 @@ manifest:
 .PHONY: robo-commit
 robo-commit:
 	@make -C kernel-crawler commit
+
+.PHONY: sync
+sync:
+	@make -C kernel-crawler sync

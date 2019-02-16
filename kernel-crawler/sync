@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+
+info() {
+    echo "[INFO] $*" 1>&2
+}
+
+main() {
+    # Directory that holds the crawled url text files.
+    #
+    # Example: "./kernel-package-lists"
+    package_list_dir="$1"
+
+    # GCS bucket containing uploaded files.
+    #
+    # Example: "gs://stackrox-kernel-packages"
+    bucket_name="$2"
+
+    # Directory to download urls into.
+    #
+    # Example: ".build-data/downloads"
+    download_dir="$3"
+    mkdir -p "$download_dir"
+
+    info 'Generating a list of crawled urls.'
+    all_crawled_packages="$(find "$package_list_dir" -name '*.txt' -exec cat '{}' + | sort | uniq)"
+    echo "$all_crawled_packages"
+    echo
+
+    info 'Generating a list of bucket files.'
+    all_bucket_files="$(gsutil ls "$bucket_name" | strip_bucket_prefix)"
+    echo "$all_bucket_files"
+    echo
+
+    info 'Downloading missing files.'
+    while read -r url; do
+        # Simplify url into the naming scheme used in the bucket.
+        filename="$(simplify "$url")"
+
+        # Check if this specific file exists in the bucket listing.
+        if ! echo "$all_bucket_files" | contains "$filename"; then
+            echo "Downloading $url"
+
+            # This file didn't exist in the bucket listing, so download it.
+            download "$url" "${download_dir}/${filename}"
+        fi
+    done <<< "$all_crawled_packages"
+    echo
+
+    info 'Sanity checking downloaded files.'
+    find "${download_dir}" -size 0 -delete -print
+    echo
+
+    info 'Uploading files to bucket.'
+    find "$download_dir" -type f | gsutil -m cp -I "$bucket_name"
+    echo
+}
+
+contains() {
+    grep -qF "$1"
+}
+
+download() {
+    url="$1"
+    file="$2"
+    wget -nv "$url" -O "$file" || rm -f "$file"
+}
+
+simplify() {
+    echo "$1" | tr -c 'a-zA-Z0-9_.\n-' '-'
+}
+
+strip_bucket_prefix() {
+    sed 's|gs://.*/||'
+}
+
+main "$@"

@@ -1,4 +1,15 @@
-version: 2
+version: 2.1
+
+commands:
+  gcloud-init:
+    steps:
+    - run:
+        name: Install and configure gcloud
+        working_directory: ~/.config/gcloud
+        command: |
+          pip install -U crcmod google_compute_engine
+          gcloud auth activate-service-account --key-file <(echo "$GOOGLE_CREDENTIALS_KERNEL_CACHE")
+          gcloud auth list
 
 jobs:
   lint:
@@ -47,14 +58,16 @@ jobs:
           command: cat manifest.yml
 
   crawl:
-    docker:
-    - image: circleci/golang:1.11.5
+    machine: true
     steps:
+    - gcloud-init
     - checkout
-    - setup_remote_docker
     - run:
         name: Crawl package repositories
         command: make crawl
+    - run:
+        name: Download and reupload crawled files
+        command: make sync
     - run:
         name: Push any changes
         command: make robo-commit
@@ -69,6 +82,11 @@ workflows:
     - repackage:
         requires:
         - manifest
+    - crawl:
+        filters:
+          branches:
+            only:
+              - /.*dev-crawl.*/
 
   cron:
     jobs:
