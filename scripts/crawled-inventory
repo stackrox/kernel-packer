@@ -1,0 +1,12 @@
+#!/bin/sh
+
+main() {
+    # Directory that holds the crawled url text files.
+    #
+    # Example: "./kernel-package-lists"
+    package_list_dir="$1"
+
+    find "$package_list_dir" -name '*.txt' -exec cat '{}' + | sort | uniq
+}
+
+main "$@"

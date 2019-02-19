@@ -1,0 +1,16 @@
+#!/bin/sh
+
+main() {
+    # GCS bucket containing uploaded files.
+    #
+    # Example: "gs://stackrox-kernel-packages"
+    bucket_name="${1:-gs://stackrox-kernel-packages}"
+
+    gsutil --quiet ls "$bucket_name" | strip_bucket_prefix | sort
+}
+
+strip_bucket_prefix() {
+    sed 's|.*/||'
+}
+
+main "$@"
