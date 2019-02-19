@@ -1,5 +1,6 @@
 # Directory to output crawled text files into.
 CRAWLED_PACKAGE_DIR ?= ../kernel-package-lists
+KERNEL_PACKAGE_BUCKET ?= gs://stackrox-kernel-packages
 
 .DEFAULT_GOAL = all
 .PHONY: all
@@ -41,3 +42,8 @@ crawl: build-crawl-container crawl-kops crawl-amazon
 .PHONY: commit
 commit:
 	@./robo-commit $(CRAWLED_PACKAGE_DIR)
+
+.PHONY: sync
+sync:
+	@mkdir -p ../.build-data/downloads
+	@./sync $(CRAWLED_PACKAGE_DIR) $(KERNEL_PACKAGE_BUCKET) ../.build-data/downloads
