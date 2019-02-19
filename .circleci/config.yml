@@ -12,10 +12,13 @@ jobs:
         command: |
           go get golang.org/x/tools/cmd/goimports
     - run:
-        name: Run tests
+        name: Run linters
         command: |
           gofiles="$(find . -name '*.go' | grep -v /vendor/)"
           test -z "$(goimports -l -local github.com/stackrox/kernel-packer $gofiles)"
+    - run:
+        name: Run tests
+        command: go test -v ./...
 
   manifest:
     docker:

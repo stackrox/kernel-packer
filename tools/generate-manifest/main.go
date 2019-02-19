@@ -51,6 +51,10 @@ func mainCmd() error {
 			return err
 		}
 
+		for index, pkg := range packages {
+			packages[index] = manifest.Simplify(pkg)
+		}
+
 		reformatter := reformatters[entry.Reformat]
 		packageSets, err := reformatter(packages)
 		if err != nil {
