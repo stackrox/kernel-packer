@@ -62,3 +62,24 @@ func ChecksumPackageNames(packages []string) string {
 
 	return fmt.Sprintf("%x", s.Sum(nil))
 }
+
+func Simplify(s string) string {
+	var result = ""
+
+	for _, rune := range s {
+		switch {
+		case 'a' <= rune && rune <= 'z':
+			fallthrough
+		case 'A' <= rune && rune <= 'Z':
+			fallthrough
+		case '0' <= rune && rune <= '9':
+			fallthrough
+		case '_' == rune || '.' == rune || '-' == rune:
+			result += string(rune)
+		default:
+			result += "-"
+		}
+	}
+
+	return result
+}
