@@ -8,6 +8,8 @@ amazon:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-481f28639c1695786af479b6d69ee095cb70f328c964274a986200ee13c33c96-kernel-devel-4.9.70-2.243.amzn2.x86_64.rpm
     2d2a856e9495b475f857fd39fadfbaa1efee99238111ed2f509ddd4e89b6ec50:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-58c985fddfcaf4352a61b9682a9627c7d1af7f369da5a05bb54f3e66d69e6b7a-kernel-devel-4.14.62-70.117.amzn2.x86_64.rpm
+    4a1c037b8f1abb9b99858626ef77e1763500afb7d678f8da237daca792587c76:
+    - http---amazonlinux.us-west-2.amazonaws.com-blobstore-1d59b2e7fcf853883167dde06fad6267cce308b8f2f33124cdb4b747a518ac5c-kernel-devel-4.14.94-89.73.amzn2.x86_64.rpm
     5c9083566f7c9c07c8021733a7d82332d8b20ef024695c02778023fa3728723e:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-b7c31d392e4b09503950d7d4c6590000cd7b7111d304e02e01b6b884a5882baf-kernel-devel-4.9.77-41.59.amzn2.x86_64.rpm
     5ff93dfff2904f279ed79f4f8bb823a0ec5fbf698c2683cc6fffc9c1a901f465:
@@ -22,6 +24,8 @@ amazon:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-961c3f208e61435f3d35f02115e3b2a94a42b5f264fac75d71ccabfa76dc947d-kernel-devel-4.9.76-38.79.amzn2.x86_64.rpm
     0039b1830e88cd71f4a4a77d876f965c1bcf546694d875abf0304af20af096ee:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-1f2a8f97b200fb733971427e3a0d77fabaf2539a4a0f83178abf03afc123b55c-kernel-devel-4.14.33-59.37.amzn2.x86_64.rpm
+    45be6ac97e54634bffb3d4344d9e73661c316ee927a727f32e0757d0568113a4:
+    - http---amazonlinux.us-west-2.amazonaws.com-blobstore-8cc01ea526bd05bbb937fbb21bd734de49255d8a9853943ee901ccdf487ee23b-kernel-devel-4.14.33-59.34.amzn2.x86_64.rpm
     432d73029699c4806cc71d2413f7ff4840d65f30332c04de6ff1149e4e1ac57c:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-05b73c14084f2f5986549eae006bed1c695ca1342f5bbcb7882369bf199c457c-kernel-devel-4.9.85-47.59.amzn2.x86_64.rpm
     0664dd8da331d16af29b130de20c313761f52166fb98e06e8737608de1dac03c:
@@ -30,12 +34,8 @@ amazon:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-ed05d54929a5814fdcbd8b4a8c835538032b243e1d1b69b5d08b6e9b2c11df3d-kernel-devel-4.14.42-61.37.amzn2.x86_64.rpm
     4524fe45e02c557c8e142695a7e37e2657c0595be84d08fdd4aee851951943a7:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-36709bc1af006d547d723e6dc99905667c7e7f1b11f249ea87c923807b0a44e2-kernel-devel-4.9.81-44.57.amzn2.x86_64.rpm
-    45be6ac97e54634bffb3d4344d9e73661c316ee927a727f32e0757d0568113a4:
-    - http---amazonlinux.us-west-2.amazonaws.com-blobstore-8cc01ea526bd05bbb937fbb21bd734de49255d8a9853943ee901ccdf487ee23b-kernel-devel-4.14.33-59.34.amzn2.x86_64.rpm
     41253b6fdfb6f3d78968d963065a430a80197b2ce1010811270d82dcc4e4f84e:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-553e60923b1173b225de6618cf7625b197f2a69dbec3c4dea19b2e64a6b93b5c-kernel-devel-4.14.88-88.73.amzn2.x86_64.rpm
-    4a1c037b8f1abb9b99858626ef77e1763500afb7d678f8da237daca792587c76:
-    - http---amazonlinux.us-west-2.amazonaws.com-blobstore-1d59b2e7fcf853883167dde06fad6267cce308b8f2f33124cdb4b747a518ac5c-kernel-devel-4.14.94-89.73.amzn2.x86_64.rpm
     9284857d16e1627ad3479394f3f9adae6d43f56de85749f3bca3c2b692aba2ae:
     - http---amazonlinux.us-west-2.amazonaws.com-blobstore-0cea2749a68ec7ee0c9207d9993814c692d11c320e4b4570aea73995bc6e018b-kernel-devel-4.9.85-46.56.amzn2.x86_64.rpm
     965943875dd46b9c78637a08eb8efaf0408cf18fb816b4c86ee06aaf629cd5e0:
@@ -68,26 +68,26 @@ centos:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.169-1.el7.elrepo.x86_64.rpm
     3f8c1afbb570f023322da0a94c38c3bfd7f249b888594c594e4bc107cb0895c1:
     - http---vault.centos.org-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.6.3.el7.x86_64.rpm
+    3ff319b5140c05508e9ec59e07b20ca95f5654f52de4d260334480560e17c084:
+    - http---vault.centos.org-7.3.1611-os-x86_64-Packages-kernel-devel-3.10.0-514.el7.x86_64.rpm
     5db62adbe0ab1b80eb44b216ed03a7ee6e89e9e0b93e60cd7d6b21bce78b259a:
     - http---vault.centos.org-7.4.1708-updates-x86_64-Packages-kernel-devel-3.10.0-693.11.1.el7.x86_64.rpm
     5f45276062d1fc103bca86d173b91f809d377b6c84dc8a3a4dec24e4faec9c4c:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.168-1.el7.elrepo.x86_64.rpm
-    8a8e0614fcd232761c8ec95b866014c69560e4a92a2b581a94237e400770fa70:
-    - https---mirrors.kernel.org-centos-7.6.1810-os-x86_64-Packages-kernel-devel-3.10.0-957.el7.x86_64.rpm
-    9e93a40f44ef49b34d7dfa89993301156e0e6ed1266d257ed3e93e68bd4cd195:
-    - http---vault.centos.org-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm
-    34f19f0616b9b87fccd571fe861d1be4da922df9ce06009362b8b953850247eb:
-    - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.26.2.el7.x86_64.rpm
-    3ff319b5140c05508e9ec59e07b20ca95f5654f52de4d260334480560e17c084:
-    - http---vault.centos.org-7.3.1611-os-x86_64-Packages-kernel-devel-3.10.0-514.el7.x86_64.rpm
-    73c999716cf3258917d006b2af93f60d3d59bbbcd867e34225c6b6d45b95a9ef:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.171-1.el7.elrepo.x86_64.rpm
     7b05b399e557baef74ace5226424b7b4db36588689f6941a5d4d98f4b38707a7:
     - http---vault.centos.org-7.5.1804-os-x86_64-Packages-kernel-devel-3.10.0-862.el7.x86_64.rpm
     7d67a6929ab67f3a4436092c55cd28c51c6b0b32070454214ba11f408769ed89:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.160-1.el7.elrepo.x86_64.rpm
     7d36330241d6809b18751ecff70454dccc110714e2763576531e1a519c342ee3:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.159-1.el7.elrepo.x86_64.rpm
+    8a8e0614fcd232761c8ec95b866014c69560e4a92a2b581a94237e400770fa70:
+    - https---mirrors.kernel.org-centos-7.6.1810-os-x86_64-Packages-kernel-devel-3.10.0-957.el7.x86_64.rpm
+    9e93a40f44ef49b34d7dfa89993301156e0e6ed1266d257ed3e93e68bd4cd195:
+    - http---vault.centos.org-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm
+    34f19f0616b9b87fccd571fe861d1be4da922df9ce06009362b8b953850247eb:
+    - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.26.2.el7.x86_64.rpm
+    73c999716cf3258917d006b2af93f60d3d59bbbcd867e34225c6b6d45b95a9ef:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.171-1.el7.elrepo.x86_64.rpm
     98b179959e3efd507f1952ee2b74a318e810ccf515d0e533e30aba36852314e1:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.167-1.el7.elrepo.x86_64.rpm
     473faa762e6d6ba99b3e37362a5237588dbc9802eeec548b32b3822b84a7aae0:
@@ -152,12 +152,6 @@ centos-uncrawled:
   packages:
     00d5689ce637e3de3289ef1f7450d72e96deff669fca440bb4a23a43eaa47e82:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.35-1.el7.elrepo.x86_64.rpm
-    01cd0c7d4e20c444c6f950eac3082f1fb0fc282acfd181e325bc8f300d0bad99:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.50-1.el7.elrepo.x86_64.rpm
-    03cde90e8e924529045a1ae3be59d2cc06c59886c26c3cb6f249983b37dc4fb9:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.113-1.el7.elrepo.x86_64.rpm
-    003e52702bab663cbd876d8ccb4e87234b7a13f1d54dee991c60928d5bed10bf:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.115-1.el7.elrepo.x86_64.rpm
     0abf1eb1b40fd3113ad447d92783ab57ae41ffe83a9ba5faa34f467f7b743997:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.145-1.el7.elrepo.x86_64.rpm
     0bb13ddf6faa54af0ad9bbb56aa580d06eb458948d1927ba4353495a2dea5792:
@@ -174,6 +168,8 @@ centos-uncrawled:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.45-1.el7.elrepo.x86_64.rpm
     1f09c83725d65e12b47850f4b5e3c8f055449a190abc795220cda6d5a662055d:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.127-1.el7.elrepo.x86_64.rpm
+    01cd0c7d4e20c444c6f950eac3082f1fb0fc282acfd181e325bc8f300d0bad99:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.50-1.el7.elrepo.x86_64.rpm
     2b5f4e16527c3d4a5b1d02b6874578ca079fec5df97e6f0650eb1b5e971ee97c:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.51-1.el7.elrepo.x86_64.rpm
     2eae39f160c1b93b6d2f2f8e7087eebb5ce56c87f9a5d2209209a7c7e73aeac8:
@@ -188,6 +184,16 @@ centos-uncrawled:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.84-1.el7.elrepo.x86_64.rpm
     3edb4969f2480c7e3c50ca822747dbe05be4a72c1afd0d6f550e218dc37367fb:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.69-1.el7.elrepo.x86_64.rpm
+    03cde90e8e924529045a1ae3be59d2cc06c59886c26c3cb6f249983b37dc4fb9:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.113-1.el7.elrepo.x86_64.rpm
+    003e52702bab663cbd876d8ccb4e87234b7a13f1d54dee991c60928d5bed10bf:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.115-1.el7.elrepo.x86_64.rpm
+    409b60ec0eac2724bb430a2b08a984a29b74bcabc0f441c2f660134026d094ce:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.132-1.el7.elrepo.x86_64.rpm
+    432ea137af28daf2eaf0e62bfc173f6f354da35f6c85fa8009eef50a47703385:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.6-1.el7.elrepo.x86_64.rpm
+    468f459784548bf128aa0a224b1b29dd93aaa055131b4a622b2c6b29b58c4a9c:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.75-1.el7.elrepo.x86_64.rpm
     4dc0a9a55c21d8865862d5332348bd6f92823c222e28b919f84dcf2e5429e909:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.143-1.el7.elrepo.x86_64.rpm
     4df163251f787aef5aa22dabbdaae8e10fc1a0944619071cd925cdafcd9a97e7:
@@ -196,30 +202,6 @@ centos-uncrawled:
     - https---mirrors.kernel.org-centos-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.3.2.el7.x86_64.rpm
     4f07cc1bf728b664e54216f94e77e88afaf5670aba9853eb41562681a8bad1c4:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.63-1.el7.elrepo.x86_64.rpm
-    53c4af7f8bde3bbd3c81b404303ff8ff8228f21e755775cac44fd602d5c222dd:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.24-1.el7.elrepo.x86_64.rpm
-    56bce646eae241b9568a34bf3604eeaf224e221dca7a05af092294d283646f0e:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.123-1.el7.elrepo.x86_64.rpm
-    57a6716d7f1f1114a91efa8134e7618a768d87a3a82a45401b78faf040b4ff66:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.108-1.el7.elrepo.x86_64.rpm
-    514ab813eae8ea274ed6cd81467d80c4b55ac3884374e9036f5cab9e81210c4e:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.7-1.el7.elrepo.x86_64.rpm
-    518ac4956694127d1fd557f0af06d92a2f2cfb20139c9c480b763c21ab71e3fd:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.54-1.el7.elrepo.x86_64.rpm
-    537b33a67416d8dcfe993b1cd874b16f69ec41343860adde1a07c043c478d5f2:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.38-1.el7.elrepo.x86_64.rpm
-    5a9c29d4c0db2a46244f29c9d4b6a9d3009a10236963c599b8dee3603d2d53d0:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.18-1.el7.elrepo.x86_64.rpm
-    5b59eb37990dc808ce983b55e8e1e9d780d0725ec29fc48405fcc37b07c443ee:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.64-1.el7.elrepo.x86_64.rpm
-    5b6600961b2b06281d21ef6adb2b277ea0c7a4ddacea49be3491849b14c09b04:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.153-1.el7.elrepo.x86_64.rpm
-    5d316167ad9bb6b24cbc57f4071377f2aac8e15e62931ea256a7047f13c66f7e:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.122-1.el7.elrepo.x86_64.rpm
-    5f3f8a2f833a7719bd251517983dfc4c5d1d370ec0050e81b86beca7ce7062ff:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.59-1.el7.elrepo.x86_64.rpm
-    5f8a412dd3d7042369ee46d040077455a8a745d27ae4e70d2c295acd2233aab0:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.20-1.el7.elrepo.x86_64.rpm
     05f6a5ac17155d6e4a88669fbf3233d5098260d62c74b4e44ee8c030b6874a8d:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.52-1.el7.elrepo.x86_64.rpm
     6a20680ad53af98e743758e59365ad769b7dda58acb158c99ff6d08725f4151f:
@@ -236,6 +218,18 @@ centos-uncrawled:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.73-1.el7.elrepo.x86_64.rpm
     7c716248579b3ecf81cc852c2ff3c3b8bf80de4f6ab57190ba1ea647bce7c0ca:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.138-1.el7.elrepo.x86_64.rpm
+    8a8a03ff7a955ebf3fbdab83fc9a6d7335598b09ba96a12fdead71aa013ac55c:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.42-1.el7.elrepo.x86_64.rpm
+    8a8c22bc972dfdaa36f436c5075b5f1c9d376340af85a20c463bd18934732194:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.79-1.el7.elrepo.x86_64.rpm
+    8a64b9355544a87fbfcc2771f09e1b645e3166ad6f313ff13f526643fb41ca3c:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.32-1.el7.elrepo.x86_64.rpm
+    8d4bc19240b84a147d5301a114ba4e42e9aee0118341c221e05a442f16f9a491:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.57-1.el7.elrepo.x86_64.rpm
+    92a164c75883a00a6416ef0ccbf99d0de5943eaf6dc9075798f44acccf8dda1b:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.137-1.el7.elrepo.x86_64.rpm
+    95e52486c2fc49ee764c9f2fb588f00fd80453b0393cd43a2d0e05007233fb34:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.110-1.el7.elrepo.x86_64.rpm
     9ab31c48a1882252af8d7a539efa04e96e15fc6d9fec6db1f8b58798d11c2448:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.29-1.el7.elrepo.x86_64.rpm
     9ad4e747315df435b8c44cb8ab62fe67b6af411fb765ce20cdd18e01f74c43d8:
@@ -256,6 +250,12 @@ centos-uncrawled:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.46-1.el7.elrepo.x86_64.rpm
     043dc4fcb75998a852c3e34065ed6f3f05c2e870d606aebc140bdd2c18e9bf30:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.37-1.el7.elrepo.x86_64.rpm
+    53c4af7f8bde3bbd3c81b404303ff8ff8228f21e755775cac44fd602d5c222dd:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.24-1.el7.elrepo.x86_64.rpm
+    56bce646eae241b9568a34bf3604eeaf224e221dca7a05af092294d283646f0e:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.123-1.el7.elrepo.x86_64.rpm
+    57a6716d7f1f1114a91efa8134e7618a768d87a3a82a45401b78faf040b4ff66:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.108-1.el7.elrepo.x86_64.rpm
     63cf2a14d6a3f3df710bd8f1933cf31ee9c114e79598d7a52fb11055ed5fdeb2:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.48-1.el7.elrepo.x86_64.rpm
     70f3cdd1f5bf0d4d157f14f4dc16228c47420151f4df85f5f17a4b1e0d7abe19:
@@ -268,10 +268,6 @@ centos-uncrawled:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.125-1.el7.elrepo.x86_64.rpm
     89cad56a8c6c4163b535ed4342171c42bb96dc105ae4a5faf85770755c25ad1b:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.19-1.el7.elrepo.x86_64.rpm
-    92a164c75883a00a6416ef0ccbf99d0de5943eaf6dc9075798f44acccf8dda1b:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.137-1.el7.elrepo.x86_64.rpm
-    95e52486c2fc49ee764c9f2fb588f00fd80453b0393cd43a2d0e05007233fb34:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.110-1.el7.elrepo.x86_64.rpm
     111c007e733ca7f4e1dd84977a6934561882441eeeba13233f2ada8fa5fcfa5a:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.89-1.el7.elrepo.x86_64.rpm
     0191fe0a8a19c475ac2090933fa288ec74a7363c44ed056a0c8f70bd404b9ceb:
@@ -280,12 +276,24 @@ centos-uncrawled:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.56-1.el7.elrepo.x86_64.rpm
     298f3c02500a231a66f9aaceb48e642fab4db585c120f3151cd2c9fe7f7b52bc:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.96-1.el7.elrepo.x86_64.rpm
-    409b60ec0eac2724bb430a2b08a984a29b74bcabc0f441c2f660134026d094ce:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.132-1.el7.elrepo.x86_64.rpm
-    432ea137af28daf2eaf0e62bfc173f6f354da35f6c85fa8009eef50a47703385:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.6-1.el7.elrepo.x86_64.rpm
-    468f459784548bf128aa0a224b1b29dd93aaa055131b4a622b2c6b29b58c4a9c:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.75-1.el7.elrepo.x86_64.rpm
+    514ab813eae8ea274ed6cd81467d80c4b55ac3884374e9036f5cab9e81210c4e:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.7-1.el7.elrepo.x86_64.rpm
+    518ac4956694127d1fd557f0af06d92a2f2cfb20139c9c480b763c21ab71e3fd:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.54-1.el7.elrepo.x86_64.rpm
+    537b33a67416d8dcfe993b1cd874b16f69ec41343860adde1a07c043c478d5f2:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.38-1.el7.elrepo.x86_64.rpm
+    5a9c29d4c0db2a46244f29c9d4b6a9d3009a10236963c599b8dee3603d2d53d0:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.18-1.el7.elrepo.x86_64.rpm
+    5b59eb37990dc808ce983b55e8e1e9d780d0725ec29fc48405fcc37b07c443ee:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.64-1.el7.elrepo.x86_64.rpm
+    5b6600961b2b06281d21ef6adb2b277ea0c7a4ddacea49be3491849b14c09b04:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.153-1.el7.elrepo.x86_64.rpm
+    5d316167ad9bb6b24cbc57f4071377f2aac8e15e62931ea256a7047f13c66f7e:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.122-1.el7.elrepo.x86_64.rpm
+    5f3f8a2f833a7719bd251517983dfc4c5d1d370ec0050e81b86beca7ce7062ff:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.59-1.el7.elrepo.x86_64.rpm
+    5f8a412dd3d7042369ee46d040077455a8a745d27ae4e70d2c295acd2233aab0:
+    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.20-1.el7.elrepo.x86_64.rpm
     650f4b7e9d47162242325846bd5a71a9fe1a1439885d9b69d29ca5f95c68030a:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.90-1.el7.elrepo.x86_64.rpm
     684c46fff038fa0cce5b6c37eea5750fbdc1dab1301c5ef976f82e1ab10c0224:
@@ -296,14 +304,6 @@ centos-uncrawled:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.140-1.el7.elrepo.x86_64.rpm
     810e1e47a6c34fea277af80e45acb63f6949c15dd26852e34df99b312e0993b0:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.80-1.el7.elrepo.x86_64.rpm
-    8a8a03ff7a955ebf3fbdab83fc9a6d7335598b09ba96a12fdead71aa013ac55c:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.42-1.el7.elrepo.x86_64.rpm
-    8a8c22bc972dfdaa36f436c5075b5f1c9d376340af85a20c463bd18934732194:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.79-1.el7.elrepo.x86_64.rpm
-    8a64b9355544a87fbfcc2771f09e1b645e3166ad6f313ff13f526643fb41ca3c:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.32-1.el7.elrepo.x86_64.rpm
-    8d4bc19240b84a147d5301a114ba4e42e9aee0118341c221e05a442f16f9a491:
-    - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.57-1.el7.elrepo.x86_64.rpm
     906ee03af68a86dd1d3220e64bc910f5ad1326ec44418e75b12eed6ccae253b3:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.92-1.el7.elrepo.x86_64.rpm
     942bd866f663065994dbc476f7e91cdc2932da05d88f42c51d8589b5a07f3a1d:
@@ -366,8 +366,6 @@ centos-uncrawled:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.16-1.el7.elrepo.x86_64.rpm
     a00b49b04374510e3a48cc93e3124e504ecbdbc1218407a3f97c3959ca87ab0d:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.40-1.el7.elrepo.x86_64.rpm
-    a6b8b901f98fc16f8956e8e8b918cb01c569679e624d90731b12273a47f7be8a:
-    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.154-1.el7.elrepo.x86_64.rpm
     a7ba90ee2909099852f95d5bb70a3cd7e4881e9e6ccd448a838d7296351ae3ba:
     - https---mirrors.kernel.org-centos-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.11.6.el7.x86_64.rpm
     a11df5093e4119566049db2bb7de134fee7e2aa9a73ec41bc8c99763ddced5de:
@@ -376,6 +374,8 @@ centos-uncrawled:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.151-1.el7.elrepo.x86_64.rpm
     a65775de365c4cc55bd4e94257546a59edc35ce99acfd706a59a8b48048799df:
     - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.70-1.el7.elrepo.x86_64.rpm
+    a6b8b901f98fc16f8956e8e8b918cb01c569679e624d90731b12273a47f7be8a:
+    - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.154-1.el7.elrepo.x86_64.rpm
     aaa8845616fc92136a17d272eda75e0b8225dc02da7933c13ce5f826bf2b513a:
     - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.142-1.el7.elrepo.x86_64.rpm
     acff4c1dd98386703b586a88e83ea2eae93e116147d9440774c9fca437f784b0:
@@ -463,7 +463,107 @@ centos-uncrawled:
 coreos:
   description: CoreOS kernels
   type: CoreOS
-  packages: {}
+  packages:
+    1bafdd3348c75e691ee2ae9db9b389cb82592d6cd9055c5f9b8ed4d44e000b60:
+    - http---stable.release.core-os.net-amd64-usr-1520.7.0-coreos_developer_container.bin.bz2
+    4ebb16948beb33db5ab41be87790601a2cadddb383e9302af50551fc048f5970:
+    - http---stable.release.core-os.net-amd64-usr-1632.2.1-coreos_developer_container.bin.bz2
+    52c909700792ba00491224bce76c8c4fb9edf89c74232c244aa981ddf0fd59d4:
+    - http---stable.release.core-os.net-amd64-usr-1967.4.0-coreos_developer_container.bin.bz2
+    56b31cdcbf82f1cbf2ef269b063c8ed16001597a2b8c9a8886506791a992fcae:
+    - http---stable.release.core-os.net-amd64-usr-1800.5.0-coreos_developer_container.bin.bz2
+    5b3292301d34ddb14cf836bc5df11ed9264977f33078c50f9293bc31c52f2dc2:
+    - http---stable.release.core-os.net-amd64-usr-1409.7.0-coreos_developer_container.bin.bz2
+    80ab8e6f7d8802c68c99bdb0781fb3931425a93e41c85fc2b8e8b7664af53080:
+    - http---stable.release.core-os.net-amd64-usr-1409.2.0-coreos_developer_container.bin.bz2
+    82e18d0b135276dc5a1eb20a692fa943ba62cbea959c2b8016edea146711a795:
+    - http---stable.release.core-os.net-amd64-usr-1745.6.0-coreos_developer_container.bin.bz2
+    8a429daed6c7a92279c88a95e81d7f9de1040236aeb4a9215ee879506773a4ec:
+    - http---stable.release.core-os.net-amd64-usr-1800.4.0-coreos_developer_container.bin.bz2
+    8ba082b3a424c6287e427a9e56f2d6008527e52ae3208e3d4967484553885d8c:
+    - http---stable.release.core-os.net-amd64-usr-1800.7.0-coreos_developer_container.bin.bz2
+    67b636eb027bf25457fbf6c31ce02b404e0eaebd57489215ab338efc15f00968:
+    - http---stable.release.core-os.net-amd64-usr-1576.4.0-coreos_developer_container.bin.bz2
+    81d943f1b1eb225413e033734de1e8b17aec4dcc5f8eb13129401cb4ca7babf2:
+    - http---stable.release.core-os.net-amd64-usr-1911.4.0-coreos_developer_container.bin.bz2
+    87b2adcaf1685cfb9bb7537f130afba1795b491213d06501bd0c9ba1851b4c59:
+    - http---stable.release.core-os.net-amd64-usr-1235.6.0-coreos_developer_container.bin.bz2
+    095f7cdc5c8d88f44019acdf9d2be38abdd355a011d1222bed94cf04e1e5c67b:
+    - http---stable.release.core-os.net-amd64-usr-1235.4.0-coreos_developer_container.bin.bz2
+    336b35704865a14099c982c4d99da980a0a2de690f652fec02a127c1333f0055:
+    - http---stable.release.core-os.net-amd64-usr-1745.7.0-coreos_developer_container.bin.bz2
+    4255d311defec7b228b4091243e4ab2107b0e5ad6828e5e41b4c1fecae530166:
+    - http---stable.release.core-os.net-amd64-usr-1520.9.0-coreos_developer_container.bin.bz2
+    5796a4d4378e6563724003a6b2a65a9baeb233551600731096bcc43c105088a1:
+    - http---stable.release.core-os.net-amd64-usr-1855.4.0-coreos_developer_container.bin.bz2
+    16830aa09447332c33f2c7f91d8c746147cdcad6cc97b639a5ce4d5c105c1ef5:
+    - http---stable.release.core-os.net-amd64-usr-1235.12.0-coreos_developer_container.bin.bz2
+    99605e9b9f2beda82f1f54d545e2f17ea683b3c0a5882816d397d5b9dfb1cc26:
+    - http---stable.release.core-os.net-amd64-usr-1855.5.0-coreos_developer_container.bin.bz2
+    99f2a2c30ab3d9c14f77bb76a3d8619943c4bce76322fe6f470d031796ebf3e5:
+    - http---stable.release.core-os.net-amd64-usr-1185.3.0-coreos_developer_container.bin.bz2
+    795865b83b0dafb602f8c3a0255c19a7ec8e5fdac95f083db5500384bc5a1840:
+    - http---stable.release.core-os.net-amd64-usr-1298.7.0-coreos_developer_container.bin.bz2
+    04997650d08094b8ca7907fcfcef6d95c918fe4b62000ea6e4ed2e2b30d00598:
+    - http---stable.release.core-os.net-amd64-usr-1298.5.0-coreos_developer_container.bin.bz2
+    249756017e7cd5ac6b5a6a6e58a180c72d1e516088c20e445553ef105da5a5f6:
+    - http---stable.release.core-os.net-amd64-usr-1800.6.0-coreos_developer_container.bin.bz2
+    2cc72a90cfbe7f267e645039e62e0dfbf0ed45ebaa7d8299f487298debf7df98:
+    - http---stable.release.core-os.net-amd64-usr-1409.9.0-coreos_developer_container.bin.bz2
+    088871416809933b5adf5772af75ac42ed19dd836f9e40a64bd197e76ba6cd08:
+    - http---stable.release.core-os.net-amd64-usr-1298.6.0-coreos_developer_container.bin.bz2
+    a2ac9654047f0098e9bfddac39fbbdc0048baab710a334b50281e84c14ec65c7:
+    - http---stable.release.core-os.net-amd64-usr-1911.3.0-coreos_developer_container.bin.bz2
+    a95aa071a4aaf7e0b8125ea81ca5a3724349f26f3d356e9464425dcc980baac5:
+    - http---stable.release.core-os.net-amd64-usr-1688.5.3-coreos_developer_container.bin.bz2
+    a9e38096cbf0a5db5cf8927e61c6a3373d376d41969891b025f3f84fea9b0704:
+    - http---stable.release.core-os.net-amd64-usr-1967.3.0-coreos_developer_container.bin.bz2
+    a645465e2f02f8390b926956954cf9581e73a5a9535851c7d59b3f688d47e45d:
+    - http---stable.release.core-os.net-amd64-usr-1745.4.0-coreos_developer_container.bin.bz2
+    aad01cd33e1175073b10a488c534b9ec58147b4480d0836de2342c4e68e0a566:
+    - http---stable.release.core-os.net-amd64-usr-1688.4.0-coreos_developer_container.bin.bz2
+    abf4dec74936153ceb7fdd1c8438c0757549fe44b511db8baa96bc1df4dd2b5e:
+    - http---stable.release.core-os.net-amd64-usr-1235.9.0-coreos_developer_container.bin.bz2
+    ae2a760809755c417e6f75eaced54b904cacf2a54845226b420a009122f94485:
+    - http---stable.release.core-os.net-amd64-usr-1353.6.0-coreos_developer_container.bin.bz2
+    af47d8c3c06764d7cd8a1ec0823e1753f2f8dad2a2fbd5d7657ba00e0476fb28:
+    - http---stable.release.core-os.net-amd64-usr-1632.3.0-coreos_developer_container.bin.bz2
+    b3ad0a70aeb73e68fe1e9cf735a4b4e224cfedfeb9e66318101e38407aaa6668:
+    - http---stable.release.core-os.net-amd64-usr-1465.7.0-coreos_developer_container.bin.bz2
+    b025a0ef5b44f1e845676831b27b392682c16211610ae2c72c0c9f94a5a499a9:
+    - http---stable.release.core-os.net-amd64-usr-1520.6.0-coreos_developer_container.bin.bz2
+    b642d1b767613c1d3bade8c3af4335561232a5f0ba38fa7a7f1ae70303fde800:
+    - http---stable.release.core-os.net-amd64-usr-1409.6.0-coreos_developer_container.bin.bz2
+    b691ce9c1837635ccef24cb1c4d824cafee79556d675da364f59d4fb446240cf:
+    - http---stable.release.core-os.net-amd64-usr-1465.8.0-coreos_developer_container.bin.bz2
+    b3339a057186b9c09df65f5b02797ea38d02cc260f01b7253ec43a3f4c13c28e:
+    - http---stable.release.core-os.net-amd64-usr-1353.8.0-coreos_developer_container.bin.bz2
+    b12546d729593a257dd8da1151add20026ad3e66ea9b8460b11eabfdebe1dd99:
+    - http---stable.release.core-os.net-amd64-usr-1235.5.0-coreos_developer_container.bin.bz2
+    c1c13598192e4c1cab1fb33b4d68ff59828ef7921eacefdd1c03e42c0fd8ed53:
+    - http---stable.release.core-os.net-amd64-usr-1911.5.0-coreos_developer_container.bin.bz2
+    c593b34eceb25fe26a1d138bb99a551c6daed58d23afc09f86b532885cc978a1:
+    - http---stable.release.core-os.net-amd64-usr-1576.5.0-coreos_developer_container.bin.bz2
+    d1d5944d4d5919a621c9790cf44b58fd7686ff7e109154d4256d441ba1f94ca2:
+    - http---stable.release.core-os.net-amd64-usr-1745.3.1-coreos_developer_container.bin.bz2
+    db89bc53bae2c8018c32f1d7ee922bd9289640dc9ee130a616d76d7ae3806125:
+    - http---stable.release.core-os.net-amd64-usr-1520.5.0-coreos_developer_container.bin.bz2
+    dd10423f69939a564b9e2a55c9fc8e0268b0cedf69c22e77174fb77abdb036e9:
+    - http---stable.release.core-os.net-amd64-usr-1520.8.0-coreos_developer_container.bin.bz2
+    e62b7e6163aebeaaea450144843f0a4031171a8c006689556fc20626f1ef71e7:
+    - http---stable.release.core-os.net-amd64-usr-1745.5.0-coreos_developer_container.bin.bz2
+    e65adefd1c52aedcd3bc33872e8f287fcb24de9d9a7f8e842e0889a38eb908fe:
+    - http---stable.release.core-os.net-amd64-usr-1185.5.0-coreos_developer_container.bin.bz2
+    ef0da1faa3f177cda238bebf86cd51340caed2f78124d3ce2fd07f74793a2946:
+    - http---stable.release.core-os.net-amd64-usr-1409.5.0-coreos_developer_container.bin.bz2
+    f9c82f8851a7d5d8a08a31eef371a36f4dd812d4c59d9dc758b05760b623f377:
+    - http---stable.release.core-os.net-amd64-usr-1235.8.0-coreos_developer_container.bin.bz2
+    f27e0c7e4b1dba2a3bf2b9b92438685aada55ce60399db4cada928557b456a30:
+    - http---stable.release.core-os.net-amd64-usr-1353.7.0-coreos_developer_container.bin.bz2
+    f54f024f0c9773078b40c73c2a6e647fb3e23c1c0fa0694952dde8382980f950:
+    - http---stable.release.core-os.net-amd64-usr-1465.6.0-coreos_developer_container.bin.bz2
+    ff62666d923f36ea94c8d27fd0bfc9cb427d829274ecd866d11009078d33be24:
+    - http---stable.release.core-os.net-amd64-usr-1409.8.0-coreos_developer_container.bin.bz2
 debian:
   description: Debian kernels
   type: Debian
@@ -544,6 +644,18 @@ ubuntu-aws:
   description: Ubuntu AWS Kernels
   type: Ubuntu
   packages:
+    0aefde8fe9706689fd7b254ff3c33f85f008b051bb039cfcd463b5d519f680a9:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1023_4.15.0-1023.23_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1023-aws_4.15.0-1023.23_amd64.deb
+    0d1c248845e2ca1c0da11dd9b8e1b6542ad5492363b655d229da3c7d5ae308f9:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1038_4.4.0-1038.47_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1038-aws_4.4.0-1038.47_amd64.deb
+    0da65f0cb6f52f2fa4d6595722709ec1ca0fb48958843c114386314590d81a02:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
+    0dcb1fa46cc033d54e72b33424b8b30783627679620ea99dfa6aaed48c10b61a:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1041_4.4.0-1041.50_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1041-aws_4.4.0-1041.50_amd64.deb
     1ba53027765d775c7f852f78bd21eb3a2cdcccdc0b0bed3124ce1a21434eacb1:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1035_4.4.0-1035.44_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1035-aws_4.4.0-1035.44_amd64.deb
@@ -571,18 +683,6 @@ ubuntu-aws:
     03c3dac278bb09a1d2900d6616a26e02960f6b0d829fe7e349b6c392e9baa9b3:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1062_4.4.0-1062.71_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1062-aws_4.4.0-1062.71_amd64.deb
-    0aefde8fe9706689fd7b254ff3c33f85f008b051bb039cfcd463b5d519f680a9:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1023_4.15.0-1023.23_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1023-aws_4.15.0-1023.23_amd64.deb
-    0d1c248845e2ca1c0da11dd9b8e1b6542ad5492363b655d229da3c7d5ae308f9:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1038_4.4.0-1038.47_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1038-aws_4.4.0-1038.47_amd64.deb
-    0da65f0cb6f52f2fa4d6595722709ec1ca0fb48958843c114386314590d81a02:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
-    0dcb1fa46cc033d54e72b33424b8b30783627679620ea99dfa6aaed48c10b61a:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1041_4.4.0-1041.50_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1041-aws_4.4.0-1041.50_amd64.deb
     4a878760ff6277d52b4725c129e406de821f69eb74a065c6642134e7ca23981e:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1011_4.15.0-1011.11_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1011-aws_4.15.0-1011.11_amd64.deb
@@ -610,18 +710,12 @@ ubuntu-aws:
     6e7e517f1630797db9c9c6e8892dd0d1a6e90bbcdc4840bf04050493815d5b35:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1050_4.4.0-1050.59_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1050-aws_4.4.0-1050.59_amd64.deb
+    710a3ddff23154260f4181988ec2c0e7f28bd3b2204004322fca913dc9a4e15c:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1055_4.4.0-1055.64_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1055-aws_4.4.0-1055.64_amd64.deb
     7aaf5696724cc0f558f4c245cc04788a2bb72fe716600b889f8e65c06e9b6348:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1020_4.4.0-1020.29_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1020-aws_4.4.0-1020.29_amd64.deb
-    898f9baccdca53bed6da81db1a7471775be4e182e1dd1b7b2db06a7788a75500:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1010_4.15.0-1010.10_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1010-aws_4.15.0-1010.10_amd64.deb
-    8296bc993a5ae93767873886afa730f7ae5040fe3139814b4054ad019f237a2c:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1021_4.15.0-1021.21_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1021-aws_4.15.0-1021.21_amd64.deb
-    8413ee8469c46c4059b6af4b7ebe7b4c85dc4442172c157036085105701e1c3c:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1061_4.4.0-1061.70_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1061-aws_4.4.0-1061.70_amd64.deb
     8dc9ff44a3dc2fb3c51e03e674f4e2d144bcbc7fb78a68310c50ea193cf8e07a:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1025_4.15.0-1025.25_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1025-aws_4.15.0-1025.25_amd64.deb
@@ -670,15 +764,21 @@ ubuntu-aws:
     0694d4fb6c6ec4a1ef0a45a89242ba635bc2576755ab7caf039b53df5b8920ef:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1019_4.4.0-1019.19_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1019-aws_4.4.0-1019.19_amd64.deb
-    710a3ddff23154260f4181988ec2c0e7f28bd3b2204004322fca913dc9a4e15c:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1055_4.4.0-1055.64_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1055-aws_4.4.0-1055.64_amd64.deb
+    898f9baccdca53bed6da81db1a7471775be4e182e1dd1b7b2db06a7788a75500:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1010_4.15.0-1010.10_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1010-aws_4.15.0-1010.10_amd64.deb
     1142f2f78f7d20576534c0c07e03f122714563940485afddb8e3231360f09b98:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1043_4.4.0-1043.52_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1043-aws_4.4.0-1043.52_amd64.deb
     5639f60c5b68e78d9d92511a5f4171186817c52360f93ec406615bcc4a6ce29d:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1047_4.4.0-1047.56_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1047-aws_4.4.0-1047.56_amd64.deb
+    8296bc993a5ae93767873886afa730f7ae5040fe3139814b4054ad019f237a2c:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1021_4.15.0-1021.21_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1021-aws_4.15.0-1021.21_amd64.deb
+    8413ee8469c46c4059b6af4b7ebe7b4c85dc4442172c157036085105701e1c3c:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1061_4.4.0-1061.70_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1061-aws_4.4.0-1061.70_amd64.deb
     9651e8c650daecf4351abf4174614eb43dc8f360d464174222cf9eb21d1b7d23:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1067_4.4.0-1067.77_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1067-aws_4.4.0-1067.77_amd64.deb
@@ -742,9 +842,6 @@ ubuntu-aws:
     d661911a63e3eade35d6702e083144968f53b1eaef1d07e74cedfaaf88145d77:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1049_4.4.0-1049.58_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1049-aws_4.4.0-1049.58_amd64.deb
-    e05d17c91b73b142bfc3526819af5899fc0bdcaaab86b0121a51b5c53078ab0d:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1066_4.4.0-1066.76_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1066-aws_4.4.0-1066.76_amd64.deb
     e0926909249d062e0e69981c164fb225e0036e1f3869627fe66c0949b56088fb:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1037_4.4.0-1037.46_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1037-aws_4.4.0-1037.46_amd64.deb
@@ -754,6 +851,9 @@ ubuntu-aws:
     e2b47372e68f707d40256b5a062a832822c1e994c250562b5df887b6f4c3e46b:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1060_4.4.0-1060.69_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1060-aws_4.4.0-1060.69_amd64.deb
+    e05d17c91b73b142bfc3526819af5899fc0bdcaaab86b0121a51b5c53078ab0d:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1066_4.4.0-1066.76_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1066-aws_4.4.0-1066.76_amd64.deb
     ecebbc29ec8320e61c6c0f687c6694b7c6e46e50eba6aedb33d7c20d13c31c95:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1022_4.4.0-1022.31_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1022-aws_4.4.0-1022.31_amd64.deb
@@ -809,6 +909,9 @@ ubuntu-azure:
     45a3a6394fd44682e8837dcce99dce059b57c5f97cb00330b6c97a14be00d323:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1028_4.15.0-1028.29_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1028-azure_4.15.0-1028.29_amd64.deb
+    4d8337b28d61f778e264766ba306a6fc1c4e4c1736c8cbd3a85972aa3752c0aa:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1025_4.15.0-1025.26_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1025-azure_4.15.0-1025.26_amd64.deb
     0237d6f93a5a96403032247ad490edd0813641a96a8c2eb6fa28c048ccd42967:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1023_4.15.0-1023.24_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1023-azure_4.15.0-1023.24_amd64.deb
@@ -824,12 +927,12 @@ ubuntu-azure:
     41206d9cb3478237338e2eb51096fb77b22277699fb3eabbbfccbe6568233492:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1018_4.13.0-1018.21_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1018-azure_4.13.0-1018.21_amd64.deb
-    4d8337b28d61f778e264766ba306a6fc1c4e4c1736c8cbd3a85972aa3752c0aa:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1025_4.15.0-1025.26_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1025-azure_4.15.0-1025.26_amd64.deb
     58317e445ab200c81d46b486c4f980b57c28930fffed3110cd6fd0249eff0bb0:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1035_4.15.0-1035.36_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1035-azure_4.15.0-1035.36_amd64.deb
+    a1732aae6b41f18614785c24993780579386362175393976472e4e9fd4f58a73:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1022_4.15.0-1022.23_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1022-azure_4.15.0-1022.23_amd64.deb
     a1b493790d83894cc46c5cb7638765150db56a917785fa6a1acec692cda797dd:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1018_4.15.0-1018.18_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1018-azure_4.15.0-1018.18_amd64.deb
@@ -839,9 +942,6 @@ ubuntu-azure:
     a835d0c9af4005454de988c237ae493418ee4b3f248203e7130965fe7a745355:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1019_4.15.0-1019.19_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1019-azure_4.15.0-1019.19_amd64.deb
-    a1732aae6b41f18614785c24993780579386362175393976472e4e9fd4f58a73:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1022_4.15.0-1022.23_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1022-azure_4.15.0-1022.23_amd64.deb
     b27b583a7a2cf6f07a6c8e396cba8c8fec77ddb5d9a15917763db07431234532:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1011_4.13.0-1011.14_all.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1011-azure_4.13.0-1011.14_amd64.deb
@@ -876,15 +976,9 @@ ubuntu-gcp:
     1d04d19c396930e3ee5065dd0984591ae4a0eec9ad83a757a1cc5b457779a1a0:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1006_4.15.0-1006.6_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1006-gcp_4.15.0-1006.6_amd64.deb
-    5b6df3050e247aacb6cc395084ef3ae80c9ad4fbc041adb8c80fddb26e09b575:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1025_4.15.0-1025.26_amd64.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1025-gcp_4.15.0-1025.26_amd64.deb
     7c13ce524500f942914aa19d4f84c837c6345ad78aa760719f2caceda38dfbad:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-gcp-headers-4.10.0-1008_4.10.0-1008.8_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-headers-4.10.0-1008-gcp_4.10.0-1008.8_amd64.deb
-    8cd8d900ce0c7ec5a054a601ac2afd4a6b1deb4b78aae041336d28753933059e:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1024_4.15.0-1024.25_amd64.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1024-gcp_4.15.0-1024.25_amd64.deb
     9ef2dfe7e578e7175e6de7c5c9c38d81765a18ede26ac3bb1c1a8611304b33b2:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-gcp-headers-4.13.0-1006_4.13.0-1006.9_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-headers-4.13.0-1006-gcp_4.13.0-1006.9_amd64.deb
@@ -900,6 +994,9 @@ ubuntu-gcp:
     86ade55e952f480c485b80361d0785c71581118c36a932000e90ca78113f03ce:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-gcp-headers-4.10.0-1009_4.10.0-1009.9_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-headers-4.10.0-1009-gcp_4.10.0-1009.9_amd64.deb
+    8cd8d900ce0c7ec5a054a601ac2afd4a6b1deb4b78aae041336d28753933059e:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1024_4.15.0-1024.25_amd64.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1024-gcp_4.15.0-1024.25_amd64.deb
     99e153b01c9b631ed2ac4c707812d8ea0a13d0b6deec8686001ddee38d8a49c7:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1010_4.15.0-1010.10_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1010-gcp_4.15.0-1010.10_amd64.deb
@@ -915,6 +1012,9 @@ ubuntu-gcp:
     5001c7e5df4554ba9b85a9e8b0ef5157f0d6ada2fb12b4f3fd1f86f186aeac19:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-gcp-headers-4.13.0-1013_4.13.0-1013.17_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-headers-4.13.0-1013-gcp_4.13.0-1013.17_amd64.deb
+    5b6df3050e247aacb6cc395084ef3ae80c9ad4fbc041adb8c80fddb26e09b575:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1025_4.15.0-1025.26_amd64.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1025-gcp_4.15.0-1025.26_amd64.deb
     87457fad18ceca1be06a2bc9ca7f4ab765e5f3df146621b3cd7d2be2efaa06a5:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1023_4.15.0-1023.24_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1023-gcp_4.15.0-1023.24_amd64.deb
@@ -967,15 +1067,18 @@ ubuntu-gke:
     2c8341ffdfcf062e74fd5489c6882320547bda1d31cc3339e337c6f819554290:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1008_4.4.0-1008.8_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1008-gke_4.4.0-1008.8_amd64.deb
-    6e94943b85d776775c4ea4f05eabf8b035a0d888e6f39596395296b37fb51252:
-    - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1005_4.4.0-1005.6_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1005-gke_4.4.0-1005.6_amd64.deb
+    7da886559cd6ab3874fd2b34aeec856668a8d239b254ae008dc836b0a103c546:
+    - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1022_4.4.0-1022.22_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1022-gke_4.4.0-1022.22_amd64.deb
     53e7d1714fe43d51845af4e3d58dbe81dbf6271558afed95356c85ef89a0c753:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1012_4.4.0-1012.12_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1012-gke_4.4.0-1012.12_amd64.deb
     65d58d806a79aeffeaf12a73e47ae609a1b6ee216ce9efebaa84a9cea4090c1f:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1009_4.4.0-1009.9_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1009-gke_4.4.0-1009.9_amd64.deb
+    6e94943b85d776775c4ea4f05eabf8b035a0d888e6f39596395296b37fb51252:
+    - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1005_4.4.0-1005.6_all.deb
+    - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1005-gke_4.4.0-1005.6_amd64.deb
     82ea53831bf95633b46ccf31308fe2fbebe177d607e8004489901cf12da77f1e:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1016_4.4.0-1016.16_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1016-gke_4.4.0-1016.16_amd64.deb
@@ -985,9 +1088,6 @@ ubuntu-gke:
     7103e8dc3601754fb33c13a725321ca74ddedce2c96b7fa450193aa996fafb2c:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1006_4.4.0-1006.6_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1006-gke_4.4.0-1006.6_amd64.deb
-    7da886559cd6ab3874fd2b34aeec856668a8d239b254ae008dc836b0a103c546:
-    - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1022_4.4.0-1022.22_all.deb
-    - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1022-gke_4.4.0-1022.22_amd64.deb
     9505cd68b9ce7c561aa92fe4ba156f71e85603a69f704300bfd7ec35c054e4dd:
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1003_4.4.0-1003.3_all.deb
     - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1003-gke_4.4.0-1003.3_amd64.deb
@@ -1028,9 +1128,6 @@ ubuntu-standard:
   description: Ubuntu Standard Kernels
   type: Ubuntu
   packages:
-    0f7dadd726351b846bdfb8d39690afd37c7e291f96f4dbfe3762de13123341c3:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-28-generic_4.4.0-28.47_amd64.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-28_4.4.0-28.47_all.deb
     1d55fcb4438a9f563c3eb8b6a864a7d7093a6558f1f6d9fb22ca7d3eaeb92885:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-78-generic_4.4.0-78.99_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-78_4.4.0-78.99_all.deb
@@ -1046,6 +1143,12 @@ ubuntu-standard:
     2c66bb3cf3dcdcd1f5453ee509e034ed6b3639bd56735ac135ffd998b035f0f1:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-36-generic_4.4.0-36.55_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-36_4.4.0-36.55_all.deb
+    3e42ea5dc7559dfb0615d8f7307a802dacafcfc9dad56b2cacc1ff28cc3c2e5d:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-66-generic_4.4.0-66.87_amd64.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-66_4.4.0-66.87_all.deb
+    3f26d35f2758192fcaaded6e1f7f4aee4b98d79359ad09589bd10d95f690755d:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-124-generic_4.4.0-124.148_amd64.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-124_4.4.0-124.148_all.deb
     03ed890c83613542613c3b8ebc418439648bd247a6b89acfd115a67a27bf31c7:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-142-generic_4.4.0-142.168_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-142_4.4.0-142.168_all.deb
@@ -1064,6 +1167,9 @@ ubuntu-standard:
     04c9d15e9ab0a034063d8614e9f4456ec64d01d0996bff746cae4a570e8e64a3:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-121-generic_4.4.0-121.145_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-121_4.4.0-121.145_all.deb
+    0f7dadd726351b846bdfb8d39690afd37c7e291f96f4dbfe3762de13123341c3:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-28-generic_4.4.0-28.47_amd64.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-28_4.4.0-28.47_all.deb
     5c299937ca3a1b2a48abc2ba1ed81bd2d1234dc0a3b840b3f26aa95ea3e46e47:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-130-generic_4.4.0-130.156_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-130_4.4.0-130.156_all.deb
@@ -1100,12 +1206,6 @@ ubuntu-standard:
     35a2c4be3a0dd78b5e58faca95cbd2400376b90581a7f704fb1b6873cccd77cc:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-72-generic_4.4.0-72.93_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-72_4.4.0-72.93_all.deb
-    3e42ea5dc7559dfb0615d8f7307a802dacafcfc9dad56b2cacc1ff28cc3c2e5d:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-66-generic_4.4.0-66.87_amd64.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-66_4.4.0-66.87_all.deb
-    3f26d35f2758192fcaaded6e1f7f4aee4b98d79359ad09589bd10d95f690755d:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-124-generic_4.4.0-124.148_amd64.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-124_4.4.0-124.148_all.deb
     54f8c742cdbfba78740500a6a7aa1284e6520abd81fe99d980d42c6cd613e376:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-64-generic_4.4.0-64.85_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-64_4.4.0-64.85_all.deb
@@ -1199,18 +1299,18 @@ ubuntu-standard:
     b2eb9131bdaec27acd56b55ffc16e416691e3cafbdfc1c64c3b100a80e1a0959:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-42-generic_4.4.0-42.62_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-42_4.4.0-42.62_all.deb
-    b90ca4d6f89c4812d395a7973fa2f54b83f05c6ea936cbc087421ae61ad643a1:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-45-generic_4.15.0-45.48_amd64.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-45_4.15.0-45.48_all.deb
-    b377f34d2311dc3dfcb22a1b0dc830ebaea6f4be282ed6e390f062c0fc6baeb4:
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-51-generic_4.4.0-51.72_amd64.deb
-    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-51_4.4.0-51.72_all.deb
     b3a16cee9d47798614e42fb55d220eb93c1ae2a359b931b70101091ae2744cb8:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-112-generic_4.4.0-112.135_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-112_4.4.0-112.135_all.deb
     b6bc4fe45000cfcdc87e48be0c289fa6e6557a829cf98da12b2ebf343f77bea4:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-122-generic_4.4.0-122.146_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-122_4.4.0-122.146_all.deb
+    b90ca4d6f89c4812d395a7973fa2f54b83f05c6ea936cbc087421ae61ad643a1:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-45-generic_4.15.0-45.48_amd64.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-45_4.15.0-45.48_all.deb
+    b377f34d2311dc3dfcb22a1b0dc830ebaea6f4be282ed6e390f062c0fc6baeb4:
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-51-generic_4.4.0-51.72_amd64.deb
+    - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-51_4.4.0-51.72_all.deb
     bbb583a4229e9c577ee049c13bb0f06b134019b24c4bd4eae56d9c6265c00003:
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-47-generic_4.4.0-47.68_amd64.deb
     - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-47_4.4.0-47.68_all.deb

@@ -19,7 +19,6 @@ import (
 type ReformatterFunc func(packages []string) ([][]string, error)
 
 var reformatters = map[string]ReformatterFunc{
-	"coreos":       ReformatCoreOS,
 	"one-to-each":  ReformatOneToEach,
 	"one-to-pairs": ReformatOneToPairs,
 	"pairs":        ReformatPairs,
@@ -97,23 +96,6 @@ func mainCmd() error {
 	fmt.Println()
 	fmt.Printf("%s\n", rendered)
 	return nil
-}
-
-// ReformatCoreOS consumes a list of packages, and returns a list of package
-// groups. Each package group is comprised of a single input package. Each
-// package is given the suffix "/bundle.tgz".
-//
-// For example:
-// [a, b, c] → [[a/bundle.tgz], [b/bundle.tgz], [c/bundle.tgz]]
-func ReformatCoreOS(packages []string) ([][]string, error) {
-	var sets = make([][]string, 0, len(packages))
-
-	for _, pkg := range packages {
-		set := []string{pkg + "bundle.tgz"}
-		sets = append(sets, set)
-	}
-
-	return sets, nil
 }
 
 // ReformatOneToEach consumes a list of packages, and returns a list of package
