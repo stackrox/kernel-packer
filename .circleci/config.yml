@@ -31,20 +31,6 @@ jobs:
         name: Run tests
         command: go test -v ./...
 
-  manifest:
-    docker:
-    - image: circleci/golang:1.11.5
-    working_directory: /go/src/github.com/stackrox/kernel-packer
-    steps:
-    - checkout
-    - run:
-        name: Generate manifest
-        command: make manifest | tee manifest.yml
-    - persist_to_workspace:
-        root: .
-        paths:
-        - manifest.yml
-
   repackage:
     docker:
       - image: circleci/golang:1.11.5
@@ -55,10 +41,13 @@ jobs:
           at: /go/src/github.com/stackrox/kernel-packer
       - run:
           name: Print manifest
-          command: cat manifest.yml
+          command: cat kernel-package-lists/manifest.yml
 
   crawl:
     machine: true
+    environment:
+    - GOPATH: /home/circleci/go
+    working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
     - gcloud-init
     - checkout
@@ -69,6 +58,11 @@ jobs:
         name: Download and reupload crawled files
         command: make sync
     - run:
+        name: Generate manifest
+        command: |
+          make manifest
+          cat kernel-package-lists/manifest.yml
+    - run:
         name: Push any changes
         command: make robo-commit
 
@@ -78,10 +72,7 @@ workflows:
   build:
     jobs:
     - lint
-    - manifest
-    - repackage:
-        requires:
-        - manifest
+    - repackage
     - crawl:
         filters:
           branches:

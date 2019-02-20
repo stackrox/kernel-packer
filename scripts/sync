@@ -22,12 +22,12 @@ main() {
     mkdir -p "$download_dir"
 
     info 'Generating a list of crawled urls.'
-    all_crawled_packages="$(find "$package_list_dir" -name '*.txt' -exec cat '{}' + | sort | uniq)"
+    all_crawled_packages="$(./scripts/crawled-inventory "$package_list_dir")"
     echo "$all_crawled_packages"
     echo
 
     info 'Generating a list of bucket files.'
-    all_bucket_files="$(gsutil ls "$bucket_name" | strip_bucket_prefix)"
+    all_bucket_files="$(./scripts/package-inventory "$bucket_name")"
     echo "$all_bucket_files"
     echo
 
@@ -67,10 +67,6 @@ download() {
 
 simplify() {
     echo "$1" | tr -c 'a-zA-Z0-9_.\n-' '-'
-}
-
-strip_bucket_prefix() {
-    sed 's|gs://.*/||'
 }
 
 main "$@"
