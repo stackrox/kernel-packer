@@ -39,6 +39,7 @@ repackage:
 	@go run ./tools/repackage-kernels/main.go \
 		-manifest kernel-package-lists/manifest.yml \
 		-cache-dir .build-data/cache \
+		-pkg-dir .build-data/packages \
 		-action build
 
 .PHONY: combine-cache
@@ -48,6 +49,21 @@ combine-cache:
 	@go run ./tools/repackage-kernels/main.go \
 		-cache-dir .build-data/cache \
 		-action combine
+
+.PHONY: list-files
+list-files:
+	@mkdir -p .build-data/cache
+	@touch .build-data/cache/cache.yml
+	@go run ./tools/repackage-kernels/main.go \
+		-manifest kernel-package-lists/manifest.yml \
+		-cache-dir .build-data/cache \
+		-prefix gs://stackrox-kernel-packages \
+		-action files | tee .build-data/packages.txt
+
+.PHONY: download-files
+download-files:
+	@mkdir -p .build-data/packages
+	@gsutil -m cp -c -L .build-data/gsutil.log -I .build-data/packages < .build-data/packages.txt || true
 
 .PHONY: clean-cache
 clean-cache:

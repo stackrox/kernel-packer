@@ -38,6 +38,7 @@ jobs:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
+    - gcloud-init
     - checkout
     - attach_workspace:
         at: .
@@ -50,12 +51,18 @@ jobs:
           mkdir -p .build-data/cache
           touch .build-data/cache/cache.yml
     - run:
+        name: Generate package list
+        command: make list-files
+    - run:
+        name: Download package list
+        command: make download-files
+    - run:
         name: Repackage kernels
         command: make repackage
     - persist_to_workspace:
         root: .
         paths:
-          - .build-data
+        - .build-data/cache
 
   combine:
     docker:
