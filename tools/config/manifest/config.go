@@ -9,33 +9,34 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-// Builders represents a named map of Builder instances.
-type Builders map[string]Builder
+// Manifest represents a map of Builder instances.
+type Manifest map[string]Builder
 
 // Builder represents a single builder configuration. This captures all kernel
 // versions that can be produced by the given type.
 type Builder struct {
-	Description string              `yaml:"description"`
-	Kind        string              `yaml:"type"`
-	Packages    map[string][]string `yaml:"packages"`
+	Kind     string   `yaml:"type"`
+	Packages []string `yaml:"packages"`
 }
 
-// Manifest represents a fully self-contained kernel build unit. All
-// information required for building a single kernel module is captured in a
-// Manifest instance.
-type Manifest struct {
-	Builder     string
-	Description string
-	Packages    []string
-	Kind        string
-	Build       bool
-	Id          string
-	URL         string
+// Add adds a Builder with the given kind and packages to the Manifest under an
+// id derived by checksumming the given set of packages.
+func (m Manifest) Add(kind string, packages []string) {
+	var id = checksumStrings(packages)
+	m[id] = Builder{
+		Kind:     kind,
+		Packages: packages,
+	}
+}
+
+// New returns an initialized builder
+func New() Manifest {
+	return make(Manifest)
 }
 
 // Load reads the given filename as yaml and parses the content into a list of
-// Builders.
-func Load(filename string) (Builders, error) {
+// Manifest.
+func Load(filename string) (Manifest, error) {
 	body, err := ioutil.ReadFile(filename)
 	if err != nil {
 		return nil, err
@@ -49,8 +50,8 @@ func Load(filename string) (Builders, error) {
 	return builders, nil
 }
 
-// ChecksumPackageNames returns a consistent hash for the given set of package names.
-func ChecksumPackageNames(packages []string) string {
+// checksumStrings returns a consistent hash for the given set of package names.
+func checksumStrings(packages []string) string {
 	var (
 		s = sha256.New()
 	)
@@ -61,25 +62,4 @@ func ChecksumPackageNames(packages []string) string {
 	}
 
 	return fmt.Sprintf("%x", s.Sum(nil))
-}
-
-func Simplify(s string) string {
-	var result = ""
-
-	for _, rune := range s {
-		switch {
-		case 'a' <= rune && rune <= 'z':
-			fallthrough
-		case 'A' <= rune && rune <= 'Z':
-			fallthrough
-		case '0' <= rune && rune <= '9':
-			fallthrough
-		case '_' == rune || '.' == rune || '-' == rune:
-			result += string(rune)
-		default:
-			result += "-"
-		}
-	}
-
-	return result
 }
