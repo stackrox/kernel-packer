@@ -1,4 +1,4 @@
-package manifest
+package util
 
 import (
 	"fmt"
@@ -51,7 +51,7 @@ func TestSimplify(t *testing.T) {
 	for index, test := range tests {
 		name := fmt.Sprintf("%d %s", index+1, test.title)
 		t.Run(name, func(t *testing.T) {
-			actual := Simplify(test.input)
+			actual := SimplifyURL(test.input)
 			assert.Equal(t, test.expected, actual)
 		})
 	}
