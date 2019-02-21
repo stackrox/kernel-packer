@@ -31,3 +31,24 @@ crawled-inventory:
 package-inventory:
 	@mkdir -p .build-data
 	@./scripts/package-inventory $(KERNEL_PACKAGE_BUCKET) > .build-data/package-inventory.txt
+
+.PHONY: repackage
+repackage:
+	@mkdir -p .build-data/cache
+	@touch .build-data/cache/cache.yml
+	@go run ./tools/repackage-kernels/main.go \
+		-manifest kernel-package-lists/manifest.yml \
+		-cache-dir .build-data/cache \
+		-action build
+
+.PHONY: combine-cache
+combine-cache:
+	@mkdir -p .build-data/cache
+	@touch .build-data/cache/cache.yml
+	@go run ./tools/repackage-kernels/main.go \
+		-cache-dir .build-data/cache \
+		-action combine
+
+.PHONY: clean-cache
+clean-cache:
+	@rm -rf .build-data/cache/fragment-*
