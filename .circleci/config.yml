@@ -33,7 +33,7 @@ jobs:
 
   repackage:
     machine: true
-    parallelism: 3
+    parallelism: 10
     environment:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
@@ -57,8 +57,14 @@ jobs:
         name: Download package list
         command: make download-files
     - run:
+        name: Build repackage image
+        command: make packers
+    - run:
         name: Repackage kernels
         command: make repackage
+    - run:
+        name: Sanity check bundles
+        command: ls -lhR .build-data/bundles
     - persist_to_workspace:
         root: .
         paths:

@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+#
+# Argument #1 - "Distro"
+#   The name of a Linux distribution type. Used to invoke the corresponding
+#   repackaging script that uses the correct package management tools, etc.
+#
+# Argument #2 - "Output Dir"
+#   The name of a pre-existing, empty directory that can be written into. The
+#   bundle tarball string for the kernel MUST be created inside of this
+#   directory before returning. The bundle filename MUST be bundle-<version>.tgz.
+#
+# Argument #3...n - "Input File(s)"
+#  The filenames of pre-existing files that MUST NOT be modified. The contents
+#  of these files can be extracted/installed/etc in order to help build the
+#  contents of the bundle File.
+
+set -euo pipefail
+IFS=$'\n\t'
+
+main() {
+    if [[ $# -ne 3 ]]; then
+        echo "invalid number of arguments"
+        return 1
+    fi
+
+    local distro="$1"
+    local output_dir="$2"
+    shift 2
+    local packages=("$@")
+
+    case "$distro" in
+        RedHat)
+            echo Repackaging RedHat
+            repackage_redhat "$output_dir" "${packages[@]}"
+        ;;
+
+        *)
+            echo Unknown distro.
+            return 1
+        ;;
+    esac
+}
+
+# Repackages a single RedHat RPM file into a bundle tarball.
+repackage_redhat() {
+    if [[ $# -ne 2 ]]; then
+        echo "invalid number of arguments"
+        return 1
+    fi
+
+    local output_dir="$1"
+    local input_package="$2"
+
+    echo "Output dir is $output_dir."
+    echo "Input package is $input_package."
+
+    # Create a temporary directory for extracting the RPM package tree.
+    cd "$(mktemp -d)" || return 1
+
+    # Extract the RPM package tree.
+    rpm2cpio "$input_package" | cpio -idm
+
+    # Find the name of the kernel directory. This directory will be used as the
+    # root of the resulting archive.
+    # Variable will contain a string that should looks like "3.10.0-862.14.4.el7.x86_64".
+    local kernel_version="$(ls -1 "$PWD/usr/src/kernels" | head -n1)"
+
+    # Sanity check the derived kernel version.
+    echo "  kernel_dir | $kernel_version"
+    if [[ -z "$kernel_version" ]]; then
+        echo "blank kernel dir"
+        return 1
+    fi
+
+    # Compress only part of the file hierarchy into a tarball.
+    tar -C "usr/src/kernels/$kernel_version" -ch -f - . | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+}
+
+main "$@"

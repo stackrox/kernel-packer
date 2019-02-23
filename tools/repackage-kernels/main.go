@@ -11,6 +11,7 @@ import (
 	"github.com/fatih/color"
 	"github.com/pkg/errors"
 
+	"github.com/stackrox/kernel-packer/tools/command"
 	"github.com/stackrox/kernel-packer/tools/config/manifest"
 )
 
@@ -31,17 +32,18 @@ func main() {
 
 func mainCmd() error {
 	var (
-		flagManifest = flag.String("manifest", "", "Path to build manifest file.")
-		flagCacheDir = flag.String("cache-dir", "", "Path to build cache directory.")
-		flagAction   = flag.String("action", "build", `Action to take. (one of "build", "combine", or "files")`)
-		flagPrefix   = flag.String("prefix", "", "Prefix to prepend to file list.")
-		flagPkgDir   = flag.String("pkg-dir", "", "Path to downloaded package dir.")
+		flagManifest  = flag.String("manifest", "", "Path to build manifest file.")
+		flagCacheDir  = flag.String("cache-dir", "", "Path to build cache directory.")
+		flagAction    = flag.String("action", "build", `Action to take. (one of "build", "combine", or "files")`)
+		flagPrefix    = flag.String("prefix", "", "Prefix to prepend to file list.")
+		flagPkgDir    = flag.String("pkg-dir", "", "Path to downloaded package dir.")
+		flagBundleDir = flag.String("bundle-dir", "", "Path to bundle dir.")
 	)
 	flag.Parse()
 
 	switch *flagAction {
 	case "build":
-		return buildCmd(*flagManifest, *flagCacheDir, *flagPkgDir)
+		return buildCmd(*flagManifest, *flagCacheDir, *flagPkgDir, *flagBundleDir)
 
 	case "combine":
 		return combineCmd(*flagCacheDir)
@@ -57,7 +59,7 @@ func mainCmd() error {
 // buildCmd is the action that is run when the flag -action=build is used.
 // This action will build all possible manifests, except for the ones that
 // already exist in the build cache, or fall on a different CircleCI build node.
-func buildCmd(manifestFile string, cacheDir string, pkgDir string) error {
+func buildCmd(manifestFile string, cacheDir string, pkgDir string, bundleDir string) error {
 	var (
 		cacheFile = filepath.Join(cacheDir, "cache.yml")
 		count     int
@@ -73,6 +75,16 @@ func buildCmd(manifestFile string, cacheDir string, pkgDir string) error {
 	buildManifest, err := manifest.Load(manifestFile)
 	if err != nil {
 		return errors.Wrap(err, "failed to load build manifest")
+	}
+
+	pkgDir, err = filepath.Abs(pkgDir)
+	if err != nil {
+		return err
+	}
+
+	bundleDir, err = filepath.Abs(bundleDir)
+	if err != nil {
+		return err
 	}
 
 	for _, id := range buildManifest.SortedIDs() {
@@ -93,7 +105,7 @@ func buildCmd(manifestFile string, cacheDir string, pkgDir string) error {
 
 		var (
 			builder = buildManifest[id]
-			err     = build(builder, id, pkgDir)
+			err     = build(builder, id, pkgDir, bundleDir)
 		)
 
 		// This build failed. Report it and move along.
@@ -186,16 +198,35 @@ func filesCmd(manifestFile string, cacheDir string, prefix string) error {
 }
 
 // build runs a repackage build for the given manifest.
-func build(builder manifest.Builder, id string, pkgDir string) error {
+func build(builder manifest.Builder, id string, pkgDir string, bundleDir string) error {
 	// Check if all packages exist locally. Fail build if any of them do not.
-	for _, pkg := range builder.Packages {
-		filename := filepath.Join(pkgDir, pkg)
-		if !exists(filename) {
-			return errors.Errorf("package file %s does not exist", filename)
+	for index, pkg := range builder.Packages {
+		pkg = filepath.Join(pkgDir, pkg)
+		builder.Packages[index] = pkg
+		if !exists(pkg) {
+			return errors.Errorf("package file %s does not exist", pkg)
 		}
 	}
 
-	return errors.New("not yet implemented")
+	// For now, only bother building RedHat.
+	if builder.Kind != "RedHat" {
+		return errors.New("not yet implemented")
+	}
+
+	var outputDir = filepath.Join(bundleDir, id)
+	if err := os.MkdirAll(bundleDir, 0755); err != nil {
+		return err
+	}
+
+	// Construct the command line to execute.
+	var cmd, args, err = command.DockerCommand(builder.Kind, outputDir, builder.Packages)
+	if err != nil {
+		return errors.Wrap(err, "failed to construct docker command")
+	}
+
+	color.Cyan("Running command: %s %v\n", cmd, args)
+	err = command.Run(cmd, args...)
+	return errors.Wrap(err, "failed to run packer command")
 }
 
 // saveCacheFragment writes a cache fragment inside of the cache directory.
