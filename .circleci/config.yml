@@ -40,16 +40,17 @@ jobs:
     steps:
     - gcloud-init
     - checkout
-    - attach_workspace:
-        at: .
+    - restore_cache:
+        key: stackrox-kernel-packer-cache-v2
     - run:
-        name: Sanity check manifest
-        command: cat kernel-package-lists/manifest.yml
-    - run:
-        name: Download cache
+        name: Sanity check cache
         command: |
           mkdir -p .build-data/cache
           touch .build-data/cache/cache.yml
+          cat .build-data/cache/cache.yml
+    - run:
+        name: Sanity check manifest
+        command: cat kernel-package-lists/manifest.yml
     - run:
         name: Generate package list
         command: make list-files
@@ -64,7 +65,9 @@ jobs:
         command: make repackage
     - run:
         name: Sanity check bundles
-        command: ls -lhR .build-data/bundles
+        command: |
+          mkdir -p .build-data/bundles
+          ls -lhR .build-data/bundles
     - run:
         name: Upload bundles
         command: make upload-bundles
@@ -92,8 +95,12 @@ jobs:
           make combine-cache
           make clean-cache
     - run:
-        name: Upload cache
+        name: Sanity check cache
         command: cat .build-data/cache/cache.yml
+    - save_cache:
+        key: stackrox-kernel-packer-cache-v2
+        paths:
+        - .build-data/cache/cache.yml
 
   crawl:
     machine: true
