@@ -120,6 +120,9 @@ func buildCmd(manifestFile string, cacheDir string, pkgDir string, bundleDir str
 		if err := saveCacheFragment(builder, id, cacheDir); err != nil {
 			fmt.Printf("       Failed to save cache fragment: %v\n", err)
 		}
+
+		// Temporarily bail out after the first success!
+		break
 	}
 
 	return nil
