@@ -1,7 +1,11 @@
-FROM alpine:3.8
+FROM alpine:3.9
 
-RUN apk add --no-cache \
+RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories \
+ && apk add --no-cache \
     bash \
+    dpkg \
+    lbzip2 \
+    multipath-tools \
     pigz \
     rpm
 

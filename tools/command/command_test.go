@@ -44,7 +44,7 @@ func Test(t *testing.T) {
 			outputDir: "/.build-data/bundles",
 			packages:  []string{"/package.rpm"},
 			expectedArgs: []string{
-				"run", "--rm", "-t",
+				"run", "--privileged", "--rm", "-t",
 				"-v", "/package.rpm:/input/package-0:ro",
 				"-v", "/.build-data/bundles:/output",
 				"repackage:latest", "RedHat", "/output", "/input/package-0",
@@ -60,7 +60,7 @@ func Test(t *testing.T) {
 				"/package-c.rpm",
 			},
 			expectedArgs: []string{
-				"run", "--rm", "-t",
+				"run", "--privileged", "--rm", "-t",
 				"-v", "/package-a.rpm:/input/package-0:ro",
 				"-v", "/dir/package-b.rpm:/input/package-1:ro",
 				"-v", "/package-c.rpm:/input/package-2:ro",

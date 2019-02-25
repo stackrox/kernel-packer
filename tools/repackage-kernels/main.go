@@ -209,8 +209,8 @@ func build(builder manifest.Builder, id string, pkgDir string, bundleDir string)
 		}
 	}
 
-	// For now, only bother building RedHat.
-	if builder.Kind != "RedHat" {
+	// For now, only bother building RedHat and CoreOS.
+	if builder.Kind != "RedHat" && builder.Kind != "CoreOS" {
 		return errors.New("not yet implemented")
 	}
 
