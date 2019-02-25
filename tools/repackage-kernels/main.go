@@ -200,9 +200,10 @@ func filesCmd(manifestFile string, cacheDir string, prefix string) error {
 // build runs a repackage build for the given manifest.
 func build(builder manifest.Builder, id string, pkgDir string, bundleDir string) error {
 	// Check if all packages exist locally. Fail build if any of them do not.
+	packages := make([]string, len(builder.Packages))
 	for index, pkg := range builder.Packages {
 		pkg = filepath.Join(pkgDir, pkg)
-		builder.Packages[index] = pkg
+		packages[index] = pkg
 		if !exists(pkg) {
 			return errors.Errorf("package file %s does not exist", pkg)
 		}
@@ -219,7 +220,7 @@ func build(builder manifest.Builder, id string, pkgDir string, bundleDir string)
 	}
 
 	// Construct the command line to execute.
-	var cmd, args, err = command.DockerCommand(builder.Kind, outputDir, builder.Packages)
+	var cmd, args, err = command.DockerCommand(builder.Kind, outputDir, packages)
 	if err != nil {
 		return errors.Wrap(err, "failed to construct docker command")
 	}
