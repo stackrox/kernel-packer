@@ -61,10 +61,15 @@ list-files:
 		-prefix gs://stackrox-kernel-packages \
 		-action files | tee .build-data/packages.txt
 
-.PHONY: download-files
-download-files:
+.PHONY: download-packages
+download-packages:
 	@mkdir -p .build-data/packages
-	@gsutil -m cp -c -L .build-data/gsutil.log -I .build-data/packages < .build-data/packages.txt || true
+	@gsutil -m cp -c -L .build-data/gsutil-download.log -I .build-data/packages < .build-data/packages.txt || true
+
+.PHONY: upload-bundles
+upload-bundles:
+	@mkdir -p .build-data/bundles
+	@find .build-data/bundles -name '*.tgz' | gsutil -m cp -c -L .build-data/gsutil-upload.log -I $(KERNEL_BUNDLE_BUCKET) || true
 
 .PHONY: clean-cache
 clean-cache:

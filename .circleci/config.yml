@@ -55,7 +55,7 @@ jobs:
         command: make list-files
     - run:
         name: Download package list
-        command: make download-files
+        command: make download-packages
     - run:
         name: Build repackage image
         command: make packers
@@ -65,6 +65,9 @@ jobs:
     - run:
         name: Sanity check bundles
         command: ls -lhR .build-data/bundles
+    - run:
+        name: Upload bundles
+        command: make upload-bundles
     - persist_to_workspace:
         root: .
         paths:
