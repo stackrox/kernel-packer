@@ -1,13 +1,14 @@
 FROM alpine:3.9
 
 RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories \
- && apk add --no-cache \
+ && apk add --no-cache --update \
     bash \
     dpkg \
     lbzip2 \
     multipath-tools \
     pigz \
-    rpm
+    rpm \
+    tar
 
 COPY entrypoint /usr/bin/entrypoint
 

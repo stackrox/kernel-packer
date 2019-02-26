@@ -80,7 +80,11 @@ repackage_coreos() {
         log "Kernel version is $kernel_version"
 
         # Compress only part of the file hierarchy into a tarball.
-        tar -C "lib/modules/$kernel_version/build" -ch -f - . | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+        printf './build' > /tmp/BUNDLE_BUILD_DIR
+        tar -ch -f - \
+            --directory "lib/modules/$kernel_version" ./build ./source \
+            --directory /tmp ./BUNDLE_BUILD_DIR \
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
     )
 
     # Clean up intermediate resources.
@@ -121,7 +125,11 @@ repackage_redhat() {
         log "Kernel version is $kernel_version"
 
         # Compress only part of the file hierarchy into a tarball.
-        tar -C "usr/src/kernels/$kernel_version" -ch -f - . | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+        printf '.' > /tmp/BUNDLE_BUILD_DIR
+        tar -ch -f - \
+            --directory "usr/src/kernels/${kernel_version}" . \
+            --directory /tmp ./BUNDLE_BUILD_DIR \
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
     )
 }
 
