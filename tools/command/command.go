@@ -34,6 +34,7 @@ func DockerCommand(distroName string, outputDir string, packages []string) (stri
 	var cmd = "docker"
 	var args = []string{
 		"run",
+		"--privileged",
 		"--rm",
 		"-t",
 	}
