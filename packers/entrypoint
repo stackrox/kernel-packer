@@ -129,7 +129,7 @@ repackage_debian() {
         fi
 
         # Find the name of the kernel directory.
-        # Variable will contain a string that should looks like "4.15.0-1023-aws".
+        # Variable will contain a string that should looks like "4.4.39-k8s".
         local kernel_version="$(ls -1 "usr/src" | grep linux-headers | sed 's/linux-headers-//' | head -n1)"
 
         # Sanity check the derived kernel version.
@@ -139,50 +139,21 @@ repackage_debian() {
         fi
         log "Kernel version is $kernel_version"
 
-        local src_dir="usr/src/linux-headers-${kernel_version}"
-
-        # Fix symbolic links
-        unlink "lib/modules/${kernel_version}/build"
-        ln -rs "usr/src/linux-headers-${kernel_version}" "lib/modules/${kernel_version}/build"
-
-#        echo '========'
-#        cat "${src_dir}/Makefile"
-#        echo '========'
-
-        # Hack Makefile
-        echo "Hacking ${src_dir}/Makefile..."
-        sed -i \
-            -e 's/@://' \
-        "${src_dir}/Makefile"
-#                    -e 's|$(cmd) %.*$|$(cmd) : all|' \
-
-
-#        echo '========'
-#        cat "${src_dir}/Makefile"
-#        echo '========'
+        # Update symbolic links to be relative.
+        ln --force --relative --symbolic "usr/src/linux-headers-${kernel_version}" "lib/modules/${kernel_version}/build"
 
         if [[ -n "$input_package_3" ]]; then
-            # Fix symbolic links
-            local commons_dir="linux-headers-${kernel_version/amd64/common}"
-            unlink "lib/modules/${kernel_version}/source"
-            ln -sr "usr/src/${commons_dir}" "lib/modules/${kernel_version}/source"
+            # Update symbolic links to be relative.
+            local common_dir="linux-headers-${kernel_version/amd64/common}"
+            ln --force --relative --symbolic "usr/src/${common_dir}" "lib/modules/${kernel_version}/source"
 
-            # Hack Makefile
-            echo "Hacking ${src_dir}/Makefile again..."
-            sed -i -e "s|^MAKEARGS :=.*$|MAKEARGS := -C ../${commons_dir} O=\$(CURDIR)|g" \
-                "${src_dir}/Makefile"
+            # Modify makefile arguments to work with relative paths.
+            sed -i -e "s|^MAKEARGS :=.*$|MAKEARGS := -C ../${common_dir} O=\$(CURDIR)|g" \
+                "usr/src/linux-headers-${kernel_version}/Makefile"
         fi
 
-#        echo '========'
-#        cat "${src_dir}/Makefile"
-#        echo '========'
-
-        ls -lh usr/src
-
-        ls -lh "lib/modules/${kernel_version}"
-
-        # Compress only part of the file hierarchy into a tarball.
-        printf "./usr/src/linux-headers-${kernel_version}" > /tmp/BUNDLE_BUILD_DIR
+        # Compress the file hierarchy into a tarball.
+        printf "./usr/src/linux-headers-%s" "$kernel_version" > /tmp/BUNDLE_BUILD_DIR
         tar --create --dereference --hard-dereference --file - \
             --directory "." ./usr ./lib \
             --directory /tmp ./BUNDLE_BUILD_DIR \
