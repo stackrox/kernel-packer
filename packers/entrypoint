@@ -18,7 +18,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 main() {
-    if [[ $# -lt 3 || $# -gt 4 ]]; then
+    if [[ $# -lt 3 || $# -gt 5 ]]; then
         log "invalid number of arguments"
         return 1
     fi
@@ -32,6 +32,11 @@ main() {
         CoreOS)
             log 'Repackaging CoreOS'
             repackage_coreos "$output_dir" "${packages[@]}"
+        ;;
+
+        Debian)
+            log 'Repackaging Debian'
+            repackage_debian "$output_dir" "${packages[@]}"
         ;;
 
         RedHat)
@@ -96,6 +101,93 @@ repackage_coreos() {
     umount "$tmp_dir"
     kpartx -dv "$inflated_bundle"
     rm -f "$inflated_bundle"
+}
+
+# Repackages two or three Debian DEB files into a bundle tarball.
+repackage_debian() {
+    if [[ $# -lt 3 || $# -gt 4 ]]; then
+        log "invalid number of arguments"
+        return 1
+    fi
+
+    local output_dir="$1"
+    local input_package_1="$2"
+    local input_package_2="$3"
+    local input_package_3="${4:-}"
+
+    # Create a temporary directory for extracting the DEB package tree.
+    local tmp_dir="$(mktemp -d)"
+
+    (
+        cd "$tmp_dir"
+
+        # Extract the DEB packages.
+        dpkg -x "$input_package_1" .
+        dpkg -x "$input_package_2" .
+        if [[ -n "$input_package_3" ]]; then
+            dpkg -x "$input_package_3" .
+        fi
+
+        # Find the name of the kernel directory.
+        # Variable will contain a string that should looks like "4.15.0-1023-aws".
+        local kernel_version="$(ls -1 "usr/src" | grep linux-headers | sed 's/linux-headers-//' | head -n1)"
+
+        # Sanity check the derived kernel version.
+        if [[ -z "$kernel_version" ]]; then
+            log "blank kernel dir"
+            return 1
+        fi
+        log "Kernel version is $kernel_version"
+
+        local src_dir="usr/src/linux-headers-${kernel_version}"
+
+        # Fix symbolic links
+        unlink "lib/modules/${kernel_version}/build"
+        ln -rs "usr/src/linux-headers-${kernel_version}" "lib/modules/${kernel_version}/build"
+
+#        echo '========'
+#        cat "${src_dir}/Makefile"
+#        echo '========'
+
+        # Hack Makefile
+        echo "Hacking ${src_dir}/Makefile..."
+        sed -i \
+            -e 's/@://' \
+        "${src_dir}/Makefile"
+#                    -e 's|$(cmd) %.*$|$(cmd) : all|' \
+
+
+#        echo '========'
+#        cat "${src_dir}/Makefile"
+#        echo '========'
+
+        if [[ -n "$input_package_3" ]]; then
+            # Fix symbolic links
+            local commons_dir="linux-headers-${kernel_version/amd64/common}"
+            unlink "lib/modules/${kernel_version}/source"
+            ln -sr "usr/src/${commons_dir}" "lib/modules/${kernel_version}/source"
+
+            # Hack Makefile
+            echo "Hacking ${src_dir}/Makefile again..."
+            sed -i -e "s|^MAKEARGS :=.*$|MAKEARGS := -C ../${commons_dir} O=\$(CURDIR)|g" \
+                "${src_dir}/Makefile"
+        fi
+
+#        echo '========'
+#        cat "${src_dir}/Makefile"
+#        echo '========'
+
+        ls -lh usr/src
+
+        ls -lh "lib/modules/${kernel_version}"
+
+        # Compress only part of the file hierarchy into a tarball.
+        printf "./usr/src/linux-headers-${kernel_version}" > /tmp/BUNDLE_BUILD_DIR
+        tar --create --dereference --hard-dereference --file - \
+            --directory "." ./usr ./lib \
+            --directory /tmp ./BUNDLE_BUILD_DIR \
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+    )
 }
 
 # Repackages a single RedHat RPM file into a bundle tarball.
