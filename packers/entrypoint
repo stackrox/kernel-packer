@@ -18,7 +18,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 main() {
-    if [[ $# -ne 3 ]]; then
+    if [[ $# -lt 3 || $# -gt 4 ]]; then
         log "invalid number of arguments"
         return 1
     fi
@@ -37,6 +37,11 @@ main() {
         RedHat)
             log 'Repackaging RedHat'
             repackage_redhat "$output_dir" "${packages[@]}"
+        ;;
+
+        Ubuntu)
+            log 'Repackaging Ubuntu'
+            repackage_ubuntu "$output_dir" "${packages[@]}"
         ;;
 
         *)
@@ -81,7 +86,7 @@ repackage_coreos() {
 
         # Compress only part of the file hierarchy into a tarball.
         printf './build' > /tmp/BUNDLE_BUILD_DIR
-        tar -ch -f - \
+        tar --create --dereference --hard-dereference --file - \
             --directory "lib/modules/$kernel_version" ./build ./source \
             --directory /tmp ./BUNDLE_BUILD_DIR \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
@@ -115,7 +120,7 @@ repackage_redhat() {
         # Find the name of the kernel directory. This directory will be used as the
         # root of the resulting archive.
         # Variable will contain a string that should looks like "3.10.0-862.14.4.el7.x86_64".
-        local kernel_version="$(ls -1 "$PWD/usr/src/kernels" | head -n1)"
+        local kernel_version="$(ls -1 "usr/src/kernels" | head -n1)"
 
         # Sanity check the derived kernel version.
         if [[ -z "$kernel_version" ]]; then
@@ -126,8 +131,57 @@ repackage_redhat() {
 
         # Compress only part of the file hierarchy into a tarball.
         printf '.' > /tmp/BUNDLE_BUILD_DIR
-        tar -ch -f - \
+        tar --create --dereference --hard-dereference --file - \
             --directory "usr/src/kernels/${kernel_version}" . \
+            --directory /tmp ./BUNDLE_BUILD_DIR \
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+    )
+}
+
+# Repackages two Ubuntu DEB files into a bundle tarball.
+repackage_ubuntu() {
+    if [[ $# -ne 3 ]]; then
+        log "invalid number of arguments"
+        return 1
+    fi
+
+    local output_dir="$1"
+    local input_package_1="$2"
+    local input_package_2="$3"
+
+    # Create a temporary directory for extracting the DEB package tree.
+    local tmp_dir="$(mktemp -d)"
+
+    (
+        cd "$tmp_dir"
+
+        # Extract the DEB packages.
+        dpkg -x "$input_package_1" .
+        dpkg -x "$input_package_2" .
+
+        # Find the name of the kernel directory.
+        # Variable will contain a string that should looks like "4.15.0-1023-aws".
+        local kernel_version="$(ls -1 "usr/src" | grep linux-headers | sed 's/linux-headers-//' | grep -v generic | head -n1)"
+
+        # One special case is that if there is a second directory that ends
+        # with '-generic' we should favor that directory over the other.
+        local kernel_version_generic="$(ls -1 "usr/src" | grep linux-headers | sed 's/linux-headers-//' | grep generic | head -n1)"
+        if [[ -n "$kernel_version_generic" ]]; then
+            kernel_version="$kernel_version_generic"
+        fi
+
+        # Sanity check the derived kernel version.
+        if [[ -z "$kernel_version" ]]; then
+            log "blank kernel dir"
+            return 1
+        fi
+        log "Kernel version is $kernel_version"
+
+        # Compress only part of the file hierarchy into a tarball.
+        printf '.' > /tmp/BUNDLE_BUILD_DIR
+        tar --create --dereference --hard-dereference --file - \
+            --exclude ./scripts/dtc \
+            --directory "usr/src/linux-headers-${kernel_version}" . \
             --directory /tmp ./BUNDLE_BUILD_DIR \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
     )
