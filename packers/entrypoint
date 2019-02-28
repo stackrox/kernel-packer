@@ -18,35 +18,36 @@ set -euo pipefail
 IFS=$'\n\t'
 
 main() {
-    if [[ $# -lt 3 || $# -gt 5 ]]; then
+    if [[ $# -lt 4 || $# -gt 6 ]]; then
         log "invalid number of arguments"
         return 1
     fi
 
-    local distro="$1"
-    local output_dir="$2"
-    shift 2
+    local checksum="$1"
+    local distro="$2"
+    local output_dir="$3"
+    shift 3
     local packages=("$@")
 
     case "$distro" in
         CoreOS)
             log 'Repackaging CoreOS'
-            repackage_coreos "$output_dir" "${packages[@]}"
+            repackage_coreos "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
         Debian)
             log 'Repackaging Debian'
-            repackage_debian "$output_dir" "${packages[@]}"
+            repackage_debian "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
         RedHat)
             log 'Repackaging RedHat'
-            repackage_redhat "$output_dir" "${packages[@]}"
+            repackage_redhat "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
         Ubuntu)
             log 'Repackaging Ubuntu'
-            repackage_ubuntu "$output_dir" "${packages[@]}"
+            repackage_ubuntu "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
         *)
@@ -57,13 +58,14 @@ main() {
 }
 
 repackage_coreos() {
-    if [[ $# -ne 2 ]]; then
+    if [[ $# -ne 3 ]]; then
         log "invalid number of arguments"
         return 1
     fi
 
-    local output_dir="$1"
-    local input_package="$2"
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package="$3"
 
     # developer container is Bzip encoded, so extract it first.
     inflated_bundle="$(mktemp)"
@@ -89,11 +91,13 @@ repackage_coreos() {
         fi
         log "Kernel version is $kernel_version"
 
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'coreos' "$kernel_version" './build')"
+
         # Compress only part of the file hierarchy into a tarball.
-        printf './build' > /tmp/BUNDLE_BUILD_DIR
         tar --create --dereference --hard-dereference --file - \
-            --directory "lib/modules/$kernel_version" ./build ./source \
-            --directory /tmp ./BUNDLE_BUILD_DIR \
+            --directory "$meta_dir" . \
+            --directory "${tmp_dir}/lib/modules/${kernel_version}" ./build ./source \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
     )
 
@@ -105,15 +109,16 @@ repackage_coreos() {
 
 # Repackages two or three Debian DEB files into a bundle tarball.
 repackage_debian() {
-    if [[ $# -lt 3 || $# -gt 4 ]]; then
+    if [[ $# -lt 4 || $# -gt 5 ]]; then
         log "invalid number of arguments"
         return 1
     fi
 
-    local output_dir="$1"
-    local input_package_1="$2"
-    local input_package_2="$3"
-    local input_package_3="${4:-}"
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package_1="$3"
+    local input_package_2="$4"
+    local input_package_3="${5:-}"
 
     # Create a temporary directory for extracting the DEB package tree.
     local tmp_dir="$(mktemp -d)"
@@ -152,24 +157,27 @@ repackage_debian() {
                 "usr/src/linux-headers-${kernel_version}/Makefile"
         fi
 
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'debian' "$kernel_version" "./usr/src/linux-headers-${kernel_version}")"
+
         # Compress the file hierarchy into a tarball.
-        printf "./usr/src/linux-headers-%s" "$kernel_version" > /tmp/BUNDLE_BUILD_DIR
         tar --create --dereference --hard-dereference --file - \
-            --directory "." ./usr ./lib \
-            --directory /tmp ./BUNDLE_BUILD_DIR \
+            --directory "$meta_dir" . \
+            --directory "$tmp_dir" ./usr ./lib \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
     )
 }
 
 # Repackages a single RedHat RPM file into a bundle tarball.
 repackage_redhat() {
-    if [[ $# -ne 2 ]]; then
+    if [[ $# -ne 3 ]]; then
         log "invalid number of arguments"
         return 1
     fi
 
-    local output_dir="$1"
-    local input_package="$2"
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package="$3"
 
     # Create a temporary directory for extracting the RPM package tree.
     local tmp_dir="$(mktemp -d)"
@@ -192,25 +200,28 @@ repackage_redhat() {
         fi
         log "Kernel version is $kernel_version"
 
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'redhat' "$kernel_version" '.')"
+
         # Compress only part of the file hierarchy into a tarball.
-        printf '.' > /tmp/BUNDLE_BUILD_DIR
         tar --create --dereference --hard-dereference --file - \
-            --directory "usr/src/kernels/${kernel_version}" . \
-            --directory /tmp ./BUNDLE_BUILD_DIR \
+            --directory "$meta_dir" . \
+            --directory "${tmp_dir}/usr/src/kernels/${kernel_version}" . \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
     )
 }
 
 # Repackages two Ubuntu DEB files into a bundle tarball.
 repackage_ubuntu() {
-    if [[ $# -ne 3 ]]; then
+    if [[ $# -ne 4 ]]; then
         log "invalid number of arguments"
         return 1
     fi
 
-    local output_dir="$1"
-    local input_package_1="$2"
-    local input_package_2="$3"
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package_1="$3"
+    local input_package_2="$4"
 
     # Create a temporary directory for extracting the DEB package tree.
     local tmp_dir="$(mktemp -d)"
@@ -240,14 +251,41 @@ repackage_ubuntu() {
         fi
         log "Kernel version is $kernel_version"
 
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'ubuntu' "$kernel_version" '.')"
+
         # Compress only part of the file hierarchy into a tarball.
-        printf '.' > /tmp/BUNDLE_BUILD_DIR
         tar --create --dereference --hard-dereference --file - \
             --exclude ./scripts/dtc \
-            --directory "usr/src/linux-headers-${kernel_version}" . \
-            --directory /tmp ./BUNDLE_BUILD_DIR \
+            --directory "$meta_dir" . \
+            --directory "${tmp_dir}/usr/src/linux-headers-${kernel_version}" . \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
     )
+}
+
+# Populates a temporary directory with files containing various pieces of
+# bundle meta-information. All files are prefixed with 'BUNDLE_'.
+bundle_meta() {
+    local checksum="$1"
+    local distro="$2"
+    local kernel_uname="$3"
+    local build_dir="$4"
+
+    local kernel_version="$(echo "$kernel_uname" | sed 's/^\(\d\+\).*/\1/g')"
+    local kernel_major="$(echo "$kernel_uname" | sed 's/^\(\d\+\)\.\(\d\+\).*/\2/g')"
+    local kernel_minor="$(echo "$kernel_uname" | sed 's/^\(\d\+\)\.\(\d\+\)\.\(\d\+\).*/\3/g')"
+
+    tmp_dir="$(mktemp -d)"
+
+    echo -n "$checksum"       > "${tmp_dir}/BUNDLE_CHECKSUM"
+    echo -n "$distro"         > "${tmp_dir}/BUNDLE_DISTRO"
+    echo -n "$kernel_uname"   > "${tmp_dir}/BUNDLE_UNAME"
+    echo -n "$kernel_version" > "${tmp_dir}/BUNDLE_VERSION"
+    echo -n "$kernel_major"   > "${tmp_dir}/BUNDLE_MAJOR"
+    echo -n "$kernel_minor"   > "${tmp_dir}/BUNDLE_MINOR"
+    echo -n "$build_dir"      > "${tmp_dir}/BUNDLE_BUILD_DIR"
+
+    echo "$tmp_dir"
 }
 
 log() {

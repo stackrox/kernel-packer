@@ -30,7 +30,7 @@ func Run(name string, arg ...string) error {
 	return cmd.Run()
 }
 
-func DockerCommand(distroName string, outputDir string, packages []string) (string, []string, error) {
+func DockerCommand(checksum string, distroName string, outputDir string, packages []string) (string, []string, error) {
 	var cmd = "docker"
 	var args = []string{
 		"run",
@@ -60,7 +60,7 @@ func DockerCommand(distroName string, outputDir string, packages []string) (stri
 	args = append(args, "-v", fmt.Sprintf("%s:/output", outputDir))
 
 	// Add the Docker image name, distro name, and output directory alias
-	args = append(args, "repackage:latest", distroName, "/output")
+	args = append(args, "repackage:latest", checksum, distroName, "/output")
 
 	// Add a series of package names, same as the volume aliases.
 	for index := range packages {
