@@ -121,9 +121,12 @@ jobs:
         command: |
           make manifest
           cat kernel-package-lists/manifest.yml
+    - add_ssh_keys:
+        fingerprints:
+        - 'dd:79:df:69:0f:13:db:0e:08:3e:3b:f4:b2:e3:57:77'
     - run:
         name: Push any changes
-        command: make robo-commit
+        command: make robo-crawl-commit
 
 workflows:
   version: 2
