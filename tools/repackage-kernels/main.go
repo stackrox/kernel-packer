@@ -96,7 +96,7 @@ func buildCmd(manifestFile string, cacheDir string, pkgDir string, bundleDir str
 
 		// Skip this build if it does not fall on this (CircleCI) build node.
 		if count%nodeCount != nodeIndex {
-			color.Blue("[SKIP] [%s] | build falls on another node\n", id)
+			color.Blue("[SKIP] [%s] | build run on node %d\n", id, count%nodeCount)
 			count++
 			continue
 		} else {
