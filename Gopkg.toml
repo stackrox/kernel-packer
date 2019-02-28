@@ -4,7 +4,8 @@
 
 [[constraint]]
   name = "gopkg.in/yaml.v2"
-  version = "2.2.2"
+  branch = "joshdk/consistent-map-key-sorting"
+  source = "https://github.com/joshdk/yaml.git"
 
 [prune]
   go-tests = true
