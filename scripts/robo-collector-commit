@@ -8,10 +8,10 @@ main() {
 
     info "Cloning from master branch of stackrox/collector...."
     clone_collector "$collector_repo_dir"
+    refresh_repo "$collector_repo_dir"
 
     info "Regenerating kernel list..."
     generate_bucket_listing "$kernel_bundle_bucket" "$collector_repo_dir"
-    fixup_repo "$collector_repo_dir"
 
     if files_unchanged "$collector_repo_dir"; then
         info "Kernel versions were not updated, nothing to do."
@@ -50,12 +50,10 @@ files_unchanged() {
     git -C "$collector_repo_dir" diff-index --quiet HEAD -- kernel-modules
 }
 
-fixup_repo() {
-    collector_repo_dir="$1"
+refresh_repo() {
+    repo_dir="$1"
 
-    # HACK - For some reason, the shallow repos incorrectly report git diffs,
-    # unless you run git status first.
-    git -C "$collector_repo_dir" status 1>/dev/null 2>&1 || true
+    git -C "$repo_dir" update-index -q --refresh 1>/dev/null 2>&1 || true
 }
 
 generate_bucket_listing() {
