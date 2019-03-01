@@ -13,9 +13,9 @@ manifest: package-inventory
 		-bucket-inventory-file .build-data/package-inventory.txt \
 	> kernel-package-lists/manifest.yml
 
-.PHONY: robo-commit
-robo-commit:
-	@./scripts/robo-commit $(CRAWLED_PACKAGE_DIR)
+.PHONY: robo-crawl-commit
+robo-crawl-commit:
+	@./scripts/robo-crawl-commit $(CRAWLED_PACKAGE_DIR)
 
 .PHONY: robo-collector-commit
 robo-collector-commit:

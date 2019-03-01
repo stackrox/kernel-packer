@@ -4,6 +4,8 @@ set -eu
 main() {
     CRAWLED_PACKAGE_DIR="${1:-kernel-package-lists}"
 
+    refresh_repo .
+
     # Check if there are actually any changes. If no files have been modified,
     # don't bother committing.
     if git diff-index --quiet HEAD -- "$CRAWLED_PACKAGE_DIR"; then
@@ -11,14 +13,19 @@ main() {
         return 0
     fi
 
-    # Create a commit with any modified files, and push it to GitHub on a
-    # special branch.
-    git checkout -B roxbot/crawl
+    echo "New crawled packages found!"
+
+    # Create a commit with any modified files, and push it to GitHub.
     git add "$CRAWLED_PACKAGE_DIR"
     git -c "user.name=roxbot" -c "user.email=roxbot@stackrox.com" commit --message "🤖 Updated crawled packages"
-    git push origin roxbot/crawl --force
-    echo "Crawled packages have been pushed. Please open a pull request."
-    echo "Visit https://github.com/stackrox/kernel-packer/pull/new/roxbot/crawl"
+    git push origin
+    echo "Crawled packages have been pushed."
+}
+
+refresh_repo() {
+    repo_dir="$1"
+
+    git -C "$repo_dir" update-index -q --refresh 1>/dev/null 2>&1 || true
 }
 
 main "$@"
