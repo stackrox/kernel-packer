@@ -125,6 +125,22 @@ jobs:
         name: Push any changes
         command: make robo-commit
 
+  collector:
+    docker:
+      - image: google/cloud-sdk:236.0.0-alpine
+    steps:
+      - run:
+          name: Install dependencies
+          command: apk add --no-cache py-pip make
+      - gcloud-init
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+          - "7f:08:58:1e:80:80:6e:66:99:9a:37:cb:e9:96:0b:40"
+      - run:
+          name: Update collector kernel versions
+          command: make robo-collector-commit
+
 workflows:
   version: 2
 
@@ -135,6 +151,9 @@ workflows:
     - combine:
         requires:
         - repackage
+    - collector:
+        requires:
+        - combine
     - crawl:
         filters:
           branches:
