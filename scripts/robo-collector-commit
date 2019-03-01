@@ -29,7 +29,7 @@ main() {
 clone_collector() {
     collector_repo_dir="$1"
 
-    git clone --depth 1 git@github.com:stackrox/collector.git -b master "$collector_repo_dir"
+    git clone --depth 1 git@github.com:stackrox/collector.git "$collector_repo_dir"
 }
 
 commit_files() {
@@ -75,7 +75,7 @@ info() {
 push_collector() {
     collector_repo_dir="$1"
 
-    git -C "$collector_repo_dir" push origin master:master
+    git -C "$collector_repo_dir" push origin
 }
 
 main "$@"
