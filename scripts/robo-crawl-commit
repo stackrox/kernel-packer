@@ -14,15 +14,12 @@ main() {
     fi
 
     echo "New crawled packages found!"
-    git status
 
-    # Create a commit with any modified files, and push it to GitHub on a
-    # special branch.
+    # Create a commit with any modified files, and push it to GitHub.
     git add "$CRAWLED_PACKAGE_DIR"
     git -c "user.name=roxbot" -c "user.email=roxbot@stackrox.com" commit --message "🤖 Updated crawled packages"
-    git push origin HEAD:roxbot/crawl --force
-    echo "Crawled packages have been pushed. Please open a pull request."
-    echo "Visit https://github.com/stackrox/kernel-packer/pull/new/roxbot/crawl"
+    git push origin
+    echo "Crawled packages have been pushed."
 }
 
 refresh_repo() {
