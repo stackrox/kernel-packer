@@ -8,11 +8,11 @@ main() {
 
     info "Cloning from master branch of stackrox/collector...."
     clone_collector "$collector_repo_dir"
-    refresh_repo "$collector_repo_dir"
 
     info "Regenerating kernel list..."
     generate_bucket_listing "$kernel_bundle_bucket" "$collector_repo_dir"
 
+    refresh_repo "$collector_repo_dir"
     if files_unchanged "$collector_repo_dir"; then
         info "Kernel versions were not updated, nothing to do."
     else
