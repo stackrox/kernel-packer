@@ -17,6 +17,10 @@ manifest: package-inventory
 robo-commit:
 	@./scripts/robo-commit $(CRAWLED_PACKAGE_DIR)
 
+.PHONY: robo-collector-commit
+robo-collector-commit:
+	@./scripts/robo-collector-commit $(KERNEL_BUNDLE_BUCKET)
+
 .PHONY: sync
 sync:
 	@mkdir -p .build-data/downloads

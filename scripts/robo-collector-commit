@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+
+main() {
+    local kernel_bundle_bucket="$1"
+    local collector_repo_dir="$(mktemp -d)"
+
+    info "Cloning from master branch of stackrox/collector...."
+    clone_collector "$collector_repo_dir"
+
+    info "Regenerating kernel list..."
+    generate_bucket_listing "$kernel_bundle_bucket" "$collector_repo_dir"
+
+    refresh_repo "$collector_repo_dir"
+    if files_unchanged "$collector_repo_dir"; then
+        info "Kernel versions were not updated, nothing to do."
+    else
+        info "Kernel versions updated, pushing changes..."
+        commit_files "$collector_repo_dir"
+
+        info "Pushing to master branch of stackrox/collector...."
+        push_collector "$collector_repo_dir"
+    fi
+
+    rm -rf "$collector_repo_dir"
+}
+
+clone_collector() {
+    collector_repo_dir="$1"
+
+    git clone --depth 1 git@github.com:stackrox/collector.git "$collector_repo_dir"
+}
+
+commit_files() {
+    collector_repo_dir="$1"
+
+    git -C "$collector_repo_dir" add -- kernel-modules/KERNEL_VERSIONS
+
+    git -C "$collector_repo_dir" \
+        -c "user.email=roxbot@stackrox.com" \
+        -c "user.name=roxbot" \
+        commit --message "🤖 Updated crawled kernels"
+}
+
+files_unchanged() {
+    collector_repo_dir="$1"
+
+    # Check if files were not changed.
+    git -C "$collector_repo_dir" diff-index --quiet HEAD -- kernel-modules
+}
+
+refresh_repo() {
+    repo_dir="$1"
+
+    git -C "$repo_dir" update-index -q --refresh 1>/dev/null 2>&1 || true
+}
+
+generate_bucket_listing() {
+    kernel_bundle_bucket="$1"
+    collector_repo_dir="$2"
+
+    # Extract only the kernel versions from the bundles.
+    gsutil ls "${kernel_bundle_bucket}/**.tgz" \
+    | sed 's|^.*bundle-||' \
+    | sed 's|\.tgz$||' \
+    | sort \
+    > "${collector_repo_dir}/kernel-modules/KERNEL_VERSIONS"
+}
+
+info() {
+    echo "[INFO] $*" 1>&2
+}
+
+push_collector() {
+    collector_repo_dir="$1"
+
+    git -C "$collector_repo_dir" push origin
+}
+
+main "$@"
