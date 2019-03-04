@@ -30,17 +30,17 @@ A package file, typically a `.rpm`, or `.deb`, that is discovered from an upstre
 
 ### Kernel Bundles
 
-An artifact file produced from kernel packages. Gripped tarball with a `.tgz` extention. Consumed by downstream products.
+An artifact file produced from kernel packages. A bundle is a gzipped tarball with a `.tgz` extention. Consumed by downstream products.
 
 ### Crawling
 
-Upstream kernel modules are distributed via a distribution's package repository. These package repositories are organized in a semi-standardized fashion, and can be programmatically scrapped in order to discover the existence of new packages. Crawling is performed by the [`kernel-crawler`](https://github.com/stackrox/kernel-packer/tree/master/kernel-crawler), and produces files inside of [`kernel-package-lists`](https://github.com/stackrox/kernel-packer/tree/master/kernel-package-lists).
+Upstream kernel modules are distributed via a distribution's package repository. These package repositories are organized in a semi-standardized fashion, and can be programmatically scraped in order to discover the existence of new packages. Crawling is performed by the [`kernel-crawler`](kernel-crawler), and produces files inside of [`kernel-package-lists`](kernel-package-lists).
 
-Crawling can be done by running `make crawl`. This is done automatically, and shouldn't have to be run manually.
+Crawling can be done by running `make crawl`. This is [done automatically](circleci/config.yml#L166), and shouldn't have to be run manually.
 
 ### Manifest
 
-After crawling, the set of discovered kernel packages are not in a very machine-consumable format. The generated [`kernel-package-lists/manifest.yml`](https://github.com/stackrox/kernel-packer/blob/master/kernel-package-lists/manifest.yml) YAML file is the source of truth for which sets of kernel packages to use for building a kernel bundle.
+After crawling, the set of discovered kernel packages are not in a very machine-consumable format. The generated [`manifest.yml`](kernel-package-lists/manifest.yml) YAML file is the source of truth for which sets of kernel packages to use for building a kernel bundle.
 
 Generating the manifest can be done by running `make manifest`. This is done automatically, and shouldn't have to be run manually.
 
