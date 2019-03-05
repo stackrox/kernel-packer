@@ -17,6 +17,7 @@ import sys
 import urllib.request as urllib2
 from lxml import html
 import traceback
+import re
 
 #
 # This is the main configuration tree for easily analyze Linux repositories
@@ -142,6 +143,16 @@ repos = {
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-(?:headers-[0-9.]+-[^-]+-(?:amd64|common_)|kbuild-.*_4.9.130).*(?:amd64|all).deb$')]/@href",
             "exclude_patterns": debian_excludes,
+        },
+    ],
+
+    "GCOS": [
+        {
+            "type": "s3",
+            "root": "https://storage.googleapis.com/cos-tools",
+            "patterns": [
+                "kernel-src.tar.gz$"
+            ]
         },
     ],
 
@@ -281,6 +292,21 @@ repos = {
 }
 
 
+def crawl_s3(repo):
+    body = urllib2.urlopen(repo['root'], timeout=30).read()
+    xml = html.fromstring(body)
+    results = []
+
+    for key in xml.xpath('//contents/key/text()'):
+        for pattern in repo['patterns']:
+            if re.search(pattern, key):
+                result = "{}/{}".format(repo['root'], key)
+                results.append(result)
+
+    results.sort()
+    return results
+
+
 def crawl(distro):
     """
     Navigate the `repos` tree and look for packages we need that match the
@@ -291,6 +317,12 @@ def crawl(distro):
     kernel_urls = []
     for repo in repos[distro]:
         sys.stderr.write("Considering repo " + repo["root"] + "\n")
+
+        if "type" in repo and repo["type"] == "s3":
+            sys.stderr.write("Crawling S3 bucket\n")
+            kernel_urls += crawl_s3(repo)
+            continue
+
         try:
             root = urllib2.urlopen(repo["root"], timeout=URL_TIMEOUT).read()
             versions = html.fromstring(root).xpath(repo["discovery_pattern"],
