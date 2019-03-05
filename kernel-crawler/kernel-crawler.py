@@ -128,7 +128,7 @@ repos = {
 
         {
             "root" : "http://stable.release.core-os.net/amd64-usr/",
-            "discovery_pattern": "/html/body//a[regex:test(@href, '^1185|1[2-9][0-9]{2}')]/@href",
+            "discovery_pattern": "/html/body//a[regex:test(@href, '^2|1185|1[2-9][0-9]{2}')]/@href",
             # Note: ^[4-9][0-9][0-9] is excluded because versions under 1000 are so old.
             "subdirs" : [
                 ""
