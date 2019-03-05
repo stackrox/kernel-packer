@@ -34,6 +34,12 @@
   file: debian.txt
   reformat: one-to-pairs
 
+- name: gcos
+  description: GCOS kernels
+  type: gcos
+  file: gcos.txt
+  reformat: single
+
 - name: ubuntu-aws
   description: Ubuntu AWS Kernels
   type: Ubuntu
