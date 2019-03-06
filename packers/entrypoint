@@ -30,22 +30,22 @@ main() {
     local packages=("$@")
 
     case "$distro" in
-        CoreOS)
+        coreos)
             log 'Repackaging CoreOS'
             repackage_coreos "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
-        Debian)
+        debian)
             log 'Repackaging Debian'
             repackage_debian "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
-        RedHat)
+        redhat)
             log 'Repackaging RedHat'
             repackage_redhat "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
-        Ubuntu)
+        ubuntu)
             log 'Repackaging Ubuntu'
             repackage_ubuntu "$checksum" "$output_dir" "${packages[@]}"
         ;;

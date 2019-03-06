@@ -42,20 +42,20 @@ func Test(t *testing.T) {
 		{
 			title:     "single package",
 			checksum:  "sha",
-			distro:    "RedHat",
+			distro:    "redhat",
 			outputDir: "/.build-data/bundles",
 			packages:  []string{"/package.rpm"},
 			expectedArgs: []string{
 				"run", "--privileged", "--rm", "-t",
 				"-v", "/package.rpm:/input/package-0:ro",
 				"-v", "/.build-data/bundles:/output",
-				"repackage:latest", "sha", "RedHat", "/output", "/input/package-0",
+				"repackage:latest", "sha", "redhat", "/output", "/input/package-0",
 			},
 		},
 		{
 			title:     "multiple package",
 			checksum:  "sha",
-			distro:    "RedHat",
+			distro:    "redhat",
 			outputDir: "/.build-data/bundles",
 			packages: []string{
 				"/package-a.rpm",
@@ -68,7 +68,7 @@ func Test(t *testing.T) {
 				"-v", "/dir/package-b.rpm:/input/package-1:ro",
 				"-v", "/package-c.rpm:/input/package-2:ro",
 				"-v", "/.build-data/bundles:/output",
-				"repackage:latest", "sha", "RedHat", "/output",
+				"repackage:latest", "sha", "redhat", "/output",
 				"/input/package-0",
 				"/input/package-1",
 				"/input/package-2",
