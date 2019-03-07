@@ -11,6 +11,8 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
     rpm \
     tar
 
+COPY includes /etc/includes
+
 COPY entrypoint /usr/bin/entrypoint
 
 ENTRYPOINT ["/usr/bin/entrypoint"]
