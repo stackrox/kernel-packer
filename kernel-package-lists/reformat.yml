@@ -1,36 +1,36 @@
 - name: amazon
   description: AWS kernels
-  type: RedHat
+  type: redhat
   file: amazon.txt
   reformat: single
 
 - name: centos
   description: CentOS kernels
-  type: RedHat
+  type: redhat
   file: centos.txt
   reformat: single
 
 - name: centos-uncrawled
   description: CentOS uncrawled kernels
-  type: RedHat
+  type: redhat
   file: centos-uncrawled.txt
   reformat: single
 
 - name: coreos
   description: CoreOS kernels
-  type: CoreOS
+  type: coreos
   file: coreos.txt
   reformat: single
 
 - name: kops
   description: Kops kernels
-  type: Debian
+  type: debian
   file: kops.txt
   reformat: one-to-each
 
 - name: debian
   description: Debian kernels
-  type: Debian
+  type: debian
   file: debian.txt
   reformat: one-to-pairs
 
@@ -42,30 +42,30 @@
 
 - name: ubuntu-aws
   description: Ubuntu AWS Kernels
-  type: Ubuntu
+  type: ubuntu
   file: ubuntu-aws.txt
   reformat: pairs
 
 - name: ubuntu-azure
   description: Ubuntu Azure Kernels
-  type: Ubuntu
+  type: ubuntu
   file: ubuntu-azure.txt
   reformat: pairs
 
 - name: ubuntu-gcp
   description: Ubuntu GCP Kernels
-  type: Ubuntu
+  type: ubuntu
   file: ubuntu-gcp.txt
   reformat: pairs
 
 - name: ubuntu-gke
   description: Ubuntu GKE Kernels
-  type: Ubuntu
+  type: ubuntu
   file: ubuntu-gke.txt
   reformat: pairs
 
 - name: ubuntu-standard
   description: Ubuntu Standard Kernels
-  type: Ubuntu
+  type: ubuntu
   file: ubuntu-standard.txt
   reformat: pairs
