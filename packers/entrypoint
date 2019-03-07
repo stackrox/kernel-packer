@@ -40,6 +40,11 @@ main() {
             repackage_debian "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
+        gcos)
+            log 'Repackaging GCOS'
+            repackage_gcos "$checksum" "$output_dir" "${packages[@]}"
+        ;;
+
         redhat)
             log 'Repackaging RedHat'
             repackage_redhat "$checksum" "$output_dir" "${packages[@]}"
@@ -165,6 +170,57 @@ repackage_debian() {
             --directory "$meta_dir" . \
             --directory "$tmp_dir" ./usr ./lib \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+    )
+}
+
+repackage_gcos() {
+    if [[ $# -ne 3 ]]; then
+        log "invalid number of arguments"
+        return 1
+    fi
+
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package="$3"
+
+    # Create a temporary directory for extracting the package tree.
+    local tmp_dir="$(mktemp -d)"
+
+    (
+        cd "$tmp_dir"
+
+        # Extract the package tree.
+        tar -xf "$input_package"
+
+        # Find the name of the kernel directory. This directory will be used as the
+        # root of the resulting archive.
+        # Variable will contain a string that should looks like "4.14.30+". Also, Notice the plus sign.
+        local kernel_make_version="$(cat Makefile | grep '^VERSION ='    | head -n1 | cut -d ' ' -f 3)"
+        local kernel_make_major="$(cat   Makefile | grep '^PATCHLEVEL =' | head -n1 | cut -d ' ' -f 3)"
+        local kernel_make_minor="$(cat   Makefile | grep '^SUBLEVEL ='   | head -n1 | cut -d ' ' -f 3)"
+        local kernel_version="${kernel_make_version}.${kernel_make_major}.${kernel_make_minor}+"
+
+        # Sanity check the derived kernel version.
+        if [[ -z "$kernel_version" ]]; then
+            log "blank kernel dir"
+            return 1
+        fi
+        log "Kernel version is $kernel_version"
+
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'gcos' "$kernel_version" '.')"
+
+        # Compress only part of the file hierarchy into a tarball.
+        tar --create --dereference --hard-dereference --file - \
+            --exclude ./Documentation \
+            --directory "$meta_dir" . \
+            --directory "/etc/includes/gcos" .config \
+            --directory "${tmp_dir}" . \
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+
+        # TODO - For testing, remove before merging.
+        rm -f "${output_dir}/bundle-${kernel_version}.tgz"
+        return 1
     )
 }
 
