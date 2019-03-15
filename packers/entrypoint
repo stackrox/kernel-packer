@@ -192,35 +192,46 @@ repackage_gcos() {
         # Extract the package tree.
         tar -xf "$input_package"
 
+        # Extract the build id from the gcos package name it will be of the form,
+        # 'https---storage.googleapis.com-cos-tools-10718.52.0-kernel-src.tar.gz'
+        local build_id="$(echo "$input_package" | sed 's/.*-\([0-9]\+\.[0-9]\+\.[0-9]\+\)-kernel-src\.tar\.gz/\1/')"
+
         # Find the name of the kernel directory. This directory will be used as the
         # root of the resulting archive.
         # Variable will contain a string that should looks like "4.14.30+". Also, Notice the plus sign.
         local kernel_make_version="$(cat Makefile | grep '^VERSION ='    | head -n1 | cut -d ' ' -f 3)"
         local kernel_make_major="$(cat   Makefile | grep '^PATCHLEVEL =' | head -n1 | cut -d ' ' -f 3)"
         local kernel_make_minor="$(cat   Makefile | grep '^SUBLEVEL ='   | head -n1 | cut -d ' ' -f 3)"
-        local kernel_version="${kernel_make_version}.${kernel_make_major}.${kernel_make_minor}+"
+        local kernel_version="${kernel_make_version}.${kernel_make_major}.${kernel_make_minor}"
 
         # Sanity check the derived kernel version.
         if [[ -z "$kernel_version" ]]; then
             log "blank kernel dir"
             return 1
         fi
-        log "Kernel version is $kernel_version"
+
+        log "Kernel version is $kernel_version, with build id $build_id"
 
         # Generate bundle meta files
-        meta_dir="$(bundle_meta "$checksum" 'gcos' "$kernel_version" '.')"
+        meta_dir="$(bundle_meta "$checksum" 'gcos' "$kernel_version" '.' "$build_id")"
+
+        # Copy fixed kernel config 
+        cp /etc/includes/gcos/.config .
+
+        make olddefconfig
+        make modules_prepare
 
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
             --exclude ./Documentation \
             --directory "$meta_dir" . \
-            --directory "/etc/includes/gcos" .config \
             --directory "${tmp_dir}" . \
-        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}-${build_id}-gcos.tgz"
 
         # TODO - For testing, remove before merging.
-        rm -f "${output_dir}/bundle-${kernel_version}.tgz"
-        return 1
+        log "File is ${output_dir}/bundle-${kernel_version}-${build_id}-gcos.tgz"
+        rm -f "${output_dir}/bundle-${kernel_version}-${build_id}-gcos.tgz"
+        return 0
     )
 }
 
@@ -326,10 +337,11 @@ bundle_meta() {
     local distro="$2"
     local kernel_uname="$3"
     local build_dir="$4"
+    local build_id="${5:-}"
 
-    local kernel_version="$(echo "$kernel_uname" | sed 's/^\(\d\+\).*/\1/g')"
-    local kernel_major="$(echo "$kernel_uname" | sed 's/^\(\d\+\)\.\(\d\+\).*/\2/g')"
-    local kernel_minor="$(echo "$kernel_uname" | sed 's/^\(\d\+\)\.\(\d\+\)\.\(\d\+\).*/\3/g')"
+    local kernel_version="$(echo "$kernel_uname" | sed 's/^\([0-9]\+\).*/\1/g')"
+    local kernel_major="$(echo "$kernel_uname" | sed 's/^\([0-9]\+\)\.\([0-9]\+\).*/\2/g')"
+    local kernel_minor="$(echo "$kernel_uname" | sed 's/^\([0-9]\+\)\.\([0-9]\+\)\.\([0-9]\+\).*/\3/g')"
 
     tmp_dir="$(mktemp -d)"
 
@@ -340,6 +352,7 @@ bundle_meta() {
     echo -n "$kernel_major"   > "${tmp_dir}/BUNDLE_MAJOR"
     echo -n "$kernel_minor"   > "${tmp_dir}/BUNDLE_MINOR"
     echo -n "$build_dir"      > "${tmp_dir}/BUNDLE_BUILD_DIR"
+    echo -n "$build_id"      > "${tmp_dir}/BUNDLE_BUILD_ID"
 
     echo "$tmp_dir"
 }
