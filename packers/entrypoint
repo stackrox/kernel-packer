@@ -218,8 +218,8 @@ repackage_gcos() {
         # Copy fixed kernel config 
         cp /etc/includes/gcos/.config .
 
-        make olddefconfig
-        make modules_prepare
+        make olddefconfig > /dev/null
+        make modules_prepare /dev/null
 
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \

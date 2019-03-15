@@ -1,4 +1,4 @@
-FROM debian:unstable
+FROM debian:stable
 
 RUN apt-get update \
  && apt-get upgrade -y \
@@ -7,6 +7,7 @@ RUN apt-get update \
       make \
       gcc \
       libelf-dev \
+      libc6-dev \
       bc \
       coreutils \
       dpkg \
