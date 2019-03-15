@@ -47,7 +47,7 @@ func DockerCommand(checksum string, distroName string, outputDir string, package
 		return "", nil, errors.New("output directory is not an absolute path")
 	}
 
-	var pkgDir = filepath.Dir(packages[0])
+	pkgDir := filepath.Dir(packages[0])
 	for _, pkg := range packages {
 		if !filepath.IsAbs(pkg) {
 			return "", nil, errors.New("package is not an absolute path")
