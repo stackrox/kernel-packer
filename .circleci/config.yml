@@ -40,8 +40,8 @@ jobs:
     steps:
     - gcloud-init
     - checkout
-#    - restore_cache:
-#        key: stackrox-kernel-packer-cache-v5
+    - restore_cache:
+        key: stackrox-kernel-packer-cache-v6
     - run:
         name: Sanity check cache
         command: |
@@ -68,9 +68,9 @@ jobs:
         command: |
           mkdir -p .build-data/bundles
           ls -lhR .build-data/bundles
-#    - run:
-#        name: Upload bundles
-#        command: make upload-bundles
+    - run:
+        name: Upload bundles
+        command: echo "skipping bundle upload, re-enable before commit"
     - persist_to_workspace:
         root: .
         paths:
@@ -98,7 +98,7 @@ jobs:
         name: Sanity check cache
         command: cat .build-data/cache/cache.yml
     - save_cache:
-        key: stackrox-kernel-packer-cache-v5-{{ epoch }}
+        key: stackrox-kernel-packer-cache-v6-{{ epoch }}
         paths:
         - .build-data/cache/cache.yml
 
@@ -151,17 +151,17 @@ workflows:
     jobs:
     - lint
     - repackage
-#    - combine:
-#        requires:
-#        - repackage
-#    - collector:
-#        requires:
-#        - combine
-#    - crawl:
-#        filters:
-#          branches:
-#            only:
-#            - /.*dev-crawl.*/
+    - combine:
+        requires:
+        - repackage
+    - collector:
+        requires:
+        - combine
+    - crawl:
+        filters:
+          branches:
+            only:
+            - /.*dev-crawl.*/
 
   cron:
     jobs:

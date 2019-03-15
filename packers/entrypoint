@@ -203,6 +203,7 @@ repackage_gcos() {
         local kernel_make_major="$(cat   Makefile | grep '^PATCHLEVEL =' | head -n1 | cut -d ' ' -f 3)"
         local kernel_make_minor="$(cat   Makefile | grep '^SUBLEVEL ='   | head -n1 | cut -d ' ' -f 3)"
         local kernel_version="${kernel_make_version}.${kernel_make_major}.${kernel_make_minor}"
+        local kernel_uname="${kernel_make_version}.${kernel_make_major}.${kernel_make_minor}+"
 
         # Sanity check the derived kernel version.
         if [[ -z "$kernel_version" ]]; then
@@ -213,7 +214,7 @@ repackage_gcos() {
         log "Kernel version is $kernel_version, with build id $build_id"
 
         # Generate bundle meta files
-        meta_dir="$(bundle_meta "$checksum" 'gcos' "$kernel_version" '.' "$build_id")"
+        meta_dir="$(bundle_meta "$checksum" 'gcos' "${kernel_uname}" '.' "$build_id")"
 
         # Copy fixed kernel config 
         cp /etc/includes/gcos/.config .
@@ -221,17 +222,14 @@ repackage_gcos() {
         make olddefconfig > /dev/null
         make modules_prepare > /dev/null
 
+        local bundle_path="${output_dir}/bundle-${kernel_version}-${build_id}-gcos.tgz"
+
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
             --exclude ./Documentation \
             --directory "$meta_dir" . \
             --directory "${tmp_dir}" . \
-        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}-${build_id}-gcos.tgz"
-
-        # TODO - For testing, remove before merging.
-        log "File is ${output_dir}/bundle-${kernel_version}-${build_id}-gcos.tgz"
-        rm -f "${output_dir}/bundle-${kernel_version}-${build_id}-gcos.tgz"
-        return 0
+        | pigz -9 -c > "${bundle_path}"
     )
 }
 
