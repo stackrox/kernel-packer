@@ -76,6 +76,7 @@ the root level of the tarball, and start with the `BUNDLE_` prefix.
 | `./BUNDLE_VERSION`   | `4`              | The kernel "version" component. |
 | `./BUNDLE_MAJOR`     | `12`             | The kernel "major" component.   |
 | `./BUNDLE_MINOR`     | `10`             | The kernel "minor" component.   |
+| `./BUNDLE_BUILD_ID`  | `10176.62.0`     | The kernel build id (COS only). |
 
 All meta files contain a single value and are meant to be read like so:
 

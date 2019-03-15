@@ -40,9 +40,9 @@ main() {
             repackage_debian "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
-        gcos)
-            log 'Repackaging GCOS'
-            repackage_gcos "$checksum" "$output_dir" "${packages[@]}"
+        cos)
+            log 'Repackaging Container-Optimized OS'
+            repackage_cos "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
         redhat)
@@ -173,7 +173,7 @@ repackage_debian() {
     )
 }
 
-repackage_gcos() {
+repackage_cos() {
     if [[ $# -ne 3 ]]; then
         log "invalid number of arguments"
         return 1
@@ -192,7 +192,7 @@ repackage_gcos() {
         # Extract the package tree.
         tar -xf "$input_package"
 
-        # Extract the build id from the gcos package name it will be of the form,
+        # Extract the build id from the cos package name it will be of the form,
         # 'https---storage.googleapis.com-cos-tools-10718.52.0-kernel-src.tar.gz'
         local build_id="$(echo "$input_package" | sed 's/.*-\([0-9]\+\.[0-9]\+\.[0-9]\+\)-kernel-src\.tar\.gz/\1/')"
 
@@ -214,15 +214,15 @@ repackage_gcos() {
         log "Kernel version is $kernel_version, with build id $build_id"
 
         # Generate bundle meta files
-        meta_dir="$(bundle_meta "$checksum" 'gcos' "${kernel_uname}" '.' "$build_id")"
+        meta_dir="$(bundle_meta "$checksum" 'cos' "${kernel_uname}" '.' "$build_id")"
 
         # Copy fixed kernel config 
-        cp /etc/includes/gcos/.config .
+        cp /etc/includes/cos/.config .
 
         make olddefconfig > /dev/null
         make modules_prepare > /dev/null
 
-        local bundle_path="${output_dir}/bundle-${kernel_version}-${build_id}-gcos.tgz"
+        local bundle_path="${output_dir}/bundle-${kernel_version}-${build_id}-cos.tgz"
 
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \

@@ -32,7 +32,7 @@ crawl-amazon: build-crawl-container
 .PHONY: crawl
 crawl: build-crawl-container crawl-kops crawl-amazon
 	docker run --rm -i kernel-crawler crawl CoreOS > $(CRAWLED_PACKAGE_DIR)/coreos.txt
-	docker run --rm -i kernel-crawler crawl GCOS > $(CRAWLED_PACKAGE_DIR)/gcos.txt
+	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt

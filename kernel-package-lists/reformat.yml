@@ -34,10 +34,10 @@
   file: debian.txt
   reformat: one-to-pairs
 
-- name: gcos
-  description: GCOS kernels
-  type: gcos
-  file: gcos.txt
+- name: cos
+  description: Container-Optimized OS kernels
+  type: cos
+  file: cos.txt
   reformat: single
 
 - name: ubuntu-aws
