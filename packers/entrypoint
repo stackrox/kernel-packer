@@ -225,8 +225,8 @@ repackage_cos() {
         make olddefconfig > /dev/null
         make modules_prepare > /dev/null
 
-        # Delete all *.c files, excluding, scripts directory
-        find ${tmp_dir} ! \( -type d \) -not -path ${tmp_dir}/scripts/\* -name \*.c -delete
+        # Delete all *.c files, excluding scripts directory
+        find "${tmp_dir}" ! \( -type d \) -not -path "${tmp_dir}/scripts/*" -name "*.c" -delete
 
         local kernel_version_cos="${kernel_version}-${build_id}-cos"
 
