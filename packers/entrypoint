@@ -203,7 +203,7 @@ repackage_cos() {
         local kernel_make_major="$(cat   Makefile | grep '^PATCHLEVEL =' | head -n1 | cut -d ' ' -f 3)"
         local kernel_make_minor="$(cat   Makefile | grep '^SUBLEVEL ='   | head -n1 | cut -d ' ' -f 3)"
         local kernel_version="${kernel_make_version}.${kernel_make_major}.${kernel_make_minor}"
-        local kernel_uname="${kernel_make_version}.${kernel_make_major}.${kernel_make_minor}+"
+        local kernel_uname="${kernel_version}+"
 
         # Sanity check the derived kernel version.
         if [[ -z "$kernel_version" ]]; then
@@ -219,12 +219,16 @@ repackage_cos() {
         # Copy fixed kernel config 
         cp /etc/includes/cos/.config .
 
+        # Prepare kernel sources for module compilation
         make olddefconfig > /dev/null
         make modules_prepare > /dev/null
 
         local bundle_path="${output_dir}/bundle-${kernel_version}-${build_id}-cos.tgz"
 
         # Compress only part of the file hierarchy into a tarball.
+        # TODO: Investigate only include needed files to reduce tar size,
+        #   following similar process to distro package maintainers.
+        #   (see: Documentation/kbuild/headers_install.txt)
         tar --create --dereference --hard-dereference --file - \
             --exclude ./Documentation \
             --directory "$meta_dir" . \
