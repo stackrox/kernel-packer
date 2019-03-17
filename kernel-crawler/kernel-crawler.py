@@ -146,7 +146,7 @@ repos = {
         },
     ],
 
-    "GCOS": [
+    "Container-OptimizedOS": [
         {
             "type": "s3",
             "root": "https://storage.googleapis.com/cos-tools",

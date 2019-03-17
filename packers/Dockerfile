@@ -1,15 +1,25 @@
-FROM alpine:3.9
+FROM debian:stable
 
-RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories \
- && apk add --no-cache --update \
-    bash \
-    coreutils \
-    dpkg \
-    lbzip2 \
-    multipath-tools \
-    pigz \
-    rpm \
-    tar
+RUN apt-get update \
+ && apt-get upgrade -y \
+ && apt-get install --no-install-recommends -y \
+      binutils \
+      make \
+      gcc \
+      libelf-dev \
+      libc6-dev \
+      bc \
+      coreutils \
+      dpkg \
+      lbzip2 \
+      multipath-tools \
+      pigz \
+      rpm \
+      tar \
+ ;
+
+
+COPY includes /etc/includes
 
 COPY entrypoint /usr/bin/entrypoint
 

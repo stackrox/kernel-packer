@@ -47,14 +47,18 @@ func DockerCommand(checksum string, distroName string, outputDir string, package
 		return "", nil, errors.New("output directory is not an absolute path")
 	}
 
-	// Add a series of read-only volume mappings for each of the given packages.
-	for index, pkg := range packages {
+	pkgDir := filepath.Dir(packages[0])
+	for _, pkg := range packages {
 		if !filepath.IsAbs(pkg) {
 			return "", nil, errors.New("package is not an absolute path")
 		}
-		var volumeMapping = fmt.Sprintf("%s:/input/package-%d:ro", pkg, index)
-		args = append(args, "-v", volumeMapping)
+		if pkgDir != filepath.Dir(pkg) {
+			return "", nil, errors.New("packages are not all in the same directory")
+		}
 	}
+
+	// Add a read-only volume mapping for directory containing the given packages.
+	args = append(args, "-v", fmt.Sprintf("%s:/input:ro", pkgDir))
 
 	// Add a single volume mapping for the output directory.
 	args = append(args, "-v", fmt.Sprintf("%s:/output", outputDir))
@@ -63,8 +67,8 @@ func DockerCommand(checksum string, distroName string, outputDir string, package
 	args = append(args, "repackage:latest", checksum, distroName, "/output")
 
 	// Add a series of package names, same as the volume aliases.
-	for index := range packages {
-		args = append(args, fmt.Sprintf("/input/package-%d", index))
+	for _, pkg := range packages {
+		args = append(args, fmt.Sprintf("/input/%s", filepath.Base(pkg)))
 	}
 
 	return cmd, args, nil

@@ -41,7 +41,7 @@ jobs:
     - gcloud-init
     - checkout
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v5
+        key: stackrox-kernel-packer-cache-v9
     - run:
         name: Sanity check cache
         command: |
@@ -98,7 +98,7 @@ jobs:
         name: Sanity check cache
         command: cat .build-data/cache/cache.yml
     - save_cache:
-        key: stackrox-kernel-packer-cache-v5-{{ epoch }}
+        key: stackrox-kernel-packer-cache-v9-{{ epoch }}
         paths:
         - .build-data/cache/cache.yml
 

@@ -40,6 +40,11 @@ main() {
             repackage_debian "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
+        cos)
+            log 'Repackaging Container-Optimized OS'
+            repackage_cos "$checksum" "$output_dir" "${packages[@]}"
+        ;;
+
         redhat)
             log 'Repackaging RedHat'
             repackage_redhat "$checksum" "$output_dir" "${packages[@]}"
@@ -168,6 +173,76 @@ repackage_debian() {
     )
 }
 
+repackage_cos() {
+    if [[ $# -ne 3 ]]; then
+        log "invalid number of arguments"
+        return 1
+    fi
+
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package="$3"
+
+    # Create a temporary directory for extracting the package tree.
+    local tmp_dir="$(mktemp -d)"
+
+    (
+        cd "$tmp_dir"
+
+        # Extract the package tree.
+        tar -xf "$input_package"
+
+        # Extract the build id from the cos package name it will be of the form,
+        # 'https---storage.googleapis.com-cos-tools-10718.52.0-kernel-src.tar.gz'
+        local build_id="$(echo "$input_package" | sed 's/^.*-\([0-9]\+\.[0-9]\+\.[0-9]\+\)-kernel-src\.tar\.gz$/\1/')"
+        if [ -z $build_id ]; then 
+            log "empty COS build id"
+            return 1
+        fi
+
+        # Find the name of the kernel directory. This directory will be used as the
+        # root of the resulting archive.
+        # Variable will contain a string that should looks like "4.14.30+". Also, Notice the plus sign.
+        local kernel_make_version="$(cat Makefile | grep '^VERSION ='    | head -n1 | cut -d ' ' -f 3)"
+        local kernel_make_major="$(cat   Makefile | grep '^PATCHLEVEL =' | head -n1 | cut -d ' ' -f 3)"
+        local kernel_make_minor="$(cat   Makefile | grep '^SUBLEVEL ='   | head -n1 | cut -d ' ' -f 3)"
+        local kernel_version="${kernel_make_version}.${kernel_make_major}.${kernel_make_minor}"
+        local kernel_uname="${kernel_version}+"
+
+        # Sanity check the derived kernel version.
+        if [[ -z "$kernel_version" ]]; then
+            log "blank kernel dir"
+            return 1
+        fi
+
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'cos' "${kernel_uname}" '.')"
+
+        # Copy fixed kernel config 
+        cp /etc/includes/cos/.config .
+
+        # Prepare kernel sources for module compilation
+        make olddefconfig > /dev/null
+        make modules_prepare > /dev/null
+
+        # Delete all *.c files, excluding scripts directory
+        find "${tmp_dir}" ! \( -type d \) -not -path "${tmp_dir}/scripts/*" -name "*.c" -delete
+
+        local kernel_version_cos="${kernel_version}-${build_id}-cos"
+
+        log "Kernel version is ${kernel_version_cos}"
+
+        local bundle_path="${output_dir}/bundle-${kernel_version_cos}.tgz"
+
+        # Compress only part of the file hierarchy into a tarball.
+        tar --create --dereference --hard-dereference --file - \
+            --exclude ./Documentation \
+            --directory "$meta_dir" . \
+            --directory "${tmp_dir}" . \
+        | pigz -9 -c > "${bundle_path}"
+    )
+}
+
 # Repackages a single RedHat RPM file into a bundle tarball.
 repackage_redhat() {
     if [[ $# -ne 3 ]]; then
@@ -271,9 +346,9 @@ bundle_meta() {
     local kernel_uname="$3"
     local build_dir="$4"
 
-    local kernel_version="$(echo "$kernel_uname" | sed 's/^\(\d\+\).*/\1/g')"
-    local kernel_major="$(echo "$kernel_uname" | sed 's/^\(\d\+\)\.\(\d\+\).*/\2/g')"
-    local kernel_minor="$(echo "$kernel_uname" | sed 's/^\(\d\+\)\.\(\d\+\)\.\(\d\+\).*/\3/g')"
+    local kernel_version="$(echo "$kernel_uname" | sed 's/^\([0-9]\+\).*/\1/g')"
+    local kernel_major="$(echo "$kernel_uname" | sed 's/^\([0-9]\+\)\.\([0-9]\+\).*/\2/g')"
+    local kernel_minor="$(echo "$kernel_uname" | sed 's/^\([0-9]\+\)\.\([0-9]\+\)\.\([0-9]\+\).*/\3/g')"
 
     tmp_dir="$(mktemp -d)"
 

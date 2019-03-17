@@ -87,6 +87,7 @@ func buildCmd(manifestFile string, cacheDir string, pkgDir string, bundleDir str
 		return err
 	}
 
+	failureCount := 0
 	for _, id := range buildManifest.SortedIDs() {
 		// Skip this build if it already exists in the cache.
 		if _, found := buildCache[id]; found {
@@ -112,6 +113,7 @@ func buildCmd(manifestFile string, cacheDir string, pkgDir string, bundleDir str
 		if err != nil {
 			color.Red("[FAIL] [%s] | %v\n", id, err)
 			color.Red("       ↳ %v\n", err)
+			failureCount += 1
 			continue
 		}
 
@@ -122,6 +124,9 @@ func buildCmd(manifestFile string, cacheDir string, pkgDir string, bundleDir str
 		}
 	}
 
+	if failureCount > 0 {
+		return errors.New("build failures")
+	}
 	return nil
 }
 
