@@ -2015,6 +2015,11 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1800.6.0-coreos_developer_container.bin.bz2
+442886983c0df517c8391d1d04f37ac8a261ac6232a4265ccfa01d5143e65566:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1078_4.4.0-1078.88_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1078-aws_4.4.0-1078.88_amd64.deb
 573184586d8f85377e784da9ec005a1e9382a8e44fa7b3bf36be5dbbdfcaa4fd:
   type: debian
   packages:
@@ -2715,6 +2720,11 @@ d2672309e17ad9e4183ce69b5ee7b52c23360ff8844d8c1d1626af67a52c5295:
   packages:
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.65-k8s-linux-headers-4.4.65-k8s_4.4.65-20170502_amd64.deb
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
+d54571289570a4b7ea08e43c3ca1a0a1bccc2eca7b5042ac55988981cec69431:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1035_4.15.0-1035.37_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1035-aws_4.15.0-1035.37_amd64.deb
 da0163cedfb65f723bcbdc8889bdb2e4f706cc624078209b976a9fd9d579ba2c:
   type: redhat
   packages:
