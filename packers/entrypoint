@@ -221,6 +221,11 @@ repackage_cos() {
         # Copy fixed kernel config 
         cp /etc/includes/cos/.config .
 
+        # COS 4.14 kernels contain a backport that included anonymous structs 
+        # for clang which breaks access to task_struct.
+        sed -i '/^#define randomized_struct_fields_start	struct {$/d' include/linux/compiler-clang.h
+        sed -i '/^#define randomized_struct_fields_end	};$/d' include/linux/compiler-clang.h
+
         # Prepare kernel sources for module compilation
         make olddefconfig > /dev/null
         make modules_prepare > /dev/null
