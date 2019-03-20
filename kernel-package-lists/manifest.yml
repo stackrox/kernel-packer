@@ -1756,6 +1756,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10323.69.0-kernel-src.tar.gz
+024368b8c0d5b3468216db89b4a5a5f3e7bcf1726a32e6329d0786c7fbb8f9e9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.0.0-1001_5.0.0-1001.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.0.0-1001-gcp_5.0.0-1001.1_amd64.deb
 28176e378621e2430279298b2d7feefafa57720b98186cb56e4f6cebc268fe7a:
   type: redhat
   packages:
@@ -2693,10 +2698,20 @@ d914c3fe573a3374a281c78bac17a96bc7d958583205f8918ce9159e24eb7f0e:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-b73a5a824bd1eb23522128573839e862d4d89ef8d544371b7c2bc3ae4730125b-kernel-devel-4.14.77-81.59.amzn2.x86_64.rpm
+d939e9ae82e07187e1bb8c5284288f9ae6a04c19075dd09fe0ce0d9d89dd602e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.0.0-1001_5.0.0-1001.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.0.0-1001-aws_5.0.0-1001.1_amd64.deb
 d1918bda77f3694a4eaef3d292377f6077ea8c4f1bcbd1d33a8513104a095811:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.166-1.el7.elrepo.x86_64.rpm
+d6916c2c58e15bd714aa792c89b47a70ef7cd17702026a8001c6361b17a1d0b1:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.0.0-1001_5.0.0-1001.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.0.0-1001-azure_5.0.0-1001.1_amd64.deb
 d8411ea5e4cb8fdb067a9f7452d6ec5b5d56c59ee0abf7380875c70abd0939da:
   type: ubuntu
   packages:
