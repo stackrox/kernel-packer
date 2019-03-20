@@ -221,6 +221,10 @@ repackage_cos() {
         # Copy fixed kernel config 
         cp /etc/includes/cos/.config .
 
+	sed -i 's/LOCALVERSION=""/LOCALVERSION="+"/' .config
+	sed -i '/^#define randomized_struct_fields_start	struct {$/d' include/linux/compiler-clang.h
+	sed -i '/^#define randomized_struct_fields_end	};$/d' include/linux/compiler-clang.h
+
         # Prepare kernel sources for module compilation
         make olddefconfig > /dev/null
         make modules_prepare > /dev/null
