@@ -38,3 +38,4 @@ crawl: build-crawl-container crawl-kops crawl-amazon
 	docker run --rm -i kernel-crawler crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu-GKE > $(CRAWLED_PACKAGE_DIR)/ubuntu-gke.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu-GCP > $(CRAWLED_PACKAGE_DIR)/ubuntu-gcp.txt
+	docker run --rm -i kernel-crawler crawl Debian > $(CRAWLED_PACKAGE_DIR)/debian.txt
