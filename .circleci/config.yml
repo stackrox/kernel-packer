@@ -161,7 +161,7 @@ workflows:
         filters:
           branches:
             only:
-            - /.*dev-crawl.*/
+            - /(.*dev-crawl.*|master)/
 
   cron:
     jobs:
