@@ -138,7 +138,7 @@ repos = {
     ],
     "Debian": [
         {
-            "root": "http://ftp.us.debian.org/debian/pool/main/l/",
+            "root": "http://security.debian.org/pool/updates/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-(?:headers-[0-9.]+-[^-]+-(?:amd64|common_)|kbuild-.*_4.9.130).*(?:amd64|all).deb$')]/@href",
