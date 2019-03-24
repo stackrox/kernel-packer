@@ -25,7 +25,8 @@ crawl-kops: build-crawl-container
 
 .PHONY: crawl-debian
 crawl-debian: build-crawl-container
-	docker run --rm -i kernel-crawler crawl Debian | sort > $(CRAWLED_PACKAGE_DIR)/debian.txt
+	echo 'http://security.debian.org/pool/updates/main/l/linux/linux-kbuild-4.9_4.9.110-3+deb9u6_amd64.deb' > $(CRAWLED_PACKAGE_DIR)/debian.txt
+	docker run --rm -i kernel-crawler crawl Debian | sort >> $(CRAWLED_PACKAGE_DIR)/debian.txt
 
 .PHONY: crawl-amazon
 crawl-amazon: build-crawl-container
