@@ -173,6 +173,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11190.0.0-kernel-src.tar.gz
+2d2f54b9a94f883ccf71cbe9225974f7f866ae204ed7dc5f06947cec9d268e7a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-146-generic_4.4.0-146.172_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-146_4.4.0-146.172_all.deb
 2d2a856e9495b475f857fd39fadfbaa1efee99238111ed2f509ddd4e89b6ec50:
   type: redhat
   packages:
@@ -647,6 +652,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.73-1.el7.elrepo.x86_64.rpm
+7a41a5d3a48596aa52a997e0da931a2cb7d0400b9493e8eda5ac5587dc0acc72:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-48-generic_4.15.0-48.51_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-48_4.15.0-48.51_all.deb
 7d67a6929ab67f3a4436092c55cd28c51c6b0b32070454214ba11f408769ed89:
   type: redhat
   packages:
