@@ -811,6 +811,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9f388164ea775e7a6c36c8628bb9a66a47d9fe27c99e732a210f357e1213dda7-kernel-devel-4.14.77-86.82.amzn2.x86_64.rpm
+9c2832b9ce1579d3dd8e1c8b29ac7059bc2c17f6d6d9219d355d9fa86097abf7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1081_4.4.0-1081.91_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1081-aws_4.4.0-1081.91_amd64.deb
 9b9346b561a74c4677c1a28965a1e6c7a96c8ec75443062a8fca52612cab8500:
   type: cos
   packages:
@@ -2348,6 +2353,11 @@ ae2a760809755c417e6f75eaced54b904cacf2a54845226b420a009122f94485:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1353.6.0-coreos_developer_container.bin.bz2
+aeb26b41e81ad8a044511a906b1927a02a4101b02603c6fea1edd8faec0e5524:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1037_4.15.0-1037.39_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1037-aws_4.15.0-1037.39_amd64.deb
 aeb82a2d820216d88322274a65d15cbc47770225825cf835c381d76249afc265:
   type: redhat
   packages:
