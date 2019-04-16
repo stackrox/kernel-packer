@@ -162,6 +162,7 @@ workflows:
           branches:
             only:
             - /.*dev-crawl.*/
+            - master
 
   cron:
     jobs:
