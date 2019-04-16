@@ -173,8 +173,31 @@ repos = {
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*_all.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes
-        }
+        },
     ],
+
+    "Ubuntu-HWE": [
+        # Generic Linux AMD64 headers, distributed from main (HWE)
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-hwe-edge/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-generic.*amd64.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes,
+            "include_patterns": ["4.15.0-15"],
+        },
+
+        # Generic Linux "all" headers, distributed from main (HWE)
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-hwe-edge/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*_all.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes,
+            "include_patterns": ["4.15.0-15"],
+        },
+    ],
+
     "Ubuntu-Azure": [
         # linux-azure AMD64 headers, distributed from main
         {
@@ -341,6 +364,8 @@ def crawl(distro):
                         for rpm in rpms:
                             sys.stderr.write("Considering package " + rpm + "\n")
                             if "exclude_patterns" in repo and any(x in rpm for x in repo["exclude_patterns"]):
+                                continue
+                            if "include_patterns" in repo and not any(x in rpm for x in repo["include_patterns"]):
                                 continue
                             else:
                                 sys.stderr.write("Adding package " + rpm + "\n")
