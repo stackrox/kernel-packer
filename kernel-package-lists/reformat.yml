@@ -69,3 +69,9 @@
   type: ubuntu
   file: ubuntu-standard.txt
   reformat: pairs
+
+- name: ubuntu-hwe
+  description: Ubuntu Standard Kernels
+  type: ubuntu
+  file: ubuntu-hwe.txt
+  reformat: pairs
