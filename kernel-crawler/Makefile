@@ -34,8 +34,12 @@ crawl-amazon: build-crawl-container
 	# we don't actually supply that argument here.
 	docker run --rm -i --entrypoint python3 kernel-crawler repo-crawler.py --print yum http://amazonlinux.us-west-2.amazonaws.com/2017.12/core/latest/x86_64/mirror.list --match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon.txt
 
+.PHONY: crawl-ubuntu-hwe
+crawl-ubuntu-hwe: build-crawl-container
+	docker run --rm -i kernel-crawler crawl Ubuntu-HWE > $(CRAWLED_PACKAGE_DIR)/ubuntu-hwe.txt
+
 .PHONY: crawl
-crawl: build-crawl-container crawl-centos crawl-kops crawl-amazon crawl-debian
+crawl: build-crawl-container crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-hwe
 	docker run --rm -i kernel-crawler crawl CoreOS > $(CRAWLED_PACKAGE_DIR)/coreos.txt
 	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
