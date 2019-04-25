@@ -112,6 +112,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.127-1.el7.elrepo.x86_64.rpm
+1d37ab9e6e94289430f21938cc922168e99dedc9e1f6ba2e9f4be8143a28b4cc:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-14-generic_5.0.0-14.15_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-14_5.0.0-14.15_all.deb
 1d55fcb4438a9f563c3eb8b6a864a7d7093a6558f1f6d9fb22ca7d3eaeb92885:
   type: ubuntu
   packages:
@@ -3231,6 +3236,11 @@ f9c82f8851a7d5d8a08a31eef371a36f4dd812d4c59d9dc758b05760b623f377:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1235.8.0-coreos_developer_container.bin.bz2
+f9ddbb0bbbaa9f93982af0aaed08d5562e1beec7f9309afcb2c513d19cfc4588:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1043_4.15.0-1043.47_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1043-azure_4.15.0-1043.47_amd64.deb
 f24fcaec5d38c44de1b0a251ba152c517af7940d7e76bfdaaba77f073f4f602a:
   type: cos
   packages:
