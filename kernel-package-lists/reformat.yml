@@ -75,3 +75,9 @@
   type: ubuntu
   file: ubuntu-hwe.txt
   reformat: pairs
+
+- name: minikube
+  description: Minikube VM Kernels
+  type: minikube
+  file: minikube.txt
+  reformat: single
