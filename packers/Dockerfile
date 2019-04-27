@@ -16,6 +16,16 @@ RUN apt-get update \
       pigz \
       rpm \
       tar \
+      ca-certificates \
+      golang \
+      rsync \
+      libssl-dev \
+      git \
+      libtool \
+      build-essential \
+      wget \
+      python \
+      unzip \
  ;
 
 

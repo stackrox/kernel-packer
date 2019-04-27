@@ -55,6 +55,11 @@ main() {
             repackage_ubuntu "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
+        minikube)
+            log 'Repackaging minikube'
+            repackage_minikube "$checksum" "$output_dir" "${packages[@]}"
+        ;;
+
         *)
             log 'unknown distro'
             return 1
@@ -338,6 +343,62 @@ repackage_ubuntu() {
             --exclude ./scripts/dtc \
             --directory "$meta_dir" . \
             --directory "${tmp_dir}/usr/src/linux-headers-${kernel_version}" . \
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+    )
+}
+
+# Repackages a minikube kernel into a bundle tarball.
+repackage_minikube() {
+    if [[ $# -ne 3 ]]; then
+        log "invalid number of arguments"
+        return 1
+    fi
+
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package_1="$3"
+
+    local minikube="$(mktemp -d)"
+    local buildroot="${minikube}/out/buildroot"
+    (
+        tar --strip 1 -C "${minikube}" -xzf "${input_package_1}"
+        cd "${minikube}"
+
+        # extract buildroot
+        sed -i '/$(MAKE) -C $(BUILD_DIR)\/buildroot/d' Makefile
+        make minikube_iso &> /dev/null || true # error expected
+
+        # extract kernel
+        cd "${buildroot}"
+        make linux-extract &> /dev/null
+
+        local linux_src=$(find "${buildroot}/output/build" -maxdepth 1 -name 'linux-*' | head -n1)
+        local kernel_version="$(echo "$linux_src" | sed -n 's/^.*\/linux-\([0-9]\+\.[0-9]\+\.[0-9]\+\)$/\1/p')"
+        if [ ! -n "$kernel_version" ]; then
+            kernel_version="$(echo "$linux_src" | sed 's/^.*\/linux-\([0-9]\+\.[0-9]\+\)$/\1/').0"
+        fi
+
+        if [[ -z "$kernel_version" ]]; then
+            log "invalid kernel version"
+            return 1
+        fi
+        log "Kernel version is $kernel_version"
+
+        # config kernel, error expected
+        make "${linux_src}/.config" &> /dev/null || true
+
+        # prepare kernel
+        cd "${linux_src}"
+        make olddefconfig &> /dev/null
+        make modules_prepare &> /dev/null
+
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'minikube' "$kernel_version" '.')"
+
+        # Compress only part of the file hierarchy into a tarball.
+        tar --create --dereference --hard-dereference --file - \
+            --directory "$meta_dir" . \
+            --directory "${linux_src}" . \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
     )
 }

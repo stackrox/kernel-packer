@@ -43,6 +43,17 @@ debian_excludes = [
     "4.19.0",
     "3.2.0", "3.16.0" # legacy
 ]
+minikube_excludes = [
+    "kubernetes/minikube/archive/v0.35.0.tar.gz",
+    "kubernetes/minikube/archive/v0.34.1.tar.gz",
+    "kubernetes/minikube/archive/v0.34.0.tar.gz",
+    "kubernetes/minikube/archive/v0.33.1.tar.gz",
+    "kubernetes/minikube/archive/v0.33.0.tar.gz",
+    "kubernetes/minikube/archive/v0.32.0.tar.gz",
+    "kubernetes/minikube/archive/v0.31.0.tar.gz",
+    "kubernetes/minikube/archive/v0.30.0.tar.gz",
+    "kubernetes/minikube/archive/v0.29.0.tar.gz",
+]
 repos = {
     "CentOS" : [
         {
@@ -153,6 +164,17 @@ repos = {
             "patterns": [
                 "kernel-src.tar.gz$"
             ]
+        },
+    ],
+
+    "Minikube": [
+        {
+            "root": "https://github.com/kubernetes/minikube/releases",
+            "download_root": "https://github.com",
+            "discovery_pattern" : "",
+            "subdirs": [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^/kubernetes/minikube/archive/v[0-9]+.[0-9]+.[0-9]+.tar.gz')]/@href",
+            "exclude_patterns": minikube_excludes,
         },
     ],
 
@@ -348,14 +370,17 @@ def crawl(distro):
 
         try:
             root = urllib2.urlopen(repo["root"], timeout=URL_TIMEOUT).read()
-            versions = html.fromstring(root).xpath(repo["discovery_pattern"],
-                                                   namespaces={"regex": "http://exslt.org/regular-expressions"})
+            versions = [""]
+            if len(repo["discovery_pattern"]) > 0:
+                versions = html.fromstring(root).xpath(repo["discovery_pattern"],
+                                                    namespaces={"regex": "http://exslt.org/regular-expressions"})
             for version in versions:
                 sys.stderr.write("Considering version "+version+"\n")
                 for subdir in repo["subdirs"]:
                     try:
                         sys.stderr.write("Considering version " + version + " subdir " + subdir + "\n")
                         source = repo["root"] + version + subdir
+                        download_root = source if "download_root" not in repo else repo["download_root"]
                         page = urllib2.urlopen(source, timeout=URL_TIMEOUT).read()
                         rpms = html.fromstring(page).xpath(repo["page_pattern"],
                                                            namespaces={"regex": "http://exslt.org/regular-expressions"})
@@ -369,7 +394,7 @@ def crawl(distro):
                                 continue
                             else:
                                 sys.stderr.write("Adding package " + rpm + "\n")
-                                kernel_urls.append("{}{}".format(source, urllib2.unquote(rpm)))
+                                kernel_urls.append("{}{}".format(download_root, urllib2.unquote(rpm)))
                     except urllib2.HTTPError as e:
                         sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
 
