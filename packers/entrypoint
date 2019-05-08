@@ -60,6 +60,11 @@ main() {
             repackage_minikube "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
+        linuxkit)
+            log 'Repackaging linuxkit'
+            repackage_linuxkit "$checksum" "$output_dir" "${packages[@]}"
+        ;;
+
         *)
             log 'unknown distro'
             return 1
@@ -400,6 +405,56 @@ repackage_minikube() {
             --directory "$meta_dir" . \
             --directory "${linux_src}" . \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+    )
+}
+
+# Repackages a linuxkit kernel into a bundle tarball.
+repackage_linuxkit() {
+    if [[ $# -ne 3 ]]; then
+        log "invalid number of arguments"
+        return 1
+    fi
+
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package_1="$3"
+
+    local linux_src="$(mktemp -d)"
+    (
+        tar --strip 1 -C "${linux_src}" -xzf "${input_package_1}"
+        cd "${linux_src}"
+
+        # Find the name of the kernel directory. This directory will be used as the
+        # root of the resulting archive.
+        # Variable will contain a string that should looks like "4.14.30+". Also, Notice the plus sign.
+        local kernel_make_version="$(cat Makefile | grep '^VERSION ='    | head -n1 | cut -d ' ' -f 3)"
+        local kernel_make_major="$(cat   Makefile | grep '^PATCHLEVEL =' | head -n1 | cut -d ' ' -f 3)"
+        local kernel_make_minor="$(cat   Makefile | grep '^SUBLEVEL ='   | head -n1 | cut -d ' ' -f 3)"
+        local kernel_version="${kernel_make_version}.${kernel_make_major}.${kernel_make_minor}"
+        local kernel_uname="${kernel_version}-linuxkit"
+
+        log "Kernel version is ${kernel_uname}"
+
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'linuxkit' "$kernel_uname" '.')"
+
+        # Copy kernel config (see /etc/includes/linuxkit/README.md for details)
+        cp /etc/includes/linuxkit/${kernel_version}-config .config
+
+        # Prepare kernel sources for module compilation
+        make olddefconfig > /dev/null
+        make modules_prepare > /dev/null
+
+        # Delete all *.c files, excluding scripts directory
+        find "${linux_src}" ! \( -type d \) -not -path "${linux_src}/scripts/*" -name "*.c" -delete
+
+        local bundle_path="${output_dir}/bundle-${kernel_uname}.tgz"
+
+        # Compress only part of the file hierarchy into a tarball.
+        tar --create --dereference --hard-dereference --file - \
+            --directory "$meta_dir" . \
+            --directory "${linux_src}" . \
+        | pigz -9 -c > "${bundle_path}"
     )
 }
 
