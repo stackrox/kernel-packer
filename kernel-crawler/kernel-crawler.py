@@ -113,6 +113,15 @@ repos = {
                 "x86_64/RPMS/"
             ],
             "page_pattern" : "//body//table/tr/td/a[regex:test(@href, '^kernel-lt-devel-?[0-9].*\.rpm$')]/@href"
+        },
+
+        {
+            "root" : "https://buildlogs.centos.org/centos/7/virt/",
+            "discovery_pattern" : "//body//table//tr/td/a[regex:test(@href, '^x86_64.*$')]/@href",
+            "subdirs" : [
+                "xen/"
+            ],
+            "page_pattern" : "//body//table/tr/td/a[regex:test(@href, '^kernel-devel-?[0-9].*\.rpm$')]/@href"
         }
     ],
 
