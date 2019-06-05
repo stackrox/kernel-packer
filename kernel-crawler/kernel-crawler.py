@@ -325,18 +325,18 @@ repos = {
         },
     ],
     "Ubuntu-GKE": [
-        # linux-gke AMD64 headers, distributed from universe
+        # linux-gke AMD64 headers, distributed from main
         {
-            "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
             "discovery_pattern" : "/html/body//a[@href = 'linux-gke/']/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gke.*amd64.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes
         },
 
-        # linux-gke "all" headers, distributed from universe
+        # linux-gke "all" headers, distributed from main
         {
-            "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
             "discovery_pattern" : "/html/body//a[@href = 'linux-gke/']/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gke-headers-[4-9].*_all.deb$')]/@href",
