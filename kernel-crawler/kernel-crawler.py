@@ -342,6 +342,24 @@ repos = {
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gke-headers-[4-9].*_all.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes
         },
+
+        # linux-gke-4.15 AMD64 headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-gke-4.15/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gke-4.15-headers-[4-9].*_amd64.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes
+        },
+
+        # linux headers for GKE, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-gke-4.15/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gke.*_amd64.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes
+        },
     ]
 }
 
