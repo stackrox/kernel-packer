@@ -26,6 +26,8 @@ RUN apt-get update \
       wget \
       python \
       unzip \
+      bison \
+      flex \
  ;
 
 
