@@ -41,6 +41,8 @@ debian_excludes = [
     "4.17.0", # 4.17+ are not supported yet
     "4.18.0",
     "4.19.0",
+    "linux-headers-4.9.0-9-amd64_4.9.168-1+deb9u2_amd64.deb",
+    "linux-headers-4.9.0-9-common_4.9.168-1+deb9u2_all.deb",
     "3.2.0", "3.16.0" # legacy
 ]
 minikube_excludes = [
