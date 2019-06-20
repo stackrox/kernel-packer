@@ -1318,12 +1318,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.171-1.el7.elrepo.x86_64.rpm
-74e77e02aa455d7406906ac77821670d19c30a55cefb63ff33aa1825b686bddf:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-common_4.9.168-1-deb9u2_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-common_4.9.168-1-deb9u3_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 74bc9dd1804efbb2703ee304aad98961f3e51bf083ccd95e8deb809b9a1373c4:
   type: coreos
   packages:
@@ -2750,6 +2744,12 @@ b6bc4fe45000cfcdc87e48be0c289fa6e6557a829cf98da12b2ebf343f77bea4:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-122-generic_4.4.0-122.146_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-122_4.4.0-122.146_all.deb
+b6acb51cab224c81775899d2bb2428ca2db5eb60b4c23ab478aeb3cb51a79220:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-amd64_4.9.168-1-deb9u3_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-common_4.9.168-1-deb9u3_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 b09ddefdae0532765eabfd2e470305478e5b8feb81dcbb98afbe74a5a9987c80:
   type: cos
   packages:
@@ -3304,12 +3304,6 @@ d81725d372cafc6cf752acd99f2c3cb80c206276b556d893b750f6a8a61bd2b5:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11151.32.0-kernel-src.tar.gz
-d481622f20f02b4da57143d0afddde5de63580f1ad1f5d14ef8ff9f6394b40c8:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-amd64_4.9.168-1-deb9u2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-amd64_4.9.168-1-deb9u3_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 d661911a63e3eade35d6702e083144968f53b1eaef1d07e74cedfaaf88145d77:
   type: ubuntu
   packages:
