@@ -2305,6 +2305,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.21-1.el7.elrepo.x86_64.rpm
+79992d80ed04440382cd2bf764563a94c1a084572f5d748fcb2c9879066c0dae:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.0.0-1010_5.0.0-1010.10_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.0.0-1010-azure_5.0.0-1010.10_amd64.deb
 87431c5a47552626061d6252cb632b4f30d372e0b57869958fbee22f5235450b:
   type: cos
   packages:
@@ -3637,6 +3642,10 @@ eabe15ed32f7465428fcb3a312fdf8e971d44531076ecfcb5c3e770da5beab30:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-46-generic_4.15.0-46.49_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-46_4.15.0-46.49_all.deb
+eb5ad171f9c16603c68f57ce60ff5de734fcc7a285f76edab682003e238a00dd:
+  type: coreos
+  packages:
+  - http---stable.release.core-os.net-amd64-usr-2135.4.0-coreos_developer_container.bin.bz2
 eb92bbfb115ff0b3ce2e995c6c19c4b18f9cf8685d61ce4e1d136a7945deb51b:
   type: ubuntu
   packages:
