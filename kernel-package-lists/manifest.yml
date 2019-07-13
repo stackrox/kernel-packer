@@ -1253,10 +1253,6 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1967.4.0-coreos_developer_container.bin.bz2
-52acfdf67c6a006c306c8d79d75f4dda0e36a4530ca89ea79f080fbd60b05198:
-  type: cos
-  packages:
-  - https---storage.googleapis.com-cos-tools-12314.0.0-kernel-src.tar.gz
 53c4af7f8bde3bbd3c81b404303ff8ff8228f21e755775cac44fd602d5c222dd:
   type: redhat
   packages:
@@ -2354,6 +2350,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-13-generic_5.0.0-13.14_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-13_5.0.0-13.14_all.deb
+248029d117f0ca98f5498c4ff6d1b56d02c75e46c76f7e6fa786ad065bb04887:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-12105.97.0-kernel-src.tar.gz
 353953ac3778ea06185dc9abae2af0c2447fae1395f76d47fc2c711ca5f7b78d:
   type: cos
   packages:
