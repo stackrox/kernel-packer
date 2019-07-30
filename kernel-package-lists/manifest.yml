@@ -1082,6 +1082,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.81.0-kernel-src.tar.gz
+22b32ab2f9c1e1bcb2438b5558886c30c4298411f2ad8669481294dd52ebaa7b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-23-generic_5.0.0-23.24_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-23_5.0.0-23.24_all.deb
 22ac960979bc557d67ffa15875dea20f6ac217f738f56d53ef8e7b76f082a5bf:
   type: ubuntu
   packages:
@@ -1243,6 +1248,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-8cc01ea526bd05bbb937fbb21bd734de49255d8a9853943ee901ccdf487ee23b-kernel-devel-4.14.33-59.34.amzn2.x86_64.rpm
+045f9e618f1fad2fc9d09c6821d4f400f78041bad09ba5907252248756daf46e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-158-generic_4.4.0-158.186_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-158_4.4.0-158.186_all.deb
 045cba31abbcf5526a1189134ad742fb172bf1e9b5b7f231d334ce07d09ffda0:
   type: ubuntu
   packages:
