@@ -559,12 +559,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1005_4.4.0-1005.5_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1005-aws_4.4.0-1005.5_amd64.deb
-5a0b030401e1e056721b9a7ab8fd214f7d9ef253b87b2492d12d93dfdeaf6fd3:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-amd64_4.9.168-1-deb9u4_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-common_4.9.168-1-deb9u4_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 5d1b68f93700ac3ad76707ff285641aa173cf297d4c9e59a0abce7b14a7e7879:
   type: ubuntu
   packages:
@@ -1202,6 +1196,12 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11021.99.0-kernel-src.tar.gz
+42b1f9f8f51e995b1a7e9d147b49ef551865b892e6b0d43f16781e88c9847d5b:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-common_4.9.168-1-deb9u4_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-common_4.9.168-1-deb9u5_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 42e618c8316c5cf2281c8fe6702c5d39645de66517671c46bbf3745e8e9644aa:
   type: cos
   packages:
@@ -2912,6 +2912,12 @@ b6bc4fe45000cfcdc87e48be0c289fa6e6557a829cf98da12b2ebf343f77bea4:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-122-generic_4.4.0-122.146_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-122_4.4.0-122.146_all.deb
+b9db7ac2604acbc9eed37f92d1d14c55c4907f5a50ba8b1874b7222cfa031b4d:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-amd64_4.9.168-1-deb9u4_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-9-amd64_4.9.168-1-deb9u5_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 b09ddefdae0532765eabfd2e470305478e5b8feb81dcbb98afbe74a5a9987c80:
   type: cos
   packages:
