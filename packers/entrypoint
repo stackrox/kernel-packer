@@ -56,6 +56,8 @@ main() {
         ;;
 
         minikube)
+            log 'Repackaging minikube disabled'
+            return 0
             log 'Repackaging minikube'
             repackage_minikube "$checksum" "$output_dir" "${packages[@]}"
         ;;
