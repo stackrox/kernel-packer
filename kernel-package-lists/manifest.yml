@@ -405,6 +405,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.169-1.el7.elrepo.x86_64.rpm
+3b223b77b436062d31b38a3f3f7246ff2ddef9c46a63ba004dac1114b27949c7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1047_4.15.0-1047.49_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1047-aws_4.15.0-1047.49_amd64.deb
 3d247edfa82914378b4d10ba2c0f5421031037aa1dda633e106f5fdb71b541e4:
   type: minikube
   packages:
@@ -2691,6 +2696,11 @@ a7ba90ee2909099852f95d5bb70a3cd7e4881e9e6ccd448a838d7296351ae3ba:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.11.6.el7.x86_64.rpm
+a9f96ff9f1f643473f1dbd4e3cd0db65d5a35e633e4a255d0011ae1ff2c34dd0:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-60-generic_4.15.0-60.67_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-60_4.15.0-60.67_all.deb
 a9e38096cbf0a5db5cf8927e61c6a3373d376d41969891b025f3f84fea9b0704:
   type: coreos
   packages:
