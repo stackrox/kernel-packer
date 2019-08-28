@@ -173,6 +173,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11758.0.0-kernel-src.tar.gz
+1e6940f8290d67a3f46df71edd141a0455ebc24c69558985102549240559efca:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1092_4.4.0-1092.103_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1092-aws_4.4.0-1092.103_amd64.deb
 1d30058a2a3142671b579c4b25273e70cfa9c62dba6994820a12da5bf1932517:
   type: cos
   packages:
@@ -1061,11 +1066,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.128-1.el7.elrepo.x86_64.rpm
-11fb4da56ced4626666b32c47fb0cf2f542dc338d5c0254bfdac47c61ce1fad8:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1046_4.15.0-1046.48_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1046-aws_4.15.0-1046.48_amd64.deb
 13bb2352d9a67e3a01557cc6c6beba16053d2298d30bab2a7ab76636d0bbc238:
   type: redhat
   packages:
@@ -3490,11 +3490,6 @@ d4b9609df92b145229e98bdba21ffd54bdbb70aa15ca326e96c14b9d63617bc6:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1045_4.15.0-1045.49_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1045-azure_4.15.0-1045.49_amd64.deb
-d5ed20ced308004816b8bd95132931bdec7324969a6c64917f83629ffa805e70:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-59-generic_4.15.0-59.66_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-59_4.15.0-59.66_all.deb
 d6e208b28f9d70be33400559337af66f4643119d4938705ec91d2ad48aaab5a5:
   type: redhat
   packages:
@@ -4199,6 +4194,11 @@ ff36edc6d9eaf5f272e1e84d5544f33a0b1e1e637e6f59f85bfe1941a5a871cf:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.157-1.el7.elrepo.x86_64.rpm
+ff768dfe958799e67e8bb4002cd539095fed6a836e060b669c998006c3896ec0:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-161-generic_4.4.0-161.189_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-161_4.4.0-161.189_all.deb
 ff9951e8e0369865bdb831ca6ccac97ea7be971418d3642ae3d96dfcdfc36715:
   type: ubuntu
   packages:
