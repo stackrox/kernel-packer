@@ -104,6 +104,17 @@ repos = {
             "exclude_patterns": centos_excludes
         },
 
+        # RHEL 7 kernel security update kernel-devel-3.10.0-1062.el7.x86_64.rpm)
+        {
+            "root" : "https://buildlogs.centos.org/c7.1908.00.x86_64/kernel/20190808101829/",
+            "discovery_pattern" : "//body//table/tr/td/a[regex:test(@href, '^.*x86\_64/')]/@href",
+            "subdirs" : [
+                "",
+            ],
+            "page_pattern" : "//body//table/tr/td/a[regex:test(@href, '^kernel-devel-?[0-9].*\.rpm$')]/@href",
+            "exclude_patterns": centos_excludes
+        },
+
         {
             # All kernels released to the main ELRepo repo also end up in the
             # archive, so it's OK just to crawl the archive.
