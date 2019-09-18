@@ -40,6 +40,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.109-1.el7.elrepo.x86_64.rpm
+0a7985b9dc33dd2436e1f4d768159e0feccdb52d39a4f8030d98fcb79031e617:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-65-generic_4.15.0-65.74_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-65_4.15.0-65.74_all.deb
 0d9486d803da91a43c7000e23674c8d946b08f83eb4dd41d80270fa97b70e4b4:
   type: cos
   packages:
@@ -945,6 +950,11 @@
   type: minikube
   packages:
   - https---github.com-kubernetes-minikube-archive-v1.0.1.tar.gz
+8c41c29a1ea320333910ee7e8cefcdc506656d64c3a0b20b0b7732cd3acdc8c7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.0.0-1021_5.0.0-1021.22_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.0.0-1021-azure_5.0.0-1021.22_amd64.deb
 8e42e0e890cb8857ff7e907aae9052c47474f33a8b2756c9ed5a598911fe0f61:
   type: ubuntu
   packages:
