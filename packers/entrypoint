@@ -503,8 +503,8 @@ repackage_oracle() {
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
         	--exclude ./scripts/dtc \
+            . \
             --directory "$meta_dir" . \
-            --directory . . \
         | pigz -9 -c > "${bundle_path}"
     )
 }
