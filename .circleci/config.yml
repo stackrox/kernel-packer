@@ -157,6 +157,10 @@ workflows:
     - collector:
         requires:
         - combine
+        filters:
+          branches:
+            only:
+              - master
     - crawl:
         filters:
           branches:

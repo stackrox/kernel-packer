@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -eu
 
 main() {
@@ -18,7 +18,8 @@ main() {
     # Create a commit with any modified files, and push it to GitHub.
     git add "$CRAWLED_PACKAGE_DIR"
     git -c "user.name=roxbot" -c "user.email=roxbot@stackrox.com" commit --message "🤖 Updated crawled packages"
-    git push origin
+
+    git push origin "${upstream_arg[@]}"
     echo "Crawled packages have been pushed."
 }
 
