@@ -154,9 +154,13 @@ workflows:
     - combine:
         requires:
         - repackage
-#    - collector:
-#        requires:
-#        - combine
+    - collector:
+        requires:
+        - combine
+        filters:
+          branches:
+            only:
+              - master
     - crawl:
         filters:
           branches:
