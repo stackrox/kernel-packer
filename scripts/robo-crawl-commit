@@ -19,7 +19,7 @@ main() {
     git add "$CRAWLED_PACKAGE_DIR"
     git -c "user.name=roxbot" -c "user.email=roxbot@stackrox.com" commit --message "🤖 Updated crawled packages"
 
-    git push origin "${upstream_arg[@]}"
+    git push origin
     echo "Crawled packages have been pushed."
 }
 
