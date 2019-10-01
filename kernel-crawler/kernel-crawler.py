@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 #### LICENSING:
 #### This file is derived from sysdig, in scripts/kernel-crawler.py.
@@ -373,7 +373,15 @@ repos = {
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gke.*_amd64.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes
         },
-    ]
+    ],
+    "Oracle-UEK5": [
+    	{
+    		"root": "http://yum.oracle.com/repo/OracleLinux/OL7/developer_UEKR5/x86_64/",
+    		"discovery_pattern": "",
+    		"page_pattern": "/html/body//a[regex:test(@href, '^getPackage/kernel-uek-devel-[0-9].*\.x86_64\.rpm$')]/@href",
+    		"subdirs": [""],
+    	},
+    ],
 }
 
 

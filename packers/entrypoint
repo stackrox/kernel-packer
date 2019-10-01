@@ -67,6 +67,11 @@ main() {
             repackage_linuxkit "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
+        oracle)
+        	log 'Repackaging oracle'
+        	repackage_oracle "$checksum" "$output_dir" "${packages[@]}"
+        ;;
+
         *)
             log 'unknown distro'
             return 1
@@ -456,6 +461,50 @@ repackage_linuxkit() {
         tar --create --dereference --hard-dereference --file - \
             --directory "$meta_dir" . \
             --directory "${linux_src}" . \
+        | pigz -9 -c > "${bundle_path}"
+    )
+}
+
+# Repackages a linuxkit kernel into a bundle tarball.
+repackage_oracle() {
+    if [[ $# -ne 3 ]]; then
+        log "invalid number of arguments"
+        return 1
+    fi
+
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package_1="$3"
+
+    local linux_src="$(mktemp -d)"
+    (
+    	cd "${linux_src}"
+    	rpm2cpio "$input_package_1" | cpio -idm
+    	kernel_src_dirs=(usr/src/kernels/*)
+    	if [[ "${#kernel_src_dirs[@]}}" -ne 1 ]]; then
+    		log "More than one kernel source directory: ${kernel_src_dirs[*]}"
+    		exit 1
+    	fi
+    	kernel_src_dir="${kernel_src_dirs[0]}"
+    	kernel_uname="$(basename "$kernel_src_dir")"
+
+    	cd "$kernel_src_dir"
+
+        log "Kernel version is ${kernel_uname}"
+
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'oracle' "$kernel_uname" '.')"
+
+        # Delete all *.c files, excluding scripts directory
+        find . ! \( -type d \) -not -path "./scripts/*" -name "*.c" -delete
+
+        local bundle_path="${output_dir}/bundle-${kernel_uname}.tgz"
+
+        # Compress only part of the file hierarchy into a tarball.
+        tar --create --dereference --hard-dereference --file - \
+        	--exclude ./scripts/dtc \
+            --directory "$meta_dir" . \
+            --directory . . \
         | pigz -9 -c > "${bundle_path}"
     )
 }
