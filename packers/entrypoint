@@ -481,7 +481,7 @@ repackage_oracle() {
     	cd "${linux_src}"
     	rpm2cpio "$input_package_1" | cpio -idm
     	kernel_src_dirs=(usr/src/kernels/*)
-    	if [[ "${#kernel_src_dirs[@]}}" -ne 1 ]]; then
+    	if [[ "${#kernel_src_dirs[@]}" -ne 1 ]]; then
     		log "More than one kernel source directory: ${kernel_src_dirs[*]}"
     		exit 1
     	fi
