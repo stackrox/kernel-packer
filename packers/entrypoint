@@ -498,6 +498,11 @@ repackage_oracle() {
         # Delete all *.c files, excluding scripts directory
         find . ! \( -type d \) -not -path "./scripts/*" -name "*.c" -delete
 
+        # Bogus symlink
+        if [[ -L include/asm/asm && ! -d include/asm/asm ]]; then
+        	ln -sf ../../arch/x86/include/asm include/asm/asm
+        fi
+
         local bundle_path="${output_dir}/bundle-${kernel_uname}.tgz"
 
         # Compress only part of the file hierarchy into a tarball.
