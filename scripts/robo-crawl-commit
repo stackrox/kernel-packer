@@ -18,7 +18,11 @@ main() {
     # Create a commit with any modified files, and push it to GitHub.
     git add "$CRAWLED_PACKAGE_DIR"
     git -c "user.name=roxbot" -c "user.email=roxbot@stackrox.com" commit --message "🤖 Updated crawled packages"
-    git push origin
+    upstream_arg=()
+    if [[ "$CIRCLE_BRANCH" =~ .*dev-crawl.* ]]; then
+    	upstream_arg=("$CIRCLE_BRANCH")
+    fi
+    git push origin "${upstream_arg[@]}"
     echo "Crawled packages have been pushed."
 }
 
