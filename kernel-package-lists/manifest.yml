@@ -83,6 +83,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.93-1.el7.elrepo.x86_64.rpm
+0abc8a2a512ae56ef42cb73dce28720ceef15e817c8b7f061d2fec5b5850102d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-16-generic_5.3.0-16.17_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-16_5.3.0-16.17_all.deb
 0abf1eb1b40fd3113ad447d92783ab57ae41ffe83a9ba5faa34f467f7b743997:
   type: redhat
   packages:
@@ -1358,6 +1363,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.37-1.el7.elrepo.x86_64.rpm
+44b75352b985854209c4a500e9d2eb63ddf65fd2ecfebc99ec09c1709c6fa072:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.0.0-1020_5.0.0-1020.20_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.0.0-1020-gcp_5.0.0-1020.20_amd64.deb
 45a3a6394fd44682e8837dcce99dce059b57c5f97cb00330b6c97a14be00d323:
   type: ubuntu
   packages:
@@ -2392,6 +2402,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12105.71.0-kernel-src.tar.gz
+8909a72b3de4058a837a428046f1fbe77279431f537bb454a2220a98aa9fbd18:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.0.0-1022_5.0.0-1022.23_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.0.0-1022-azure_5.0.0-1022.23_amd64.deb
 9134fc159ddcf1b1ababb1e46e92c937ee4eb25ffbab76a030377f5bfce91033:
   type: oracle
   packages:
