@@ -3818,6 +3818,11 @@ d0c9c20b48c1628889fe9e38a0ccdd99f4abfebdd1b6d148b406a9464f7aba8c:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-3.18.41-20.el7.x86_64.rpm
+d00ac0b838fa3d200cbb1b93647defd2475f1ba802ab646530d030f8faa87445:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.3.0-1003_5.3.0-1003.3_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.3.0-1003-gcp_5.3.0-1003.3_amd64.deb
 d1f7a1932e018c6b042067ad559279ac682f59799c027400414507fbc3c060ce:
   type: cos
   packages:
@@ -4236,6 +4241,11 @@ eb92bbfb115ff0b3ce2e995c6c19c4b18f9cf8685d61ce4e1d136a7945deb51b:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-101-generic_4.4.0-101.124_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-101_4.4.0-101.124_all.deb
+eb718d88fb0f6ed83a3b92eae5dd597ba523e6391e793e76bdfbbeaaf331420c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1002_5.3.0-1002.2_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1002-aws_5.3.0-1002.2_amd64.deb
 eb942ac400831a0a67f0576836b3dfb152582705d5e6a353ead5cad739a9da44:
   type: cos
   packages:
