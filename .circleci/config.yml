@@ -42,6 +42,12 @@ jobs:
     - checkout
     - restore_cache:
         key: stackrox-kernel-packer-cache-v12
+
+    - run:
+        name: Use override cache, if any
+        command: |
+          [[ ! -f overrides/cache.yml ]] || cp overrides/cache.yml .build-data/cache/cache.yml
+
     - run:
         name: Sanity check cache
         command: |
