@@ -481,7 +481,7 @@ repackage_oracle() {
     	cd "${linux_src}"
     	rpm2cpio "$input_package_1" | cpio -idm
     	kernel_src_dirs=(usr/src/kernels/*)
-    	if [[ "${#kernel_src_dirs[@]}}" -ne 1 ]]; then
+    	if [[ "${#kernel_src_dirs[@]}" -ne 1 ]]; then
     		log "More than one kernel source directory: ${kernel_src_dirs[*]}"
     		exit 1
     	fi
@@ -498,13 +498,18 @@ repackage_oracle() {
         # Delete all *.c files, excluding scripts directory
         find . ! \( -type d \) -not -path "./scripts/*" -name "*.c" -delete
 
+        # Bogus symlink
+        if [[ -L include/asm/asm && ! -d include/asm/asm ]]; then
+        	ln -sf ../../arch/x86/include/asm include/asm/asm
+        fi
+
         local bundle_path="${output_dir}/bundle-${kernel_uname}.tgz"
 
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
         	--exclude ./scripts/dtc \
+        	. \
             --directory "$meta_dir" . \
-            --directory . . \
         | pigz -9 -c > "${bundle_path}"
     )
 }
