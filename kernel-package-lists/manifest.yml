@@ -32,10 +32,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1050_4.15.0-1050.52_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1050-aws_4.15.0-1050.52_amd64.deb
-0c661bccfdaaddc145551e7e58313e4e9c9173f2473adc9a8be7704c1ba3b02d:
-  type: cos
-  packages:
-  - https---storage.googleapis.com-cos-tools-12239.21.0-kernel-src.tar.gz
 0a796df3efa178f096295630d58f6ed1cde14f293e169280c6da50b948fbc3a8:
   type: redhat
   packages:
@@ -789,6 +785,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-42-generic_4.15.0-42.45_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-42_4.15.0-42.45_all.deb
+6a19a422ea47a0d6ce1a27f70c6f23ecb14ff74ab7298f91152f0c503a6e9cbd:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-10895.385.0-kernel-src.tar.gz
 6b26ab0ab778db578a72ffe62ba929813dca64215f9667f04f5b6cea3db8c2ee:
   type: redhat
   packages:
@@ -1048,10 +1048,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11128.0.0-kernel-src.tar.gz
-08abd7ccb9e837788489b3a89b89fa796c812e42abeb74fd8efb37d20ff86ca6:
-  type: cos
-  packages:
-  - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-src.tar.gz
 9a3e98e8113c36a42ba2e4b37aa5df1f0f7fc24418bfba17d4dd688edbd3a0f9:
   type: cos
   packages:
@@ -1656,6 +1652,10 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.0.6.el7uek.x86_64.rpm
+89c6ee052805e80e6a746f02928edca3eb8c67c20eda01e2cc42a848d9e90594:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-11647.329.0-kernel-src.tar.gz
 89cad56a8c6c4163b535ed4342171c42bb96dc105ae4a5faf85770755c25ad1b:
   type: redhat
   packages:
