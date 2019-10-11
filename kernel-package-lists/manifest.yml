@@ -649,6 +649,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.el7uek.x86_64.rpm
+5d5a4740875827a625e49c0fbfd587e949ba367d5d37f28cb76d8ae0881504ce:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.3.0-1004_5.3.0-1004.4_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.3.0-1004-gcp_5.3.0-1004.4_amd64.deb
 5b6df3050e247aacb6cc395084ef3ae80c9ad4fbc041adb8c80fddb26e09b575:
   type: ubuntu
   packages:
@@ -1836,6 +1841,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10323.104.0-kernel-src.tar.gz
+0311f9fed80b9bad88a435c8966eefc438184dbbf7c1cd01bf7dc0e4b851794e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.3.0-1003_5.3.0-1003.3_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.3.0-1003-azure_5.3.0-1003.3_amd64.deb
 329e02b0606c984e62b1470fa89869bf5d9a1d5eaf6aaf6d1e04954453a636d5:
   type: ubuntu
   packages:
@@ -2772,6 +2782,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1012_4.4.0-1012.21_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1012-aws_4.4.0-1012.21_amd64.deb
+941292e1c84bfb4f204ccfea4cf68a7477fb8c1fb329bec53310f5bc73b1bfc6:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1003_5.3.0-1003.3_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1003-aws_5.3.0-1003.3_amd64.deb
 972123cd3145be7d18d0969348175bbf647c66958d711b88df0851dbe21b5f57:
   type: ubuntu
   packages:
