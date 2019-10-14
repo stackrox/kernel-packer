@@ -11,7 +11,7 @@ main() {
   fi
 
   info "Registering subscription for user ${REDHAT_USERNAME}"
-  subscription-manager register --username "$REDHAT_USERNAME" --password "$REDHAT_PASSWORD" --force 1>&2
+  subscription-manager register --username "$REDHAT_USERNAME" --password "$REDHAT_PASSWORD" --insecure --force 1>&2
 
   info "Attaching subscription"
   subscription-manager attach 1>&2

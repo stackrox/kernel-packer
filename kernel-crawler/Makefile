@@ -8,12 +8,7 @@ all: crawl
 .PHONY: build-crawl-container
 build-crawl-container: Dockerfile kernel-crawler.py main.go
 	docker build -t kernel-crawler .
-ifdef REDHAT_USERNAME
-	@docker login -u "$(REDHAT_USERNAME)" -p "$(REDHAT_PASSWORD)" registry.redhat.io
 	docker build -t rhel-login rhel-login
-else
-	@echo "Skipping rhel-login build as REDHAT_USERNAME is not defined"
-endif
 
 .PHONY: crawl-centos
 crawl-centos: build-crawl-container

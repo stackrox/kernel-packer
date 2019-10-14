@@ -1,5 +1,10 @@
-FROM registry.redhat.io/rhel7/rhel:7.7
-# https://access.redhat.com/containers/?tab=overview#/registry.access.redhat.com/rhel7/rhel
+FROM centos:8
+
+RUN yum --disablerepo='*' --enablerepo='BaseOS' makecache \
+ && yum install -y subscription-manager
+
+# Obtained via https://access.redhat.com/labs/rhpc
+COPY 69.pem /etc/pki/product-default/69.pem
 
 COPY entrypoint /usr/bin/entrypoint
 
