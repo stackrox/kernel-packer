@@ -6,8 +6,14 @@ include ../Makefile-constants.mk
 all: crawl
 
 .PHONY: build-crawl-container
-build-crawl-container: Dockerfile kernel-crawler.py
+build-crawl-container: Dockerfile kernel-crawler.py main.go
 	docker build -t kernel-crawler .
+ifdef REDHAT_USERNAME
+	@docker login -u "$(REDHAT_USERNAME)" -p "$(REDHAT_PASSWORD)" registry.redhat.io
+	docker build -t rhel-login rhel-login
+else
+	@echo "Skipping rhel-login build as REDHAT_USERNAME is not defined"
+endif
 
 .PHONY: crawl-centos
 crawl-centos: build-crawl-container
@@ -46,8 +52,44 @@ crawl-ubuntu-gke: build-crawl-container
 crawl-oracle-uek: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Oracle-UEK5 > $(CRAWLED_PACKAGE_DIR)/oracle-uek.txt
 
+.PHONY: crawl-rhel
+crawl-rhel: build-crawl-container
+	@mkdir -p $(BUILD_DATA_DIR)/rhel-certs
+	docker run --rm \
+		-e REDHAT_USERNAME \
+		-e REDHAT_PASSWORD \
+		rhel-login:latest \
+	| tar -C $(BUILD_DATA_DIR)/rhel-certs -xf -
+
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+			-base-url https://cdn.redhat.com/content/dist/rhel/server/6/6Server/x86_64/os \
+	| sort > $(CRAWLED_PACKAGE_DIR)/rhel6.txt
+
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+			-base-url https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/os \
+	| sort > $(CRAWLED_PACKAGE_DIR)/rhel7.txt
+
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+			-base-url https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os \
+	| sort > $(CRAWLED_PACKAGE_DIR)/rhel8.txt
+
 .PHONY: crawl
-crawl: build-crawl-container crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek
+crawl: build-crawl-container crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek
 	docker run --rm -i kernel-crawler crawl CoreOS > $(CRAWLED_PACKAGE_DIR)/coreos.txt
 	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
