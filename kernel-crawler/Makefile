@@ -1,6 +1,9 @@
 ROOT_DIR = ./..
 include ../Makefile-constants.mk
 
+# Prevent piped commands (like sort) from swallowing errors during crawl.
+SHELL=/bin/bash -o pipefail
+
 .DEFAULT_GOAL = all
 .PHONY: all
 all: crawl
@@ -49,6 +52,8 @@ crawl-oracle-uek: build-crawl-container
 
 .PHONY: crawl-rhel
 crawl-rhel: build-crawl-container
+	# Trade a username & password for a certificate keypair that allows up to
+	# authenticate with the RHEL package repos.
 	@mkdir -p $(BUILD_DATA_DIR)/rhel-certs
 	docker run --rm \
 		-e REDHAT_USERNAME \
@@ -56,32 +61,35 @@ crawl-rhel: build-crawl-container
 		rhel-login:latest \
 	| tar -C $(BUILD_DATA_DIR)/rhel-certs -xf -
 
+	# Crawl for RHEL 6 kernel-devel packages.
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
 		--entrypoint /usr/bin/rhel-crawler \
 		kernel-crawler:latest \
-			-cert /rhel-certs/rhel-cert.pem \
-			-key /rhel-certs/rhel-key.pem \
 			-base-url https://cdn.redhat.com/content/dist/rhel/server/6/6Server/x86_64/os \
-	| sort > $(CRAWLED_PACKAGE_DIR)/rhel6.txt
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel6.txt
 
+	# Crawl for RHEL 7 kernel-devel packages.
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
 		--entrypoint /usr/bin/rhel-crawler \
 		kernel-crawler:latest \
-			-cert /rhel-certs/rhel-cert.pem \
-			-key /rhel-certs/rhel-key.pem \
 			-base-url https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/os \
-	| sort > $(CRAWLED_PACKAGE_DIR)/rhel7.txt
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel7.txt
 
+	# Crawl for RHEL 8 kernel-devel packages.
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
 		--entrypoint /usr/bin/rhel-crawler \
 		kernel-crawler:latest \
+			-base-url https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os \
 			-cert /rhel-certs/rhel-cert.pem \
 			-key /rhel-certs/rhel-key.pem \
-			-base-url https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os \
-	| sort > $(CRAWLED_PACKAGE_DIR)/rhel8.txt
+		> $(CRAWLED_PACKAGE_DIR)/rhel8.txt
 
 .PHONY: crawl
 crawl: build-crawl-container crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek
