@@ -162,6 +162,7 @@ workflows:
             only:
               - master
     - crawl:
+        context: redhat-login
         filters:
           branches:
             only:
@@ -170,7 +171,8 @@ workflows:
 
   cron:
     jobs:
-    - crawl
+    - crawl:
+        context: redhat-login
     triggers:
     - schedule:
         cron: "0 * * * *"

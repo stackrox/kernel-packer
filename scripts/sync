@@ -62,7 +62,15 @@ contains() {
 download() {
     url="$1"
     file="$2"
-    wget -nv "$url" -O "$file" || rm -f "$file"
+    if echo "$url" | contains 'cdn.redhat.com'; then
+        wget \
+            --no-check-certificate \
+            --certificate .build-data/rhel-certs/rhel-cert.pem \
+            --private-key .build-data/rhel-certs/rhel-key.pem \
+            -nv "$url" -O "$file" || rm -f "$file"
+    else
+        wget -nv "$url" -O "$file" || rm -f "$file"
+    fi
 }
 
 simplify() {

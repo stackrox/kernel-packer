@@ -93,3 +93,21 @@
   type: oracle
   file: oracle-uek.txt
   reformat: single
+
+- name: rhel6
+  description: RHEL 6 Kernels
+  type: redhat
+  file: rhel6.txt
+  reformat: single
+
+- name: rhel7
+  description: RHEL 7 Kernels
+  type: redhat
+  file: rhel7.txt
+  reformat: single
+
+- name: rhel8
+  description: RHEL 8 Kernels
+  type: redhat
+  file: rhel8.txt
+  reformat: single

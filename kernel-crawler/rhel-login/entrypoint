@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+main() {
+  if [[ -z "$REDHAT_USERNAME" ]]; then
+    fatal "REDHAT_USERNAME not found in environment"
+  fi
+
+  if [[ -z "$REDHAT_PASSWORD" ]]; then
+    fatal "REDHAT_USERNAME not found in environment"
+  fi
+
+  info "Registering subscription for user ${REDHAT_USERNAME}"
+  subscription-manager register --username "$REDHAT_USERNAME" --password "$REDHAT_PASSWORD" --insecure --force 1>&2
+
+  info "Attaching subscription"
+  subscription-manager attach 1>&2
+
+  entitlement_key="$(find /etc/pki/entitlement -name '*.pem' | grep key | head -n1)"
+  info "Generated entitlement key"
+
+  entitlement_cert="$(find /etc/pki/entitlement -name '*.pem' | grep -v key | head -n1)"
+  info "Generated entitlement cert"
+
+  cd "$(mktemp -d)"
+  install -m 400 "$entitlement_key" ./rhel-key.pem
+  install -m 400 "$entitlement_cert" ./rhel-cert.pem
+  tar -cf - .
+
+  info "Done writing entitlement tar stream"
+}
+
+fatal() {
+  echo "[FATAL] $*" 1>&2
+  exit 1
+}
+
+info() {
+  echo "[INFO] $*" 1>&2
+}
+
+main "$@"

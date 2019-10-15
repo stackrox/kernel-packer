@@ -1,13 +1,17 @@
 ROOT_DIR = ./..
 include ../Makefile-constants.mk
 
+# Prevent piped commands (like sort) from swallowing errors during crawl.
+SHELL=/bin/bash -o pipefail
+
 .DEFAULT_GOAL = all
 .PHONY: all
 all: crawl
 
 .PHONY: build-crawl-container
-build-crawl-container: Dockerfile kernel-crawler.py
+build-crawl-container: Dockerfile kernel-crawler.py main.go
 	docker build -t kernel-crawler .
+	docker build -t rhel-login rhel-login
 
 .PHONY: crawl-centos
 crawl-centos: build-crawl-container
@@ -46,8 +50,49 @@ crawl-ubuntu-gke: build-crawl-container
 crawl-oracle-uek: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Oracle-UEK5 > $(CRAWLED_PACKAGE_DIR)/oracle-uek.txt
 
+.PHONY: crawl-rhel
+crawl-rhel: build-crawl-container
+	# Trade a username & password for a certificate keypair that allows up to
+	# authenticate with the RHEL package repos.
+	@mkdir -p $(BUILD_DATA_DIR)/rhel-certs
+	docker run --rm \
+		-e REDHAT_USERNAME \
+		-e REDHAT_PASSWORD \
+		rhel-login:latest \
+	| tar -C $(BUILD_DATA_DIR)/rhel-certs -xf -
+
+	# Crawl for RHEL 6 kernel-devel packages.
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-base-url https://cdn.redhat.com/content/dist/rhel/server/6/6Server/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel6.txt
+
+	# Crawl for RHEL 7 kernel-devel packages.
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-base-url https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel7.txt
+
+	# Crawl for RHEL 8 kernel-devel packages.
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-base-url https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8.txt
+
 .PHONY: crawl
-crawl: build-crawl-container crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek
+crawl: build-crawl-container crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek
 	docker run --rm -i kernel-crawler crawl CoreOS > $(CRAWLED_PACKAGE_DIR)/coreos.txt
 	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt

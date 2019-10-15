@@ -299,6 +299,9 @@ repackage_redhat() {
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'redhat' "$kernel_version" '.')"
 
+        # Remove broken symlinks.
+        find "${tmp_dir}/usr/src/kernels/${kernel_version}" -type l -exec test ! -e {} \; -exec unlink {} \;
+
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
             --directory "$meta_dir" . \
