@@ -109,6 +109,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.35-1.el7.elrepo.x86_64.rpm
+1a0abb01053210815a027327a962532077716715be1fd0cc54b1af2879bf43cd:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.3.0-1004_5.3.0-1004.4_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.3.0-1004-azure_5.3.0-1004.4_amd64.deb
 1e1b3939163670a7ea92e52b588326e3baf605290f522e7c9b75a364aaa63e0a:
   type: redhat
   packages:
@@ -1815,6 +1820,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.74.0-kernel-src.tar.gz
+68f59545bc852f94b3434675e21f40f011d9cf97d96f6b3d7d10c8c58dc1d169:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1004_5.3.0-1004.4_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1004-aws_5.3.0-1004.4_amd64.deb
 69b075c5b7cde5d4e097e55085833c4fdf8424a1fae016e76e58988843e8cb33:
   type: ubuntu
   packages:
@@ -3751,6 +3761,11 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
+adc06bfa0b1b729a02d98e18248d6877e1289d4ff380d3338b9eb70d0d635446:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-19-generic_5.3.0-19.20_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-19_5.3.0-19.20_all.deb
 ae0dc7ea603846054e02de1193ca8bcd4b4728250a40b19343071329e142e9b1:
   type: redhat
   packages:
@@ -4091,6 +4106,11 @@ bbdb6c8281e057e992759efeb1e98cde720efd416ff50aeba3acc51282ca7ab4:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.86-30.el7.x86_64.rpm
+bc0e4e4c8d8178872f3aef7733f4bcb2b23a35714bc489f8f0b575a7b83e90cd:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.3.0-1005_5.3.0-1005.5_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.3.0-1005-gcp_5.3.0-1005.5_amd64.deb
 bc8c6293b82ed49a6968b30265abc4d89c3b9dfd40579e68431b534a3cb31bf1:
   type: cos
   packages:
