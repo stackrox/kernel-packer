@@ -104,6 +104,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10575.32.0-kernel-src.tar.gz
+0ce9d12390e83ca336a1a8e8e10905862717368e3a6369d553cbc454d9b486ce:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-33-generic_5.0.0-33.35_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-33_5.0.0-33.35_all.deb
 0aefde8fe9706689fd7b254ff3c33f85f008b051bb039cfcd463b5d519f680a9:
   type: ubuntu
   packages:
@@ -1179,6 +1184,11 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1800.4.0-coreos_developer_container.bin.bz2
+8f816b28fe37da86b0ca2541163000d5d3227f67b98397fa0c6de4855b81f9f6:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1097_4.4.0-1097.108_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1097-aws_4.4.0-1097.108_amd64.deb
 8d9352857faca54a8b6aafbb20a9bde12a6c75229d151667f16ca63656a4178d:
   type: cos
   packages:
@@ -1441,6 +1451,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1033_4.15.0-1033.35_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1033-gke_4.15.0-1033.35_amd64.deb
+19bccf946082adc63242875c9869436880f96d0c392d0a271fc1df071976146f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-167-generic_4.4.0-167.196_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-167_4.4.0-167.196_all.deb
 20f1875c1ed1af9c9af76b62f2bd3010599e40b54bcc11e5c5204c704f44b96d:
   type: redhat
   packages:
@@ -2958,6 +2973,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1032_4.15.0-1032.34_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1032-aws_4.15.0-1032.34_amd64.deb
+14042b371c2de4429460b42b75e7b8e95821b4f5c536148b7b86827ba2d560fe:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1062_4.15.0-1062.67_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1062-azure_4.15.0-1062.67_amd64.deb
 14638fc27a1463be8e0ac2d1eb00731c401b6dae5644e0cbaeecc0a8f11e3714:
   type: cos
   packages:
