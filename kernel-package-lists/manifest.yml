@@ -1804,6 +1804,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.4.3.el7uek.x86_64.rpm
+62f347c641027346bdc07c5adcb01417ac4e6d479529de7b1609df5777bf0da1:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1005_5.3.0-1005.5_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1005-aws_5.3.0-1005.5_amd64.deb
 062c691e45b1956f345dfde12f05daa2e7f86ea0d95f24332ff9836d6f6d007c:
   type: redhat
   packages:
