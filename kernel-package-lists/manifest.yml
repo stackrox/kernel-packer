@@ -61,6 +61,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.172-1.el7.elrepo.x86_64.rpm
+0c1677782675e9a8d1a21b1116c0c635df364936e4765fad771835733a16d7ba:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.5.1.tar.gz
 0d61069334039738263df8342d1253c014d63c4d88f86d54d28f4cc32d7fb26c:
   type: redhat
   packages:
@@ -516,10 +520,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1047_4.15.0-1047.49_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1047-aws_4.15.0-1047.49_amd64.deb
-3d247edfa82914378b4d10ba2c0f5421031037aa1dda633e106f5fdb71b541e4:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.1.1.tar.gz
 3b0648dcf3d68dd45e11ad6f2e2c7bbe0019009d23dd2661460e23cb2861f9ad:
   type: redhat
   packages:
