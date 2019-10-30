@@ -1659,6 +1659,11 @@
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.54-29.el7.x86_64.rpm
+42eda520b54433971588acdf103fc404c99835557b3eb91b8e94f76e63561b9f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-34-generic_5.0.0-34.36_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-34_5.0.0-34.36_all.deb
 43b05e0ad0ae43ccdc1e98f9c3479d60baa676c6271d73831793f21735b69214:
   type: ubuntu
   packages:
@@ -3317,6 +3322,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.144-1.el7.elrepo.x86_64.rpm
+756230c9162f5198c2d6b7c289efb637bebba54edb2a0c0e481c46606cade58f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-21-generic_5.3.0-21.22_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-21_5.3.0-21.22_all.deb
 756475e3246966e11be960cf7a727492caa963ea7eadb2ba1ac3e95218f0a213:
   type: redhat
   packages:
