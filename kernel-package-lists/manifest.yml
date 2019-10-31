@@ -676,6 +676,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-29-generic_4.15.0-29.31_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-29_4.15.0-29.31_all.deb
+4fea9366953a14106c156d9a2268aa3a5abf9d00a2143e5a2c91e5458dd0df72:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.5.2.tar.gz
 4ded4b3ea454e11bce9efc1c53ea91dcd2a1a1435580286caab19a255b369f22:
   type: redhat
   packages:
@@ -2232,10 +2236,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.0.0-1018_5.0.0-1018.20_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.0.0-1018-aws_5.0.0-1018.20_amd64.deb
-281fa1a9a19c45344a58988a5aed7f8cc06167f615ac791709b8dfc9a2367cc1:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.2.0.tar.gz
 0282a284bd43c6e4f7056f02bab30900859e09045d07ebd50d5d00c70e2c4cc0:
   type: ubuntu
   packages:
