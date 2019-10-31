@@ -386,16 +386,30 @@ repos = {
 
 
 def crawl_s3(repo):
-    body = urllib2.urlopen(repo['root'], timeout=30).read()
-    xml = html.fromstring(body)
+    def val(xml, path):
+        vals = xml.xpath(path)
+        if len(vals) == 0:
+            return ''
+        if len(vals) == 1:
+            return vals[0]
+        raise "Expected only one value for path %r"%(path,)
     results = []
+    read_more = True
+    next_marker = None
+    while read_more:
+        url = repo['root']
+        if next_marker:
+            url += "?marker=" + next_marker
+        body = urllib2.urlopen(url, timeout=30).read()
+        xml = html.fromstring(body)
+        read_more = val(xml, '//istruncated/text()').lower() == "true"
+        next_marker = val(xml, '//nextmarker/text()')
 
-    for key in xml.xpath('//contents/key/text()'):
-        for pattern in repo['patterns']:
-            if re.search(pattern, key):
-                result = "{}/{}".format(repo['root'], key)
-                results.append(result)
-
+        for key in xml.xpath('//contents/key/text()'):
+            for pattern in repo['patterns']:
+                if re.search(pattern, key):
+                    result = "{}/{}".format(repo['root'], key)
+                    results.append(result)
     results.sort()
     return results
 
