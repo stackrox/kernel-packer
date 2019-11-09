@@ -6,6 +6,7 @@ RUN apt-get update \
       binutils \
       make \
       gcc \
+      gcc-8-plugin-dev \
       libelf-dev \
       libc6-dev \
       bc \

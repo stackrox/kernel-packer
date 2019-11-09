@@ -180,6 +180,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.127-1.el7.elrepo.x86_64.rpm
+1f17c009c0292cce3f388c1a594e5a3d3c2cb83b8321742b9ba764c9d61d512c:
+  type: linuxkit
+  packages:
+  - https---cdn.kernel.org-pub-linux-kernel-v4.x-linux-4.19.76.tar.gz
 1d55fcb4438a9f563c3eb8b6a864a7d7093a6558f1f6d9fb22ca7d3eaeb92885:
   type: ubuntu
   packages:
@@ -1963,6 +1967,10 @@
   packages:
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.41-k8s-linux-headers-4.4.41-k8s_4.4.41-20170109_amd64.deb
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
+72eda7f63b8361eb8791f4fe5b5c1b3c4b4546d005d1a6a1b7ea718272ccb559:
+  type: linuxkit
+  packages:
+  - https---cdn.kernel.org-pub-linux-kernel-v4.x-linux-4.14.131.tar.gz
 73c999716cf3258917d006b2af93f60d3d59bbbcd867e34225c6b6d45b95a9ef:
   type: redhat
   packages:
