@@ -251,6 +251,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1818.0.8.el7uek.x86_64.rpm
+1ca6f2238327fcc9e3f037cf57e728f38ad1e06277d76f1556197354d673e699:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-23-generic_5.3.0-23.25_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-23_5.3.0-23.25_all.deb
 1ca7e4f1138f7e1752571509e44c3dbbb8defe85dba3473dccd9c0af6831a36e:
   type: ubuntu
   packages:
@@ -391,6 +396,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-36-generic_4.4.0-36.55_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-36_4.4.0-36.55_all.deb
+2c553c81ee823123037e820d272d2c1644dff143b19d96326c14396883fe0181:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-169-generic_4.4.0-169.198_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-169_4.4.0-169.198_all.deb
 2e647ec804ccf916928577c8539d21d57b98c6166dd9b4e11bcdb3baa595e8ff:
   type: cos
   packages:
@@ -2905,6 +2915,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-36709bc1af006d547d723e6dc99905667c7e7f1b11f249ea87c923807b0a44e2-kernel-devel-4.9.81-44.57.amzn2.x86_64.rpm
+4676bd6ef7ec597e41bd58bcc6db7abdaf092d465ab94b54f8254ddbc49e4eec:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-70-generic_4.15.0-70.79_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-70_4.15.0-70.79_all.deb
 5001c7e5df4554ba9b85a9e8b0ef5157f0d6ada2fb12b4f3fd1f86f186aeac19:
   type: ubuntu
   packages:
@@ -4911,6 +4926,11 @@ d371f2b0baff829ae2cd286d6a31a314ff4ff28ac447c1ce48f92d9db318724c:
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.55-1.el7.elrepo.x86_64.rpm
+d413dee82cc1ef97d32ca76583ed32903405a61241ceaed5de01abc5aec59cce:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-36-generic_5.0.0-36.39_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.0.0-36_5.0.0-36.39_all.deb
 d630d8f106c1d7c2befdb9125442ef6f3072f43508e9b1a9f52824cdbfe29a3d:
   type: ubuntu
   packages:
