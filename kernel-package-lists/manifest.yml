@@ -453,12 +453,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-327.4.4.el7.x86_64.rpm
-2ea8f7191523eb0167e4055de9876cb5256d2b10edd29dc66ef2b4e53595a90e:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-common_4.9.189-3-deb9u1_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-common_4.9.189-3-deb9u2_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 2eae39f160c1b93b6d2f2f8e7087eebb5ce56c87f9a5d2209209a7c7e73aeac8:
   type: redhat
   packages:
@@ -698,12 +692,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-98-generic_4.4.0-98.121_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-98_4.4.0-98.121_all.deb
-4a54d46df7eda9513a90318148b9c2c939795c8fd609c505ffdf76254a288bea:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-amd64_4.9.189-3-deb9u1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-amd64_4.9.189-3-deb9u2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 4b805e6db701c7ad7116b3ecac8be47dd30ec290b9d9dbec9d4e1548f0557702:
   type: redhat
   packages:
@@ -2177,6 +2165,12 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12493.0.0-kernel-src.tar.gz
+91f0f3779c1f67bfa9850fb5914fe2aec7ace723cda0069a904f07761d7b1c8a:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-amd64_4.9.189-3-deb9u2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-common_4.9.189-3-deb9u2_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 91e906ae1fb9276d21a4a05607bda7a0a20f691205eca8bdcfc7d721641cebcf:
   type: redhat
   packages:
