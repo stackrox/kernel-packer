@@ -32,18 +32,24 @@ func main() {
 
 func mainCmd() error {
 	var (
-		flagManifest  = flag.String("manifest", "", "Path to build manifest file.")
-		flagCacheDir  = flag.String("cache-dir", "", "Path to build cache directory.")
-		flagAction    = flag.String("action", "build", `Action to take. (one of "build", "combine", or "files")`)
-		flagPrefix    = flag.String("prefix", "", "Prefix to prepend to file list.")
-		flagPkgDir    = flag.String("pkg-dir", "", "Path to downloaded package dir.")
-		flagBundleDir = flag.String("bundle-dir", "", "Path to bundle dir.")
+		flagManifest     = flag.String("manifest", "", "Path to build manifest file.")
+		flagCacheDir     = flag.String("cache-dir", "", "Path to build cache directory.")
+		flagAction       = flag.String("action", "build", `Action to take. (one of "build", "combine", or "files")`)
+		flagPrefix       = flag.String("prefix", "", "Prefix to prepend to file list.")
+		flagPkgDir       = flag.String("pkg-dir", "", "Path to downloaded package dir.")
+		flagBundleDir    = flag.String("bundle-dir", "", "Path to bundle dir.")
+		flagIgnoreErrors = flag.Bool("ignore-errors", false, "Ignore repackaging errors")
 	)
 	flag.Parse()
 
 	switch *flagAction {
 	case "build":
-		return buildCmd(*flagManifest, *flagCacheDir, *flagPkgDir, *flagBundleDir)
+		err := buildCmd(*flagManifest, *flagCacheDir, *flagPkgDir, *flagBundleDir)
+		if err != nil && *flagIgnoreErrors {
+			fmt.Printf("ignoring build error: %v", err)
+			return nil
+		}
+		return err
 
 	case "combine":
 		return combineCmd(*flagCacheDir)
