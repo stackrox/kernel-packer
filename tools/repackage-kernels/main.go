@@ -46,7 +46,7 @@ func mainCmd() error {
 	case "build":
 		err := buildCmd(*flagManifest, *flagCacheDir, *flagPkgDir, *flagBundleDir)
 		if err != nil && *flagIgnoreErrors {
-			fmt.Printf("ignoring build error: %v", err)
+			fmt.Fprintf(os.Stderr, "ignoring build error: %v", err)
 			return nil
 		}
 		return err
