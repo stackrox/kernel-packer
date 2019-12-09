@@ -1878,6 +1878,10 @@
   packages:
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.39-k8s-linux-headers-4.4.39-k8s_4.4.39-20161219_amd64.deb
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
+51fe513c1386119bcbf137814eb21e2adeceb7c2458a3e044e702f2d0768562d:
+  type: redhat
+  packages:
+  - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.206-1.el7.elrepo.x86_64.rpm
 52c77b0e816f6308bd1e14f52c14243c18e4a08d446ecbba2e45a4188afb0289:
   type: redhat
   packages:
@@ -5830,6 +5834,11 @@ faebbf5487587da51e2a34238bfe86d1e24a21152dc3f67f483322666df7737b:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10323.94.0-kernel-src.tar.gz
+faebda072ccffa7c2a055ad53f8280e8c36005e6e50ff979464b610971f3d52f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1050_4.15.0-1050.53_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1050-gke_4.15.0-1050.53_amd64.deb
 fafc0c8bb7482e7b2ac8feecd9e336cb6591b75955be6bdb60c6eed40e7446dd:
   type: redhat
   packages:
