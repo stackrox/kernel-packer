@@ -383,6 +383,15 @@ repos = {
             "exclude_patterns": ubuntu_excludes
         },
 
+        # linux headers for GKE, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-gke-5.0/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gke.*_amd64.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes
+        },
+
     ],
     "Oracle-UEK5": [
     	{
