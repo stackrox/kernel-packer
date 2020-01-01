@@ -122,10 +122,10 @@ func reformatPairs(packages []string) ([][]string, error) {
 		versions[version] = r
 	}
 
-	for _, rev := range versions {
+	for ver, rev := range versions {
 		// Sanity check, there should always be a pair of packages.
 		if len(rev.packages) != 2 {
-			return nil, fmt.Errorf("unpaired package %v", packages)
+			return nil, fmt.Errorf("version %q (rev %d): unpaired package %v", ver, rev.revision, packages)
 		}
 
 		manifests = append(manifests, rev.packages)

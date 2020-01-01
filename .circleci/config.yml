@@ -121,6 +121,15 @@ jobs:
         command: |
           make manifest
           cat kernel-package-lists/manifest.yml
+    - run:
+        name: Prepare artifacts
+        command: |
+          rm -rf .build-data/downloads
+        when: always
+    - store_artifacts:
+        path: .build-data
+        destination: build-data
+        when: always
     - add_ssh_keys:
         fingerprints:
         - 'dd:79:df:69:0f:13:db:0e:08:3e:3b:f4:b2:e3:57:77'
