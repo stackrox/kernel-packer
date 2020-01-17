@@ -1285,6 +1285,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.0.0-1018_5.0.0-1018.19_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.0.0-1018-azure_5.0.0-1018.19_amd64.deb
+8b7e2435e7f992469497ddfc1213646ec1c1e599156e7c135d2be77c11719ccd:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-12834.0.0-kernel-src.tar.gz
 8a8a03ff7a955ebf3fbdab83fc9a6d7335598b09ba96a12fdead71aa013ac55c:
   type: redhat
   packages:
@@ -2573,6 +2577,10 @@
   type: minikube
   packages:
   - https---github.com-kubernetes-minikube-archive-v1.6.0.tar.gz
+363f0a333eac3623e5af6b2b7aaf3371acca43803b5c91cc07c002febfc3b2c9:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-12739.37.0-kernel-src.tar.gz
 365ce958afbb32a306aac9470543b8f89209aaf18be5ec83703f3c07eea4d840:
   type: redhat
   packages:
