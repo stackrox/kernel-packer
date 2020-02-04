@@ -788,6 +788,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-696.3.2.el6.x86_64.rpm
+4dcc14d97cb8c821bf9b69e101d140be3587ba558b2cfb5b0768ebde6008da7c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.3.0-1011_5.3.0-1011.12_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.3.0-1011-azure_5.3.0-1011.12_amd64.deb
 4fd48ac211ba308e2f3a462709ae953fae374114d05ef8c2e0d89910ee28edb2:
   type: ubuntu
   packages:
@@ -1881,6 +1886,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-gcp-headers-4.10.0-1007_4.10.0-1007.7_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-headers-4.10.0-1007-gcp_4.10.0-1007.7_amd64.deb
+46b5b5c1e2089472bce35f4a6a43cfe21f425c6999e7012b47c72f5e1b95d34d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1011_5.3.0-1011.12_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1011-aws_5.3.0-1011.12_amd64.deb
 47fcf6d115f6d9837c60eb75a17b967a5c7740ff2c397601a65b57351f26cc62:
   type: ubuntu
   packages:
@@ -4792,6 +4802,11 @@ c0ac3420cde5353c0824bee9b679140a05b8dc21b01154904bbade193b6b7249:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-514.6.1.el7.x86_64.rpm
+c1a295aefb185eede82f93f8bcd72577ce565e973c9e6c31fac4571b95f3c83c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.3.0-1012_5.3.0-1012.13_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.3.0-1012-gcp_5.3.0-1012.13_amd64.deb
 c1c13598192e4c1cab1fb33b4d68ff59828ef7921eacefdd1c03e42c0fd8ed53:
   type: coreos
   packages:
