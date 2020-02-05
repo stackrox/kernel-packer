@@ -1947,6 +1947,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-131.2.1.el6.x86_64.rpm
+52e7647a3411c1bfbada6389ada8c0a4382c6a119c12e5859a9d1cec46d9a063:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1068_4.15.0-1068.73_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1068-azure_4.15.0-1068.73_amd64.deb
 52c393059e084057c3b85edf4b112ddd6992cab2694c8ef2c6bf50494ea45633:
   type: cos
   packages:
@@ -4773,6 +4778,11 @@ be74ee91a933273d5821dd3f0e91c361032c5ad2c21f80733a6f20a57b7cdd3b:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1033_4.4.0-1033.33_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1033-gke_4.4.0-1033.33_amd64.deb
+be78ed6d4d7c7d7f9e82f0d6ed65195b1b258383e175cf4c8d96b9991a95b7af:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1053_4.15.0-1053.57_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1053-gcp_4.15.0-1053.57_amd64.deb
 be81b7d656c06700a61690b7beb61a12eaa7eab8b22dae54f22d2971b6b2eb66:
   type: ubuntu
   packages:
