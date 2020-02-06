@@ -798,10 +798,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-29-generic_4.15.0-29.31_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-29_4.15.0-29.31_all.deb
-4fea9366953a14106c156d9a2268aa3a5abf9d00a2143e5a2c91e5458dd0df72:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.5.2.tar.gz
 4ded4b3ea454e11bce9efc1c53ea91dcd2a1a1435580286caab19a255b369f22:
   type: redhat
   packages:
@@ -1108,6 +1104,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.22.1.el6.x86_64.rpm
+6ef9d127086d50d696bdc4140355906dcde6de39dd089a802f92ab11a1713a2f:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.7.1.tar.gz
 6ff55f23038f343431da543e8af7e29308dbd581a05d2eccc4d6e42d956e19dc:
   type: ubuntu
   packages:
