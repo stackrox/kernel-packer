@@ -2153,6 +2153,10 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1941.el7uek.x86_64.rpm
+75b9389bf27bd2ded4e2e9f85900aa9fd3973824857c973e7d1068aa4bbb6cec:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-e09baac08866224e31624501530d697f19317af4488f0c5147a1c72ab63094cb-kernel-devel-4.14.165-131.185.amzn2.x86_64.rpm
 75a0728720d4aa0caa0301c10e0612429ead1148b2d6c19a2628ebc9dfa872a5:
   type: redhat
   packages:
@@ -5430,6 +5434,11 @@ df50c1502abb724b9a77c4ef112c2bc0ae72b996bb343dcd6f15f8588352fdf9:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1062.1.2.el7.x86_64.rpm
+dfd589f54b40427eddec810924663264645bf74039e67eb3bc553693a7a1b15f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.0.0-1031_5.0.0-1031.33_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.0.0-1031-azure_5.0.0-1031.33_amd64.deb
 dff30cffe9c1d9bd1c52c169b12f6190652d8151d40cec6a2ef4973f19507725:
   type: cos
   packages:
