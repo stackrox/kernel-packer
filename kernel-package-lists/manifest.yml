@@ -439,6 +439,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-123.13.1.el7.x86_64.rpm
+2b4843f60cf650dc7a6029e1da3a22d6c4cb1dce3574749e21f1d0a113fa682d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1013_4.18.0-1013.13-18.04.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1013-azure_4.18.0-1013.13-18.04.1_amd64.deb
 2c8341ffdfcf062e74fd5489c6882320547bda1d31cc3339e337c6f819554290:
   type: ubuntu
   packages:
@@ -717,6 +722,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11836.0.0-kernel-src.tar.gz
+4d6a5343be5a65bb0d756011cabeab613fd7ead2827f67f42c4fa03299389111:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1019_4.18.0-1019.19-18.04.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1019-azure_4.18.0-1019.19-18.04.1_amd64.deb
 4c7e2eef36300bffe7276468bd5b268c9644cfc40a9a53295ae3a531914a22da:
   type: ubuntu
   packages:
@@ -1922,6 +1932,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1011_5.3.0-1011.12_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1011-aws_5.3.0-1011.12_amd64.deb
+46abcbfea9b4a5154640e78bd5b343b802f67d0d15da8abcdc94c4464b6d32f9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1014_4.18.0-1014.14-18.04.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1014-azure_4.18.0-1014.14-18.04.1_amd64.deb
 47fcf6d115f6d9837c60eb75a17b967a5c7740ff2c397601a65b57351f26cc62:
   type: ubuntu
   packages:
@@ -2053,6 +2068,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10032.71.0-kernel-src.tar.gz
+60ac80e123975cbc92a38c24dc09d0139f08ae43b1db6c8a0ba59bc4ec59941e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1018_4.18.0-1018.18-18.04.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1018-azure_4.18.0-1018.18-18.04.1_amd64.deb
 62c3c5a4414a7e31de6783ffc972e7aa3de91090a0a99f2a5af315df11e4547b:
   type: oracle
   packages:
@@ -2545,6 +2565,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-279.14.1.el6.x86_64.rpm
+260abc2c2fd430f83091ada294fb90c27405ad7aa266aec20a41235f8ab48a8c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1024_4.18.0-1024.25-18.04.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1024-azure_4.18.0-1024.25-18.04.1_amd64.deb
 270f789ed5e3eab62fa8abff1f96a4f2a6c07a33f39fecdcb11505238f029b78:
   type: cos
   packages:
@@ -3824,6 +3849,12 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12605.0.0-kernel-src.tar.gz
+669525e9ca41b2f00dbcf21e0ffd1bd4d0484e2acfada5a691ec1722524fd2c4:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-6-amd64_4.19.67-2-deb10u2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-6-common_4.19.67-2-deb10u2_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.110-3-deb9u6_amd64.deb
 706130b49c123a14656c05da8c300eea2f0217bfe41ff5cac8972b50aa64e0b1:
   type: ubuntu
   packages:
@@ -4167,6 +4198,11 @@ a9c68637baa17298684d52df0459a2f505780280e3961b0f0b4aa5fdcd350bb4:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-24-generic_5.3.0-24.26_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-24_5.3.0-24.26_all.deb
+a9f0337611a6080f49546a017db1218053266854385d9b25c4246b1b67862648:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1025_4.18.0-1025.27-18.04.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1025-azure_4.18.0-1025.27-18.04.1_amd64.deb
 a9a4808152336c2163886d7ce5036fc3c8fdeb5920ae6ecd6e475e7615ac0e72:
   type: redhat
   packages:
@@ -4391,6 +4427,11 @@ abf4dec74936153ceb7fdd1c8438c0757549fe44b511db8baa96bc1df4dd2b5e:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1235.9.0-coreos_developer_container.bin.bz2
+abf9aacbc97710141e7d299a02e7652f29e289efbd5c7da6e677f74aa4f8521f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1020_4.18.0-1020.20-18.04.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1020-azure_4.18.0-1020.20-18.04.1_amd64.deb
 ac01bf3ac97e9acee24607a08b80417f2ea36c2926ed549f053960f0ea922cb2:
   type: redhat
   packages:
@@ -5162,6 +5203,11 @@ cbd5d19cae838223d4e65c5a3426f423b758759560d14a92f8bbfbbf1d24b674:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1049_4.15.0-1049.52_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1049-gcp_4.15.0-1049.52_amd64.deb
+cc710d6854a7be6b4b3ec5635ae1e31127d0573f9a8f5e4c6982c643e667f5ea:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1011_4.18.0-1011.11-18.04.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1011-azure_4.18.0-1011.11-18.04.1_amd64.deb
 cc7845969bbb43db6ff15583dcdb1171ba98157e374eae30043b5bd02d2237d5:
   type: ubuntu
   packages:
@@ -5814,6 +5860,11 @@ eb9a6903c821a3232fb1a765c3c782dc745f9f5f98a41ec4ce99d9a31b27e344:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12607.80.0-kernel-src.tar.gz
+eb12aebaa39cd4d3c7f79900d44f60dc9b0144b60181b24c172b44d076d74950:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1023_4.18.0-1023.24-18.04.1_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1023-azure_4.18.0-1023.24-18.04.1_amd64.deb
 eb92bbfb115ff0b3ce2e995c6c19c4b18f9cf8685d61ce4e1d136a7945deb51b:
   type: ubuntu
   packages:
