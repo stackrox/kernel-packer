@@ -255,12 +255,12 @@ repos = {
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
         },
 
+        # Special case for Ubuntu Azure kernel 4.18, that only exists as a backport.
         # linux-azure 4.18 backports AMD64 headers, distributed from main
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
             "discovery_pattern" : "/html/body//a[@href = 'linux-azure/']/@href",
             "subdirs" : [""],
-            #linux-headers-4.18.0-1020-azure_4.18.0-1020.20~18.04.1_amd64.deb
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-4\.18[-.0-9]+azure_4\.18[-.0-9]+~.*amd64.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes
         },
