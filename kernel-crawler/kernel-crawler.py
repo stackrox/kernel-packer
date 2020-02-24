@@ -30,17 +30,11 @@ centos_excludes = [
     "3.10.0-327", # 7.2.1511
 ]
 ubuntu_excludes = [
-    "4.15.0-14", # SROX-11665 will remove this exclusion
-    "4.17.0", # The module does not compile on 4.17 yet.
-    "4.18.0", # The module does not compile on 4.18 yet.
 ]
 ubuntu_backport_excludes = [
     "~", # prevent duplicate backports from cluttering the list
 ]
 debian_excludes = [
-    "4.17.0", # 4.17+ are not supported yet
-    "4.18.0",
-    "4.19.0",
     "linux-headers-4.9.0-9-amd64_4.9.168-1+deb9u2_amd64.deb",
     "linux-headers-4.9.0-9-common_4.9.168-1+deb9u2_all.deb",
     "3.2.0", "3.16.0" # legacy
@@ -260,7 +254,27 @@ repos = {
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-headers-[4-9].*_all.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
         },
+
+        # Special case for Ubuntu Azure kernel 4.18, that only exists as a backport.
+        # linux-azure 4.18 backports AMD64 headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-azure/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-4\.18[-.0-9]+azure_4\.18[-.0-9]+~.*amd64.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes
+        },
+
+        # linux-azure 4.18 backports "all" headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-azure/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-headers-4\.18[-.0-9]+_4\.18[-.0-9]+~.*_all.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes
+        },
     ],
+
     "Ubuntu-AWS": [
         # linux-aws AMD64 headers, distributed from universe (older versions only)
         {
