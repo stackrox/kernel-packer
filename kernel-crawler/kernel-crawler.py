@@ -34,6 +34,10 @@ ubuntu_excludes = [
 ubuntu_backport_excludes = [
     "~", # prevent duplicate backports from cluttering the list
 ]
+ubuntu_azure_backport_excludes = [
+    "~14.", # prevent duplicate 14.x backports from cluttering the list
+    "~16.", # prevent duplicate 16.x backports from cluttering the list
+]
 debian_excludes = [
     "linux-headers-4.9.0-9-amd64_4.9.168-1+deb9u2_amd64.deb",
     "linux-headers-4.9.0-9-common_4.9.168-1+deb9u2_all.deb",
@@ -243,7 +247,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[@href = 'linux-azure/']/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-azure.*amd64.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes
+            "exclude_patterns": ubuntu_excludes + ubuntu_azure_backport_excludes
         },
 
         # linux-azure "all" headers, distributed from main
@@ -252,7 +256,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[@href = 'linux-azure/']/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-headers-[4-9].*_all.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes
+            "exclude_patterns": ubuntu_excludes + ubuntu_azure_backport_excludes
         },
     ],
     "Ubuntu-AWS": [
