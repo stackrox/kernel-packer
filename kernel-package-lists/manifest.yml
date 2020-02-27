@@ -5129,6 +5129,11 @@ c76e3b4354d1a99a408a6983c5c78f678059861a1b744cd1b31e91d150055906:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.102.0-kernel-src.tar.gz
+c87b48dcb11fb2ec9517bf5f590355a6e9bdb0b45b1f327e1a1b4ed7453b83ca:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1054_4.15.0-1054.57_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1054-gke_4.15.0-1054.57_amd64.deb
 c346e0c82b7eb79f108c07120b58c028bb319fbd7a24f981369f7ae86863bf36:
   type: minikube
   packages:
