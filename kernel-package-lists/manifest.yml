@@ -610,6 +610,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.10.1.el7.x86_64.rpm
+3e188cda93d029b0622305a50d1a8fb5024e2aa233214b70ab6c1153eed82f74:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1055_4.15.0-1055.58_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1055-gke_4.15.0-1055.58_amd64.deb
 3b223b77b436062d31b38a3f3f7246ff2ddef9c46a63ba004dac1114b27949c7:
   type: ubuntu
   packages:
@@ -1117,6 +1122,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.12.1.el6.x86_64.rpm
+6dc9ccde5768736b7f170a8a75d6efea25d8deeddb02db8c290c0579f07ec49e:
+  type: coreos
+  packages:
+  - http---stable.release.core-os.net-amd64-usr-2345.3.0-coreos_developer_container.bin.bz2
 6cca8a6cf12c667067bfc21b138c717f4608bd7909a963d4d3ea18dde966dd95:
   type: ubuntu
   packages:
