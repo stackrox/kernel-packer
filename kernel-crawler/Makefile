@@ -92,7 +92,7 @@ crawl-rhel: build-crawl-container
 		> $(CRAWLED_PACKAGE_DIR)/rhel8.txt
 
 .PHONY: crawl
-crawl: build-crawl-container crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek
+crawl: build-crawl-container crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek
 	docker run --rm -i kernel-crawler crawl CoreOS > $(CRAWLED_PACKAGE_DIR)/coreos.txt
 	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
