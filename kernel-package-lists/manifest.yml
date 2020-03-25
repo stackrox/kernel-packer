@@ -157,6 +157,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.126-1.el7.elrepo.x86_64.rpm
+1b3e02851b5bb942f9ad71e43a42489a10bf0409ed60b046667a9cec072415df:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1007_5.4.0-1007.7_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1007-azure_5.4.0-1007.7_amd64.deb
 1f3fa74ecc9404d1688fd3ed7c5a5ea2dbc1cfca40e0a48b0e0fd8d8253a6ece:
   type: ubuntu
   packages:
@@ -1469,6 +1474,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1052_4.15.0-1052.55_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1052-gke_4.15.0-1052.55_amd64.deb
+8df8af2aa4c17f7abee98539b5c8c9e515b50ec91c8d280938e25ea87e054c13:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1006_5.4.0-1006.6_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1006-gcp_5.4.0-1006.6_amd64.deb
 8af2658ca7fefbe1444fbb2f0cde2baab4621d1128027c97f5fd41410af196f3:
   type: ubuntu
   packages:
