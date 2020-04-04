@@ -802,6 +802,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1025_4.15.0-1025.26_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1025-azure_4.15.0-1025.26_amd64.deb
+4c60534fcf90c70a9abc3af2d7a9ed701d7ca7d81329938c5d8effccde3543e1:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.9.2.tar.gz
 4a494100c3cb907df43f7a73679ae79c59ddf55b81554210718dc9fc0635df5c:
   type: oracle
   packages:
@@ -1172,10 +1176,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.22.1.el6.x86_64.rpm
-6ef9d127086d50d696bdc4140355906dcde6de39dd089a802f92ab11a1713a2f:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.7.1.tar.gz
 6ff55f23038f343431da543e8af7e29308dbd581a05d2eccc4d6e42d956e19dc:
   type: ubuntu
   packages:
