@@ -2915,6 +2915,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12371.183.0-kernel-src.tar.gz
+575d627c27e669b464fa30a80d98760ed544d9d3abf9270ed794ba5203ed3ec9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-52-generic_5.3.0-52.46_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-52_5.3.0-52.46_all.deb
 0577f984a8c4d4554337e85e450ec8fc3a171efda1159d743305453c01399fcd:
   type: redhat
   packages:
@@ -5335,6 +5340,11 @@ cac3fb96fd53101a872dc07f435878e31fecb8fbee1f04d6178a7a68e44f5fa4:
   packages:
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
+cae1c18879d6f340c5c376927945ceacbeba48a2d4a92a8765e083556ed8b95b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-100-generic_4.15.0-100.101_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-100_4.15.0-100.101_all.deb
 cafc8790db00caeeaaeb43e257c9cce03237ecf60f772299c9bcb2232ae77ecc:
   type: cos
   packages:
