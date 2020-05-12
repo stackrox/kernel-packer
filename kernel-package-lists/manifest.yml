@@ -335,6 +335,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-358.23.2.el6.x86_64.rpm
+1df6078eb4d5c16b2b23943e10bb3b3975fa328351e0d3811f7a06620c0f8ec9:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.10.0.tar.gz
 1afcb15ac55aa1553edb54386860e8d95eaa2864e2d92eb96c54693a3204534a:
   type: cos
   packages:
@@ -5917,10 +5921,6 @@ dfd589f54b40427eddec810924663264645bf74039e67eb3bc553693a7a1b15f:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.0.0-1031_5.0.0-1031.33_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.0.0-1031-azure_5.0.0-1031.33_amd64.deb
-dfe140a2e4a543ae33d61564a592b7889c033a9704578260e4ddb8bc5cf15f59:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.8.1.tar.gz
 dff30cffe9c1d9bd1c52c169b12f6190652d8151d40cec6a2ef4973f19507725:
   type: cos
   packages:
