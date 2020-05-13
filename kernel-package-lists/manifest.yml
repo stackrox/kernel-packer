@@ -1773,10 +1773,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1033_4.15.0-1033.35_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1033-gke_4.15.0-1033.35_amd64.deb
-019bbbadc1ed7f5ea38416775be831d2637d3eacdbc67763e8a5fb0c54806800:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.8.2.tar.gz
 20f1875c1ed1af9c9af76b62f2bd3010599e40b54bcc11e5c5204c704f44b96d:
   type: redhat
   packages:
@@ -2676,6 +2672,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1036_4.15.0-1036.38_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1036-gcp_4.15.0-1036.38_amd64.deb
+178e7c014bdc12af8c38ef621f4c96b5b1339b4e5468649079e9904e313cb65b:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.10.1.tar.gz
 183c2d74df89ad6a4004bcfbf393e65dcca3302619e5365ceae39acd65ed6f7b:
   type: redhat
   packages:
