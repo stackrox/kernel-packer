@@ -18,6 +18,7 @@ import urllib.request as urllib2
 from lxml import html
 import traceback
 import re
+import os.path
 
 #
 # This is the main configuration tree for easily analyze Linux repositories
@@ -162,6 +163,16 @@ repos = {
             ],
             "page_pattern" : "/html/body//a[regex:test(@href, '^coreos_developer_container.bin.bz2$')]/@href"
         }
+    ],
+    "Flatcar": [
+        {
+            "root": "https://stable.release.flatcar-linux.net/amd64-usr/",
+            "discovery_pattern": "/html/body//a[regex:test(@href, '^(\./)?[2-9]')]/@href",
+            # Note: versions before 2000 are excluded because they are more than a year old at the time
+            # we first see flatcar being used.
+            "subdirs": [""],
+            "page_pattern": "/html/body//a[regex:test(@href, '^(\./)?flatcar_developer_container.bin.bz2$')]/@href",
+        },
     ],
     "Debian": [
         {
@@ -503,7 +514,9 @@ def crawl(distro):
                                 continue
                             else:
                                 sys.stderr.write("Adding package " + rpm + "\n")
-                                kernel_urls.append("{}{}".format(download_root, urllib2.unquote(rpm)))
+                                raw_url = "{}{}".format(download_root, urllib2.unquote(rpm))
+                                prefix, suffix = raw_url.split('://', maxsplit=1)
+                                kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
                     except urllib2.HTTPError as e:
                         sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
 
