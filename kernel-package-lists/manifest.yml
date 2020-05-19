@@ -306,6 +306,11 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1520.7.0-coreos_developer_container.bin.bz2
+1abca4bdb7fa2e6e7fe14546f9da03e2b6cbd32c75f6d4a7cd86f2424c6b8d7c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-180-generic_4.4.0-180.210_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-180_4.4.0-180.210_all.deb
 1dc0aaf3279a04304e7008dae8360917af45fff0b4f4b2d8bc4438eb2efc472f:
   type: cos
   packages:
@@ -4175,6 +4180,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12105.88.0-kernel-src.tar.gz
+03176716a067af9db6cd107f26174da284d2b475ea8038062aca9e727c0b5560:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-102-generic_4.15.0-102.103_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-102_4.15.0-102.103_all.deb
 04997650d08094b8ca7907fcfcef6d95c918fe4b62000ea6e4ed2e2b30d00598:
   type: coreos
   packages:
