@@ -22,6 +22,12 @@
   file: coreos.txt
   reformat: single
 
+- name: flatcar
+  description: Flatcar kernels
+  type: coreos
+  file: flatcar.txt
+  reformat: single
+
 - name: kops
   description: Kops kernels
   type: debian
