@@ -112,6 +112,12 @@
   file: rhel7.txt
   reformat: single
 
+- name: rhel76-eus
+  description: RHEL 7.6 EUS Kernels
+  type: redhat
+  file: rhel76-eus.txt
+  reformat: single
+
 - name: rhel8
   description: RHEL 8 Kernels
   type: redhat
