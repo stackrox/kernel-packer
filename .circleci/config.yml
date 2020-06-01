@@ -7,7 +7,13 @@ commands:
         name: Install and configure gcloud
         working_directory: ~/.config/gcloud
         command: |
+          pip install --upgrade pip
+          pip install wheel
           pip install -U crcmod google_compute_engine
+          pip install -U gcloud gsutil
+          gcloud config set core/disable_prompts True
+          gcloud components install gsutil -q
+          gcloud components update -q
           gcloud auth activate-service-account --key-file <(echo "$GOOGLE_CREDENTIALS_KERNEL_CACHE")
           gcloud auth list
 
