@@ -7,11 +7,13 @@ commands:
         name: Install and configure gcloud
         working_directory: ~/.config/gcloud
         command: |
-          pip install --upgrade pip
-          pip install wheel
-          pip install -U crcmod google_compute_engine
-          pip install -U gcloud gsutil
-          sudo chown circleci:circleci /opt
+          if [[ "$NO_INSTALL_GCLOUD" != "true" ]]; then
+            pip install --upgrade pip
+            pip install wheel
+            pip install -U crcmod google_compute_engine
+            pip install -U gcloud gsutil
+            sudo chown circleci:circleci /opt
+          fi
           gcloud config set core/disable_prompts True
           gcloud components install gsutil -q
           gcloud components update -q
@@ -148,7 +150,9 @@ jobs:
 
   collector:
     docker:
-      - image: google/cloud-sdk:236.0.0-alpine
+      - image: google/cloud-sdk:294.0.0-alpine
+    environment:
+      NO_INSTALL_GCLOUD: true
     steps:
       - run:
           name: Install dependencies
