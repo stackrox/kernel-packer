@@ -11,6 +11,7 @@ commands:
           pip install wheel
           pip install -U crcmod google_compute_engine
           pip install -U gcloud gsutil
+          sudo chown circleci:circleci /opt
           gcloud config set core/disable_prompts True
           gcloud components install gsutil -q
           gcloud components update -q
