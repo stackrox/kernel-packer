@@ -7,7 +7,7 @@ commands:
         name: Install and configure gcloud
         working_directory: ~/.config/gcloud
         command: |
-          if [[ ! -x "$(which gcloud)" || ! -x "$(which gsutil)" ]]; then
+          if [[ "$NO_INSTALL_GCLOUD" != "true" ]]; then
             pip install --upgrade pip
             pip install wheel
             pip install -U crcmod google_compute_engine
@@ -151,6 +151,8 @@ jobs:
   collector:
     docker:
       - image: google/cloud-sdk:294.0.0-alpine
+    environment:
+      NO_INSTALL_GCLOUD: true
     steps:
       - run:
           name: Install dependencies
