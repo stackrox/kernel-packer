@@ -13,12 +13,17 @@ commands:
             pip install -U crcmod google_compute_engine
             pip install -U gcloud gsutil
             sudo chown circleci:circleci /opt
+            export PATH="/opt/google-cloud-sdk/bin:$PATH"
+            echo "export PATH=$PATH" >>"$BASH_ENV"
           fi
           gcloud config set core/disable_prompts True
           gcloud components install gsutil -q
           gcloud components update -q
           gcloud auth activate-service-account --key-file <(echo "$GOOGLE_CREDENTIALS_KERNEL_CACHE")
           gcloud auth list
+
+          # Sanity check
+          gsutil ls 'gs://stackrox-kernel-packages/' >/dev/null
 
 jobs:
   lint:
