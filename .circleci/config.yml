@@ -13,6 +13,8 @@ commands:
             pip install -U crcmod google_compute_engine
             pip install -U gcloud gsutil
             echo "Updating path to pick up proper gsutil binary"
+            export PATH="/opt/google-cloud-sdk/bin:$PATH"
+            echo 'export PATH="/opt/google-cloud-sdk/bin:$PATH"' >>"$BASH_ENV"
           fi
           sudo chown circleci:circleci /opt
           echo "Updating gcloud/gsutil ..."
@@ -21,11 +23,6 @@ commands:
           gcloud components update -q
           gcloud auth activate-service-account --key-file <(echo "$GOOGLE_CREDENTIALS_KERNEL_CACHE")
           gcloud auth list
-
-          if [[ "$NO_INSTALL_GCLOUD" != "true" ]]; then
-            export PATH="/opt/google-cloud-sdk/bin:$PATH"
-            echo "export PATH=$PATH" >>"$BASH_ENV"
-          fi
 
           # Sanity check
           echo "Using gsutil from $(which gsutil)"
