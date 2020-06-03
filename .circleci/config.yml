@@ -15,8 +15,8 @@ commands:
             echo "Updating path to pick up proper gsutil binary"
             export PATH="/opt/google-cloud-sdk/bin:$PATH"
             echo 'export PATH="/opt/google-cloud-sdk/bin:$PATH"' >>"$BASH_ENV"
+            sudo chown circleci:circleci /opt
           fi
-          sudo chown circleci:circleci /opt
           echo "Updating gcloud/gsutil ..."
           gcloud config set core/disable_prompts True
           gcloud components install gsutil -q
@@ -159,7 +159,7 @@ jobs:
 
   collector:
     docker:
-      - image: google/cloud-sdk:294.0.0-alpine
+      - image: google/cloud-sdk:295.0.0-alpine
     environment:
       NO_INSTALL_GCLOUD: true
     steps:
