@@ -343,7 +343,7 @@ repos = {
         # linux-gcp AMD64 headers, distributed from main
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gcp/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gcp.*amd64.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
@@ -353,16 +353,16 @@ repos = {
         # Only amd64 packages have been published for recent kernel versions.
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gcp/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp-headers-[4-9].*_(all|amd64).deb$')]/@href",
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?-headers-[4-9].*_(all|amd64).deb$')]/@href",
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
         },
 
         # linux-gcp AMD64 headers, distributed from universe
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gcp/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gcp.*amd64.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
@@ -372,9 +372,9 @@ repos = {
         # As of 4.15.0-1014, "all" is not uploaded, but "amd64" is.
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gcp/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp-headers-[4-9].*_(all|amd64).deb$')]/@href",
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?-headers-[4-9].*_(all|amd64).deb$')]/@href",
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
         },
     ],
