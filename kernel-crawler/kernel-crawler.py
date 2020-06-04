@@ -343,7 +343,7 @@ repos = {
         # linux-gcp AMD64 headers, distributed from main
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gcp/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gcp.*amd64.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
@@ -353,16 +353,16 @@ repos = {
         # Only amd64 packages have been published for recent kernel versions.
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gcp/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp-headers-[4-9].*_(all|amd64).deb$')]/@href",
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?-headers-[4-9].*_(all|amd64).deb$')]/@href",
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
         },
 
         # linux-gcp AMD64 headers, distributed from universe
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gcp/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gcp.*amd64.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
@@ -372,17 +372,35 @@ repos = {
         # As of 4.15.0-1014, "all" is not uploaded, but "amd64" is.
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gcp/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp-headers-[4-9].*_(all|amd64).deb$')]/@href",
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?-headers-[4-9].*_(all|amd64).deb$')]/@href",
             "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes
         },
     ],
     "Ubuntu-GKE": [
+        # linux-gke AMD64 headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gke(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gke.*amd64.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes,
+        },
+
+        # linux-gke "all" headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gke(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gke(-.*)?-headers-[4-9].*_(all|amd64).deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes,
+        },
+
         # linux-gke AMD64 headers, distributed from universe
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gke/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gke(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gke.*amd64.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes
@@ -391,43 +409,9 @@ repos = {
         # linux-gke "all" headers, distributed from universe
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gke/']/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gke(-.*)?/$')]/@href",
             "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gke-headers-[4-9].*_all.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes
-        },
-
-        # linux-gke-4.15 AMD64 headers, distributed from main
-        {
-            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gke-4.15/']/@href",
-            "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gke-4.15-headers-[4-9].*_amd64.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes
-        },
-
-        # linux headers for GKE, distributed from main
-        {
-            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gke-4.15/']/@href",
-            "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-gke.*_amd64.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes
-        },
-
-        # linux-gke-5.0 AMD64 headers, distributed from main
-        {
-            "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gke-5.0/']/@href",
-            "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gke-5.0-headers-[4-9].*_amd64.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes
-        },
-        {
-            "root" : "http://security.ubuntu.com/ubuntu/pool/universe/l/",
-            "discovery_pattern" : "/html/body//a[@href = 'linux-gke-5.0/']/@href",
-            "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[5-9].*-gke.*_amd64.deb$')]/@href",
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-gke(-.*)?-headers-[4-9].*_(all|amd64).deb$')]/@href",
             "exclude_patterns": ubuntu_excludes
         },
 
