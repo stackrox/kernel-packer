@@ -17,6 +17,7 @@ var (
 		"one-to-pairs": reformatOneToPairs,
 		"pairs":        reformatPairs,
 		"single":       reformatSingle,
+		"debian":       reformatDebian,
 	}
 )
 
@@ -76,7 +77,8 @@ func reformatOneToPairs(packages []string) ([][]string, error) {
 
 var (
 	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_.*$`)
-	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d.*)_.*$`)
+	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-.*$`)
+	versionSepRegex          = regexp.MustCompile(`[-.]`)
 )
 
 func reformatDebian(packages []string) ([][]string, error) {
@@ -111,9 +113,32 @@ func reformatDebian(packages []string) ([][]string, error) {
 		headers[version] = append(headers[version], pkg)
 	}
 
+	packageGroups := make([][]string, 0, len(headers))
 
+	for version, headerPkgs := range headers {
+		if len(headerPkgs) != 2 {
+			return nil, errors.Errorf("invalid number of header packages for kernel version %s: %+v", version, headerPkgs)
+		}
 
+		sepIndices := versionSepRegex.FindAllStringIndex(version, -1)
+		kbuildPkg := kbuilds[version]
+		for kbuildPkg == "" && len(sepIndices) > 0 {
+			lastSepIdx := sepIndices[len(sepIndices)-1][0]
+			sepIndices = sepIndices[:len(sepIndices)-1]
+			kbuildPkg = kbuilds[version[:lastSepIdx]]
+		}
+		if kbuildPkg == "" {
+			return nil, errors.Errorf("failed to find kbuild package for kernel version %s: candidates are %+v", version, kbuilds)
+		}
 
+		allPackages := make([]string, 0, 3)
+		allPackages = append(allPackages, kbuildPkg)
+		allPackages = append(allPackages, headerPkgs...)
+
+		packageGroups = append(packageGroups, allPackages)
+	}
+
+	return packageGroups, nil
 }
 
 // reformatPairs consumes a list of packages, and returns a list of package
