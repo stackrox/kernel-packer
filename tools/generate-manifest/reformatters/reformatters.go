@@ -2,6 +2,7 @@ package reformatters
 
 import (
 	"fmt"
+	"path"
 	"regexp"
 	"strconv"
 
@@ -71,6 +72,48 @@ func reformatOneToPairs(packages []string) ([][]string, error) {
 	}
 
 	return sets, nil
+}
+
+var (
+	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_.*$`)
+	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d.*)_.*$`)
+)
+
+func reformatDebian(packages []string) ([][]string, error) {
+	if len(packages) < 3 {
+		return nil, errors.New("bad package count")
+	}
+
+	kbuilds := make(map[string]string)
+
+	for _, pkg := range packages {
+		name := path.Base(pkg)
+		matches := debianKBuildVersionRegex.FindStringSubmatch(name)
+		if len(matches) == 0 {
+			continue
+		}
+		version := matches[1]
+		if existingPkg := kbuilds[version]; existingPkg != "" {
+			return nil, errors.Errorf("file clash for kbuild package for version %s: %s, %s", version, existingPkg, pkg)
+		}
+		kbuilds[version] = pkg
+	}
+
+	headers := make(map[string][]string)
+	for _, pkg := range packages {
+		name := path.Base(pkg)
+		matches := debianHeaderVersionRegex.FindStringSubmatch(name)
+		if len(matches) == 0 {
+			continue
+		}
+
+		version := matches[1]
+		headers[version] = append(headers[version], pkg)
+	}
+
+
+
+
 }
 
 // reformatPairs consumes a list of packages, and returns a list of package
