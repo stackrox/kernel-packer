@@ -8,6 +8,7 @@ import (
 	"os"
 
 	"github.com/pkg/errors"
+
 	"github.com/stackrox/kernel-packer/tools/generate-manifest/reformatters"
 )
 
