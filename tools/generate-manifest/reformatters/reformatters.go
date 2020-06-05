@@ -2,6 +2,7 @@ package reformatters
 
 import (
 	"fmt"
+	"path"
 	"regexp"
 	"strconv"
 
@@ -16,6 +17,7 @@ var (
 		"one-to-pairs": reformatOneToPairs,
 		"pairs":        reformatPairs,
 		"single":       reformatSingle,
+		"debian":       reformatDebian,
 	}
 )
 
@@ -71,6 +73,72 @@ func reformatOneToPairs(packages []string) ([][]string, error) {
 	}
 
 	return sets, nil
+}
+
+var (
+	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_.*$`)
+	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-.*$`)
+	versionSepRegex          = regexp.MustCompile(`[-.]`)
+)
+
+func reformatDebian(packages []string) ([][]string, error) {
+	if len(packages) < 3 {
+		return nil, errors.New("bad package count")
+	}
+
+	kbuilds := make(map[string]string)
+
+	for _, pkg := range packages {
+		name := path.Base(pkg)
+		matches := debianKBuildVersionRegex.FindStringSubmatch(name)
+		if len(matches) == 0 {
+			continue
+		}
+		version := matches[1]
+		if existingPkg := kbuilds[version]; existingPkg != "" {
+			return nil, errors.Errorf("file clash for kbuild package for version %s: %s, %s", version, existingPkg, pkg)
+		}
+		kbuilds[version] = pkg
+	}
+
+	headers := make(map[string][]string)
+	for _, pkg := range packages {
+		name := path.Base(pkg)
+		matches := debianHeaderVersionRegex.FindStringSubmatch(name)
+		if len(matches) == 0 {
+			continue
+		}
+
+		version := matches[1]
+		headers[version] = append(headers[version], pkg)
+	}
+
+	packageGroups := make([][]string, 0, len(headers))
+
+	for version, headerPkgs := range headers {
+		if len(headerPkgs) != 2 {
+			return nil, errors.Errorf("invalid number of header packages for kernel version %s: %+v", version, headerPkgs)
+		}
+
+		sepIndices := versionSepRegex.FindAllStringIndex(version, -1)
+		kbuildPkg := kbuilds[version]
+		for kbuildPkg == "" && len(sepIndices) > 0 {
+			lastSepIdx := sepIndices[len(sepIndices)-1][0]
+			sepIndices = sepIndices[:len(sepIndices)-1]
+			kbuildPkg = kbuilds[version[:lastSepIdx]]
+		}
+		if kbuildPkg == "" {
+			return nil, errors.Errorf("failed to find kbuild package for kernel version %s: candidates are %+v", version, kbuilds)
+		}
+
+		allPackages := make([]string, 0, 3)
+		allPackages = append(allPackages, kbuildPkg)
+		allPackages = append(allPackages, headerPkgs...)
+
+		packageGroups = append(packageGroups, allPackages)
+	}
+
+	return packageGroups, nil
 }
 
 // reformatPairs consumes a list of packages, and returns a list of package
