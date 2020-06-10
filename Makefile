@@ -83,3 +83,6 @@ clean-cache:
 .PHONY: packers
 packers:
 	@make -C packers all
+
+crawl-%:
+	@make -C kernel-crawler $@

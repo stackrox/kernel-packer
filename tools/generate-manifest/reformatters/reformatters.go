@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"path"
 	"regexp"
+	"sort"
 	"strconv"
 
 	"github.com/pkg/errors"
@@ -76,41 +77,65 @@ func reformatOneToPairs(packages []string) ([][]string, error) {
 }
 
 var (
-	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_.*$`)
-	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-.*$`)
+	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_([^_]+)(?:_.*)?\.deb$`)
+	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-[^_]+_([^_]+)(?:_.*)?\.deb$`)
 	versionSepRegex          = regexp.MustCompile(`[-.]`)
 )
+
+type packageInfo struct {
+	kernelVersion, packageVersion string
+	url                           string
+}
 
 func reformatDebian(packages []string) ([][]string, error) {
 	if len(packages) < 3 {
 		return nil, errors.New("bad package count")
 	}
 
-	kbuilds := make(map[string]string)
+	kbuildsByKernelVersion := make(map[string][]packageInfo)
+	kbuildsByPackageVersion := make(map[string]packageInfo)
 
 	for _, pkg := range packages {
 		name := path.Base(pkg)
 		matches := debianKBuildVersionRegex.FindStringSubmatch(name)
-		if len(matches) == 0 {
+		if len(matches) < 3 {
 			continue
 		}
-		version := matches[1]
-		if existingPkg := kbuilds[version]; existingPkg != "" {
-			return nil, errors.Errorf("file clash for kbuild package for version %s: %s, %s", version, existingPkg, pkg)
+		pkgInfo := packageInfo{
+			url:            pkg,
+			kernelVersion:  matches[1],
+			packageVersion: matches[2],
 		}
-		kbuilds[version] = pkg
+
+		if existingPkg := kbuildsByPackageVersion[pkgInfo.packageVersion]; existingPkg.url != "" {
+			return nil, errors.Errorf("file clash for kbuild package for package version %s: %s, %s", pkgInfo.packageVersion, existingPkg.url, pkg)
+		}
+		kbuildsByPackageVersion[pkgInfo.packageVersion] = pkgInfo
+
+		kbuildsByKernelVersion[pkgInfo.kernelVersion] = append(kbuildsByKernelVersion[pkgInfo.kernelVersion], pkgInfo)
 	}
 
-	headers := make(map[string][]string)
+	for _, pkgInfos := range kbuildsByKernelVersion {
+		sort.Slice(pkgInfos, func(i, j int) bool {
+			return versionLess(pkgInfos[j].packageVersion, pkgInfos[i].packageVersion)
+		})
+	}
+
+	headers := make(map[string][]packageInfo)
 	for _, pkg := range packages {
 		name := path.Base(pkg)
 		matches := debianHeaderVersionRegex.FindStringSubmatch(name)
-		if len(matches) == 0 {
+		if len(matches) < 3 {
 			continue
 		}
 
-		version := matches[1]
-		headers[version] = append(headers[version], pkg)
+		pkgInfo := packageInfo{
+			url:            pkg,
+			kernelVersion:  matches[1],
+			packageVersion: matches[2],
+		}
+
+		headers[pkgInfo.kernelVersion] = append(headers[pkgInfo.kernelVersion], pkgInfo)
 	}
 
 	packageGroups := make([][]string, 0, len(headers))
@@ -120,20 +145,41 @@ func reformatDebian(packages []string) ([][]string, error) {
 			return nil, errors.Errorf("invalid number of header packages for kernel version %s: %+v", version, headerPkgs)
 		}
 
-		sepIndices := versionSepRegex.FindAllStringIndex(version, -1)
-		kbuildPkg := kbuilds[version]
-		for kbuildPkg == "" && len(sepIndices) > 0 {
-			lastSepIdx := sepIndices[len(sepIndices)-1][0]
-			sepIndices = sepIndices[:len(sepIndices)-1]
-			kbuildPkg = kbuilds[version[:lastSepIdx]]
-		}
-		if kbuildPkg == "" {
-			return nil, errors.Errorf("failed to find kbuild package for kernel version %s: candidates are %+v", version, kbuilds)
+		var kbuildCandidates []packageInfo
+		for _, headerPkg := range headerPkgs {
+			kbuildPkg, ok := kbuildsByPackageVersion[headerPkg.packageVersion]
+			if !ok {
+				continue
+			}
+			kbuildCandidates = append(kbuildCandidates, kbuildPkg)
 		}
 
+		if len(kbuildCandidates) == 0 {
+			sepIndices := versionSepRegex.FindAllStringIndex(version, -1)
+			kbuildPkgs, ok := kbuildsByKernelVersion[version]
+			for !ok && len(sepIndices) > 0 {
+				lastSepIdx := sepIndices[len(sepIndices)-1][0]
+				sepIndices = sepIndices[:len(sepIndices)-1]
+				kbuildPkgs, ok = kbuildsByKernelVersion[version[:lastSepIdx]]
+			}
+			if ok {
+				kbuildCandidates = append(kbuildCandidates, kbuildPkgs...)
+			}
+		}
+
+		if len(kbuildCandidates) == 0 {
+			return nil, errors.Errorf("failed to find kbuild package for kernel version %s: candidates are %+v", version, kbuildsByKernelVersion)
+		}
+
+		sort.Slice(kbuildCandidates, func(i, j int) bool {
+			return versionLess(kbuildCandidates[j].packageVersion, kbuildCandidates[i].packageVersion)
+		})
+
 		allPackages := make([]string, 0, 3)
-		allPackages = append(allPackages, kbuildPkg)
-		allPackages = append(allPackages, headerPkgs...)
+		allPackages = append(allPackages, kbuildCandidates[0].url)
+		for _, headerPkg := range headerPkgs {
+			allPackages = append(allPackages, headerPkg.url)
+		}
 
 		packageGroups = append(packageGroups, allPackages)
 	}
