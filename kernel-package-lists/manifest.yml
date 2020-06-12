@@ -2704,10 +2704,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-327.36.1.el7.x86_64.rpm
-80ab8e6f7d8802c68c99bdb0781fb3931425a93e41c85fc2b8e8b7664af53080:
-  type: coreos
-  packages:
-  - http---stable.release.core-os.net-amd64-usr-1409.2.0-coreos_developer_container.bin.bz2
 80dfd0c4cb134af8af9a2f48329f8f0279eba42d0e8b52e75800c305d29d6050:
   type: cos
   packages:
@@ -4924,6 +4920,11 @@ a7dfed7eba2333f0693ba753dbb313dfae312c4f486337b223e90dd6ebf57b9b:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1102_4.4.0-1102.113_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1102-aws_4.4.0-1102.113_amd64.deb
+a8f0fc8bfa2ebc2988ab164a7ada8c543bf6aaf8feb2d9bf866424d75a452a8c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1024_5.3.0-1024.26_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1024-aws_5.3.0-1024.26_amd64.deb
 a8b07ead6c8abb7c5526c3aa8c910567fefd39fa7bbe05bceb114a5ef052c056:
   type: redhat
   packages:
