@@ -742,6 +742,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.5.2.el7uek.x86_64.rpm
+3cd852ece74754ee1e7786c75c23aa35aef370ea924279ea6c6de90524379d8b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1026_5.3.0-1026.28_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1026-aws_5.3.0-1026.28_amd64.deb
 3edb4969f2480c7e3c50ca822747dbe05be4a72c1afd0d6f550e218dc37367fb:
   type: redhat
   packages:
