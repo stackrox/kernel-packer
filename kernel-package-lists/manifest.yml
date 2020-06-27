@@ -3615,6 +3615,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.13.1.el7.x86_64.rpm
+890da15491cc80c2e9dc900ef998319202b05c1d4e1509b82806dc4780e5b8d2:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1030_5.3.0-1030.32-18.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1030-gke_5.3.0-1030.32-18.04.1_amd64.deb
 896d06d496f560cd199a7203f9cd023d8c9cdeeaa9ebab961f4ebeb30025c4bf:
   type: redhat
   packages:
@@ -4443,6 +4448,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.71-1.el7.elrepo.x86_64.rpm
+72459b5e1d4ead900cc094fdc580a3bd207eff281bbb1a4516c84af7e22616f5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1091_4.15.0-1091.101_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1091-azure_4.15.0-1091.101_amd64.deb
 75420acb38df67c2f2c9e7b0c6394b970176c64f7c8a13707c98f37532ca1252:
   type: cos
   packages:
