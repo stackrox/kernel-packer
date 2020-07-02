@@ -123,3 +123,15 @@
   type: redhat
   file: rhel8.txt
   reformat: single
+
+- name: rhel81
+  description: RHEL 8.1 Kernels
+  type: redhat
+  file: rhel81.txt
+  reformat: single
+
+- name: rhel81-eus
+  description: RHEL 8.1 EUS Kernels
+  type: redhat
+  file: rhel81-eus.txt
+  reformat: single
