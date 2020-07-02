@@ -118,6 +118,16 @@ crawl-rhel: build-crawl-container
 			-key /rhel-certs/rhel-key.pem \
 		> $(CRAWLED_PACKAGE_DIR)/rhel76-eus.txt
 
+	# Crawl for RHEL 8.1 EUS (Extended Update Support) kernel-devel packages.
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-base-url https://cdn.redhat.com/content/eus/rhel8/8.1/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel81-eus.txt
+
 crawl-ubuntu-azure: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt
 
