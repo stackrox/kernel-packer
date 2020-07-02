@@ -147,7 +147,7 @@ jobs:
           KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages-staging/${CIRCLE_BUILD_NUM},gs://stackrox-kernel-packages"
           KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BUILD_NUM},gs://stackrox-kernel-bundles"
 
-          cat >>"$BASH_ENV" <<EOF
+          cat >>"$BASH_ENV" \<<EOF
           export KERNEL_PACKAGE_BUCKET="$KERNEL_PACKAGE_BUCKET"
           export KERNEL_BUNDLE_BUCKET="$KERNEL_BUNDLE_BUCKET"
           EOF
