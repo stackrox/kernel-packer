@@ -13,14 +13,12 @@ main() {
     # GCS bucket containing uploaded files.
     #
     # Example: "gs://stackrox-kernel-packages"
-    bucket_name_list="$2"
-    IFS=',' read -r -a bucket_names <<< "$bucket_name_list"
+    bucket_name="$2"
 
     # Directory to download urls into.
     #
     # Example: ".build-data/downloads"
     download_dir="$3"
-
     mkdir -p "$download_dir"
 
     info 'Generating a list of crawled urls.'
@@ -29,7 +27,7 @@ main() {
     echo
 
     info 'Generating a list of bucket files.'
-    all_bucket_files="$(./scripts/package-inventory "$bucket_name_list")"
+    all_bucket_files="$(./scripts/package-inventory "$bucket_name")"
     echo "$all_bucket_files"
     echo
 
@@ -46,14 +44,6 @@ main() {
             download "$url" "${download_dir}/${filename}"
         fi
     done <<< "$all_crawled_packages"
-    echo
-
-    info 'Sanity checking downloaded files.'
-    find "${download_dir}" -size 0 -delete -print
-    echo
-
-    info 'Uploading files to bucket.'
-    find "$download_dir" -type f | gsutil -m cp -I "${bucket_names[0]}"
     echo
 }
 

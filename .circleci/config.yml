@@ -77,7 +77,7 @@ jobs:
         command: make list-files
     - run:
         name: Download package list
-        command: make download-packages
+        command: make download-packages-from-gcs
     - run:
         name: Build repackage image
         command: make packers
@@ -116,14 +116,22 @@ jobs:
     - run:
         name: Sanity check fragments
         command: ls -lh .build-data/cache
+
     - run:
         name: Combine cache fragments
         command: |
           make combine-cache
           make clean-cache
+
     - run:
         name: Sanity check cache
         command: cat .build-data/cache/cache.yml
+
+    - run:
+        name: Stop when not on master
+        command: |
+          [[ "$CIRCLE_BRANCH" == "master" ]] || circleci step halt
+
     - save_cache:
         key: stackrox-kernel-packer-cache-v12-{{ epoch }}
         paths:
@@ -137,44 +145,72 @@ jobs:
     steps:
     - gcloud-init
     - checkout
-    - run:
-        name: Init environment
-        command: |
-          if [[ "$CIRCLE_BRANCH" == "master" || -n "$CIRCLE_TAG" ]]; then
-            exit 0
-          fi
-
-          KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages-staging/${CIRCLE_BUILD_NUM},gs://stackrox-kernel-packages"
-          KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BUILD_NUM},gs://stackrox-kernel-bundles"
-
-          cat >>"$BASH_ENV" \<<EOF
-          export KERNEL_PACKAGE_BUCKET="$KERNEL_PACKAGE_BUCKET"
-          export KERNEL_BUNDLE_BUCKET="$KERNEL_BUNDLE_BUCKET"
-          EOF
 
     - run:
         name: Crawl package repositories
         command: make crawl
+
     - run:
-        name: Download and reupload crawled files
-        command: make sync
+        name: Download package files
+        command: make download-packages
+
+    - run:
+        name: Upload package files (only on master)
+        command: |
+          [[ "$CIRCLE_BRANCH" == "master" ]] || exit 0
+          make upload-packages
+
     - run:
         name: Generate manifest
         command: |
           make manifest
           cat kernel-package-lists/manifest.yml
+
     - run:
         name: Prepare artifacts
         command: |
           rm -rf .build-data/downloads
         when: always
+
     - store_artifacts:
         path: .build-data
         destination: build-data
         when: always
+
+    - run:
+        name: Build repackage image (non-master)
+        command: |
+          [[ "$CIRCLE_BRANCH" != "master" ]] || exit 0
+          make packers
+
+    - run:
+        name: Repackage kernels (non-master)
+        command: |
+          [[ "$CIRCLE_BRANCH" != "master" ]] || exit 0
+          make repackage
+
+    - run:
+        name: Sanity check bundles (non-master)
+        command: |
+          [[ "$CIRCLE_BRANCH" != "master" ]] || exit 0
+          mkdir -p .build-data/bundles
+          ls -lhR .build-data/bundles
+
+    - run:
+      name: Upload bundles (non-master)
+      command: |
+        [ "$CIRCLE_BRANCH" != "master" ]] || exit 0
+        make upload-bundles KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BUILD_NUM}"
+
+    - run:
+        name: Stop execution when not on master
+        command: |
+          [[ "$CIRCLE_BRANCH" == "master" ]] || circleci step halt
+
     - add_ssh_keys:
         fingerprints:
         - 'dd:79:df:69:0f:13:db:0e:08:3e:3b:f4:b2:e3:57:77'
+
     - run:
         name: Push any changes
         command: |

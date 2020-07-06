@@ -40,6 +40,12 @@
   file: debian.txt
   reformat: debian
 
+- name: gardenlinux
+  description: SAP Garden Linux kernels
+  type: debian
+  file: gardenlinux.txt
+  reformat: debian
+
 - name: cos
   description: Container-Optimized OS kernels
   type: cos

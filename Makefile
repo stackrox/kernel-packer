@@ -23,8 +23,17 @@ robo-collector-commit:
 
 .PHONY: sync
 sync:
+	$(MAKE) download-packages
+	$(MAKE) upload-packages
+
+.PHONY: download-packages
+download-packages:
 	@mkdir -p $(BUILD_DATA_DIR)/downloads
-	@./scripts/sync $(CRAWLED_PACKAGE_DIR) $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
+	@scripts/download-packages $(CRAWLED_PACKAGE_DIR) $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
+
+.PHONY: upload-packages
+upload-packages:
+	@scripts/upload-packages $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
 
 .PHONY: crawled-inventory
 crawled-inventory:
@@ -66,8 +75,8 @@ list-files:
 		-prefix gs://stackrox-kernel-packages \
 		-action files | tee $(BUILD_DATA_DIR)/packages.txt
 
-.PHONY: download-packages
-download-packages:
+.PHONY: download-packages-from-gcs
+download-packages-from-gcs:
 	@mkdir -p $(BUILD_DATA_DIR)/packages
 	@gsutil -m cp -c -L $(BUILD_DATA_DIR)/gsutil-download.log -I $(BUILD_DATA_DIR)/packages < $(BUILD_DATA_DIR)/packages.txt || true
 
