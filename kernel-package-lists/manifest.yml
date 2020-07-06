@@ -754,6 +754,10 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.69-1.el7.elrepo.x86_64.rpm
+3fe1c9299487362ad85ed0fa5af0c094145c7df2815eb8af2b5972861e70378e:
+  type: redhat
+  packages:
+  - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.229-1.el7.elrepo.x86_64.rpm
 3de6e6cfcb1dac6008ac8b753751cb7daf100ddeaa2e4b0275e1c0d9f8243f9b:
   type: redhat
   packages:
@@ -1309,6 +1313,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1041_4.15.0-1041.43_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1041-gcp_4.15.0-1041.43_amd64.deb
+06f8acea88c9e83b32fa9c489c1b0cea31d9bbdad106726b45ac62cd67910e06:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1031_5.3.0-1031.33-18.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1031-gke_5.3.0-1031.33-18.04.1_amd64.deb
 06c00213d35b76909e25f6a3dc02597b4859b78d2ec4e37b38b5b4002a39d77a:
   type: debian
   packages:
@@ -2964,6 +2973,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-431.17.1.el6.x86_64.rpm
+97b417f4718e392fe3aef28cb0f7de6b094cd137e0ceb4530eb0974c8c059b5b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1031_5.3.0-1031.33_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1031-aws_5.3.0-1031.33_amd64.deb
 98b179959e3efd507f1952ee2b74a318e810ccf515d0e533e30aba36852314e1:
   type: redhat
   packages:
@@ -3502,6 +3516,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-173-generic_4.4.0-173.203_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-173_4.4.0-173.203_all.deb
+683ff3cd89654e8339ec5cb38cf4c80a6b7640520325c72d332ed1af4bfa0ffe:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1111_4.4.0-1111.123_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1111-aws_4.4.0-1111.123_amd64.deb
 684c46fff038fa0cce5b6c37eea5750fbdc1dab1301c5ef976f82e1ab10c0224:
   type: redhat
   packages:
@@ -6981,6 +7000,11 @@ e59119bfd8d7d73d5e8139cbfe1dcdae1fa08dc0e132123ce8b33bb39cd3a8e9:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.226-1.el7.elrepo.x86_64.rpm
+e775900ccd3fd27e78df380d948348af3bb372dd90206444447b809d4e434d81:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-186-generic_4.4.0-186.216_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-186_4.4.0-186.216_all.deb
 e2051173a657138b15dbb981f7ba304d399f507df81f386989ed1bc5a1a19326:
   type: redhat
   packages:
