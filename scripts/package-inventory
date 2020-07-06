@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 main() {
     # GCS bucket containing uploaded files.
@@ -6,10 +6,7 @@ main() {
     # Example: "gs://stackrox-kernel-packages"
     bucket_name="${1:-gs://stackrox-kernel-packages}"
 
-    IFS=',' read -r -a bucket_names <<< "$bucket_name"
-    for bucket_name in "${bucket_names[@]}"; do
-      gsutil --quiet ls "$bucket_name"
-    done | strip_bucket_prefix | sort
+    gsutil --quiet ls "$bucket_name" | strip_bucket_prefix | sort
 }
 
 strip_bucket_prefix() {

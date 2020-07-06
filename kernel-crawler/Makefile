@@ -27,8 +27,8 @@ crawl-kops: build-crawl-container
 	echo 'http://http.us.debian.org/debian/pool/main/l/linux-tools/linux-kbuild-4.4_4.4-4~bpo8+1_amd64.deb' > $(CRAWLED_PACKAGE_DIR)/kops.txt
 	docker run --rm -i --entrypoint python3 kernel-crawler repo-crawler.py --print apt http://dist.kope.io/apt jessie main --match-prefix=Package=linux-headers-4 | sort >> $(CRAWLED_PACKAGE_DIR)/kops.txt
 
-.PHONY: crawl-gardenlinux build-crawl-container
-crawl-gardenlinux:
+.PHONY: crawl-gardenlinux
+crawl-gardenlinux: build-crawl-container
 	docker run --rm -i --entrypoint bash kernel-crawler gardenlinux-crawler.sh >$(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
 
 .PHONY: crawl-debian
