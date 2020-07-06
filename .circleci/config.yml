@@ -166,7 +166,11 @@ jobs:
     - run:
         name: Generate manifest
         command: |
-          make manifest
+          make_args=()
+          if [[ "$CIRCLE_BRANCH" != "master" ]]; then
+            make_args+=("PACKAGE_INVENTORY_EXTRA_SRC=$(pwd)/.build-data/downloads")
+          fi
+          make manifest "${make_args[@]}"
           cat kernel-package-lists/manifest.yml
 
     - run:

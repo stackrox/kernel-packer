@@ -43,7 +43,7 @@ crawled-inventory:
 .PHONY: package-inventory
 package-inventory:
 	@mkdir -p $(BUILD_DATA_DIR)
-	@./scripts/package-inventory $(KERNEL_PACKAGE_BUCKET) > $(BUILD_DATA_DIR)/package-inventory.txt
+	@./scripts/package-inventory $(KERNEL_PACKAGE_BUCKET) $(PACKAGE_INVENTORY_EXTRA_SRC) > $(BUILD_DATA_DIR)/package-inventory.txt
 
 .PHONY: repackage
 repackage: packers
