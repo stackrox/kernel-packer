@@ -160,6 +160,9 @@ jobs:
           [[ "$CIRCLE_BRANCH" == "master" ]] || exit 0
           make upload-packages
 
+    - restore_cache:
+        key: stackrox-kernel-packer-cache-v12
+
     - run:
         name: Generate manifest
         command: |
