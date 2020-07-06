@@ -197,10 +197,10 @@ jobs:
           ls -lhR .build-data/bundles
 
     - run:
-      name: Upload bundles (non-master)
-      command: |
-        [ "$CIRCLE_BRANCH" != "master" ]] || exit 0
-        make upload-bundles KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BUILD_NUM}"
+        name: Upload bundles (non-master)
+        command: |
+          [[ "$CIRCLE_BRANCH" != "master" ]] || exit 0
+          make upload-bundles KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BUILD_NUM}"
 
     - run:
         name: Stop execution when not on master
