@@ -194,6 +194,8 @@ jobs:
         name: Repackage kernels (non-master)
         command: |
           [[ "$CIRCLE_BRANCH" != "master" ]] || exit 0
+          mkdir -p .build-data/packages
+          cp .build-data/downloads/* .build-data/packages/
           make repackage
 
     - run:
