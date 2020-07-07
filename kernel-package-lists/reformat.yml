@@ -40,6 +40,12 @@
   file: debian.txt
   reformat: debian
 
+- name: gardenlinux
+  description: SAP Garden Linux kernels
+  type: debian
+  file: gardenlinux.txt
+  reformat: debian
+
 - name: cos
   description: Container-Optimized OS kernels
   type: cos
@@ -122,16 +128,4 @@
   description: RHEL 8 Kernels
   type: redhat
   file: rhel8.txt
-  reformat: single
-
-- name: rhel81
-  description: RHEL 8.1 Kernels
-  type: redhat
-  file: rhel81.txt
-  reformat: single
-
-- name: rhel81-eus
-  description: RHEL 8.1 EUS Kernels
-  type: redhat
-  file: rhel81-eus.txt
   reformat: single

@@ -27,6 +27,10 @@ crawl-kops: build-crawl-container
 	echo 'http://http.us.debian.org/debian/pool/main/l/linux-tools/linux-kbuild-4.4_4.4-4~bpo8+1_amd64.deb' > $(CRAWLED_PACKAGE_DIR)/kops.txt
 	docker run --rm -i --entrypoint python3 kernel-crawler repo-crawler.py --print apt http://dist.kope.io/apt jessie main --match-prefix=Package=linux-headers-4 | sort >> $(CRAWLED_PACKAGE_DIR)/kops.txt
 
+.PHONY: crawl-gardenlinux
+crawl-gardenlinux: build-crawl-container
+	docker run --rm -i --entrypoint bash kernel-crawler gardenlinux-crawler.sh >$(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
+
 .PHONY: crawl-debian
 crawl-debian: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Debian > $(CRAWLED_PACKAGE_DIR)/debian.txt
@@ -98,16 +102,6 @@ crawl-rhel: build-crawl-container
 			-key /rhel-certs/rhel-key.pem \
 		> $(CRAWLED_PACKAGE_DIR)/rhel8.txt
 
-	# Crawl for RHEL 8.1 kernel-devel packages.
-	docker run --rm \
-		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
-		--entrypoint /usr/bin/rhel-crawler \
-		kernel-crawler:latest \
-			-base-url https://cdn.redhat.com/content/dist/rhel8/8.1/x86_64/baseos/os \
-			-cert /rhel-certs/rhel-cert.pem \
-			-key /rhel-certs/rhel-key.pem \
-		> $(CRAWLED_PACKAGE_DIR)/rhel81.txt
-
 	# Crawl for RHEL 7.6 EUS (Extended Update Support) kernel-devel packages.
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
@@ -118,21 +112,11 @@ crawl-rhel: build-crawl-container
 			-key /rhel-certs/rhel-key.pem \
 		> $(CRAWLED_PACKAGE_DIR)/rhel76-eus.txt
 
-	# Crawl for RHEL 8.1 EUS (Extended Update Support) kernel-devel packages.
-	docker run --rm \
-		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
-		--entrypoint /usr/bin/rhel-crawler \
-		kernel-crawler:latest \
-			-base-url https://cdn.redhat.com/content/eus/rhel8/8.1/x86_64/baseos/os \
-			-cert /rhel-certs/rhel-cert.pem \
-			-key /rhel-certs/rhel-key.pem \
-		> $(CRAWLED_PACKAGE_DIR)/rhel81-eus.txt
-
 crawl-ubuntu-azure: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt
 
 .PHONY: crawl
-crawl: build-crawl-container crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar
+crawl: build-crawl-container crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-gardenlinux
 	docker run --rm -i kernel-crawler crawl CoreOS > $(CRAWLED_PACKAGE_DIR)/coreos.txt
 	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
