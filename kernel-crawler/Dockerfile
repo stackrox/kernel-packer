@@ -1,15 +1,15 @@
-FROM golang:1.13.1 AS build
+FROM golang:1.14.4 AS build
 
 COPY main.go /go/src/main.go
 
 RUN CGO_ENABLED=0 go build -o /go/bin/rhel-crawler /go/src/main.go
 
-FROM python:2.7-slim
+FROM python:3.7-slim
 
 RUN apt-get update \
  && apt-get install --no-install-recommends -y \
-    python3>=3.5 \
     python3-lxml \
+    git \
  && rm -rf /var/lib/apt
 
 RUN pip install --no-cache-dir \
@@ -18,6 +18,7 @@ RUN pip install --no-cache-dir \
 COPY ["kernel-crawler.py", "/"]
 COPY ["repo-crawler.py", "/"]
 COPY ["kope.io.asc", "/"]
+COPY ["gardenlinux-crawler.sh", "/"]
 COPY --from=build /go/bin/rhel-crawler /usr/bin/rhel-crawler
 
 ENTRYPOINT ["python3", "kernel-crawler.py"]
