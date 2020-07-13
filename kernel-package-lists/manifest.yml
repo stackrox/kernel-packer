@@ -491,6 +491,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10575.65.0-kernel-src.tar.gz
+2f12f768850662fa3b54fe02fbe2ceca6ecb32a63b12d379470e2c74043aa690:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1032_5.3.0-1032.34_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1032-aws_5.3.0-1032.34_amd64.deb
 2d37b863d8c7622308b02ef012a8318b8e58496134affc2a011e1ee49e5c0abb:
   type: ubuntu
   packages:
@@ -2010,6 +2015,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-514.21.1.el7.x86_64.rpm
+14f301a99608916f8ab6d1ec56433bfa95eb8257a667f97a8fd1e0f93d57e8df:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.3.0-1032_5.3.0-1032.34_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.3.0-1032-gcp_5.3.0-1032.34_amd64.deb
 14ee39bd411714064eab8240d6c6155c30c95ae5e8a0b79ae8775b318bbe44c1:
   type: redhat
   packages:
@@ -2153,6 +2163,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.189-1.el7.elrepo.x86_64.rpm
+29a36a0d13f1227867798e291f147c3e441f5817a8a929af0baa8b4541721f77:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.3.0-1034_5.3.0-1034.35_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.3.0-1034-azure_5.3.0-1034.35_amd64.deb
 30d2ae4df11bf186e72302e3082c5239717ea6d9df749a6b8cc12c3ef4d51f06:
   type: ubuntu
   packages:
@@ -2343,6 +2358,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-957.5.1.el7.x86_64.rpm
+43e188986ddc2f0403c0c1883ba3c2c4770113f0dde431601f12046008bbd484:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1045_5.0.0-1045.46_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1045-gke_5.0.0-1045.46_amd64.deb
 043dc4fcb75998a852c3e34065ed6f3f05c2e870d606aebc140bdd2c18e9bf30:
   type: redhat
   packages:
