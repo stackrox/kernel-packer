@@ -190,14 +190,14 @@ repos = {
             "exclude_patterns": debian_excludes,
         },
         {
-            "root": "http://ftp.debian.org/debian/pool/main/l/"
+            "root": "http://ftp.debian.org/debian/pool/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-headers-[4-9].[0-9.]+-[^-]+-(?:amd64|common_).*(?:amd64|all).deb$')]/@href",
             "exclude_patterns": debian_excludes,
         },
         {
-            "root": "http://ftp.debian.org/debian/pool/main/l/"
+            "root": "http://ftp.debian.org/debian/pool/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-kbuild-[4-9]\..*_amd64\.deb$')]/@href",
