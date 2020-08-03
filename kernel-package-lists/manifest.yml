@@ -2703,6 +2703,12 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.303.0.el7uek.x86_64.rpm
+68bc2c1fc71d403b81ca2ba9ee152445fccb19f3278fff3edd4efba57ca8d0c4:
+  type: debian
+  packages:
+  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-4.9.0-13-amd64_4.9.228-1_amd64.deb
+  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-4.9.0-13-common_4.9.228-1_all.deb
+  - http---ftp.debian.org-debian-pool-main-l-linux-linux-kbuild-4.9_4.9.228-1_amd64.deb
 69e3e65c3585eb7d3dc44bd3c3909dbc95aeec81b3a9842be5a4aaedbf48f8ed:
   type: ubuntu
   packages:
@@ -7064,10 +7070,22 @@ e9afd6c211cff015bc41c13a3bcb922eeb5d6d8f2785864cea77784256b4ef1d:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11647.449.0-kernel-src.tar.gz
+e14e7fbccc910bbc8abb902880495630555906d798af0d1c23500c11560e80f7:
+  type: debian
+  packages:
+  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-5.7.0-2-amd64_5.7.10-1_amd64.deb
+  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-5.7.0-2-common_5.7.10-1_all.deb
+  - http---ftp.debian.org-debian-pool-main-l-linux-linux-kbuild-5.7_5.7.10-1_amd64.deb
 e17f044a4d3a3a0d1c14e149409288f0f00e89966426da235686ae5564c17ce3:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.77-30.el7.x86_64.rpm
+e043cc660c6af90476a1b644afe24f7a08408ec6d0268693e66f20343dc03407:
+  type: debian
+  packages:
+  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-4.19.0-10-amd64_4.19.132-1_amd64.deb
+  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-4.19.0-10-common_4.19.132-1_all.deb
+  - http---ftp.debian.org-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.132-1_amd64.deb
 e045dee9265e5bd5821c2667b85d19334d3f3b81f8947b98b88a59b01efe513b:
   type: redhat
   packages:
