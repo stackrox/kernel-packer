@@ -36,8 +36,6 @@ ubuntu_backport_excludes = [
     "~", # prevent duplicate backports from cluttering the list
 ]
 debian_excludes = [
-    "linux-headers-4.9.0-9-amd64_4.9.168-1+deb9u2_amd64.deb",
-    "linux-headers-4.9.0-9-common_4.9.168-1+deb9u2_all.deb",
     "3.2.0", "3.16.0" # legacy
 ]
 minikube_excludes = [

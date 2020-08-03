@@ -6,6 +6,7 @@ import (
 	"regexp"
 	"sort"
 	"strconv"
+	"strings"
 
 	"github.com/pkg/errors"
 )
@@ -78,13 +79,14 @@ func reformatOneToPairs(packages []string) ([][]string, error) {
 
 var (
 	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_([^_]+)(?:_.*)?\.deb$`)
-	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-[^_]+_([^_]+)(?:_.*)?\.deb$`)
+	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)[^_]+_([^_]+)(?:_.*)?\.deb$`)
 	versionSepRegex          = regexp.MustCompile(`[-.]`)
+	debianSecurityURL        = "security.debian.org"
 )
 
 type packageInfo struct {
 	kernelVersion, packageVersion string
-	url                           string
+	name, url                     string
 }
 
 func reformatDebian(packages []string) ([][]string, error) {
@@ -94,6 +96,8 @@ func reformatDebian(packages []string) ([][]string, error) {
 
 	kbuildsByKernelVersion := make(map[string][]packageInfo)
 	kbuildsByPackageVersion := make(map[string]packageInfo)
+	headersByKernelVersion := make(map[string][]packageInfo)
+	headersByPackageName := make(map[string]packageInfo)
 
 	for _, pkg := range packages {
 		name := path.Base(pkg)
@@ -103,6 +107,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 		}
 		pkgInfo := packageInfo{
 			url:            pkg,
+			name:           name,
 			kernelVersion:  matches[1],
 			packageVersion: matches[2],
 		}
@@ -121,27 +126,44 @@ func reformatDebian(packages []string) ([][]string, error) {
 		})
 	}
 
-	headers := make(map[string][]packageInfo)
 	for _, pkg := range packages {
 		name := path.Base(pkg)
 		matches := debianHeaderVersionRegex.FindStringSubmatch(name)
 		if len(matches) < 3 {
 			continue
 		}
-
 		pkgInfo := packageInfo{
 			url:            pkg,
+			name:           name,
 			kernelVersion:  matches[1],
 			packageVersion: matches[2],
 		}
+		if existingPkg := headersByPackageName[pkgInfo.name]; !strings.Contains(existingPkg.url, debianSecurityURL) {
+			headersByPackageName[pkgInfo.name] = pkgInfo
+		}
+	}
 
-		headers[pkgInfo.kernelVersion] = append(headers[pkgInfo.kernelVersion], pkgInfo)
+	for _, pkgInfo := range headersByPackageName {
+		headersByKernelVersion[pkgInfo.kernelVersion] = append(headersByKernelVersion[pkgInfo.kernelVersion], pkgInfo)
+	}
+
+	for _, pkgInfos := range headersByKernelVersion {
+		sort.Slice(pkgInfos, func(i, j int) bool {
+			return versionLess(pkgInfos[j].packageVersion, pkgInfos[i].packageVersion)
+		})
+	}
+
+	headers := make(map[string][]packageInfo)
+	for _, pkgInfos := range headersByKernelVersion {
+		for idx := 0; idx < len(pkgInfos) && pkgInfos[idx].packageVersion == pkgInfos[0].packageVersion; idx += 1 {
+			headers[pkgInfos[0].kernelVersion] = append(headers[pkgInfos[0].kernelVersion], pkgInfos[idx])
+		}
 	}
 
 	packageGroups := make([][]string, 0, len(headers))
 
 	for version, headerPkgs := range headers {
-		if len(headerPkgs) != 2 {
+		if len(headerPkgs) > 2 {
 			return nil, errors.Errorf("invalid number of header packages for kernel version %s: %+v", version, headerPkgs)
 		}
 
