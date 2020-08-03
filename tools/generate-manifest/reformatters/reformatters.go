@@ -81,12 +81,22 @@ var (
 	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_([^_]+)(?:_.*)?\.deb$`)
 	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)[^_]+_([^_]+)(?:_.*)?\.deb$`)
 	versionSepRegex          = regexp.MustCompile(`[-.]`)
+	packagePoolRegex         = regexp.MustCompile(`^https?://([^.]*).debian.org/.*/.*\.deb$`)
 	debianSecurityURL        = "security.debian.org"
 )
 
 type packageInfo struct {
 	kernelVersion, packageVersion string
 	name, url                     string
+}
+
+func equalPackagePool(urlA, urlB string) bool {
+	urlAMatches := packagePoolRegex.FindStringSubmatch(urlA)
+	urlBMatches := packagePoolRegex.FindStringSubmatch(urlB)
+	if len(urlAMatches) != 2 || len(urlBMatches) != 2 {
+		return false
+	}
+	return urlAMatches[1] == urlBMatches[1]
 }
 
 func reformatDebian(packages []string) ([][]string, error) {
@@ -138,6 +148,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 			kernelVersion:  matches[1],
 			packageVersion: matches[2],
 		}
+		// prefer security.debian.org for duplicates
 		if existingPkg := headersByPackageName[pkgInfo.name]; !strings.Contains(existingPkg.url, debianSecurityURL) {
 			headersByPackageName[pkgInfo.name] = pkgInfo
 		}
@@ -156,6 +167,9 @@ func reformatDebian(packages []string) ([][]string, error) {
 	headers := make(map[string][]packageInfo)
 	for _, pkgInfos := range headersByKernelVersion {
 		for idx := 0; idx < len(pkgInfos) && pkgInfos[idx].packageVersion == pkgInfos[0].packageVersion; idx += 1 {
+			if !equalPackagePool(pkgInfos[0].url, pkgInfos[idx].url) {
+				return nil, errors.Errorf("invalid mixture of package pools for package version %s: %s, %s", pkgInfos[0].packageVersion, pkgInfos[0].url, pkgInfos[idx].url)
+			}
 			headers[pkgInfos[0].kernelVersion] = append(headers[pkgInfos[0].kernelVersion], pkgInfos[idx])
 		}
 	}
@@ -163,6 +177,9 @@ func reformatDebian(packages []string) ([][]string, error) {
 	packageGroups := make([][]string, 0, len(headers))
 
 	for version, headerPkgs := range headers {
+		if len(headerPkgs) == 1 {
+			continue
+		}
 		if len(headerPkgs) > 2 {
 			return nil, errors.Errorf("invalid number of header packages for kernel version %s: %+v", version, headerPkgs)
 		}
@@ -173,7 +190,9 @@ func reformatDebian(packages []string) ([][]string, error) {
 			if !ok {
 				continue
 			}
-			kbuildCandidates = append(kbuildCandidates, kbuildPkg)
+			if equalPackagePool(headerPkg.url, kbuildPkg.url) {
+				kbuildCandidates = append(kbuildCandidates, kbuildPkg)
+			}
 		}
 
 		if len(kbuildCandidates) == 0 {
@@ -185,7 +204,11 @@ func reformatDebian(packages []string) ([][]string, error) {
 				kbuildPkgs, ok = kbuildsByKernelVersion[version[:lastSepIdx]]
 			}
 			if ok {
-				kbuildCandidates = append(kbuildCandidates, kbuildPkgs...)
+				for _, kbuildPkg := range kbuildPkgs {
+					if equalPackagePool(headerPkgs[0].url, kbuildPkg.url) {
+						kbuildCandidates = append(kbuildCandidates, kbuildPkg)
+					}
+				}
 			}
 		}
 

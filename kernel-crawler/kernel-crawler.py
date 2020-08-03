@@ -38,6 +38,9 @@ ubuntu_backport_excludes = [
 debian_excludes = [
     "3.2.0", "3.16.0" # legacy
 ]
+debian_backport_excludes = [
+    "bpo",
+]
 minikube_excludes = [
     "kubernetes/minikube/archive/v0.35.0.tar.gz",
     "kubernetes/minikube/archive/v0.34.1.tar.gz",
@@ -192,14 +195,14 @@ repos = {
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-headers-[4-9].[0-9.]+-[^-]+-(?:amd64|common_).*(?:amd64|all).deb$')]/@href",
-            "exclude_patterns": debian_excludes,
+            "exclude_patterns": debian_excludes + debian_backport_excludes,
         },
         {
             "root": "http://ftp.debian.org/debian/pool/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-kbuild-[4-9]\..*_amd64\.deb$')]/@href",
-            "exclude_patterns": debian_excludes,
+            "exclude_patterns": debian_excludes + debian_backport_excludes,
         },
     ],
 
