@@ -79,7 +79,7 @@ func reformatOneToPairs(packages []string) ([][]string, error) {
 
 var (
 	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_([^_]+)(?:_.*)?\.deb$`)
-	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)[^_]+_([^_]+)(?:_.*)?\.deb$`)
+	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-[^_]+_([^_]+)(?:_.*)?\.deb$`)
 	versionSepRegex          = regexp.MustCompile(`[-.]`)
 	packagePoolRegex         = regexp.MustCompile(`^https?://([^.]*).debian.org/.*/.*\.deb$`)
 	debianSecurityURL        = "security.debian.org"
