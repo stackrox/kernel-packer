@@ -115,6 +115,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 		if len(matches) < 3 {
 			continue
 		}
+
 		pkgInfo := packageInfo{
 			url:            pkg,
 			name:           name,
@@ -148,7 +149,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 			kernelVersion:  matches[1],
 			packageVersion: matches[2],
 		}
-		// prefer security.debian.org for duplicates
+		// duplicates package files may exist across package pools, prefer security.debian.org over others
 		if existingPkg := headersByPackageName[pkgInfo.name]; !strings.Contains(existingPkg.url, debianSecurityURL) {
 			headersByPackageName[pkgInfo.name] = pkgInfo
 		}
@@ -177,6 +178,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 	packageGroups := make([][]string, 0, len(headers))
 
 	for version, headerPkgs := range headers {
+		// ignore headers without arch specific packages (e.g., linux-headers-5.6.0-2-common_5.6.14-2_all.deb )
 		if len(headerPkgs) == 1 {
 			continue
 		}
@@ -190,6 +192,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 			if !ok {
 				continue
 			}
+			// select kbuild package using same package pool as header packages
 			if equalPackagePool(headerPkg.url, kbuildPkg.url) {
 				kbuildCandidates = append(kbuildCandidates, kbuildPkg)
 			}
@@ -205,6 +208,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 			}
 			if ok {
 				for _, kbuildPkg := range kbuildPkgs {
+					// select kbuild package using same package pool as header packages
 					if equalPackagePool(headerPkgs[0].url, kbuildPkg.url) {
 						kbuildCandidates = append(kbuildCandidates, kbuildPkg)
 					}
