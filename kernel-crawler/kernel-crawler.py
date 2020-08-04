@@ -484,9 +484,9 @@ def crawl(distro):
             if len(repo["discovery_pattern"]) > 0:
                 versions = html.fromstring(root).xpath(repo["discovery_pattern"],
                                                     namespaces={"regex": "http://exslt.org/regular-expressions"})
-            for version in versions:
+            for version in sorted(set(versions)):
                 sys.stderr.write("Considering version "+version+"\n")
-                for subdir in repo["subdirs"]:
+                for subdir in sorted(set(repo["subdirs"])):
                     try:
                         sys.stderr.write("Considering version " + version + " subdir " + subdir + "\n")
                         source = repo["root"] + version + subdir
@@ -496,7 +496,7 @@ def crawl(distro):
                                                            namespaces={"regex": "http://exslt.org/regular-expressions"})
                         if len(rpms) == 0:
                             sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
-                        for rpm in rpms:
+                        for rpm in sorted(set(rpms)):
                             sys.stderr.write("Considering package " + rpm + "\n")
                             if "exclude_patterns" in repo and any(x in rpm for x in repo["exclude_patterns"]):
                                 continue
