@@ -28,6 +28,12 @@
   file: flatcar.txt
   reformat: single
 
+- name: flatcar-beta
+  description: Flatcar beta kernels (one-off)
+  type: coreos
+  file: flatcar-beta.txt
+  reformat: single
+
 - name: kops
   description: Kops kernels
   type: debian
