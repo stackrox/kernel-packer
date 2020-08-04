@@ -94,9 +94,9 @@ repackage_coreos() {
     lbzip2 -dck "$input_package" > "$inflated_bundle"
 
     # Mount the extracted disk image on a loopback device.
-    loop_device="$(kpartx -asvr "$inflated_bundle" | cut -d\  -f 3)"
+    loop_device="$(kpartx -asv "$inflated_bundle" | cut -d\  -f 3)"
     local tmp_dir="$(mktemp -d)"
-    mount -r "/dev/mapper/${loop_device}" "$tmp_dir"
+    mount "/dev/mapper/${loop_device}" "$tmp_dir"
 
     (
         cd "$tmp_dir"
@@ -115,6 +115,25 @@ repackage_coreos() {
 
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'coreos' "$kernel_version" './build')"
+
+        # Create new makefile if existing Makefile has include target with an absolute prefix
+        local kernel_dir="${tmp_dir}/lib/modules/${kernel_version}"
+        local makefile="${kernel_dir}/build/Makefile"
+        local make_makefile="${kernel_dir}/source/scripts/mkmakefile"
+        if grep -q "^include /" "${makefile}" ; then
+            if [[ -f "${make_makefile}" ]]; then
+                if grep -q "\$2" "${make_makefile}" ; then
+                    log "${make_makefile} may expect additional arguments"
+                    return 1
+                fi
+                pushd "${kernel_dir}/build"
+                ${make_makefile} "../source"
+                popd
+            else
+                log "${make_makefile} does not exist"
+                return 1
+            fi
+        fi
 
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
