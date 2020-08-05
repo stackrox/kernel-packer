@@ -116,7 +116,7 @@ repos = {
             # archive, so it's OK just to crawl the archive.
             # However, archives do eventually drop packages; track those in
             # centos-uncrawled.txt.
-            "root" : "http://ftp.utexas.edu/elrepo/archive/kernel/",
+            "root" : "http://linux-mirrors.fnal.gov/linux/elrepo/archive/kernel/",
             "discovery_pattern" : "//body//table/tr/td/a[regex:test(@href, '^el7.*$')]/@href",
             "subdirs" : [
                 "x86_64/RPMS/"
@@ -191,14 +191,14 @@ repos = {
             "exclude_patterns": debian_excludes,
         },
         {
-            "root": "http://ftp.debian.org/debian/pool/main/l/",
+            "root": "http://debian.csail.mit.edu/debian/pool/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-headers-[4-9].[0-9.]+-[^-]+-(?:amd64|common_).*(?:amd64|all).deb$')]/@href",
             "exclude_patterns": debian_excludes + debian_backport_excludes,
         },
         {
-            "root": "http://ftp.debian.org/debian/pool/main/l/",
+            "root": "http://debian.csail.mit.edu/debian/pool/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-kbuild-[4-9]\..*_amd64\.deb$')]/@href",

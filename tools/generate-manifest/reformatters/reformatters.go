@@ -2,6 +2,7 @@ package reformatters
 
 import (
 	"fmt"
+	"net/url"
 	"path"
 	"regexp"
 	"sort"
@@ -81,7 +82,6 @@ var (
 	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_([^_]+)(?:_.*)?\.deb$`)
 	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-[^_]+_([^_]+)(?:_.*)?\.deb$`)
 	versionSepRegex          = regexp.MustCompile(`[-.]`)
-	packagePoolRegex         = regexp.MustCompile(`^https?://([^.]*).debian.org/.*/.*\.deb$`)
 	debianSecurityURL        = "security.debian.org"
 )
 
@@ -90,13 +90,16 @@ type packageInfo struct {
 	name, url                     string
 }
 
-func equalPackagePool(urlA, urlB string) bool {
-	urlAMatches := packagePoolRegex.FindStringSubmatch(urlA)
-	urlBMatches := packagePoolRegex.FindStringSubmatch(urlB)
-	if len(urlAMatches) != 2 || len(urlBMatches) != 2 {
-		return false
+func equalPackagePool(A, B string) bool {
+	urlA, err := url.Parse(A)
+	if err != nil {
+		panic(err)
 	}
-	return urlAMatches[1] == urlBMatches[1]
+	urlB, err := url.Parse(B)
+	if err != nil {
+		panic(err)
+	}
+	return urlA.Host == urlB.Host
 }
 
 func reformatDebian(packages []string) ([][]string, error) {
