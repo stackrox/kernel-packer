@@ -54,7 +54,7 @@ jobs:
 
   repackage:
     machine: true
-    parallelism: 5
+    parallelism: 16
     environment:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
