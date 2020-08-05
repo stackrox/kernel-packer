@@ -90,12 +90,12 @@ type packageInfo struct {
 	name, url                     string
 }
 
-func equalPackagePool(A, B string) bool {
-	urlA, err := url.Parse(A)
+func equalPackagePool(a, b string) bool {
+	urlA, err := url.Parse(a)
 	if err != nil {
 		panic(err)
 	}
-	urlB, err := url.Parse(B)
+	urlB, err := url.Parse(b)
 	if err != nil {
 		panic(err)
 	}
