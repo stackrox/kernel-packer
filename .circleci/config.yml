@@ -54,7 +54,7 @@ jobs:
 
   repackage:
     machine: true
-    parallelism: 5
+    parallelism: 16
     environment:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
@@ -62,7 +62,7 @@ jobs:
     - gcloud-init
     - checkout
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v12
+        key: stackrox-kernel-packer-cache-v13
     - run:
         name: Sanity check cache
         command: |
@@ -125,7 +125,7 @@ jobs:
         name: Sanity check cache
         command: cat .build-data/cache/cache.yml
     - save_cache:
-        key: stackrox-kernel-packer-cache-v12-{{ epoch }}
+        key: stackrox-kernel-packer-cache-v13-{{ epoch }}
         paths:
         - .build-data/cache/cache.yml
 
