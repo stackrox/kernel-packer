@@ -151,6 +151,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1041_4.4.0-1041.50_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1041-aws_4.4.0-1041.50_amd64.deb
+0acb383428704453df3a5b32398a706975ac07d4eae5708f489e645a5f9dcc8d:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.222-1.el7.elrepo.x86_64.rpm
 0dcbb9cb525c955d7e223d833d202a3d79c8911512f8756d986f4f67d36a183c:
   type: cos
   packages:
@@ -572,6 +576,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.11.0-1016_4.11.0-1016.16_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.11.0-1016-azure_4.11.0-1016.16_amd64.deb
+2ca2c799b1b7c33529ca08caafa70acd0c0a53a8863173393031113bdcc9b5a7:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.226-1.el7.elrepo.x86_64.rpm
 2ca02caf6860475bdeeca56b247fea3d3fed092f0f2ea73cfbee49231f6b6abf:
   type: redhat
   packages:
@@ -620,6 +628,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.43.1.el7.x86_64.rpm
+2bfcf8fa3a18c7b60deb52543beae4227fe1d7dfdb717726e7e222c77a4b5983:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.221-1.el7.elrepo.x86_64.rpm
 02f5c915a4b60cfa775c423a46fd97f9a044ee8550f77dac7a8ed83bccf67937:
   type: redhat
   packages:
@@ -1289,6 +1301,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-504.12.2.el6.x86_64.rpm
+6b305ae67621e972a17590c95f344c95d6476e7fcae5a759ba8709fd60c0a810:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.9.0-13-amd64_4.9.228-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.9.0-13-common_4.9.228-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.9_4.9.228-1_amd64.deb
 6b614b74efc3ddc4839ddcc6bfd345690a1931ca9f4691ed81faf60afac26d2e:
   type: ubuntu
   packages:
@@ -1539,6 +1557,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1011_5.3.0-1011.12-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1011-gke_5.3.0-1011.12-18.04.1_amd64.deb
+7cdf85cd4a9e2e919ec34273415ccdec03fb8f164604375ed9e1b987b7ac15df:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.7.0-2-amd64_5.7.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.7.0-2-common_5.7.10-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.7_5.7.10-1_amd64.deb
 7ae5ab3ecdd20ebd105120cf1eeba0da5e9aeb3bd1956d9306faa5989f27fa64:
   type: redhat
   packages:
@@ -2703,12 +2727,6 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.303.0.el7uek.x86_64.rpm
-68bc2c1fc71d403b81ca2ba9ee152445fccb19f3278fff3edd4efba57ca8d0c4:
-  type: debian
-  packages:
-  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-4.9.0-13-amd64_4.9.228-1_amd64.deb
-  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-4.9.0-13-common_4.9.228-1_all.deb
-  - http---ftp.debian.org-debian-pool-main-l-linux-linux-kbuild-4.9_4.9.228-1_amd64.deb
 69e3e65c3585eb7d3dc44bd3c3909dbc95aeec81b3a9842be5a4aaedbf48f8ed:
   type: ubuntu
   packages:
@@ -2885,6 +2903,10 @@
   type: minikube
   packages:
   - https---github.com-kubernetes-minikube-archive-v1.12.1.tar.gz
+82d15c46bcf4663cc500726a0a43debf9206e3ae0cf0e4d3c64b8fc148d6752a:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.229-1.el7.elrepo.x86_64.rpm
 82e18d0b135276dc5a1eb20a692fa943ba62cbea959c2b8016edea146711a795:
   type: coreos
   packages:
@@ -2934,6 +2956,14 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1062.12.1.el7.x86_64.rpm
+86c09c74a9dd18ae2154b6c6b7bf4174bc80a00c57ede80c046aaae7ca4f7842:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.224-1.el7.elrepo.x86_64.rpm
+86c72b23c1c10bc6729d9a5c8ac1ef630ccfb70d207f017f916d6fc5075248c0:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.219-1.el7.elrepo.x86_64.rpm
 86c430fa0749af7c1bfcfa1a9bb4fa7ed340ed93c9c31cbb028373e8248bdd69:
   type: redhat
   packages:
@@ -3365,6 +3395,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.177-1.el7.elrepo.x86_64.rpm
+00381b6e1b3f2050d3cb5827d65b4341b4bda3084eb1c204a7b94516f073a4cb:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.231-1.el7.elrepo.x86_64.rpm
 385b4e37262466a33dba378c347e34df925b2fda0284e25395a040ec0a91e1fa:
   type: ubuntu
   packages:
@@ -3390,6 +3424,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-504.23.4.el6.x86_64.rpm
+423ad1e8ab75cd5e1e807eee94fa92dc1e71c386e9a30b330790888633729228:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.220-1.el7.elrepo.x86_64.rpm
 424ade3bb176c7789824dc620465d2a71a32aefdc7a9db596d4aec722bc54f5e:
   type: redhat
   packages:
@@ -3497,6 +3535,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-26607f2215328de1462ac99ce96a2a21204bef510b35a734d0c1c83fdbe117a0-kernel-devel-4.14.173-137.229.amzn2.x86_64.rpm
+533bd46697eef654ae194a49e010ccec93698045ab700cbf76374a836e969dab:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.223-1.el7.elrepo.x86_64.rpm
 537b33a67416d8dcfe993b1cd874b16f69ec41343860adde1a07c043c478d5f2:
   type: redhat
   packages:
@@ -5354,6 +5396,10 @@ a1732aae6b41f18614785c24993780579386362175393976472e4e9fd4f58a73:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1022_4.15.0-1022.23_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1022-azure_4.15.0-1022.23_amd64.deb
+a2392e5f4a6a6bbe51d2605cc74a40ee95a7bcbd4eba9e0265046f41b6207b67:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.225-1.el7.elrepo.x86_64.rpm
 a3196fcb372a263bdf9e551ea13bb50e0599c4619620969b334099e69df8e04f:
   type: ubuntu
   packages:
@@ -5480,6 +5526,12 @@ ab633e3b4f7f752999eebe74b95268ffc14b2495e7a6d5d613d1fd87acbf8472:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.3.0-1009_5.3.0-1009.10_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.3.0-1009-gcp_5.3.0-1009.10_amd64.deb
+ab1457e3ca73c942ac134fd99327d4f7b0f13c476d7d8121ba1ed04faeb0214e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-amd64_4.19.132-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-common_4.19.132-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.132-1_amd64.deb
 ab812334e702828ca8798badd4be54c45dc99125494f9f059f022befdb8e7fcf:
   type: ubuntu
   packages:
@@ -5526,6 +5578,10 @@ ac38fa30c764455158d27ec07710583504bc8a23809663963b8cf30282841de5:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12371.175.0-kernel-src.tar.gz
+ac66edc735eb0dcd2c32527fdd7b15abd53686aff290da53f5171f37422ecabb:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.228-2.el7.elrepo.x86_64.rpm
 ac2181f14650530c65f54abb8677eea28e969b0d1f6dd9b66f35b75abae64d5e:
   type: ubuntu
   packages:
@@ -5630,6 +5686,10 @@ b1abac549dd7fc20288b847b365295287d027b10a9e1c5f01647321f3266ac9a:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1844.0.6.el7uek.x86_64.rpm
+b1bd82e0e7dc3a425c2fbe2544a9bf656606f64f1dc1329e6dc23ad4b8de0585:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.230-1.el7.elrepo.x86_64.rpm
 b1ff7709dbde2a51971b2ef5bca3e882b76b5ce8c9d89ff9e15aae38c5b9ff77:
   type: ubuntu
   packages:
@@ -6346,6 +6406,10 @@ c23006d65f2dd73ea79f30e32f224652a8c3e756a693fd910b4420fe28bf1a87:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11151.47.0-kernel-src.tar.gz
+c33607a03cd2ba838af6cf3b6ddfa46a053ea1d9670862a6d29d6d8d883ddd90:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.227-1.el7.elrepo.x86_64.rpm
 c56472f09f8f76e97ebb5fce4e4e41dc27c98538feae059628c0fffed8a4b918:
   type: ubuntu
   packages:
@@ -7074,22 +7138,10 @@ e9afd6c211cff015bc41c13a3bcb922eeb5d6d8f2785864cea77784256b4ef1d:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11647.449.0-kernel-src.tar.gz
-e14e7fbccc910bbc8abb902880495630555906d798af0d1c23500c11560e80f7:
-  type: debian
-  packages:
-  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-5.7.0-2-amd64_5.7.10-1_amd64.deb
-  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-5.7.0-2-common_5.7.10-1_all.deb
-  - http---ftp.debian.org-debian-pool-main-l-linux-linux-kbuild-5.7_5.7.10-1_amd64.deb
 e17f044a4d3a3a0d1c14e149409288f0f00e89966426da235686ae5564c17ce3:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.77-30.el7.x86_64.rpm
-e043cc660c6af90476a1b644afe24f7a08408ec6d0268693e66f20343dc03407:
-  type: debian
-  packages:
-  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-4.19.0-10-amd64_4.19.132-1_amd64.deb
-  - http---ftp.debian.org-debian-pool-main-l-linux-linux-headers-4.19.0-10-common_4.19.132-1_all.deb
-  - http---ftp.debian.org-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.132-1_amd64.deb
 e045dee9265e5bd5821c2667b85d19334d3f3b81f8947b98b88a59b01efe513b:
   type: redhat
   packages:
