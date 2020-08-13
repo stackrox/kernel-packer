@@ -3245,6 +3245,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.305.0.el7uek.x86_64.rpm
+173b710b5f0888ddd68b3fdba9bd6c38b89f480aa32db53fde2e60ef23abbdbc:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1022_5.4.0-1022.22_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1022-gcp_5.4.0-1022.22_amd64.deb
 177cff0bd4cfb1ee1455f9ab91146cf5492962321e7567aca036da7017b29aa6:
   type: ubuntu
   packages:
@@ -5239,6 +5244,11 @@ a4b933c50a8e6942cd61ef9f20b81ee0389793dc67305c407d600beb732c6258:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-572.el6.x86_64.rpm
+a4ad16353c6c11f0bacd233730df616292789b0651828eac34c9545252388da5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1022_5.4.0-1022.22_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1022-aws_5.4.0-1022.22_amd64.deb
 a05aeb911d4032524b29c35b2057f31b72fa7b177f66c6389e12a2a97049cb80:
   type: oracle
   packages:
