@@ -2402,6 +2402,11 @@
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.54-29.el7.x86_64.rpm
+42ec9faa66f6121a281b046a0646bf632beda472d966d04c872e8c6e787f875e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1067_4.15.0-1067.70_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1067-gke_4.15.0-1067.70_amd64.deb
 43b05e0ad0ae43ccdc1e98f9c3479d60baa676c6271d73831793f21735b69214:
   type: ubuntu
   packages:
@@ -3881,6 +3886,11 @@
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.34-29.el7.x86_64.rpm
+926d107ef76f2ab7d31fd119ca1d3a4067006fa678eb39696d139b8a6d61c646:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1080_4.15.0-1080.84_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1080-aws_4.15.0-1080.84_amd64.deb
 929e2694b642c0d7b8c5a3a5fb3660e854ed612e58fe61d80f2f918fc3bfe709:
   type: cos
   packages:
@@ -7790,6 +7800,11 @@ f954b172dcc53cda58f0ba8fe6c86c1e71574d7b559347e8b66cebbf229fbabf:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1007_4.13.0-1007.9_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1007-azure_4.13.0-1007.9_amd64.deb
+f3397a2e8c86d1de4a2159aea59ecf46202ee825dc382de8012088cb18bd327e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1081_4.15.0-1081.92_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1081-gcp_4.15.0-1081.92_amd64.deb
 f6460a913fad00f2981d5788abf03d74fc8c3dfdc992cee07a3295479386ff63:
   type: coreos
   packages:
