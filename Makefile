@@ -4,7 +4,7 @@ include Makefile-constants.mk
 # Crawl kernel package repositories and record discovered packages.
 .PHONY: crawl
 crawl:
-	-make --keep-going -C kernel-crawler crawl
+	make -C kernel-crawler crawl
 
 .PHONY: manifest
 manifest: package-inventory
