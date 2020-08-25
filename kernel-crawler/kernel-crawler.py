@@ -333,7 +333,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-aws.*amd64.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes + ["+"],
         },
 
         # linux-aws "all" headers, distributed from main (newer versions only)
@@ -342,7 +342,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?-headers-[4-9].*_all.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes + ["+"],
         }
     ],
     "Ubuntu-GCP": [
