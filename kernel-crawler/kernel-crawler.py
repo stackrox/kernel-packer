@@ -33,7 +33,7 @@ centos_excludes = [
 ubuntu_excludes = [
 ]
 ubuntu_backport_excludes = [
-    "~", # prevent duplicate backports from cluttering the list
+    "~", "+", # prevent duplicate backports from cluttering the list
 ]
 debian_excludes = [
     "3.2.0", "3.16.0" # legacy
