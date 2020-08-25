@@ -33,7 +33,7 @@ centos_excludes = [
 ubuntu_excludes = [
 ]
 ubuntu_backport_excludes = [
-    "~", # prevent duplicate backports from cluttering the list
+    "~", "+", # prevent duplicate backports from cluttering the list
 ]
 debian_excludes = [
     "3.2.0", "3.16.0" # legacy
@@ -276,7 +276,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?/')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-azure.*amd64\.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes + ["+"],
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
         },
 
         # linux-azure "all" headers, distributed from main
@@ -285,7 +285,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?/')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?-headers-[4-9].*_all\.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes + ["+"],
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
         },
 
         # Special case for Ubuntu Azure kernel 4.18, that only exists as a backport.
@@ -333,7 +333,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-aws.*amd64.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes + ["+"],
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
         },
 
         # linux-aws "all" headers, distributed from main (newer versions only)
@@ -342,7 +342,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?-headers-[4-9].*_all.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes + ["+"],
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
         }
     ],
     "Ubuntu-GCP": [
