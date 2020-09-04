@@ -1396,6 +1396,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-aacf53daeb34e5d547cccd61ab2c32bd8366f110fb3e3d460a95715d00b22f20-kernel-devel-4.14.114-103.97.amzn2.x86_64.rpm
+6bbcd7e924c8a990d4393ff9218c479d8b5ee9fa5c389cbd1e6a02d56a5941d7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1082_4.15.0-1082.93_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1082-gcp_4.15.0-1082.93_amd64.deb
 6cbddec960fee09c75a77357fb41a928992003202c56c340f20b8314ff43b777:
   type: redhat
   packages:
@@ -5433,6 +5438,11 @@ a45c9e2383f2af5035d8ce631c830e140978f1b9c78fba64f726830ad5b858b6:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10895.62.0-kernel-src.tar.gz
+a47ae9a9d73468fdd8f51c4ec688f3150cc690524a061dd172011acbee5bf302:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1114_4.4.0-1114.127_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1114-aws_4.4.0-1114.127_amd64.deb
 a50b28ab2572bfc10bd8a257d00ee8131d44705f0bfe2323706fe4ad7d2318c6:
   type: redhat
   packages:
@@ -7560,6 +7570,11 @@ eb942ac400831a0a67f0576836b3dfb152582705d5e6a353ead5cad739a9da44:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11147.0.0-kernel-src.tar.gz
+ebbfad14de1b682d2e6b40e4d6714abb099592907f80d7bb39a09bffa05c857a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1094_4.15.0-1094.104_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1094-azure_4.15.0-1094.104_amd64.deb
 ec89b988e3a6aecaa43160c34894e3c78224dd720f9be742afc21f5c63a44d61:
   type: ubuntu
   packages:
