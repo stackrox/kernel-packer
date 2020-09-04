@@ -1005,6 +1005,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1028.0-kernel-src.tar.gz
+4ccebc6994fe17c1cc2ce0310854b6e0aa232114f6e841902325ecb7aa3e560f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1024_5.4.0-1024.24_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1024-azure_5.4.0-1024.24_amd64.deb
 4dd9e2329c3e2de7a8cefc47c72b77fc5f32f7386e5d5a421a54fad910bdf6a5:
   type: redhat
   packages:
@@ -7528,6 +7533,11 @@ eabe15ed32f7465428fcb3a312fdf8e971d44531076ecfcb5c3e770da5beab30:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-46-generic_4.15.0-46.49_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-46_4.15.0-46.49_all.deb
+eac5be4288a2f814d4041fab69696e5421da8410aa62025a6c22298e569e3e81:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1023_5.4.0-1023.23_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1023-aws_5.4.0-1023.23_amd64.deb
 eb5ad171f9c16603c68f57ce60ff5de734fcc7a285f76edab682003e238a00dd:
   type: coreos
   packages:
