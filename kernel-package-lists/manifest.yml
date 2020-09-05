@@ -1164,6 +1164,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-f7e0e4ea03e8a20b2025e561bcfcee1348de5543ae0b46ebc2d44364a4451169-kernel-devel-4.14.104-95.84.amzn2.x86_64.rpm
+5f162efc185f44f89d8b6c940c5ddaf6b39c5ebd84cf0f03e4c1647712c0ee5a:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-12871.1196.0-kernel-src.tar.gz
 5a374d9b8c7cc28e022b8448e7a2b3775974bb778b30ccbae4b40afa06b2992a:
   type: cos
   packages:
@@ -5056,6 +5060,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1010_5.3.0-1010.11_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1010-aws_5.3.0-1010.11_amd64.deb
+1001470df18ac0e34788fcd787a8cb73382246d517705ab4664aff8f21de9b4c:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-11647.656.0-kernel-src.tar.gz
 1159973b11652177637f1283cacfd6aac23172d758d61116d74d1af4e6afc903:
   type: redhat
   packages:
@@ -7263,6 +7271,11 @@ de7f080dcb3f189aab0d630067bbe2f084c037432ad8c49cca55c1d927ad7beb:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.158-1.el7.elrepo.x86_64.rpm
+de45e3a6300ad36acd40bb681a843a43daa2d9c8d717a42a1e8d889351893223:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1024_5.4.0-1024.24_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1024-gcp_5.4.0-1024.24_amd64.deb
 de273ce9c884cfb3601b314134bd61f4fae70938c7751c4a9d2a6cb0376383ca:
   type: cos
   packages:
@@ -7596,6 +7609,10 @@ eac5be4288a2f814d4041fab69696e5421da8410aa62025a6c22298e569e3e81:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1023_5.4.0-1023.23_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1023-aws_5.4.0-1023.23_amd64.deb
+eaffb6c8d22d1f8e70d5c404a85952dcdbcdd52c5b2cb0b4a3efac81691a6bae:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-12371.1079.0-kernel-src.tar.gz
 eb5ad171f9c16603c68f57ce60ff5de734fcc7a285f76edab682003e238a00dd:
   type: coreos
   packages:
