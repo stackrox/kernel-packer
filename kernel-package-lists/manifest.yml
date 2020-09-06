@@ -1852,6 +1852,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-src.tar.gz
+9d01c68ce0edb17c525ce803a5efedc7e55628db73bd8453ddff4d9bc0f847c9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-aws-5.3-headers-5.3.0-1035_5.3.0-1035.37_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-headers-5.3.0-1035-aws_5.3.0-1035.37_amd64.deb
 9a3e98e8113c36a42ba2e4b37aa5df1f0f7fc24418bfba17d4dd688edbd3a0f9:
   type: cos
   packages:
@@ -4906,6 +4911,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-os-x86_64-Packages-kernel-devel-3.10.0-957.el7.x86_64.rpm
+285441b10aeea6a57b9f72e1c0416a7ddc50311bef2f89b9a686788fe4f29804:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1036_5.3.0-1036.38_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1036-gke_5.3.0-1036.38_amd64.deb
 290082e3140ab283d1300efd593f4f7abccbf205f3bfa225a4977a7fd97fa5fe:
   type: oracle
   packages:
