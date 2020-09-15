@@ -278,7 +278,15 @@ func reformatPairs(packages []string) ([][]string, error) {
 		case found && r.revision > revision:
 			break
 		case found && r.revision == revision:
-			r.packages = append(r.packages, pkg)
+			pkgExists := false
+			for _, existing := range r.packages {
+				if path.Base(existing) == path.Base(pkg) {
+					pkgExists = true
+				}
+			}
+			if !pkgExists {
+				r.packages = append(r.packages, pkg)
+			}
 		case found && r.revision < revision:
 			r = rev{[]string{pkg}, revision}
 		case !found:
