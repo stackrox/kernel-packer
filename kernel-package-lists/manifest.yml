@@ -1535,6 +1535,12 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-0c2fc20a36d00010828636f355baae1fee84c15fe0a773a78d94ce1c8ba99d70-kernel-devel-4.14.47-63.37.amzn2.x86_64.rpm
+7b777b59bd4dea5c1fafa89e571e721d4dc7664a636a4385eb4712507a543e41:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-11-amd64_4.19.146-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-11-common_4.19.146-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.146-1_amd64.deb
 7f841cea8b671238815e8585b706c35e9fe4c2a6caa841a8328c72c1431b7435:
   type: redhat
   packages:
