@@ -134,37 +134,39 @@ repos = {
         }
     ],
 
-    "CoreOS" : [
-        # {
-        #     "root" : "http://alpha.release.core-os.net/",
-        #     "discovery_pattern": "/html/body//a[regex:test(@href, 'amd64-usr')]/@href",
-        #     "subdirs" : [
-        #         ""
-        #     ],
-        #     "page_pattern" : "/html/body//a[regex:test(@href, '^[5-9][0-9][0-9]|current|[1][0-9]{3}')]/@href"
-        # Note: ^[5-9][0-9][0-9] is excluded because versions under 1000 are so old.
-        # },
+    ## As of September 22, 2020, CoreOS Container Linux release artifacts are no longer available (https://coreos.com/os/eol/)
+    #"CoreOS" : [
+    #    # {
+    #    #     "root" : "http://alpha.release.core-os.net/",
+    #    #     "discovery_pattern": "/html/body//a[regex:test(@href, 'amd64-usr')]/@href",
+    #    #     "subdirs" : [
+    #    #         ""
+    #    #     ],
+    #    #     "page_pattern" : "/html/body//a[regex:test(@href, '^[5-9][0-9][0-9]|current|[1][0-9]{3}')]/@href"
+    #    # Note: ^[5-9][0-9][0-9] is excluded because versions under 1000 are so old.
+    #    # },
 
-        # {
-        #     "root" : "http://beta.release.core-os.net/",
-        #     "discovery_pattern": "/html/body//a[regex:test(@href, 'amd64-usr')]/@href",
-        #     "subdirs" : [
-        #         ""
-        #     ],
-        #     "page_pattern" : "/html/body//a[regex:test(@href, '^[1][0-9]{3}')]/@href"
-        #     # Note: ^[5-9][0-9][0-9] is excluded because versions under 1000 are so old.
-        # },
+    #    # {
+    #    #     "root" : "http://beta.release.core-os.net/",
+    #    #     "discovery_pattern": "/html/body//a[regex:test(@href, 'amd64-usr')]/@href",
+    #    #     "subdirs" : [
+    #    #         ""
+    #    #     ],
+    #    #     "page_pattern" : "/html/body//a[regex:test(@href, '^[1][0-9]{3}')]/@href"
+    #    #     # Note: ^[5-9][0-9][0-9] is excluded because versions under 1000 are so old.
+    #    # },
 
-        {
-            "root" : "http://stable.release.core-os.net/amd64-usr/",
-            "discovery_pattern": "/html/body//a[regex:test(@href, '^2|1185|1[2-9][0-9]{2}')]/@href",
-            # Note: ^[4-9][0-9][0-9] is excluded because versions under 1000 are so old.
-            "subdirs" : [
-                ""
-            ],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^coreos_developer_container.bin.bz2$')]/@href"
-        }
-    ],
+    #    {
+    #        "root" : "http://stable.release.core-os.net/amd64-usr/",
+    #        "discovery_pattern": "/html/body//a[regex:test(@href, '^2|1185|1[2-9][0-9]{2}')]/@href",
+    #        # Note: ^[4-9][0-9][0-9] is excluded because versions under 1000 are so old.
+    #        "subdirs" : [
+    #            ""
+    #        ],
+    #        "page_pattern" : "/html/body//a[regex:test(@href, '^coreos_developer_container.bin.bz2$')]/@href"
+    #    }
+    #],
+
     "Flatcar": [
         {
             "root": "https://stable.release.flatcar-linux.net/amd64-usr/",
