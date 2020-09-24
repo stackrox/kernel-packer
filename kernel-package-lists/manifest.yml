@@ -3296,6 +3296,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12871.96.0-kernel-src.tar.gz
+99be51337eaf0a726c0fa47120dc2f98078116c5efe97cc8f23d39766d6237db:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1004_5.8.0-1004.4_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1004-gcp_5.8.0-1004.4_amd64.deb
 99df15ce986b6d36ad69fa37f59d01025cb72fdc2528355d2c7a5cc38d44ae78:
   type: redhat
   packages:
@@ -6093,6 +6098,11 @@ b6bc4fe45000cfcdc87e48be0c289fa6e6557a829cf98da12b2ebf343f77bea4:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-122-generic_4.4.0-122.146_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-122_4.4.0-122.146_all.deb
+b7c2b7814e17306a906a83555844ca779d436451e53fd10e1e8e397c5ac1d0ad:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.8.0-1006_5.8.0-1006.6_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.8.0-1006-azure_5.8.0-1006.6_amd64.deb
 b7ce8efab71e90cffaded2345e27b21517f520a80e1a1deff7aa8fd79a8e7d3f:
   type: redhat
   packages:
