@@ -2868,6 +2868,10 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.303.0.el7uek.x86_64.rpm
+68fb2816d696d81c2d92a533da7001d73315619b428c824b7030367597133d14:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.3-os-Packages-k-kernel-devel-4.18.0-193.23.1.el8_2.x86_64.rpm
 69e3e65c3585eb7d3dc44bd3c3909dbc95aeec81b3a9842be5a4aaedbf48f8ed:
   type: ubuntu
   packages:
@@ -6489,6 +6493,10 @@ be4fe49b62bd2efc375d0f9265fe0e6cc76a156a01129c5a6bbd8361eda9ad1d:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.3.0-1010_5.3.0-1010.11_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.3.0-1010-azure_5.3.0-1010.11_amd64.deb
+be8cdfa229691e405a41686328cf04360351c13061af7fbe3e46668351367f24:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.3-os-Packages-k-kernel-devel-4.18.0-193.13.2.el8_2.x86_64.rpm
 be9deb3acc0301acf11f32e3963f02bd8079e9bf768f098ee3e2d8a0bd8cd9f5:
   type: ubuntu
   packages:
