@@ -20,6 +20,10 @@ import traceback
 import re
 import os.path
 
+XPATH_NAMESPACES = {
+  "regex": "http://exslt.org/regular-expressions",
+}
+
 #
 # This is the main configuration tree for easily analyze Linux repositories
 # hunting packages. When adding repos or so be sure to respect the same data
@@ -173,6 +177,14 @@ repos = {
             "discovery_pattern": "/html/body//a[regex:test(@href, '^(\./)?[2-9]')]/@href",
             # Note: versions before 2000 are excluded because they are more than a year old at the time
             # we first see flatcar being used.
+            "subdirs": [""],
+            "page_pattern": "/html/body//a[regex:test(@href, '^(\./)?flatcar_developer_container.bin.bz2$')]/@href",
+        },
+    ],
+    "Flatcar-Beta": [
+        {
+            "root": "https://beta.release.flatcar-linux.net/amd64-usr/",
+            "discovery_pattern": r"/html/body//a[regex:test(@href, '^(\./)?(2513\.2\.0|2[6-9]|[3-9])')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^(\./)?flatcar_developer_container.bin.bz2$')]/@href",
         },
@@ -484,8 +496,7 @@ def crawl(distro):
             root = urllib2.urlopen(repo["root"], timeout=URL_TIMEOUT).read()
             versions = [""]
             if len(repo["discovery_pattern"]) > 0:
-                versions = html.fromstring(root).xpath(repo["discovery_pattern"],
-                                                    namespaces={"regex": "http://exslt.org/regular-expressions"})
+                versions = html.fromstring(root).xpath(repo["discovery_pattern"], namespaces=XPATH_NAMESPACES)
             for version in sorted(set(versions)):
                 sys.stderr.write("Considering version "+version+"\n")
                 for subdir in sorted(set(repo["subdirs"])):
@@ -494,8 +505,7 @@ def crawl(distro):
                         source = repo["root"] + version + subdir
                         download_root = source if "download_root" not in repo else repo["download_root"]
                         page = urllib2.urlopen(source, timeout=URL_TIMEOUT).read()
-                        rpms = html.fromstring(page).xpath(repo["page_pattern"],
-                                                           namespaces={"regex": "http://exslt.org/regular-expressions"})
+                        rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
                         if len(rpms) == 0:
                             sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
                         for rpm in sorted(set(rpms)):

@@ -61,6 +61,10 @@ crawl-oracle-uek: build-crawl-container
 crawl-flatcar: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Flatcar > $(CRAWLED_PACKAGE_DIR)/flatcar.txt
 
+.PHONY: crawl-flatcar-beta
+crawl-flatcar-beta: build-crawl-container
+	docker run --rm -i kernel-crawler crawl Flatcar-Beta > $(CRAWLED_PACKAGE_DIR)/flatcar-beta.txt
+
 .PHONY: crawl-rhel
 crawl-rhel: build-crawl-container
 	# Trade a username & password for a certificate keypair that allows up to
