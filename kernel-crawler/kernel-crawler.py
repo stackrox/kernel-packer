@@ -185,8 +185,6 @@ repos = {
         {
             "root": "https://beta.release.flatcar-linux.net/amd64-usr/",
             "discovery_pattern": r"/html/body//a[regex:test(@href, '^(\./)?(2513\.2\.0|2[6-9]|[3-9])')]/@href",
-            # Note: versions before 2000 are excluded because they are more than a year old at the time
-            # we first see flatcar being used.
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^(\./)?flatcar_developer_container.bin.bz2$')]/@href",
         },
