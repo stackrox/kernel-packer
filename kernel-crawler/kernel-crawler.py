@@ -191,7 +191,6 @@ repos = {
     ],
     "Debian": [
         {
-            # linux-headers-4.19.0-10-cloud-amd64_4.19.132-1_amd64.deb
             "root": "http://security.debian.org/pool/updates/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
