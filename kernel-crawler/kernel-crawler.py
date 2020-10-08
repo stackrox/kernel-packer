@@ -191,10 +191,11 @@ repos = {
     ],
     "Debian": [
         {
+            # linux-headers-4.19.0-10-cloud-amd64_4.19.132-1_amd64.deb
             "root": "http://security.debian.org/pool/updates/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
-            "page_pattern": "/html/body//a[regex:test(@href, '^linux-headers-[4-9].[0-9.]+-[^-]+-(?:amd64|common_).*(?:amd64|all).deb$')]/@href",
+            "page_pattern": "/html/body//a[regex:test(@href, '^linux-headers-[4-9].[0-9.]+-[^-]+-(?:cloud-)*(?:amd64|common_).*(?:amd64|all).deb$')]/@href",
             "exclude_patterns": debian_excludes,
         },
         {
@@ -208,7 +209,7 @@ repos = {
             "root": "http://debian.csail.mit.edu/debian/pool/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
-            "page_pattern": "/html/body//a[regex:test(@href, '^linux-headers-[4-9].[0-9.]+-[^-]+-(?:amd64|common_).*(?:amd64|all).deb$')]/@href",
+            "page_pattern": "/html/body//a[regex:test(@href, '^linux-headers-[4-9].[0-9.]+-[^-]+-(?:cloud-)*(?:amd64|common_).*(?:amd64|all).deb$')]/@href",
             "exclude_patterns": debian_excludes + debian_backport_excludes,
         },
         {
