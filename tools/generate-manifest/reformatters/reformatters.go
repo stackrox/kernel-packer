@@ -80,14 +80,14 @@ func reformatOneToPairs(packages []string) ([][]string, error) {
 
 var (
 	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_([^_]+)(?:_.*)?\.deb$`)
-	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-[^_]+_([^_]+)(?:_.*)?\.deb$`)
+	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-([^_]+)_([^_]+)(?:_.*)?\.deb$`)
 	versionSepRegex          = regexp.MustCompile(`[-.]`)
 	debianSecurityURL        = "security.debian.org"
 )
 
 type packageInfo struct {
-	kernelVersion, packageVersion string
-	name, url                     string
+	kernelVersion, arch, packageVersion string
+	name, url                           string
 }
 
 func equalPackagePool(a, b string) bool {
@@ -143,14 +143,15 @@ func reformatDebian(packages []string) ([][]string, error) {
 	for _, pkg := range packages {
 		name := path.Base(pkg)
 		matches := debianHeaderVersionRegex.FindStringSubmatch(name)
-		if len(matches) < 3 {
+		if len(matches) < 4 {
 			continue
 		}
 		pkgInfo := packageInfo{
 			url:            pkg,
 			name:           name,
 			kernelVersion:  matches[1],
-			packageVersion: matches[2],
+			arch:           matches[2],
+			packageVersion: matches[3],
 		}
 		// duplicates package files may exist across package pools, prefer security.debian.org over others
 		if existingPkg := headersByPackageName[pkgInfo.name]; !strings.Contains(existingPkg.url, debianSecurityURL) {
@@ -185,7 +186,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 		if len(headerPkgs) == 1 {
 			continue
 		}
-		if len(headerPkgs) > 2 {
+		if len(headerPkgs) > 3 {
 			return nil, errors.Errorf("invalid number of header packages for kernel version %s: %+v", version, headerPkgs)
 		}
 
@@ -227,13 +228,25 @@ func reformatDebian(packages []string) ([][]string, error) {
 			return versionLess(kbuildCandidates[j].packageVersion, kbuildCandidates[i].packageVersion)
 		})
 
-		allPackages := make([]string, 0, 3)
-		allPackages = append(allPackages, kbuildCandidates[0].url)
+		commonPackages := make([]string, 0, 2)
+		archPackages := make([]string, 0, 2)
 		for _, headerPkg := range headerPkgs {
-			allPackages = append(allPackages, headerPkg.url)
+			if headerPkg.arch == "common" {
+				commonPackages = append(commonPackages, headerPkg.url)
+			} else {
+				archPackages = append(archPackages, headerPkg.url)
+			}
 		}
 
-		packageGroups = append(packageGroups, allPackages)
+		for _, archPkg := range archPackages {
+			allPackages := make([]string, 0, 3)
+			allPackages = append(allPackages, kbuildCandidates[0].url)
+			allPackages = append(allPackages, archPkg)
+			for _, commonPkg := range commonPackages {
+				allPackages = append(allPackages, commonPkg)
+			}
+			packageGroups = append(packageGroups, allPackages)
+		}
 	}
 
 	return packageGroups, nil
