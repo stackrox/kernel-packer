@@ -240,9 +240,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 			archHeaderPkgs = append(archHeaderPkgs, headerPkg.url)
 		}
 		for _, archPkg := range archHeaderPkgs {
-			allPackages := make([]string, 0, 3)
-			allPackages = append(allPackages, kbuildCandidates[0].url)
-			allPackages = append(allPackages, archPkg)
+			allPackages := []string{kbuildCandidates[0].url, archPkg}
 			if commonHeaderPkg != "" {
 				allPackages = append(allPackages, commonHeaderPkg)
 			}
