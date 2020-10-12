@@ -7185,10 +7185,6 @@ d7c398c165498fc458ef291a132150e08432061ddd832b4458e05394207bd99a:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.el7.x86_64.rpm
-d8abd8a0289af486a00f39e758aec6c87317cf691b22f693f4c52509198d8739:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.11.0.tar.gz
 d9f07bbf999065804d6beaf4cacc33eed9c49f59e222e12100ae80e35c450e4c:
   type: ubuntu
   packages:
@@ -7606,6 +7602,10 @@ e3c498fc7b831a6fe36204e5e09151da092cc82234a0323a052f765f8a81db1e:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.219-1.el7.elrepo.x86_64.rpm
+e4f82e57f7b9c1e190744418dad3fe7911643a5646c59140a9c57e76f5eed696:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.14.0.tar.gz
 e05d17c91b73b142bfc3526819af5899fc0bdcaaab86b0121a51b5c53078ab0d:
   type: ubuntu
   packages:
