@@ -94,6 +94,12 @@
   file: ubuntu-hwe.txt
   reformat: pairs
 
+- name: ubuntu-uncrawled
+  description: One-off Ubuntu Kernels, not crawled
+  type: ubuntu
+  file: ubuntu-uncrawled.txt
+  reformat: pairs
+
 - name: minikube
   description: Minikube VM Kernels
   type: minikube
