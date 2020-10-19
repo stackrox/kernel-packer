@@ -320,6 +320,26 @@ repos = {
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-headers-4\.18[-.0-9]+_4\.18[-.0-9]+~.*_all.deb$')]/@href",
             "exclude_patterns": ubuntu_excludes,
         },
+
+        # Special case for Ubuntu Azure kernel 4.15, that only exists as a backport.
+        # Matches packages starting at linux-headers-4.15.0-1098-azure_4.15.0-1098.109~16.04.1_amd64.deb and up
+        # linux-azure 4.15 backports AMD64 headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-azure/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-4\.15[.0-9]+-([2-9][0-9]{3}|1[1-9][0-9]{2}|109[89])-azure_4\.15[.0-9]+-([2-9][0-9]{3}|1[1-9][0-9]{2}|109[89])\.[0-9]+~.*amd64.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes,
+        },
+
+        # linux-azure 4.15 backports "all" headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-azure/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-headers-4\.15[.0-9]+-([2-9][0-9]{3}|1[1-9][0-9]{2}|109[89])-_4\.15[.0-9]+-([2-9][0-9]{3}|1[1-9][0-9]{2}|109[89])\.[0-9]+~.*_all.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes,
+        },
     ],
 
     "Ubuntu-AWS": [
