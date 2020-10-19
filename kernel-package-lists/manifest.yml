@@ -1400,6 +1400,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-514.16.1.el7.x86_64.rpm
+6e96fc8606e9f4433ca3a1b075049cdecf0e39d595f240b82f9550c0380cbbab:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-12-amd64_4.19.152-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-12-common_4.19.152-1_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.152-1_amd64.deb
 6f186c701855a0a172e579cdde8cf4e2c8abe1ae0e9964d19c9ee86db5288fdb:
   type: ubuntu
   packages:
@@ -1526,6 +1532,12 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.5.1804-os-x86_64-Packages-kernel-devel-3.10.0-862.el7.x86_64.rpm
+7a6b0450bf0bbbfa6238a81fac6c11256b1c2638857be8a28e23552cc905b0f0:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-8-amd64_4.19.98-1-deb10u1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-8-common_4.19.98-1-deb10u1_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.152-1_amd64.deb
 7d8c5d6cbc0e66ffa8b405ed637b3aecaad509b9e3b313b6e41236b535ba2f82:
   type: oracle
   packages:
@@ -3013,12 +3025,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-123.1.2.el7.x86_64.rpm
-71ca53956bdfff389fe9a64c3739ec3d0a10d18a31e9f96812cd063500688326:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-8-amd64_4.19.98-1-deb10u1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-8-common_4.19.98-1-deb10u1_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.118-2-deb10u1_amd64.deb
 71ab05ae8340bd64455dfe9313b07e8cb06af6e5e5e14ba473156dbe86a17ccf:
   type: ubuntu
   packages:
@@ -6690,12 +6696,6 @@ bfdae88d4898876719e2dcd31abb9644308473f1d6d9f02122618ffa609e686b:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-696.16.1.el6.x86_64.rpm
-bfef74b230b94c875a794f5801d54441a023662b9df75b1296ee53f8198165b7:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-6-amd64_4.19.67-2-deb10u2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-6-common_4.19.67-2-deb10u2_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.118-2-deb10u1_amd64.deb
 bfffd178ca2c722c490c25b9e9a3fb43490021f208b8b72fbedb04b115542026:
   type: redhat
   packages:
@@ -7589,6 +7589,12 @@ de7f080dcb3f189aab0d630067bbe2f084c037432ad8c49cca55c1d927ad7beb:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.158-1.el7.elrepo.x86_64.rpm
+de23a910b3df6012ec525000c19a9e2ee892fbca473b403c65101aebbd3285ff:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-6-amd64_4.19.67-2-deb10u2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-6-common_4.19.67-2-deb10u2_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.152-1_amd64.deb
 de45e3a6300ad36acd40bb681a843a43daa2d9c8d717a42a1e8d889351893223:
   type: ubuntu
   packages:
