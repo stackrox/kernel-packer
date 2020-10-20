@@ -83,6 +83,14 @@ All meta files contain a single value and are meant to be read like so:
 uname="$(cat ./BUNDLE_UNAME)"
 ```
 
+## Development
+
+### Kernel Bundles
+Kernel packages and kernel bundles are cached in `${source_root}/.build-data/`.  To generate all bundles locally, execute 
+`make bundles`.  To test modifications to kernel bundle builder for a subset of kernel packages, create a manifest yaml file
+containing only the subset and execute `MANIFEST_FILE={path to manifest.yml} make bundles`
+
+
 [circleci-badge]:      https://circleci.com/gh/stackrox/kernel-packer.svg?&style=shield&circle-token=f65a92f3c16297b0433428aa9284803d1b649e72
 [circleci-link]:       https://circleci.com/gh/stackrox/kernel-packer/tree/master
 [gcs-bundles-badge]:   https://img.shields.io/badge/gcs-kernel%20bundles-blue.svg?style=flat&logo=google
