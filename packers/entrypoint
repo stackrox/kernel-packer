@@ -468,17 +468,12 @@ repackage_linuxkit() {
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'linuxkit' "$kernel_uname" '.')"
 
-        ## Copy kernel config (see /etc/includes/linuxkit/README.md for details)
+        # Copy kernel config (see /etc/includes/linuxkit/README.md for details)
         cp /etc/includes/linuxkit/${kernel_version}-config .config
 
-        ## Prepare kernel sources for module compilation
-        log "Make olddefconfig"
-        make olddefconfig
-        #log "Make modules_prepare"
-        #make modules_prepare
-
-        #make olddefconfig > /dev/null
-        #make modules_prepare > /dev/null
+        # Prepare kernel sources for module compilation
+        make olddefconfig > /dev/null
+        make modules_prepare > /dev/null
 
         # Delete all *.c files, excluding scripts directory
         find "${linux_src}" ! \( -type d \) -not -path "${linux_src}/scripts/*" -name "*.c" -delete
@@ -487,7 +482,6 @@ repackage_linuxkit() {
 
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
-            --exclude ./scripts/dtc \
             --directory "$meta_dir" . \
             --directory "${linux_src}" . \
         | pigz -9 -c > "${bundle_path}"
