@@ -29,7 +29,6 @@ KERNEL_REGEX="$1"
     || die "Usage: $0 <kernel-version-regex>"
 
 toolcheck jq
-toolcheck iq
 toolcheck yq
 
 tmp_manifest="$(mktemp)"
