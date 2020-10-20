@@ -87,7 +87,9 @@ uname="$(cat ./BUNDLE_UNAME)"
 
 ### Kernel Bundles
 Kernel packages and kernel bundles are cached in `${source_root}/.build-data/`.  To generate all bundles locally, execute 
-`make bundles`.  To test modifications to kernel bundle builder for a subset of kernel packages, create a manifest yaml file
+`make bundles` to build all bundles or `./script/local-bundle <kernel-version-regex>` to only build a subset of kernel bundles.
+Building all bundles will take a long time and require downloading of several gigabytes of archived source packages. 
+To test modifications to kernel bundle builder for a subset of kernel packages, create a manifest yaml file
 containing only the subset and execute `MANIFEST_FILE={path to manifest.yml} make bundles`
 
 
