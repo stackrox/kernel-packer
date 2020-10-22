@@ -482,12 +482,6 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.51-1.el7.elrepo.x86_64.rpm
-2f05fe50941ab811adab6edd16531e186a6bf9d6a456da4f84d96b1caffcd62c:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-9-amd64_4.19.118-2-deb10u1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-9-common_4.19.118-2-deb10u1_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.118-2-deb10u1_amd64.deb
 2b6b0e44aa367595d429def2df8af394d221b521ebe1dfb8274389b3530c5587:
   type: ubuntu
   packages:
@@ -969,6 +963,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1025_4.15.0-1025.26_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1025-azure_4.15.0-1025.26_amd64.deb
+4e15562b33c7a373f5550f6327a2d930988f8acf11fb31e31cb47182e1c7551c:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-9-amd64_4.19.118-2-deb10u1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-9-common_4.19.118-2-deb10u1_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.152-1_amd64.deb
 4a494100c3cb907df43f7a73679ae79c59ddf55b81554210718dc9fc0635df5c:
   type: oracle
   packages:
