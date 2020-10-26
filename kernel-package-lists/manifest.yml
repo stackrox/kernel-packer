@@ -503,11 +503,6 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1933.el7uek.x86_64.rpm
-2c8d883649c09249c16e8d0f6bca5d20fa2f2f4d229e03f61755ae00bca925ff:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.148-k8s-linux-headers-4.4.148-k8s_4.4.148-20180816_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 2a8ffc089e499255ac4499116e1a2b40ddeec0782b438c8aaea3413953d1bf97:
   type: cos
   packages:
@@ -540,6 +535,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-36-generic_4.4.0-36.55_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-36_4.4.0-36.55_all.deb
+2b502bf0680e51dd1ea78e27414a75ba87b7ee4ac99bc066f2d7dca65c1938df:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.65-k8s-linux-headers-4.4.65-k8s_4.4.65-20170502_amd64.deb
 2c553c81ee823123037e820d272d2c1644dff143b19d96326c14396883fe0181:
   type: ubuntu
   packages:
@@ -661,16 +661,6 @@
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.23-26.el7.x86_64.rpm
-02c6b49889c31e8671f3ea27762e924dbd777e786441f0f009eb26bfd579aa47:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.26-k8s-linux-headers-4.4.26-k8s_4.4.26-20161021_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
-02f10f099ed1de252563d4cfefeac0575992f5f38959f51bca482ed084ac6886:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.36-k8s-linux-headers-4.4.36-k8s_4.4.36-20161205_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 3d1c23fd9835d906e3bec2a41c6d0a54f54ed20b46fc9cdbc2d9d0716ccf34be:
   type: redhat
   packages:
@@ -877,12 +867,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11021.39.0-kernel-src.tar.gz
-4d4f8be09d50d121002163a2f1c81aae0b37466c9b101e196998b2446e86f6be:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-amd64_4.19.132-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-common_4.19.132-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.146-1_amd64.deb
 4f4f35cde3a452d1ac8ea10721df0a7599dc5680ee0e96d1dba13cb5324e772f:
   type: cos
   packages:
@@ -1350,6 +1334,12 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.102-1.el7.elrepo.x86_64.rpm
+6e27d6ad7a9ae889a1bdd4e0c47f7f9b494cb657077e15541845230c252259e1:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-12-amd64_4.19.152-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-12-common_4.19.152-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.152-1_amd64.deb
 6f31b1ac61cb89dbc81bf739bb66d0b35e982cf04de0f4d8fa58760f755002fc:
   type: redhat
   packages:
@@ -1416,11 +1406,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-46-generic_5.3.0-46.38_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.3.0-46_5.3.0-46.38_all.deb
-6a8473c70e6909d5ef5b9b605ae533e24461f332c05c9bb7455c1fca863f05a8:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.22-k8s-linux-headers-4.4.22-k8s_4.4.22-20160928_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 6a20680ad53af98e743758e59365ad769b7dda58acb158c99ff6d08725f4151f:
   type: redhat
   packages:
@@ -1476,11 +1461,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1041_4.15.0-1041.43_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1041-gcp_4.15.0-1041.43_amd64.deb
-06c00213d35b76909e25f6a3dc02597b4859b78d2ec4e37b38b5b4002a39d77a:
+6afd2e8d83e82adcffc0362b346bee20fd1991468c03423d66a4788008765d11:
   type: debian
   packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.121-k8s-linux-headers-4.4.121-k8s_4.4.121-20180311_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.110-k8s-linux-headers-4.4.110-k8s_4.4.110-20180105_amd64.deb
 06d562d87c3b41e5a52d33dfd6d7352c220c26e4424c055fa841375b33276985:
   type: redhat
   packages:
@@ -1497,6 +1482,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.27.2.el7.x86_64.rpm
+7e1dc30a3f7f5ee7cb1662eaf2c177cc7bdbb66ae8abf2708b9942c1f9ff9ada:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.115-k8s-linux-headers-4.4.115-k8s_4.4.115-20180208_amd64.deb
 7c2a4b0b594b6dc77149377fa2e463be5385490e9fe9dd8395b473177d533750:
   type: redhat
   packages:
@@ -1528,6 +1518,11 @@
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-8-amd64_4.19.98-1-deb10u1_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-8-common_4.19.98-1-deb10u1_all.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.152-1_amd64.deb
+7d7d7bb5f5af79a2a727b2f942e50473c034cec2496f4a8c7219de15e0518188:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.148-k8s-linux-headers-4.4.148-k8s_4.4.148-20180816_amd64.deb
 7d8c5d6cbc0e66ffa8b405ed637b3aecaad509b9e3b313b6e41236b535ba2f82:
   type: oracle
   packages:
@@ -1802,6 +1797,11 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.7.1.el7.x86_64.rpm
+8f8933512bc688b1189fcab9f5d58902d556958e0804576e6fe7b3c09800d5af:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.25-k8s-linux-headers-4.4.25-k8s_4.4.25-20161018_amd64.deb
 8d9352857faca54a8b6aafbb20a9bde12a6c75229d151667f16ca63656a4178d:
   type: cos
   packages:
@@ -1811,6 +1811,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.11.0-1009_4.11.0-1009.9_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.11.0-1009-azure_4.11.0-1009.9_amd64.deb
+8ba02e92dfdaa0effe66b66f76ecfee8f7fc23d0ba5df1c943de8f08a84a3486:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.111-k8s-linux-headers-4.4.111-k8s_4.4.111-20180114_amd64.deb
 8ba082b3a424c6287e427a9e56f2d6008527e52ae3208e3d4967484553885d8c:
   type: coreos
   packages:
@@ -1969,6 +1974,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-327.13.1.el7.x86_64.rpm
+9c33ca524bf7adf5608ab53c20c6a11b07340f35bfe41446b9d3e29a50054bc3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-amd64_4.19.132-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-common_4.19.132-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.152-1_amd64.deb
 9e44be536f124c81f16e0058bf8c53eea6d370c7be7eebf24af7b1c0d064d876:
   type: redhat
   packages:
@@ -2035,6 +2046,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11316.34.0-kernel-src.tar.gz
+9e0036008a2f8f98d0ed145e1dc5b52d580c68a8e699dd70f305a45481cfa299:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.26-k8s-linux-headers-4.4.26-k8s_4.4.26-20161021_amd64.deb
 9e642610eed2d0a07d05906acb6c8e02c02913aa7d3390c5e6bfd4fef5406f2a:
   type: redhat
   packages:
@@ -2057,11 +2073,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1015_5.4.0-1015.15_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1015-aws_5.4.0-1015.15_amd64.deb
-9facdc10f5cf5a181658158fcea6e89dec5438be1d70cfd19e7537988aa8bbd8:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.79-k8s-linux-headers-4.4.79-k8s_4.4.79-20170728_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 9aadb5a1d9ddfdb14d8656218ef2b316e4dff375b188d6070f3cd4d0b23404b5:
   type: cos
   packages:
@@ -2179,11 +2190,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.5.1.el7.x86_64.rpm
-11b9bf144477baa846f244d806ddead1d84ecb94162538dd2c675611ade089bd:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.133-k8s-linux-headers-4.4.133-k8s_4.4.133-20180526_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 11a19f8f3c6cff3f767e04fb20fce5cfa99f3cc073a05af5ca8934c6db8d7751:
   type: cos
   packages:
@@ -2492,11 +2498,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1011_5.4.0-1011.11_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1011-gcp_5.4.0-1011.11_amd64.deb
-35fe5cd0b6f27ef8969e93cf750fc2646136293c23b651293dc36cef35ee7c20:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.111-k8s-linux-headers-4.4.111-k8s_4.4.111-20180114_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 37c4fc1897c3590cc1857909c5767e9858c0ad4de261ae0d26b1c598de25376e:
   type: cos
   packages:
@@ -2513,11 +2514,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10112.0.0-kernel-src.tar.gz
-37de32d659a400851258a7333abc417cad6d4b1b18af51b960d93d2527b9ee15:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.20-k8s-linux-headers-4.4.20-k8s_4.4.20-20160928_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 38d7f5038c6eb41ee0299bd29d10ce23cc33d1194ba28e548f2c8784d460f57d:
   type: ubuntu
   packages:
@@ -2597,6 +2593,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1028_4.15.0-1028.29_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1028-azure_4.15.0-1028.29_amd64.deb
+45f41fa5949bd48703a2c446c95f2a1eb68ad77ce68340eb530be9a02c91b318:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.39-k8s-linux-headers-4.4.39-k8s_4.4.39-20161219_amd64.deb
 45c699410570361b0f89b7572a64a18aad522372dc56093a5ee2915c56b62553:
   type: redhat
   packages:
@@ -2707,11 +2708,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
-51de5ff13a62e4324eb2e20a7d13efd0c637df919031eaea4586ba2e9d6a147d:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.39-k8s-linux-headers-4.4.39-k8s_4.4.39-20161219_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 51fe513c1386119bcbf137814eb21e2adeceb7c2458a3e044e702f2d0768562d:
   type: redhat
   packages:
@@ -2846,6 +2842,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10032.71.0-kernel-src.tar.gz
+59ff931ce4dd25f161b668d46ae8525df3bcd7affbb7815287335bc6466f5e1a:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.133-k8s-linux-headers-4.4.133-k8s_4.4.133-20180526_amd64.deb
 60ac80e123975cbc92a38c24dc09d0139f08ae43b1db6c8a0ba59bc4ec59941e:
   type: ubuntu
   packages:
@@ -2885,12 +2886,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.38.3.el7.x86_64.rpm
-63a23813bedbd67dfdeffa07d903bfa7544b860bafb1ed45b9a431c9aabfcf51:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.8.0-3-amd64_5.8.14-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.8.0-3-common_5.8.14-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.8_5.8.14-1_amd64.deb
 63ae0501a60b0215ec6067f936950f4d8ea55cf512f21bdeb31ee704eb4d7570:
   type: ubuntu
   packages:
@@ -3032,11 +3027,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1077_4.4.0-1077.87_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1077-aws_4.4.0-1077.87_amd64.deb
-72f15208fc59c6204393749502dc4b1590c810af4cf381e9a27d0ff4ec0ee784:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.41-k8s-linux-headers-4.4.41-k8s_4.4.41-20170109_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 72eda7f63b8361eb8791f4fe5b5c1b3c4b4546d005d1a6a1b7ea718272ccb559:
   type: linuxkit
   packages:
@@ -3243,6 +3233,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-9592.100.0-kernel-src.tar.gz
+87d16bc4ee5c998c6b4db7906afe3fbd8244586095e4a25628ae13da9e7ed222:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.23-k8s-linux-headers-4.4.23-k8s_4.4.23-20160930_amd64.deb
 87c393fae1b21778821c36a68e7a630a2470eaf637de84bae57e1fcbc991e59e:
   type: redhat
   packages:
@@ -3510,6 +3505,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1063_4.4.0-1063.72_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1063-aws_4.4.0-1063.72_amd64.deb
+214c52560a00ae761584975f6e3e1c4ce0d8171aaf76ab4cbaf66c55e392c9fc:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.179-k8s-linux-headers-4.4.179-k8s_4.4.179-20190513_amd64.deb
 221f8fff813d1fa032784ce39a5772aff9849744e0ab8a94554f49899bac1e0a:
   type: redhat
   packages:
@@ -3754,11 +3754,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-504.1.3.el6.x86_64.rpm
-484cd781f8e2c25ab313381ab43d7bbed4b683fbf27a6e539f1b49843211dd69:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.21-k8s-linux-headers-4.4.21-k8s_4.4.21-20160928_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 0485cc954b1a2d34b050caf11cd826488f565281b516d9a4111e6133647e4312:
   type: ubuntu
   packages:
@@ -3837,6 +3832,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1006_4.13.0-1006.8_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1006-azure_4.13.0-1006.8_amd64.deb
+565e10bbe01f72d140cf1b998d16f5ff1be0d21ce93c54d4b7210a8d1c39cc8d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1009_5.8.0-1009.9_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1009-gcp_5.8.0-1009.9_amd64.deb
 572ebc8938b5d662893701b0e2b5d3a3a349dd9fb1f37fa4d4ec9fcb031aec05:
   type: cos
   packages:
@@ -4114,6 +4114,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12371.1072.0-kernel-src.tar.gz
+875fa51db337eaf67420a5a023bf265edcb785cd2f1d5b76f801bbdf1efab5a0:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.20-k8s-linux-headers-4.4.20-k8s_4.4.20-20160928_amd64.deb
 890da15491cc80c2e9dc900ef998319202b05c1d4e1509b82806dc4780e5b8d2:
   type: ubuntu
   packages:
@@ -4645,6 +4650,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12105.71.0-kernel-src.tar.gz
+8979d20a4b8905450aa3d95f5be9e967776029a94408a391c85224304183374d:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.36-k8s-linux-headers-4.4.36-k8s_4.4.36-20161205_amd64.deb
 8982ae19407cb695f6cf0c107b303ae500d62d7bd39047b90d88258259af4600:
   type: redhat
   packages:
@@ -4877,11 +4887,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1127.8.2.el7.x86_64.rpm
-39344f935160523ad4c2df8360d005f9989b89fdc68908b280ef606c0498619c:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.25-k8s-linux-headers-4.4.25-k8s_4.4.25-20161018_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 39479c31b9209c76125cdea6ac4119a6de9c9595cb2af5255b2ceece8bec6ae0:
   type: ubuntu
   packages:
@@ -5050,6 +5055,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-45-generic_5.4.0-45.49_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-45_5.4.0-45.49_all.deb
+88706edd5c93f7b6c8f8f968bb89ea9f8cd5bd2fee8b839048c1619fb8575ba5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-26-generic_5.8.0-26.27_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-26_5.8.0-26.27_all.deb
 089642a89c91e0d83134f9eb35f05e3266974829d3b544d8a93d9f846e3d6831:
   type: ubuntu
   packages:
@@ -5174,6 +5184,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.9.3.el7.x86_64.rpm
+517405eeeef49eac596551526dc14a2e71c6260a5a2bbe7ffa6f903f0cd9d1c9:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.78-k8s-linux-headers-4.4.78-k8s_4.4.78-20170728_amd64.deb
 538648e0887a65a4b11ada3b11f3f5a5fe613aae9b69190cc6ccc5e7e008a808:
   type: ubuntu
   packages:
@@ -5476,11 +5491,6 @@
   - https---snapshot.debian.org-archive-debian-20200214T033026Z-pool-main-l-linux-linux-headers-5.4.0-4-cloud-amd64_5.4.19-1_amd64.deb
   - https---snapshot.debian.org-archive-debian-20200214T033026Z-pool-main-l-linux-linux-headers-5.4.0-4-common_5.4.19-1_all.deb
   - https---snapshot.debian.org-archive-debian-20200214T033026Z-pool-main-l-linux-linux-kbuild-5.4_5.4.19-1_amd64.deb
-573184586d8f85377e784da9ec005a1e9382a8e44fa7b3bf36be5dbbdfcaa4fd:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.78-k8s-linux-headers-4.4.78-k8s_4.4.78-20170728_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 650325518e54643fca78c97a7875c9fcf4a8a4f76db6d102d4876e15037830dd:
   type: redhat
   packages:
@@ -5738,11 +5748,6 @@ a51bcbf3f094554d0f7d1d62b09234500fdb24d01fa316c864c040da08637a54:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.11.1.el8_0.x86_64.rpm
-a055a0f63ddd61da4ad13c85ec63eb03f816122f9a1365af1d303076ee5aca3c:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.115-k8s-linux-headers-4.4.115-k8s_4.4.115-20180208_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 a056d5b6be174cb00b65cc1b5910e5fe817784ad4ddc2f93643de9c893a9e6fb:
   type: redhat
   packages:
@@ -6519,6 +6524,11 @@ b45305728f51260d87d94afc69cdf43683f68d4585d0252c7467b31ebfc589f5:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.181-1.el7.elrepo.x86_64.rpm
+b7385535613e3f60c06faa6af5fd0f02bd1bff46a72899c520fbecd360cf8e16:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.79-k8s-linux-headers-4.4.79-k8s_4.4.79-20170728_amd64.deb
 b7214611105878b1fb827e3caeccac62cf785a25218a21733e9c9dfc4cfa09cb:
   type: cos
   packages:
@@ -6754,6 +6764,11 @@ c1bff688aadf51953b655a8fbdf7c5c4ff33a4cc844f40fc60333060ab572c70:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.86.0-kernel-src.tar.gz
+c2b6ff32113b4482c9475d9dd8292439bb6c09409e49d6010205a9067b1953ee:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.120-k8s-linux-headers-4.4.120-k8s_4.4.120-20180311_amd64.deb
 c2d40b6ac5fb41dbbe3770c71f75bc1c2a5ef14c9716105315d76f002b7e75be:
   type: redhat
   packages:
@@ -6762,11 +6777,6 @@ c2d599d48f69fdda73ff938a4ce661cf4697b985677b138c2073e08776119ce3:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-3.18.40-20.el7.x86_64.rpm
-c2fa16fafb163b2f64d8b9ab95a9becff510393b439f8748b5c1c8c76b3f353d:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.23-k8s-linux-headers-4.4.23-k8s_4.4.23-20160930_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 c3f5c5f6d76c3df57b11d4fac5de94743272311ab22ba7d796e449fe4f112004:
   type: cos
   packages:
@@ -6792,11 +6802,6 @@ c4fc62e8eda631cdbc010ecba7688ec0c67a3a5f4f1922f732ca23bd6fed6ff5:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12739.91.0-kernel-src.tar.gz
-c04ae86ecacb5637c1d1c6c58baf97c3947ae795f2fd9fdc31ad488ea2f86423:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.120-k8s-linux-headers-4.4.120-k8s_4.4.120-20180311_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 c05c883d774eebadf75e240f0ed0971d1b6673211ea52b3cd0cd6e5fa7484a99:
   type: redhat
   packages:
@@ -7022,11 +7027,6 @@ ca32344a5dfc3e7de9c6aa84b169e6f55ba0d48186fdf87c138d19a9f94ab50b:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.27.1.el6.x86_64.rpm
-cac3fb96fd53101a872dc07f435878e31fecb8fbee1f04d6178a7a68e44f5fa4:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 cafc8790db00caeeaaeb43e257c9cce03237ecf60f772299c9bcb2232ae77ecc:
   type: cos
   packages:
@@ -7098,10 +7098,20 @@ cd3c01d0d23bd5585c51fdb977984e90f160613087a88ec022a8d94704028fad:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.56.1.el7.x86_64.rpm
+cd7cc1cd46974810ce4d44bcc129b1bf382b0fcd7577c96847a7b114b5ed8553:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.41-k8s-linux-headers-4.4.41-k8s_4.4.41-20170109_amd64.deb
 cd91c350f5466ae89bca67e1b1b0466e63e7eca1a9607c39263a8ee31dc7176e:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-693.2.2.el7.x86_64.rpm
+cd597c138c1d80e026da3164bc377e1aea394d8ed190657a52af75fd06484f04:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.8.0-1011_5.8.0-1011.11_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.8.0-1011-azure_5.8.0-1011.11_amd64.deb
 cd38470bb7a49735732adba4d3476274a454d37b3cbff18683d659e6db42c258:
   type: cos
   packages:
@@ -7202,6 +7212,11 @@ cfe49ac70a6d88a9f692dbfe64b4a709516cae39da7585ead38e9eea9419b5ab:
   type: redhat
   packages:
   - http---vault.centos.org-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.1.2.el7.x86_64.rpm
+cfed66275481f05aef30bb3b86c3f90308e84bb9924e68696745c4cef646f920:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.121-k8s-linux-headers-4.4.121-k8s_4.4.121-20180311_amd64.deb
 cff0a6bbae7d1425b0043d9e35b35e9714a6cc0eabc13fe1ef816970507bc9ff:
   type: cos
   packages:
@@ -7311,11 +7326,6 @@ d20bd68da3b517cde3d3b4515a5a8aeaf06f4a65bf8af17112b24967dc92a165:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12871.1185.0-kernel-src.tar.gz
-d27cbf82fe64d9c1089c17217191fa9574b43efb41f0b2caa074c3e407758152:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.110-k8s-linux-headers-4.4.110-k8s_4.4.110-20180105_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 d33fb10b098623ac14da2a8c77edde356fc6b68970d4d1aa4c05eda5603f2f67:
   type: ubuntu
   packages:
@@ -7325,6 +7335,11 @@ d41cc734ecd45530762199ac51d3d3f0f07b1c87591983d43fa859c19f91bc6c:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.112-1.el7.elrepo.x86_64.rpm
+d42c1a747b0e8776a9b63783e94c4033c2ecee8b2bcf373507af4c538c28eac6:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.21-k8s-linux-headers-4.4.21-k8s_4.4.21-20160928_amd64.deb
 d44f4836b876bda2be089af735567f34ac90c89761ff1512b1c2d3cc306c0fa1:
   type: cos
   packages:
@@ -7450,11 +7465,6 @@ d661911a63e3eade35d6702e083144968f53b1eaef1d07e74cedfaaf88145d77:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1049_4.4.0-1049.58_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1049-aws_4.4.0-1049.58_amd64.deb
-d2672309e17ad9e4183ce69b5ee7b52c23360ff8844d8c1d1626af67a52c5295:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.65-k8s-linux-headers-4.4.65-k8s_4.4.65-20170502_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 d2771457a4b9f7cbabf69d0dfc92ed0808293ee6a9367ece131e367dc9bb8979:
   type: redhat
   packages:
@@ -7667,6 +7677,11 @@ dfd589f54b40427eddec810924663264645bf74039e67eb3bc553693a7a1b15f:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.0.0-1031_5.0.0-1031.33_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.0.0-1031-azure_5.0.0-1031.33_amd64.deb
+dfec0a7019986dc86f5cc7c78f796903ae36fd17561bebb4fc9dfae5c619728a:
+  type: debian
+  packages:
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+  - http---dist.kope.io-apt-pool-main-l-linux-4.4.22-k8s-linux-headers-4.4.22-k8s_4.4.22-20160928_amd64.deb
 dff30cffe9c1d9bd1c52c169b12f6190652d8151d40cec6a2ef4973f19507725:
   type: cos
   packages:
@@ -8152,6 +8167,11 @@ f3a570df6a34bb1808bc709fe25f13e708dd783092d4e1838758d06afd3e4f9c:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.8.1.el8_1.x86_64.rpm
+f3fac8018ef659a1205e10c732b280846b98fde979224960533ea2abf9704d88:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.8.0-1011_5.8.0-1011.11_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.8.0-1011-aws_5.8.0-1011.11_amd64.deb
 f4d8fcf84c358e98103c9106527f0767b8a719b8f87912e3a88af2e9aa810af0:
   type: ubuntu
   packages:
@@ -8512,11 +8532,6 @@ fb79b2fbabdaaf2158c6997a18834e37c563b47e47c4f3802dcfd62b015ac3e1:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.106.0-kernel-src.tar.gz
-fb154484477606fa17112fcf71d74fe035bf2fdde5b36cca1814ccd141efc42d:
-  type: debian
-  packages:
-  - http---dist.kope.io-apt-pool-main-l-linux-4.4.179-k8s-linux-headers-4.4.179-k8s_4.4.179-20190513_amd64.deb
-  - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
 fbd8c4fcbe184a4f99489a7db5b9c79a91e39cbb6fdcc14461d6d83747d5978e:
   type: cos
   packages:
