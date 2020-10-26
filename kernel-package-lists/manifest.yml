@@ -877,12 +877,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11021.39.0-kernel-src.tar.gz
-4d4f8be09d50d121002163a2f1c81aae0b37466c9b101e196998b2446e86f6be:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-amd64_4.19.132-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-common_4.19.132-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.146-1_amd64.deb
 4f4f35cde3a452d1ac8ea10721df0a7599dc5680ee0e96d1dba13cb5324e772f:
   type: cos
   packages:
@@ -1350,6 +1344,12 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.102-1.el7.elrepo.x86_64.rpm
+6e27d6ad7a9ae889a1bdd4e0c47f7f9b494cb657077e15541845230c252259e1:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-12-amd64_4.19.152-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-12-common_4.19.152-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.152-1_amd64.deb
 6f31b1ac61cb89dbc81bf739bb66d0b35e982cf04de0f4d8fa58760f755002fc:
   type: redhat
   packages:
@@ -1969,6 +1969,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-327.13.1.el7.x86_64.rpm
+9c33ca524bf7adf5608ab53c20c6a11b07340f35bfe41446b9d3e29a50054bc3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-amd64_4.19.132-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-10-common_4.19.132-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.152-1_amd64.deb
 9e44be536f124c81f16e0058bf8c53eea6d370c7be7eebf24af7b1c0d064d876:
   type: redhat
   packages:
@@ -2885,12 +2891,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.38.3.el7.x86_64.rpm
-63a23813bedbd67dfdeffa07d903bfa7544b860bafb1ed45b9a431c9aabfcf51:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.8.0-3-amd64_5.8.14-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.8.0-3-common_5.8.14-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.8_5.8.14-1_amd64.deb
 63ae0501a60b0215ec6067f936950f4d8ea55cf512f21bdeb31ee704eb4d7570:
   type: ubuntu
   packages:
@@ -3837,6 +3837,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1006_4.13.0-1006.8_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1006-azure_4.13.0-1006.8_amd64.deb
+565e10bbe01f72d140cf1b998d16f5ff1be0d21ce93c54d4b7210a8d1c39cc8d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1009_5.8.0-1009.9_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1009-gcp_5.8.0-1009.9_amd64.deb
 572ebc8938b5d662893701b0e2b5d3a3a349dd9fb1f37fa4d4ec9fcb031aec05:
   type: cos
   packages:
@@ -5050,6 +5055,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-45-generic_5.4.0-45.49_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-45_5.4.0-45.49_all.deb
+88706edd5c93f7b6c8f8f968bb89ea9f8cd5bd2fee8b839048c1619fb8575ba5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-26-generic_5.8.0-26.27_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-26_5.8.0-26.27_all.deb
 089642a89c91e0d83134f9eb35f05e3266974829d3b544d8a93d9f846e3d6831:
   type: ubuntu
   packages:
@@ -7102,6 +7112,11 @@ cd91c350f5466ae89bca67e1b1b0466e63e7eca1a9607c39263a8ee31dc7176e:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-693.2.2.el7.x86_64.rpm
+cd597c138c1d80e026da3164bc377e1aea394d8ed190657a52af75fd06484f04:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.8.0-1011_5.8.0-1011.11_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.8.0-1011-azure_5.8.0-1011.11_amd64.deb
 cd38470bb7a49735732adba4d3476274a454d37b3cbff18683d659e6db42c258:
   type: cos
   packages:
@@ -8152,6 +8167,11 @@ f3a570df6a34bb1808bc709fe25f13e708dd783092d4e1838758d06afd3e4f9c:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.8.1.el8_1.x86_64.rpm
+f3fac8018ef659a1205e10c732b280846b98fde979224960533ea2abf9704d88:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.8.0-1011_5.8.0-1011.11_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.8.0-1011-aws_5.8.0-1011.11_amd64.deb
 f4d8fcf84c358e98103c9106527f0767b8a719b8f87912e3a88af2e9aa810af0:
   type: ubuntu
   packages:
