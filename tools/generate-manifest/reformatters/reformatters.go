@@ -185,7 +185,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 		if len(headerPkgs) == 1 {
 			continue
 		}
-		if len(headerPkgs) > 2 {
+		if len(headerPkgs) > 3 {
 			return nil, errors.Errorf("invalid number of header packages for kernel version %s: %+v", version, headerPkgs)
 		}
 
@@ -227,13 +227,25 @@ func reformatDebian(packages []string) ([][]string, error) {
 			return versionLess(kbuildCandidates[j].packageVersion, kbuildCandidates[i].packageVersion)
 		})
 
-		allPackages := make([]string, 0, 3)
-		allPackages = append(allPackages, kbuildCandidates[0].url)
+		commonHeaderPkg := ""
+		archHeaderPkgs := make([]string, 0, 2)
 		for _, headerPkg := range headerPkgs {
-			allPackages = append(allPackages, headerPkg.url)
+			if strings.Contains(headerPkg.url, "common") {
+				if commonHeaderPkg != "" {
+					return nil, errors.Errorf("invalid number of common header packages for kernel version %s: %+v", version, headerPkgs)
+				}
+				commonHeaderPkg = headerPkg.url
+				continue
+			}
+			archHeaderPkgs = append(archHeaderPkgs, headerPkg.url)
 		}
-
-		packageGroups = append(packageGroups, allPackages)
+		for _, archPkg := range archHeaderPkgs {
+			allPackages := []string{kbuildCandidates[0].url, archPkg}
+			if commonHeaderPkg != "" {
+				allPackages = append(allPackages, commonHeaderPkg)
+			}
+			packageGroups = append(packageGroups, allPackages)
+		}
 	}
 
 	return packageGroups, nil
