@@ -41,6 +41,15 @@ func partitionURLs(urls []string) ([][]string, error) {
 		urlsByHost[hostURLStr] = append(urlsByHost[hostURLStr], urlStr)
 	}
 
+	// Kernel packages for older kops images are grouped with a kbuild package from a different host
+	// (see crawl-kops target in kernel-crawler/Makefile)
+	kopsKey := (&url.URL{Scheme: "http", Host: "dist.kope.io"}).String()
+	if kopsURLs, ok := urlsByHost[kopsKey]; ok {
+		kopsDebianKey := (&url.URL{Scheme: "http", Host: "http.us.debian.org"}).String()
+		urlsByHost[kopsDebianKey] = append(urlsByHost[kopsDebianKey], kopsURLs...)
+		delete(urlsByHost, kopsKey)
+	}
+
 	urlGroups := make([][]string, 0, len(urlsByHost))
 	for _, urlGroup := range urlsByHost {
 		urlGroups = append(urlGroups, urlGroup)
