@@ -151,7 +151,7 @@ jobs:
     - run:
         name: Diff manifest
         command: |
-          git diff kernel-package-lists/manifest.yml
+          git --no-pager diff kernel-package-lists/manifest.yml
     - run:
         name: Prepare artifacts
         command: |
