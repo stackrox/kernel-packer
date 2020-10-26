@@ -149,6 +149,10 @@ jobs:
           make manifest
           cat kernel-package-lists/manifest.yml
     - run:
+        name: Diff manifest
+        command: |
+          git diff kernel-package-lists/manifest.yml
+    - run:
         name: Prepare artifacts
         command: |
           rm -rf .build-data/downloads
