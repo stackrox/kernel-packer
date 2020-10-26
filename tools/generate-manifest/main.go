@@ -5,8 +5,11 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"net/url"
 	"os"
 	"path"
+
+	"github.com/pkg/errors"
 
 	"gopkg.in/yaml.v2"
 
@@ -21,6 +24,28 @@ func main() {
 		fmt.Fprintf(os.Stderr, "generate-manifest: %s\n", err.Error())
 		os.Exit(1)
 	}
+}
+
+func partitionURLs(urls []string) ([][]string, error) {
+	urlsByHost := make(map[string][]string)
+	for _, urlStr := range urls {
+		u, err := url.Parse(urlStr)
+		if err != nil {
+			return nil, errors.Wrapf(err, "unparseable URL %q", urlStr)
+		}
+		hostURL := &url.URL{
+			Scheme: u.Scheme,
+			Host:   u.Host,
+		}
+		hostURLStr := hostURL.String()
+		urlsByHost[hostURLStr] = append(urlsByHost[hostURLStr], urlStr)
+	}
+
+	urlGroups := make([][]string, 0, len(urlsByHost))
+	for _, urlGroup := range urlsByHost {
+		urlGroups = append(urlGroups, urlGroup)
+	}
+	return urlGroups, nil
 }
 
 func mainCmd() error {
@@ -59,14 +84,25 @@ func mainCmd() error {
 			return err
 		}
 
-		// Split the given list of urls into a list of url groups. A given
-		// group will contain 1-3 urls.
-		packageSets, err := reformatter(urls)
+		// Partition URLs by host
+		urlGroups, err := partitionURLs(urls)
 		if err != nil {
 			return err
 		}
 
-		for _, packages := range packageSets {
+		var allPackageSets [][]string
+		for _, urlGroup := range urlGroups {
+			// Split the given list of urls into a list of url groups. A given
+			// group will contain 1-3 urls.
+			packageSets, err := reformatter(urlGroup)
+			if err != nil {
+				return err
+			}
+
+			allPackageSets = append(allPackageSets, packageSets...)
+		}
+
+		for _, packages := range allPackageSets {
 			// Transform the group of urls into a "simplified" group. This is
 			// the naming convention used for storing objects in the GCS bucket.
 			packages = util.SimplifyURLs(packages)
