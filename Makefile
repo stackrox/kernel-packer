@@ -1,6 +1,16 @@
 ROOT_DIR = .
 include Makefile-constants.mk
 
+MANIFEST_FILE ?= "kernel-package-lists/manifest.yml"
+
+bundles: repackage-all combine-all
+
+repackage-all: repackage-pre list-files download-packages packers repackage repackage-post
+
+combine-all: combine-cache clean-cache
+
+crawl-all: crawl sync manifest
+
 # Crawl kernel package repositories and record discovered packages.
 .PHONY: crawl
 crawl:
@@ -11,7 +21,7 @@ manifest: package-inventory
 	@go run ./tools/generate-manifest/main.go \
 		-config kernel-package-lists/reformat.yml \
 		-bucket-inventory-file $(BUILD_DATA_DIR)/package-inventory.txt \
-	> kernel-package-lists/manifest.yml
+	> $(MANIFEST_FILE)
 
 .PHONY: robo-crawl-commit
 robo-crawl-commit:
@@ -36,12 +46,21 @@ package-inventory:
 	@mkdir -p $(BUILD_DATA_DIR)
 	@./scripts/package-inventory $(KERNEL_PACKAGE_BUCKET) > $(BUILD_DATA_DIR)/package-inventory.txt
 
+.PHONY: repackage-pre
+repackage-pre:
+	mkdir -p .build-data/cache
+	touch .build-data/cache/cache.yml
+
+.PHONY: repackage-post
+repackage-post:
+	mkdir -p .build-data/bundles
+
 .PHONY: repackage
 repackage: packers
 	@mkdir -p $(BUILD_DATA_DIR)/cache
 	@touch $(BUILD_DATA_DIR)/cache/cache.yml
 	@go run ./tools/repackage-kernels/main.go \
-		-manifest kernel-package-lists/manifest.yml \
+		-manifest $(MANIFEST_FILE) \
 		-cache-dir $(BUILD_DATA_DIR)/cache \
 		-pkg-dir $(BUILD_DATA_DIR)/packages \
 		-bundle-dir $(BUILD_DATA_DIR)/bundles \
@@ -61,7 +80,7 @@ list-files:
 	@mkdir -p $(BUILD_DATA_DIR)/cache
 	@touch $(BUILD_DATA_DIR)/cache/cache.yml
 	@go run ./tools/repackage-kernels/main.go \
-		-manifest kernel-package-lists/manifest.yml \
+		-manifest $(MANIFEST_FILE) \
 		-cache-dir $(BUILD_DATA_DIR)/cache \
 		-prefix gs://stackrox-kernel-packages \
 		-action files | tee $(BUILD_DATA_DIR)/packages.txt
@@ -82,7 +101,7 @@ clean-cache:
 
 .PHONY: packers
 packers:
-	@make -C packers all
+	$(MAKE) -C packers all
 
 crawl-%:
-	@make -C kernel-crawler $@
+	$(MAKE) -C kernel-crawler $@
