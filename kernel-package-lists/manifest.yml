@@ -1621,6 +1621,12 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.8.2003-os-x86_64-Packages-kernel-devel-3.10.0-1127.el7.x86_64.rpm
+7c05159b734c8dde679f88d127ab234fa313716ba6856aa7d96ea5d89eaff73d:
+  type: debian
+  packages:
+  - http---18.185.215.86-packages-linux-headers-5.4.0-5-cloud-amd64_5.4.68-1_amd64.deb
+  - http---18.185.215.86-packages-linux-headers-5.4.0-5-common_5.4.68-1_all.deb
+  - http---18.185.215.86-packages-linux-kbuild-5.4_5.4.68-1_amd64.deb
 7c61800e9428fc0f034c49b54686cf07323448971516d649cb4e4be4ca12b077:
   type: ubuntu
   packages:
