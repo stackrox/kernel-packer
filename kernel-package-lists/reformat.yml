@@ -52,6 +52,12 @@
   file: gardenlinux.txt
   reformat: debian
 
+- name: gardenlinux-uncrawled
+  description: SAP Garden Linux kernels (uncrawled)
+  type: debian
+  file: gardenlinux-uncrawled.txt
+  reformat: debian
+
 - name: cos
   description: Container-Optimized OS kernels
   type: cos
