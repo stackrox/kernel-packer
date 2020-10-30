@@ -441,12 +441,6 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.50-1.el7.elrepo.x86_64.rpm
-01fdfe0ada08d180510293d8fb455116cb14f87d1916e7e23358b57defaa64c1:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-amd64_4.9.189-3-deb9u2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-common_4.9.189-3-deb9u2_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.210-1-deb9u1_amd64.deb
 2f1e8e993428cf3935b07885e270e688a93cde2d1b716ddc821031d39b2ae7d7:
   type: cos
   packages:
@@ -4570,6 +4564,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.3.0-1019_5.3.0-1019.20_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.3.0-1019-azure_5.3.0-1019.20_amd64.deb
+06927a82af5875558b17cd7ecf58f0b6b37f0629ed62ff75a0435443d39c814c:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-amd64_4.9.189-3-deb9u2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-common_4.9.189-3-deb9u2_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.240-1_amd64.deb
 6946da269a53ab7f2d8c523c5a3d6b945fb1b61897b2ee51319888579eccd0c6:
   type: redhat
   packages:
@@ -7790,6 +7790,12 @@ e2c5564265705afeff7d17e7bd1a2b37c486664f0766669e3fd01378ea944b8d:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10323.64.0-kernel-src.tar.gz
+e2fd85fc4f539d209772eb38013797ecdccf6dd36e888b2a6d7725d6c6a7bef0:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-14-amd64_4.9.240-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-14-common_4.9.240-1_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.240-1_amd64.deb
 e2bf0ff03aa572e039ecc24b820b2e7a1a097c04a9732498c82a2a9b6d635e71:
   type: ubuntu
   packages:
