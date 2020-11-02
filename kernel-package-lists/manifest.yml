@@ -523,6 +523,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.3.0-1032_5.3.0-1032.34_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.3.0-1032-aws_5.3.0-1032.34_amd64.deb
+2a17e61e8d9c0f5b337906aed3e3123070fd20ddf23280d5cd870494c39414b7:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.241-1.el7.elrepo.x86_64.rpm
 2d37b863d8c7622308b02ef012a8318b8e58496134affc2a011e1ee49e5c0abb:
   type: ubuntu
   packages:
@@ -7398,6 +7402,12 @@ d33fb10b098623ac14da2a8c77edde356fc6b68970d4d1aa4c05eda5603f2f67:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1101_4.4.0-1101.112_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1101-aws_4.4.0-1101.112_amd64.deb
+d41d18e59e2c306b00a349141d305bbb3f962aab629617dd75ad34aa02606f4f:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-14-amd64_4.9.240-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-14-common_4.9.240-2_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.240-2_amd64.deb
 d41cc734ecd45530762199ac51d3d3f0f07b1c87591983d43fa859c19f91bc6c:
   type: redhat
   packages:
