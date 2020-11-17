@@ -3267,10 +3267,6 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1911.4.0-coreos_developer_container.bin.bz2
-081b98fae689fa8e5611d48b68bb0465039c4cca67821c9aa5cd00211c2802fd:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.12.1.tar.gz
 82d15c46bcf4663cc500726a0a43debf9206e3ae0cf0e4d3c64b8fc148d6752a:
   type: redhat
   packages:
@@ -7958,6 +7954,10 @@ e0c074f743f00fdace841dfdbd07d7420047185b26277ae697d8d2592801cba1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1027_4.4.0-1027.27_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1027-gke_4.4.0-1027.27_amd64.deb
+e0fa5468fbe423cf3099e54abdb0a7e1eebe5f38ef2e1d03c00526b62b75496b:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.15.1.tar.gz
 e1e320fa1d2350a58a8723f95ddc0f3649be08dee9cef5a0f9dfd80264ed9f3b:
   type: redhat
   packages:
