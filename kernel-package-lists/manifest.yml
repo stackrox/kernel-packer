@@ -450,6 +450,10 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11190.0.0-kernel-src.tar.gz
+2e2a1f2009be89037ba3ffc96a2e4955ca9a78547e9d7649a5c5843b55df306c:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.14.2.tar.gz
 2d2f54b9a94f883ccf71cbe9225974f7f866ae204ed7dc5f06947cec9d268e7a:
   type: ubuntu
   packages:
@@ -1811,6 +1815,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1042_4.15.0-1042.45_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1042-gcp_4.15.0-1042.45_amd64.deb
+8f1c45bfbda5ec2130daf4ea36b418603bd25b88c057ad61236d437906621481:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.15.0.tar.gz
 8b2a8b26be3789bee753b63ad8effa678ccc8977b617de51f30b0fa9efe79433:
   type: redhat
   packages:
@@ -2942,6 +2950,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1078_4.15.0-1078.88_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1078-gcp_4.15.0-1078.88_amd64.deb
+58bb679d4078a4ee7378db1190a0fe933f2f226fb24d1ef79349ad2c6bc3c2af:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.13.1.tar.gz
 058a6724ef259e869f08f01479f8de2a5b2ba78aaaada8efdea08b57b1d10373:
   type: ubuntu
   packages:
@@ -5266,6 +5278,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1016_4.4.0-1016.25_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1016-aws_4.4.0-1016.25_amd64.deb
+99329a57743fc89721fe8f899ef9c3604dbf87909547bc071f7ac34c6b8bbf02:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.13.0.tar.gz
 99605e9b9f2beda82f1f54d545e2f17ea683b3c0a5882816d397d5b9dfb1cc26:
   type: coreos
   packages:
@@ -7394,6 +7410,10 @@ ce9b4d3d7b208de7eb3f64888f56f19a77b3aeab6ae85ba6ae92456a1fe92a4a:
   type: redhat
   packages:
   - http---vault.centos.org-7.8.2003-updates-x86_64-Packages-kernel-devel-3.10.0-1127.10.1.el7.x86_64.rpm
+ce711528584577076c6426a4379bd14d5b4abcea236340034a5bfa16077bec0d:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.12.2.tar.gz
 cea9285abec1a17a9632b6b01dd4a5727ebccca69a0272e5b2383362b21363f9:
   type: ubuntu
   packages:
@@ -7974,6 +7994,10 @@ e0c074f743f00fdace841dfdbd07d7420047185b26277ae697d8d2592801cba1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1027_4.4.0-1027.27_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1027-gke_4.4.0-1027.27_amd64.deb
+e0fa5468fbe423cf3099e54abdb0a7e1eebe5f38ef2e1d03c00526b62b75496b:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.15.1.tar.gz
 e1e320fa1d2350a58a8723f95ddc0f3649be08dee9cef5a0f9dfd80264ed9f3b:
   type: redhat
   packages:
@@ -8004,6 +8028,10 @@ e3c498fc7b831a6fe36204e5e09151da092cc82234a0323a052f765f8a81db1e:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.219-1.el7.elrepo.x86_64.rpm
+e4f82e57f7b9c1e190744418dad3fe7911643a5646c59140a9c57e76f5eed696:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.14.0.tar.gz
 e05d17c91b73b142bfc3526819af5899fc0bdcaaab86b0121a51b5c53078ab0d:
   type: ubuntu
   packages:
@@ -8035,6 +8063,10 @@ e8c7941751df97468a6404167ddee61fbf3f77ebc33db7863c02d85140dc1f8c:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11895.32.0-kernel-src.tar.gz
+e9f179550c76ee75ddf1d2d765f30f58e97053ddd2b370340319b3a7948e98bd:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.14.1.tar.gz
 e9afd6c211cff015bc41c13a3bcb922eeb5d6d8f2785864cea77784256b4ef1d:
   type: cos
   packages:
@@ -8861,6 +8893,10 @@ fcb7347a2e8bd599f462eec645ccc6426aa63c4bee25a1fc4e21d0f14d872473:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11021.18.0-kernel-src.tar.gz
+fcba07fce65e0770447b0db3a0d69a4a0212e8c216c6a88b8bbd25ea33dde5d9:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.12.3.tar.gz
 fccd09a56b6978da4d9a004f332e5d4c0ac82cd9e87b649aa8eed7511f55afcf:
   type: ubuntu
   packages:
