@@ -248,7 +248,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[@href = 'linux/']/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-generic.*amd64.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
         },
 
         # Generic Linux "all" headers, distributed from main
@@ -257,7 +257,7 @@ repos = {
             "discovery_pattern" : "/html/body//a[@href = 'linux/']/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*_all.deb$')]/@href",
-            "exclude_patterns": ubuntu_excludes
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
         },
     ],
 
