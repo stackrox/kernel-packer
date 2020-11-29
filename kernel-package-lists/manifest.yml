@@ -3382,6 +3382,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.0.2.el8_1.x86_64.rpm
+87daf740b6551543f523cc7356d6aec7b104fba8a4b9a9960b53ce1e70e492da:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-amd64_4.19.160-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.160-2_amd64.deb
 88d4a840d9e19124c2107030d979b396a6f44ce83abeb89ae96ab1f87c55d871:
   type: cos
   packages:
@@ -8900,6 +8905,11 @@ fb00b3013fc399564286762892c0901f9953076a45a4d6171e9e701ed58ff0b8:
   type: redhat
   packages:
   - https---access.cdn.redhat.com-content-origin-rpms-kernel-devel-3.10.0-862.37.1.el7-fd431d51-kernel-devel-3.10.0-862.37.1.el7.x86_64.rpm
+fb1fe515c0caeb244cb0804eea3f578bcebbe677f12d4af1e9e0dd92fef3d69a:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-cloud-amd64_4.19.160-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.160-2_amd64.deb
 fb3e2b847a0ec2eaec8e795b59dd61be6723dce1f7b7059858af97f2985eaa48:
   type: cos
   packages:
