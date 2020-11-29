@@ -5379,6 +5379,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d59c3695e9b79c253a02ee63051880df267700db4180ff05f97b28b095085791-kernel-devel-4.14.133-113.105.amzn2.x86_64.rpm
+300003d501cc805dafaa61596f36201eab3905395b856cf1eba7232d40617f4f:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-cloud-amd64_4.19.160-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.160-1_amd64.deb
 308077b773b44875a31a8e94b3e492f969b81df4c05b79190a56c1e10bf9a444:
   type: coreos
   packages:
@@ -6855,6 +6860,11 @@ bb2920d06250b0df0fc077a63adfd88da0bb0d1764ac770c18776cc6799d6111:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-131.0.15.el6.x86_64.rpm
+bba6194a8e40db3eb3052b1285e73777e0873c6c1d783f6180eb32bacd583dd9:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-amd64_4.19.160-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.160-1_amd64.deb
 bbb583a4229e9c577ee049c13bb0f06b134019b24c4bd4eae56d9c6265c00003:
   type: ubuntu
   packages:
@@ -6885,12 +6895,6 @@ bc9b806e9c0386be3596e048c848659c5b9261a797e68862953c63265817dd5b:
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2191.5.0-flatcar_developer_container.bin.bz2
-bc9d997240177ff331a3bbec762960bdf0062d2753c05bb89b62db9a96cc8e84:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-amd64_4.19.160-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-common_4.19.160-2_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.160-2_amd64.deb
 bc14ae369905e6ae7e708f9626210c6ae9f5d9e514cbf20a284b879dcbb8b449:
   type: redhat
   packages:
@@ -7353,12 +7357,6 @@ cbd48428d6a8854d621253dd21cce32989c2307aa83798cca594509864694fa1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-aws-5.3-headers-5.3.0-1033_5.3.0-1033.35_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-headers-5.3.0-1033-aws_5.3.0-1033.35_amd64.deb
-cc4f71d6924e3240090e443bccc3f5e351eb9e811ad34c28162da80c7842ffa0:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-cloud-amd64_4.19.160-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-common_4.19.160-2_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.160-2_amd64.deb
 cc35e754b39a2f1bd28fcc28fcbbe535f2a78ecf1dd6b070124da04e898e7a72:
   type: redhat
   packages:
