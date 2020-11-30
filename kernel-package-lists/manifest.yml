@@ -6891,6 +6891,12 @@ bc9b806e9c0386be3596e048c848659c5b9261a797e68862953c63265817dd5b:
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2191.5.0-flatcar_developer_container.bin.bz2
+bc9d997240177ff331a3bbec762960bdf0062d2753c05bb89b62db9a96cc8e84:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-amd64_4.19.160-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-13-common_4.19.160-2_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.160-2_amd64.deb
 bc14ae369905e6ae7e708f9626210c6ae9f5d9e514cbf20a284b879dcbb8b449:
   type: redhat
   packages:
