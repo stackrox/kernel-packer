@@ -13,7 +13,8 @@ import (
 )
 
 var (
-	reVersion = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)`)
+	reVersion             = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)`)
+	reVersionWithBackport = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)([\d.]+)?_`)
 
 	reformatters = map[string]ReformatterFunc{
 		"one-to-each":  reformatOneToEach,
@@ -309,6 +310,23 @@ func reformatPairs(packages []string) ([][]string, error) {
 	}
 
 	for ver, rev := range versions {
+
+		// Filter out backports if there are more than two crawled packages for this version and revision
+		if len(rev.packages) > 2 {
+			filteredPackages := []string{}
+			for _, pkg := range rev.packages {
+				matches := reVersionWithBackport.FindStringSubmatch(pkg)
+				if len(matches) < 3 || len(matches) > 4 {
+					return nil, fmt.Errorf("regex failed to match")
+				}
+				if len(matches) == 4 {
+					continue
+				}
+				filteredPackages = append(filteredPackages, pkg)
+			}
+			rev.packages = filteredPackages
+		}
+
 		// Sanity check, there should always be a pair of packages.
 		if len(rev.packages) != 2 {
 			return nil, fmt.Errorf("version %q (rev %d): unpaired package %v", ver, rev.revision, rev.packages)
