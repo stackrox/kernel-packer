@@ -674,6 +674,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.43.1.el7.x86_64.rpm
+2befd655813f1b7d849efc53345f84d85465167776fca4dc7a27478cd0eedb60:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1041.38-kernel-src.tar.gz
 2bfcf8fa3a18c7b60deb52543beae4227fe1d7dfdb717726e7e222c77a4b5983:
   type: redhat
   packages:
@@ -3457,6 +3461,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.110-1.el7.elrepo.x86_64.rpm
+95eb820a58ba9850fde7eab18c3592bd434f232eb9fc0afd25c87bc008a2e7ba:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-12871.1226.0-kernel-src.tar.gz
 95ef1fb212e264f8cedc4839d32a455056f3b1ce1a54dc7cbde9df0c2475031f:
   type: debian
   packages:
@@ -4234,6 +4242,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.6.1.el7.x86_64.rpm
+843e3d3d9002eda72ecb865d128e67c956aac36ebf656174bb016ae28858fd69:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-12371.1105.0-kernel-src.tar.gz
 844fb270e220c21aeaa1dc49e3161baab3073cd9ecfde04304db0ef52b9e78ba:
   type: redhat
   packages:
@@ -4392,6 +4404,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10575.67.0-kernel-src.tar.gz
+1572d075337e6e3cd75cf045b16cf52143b5d2db22d99124f577e9aceeb14e0c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-5.4.0-1031_5.4.0-1031.33_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-5.4.0-1031-gke_5.4.0-1031.33_amd64.deb
 1838d440627940dd47d572cc4b042e197c28badb42c75fe62b3064af7e17ceea:
   type: cos
   packages:
@@ -5663,6 +5680,10 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.0.14.el7uek.x86_64.rpm
+22946599e000514f05b64fadbffd7035790c30b003f2dff95b6da0027b40218f:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-15823.0.0-kernel-src.tar.gz
 25447748c0aeb9f51471f19a35425e5b77940727a86309fcdb8b2951ecec342e:
   type: redhat
   packages:
@@ -6010,6 +6031,11 @@ a78b69d96402df308ce75105a924f2d6f41c691289a3e5738677061556f7afa5:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1911.el7uek.x86_64.rpm
+a85a852f2b6bf7724893edd4dd390ce7769942d342ac02652a0ac6d22e7fb092:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1119_4.4.0-1119.133_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1119-aws_4.4.0-1119.133_amd64.deb
 a87c3319b9abfa766dcb2d3f1ef7e8eb74a293821dc1e617d459008bed01c70f:
   type: redhat
   packages:
@@ -6870,6 +6896,11 @@ bc14ae369905e6ae7e708f9626210c6ae9f5d9e514cbf20a284b879dcbb8b449:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.30.2.el6.x86_64.rpm
+bc46f80eccbf59c36bd910658cd97eec6c355add7192378bd391606c41c3e076:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1013_5.8.0-1013.13_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1013-gcp_5.8.0-1013.13_amd64.deb
 bc842aaedb429aebc0b76005f88d9713278863f95638b8cf38777ba5c8e2cdc8:
   type: redhat
   packages:
