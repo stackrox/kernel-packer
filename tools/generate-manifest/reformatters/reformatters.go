@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	reVersion = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)`)
+	reVersion = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)(~[\d.]+)?_`)
 
 	reformatters = map[string]ReformatterFunc{
 		"one-to-each":  reformatOneToEach,
@@ -262,6 +262,7 @@ func reformatPairs(packages []string) ([][]string, error) {
 	type rev struct {
 		packages []string
 		revision int
+		backport bool
 	}
 
 	var (
@@ -271,10 +272,10 @@ func reformatPairs(packages []string) ([][]string, error) {
 
 	for _, pkg := range packages {
 		matches := reVersion.FindStringSubmatch(pkg)
-		// Matches should have exactly 3 items, the full match, the version,
-		// and the revision number.
-		// Ex: {"4.4.0-1006.6", "4.4.0-1006", "6"}
-		if len(matches) != 3 {
+		// Matches should have 4 items, the full match, the version,
+		// the revision number, and an optional backport version.
+		// Ex: {"5.4.0-1031.33", "5.4.0-1031", "33", "~18.04.1"}
+		if len(matches) != 4 {
 			return nil, fmt.Errorf("regex failed to match")
 		}
 
@@ -285,6 +286,7 @@ func reformatPairs(packages []string) ([][]string, error) {
 		}
 
 		r, found := versions[version]
+		backport := "" != matches[3]
 
 		switch {
 		case found && r.revision > revision:
@@ -297,12 +299,15 @@ func reformatPairs(packages []string) ([][]string, error) {
 				}
 			}
 			if !pkgExists {
+				if !backport && r.backport {
+					r = rev{[]string{}, revision, backport}
+				}
 				r.packages = append(r.packages, pkg)
 			}
 		case found && r.revision < revision:
-			r = rev{[]string{pkg}, revision}
+			r = rev{[]string{pkg}, revision, backport}
 		case !found:
-			r = rev{[]string{pkg}, revision}
+			r = rev{[]string{pkg}, revision, backport}
 		}
 
 		versions[version] = r
