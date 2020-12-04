@@ -154,14 +154,38 @@
   file: rhel81.txt
   reformat: single
 
+- name: rhel82
+  description: RHEL 8.2 Kernels
+  type: redhat
+  file: rhel82.txt
+  reformat: single
+
 - name: rhel81-eus
   description: RHEL 8.1 EUS Kernels
   type: redhat
   file: rhel81-eus.txt
   reformat: single
 
+- name: rhel82-eus
+  description: RHEL 8.2 EUS Kernels
+  type: redhat
+  file: rhel82-eus.txt
+  reformat: single
+
 - name: rhel8-rhocp4.3
   description: RHEL 8 OpenShift Container Platform 4.3
   type: redhat
   file: rhel8-rhocp4.3.txt
+  reformat: single
+
+- name: rhel8-rhocp4.4
+  description: RHEL 8 OpenShift Container Platform 4.4
+  type: redhat
+  file: rhel8-rhocp4.4.txt
+  reformat: single
+
+- name: rhel8-rhocp4.5
+  description: RHEL 8 OpenShift Container Platform 4.5
+  type: redhat
+  file: rhel8-rhocp4.5.txt
   reformat: single
