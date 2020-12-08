@@ -1,6 +1,6 @@
 FROM centos:8
 
-RUN yum --disablerepo='*' --enablerepo='BaseOS' makecache \
+RUN yum --disablerepo='*' makecache \
  && yum install -y subscription-manager
 
 # Obtained via https://access.redhat.com/labs/rhpc
