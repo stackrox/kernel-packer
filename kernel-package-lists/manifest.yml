@@ -68,6 +68,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12371.273.0-kernel-src.tar.gz
+0a87cbb3f6a6fa31a552204792a4586d85514358e57f3ba3a0224b195f02e858:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1034_5.4.0-1034.35_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1034-azure_5.4.0-1034.35_amd64.deb
 0e95bae2c9d2128c047d614be177dc3b1fdbd4d4e4ac15d776547c50d05078db:
   type: redhat
   packages:
@@ -650,11 +655,21 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-481f28639c1695786af479b6d69ee095cb70f328c964274a986200ee13c33c96-kernel-devel-4.9.70-2.243.amzn2.x86_64.rpm
+2ab925d12bf1c82a7780122dcbc0d7c44c1e819912113140a1cc1462c8626223:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1032_5.4.0-1032.33_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1032-aws_5.4.0-1032.33_amd64.deb
 2cb75013935404b750c700bf318417379c5e6442f44c2f08f55aea4e2f399ea5:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1052_4.15.0-1052.57_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1052-azure_4.15.0-1052.57_amd64.deb
+2bbf3cde0f9bb6e1fb1260fd5b5e1a6671ee4b2355703ba90273be78189c0a5b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-128-generic_4.15.0-128.131_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-128_4.15.0-128.131_all.deb
 2cc72a90cfbe7f267e645039e62e0dfbf0ed45ebaa7d8299f487298debf7df98:
   type: coreos
   packages:
@@ -2023,6 +2038,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-src.tar.gz
+08cee3a45b6fd2311e98b27213c851496a5b1212b1c19bbb62a7fc05b3a72fb7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-58-generic_5.4.0-58.64_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-58_5.4.0-58.64_all.deb
 9d01c68ce0edb17c525ce803a5efedc7e55628db73bd8453ddff4d9bc0f847c9:
   type: ubuntu
   packages:
