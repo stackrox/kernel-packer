@@ -147,9 +147,9 @@ jobs:
         command: |
           set +e
           diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml
-          if [[ "$CIRCLE_BRANCH" != "master" && -z "${CIRCLE_TAG}" ]]; then
-            circleci step halt
-          fi
+          #if [[ "$CIRCLE_BRANCH" != "master" && -z "${CIRCLE_TAG}" ]]; then
+          #  circleci step halt
+          #fi
     - save_cache:
         key: stackrox-kernel-packer-cache-v13-{{ epoch }}
         paths:
