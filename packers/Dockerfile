@@ -6,6 +6,8 @@ RUN apt-get update \
       binutils \
       make \
       gcc \
+      # Use gcc-7 for COS
+      gcc-7 \
       gcc-8-plugin-dev \
       libelf-dev \
       libc6-dev \

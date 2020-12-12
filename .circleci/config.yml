@@ -64,6 +64,17 @@ jobs:
     - restore_cache:
         key: stackrox-kernel-packer-cache-v13
     - run:
+        name: Check if PR with no-cache label
+        command: |
+          set +e
+          [[ "${CIRCLE_BRANCH}" != "master" && -z "${CIRCLE_TAG}" ]] || exit 0
+          .circleci/pr_has_label.sh "no-cache"
+          if [[ $? -eq 0 ]]; then
+            echo "PR has no-cache label, repackaging all kernel bundles."
+            rm .build-data/cache/cache.yml
+          fi
+          [[ $? -eq 0 ]]
+    - run:
         name: Sanity check cache
         command: |
           mkdir -p .build-data/cache
@@ -91,7 +102,9 @@ jobs:
           ls -lhR .build-data/bundles
     - run:
         name: Upload bundles
-        command: make upload-bundles
+        command: |
+          [[ "${CIRCLE_BRANCH}" == "master" || -n ${CIRCLE_TAG} ]] || exit 0
+          make upload-bundles
     - persist_to_workspace:
         root: .
         paths:
@@ -113,6 +126,14 @@ jobs:
     - checkout
     - attach_workspace:
         at: .
+    - restore_cache:
+        key: stackrox-kernel-packer-cache-v13
+    - run:
+        name: Move restored cache
+        command: |
+          mkdir -p .build-data/cache
+          touch .build-data/cache/cache.yml
+          mv .build-data/cache/cache.yml .build-data/cache/cache.yml.pre
     - run:
         name: Sanity check fragments
         command: ls -lh .build-data/cache
@@ -122,8 +143,13 @@ jobs:
           make combine-cache
           make clean-cache
     - run:
-        name: Sanity check cache
-        command: cat .build-data/cache/cache.yml
+        name: Diff of cache.yml after combine
+        command: |
+          set +e
+          diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml
+          if [[ "$CIRCLE_BRANCH" != "master" && -z "${CIRCLE_TAG}" ]]; then
+            circleci step halt
+          fi
     - save_cache:
         key: stackrox-kernel-packer-cache-v13-{{ epoch }}
         paths:
@@ -200,7 +226,9 @@ workflows:
   build:
     jobs:
     - lint
-    - repackage
+    - repackage:
+        requires:
+        - lint
     - combine:
         requires:
         - repackage
@@ -210,7 +238,7 @@ workflows:
         filters:
           branches:
             only:
-              - master
+            - master
     - crawl:
         context: redhat-login
         filters:

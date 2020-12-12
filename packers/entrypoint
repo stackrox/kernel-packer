@@ -94,9 +94,11 @@ repackage_coreos() {
     lbzip2 -dck "$input_package" > "$inflated_bundle"
 
     # Mount the extracted disk image on a loopback device.
-    loop_device="$(kpartx -asv "$inflated_bundle" | cut -d\  -f 3)"
+    loop_device_partition="$(kpartx -asv "$inflated_bundle" | cut -d\  -f 3)"
+    loop_device="$(echo "${loop_device_partition}" | grep -o "loop[0-9]\+")"
     local tmp_dir="$(mktemp -d)"
-    mount "/dev/mapper/${loop_device}" "$tmp_dir"
+    log "Mounting loop device partition ${loop_device_partition}"
+    mount "/dev/mapper/${loop_device_partition}" "$tmp_dir"
 
     (
         cd "$tmp_dir"
@@ -145,6 +147,8 @@ repackage_coreos() {
     # Clean up intermediate resources.
     umount "$tmp_dir"
     kpartx -dv "$inflated_bundle"
+    dmsetup remove "${loop_device_partition}"
+    losetup -d "/dev/${loop_device}"
     rm -f "$inflated_bundle"
 }
 
@@ -190,7 +194,7 @@ repackage_debian() {
 
         if [[ -n "$input_package_3" ]]; then
             # Update symbolic links to be relative.
-            local common_dir="linux-headers-${kernel_version/amd64/common}"
+            local common_dir="linux-headers-$(echo "${kernel_version}" | sed -E 's/(cloud)?-amd64/common/')"
             ln --force --relative --symbolic "usr/src/${common_dir}" "lib/modules/${kernel_version}/source"
 
             # Modify makefile arguments to work with relative paths.
@@ -201,6 +205,9 @@ repackage_debian() {
 
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'debian' "$kernel_version" "./usr/src/linux-headers-${kernel_version}")"
+
+        # Remove broken symlinks.
+        find .  -type l -exec test ! -e {} \; -exec unlink {} \;
 
         # Compress the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
@@ -251,16 +258,22 @@ repackage_cos() {
             log "blank kernel dir"
             return 1
         fi
+        log "Kernel uname is ${kernel_uname}"
 
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'cos' "${kernel_uname}" '.')"
 
-        # Copy fixed kernel config 
+        # Copy fixed kernel config
         cp /etc/includes/cos/.config .
 
-	sed -i 's/LOCALVERSION=""/LOCALVERSION="+"/' .config
-	sed -i '/^#define randomized_struct_fields_start	struct {$/d' include/linux/compiler-clang.h
-	sed -i '/^#define randomized_struct_fields_end	};$/d' include/linux/compiler-clang.h
+        sed -i 's/LOCALVERSION=""/LOCALVERSION="+"/' .config
+        sed -i '/^#define randomized_struct_fields_start	struct {$/d' include/linux/compiler-clang.h
+        sed -i '/^#define randomized_struct_fields_end	};$/d' include/linux/compiler-clang.h
+
+        # Downgrade from gcc-8 to gcc-7 to avoid gcc error in kernel versions prior to
+        # this fix: https://www.openembedded.org/pipermail/openembedded-core/2018-June/151676.html
+        rm -rf /usr/bin/gcc
+        ln -s /usr/bin/gcc-7 /usr/bin/gcc
 
         # Prepare kernel sources for module compilation
         make olddefconfig > /dev/null
