@@ -72,6 +72,7 @@ jobs:
           if [[ $? -eq 0 ]]; then
             echo "PR has no-cache label, repackaging all kernel bundles."
             rm .build-data/cache/cache.yml
+            exit 0
           fi
           [[ $? -eq 0 ]]
     - run:
