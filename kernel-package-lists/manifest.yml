@@ -1100,6 +1100,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-514.26.1.el7.x86_64.rpm
+04d2df09bead2abdb9ab3cb94de4675f07da9e6e92feb60a50ea06392138479b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1091_4.15.0-1091.104_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1091-gcp_4.15.0-1091.104_amd64.deb
 04d3b51eb45f42cf233bcd12ef4d8c46a5ec0f42d4656d14281314d0a1d4107c:
   type: redhat
   packages:
@@ -1482,6 +1487,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-aacf53daeb34e5d547cccd61ab2c32bd8366f110fb3e3d460a95715d00b22f20-kernel-devel-4.14.114-103.97.amzn2.x86_64.rpm
+6f893781269fcf45248943f750c3129f4cca5e3a0aa7eeaa6cc3c97d7c05900a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1033_5.4.0-1033.34_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1033-aws_5.4.0-1033.34_amd64.deb
 6cbddec960fee09c75a77357fb41a928992003202c56c340f20b8314ff43b777:
   type: redhat
   packages:
