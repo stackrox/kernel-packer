@@ -1513,6 +1513,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1033_5.4.0-1033.34_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1033-aws_5.4.0-1033.34_amd64.deb
+6ca4225b3c3877664f8a5473fc8c91416c3d59ab20915eba053e2895ee272d39:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-14-amd64_4.9.246-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-14-common_4.9.246-1_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.246-1_amd64.deb
 6cbddec960fee09c75a77357fb41a928992003202c56c340f20b8314ff43b777:
   type: redhat
   packages:
@@ -2734,11 +2740,6 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
-47a5569869a5397826c8f09a734e2af4cee5abe7065ba66d58bdce6a0d549611:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1033_5.4.0-1033.35_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1033-gke_5.4.0-1033.35_amd64.deb
 47dbec1f2452880218cc1b387dd869ebb13075b7c203c8af0a39394c41ea4d59:
   type: ubuntu
   packages:
@@ -7105,6 +7106,11 @@ c8ba981149f413e508fc3063462c9044984e446f1e1d2834c3f62c2abd9f6ff6:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1028_4.4.0-1028.28_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1028-gke_4.4.0-1028.28_amd64.deb
+c9be398b71f893796689bc6ee4424387c0c488086b9a84bd6a397b4dc597d93b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-5.4.0-1033_5.4.0-1033.35_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-5.4.0-1033-gke_5.4.0-1033.35_amd64.deb
 c9eeb4afdec96522b743b6bc1bf76ccb68bfee907b99b54bc54e89377d646280:
   type: redhat
   packages:
