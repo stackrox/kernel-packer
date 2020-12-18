@@ -2734,6 +2734,11 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
+47a5569869a5397826c8f09a734e2af4cee5abe7065ba66d58bdce6a0d549611:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1033_5.4.0-1033.35_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1033-gke_5.4.0-1033.35_amd64.deb
 47dbec1f2452880218cc1b387dd869ebb13075b7c203c8af0a39394c41ea4d59:
   type: ubuntu
   packages:
@@ -3711,11 +3716,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10895.123.0-kernel-src.tar.gz
-276e56b668db8499c5dbf37dd15a715ef856e2762b6151ed73b4ecd3de5100a8:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1033-gke_5.4.0-1033.35_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-5.4.0-1033_5.4.0-1033.35_amd64.deb
 282e7cd60a3e487ea627daeb750b217be2bb486ecf72f96533dfa974c591feda:
   type: coreos
   packages:
