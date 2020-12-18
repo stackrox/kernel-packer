@@ -367,6 +367,10 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1520.7.0-coreos_developer_container.bin.bz2
+1bb340171ee4fab5f0b7459479993eb41541709091860263e90914c10a2fd221:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.16.0.tar.gz
 1dc0aaf3279a04304e7008dae8360917af45fff0b4f4b2d8bc4438eb2efc472f:
   type: cos
   packages:
@@ -8929,10 +8933,6 @@ fcb7347a2e8bd599f462eec645ccc6426aa63c4bee25a1fc4e21d0f14d872473:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11021.18.0-kernel-src.tar.gz
-fcba07fce65e0770447b0db3a0d69a4a0212e8c216c6a88b8bbd25ea33dde5d9:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.12.3.tar.gz
 fccd09a56b6978da4d9a004f332e5d4c0ac82cd9e87b649aa8eed7511f55afcf:
   type: ubuntu
   packages:
