@@ -270,14 +270,12 @@ repackage_cos() {
         sed -i '/^#define randomized_struct_fields_start	struct {$/d' include/linux/compiler-clang.h
         sed -i '/^#define randomized_struct_fields_end	};$/d' include/linux/compiler-clang.h
 
-        # Downgrade from gcc-8 to gcc-7 to avoid gcc error in kernel versions prior to
-        # this fix: https://www.openembedded.org/pipermail/openembedded-core/2018-June/151676.html
-        rm -rf /usr/bin/gcc
-        ln -s /usr/bin/gcc-7 /usr/bin/gcc
-
         # Prepare kernel sources for module compilation
         make olddefconfig > /dev/null
-        make modules_prepare > /dev/null
+
+        # Use gcc-7 instead of gcc-8 to avoid compile error in helper tools/lib/subcmd/pager.c
+        # https://www.openembedded.org/pipermail/openembedded-core/2018-June/151676.html
+        make HOSTCC=gcc-7 modules_prepare > /dev/null
 
         # Delete all *.c files, excluding scripts directory
         find "${tmp_dir}" ! \( -type d \) -not -path "${tmp_dir}/scripts/*" -name "*.c" -delete
