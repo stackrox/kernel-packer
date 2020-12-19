@@ -64,8 +64,7 @@ repackage: packers
 		-cache-dir $(BUILD_DATA_DIR)/cache \
 		-pkg-dir $(BUILD_DATA_DIR)/packages \
 		-bundle-dir $(BUILD_DATA_DIR)/bundles \
-		-action build \
-		-ignore-errors
+		-action build
 
 .PHONY: combine-cache
 combine-cache:
