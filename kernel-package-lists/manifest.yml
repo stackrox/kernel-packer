@@ -884,12 +884,6 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.0.4.el7uek.x86_64.rpm
-03cf22ea330d9dbed0791b4dfde77e12cbc99491f113de66810bb8278cf93445:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-amd64_4.9.189-3-deb9u2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-common_4.9.189-3-deb9u2_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.246-1_amd64.deb
 003e52702bab663cbd876d8ccb4e87234b7a13f1d54dee991c60928d5bed10bf:
   type: redhat
   packages:
@@ -1072,12 +1066,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-29-generic_4.15.0-29.31_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-29_4.15.0-29.31_all.deb
-4dda02e0554014811ab1883181c6d16e07cf5a104fac8ba2ac8834e9a6616649:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-12-amd64_4.9.210-1-deb9u1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-12-common_4.9.210-1-deb9u1_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.246-1_amd64.deb
 4edd552e85220d81a0de175273e722c10878d88d5dc771e2782d4ead67b6aa52:
   type: redhat
   packages:
@@ -1888,6 +1876,12 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.7.1.el7.x86_64.rpm
+8b9108efb7b2968704a0527f7678051fb102b08d62596c89e5581789d96eef9f:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-12-amd64_4.9.210-1-deb9u1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-12-common_4.9.210-1-deb9u1_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.246-2_amd64.deb
 8d9352857faca54a8b6aafbb20a9bde12a6c75229d151667f16ca63656a4178d:
   type: cos
   packages:
@@ -6938,6 +6932,12 @@ bfffd178ca2c722c490c25b9e9a3fb43490021f208b8b72fbedb04b115542026:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.220-1.el7.elrepo.x86_64.rpm
+c0f0de8788fe7ae6401d9a455c8d33cb894f1ff28efb78015cebfd22f608acd8:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-amd64_4.9.189-3-deb9u2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-11-common_4.9.189-3-deb9u2_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.246-2_amd64.deb
 c0e3c51d697497ac5627c564bfdccde8bea1ae76aed18dbd7ef9a20745f5b3d7:
   type: ubuntu
   packages:
