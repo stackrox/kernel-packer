@@ -1613,6 +1613,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.302.2.el7uek.x86_64.rpm
+7f08e1046a65cedafb8d1f25bf707fdaebd1bb39b597164d375f4d5234a73147:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-132-generic_4.15.0-132.136_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-132_4.15.0-132.136_all.deb
 7f9b67dce7e9604aab96a0541add02947e098be558b3aeee96fc0bccb1109bc9:
   type: redhat
   packages:
@@ -1928,6 +1933,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-327.28.2.el7.x86_64.rpm
+8bae39d59c717a53ba630fdefad785ba4b1df96e511f960c630ff17b3ef6b971:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-62-generic_5.4.0-62.70_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-62_5.4.0-62.70_all.deb
 8fae70d3341fd7a5ff700e21bbc08b64d7a9d7f6d51c797af26a937f7f084529:
   type: cos
   packages:
@@ -7065,6 +7075,11 @@ c1c13598192e4c1cab1fb33b4d68ff59828ef7921eacefdd1c03e42c0fd8ed53:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1911.5.0-coreos_developer_container.bin.bz2
+c1fbb8a5f8082c024cbaaa35efc1d461a19f69cb14e996510ff55e66539b8e4b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-38-generic_5.8.0-38.43_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-38_5.8.0-38.43_all.deb
 c1fd2ead91aa477ac76cd0c2a0d184b32bbe6f3f78b8fec13b4e7a646ae09f29:
   type: redhat
   packages:
