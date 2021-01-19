@@ -444,6 +444,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.50-1.el7.elrepo.x86_64.rpm
+2b1c0d1a9924d414f9bfba44d720d952f3090ccd0a7618481a09729f8a20c37d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1092_4.15.0-1092.105_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1092-gcp_4.15.0-1092.105_amd64.deb
 2f1e8e993428cf3935b07885e270e688a93cde2d1b716ddc821031d39b2ae7d7:
   type: cos
   packages:
@@ -3486,6 +3491,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11647.121.0-kernel-src.tar.gz
+92a0e2f9b4f8ff757b0a0e979b9d2376636453e10ffcf40882e2ff3ad66cc89c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1039_5.4.0-1039.41_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1039-azure_5.4.0-1039.41_amd64.deb
 92e8af65acfc26558df44308d019dc9d28e5c9900b155a7c8df6f1aeb35d4ae9:
   type: cos
   packages:
