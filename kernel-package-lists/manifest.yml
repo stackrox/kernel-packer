@@ -5460,10 +5460,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1016_4.4.0-1016.25_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1016-aws_4.4.0-1016.25_amd64.deb
-99329a57743fc89721fe8f899ef9c3604dbf87909547bc071f7ac34c6b8bbf02:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.13.0.tar.gz
 99605e9b9f2beda82f1f54d545e2f17ea683b3c0a5882816d397d5b9dfb1cc26:
   type: coreos
   packages:
@@ -7099,6 +7095,10 @@ bdcdbf2b5455ac330835c1526498e0b50261a5913cd55eab2453315b764f4053:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.6.3.el6.x86_64.rpm
+bdda2c78cf2aec9363a2d1d1071252ff5282269cc7b535ef1759ad79b3cda804:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.17.0.tar.gz
 bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   type: ubuntu
   packages:
