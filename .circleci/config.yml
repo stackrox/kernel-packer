@@ -165,10 +165,6 @@ jobs:
     - gcloud-init
     - checkout
     - run:
-        name: Generate manifest
-        command: |
-            circleci step halt
-    - run:
         name: Crawl package repositories
         command: make crawl
     - run:
