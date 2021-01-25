@@ -11,7 +11,7 @@ commands:
         working_directory: ~/.config/gcloud
         command: |
           if [[ "$NO_INSTALL_GCLOUD" != "true" ]]; then
-            pip install --upgrade pip
+            pip install --upgrade "pip < 21.0"
             pip install wheel
             pip install -U crcmod google_compute_engine
             pip install -U gcloud gsutil
