@@ -65,6 +65,19 @@ crawl-flatcar: build-crawl-container
 crawl-flatcar-beta: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Flatcar-Beta > $(CRAWLED_PACKAGE_DIR)/flatcar-beta.txt
 
+.PHONY: crawl-suse
+crawl-suse: build-crawl-container
+	# Get repository access tokens using SUSE mirroring proxy user/password credentials
+	./get-suse-repo-tokens.sh > $(BUILD_DATA_DIR)/suse-repo-tokens.json
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/suse-tokens:/suse-tokens:ro" \
+		-v "$(ROOT_DIR_ABS)/kernel-crawler/suse-repos.txt:/suse-repos.txt:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-repos-file /suse-tokens/repo-data.json \
+			-repos-names-file /suse-repos.txt \
+		> $(CRAWLED_PACKAGE_DIR)/suse.txt
+
 .PHONY: crawl-rhel
 crawl-rhel: build-crawl-container
 	# Trade a username & password for a certificate keypair that allows up to
@@ -193,10 +206,6 @@ crawl-ubuntu-azure: build-crawl-container
 .PHONY: crawl-ubuntu-aws
 crawl-ubuntu-aws: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
-
-.PHONY: crawl-suse
-crawl-suse: build-crawl-container
-	docker run --rm -i kernel-crawler crawl SUSE > $(CRAWLED_PACKAGE_DIR)/suse.txt
 
 .PHONY: crawl
 crawl: build-crawl-container crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-gardenlinux crawl-ubuntu-aws crawl-suse
