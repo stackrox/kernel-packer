@@ -67,16 +67,16 @@ crawl-flatcar-beta: build-crawl-container
 
 .PHONY: crawl-suse
 crawl-suse: build-crawl-container
-	# Get repository access tokens using SUSE mirroring proxy user/password credentials
+	# Get repository auth tokens using SUSE mirroring proxy user/password credentials
 	@mkdir -p $(BUILD_DATA_DIR)/suse-repo-tokens
-	./suse/get-suse-repo-tokens.sh > $(BUILD_DATA_DIR)/suse-repo-tokens/data.json
+	./get-suse-repo-tokens.sh > $(BUILD_DATA_DIR)/suse-repo-tokens/repos.json
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/suse-repo-tokens:/suse-repo-tokens:ro" \
 		-v "$(ROOT_DIR_ABS)/kernel-crawler/suse:/suse:ro" \
 		--entrypoint /usr/bin/rhel-crawler \
 		kernel-crawler:latest \
-			-repos-file /suse-repo-tokens/info.json \
-			-repos-names-file /suse/repos.txt \
+			-repos-file /suse-repo-tokens/repos.json \
+			-repos-names-file /suse/repo-names.txt \
 		> $(CRAWLED_PACKAGE_DIR)/suse.txt
 
 .PHONY: crawl-rhel
