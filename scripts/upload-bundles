@@ -11,7 +11,7 @@ main() {
     echo "Uploading bundles to ${bucket_names[0]}/"
     mkdir -p "${build_data_dir}/bundles"
     find "${build_data_dir}/bundles" -name '*.tgz' | \
-      gsutil -m cp -c -L "${build_data_dir}/gsutil-upload.log" -I "${bucket_names[0]}/" || true
+      gsutil -m cp -c -L "${build_data_dir}/gsutil-upload.log" -I "${bucket_names[0]%/}/" || true
 }
 
 main "$@"

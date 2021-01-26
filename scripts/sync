@@ -52,7 +52,7 @@ main() {
     echo
 
     info "Uploading files to ${bucket_names[0]}/"
-    find "$download_dir" -type f | gsutil -m cp -I "${bucket_names[0]}/"
+    find "$download_dir" -type f | gsutil -m cp -I "${bucket_names[0]%/}/"
     echo
 }
 
