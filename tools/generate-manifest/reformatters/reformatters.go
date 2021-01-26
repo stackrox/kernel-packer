@@ -14,7 +14,7 @@ import (
 
 var (
 	reVersion   = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)(~[\d.]+)?_`)
-	suseVersion = regexp.MustCompile(`\d+\.\d+\.\d+-[a-z]*\d+\.\d+(?:.\d+)?`)
+	suseVersion = regexp.MustCompile(`\d+\.\d+\.\d+-[a-z]*\d+\.\d+`)
 
 	reformatters = map[string]ReformatterFunc{
 		"one-to-each":  reformatOneToEach,
