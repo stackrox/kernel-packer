@@ -8,8 +8,7 @@ main() {
 
     # Fetch headers to determine the total number of pages for the repo data URL
     curl -s -I -u "${userpass}" "${SUSE_REPO_URL}"
-    http_header_link="$(curl -s -I -u "${userpass}" "${SUSE_REPO_URL}" | grep "^link: .*$")"
-    echo "${http_header_link}" | sed -E "s/.*page=([0-9]+)>; rel=\"last\".*/\\1/"
+    http_header_link="$(curl -s -I -u "${userpass}" "${SUSE_REPO_URL}" | grep "^[Ll]ink: .*$")"
     last_page="$(echo "${http_header_link}" | sed -E "s/.*page=([0-9]+)>; rel=\"last\".*/\\1/")"
 
     # Get each repo page in json
