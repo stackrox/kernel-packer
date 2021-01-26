@@ -57,6 +57,26 @@ minikube_excludes = [
     "kubernetes/minikube/archive/v0.29.0.tar.gz",
 ]
 repos = {
+    "SUSE" : [
+        # {
+        #     "root" : "http://ftp.opensuse.org/update/leap/",
+        #     "discovery_pattern" : "/html/body//table//tr/td//a[regex:test(@href, '^[0-9]+\.[0-9]+/$')]/@href",
+        #     "subdirs" : [
+        #         "oss/x86_64/",
+        #         "oss/noarch/",
+        #     ],
+        #     "page_pattern" : "/html/body//table//tr/td/a[regex:test(@href, '^kernel-(default-|azure-)?devel-(azure-)?[0-9].*\.rpm$')]/@href",
+        # },
+        {
+            "root" : "http://ftp.opensuse.org/update/leap/15.3/sle/",
+            "discovery_pattern" : "/html/body//table//tr/td//a[regex:test(@href, '^sle-sp[0-9]+/$')]/@href",
+            "subdirs" : [
+                "noarch/",
+                "x86_64/",
+            ],
+            "page_pattern" : "/html/body//table//tr/td/a[regex:test(@href, '^kernel-(default-|azure-)?devel-(azure-)?[0-9].*\.rpm$')]/@href",
+        },
+    ],
     "CentOS" : [
         {
             # This is the root path of the repository in which the script will

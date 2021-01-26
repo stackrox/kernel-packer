@@ -189,3 +189,9 @@
   type: redhat
   file: rhel8-rhocp4.5.txt
   reformat: single
+
+- name: suse
+  description: SUSE
+  type: suse
+  file: suse.txt
+  reformat: suse

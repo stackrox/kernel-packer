@@ -32,6 +32,24 @@ commands:
           echo "Checking that gsutil binary is functional"
           gsutil ls 'gs://stackrox-kernel-packages/' >/dev/null
 
+  setup-staging:
+    steps:
+    - run:
+        name: Setup staging on PR builds
+        command: |
+          if [[ "$CIRCLE_BRANCH" == "master" || -n "$CIRCLE_TAG" ]]; then
+            KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages"
+            KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles"
+          else
+            KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-packages"
+            KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-bundles"
+          fi
+
+          cat >>"$BASH_ENV" \<<EOF
+          export KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_BUCKET}"
+          export KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_BUCKET}"
+          EOF
+
 jobs:
   lint:
     docker:
@@ -61,6 +79,10 @@ jobs:
     steps:
     - gcloud-init
     - checkout
+    - setup-staging
+    - attach_workspace:
+        at: .
+    # TODO: restore to 14
     - restore_cache:
         key: stackrox-kernel-packer-cache-v14
     - run:
@@ -74,7 +96,6 @@ jobs:
             rm .build-data/cache/cache.yml
             exit 0
           fi
-          [[ $? -eq 0 ]]
     - run:
         name: Sanity check cache
         command: |
@@ -104,7 +125,6 @@ jobs:
     - run:
         name: Upload bundles
         command: |
-          [[ "${CIRCLE_BRANCH}" == "master" || -n ${CIRCLE_TAG} ]] || exit 0
           make upload-bundles
     - persist_to_workspace:
         root: .
@@ -118,12 +138,13 @@ jobs:
         webhook: '${SLACK_WEBHOOK_ONCALL}'
 
   combine:
-    docker:
-    - image: circleci/golang:1.11.5
+    machine: true
     environment:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
+    - gcloud-init
+    - setup-staging
     - checkout
     - attach_workspace:
         at: .
@@ -151,6 +172,22 @@ jobs:
           if [[ "$CIRCLE_BRANCH" != "master" && -z "${CIRCLE_TAG}" ]]; then
             circleci step halt
           fi
+    - run:
+        name: Sanity check bundles
+        command: |
+          IFS=',' read -r -a bucket_names \<<< "${KERNEL_BUNDLE_BUCKET}"
+          for bucket_name in "${bucket_names[@]}"; do
+            echo "Kernel versions in ${bucket_name}"
+            gsutil ls "${bucket_name}/**.tgz" | \
+              sed 's|^.*bundle-||' | sed 's|\.tgz$||' | sort || true
+          done
+    - run:
+        name: Skip cache save if not master
+        command: |
+          if [[ "$CIRCLE_BRANCH" != "master" && -z "${CIRCLE_TAG}" ]]; then
+            circleci step halt
+          fi
+    # TODO: restore to 14
     - save_cache:
         key: stackrox-kernel-packer-cache-v14-{{ epoch }}
         paths:
@@ -162,8 +199,24 @@ jobs:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
-    - gcloud-init
     - checkout
+    - run:
+        name: Check if PR with crawl label
+        command: |
+          set +e
+          if [[ "${CIRCLE_BRANCH}" == "master" || -n "${CIRCLE_TAG}" ]]; then
+            echo "Always run kernel-crawler on this branch or tag."
+            exit 0
+          fi
+          .circleci/pr_has_label.sh "crawl"
+          if [[ $? -eq 0 ]]; then
+            echo "PR has crawl label, running kernel-crawler."
+            exit 0
+          fi
+          echo "Add crawl label to PR to run kernel-crawler."
+          circleci step halt
+    - gcloud-init
+    - setup-staging
     - run:
         name: Crawl package repositories
         command: make crawl
@@ -188,6 +241,10 @@ jobs:
         path: .build-data
         destination: build-data
         when: always
+    - persist_to_workspace:
+        root: .
+        paths:
+        - kernel-package-lists/manifest.yml
     - add_ssh_keys:
         fingerprints:
         - 'dd:79:df:69:0f:13:db:0e:08:3e:3b:f4:b2:e3:57:77'
@@ -227,9 +284,13 @@ workflows:
   build:
     jobs:
     - lint
-    - repackage:
+    - crawl:
+        context: redhat-login
         requires:
         - lint
+    - repackage:
+        requires:
+        - crawl
     - combine:
         requires:
         - repackage
@@ -239,13 +300,6 @@ workflows:
         filters:
           branches:
             only:
-            - master
-    - crawl:
-        context: redhat-login
-        filters:
-          branches:
-            only:
-            - /.*dev-crawl.*/
             - master
 
   cron:

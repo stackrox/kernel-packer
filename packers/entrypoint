@@ -72,6 +72,11 @@ main() {
         	repackage_oracle "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
+        suse)
+            log 'Repackaging suse'
+            repackage_suse "$checksum" "$output_dir" "${packages[@]}"
+        ;;
+
         *)
             log 'unknown distro'
             return 1
@@ -341,6 +346,63 @@ repackage_redhat() {
     )
 }
 
+# Repackages two SUSE RPM files into a bundle tarball.
+repackage_suse() {
+    if [[ $# -ne 4 ]]; then
+        log "invalid number of arguments"
+        return 1
+    fi
+
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package_1="$3"
+    local input_package_2="$4"
+
+    # Create a temporary directory for extracting the RPM package tree.
+    local tmp_dir="$(mktemp -d)"
+    (
+        cd "$tmp_dir"
+
+        # Extract the kernel development RPM packages.
+        rpm2cpio "$input_package_1" | cpio -idm
+        rpm2cpio "$input_package_2" | cpio -idm
+
+        # Get the name of the base kernel directory, e.g. linux-5.3.18-18.24-azure-obj or linux-4.12.14-28.20-obj
+        local kernel_obj="$(ls -1 "usr/src/" | grep "linux-[0-9].*-obj")"
+        # Get name of the base kernel directory, e.g. azure or default
+        local kernel_flavor="$(ls -1 "usr/src/${kernel_obj}/x86_64/" | head -n1)"
+        # Create the full path to kernel directory with architecture specific config
+        local kernel_dir="${tmp_dir}/usr/src/${kernel_obj}/x86_64/${kernel_flavor}"
+        # Create the full path of non-architecture specific kernel headers
+        local kernel_base_dir="${tmp_dir}/usr/src/${kernel_obj%-obj}"
+        # Get kernel version id from config release file
+        local kernel_version="$(cat "${kernel_dir}/include/config/kernel.release")"
+
+        # Sanity check the kernel version from release file
+        if [[ -z "$kernel_version" ]]; then
+            log "blank kernel dir"
+            return 1
+        fi
+        log "Kernel version is $kernel_version"
+
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'suse' "$kernel_version" '.')"
+
+        # Merge SUSE kernel package directories
+        rm "${kernel_dir}/Makefile"
+        rsync -ua "${kernel_base_dir}/" "${kernel_dir}/"
+
+        # Remove broken symlinks.
+        find "${kernel_dir}" -type l -exec test ! -e {} \; -exec unlink {} \;
+
+        # Compress only part of the file hierarchy into a tarball.
+        tar --create --dereference --hard-dereference --file - \
+            --directory "$meta_dir" . \
+            --directory "${kernel_dir}" . \
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+    )
+}
+
 # Repackages two Ubuntu DEB files into a bundle tarball.
 repackage_ubuntu() {
     if [[ $# -ne 4 ]]; then
@@ -499,7 +561,7 @@ repackage_linuxkit() {
     )
 }
 
-# Repackages a linuxkit kernel into a bundle tarball.
+# Repackages a kernel into a bundle tarball.
 repackage_oracle() {
     if [[ $# -ne 3 ]]; then
         log "invalid number of arguments"

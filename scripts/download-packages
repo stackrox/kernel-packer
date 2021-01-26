@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+main() {
+    # build data directory to download files
+    build_data_dir="${1:-./build-data}"
+    # Example: "gs://stackrox-kernel-packages"
+    bucket_name_list="${2:-gs://stackrox-kernel-packages}"
+
+	mkdir -p "${build_data_dir}/packages"
+
+    IFS=',' read -r -a bucket_names <<< "$bucket_name_list"
+    # copy from staging bucket last
+    for (( i=${#bucket_names[@]}-1 ; i>=0 ; i-- )) ; do
+      bucket_packages="$(mktemp)"
+      sed "s|^|${bucket_names[i]}|" "${build_data_dir}/packages.txt" > "${bucket_packages}"
+	  gsutil -m cp -c -L "${build_data_dir}/gsutil-download.log" \
+        -I "${build_data_dir}/packages" < "${bucket_packages}" || true
+      rm "${bucket_packages}"
+    done
+}
+
+main "$@"

@@ -81,18 +81,15 @@ list-files:
 	@go run ./tools/repackage-kernels/main.go \
 		-manifest $(MANIFEST_FILE) \
 		-cache-dir $(BUILD_DATA_DIR)/cache \
-		-prefix gs://stackrox-kernel-packages \
 		-action files | tee $(BUILD_DATA_DIR)/packages.txt
 
 .PHONY: download-packages
 download-packages:
-	@mkdir -p $(BUILD_DATA_DIR)/packages
-	@gsutil -m cp -c -L $(BUILD_DATA_DIR)/gsutil-download.log -I $(BUILD_DATA_DIR)/packages < $(BUILD_DATA_DIR)/packages.txt || true
+	@./scripts/download-packages $(BUILD_DATA_DIR) $(KERNEL_PACKAGE_BUCKET)
 
 .PHONY: upload-bundles
 upload-bundles:
-	@mkdir -p $(BUILD_DATA_DIR)/bundles
-	@find $(BUILD_DATA_DIR)/bundles -name '*.tgz' | gsutil -m cp -c -L $(BUILD_DATA_DIR)/gsutil-upload.log -I $(KERNEL_BUNDLE_BUCKET) || true
+	@./scripts/upload-bundles $(BUILD_DATA_DIR) $(KERNEL_BUNDLE_BUCKET)
 
 .PHONY: clean-cache
 clean-cache:
