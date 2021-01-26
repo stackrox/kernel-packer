@@ -68,7 +68,7 @@ crawl-flatcar-beta: build-crawl-container
 .PHONY: crawl-suse
 crawl-suse: build-crawl-container
 	# Get repository access tokens using SUSE mirroring proxy user/password credentials
-	@mkdir -p $(BUILD_DATA_DIR)/suse-tokens/
+	@mkdir -p $(BUILD_DATA_DIR)/suse
 	./get-suse-repo-tokens.sh > $(BUILD_DATA_DIR)/suse/repo-tokens.json
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/suse:/suse:ro" \
