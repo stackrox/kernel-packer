@@ -68,6 +68,7 @@ crawl-flatcar-beta: build-crawl-container
 .PHONY: crawl-suse
 crawl-suse: build-crawl-container
 	# Get repository access tokens using SUSE mirroring proxy user/password credentials
+	./get-suse-repo-tokens.sh
 	./get-suse-repo-tokens.sh > $(BUILD_DATA_DIR)/suse-repo-tokens.json
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/suse-tokens:/suse-tokens:ro" \
@@ -208,7 +209,7 @@ crawl-ubuntu-aws: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
 
 .PHONY: crawl
-crawl: build-crawl-container crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-gardenlinux crawl-ubuntu-aws crawl-suse
+crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-gardenlinux crawl-ubuntu-aws
 	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
 	docker run --rm -i kernel-crawler crawl Minikube > $(CRAWLED_PACKAGE_DIR)/minikube.txt
