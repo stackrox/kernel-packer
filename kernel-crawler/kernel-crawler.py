@@ -24,6 +24,8 @@ XPATH_NAMESPACES = {
   "regex": "http://exslt.org/regular-expressions",
 }
 
+URL_TIMEOUT = 30
+
 #
 # This is the main configuration tree for easily analyze Linux repositories
 # hunting packages. When adding repos or so be sure to respect the same data
@@ -444,6 +446,18 @@ repos = {
     		"subdirs": [""],
     	},
     ],
+    "Fedora-CoreOS" : [
+        {
+            "root" : "https://kojipkgs.fedoraproject.org/packages/kernel/",
+            "discovery_pattern": "/html/body//a[regex:test(@href, '^5\..*/$')]/@href",
+            "subdir_patterns": [
+                "/html/body//a[regex:test(@href, '^[0-9]+\.fc[0-9]+/$')]/@href",
+                "/html/body//a[regex:test(@href, '^x86_64/$')]/@href",
+            ],
+            "subdirs":  [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^kernel-devel-[0-9].*\.rpm$')]/@href",
+         },
+    ],
 }
 
 
@@ -481,7 +495,6 @@ def crawl(distro):
     Navigate the `repos` tree and look for packages we need that match the
     patterns given.
     """
-    URL_TIMEOUT = 30
 
     kernel_urls = []
     for repo in repos[distro]:
@@ -497,6 +510,8 @@ def crawl(distro):
             versions = [""]
             if len(repo["discovery_pattern"]) > 0:
                 versions = html.fromstring(root).xpath(repo["discovery_pattern"], namespaces=XPATH_NAMESPACES)
+            if "subdir_patterns" in repo:
+                versions = expand_versions_by_subdir_patterns(repo, versions)
             for version in sorted(set(versions)):
                 sys.stderr.write("Considering version "+version+"\n")
                 for subdir in sorted(set(repo["subdirs"])):
@@ -567,6 +582,33 @@ def handle_output_from_json(args):
     urls_dict = json.loads(sys.stdin.read())
     sort_and_output(urls_dict[args.mode])
 
+def expand_versions_by_subdir_patterns(repo, versions):
+    more = []
+    for version in versions:
+        more = more + descend_path(repo["root"], version, repo["subdir_patterns"])
+    return more
+
+def descend_path(root, path, patterns):
+    copy = patterns[:]
+    pattern = copy.pop(0)
+    patterns = copy
+
+    sys.stderr.write("Getting subdirs under " + path + " using pattern " + pattern + "\n")
+    page = urllib2.urlopen(root + path, timeout=URL_TIMEOUT).read()
+    subdirs = html.fromstring(page).xpath(pattern, namespaces=XPATH_NAMESPACES)
+    if len(subdirs) == 0:
+        return []
+
+    paths = list(map(lambda subdir: path + subdir, subdirs))
+
+    if len(patterns) == 0:
+        return paths
+
+    more = []
+    for path in paths:
+        more = more + descend_path(root, path, patterns)
+
+    return more
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Kernel module crawler.")
