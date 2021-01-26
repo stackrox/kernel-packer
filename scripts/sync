@@ -71,7 +71,7 @@ download() {
             -nv "$url" -O "$file" || rm -f "$file"
     elif echo "$url" | contains 'updates.suse.com'; then
         base_url="$(echo "$url" | rev | cut -d'/' -f3- | rev)/"
-        tokens_file="./build-data/suse-repo-tokens/repos.json"
+        tokens_file=".build-data/suse-repo-tokens/repos.json"
         token="$(jq -r --arg BASE_URL "${base_url}" '.[]|select(.url|contains($BASE_URL))|.token' "${tokens_file}")"
         wget -nv "${url}?${token}" -O "$file" || rm -f "$file"
     else
