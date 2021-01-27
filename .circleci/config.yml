@@ -41,6 +41,8 @@ commands:
             KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages"
             KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles"
           else
+            # The below variables ontain a comma delimited list of GCP buckets,
+            # Scripts may read from all buckets but only write to the first bucket in the list.
             KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-packages"
             KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-bundles"
           fi
