@@ -82,7 +82,6 @@ jobs:
     - setup-staging
     - attach_workspace:
         at: .
-    # TODO: restore to 14
     - restore_cache:
         key: stackrox-kernel-packer-cache-v14
     - run:
@@ -187,7 +186,6 @@ jobs:
           if [[ "$CIRCLE_BRANCH" != "master" && -z "${CIRCLE_TAG}" ]]; then
             circleci step halt
           fi
-    # TODO: restore to 14
     - save_cache:
         key: stackrox-kernel-packer-cache-v14-{{ epoch }}
         paths:
