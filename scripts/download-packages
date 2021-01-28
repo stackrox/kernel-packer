@@ -9,11 +9,11 @@ main() {
     mkdir -p "${build_data_dir}/packages"
 
     IFS=',' read -r -a bucket_names <<< "$bucket_name_list"
-    # copy from staging bucket last
-    for (( i=${#bucket_names[@]}-1 ; i>=0 ; i-- )) ; do
+    for bucket_name in "${bucket_names[@]}"; do
       bucket_packages="$(mktemp)"
-      awk -v bucket="${bucket_names[i]}" '{print bucket $0}' "${build_data_dir}/packages.txt" > "${bucket_packages}"
-	  gsutil -m cp -c -L "${build_data_dir}/gsutil-download.log" \
+      awk -v bucket="${bucket_name}" '{print bucket $0}' "${build_data_dir}/packages.txt" > "${bucket_packages}"
+      # Copy with no clobber (-n)
+      gsutil -m cp -n -c -L "${build_data_dir}/gsutil-download.log" \
         -I "${build_data_dir}/packages" < "${bucket_packages}" || true
       rm "${bucket_packages}"
     done

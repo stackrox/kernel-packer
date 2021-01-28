@@ -37,7 +37,7 @@ commands:
     - run:
         name: Setup staging on PR builds
         command: |
-          if [[ "$CIRCLE_BRANCH" == "master" || -n "$CIRCLE_TAG" ]]; then
+          if [[ "$CIRCLE_BRANCH" =~ master|main || -n "$CIRCLE_TAG" ]]; then
             KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages"
             KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles"
           else
@@ -90,7 +90,7 @@ jobs:
         name: Check if PR with no-cache label
         command: |
           set +e
-          [[ "${CIRCLE_BRANCH}" != "master" && -z "${CIRCLE_TAG}" ]] || exit 0
+          [[ "${CIRCLE_BRANCH}" =~ master|main && -z "${CIRCLE_TAG}" ]] || exit 0
           .circleci/pr_has_label.sh "no-cache"
           if [[ $? -eq 0 ]]; then
             echo "PR has no-cache label, repackaging all kernel bundles."
@@ -139,7 +139,7 @@ jobs:
     - slack/status:
         fail_only: true
         mentions: S0154UALQMB
-        only_for_branches: master
+        only_for_branches: master,main
         webhook: '${SLACK_WEBHOOK_ONCALL}'
 
   combine:
@@ -174,7 +174,7 @@ jobs:
         command: |
           set +e
           diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml
-          if [[ "$CIRCLE_BRANCH" != "master" && -z "${CIRCLE_TAG}" ]]; then
+          if [[ "$CIRCLE_BRANCH" =~ master|main && -z "${CIRCLE_TAG}" ]]; then
             circleci step halt
           fi
     - run:
@@ -193,7 +193,7 @@ jobs:
     - run:
         name: Skip cache save if not master
         command: |
-          if [[ "$CIRCLE_BRANCH" != "master" && -z "${CIRCLE_TAG}" ]]; then
+          if [[ "$CIRCLE_BRANCH" =~ master|main && -z "${CIRCLE_TAG}" ]]; then
             circleci step halt
           fi
     - save_cache:
@@ -209,11 +209,11 @@ jobs:
     steps:
     - checkout
     - run:
-        name: Check if PR with crawl label
+        name: Check if crawl job should run
         command: |
           set +e
-          if [[ "${CIRCLE_BRANCH}" == "master" || -n "${CIRCLE_TAG}" ]]; then
-            echo "Always run kernel-crawler on this branch or tag."
+          if [[ "${CIRCLE_JOB}" == "circle-cron" ]]; then
+            echo "Running scheduled cron job"
             exit 0
           fi
           .circleci/pr_has_label.sh "crawl"
@@ -221,7 +221,7 @@ jobs:
             echo "PR has crawl label, running kernel-crawler."
             exit 0
           fi
-          echo "Add crawl label to PR to run kernel-crawler."
+          echo "Not running crawl job"
           circleci step halt
     - gcloud-init
     - setup-staging
@@ -259,13 +259,13 @@ jobs:
     - run:
         name: Push any changes
         command: |
-          [[ "$CIRCLE_BRANCH" == "master" ]] || exit 0
+          [[ "$CIRCLE_BRANCH" =~ master|main ]] || exit 0
           make robo-crawl-commit
 
     - slack/status:
         fail_only: true
         mentions: S0154UALQMB
-        only_for_branches: master
+        only_for_branches: master,main
         webhook: '${SLACK_WEBHOOK_ONCALL}'
 
   collector:
@@ -293,12 +293,13 @@ workflows:
     jobs:
     - lint
     - crawl:
+        name: crawl-build
         context: redhat-login
         requires:
         - lint
     - repackage:
         requires:
-        - crawl
+        - crawl-build
     - combine:
         requires:
         - repackage
@@ -309,10 +310,12 @@ workflows:
           branches:
             only:
             - master
+            - main
 
   cron:
     jobs:
     - crawl:
+        name: crawl-cron
         context: redhat-login
     triggers:
     - schedule:
@@ -321,3 +324,4 @@ workflows:
           branches:
             only:
             - master
+            - main
