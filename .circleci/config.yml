@@ -212,7 +212,7 @@ jobs:
         name: Check if crawl job should run
         command: |
           set +e
-          if [[ "${CIRCLE_JOB}" == "circle-cron" ]]; then
+          if [[ "${CIRCLE_JOB}" == "crawl-cron" ]]; then
             echo "Running scheduled cron job"
             exit 0
           fi
