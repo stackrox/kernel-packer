@@ -719,6 +719,11 @@
   packages:
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.36-k8s-linux-headers-4.4.36-k8s_4.4.36-20161205_amd64.deb
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
+02f5581f53fe990e1f5eddbefe5e3b298bb6df75a67e1e5b5fc2e7807c418d35:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-42-generic_5.8.0-42.47_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-42_5.8.0-42.47_all.deb
 02dbf52deb076deccb5185325c172d1a1a4008b349511e6a196c8a96f40c0a31:
   type: ubuntu
   packages:
@@ -3047,10 +3052,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1078_4.15.0-1078.88_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1078-gcp_4.15.0-1078.88_amd64.deb
-58bb679d4078a4ee7378db1190a0fe933f2f226fb24d1ef79349ad2c6bc3c2af:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.13.1.tar.gz
 058a6724ef259e869f08f01479f8de2a5b2ba78aaaada8efdea08b57b1d10373:
   type: ubuntu
   packages:
@@ -3620,6 +3621,10 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11315.0.0-kernel-src.tar.gz
+96eab258c5e3e4e95e07f05079569de42ca5668b07e255bf0b7663e344232e77:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.17.1.tar.gz
 96aaba0a58beaaab31dbe8daa6e79e3b9839fc38f412061cbecec9f3997b1992:
   type: redhat
   packages:
