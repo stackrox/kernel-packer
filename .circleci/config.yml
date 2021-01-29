@@ -184,7 +184,11 @@ jobs:
     - run:
         name: Diff of cache.yml after combine
         command: |
-          diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml || [ $? -eq 1 ]
+          set +e
+          diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml
+          if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]]; then
+            circleci step halt
+          fi
     - run:
         name: Sanity check bundles
         command: |
@@ -202,7 +206,7 @@ jobs:
         name: Skip cache save if not master
         command: |
           if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]]; then
-            exit 0
+            circleci step halt
           fi
           echo "Skipping CircleCI cache save on PR build"
           circleci step halt
