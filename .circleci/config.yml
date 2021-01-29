@@ -299,7 +299,9 @@ workflows:
     jobs:
     - lint:
         context: docker-io-pull
-    - repackage:
+    - crawl:
+        name: crawl-build
+        context: redhat-login
         requires:
         - lint
     - repackage:
