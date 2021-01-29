@@ -1,5 +1,18 @@
 version: 2.1
 
+defaultImage: &defaultImage
+  image: docker.io/stackrox/apollo-ci:collector-0.3.7
+  auth:
+    username: $DOCKER_IO_PULL_USERNAME
+    password: $DOCKER_IO_PULL_PASSWORD
+
+defaults: &defaults
+  docker:
+    - *defaultImage
+  working_directory: /go/src/github.com/stackrox/kernel-packer
+  environment:
+    NO_INSTALL_GCLOUD: true
+
 orbs:
   slack: circleci/slack@3.4.2
 
@@ -54,9 +67,7 @@ commands:
 
 jobs:
   lint:
-    docker:
-    - image: circleci/golang:1.11.5
-    working_directory: /go/src/github.com/stackrox/kernel-packer
+    <<: *defaults
     steps:
     - checkout
     - run:
@@ -143,9 +154,10 @@ jobs:
         webhook: '${SLACK_WEBHOOK_ONCALL}'
 
   combine:
-    machine: true
+    <<: *defaults
     environment:
-    - GOPATH: /home/circleci/go
+      GOPATH: /home/circleci/go
+
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
     - gcloud-init
@@ -269,14 +281,8 @@ jobs:
         webhook: '${SLACK_WEBHOOK_ONCALL}'
 
   collector:
-    docker:
-      - image: google/cloud-sdk:295.0.0-alpine
-    environment:
-      NO_INSTALL_GCLOUD: true
+    <<: *defaults
     steps:
-      - run:
-          name: Install dependencies
-          command: apk add --no-cache py-pip make
       - gcloud-init
       - checkout
       - add_ssh_keys:
@@ -291,19 +297,20 @@ workflows:
 
   build:
     jobs:
-    - lint
-    - crawl:
-        name: crawl-build
-        context: redhat-login
+    - lint:
+        context: docker-io-pull
+    - repackage:
         requires:
         - lint
     - repackage:
         requires:
         - crawl-build
     - combine:
+        context: docker-io-pull
         requires:
         - repackage
     - collector:
+        context: docker-io-pull
         requires:
         - combine
         filters:
