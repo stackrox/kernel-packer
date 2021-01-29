@@ -13,12 +13,14 @@ import (
 )
 
 var (
-	reVersion = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)(~[\d.]+)?_`)
+	reVersion   = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)(~[\d.]+)?_`)
+	suseVersion = regexp.MustCompile(`\d+\.\d+\.\d+-[a-z]*\d+\.\d+`)
 
 	reformatters = map[string]ReformatterFunc{
 		"one-to-each":  reformatOneToEach,
 		"one-to-pairs": reformatOneToPairs,
 		"pairs":        reformatPairs,
+		"suse":         reformatSuse,
 		"single":       reformatSingle,
 		"debian":       reformatDebian,
 	}
@@ -339,4 +341,36 @@ func reformatSingle(packages []string) ([][]string, error) {
 	}
 
 	return sets, nil
+}
+
+// reformatSuse consumes a list of SUSE packages and matches versions
+// between the arch specific (x86_64) and non-archicture specific package.
+func reformatSuse(packages []string) ([][]string, error) {
+	var (
+		manifests = make([][]string, 0, len(packages)/2)
+		versions  = make(map[string][]string)
+	)
+
+	for _, pkg := range packages {
+		matches := suseVersion.FindStringSubmatch(pkg)
+		if len(matches) != 1 {
+			return nil, fmt.Errorf("regex failed to match")
+		}
+
+		version := matches[0]
+		if _, found := versions[version]; !found {
+			versions[version] = make([]string, 0, 2)
+		}
+		versions[version] = append(versions[version], pkg)
+	}
+
+	for ver, pkgPair := range versions {
+		// Sanity check, there should always be a pair of packages.
+		if len(pkgPair) != 2 {
+			return nil, fmt.Errorf("version %q: unpaired package %v", ver, pkgPair)
+		}
+		manifests = append(manifests, pkgPair)
+	}
+
+	return manifests, nil
 }

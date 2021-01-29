@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+main() {
+    # build data directory to download files
+    build_data_dir="${1:-./build-data}"
+    # Example: "gs://stackrox-kernel-packages"
+    bucket_name_list="${2:-gs://stackrox-kernel-packages}"
+
+    mkdir -p "${build_data_dir}/packages"
+
+    IFS=',' read -r -a bucket_names <<< "$bucket_name_list"
+    for bucket_name in "${bucket_names[@]}"; do
+      bucket_packages="$(mktemp)"
+      awk -v bucket="${bucket_name}" '{print bucket $0}' "${build_data_dir}/packages.txt" > "${bucket_packages}"
+      # Copy with no clobber (-n)
+      gsutil -m cp -n -c -L "${build_data_dir}/gsutil-download.log" \
+        -I "${build_data_dir}/packages" < "${bucket_packages}" || true
+      rm "${bucket_packages}"
+    done
+}
+
+main "$@"

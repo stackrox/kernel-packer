@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+main() {
+    # build data directory to upload files from
+    build_data_dir="${1:-./build-data}"
+
+    # Example: "gs://stackrox-kernel-bundles"
+    bucket_name_list="${2:-gs://stackrox-kernel-bundles}"
+    IFS=',' read -r -a bucket_names <<< "$bucket_name_list"
+
+    echo "Uploading bundles to ${bucket_names[0]}/"
+    mkdir -p "${build_data_dir}/bundles"
+    find "${build_data_dir}/bundles" -name '*.tgz' | \
+      gsutil -m cp -c -L "${build_data_dir}/gsutil-upload.log" -I "${bucket_names[0]%/}/" || true
+}
+
+main "$@"

@@ -1,5 +1,18 @@
 version: 2.1
 
+defaultImage: &defaultImage
+  image: docker.io/stackrox/apollo-ci:collector-0.3.7
+  auth:
+    username: $DOCKER_IO_PULL_USERNAME
+    password: $DOCKER_IO_PULL_PASSWORD
+
+defaults: &defaults
+  docker:
+    - *defaultImage
+  working_directory: /go/src/github.com/stackrox/kernel-packer
+  environment:
+    NO_INSTALL_GCLOUD: true
+
 orbs:
   slack: circleci/slack@3.4.2
 
@@ -32,11 +45,29 @@ commands:
           echo "Checking that gsutil binary is functional"
           gsutil ls 'gs://stackrox-kernel-packages/' >/dev/null
 
+  setup-staging:
+    steps:
+    - run:
+        name: Setup staging on PR builds
+        command: |
+          if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ || -n "$CIRCLE_TAG" ]]; then
+            KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages"
+            KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles"
+          else
+            # The below variables ontain a comma delimited list of GCP buckets,
+            # Scripts may read from all buckets but only write to the first bucket in the list.
+            KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-packages"
+            KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-bundles"
+          fi
+
+          cat >>"$BASH_ENV" \<<EOF
+          export KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_BUCKET}"
+          export KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_BUCKET}"
+          EOF
+
 jobs:
   lint:
-    docker:
-    - image: circleci/golang:1.11.5
-    working_directory: /go/src/github.com/stackrox/kernel-packer
+    <<: *defaults
     steps:
     - checkout
     - run:
@@ -61,20 +92,22 @@ jobs:
     steps:
     - gcloud-init
     - checkout
+    - setup-staging
+    - attach_workspace:
+        at: .
     - restore_cache:
         key: stackrox-kernel-packer-cache-v14
     - run:
         name: Check if PR with no-cache label
         command: |
           set +e
-          [[ "${CIRCLE_BRANCH}" != "master" && -z "${CIRCLE_TAG}" ]] || exit 0
+          [[ "${CIRCLE_BRANCH}" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]] || exit 0
           .circleci/pr_has_label.sh "no-cache"
           if [[ $? -eq 0 ]]; then
             echo "PR has no-cache label, repackaging all kernel bundles."
             rm .build-data/cache/cache.yml
             exit 0
           fi
-          [[ $? -eq 0 ]]
     - run:
         name: Sanity check cache
         command: |
@@ -104,8 +137,11 @@ jobs:
     - run:
         name: Upload bundles
         command: |
-          [[ "${CIRCLE_BRANCH}" == "master" || -n ${CIRCLE_TAG} ]] || exit 0
           make upload-bundles
+    - store_artifacts:
+        path: .build-data/gsutil-download.log
+        destination: gsutil-download.log
+        when: always
     - persist_to_workspace:
         root: .
         paths:
@@ -114,16 +150,18 @@ jobs:
     - slack/status:
         fail_only: true
         mentions: S0154UALQMB
-        only_for_branches: master
+        only_for_branches: master,main
         webhook: '${SLACK_WEBHOOK_ONCALL}'
 
   combine:
-    docker:
-    - image: circleci/golang:1.11.5
+    <<: *defaults
     environment:
-    - GOPATH: /home/circleci/go
+      GOPATH: /home/circleci/go
+
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
+    - gcloud-init
+    - setup-staging
     - checkout
     - attach_workspace:
         at: .
@@ -148,7 +186,26 @@ jobs:
         command: |
           set +e
           diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml
-          if [[ "$CIRCLE_BRANCH" != "master" && -z "${CIRCLE_TAG}" ]]; then
+          if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]]; then
+            circleci step halt
+          fi
+    - run:
+        name: Sanity check bundles
+        command: |
+          IFS=',' read -r -a bucket_names \<<< "${KERNEL_BUNDLE_BUCKET}"
+          for bucket_name in "${bucket_names[@]}"; do
+            echo "Kernel versions in ${bucket_name}"
+            gsutil ls "${bucket_name}/**.tgz" | \
+              sed 's|^.*bundle-||' | sed 's|\.tgz$||' | sort || true
+          done
+    - store_artifacts:
+        path: .build-data/cache/cache.yml
+        destination: cache.yml
+        when: always
+    - run:
+        name: Skip cache save if not master
+        command: |
+          if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]]; then
             circleci step halt
           fi
     - save_cache:
@@ -162,8 +219,24 @@ jobs:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
     steps:
-    - gcloud-init
     - checkout
+    - run:
+        name: Check if crawl job should run
+        command: |
+          set +e
+          if [[ "${CIRCLE_JOB}" == "crawl-cron" ]]; then
+            echo "Running scheduled cron job"
+            exit 0
+          fi
+          .circleci/pr_has_label.sh "crawl"
+          if [[ $? -eq 0 ]]; then
+            echo "PR has crawl label, running kernel-crawler."
+            exit 0
+          fi
+          echo "Not running crawl job"
+          circleci step halt
+    - gcloud-init
+    - setup-staging
     - run:
         name: Crawl package repositories
         command: make crawl
@@ -188,30 +261,28 @@ jobs:
         path: .build-data
         destination: build-data
         when: always
+    - persist_to_workspace:
+        root: .
+        paths:
+        - kernel-package-lists/manifest.yml
     - add_ssh_keys:
         fingerprints:
         - 'dd:79:df:69:0f:13:db:0e:08:3e:3b:f4:b2:e3:57:77'
     - run:
         name: Push any changes
         command: |
-          [[ "$CIRCLE_BRANCH" == "master" ]] || exit 0
+          [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ ]] || exit 0
           make robo-crawl-commit
 
     - slack/status:
         fail_only: true
         mentions: S0154UALQMB
-        only_for_branches: master
+        only_for_branches: master,main
         webhook: '${SLACK_WEBHOOK_ONCALL}'
 
   collector:
-    docker:
-      - image: google/cloud-sdk:295.0.0-alpine
-    environment:
-      NO_INSTALL_GCLOUD: true
+    <<: *defaults
     steps:
-      - run:
-          name: Install dependencies
-          command: apk add --no-cache py-pip make
       - gcloud-init
       - checkout
       - add_ssh_keys:
@@ -226,31 +297,34 @@ workflows:
 
   build:
     jobs:
-    - lint
-    - repackage:
+    - lint:
+        context: docker-io-pull
+    - crawl:
+        name: crawl-build
+        context: redhat-login
         requires:
         - lint
+    - repackage:
+        requires:
+        - crawl-build
     - combine:
+        context: docker-io-pull
         requires:
         - repackage
     - collector:
+        context: docker-io-pull
         requires:
         - combine
         filters:
           branches:
             only:
             - master
-    - crawl:
-        context: redhat-login
-        filters:
-          branches:
-            only:
-            - /.*dev-crawl.*/
-            - master
+            - main
 
   cron:
     jobs:
     - crawl:
+        name: crawl-cron
         context: redhat-login
     triggers:
     - schedule:
@@ -259,3 +333,4 @@ workflows:
           branches:
             only:
             - master
+            - main
