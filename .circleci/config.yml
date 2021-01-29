@@ -50,7 +50,7 @@ commands:
     - run:
         name: Setup staging on PR builds
         command: |
-          if [[ "$CIRCLE_BRANCH" =~ master|main || -n "$CIRCLE_TAG" ]]; then
+          if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ || -n "$CIRCLE_TAG" ]]; then
             KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages"
             KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles"
           else
@@ -101,7 +101,7 @@ jobs:
         name: Check if PR with no-cache label
         command: |
           set +e
-          [[ "${CIRCLE_BRANCH}" =~ master|main && -z "${CIRCLE_TAG}" ]] || exit 0
+          [[ "${CIRCLE_BRANCH}" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]] || exit 0
           .circleci/pr_has_label.sh "no-cache"
           if [[ $? -eq 0 ]]; then
             echo "PR has no-cache label, repackaging all kernel bundles."
@@ -186,7 +186,7 @@ jobs:
         command: |
           set +e
           diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml
-          if [[ "$CIRCLE_BRANCH" =~ master|main && -z "${CIRCLE_TAG}" ]]; then
+          if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]]; then
             circleci step halt
           fi
     - run:
@@ -205,7 +205,7 @@ jobs:
     - run:
         name: Skip cache save if not master
         command: |
-          if [[ "$CIRCLE_BRANCH" =~ master|main && -z "${CIRCLE_TAG}" ]]; then
+          if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]]; then
             circleci step halt
           fi
     - save_cache:
@@ -271,7 +271,7 @@ jobs:
     - run:
         name: Push any changes
         command: |
-          [[ "$CIRCLE_BRANCH" =~ master|main ]] || exit 0
+          [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ ]] || exit 0
           make robo-crawl-commit
 
     - slack/status:
