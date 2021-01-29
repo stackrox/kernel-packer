@@ -51,7 +51,10 @@ func mainCmd() error {
 			return err
 		}
 		var repoInfos []repoInfo
-		json.Unmarshal(repoInfoBytes, &repoInfos)
+		err = json.Unmarshal(repoInfoBytes, &repoInfos)
+		if err != nil {
+			return err
+		}
 		for _, info := range repoInfos {
 			repoInfoByName[info.Name] = info
 		}
