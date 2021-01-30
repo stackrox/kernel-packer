@@ -209,7 +209,7 @@ jobs:
             circleci step halt
           fi
     - save_cache:
-        key: stackrox-kernel-packer-cache-v14-{{ epoch }}
+        key: stackrox-kernel-packer-cache-v15-{{ epoch }}
         paths:
         - .build-data/cache/cache.yml
 
