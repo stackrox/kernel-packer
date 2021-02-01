@@ -24,7 +24,7 @@ XPATH_NAMESPACES = {
   "regex": "http://exslt.org/regular-expressions",
 }
 
-URL_TIMEOUT = 30
+URL_TIMEOUT = 60
 
 #
 # This is the main configuration tree for easily analyze Linux repositories
