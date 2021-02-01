@@ -96,7 +96,7 @@ jobs:
     - attach_workspace:
         at: .
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v14
+        key: stackrox-kernel-packer-cache-v15
     - run:
         name: Check if PR with no-cache label
         command: |
@@ -166,7 +166,7 @@ jobs:
     - attach_workspace:
         at: .
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v14
+        key: stackrox-kernel-packer-cache-v15
     - run:
         name: Move restored cache
         command: |
@@ -209,7 +209,7 @@ jobs:
             circleci step halt
           fi
     - save_cache:
-        key: stackrox-kernel-packer-cache-v14-{{ epoch }}
+        key: stackrox-kernel-packer-cache-v15-{{ epoch }}
         paths:
         - .build-data/cache/cache.yml
 
