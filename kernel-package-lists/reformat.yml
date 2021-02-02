@@ -28,6 +28,12 @@
   file: coreos-eol.txt
   reformat: single
 
+- name: fedora-coreos
+  description: Fedora CoreOS kernels
+  type: coreos
+  file: fedora-coreos.txt
+  reformat: single
+
 - name: flatcar
   description: Flatcar kernels
   type: coreos
