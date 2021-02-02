@@ -3739,6 +3739,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1037_4.15.0-1037.39_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1037-gke_4.15.0-1037.39_amd64.deb
+94ef23fb0bcea67028a91ba23bc5a85fa96b195f1bc8fc8287c16240db9ecf5f:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.66.1.el7.x86_64.rpm
 94cff95f6f4a3d5c330cafb1e3aee0e56078f796ad94fd933008ab36701cf2d6:
   type: cos
   packages:
@@ -4586,6 +4590,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.6.1.el7.x86_64.rpm
+829a12e21cfd3cf8eb0eb4e0d196285c4db74aa2a48abf7dca808eced0c44258:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.15.2.el7.x86_64.rpm
 843e3d3d9002eda72ecb865d128e67c956aac36ebf656174bb016ae28858fd69:
   type: cos
   packages:
@@ -7968,6 +7976,12 @@ ccc7d645c28e5d5f90c948442dd8e4348072a3cd71c8e11f2dde66df7f62c694:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-327.10.1.el7.x86_64.rpm
+ccc8d1e40b51198d79fcc1e24fe5e3dba13a1103afc42acb2a0139c8156c5b9a:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-14-amd64_4.19.171-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-14-common_4.19.171-1_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.171-1_amd64.deb
 ccf06ea0a6219feb72631e1475d3a478d2f9bb787203390137bff82f06704b8f:
   type: redhat
   packages:
