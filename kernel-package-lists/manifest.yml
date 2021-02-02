@@ -4961,6 +4961,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.4.2.el8_0.x86_64.rpm
+5443f604b0fadf1ec9d2cb895690eee9944ffb72b5ad163372acb2e44a5b80e8:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-cloud-amd64_4.19.171-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-common_4.19.171-2_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.171-2_amd64.deb
 5468c617df15dc9da19589fb19a713454be49b79fef80123b9d5ab4f91490051:
   type: ubuntu
   packages:
@@ -6768,12 +6774,6 @@ acee9eac9044714ca3764803dd74735ea0b98959442bdcc931b2644b251f85ab:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-c6d10fb9a508d39c236f87146686f5649d6d6837153c1f1ad2f2de201304c19d-kernel-devel-4.14.70-72.55.amzn2.x86_64.rpm
-acf31d276259d64a6ca378fe027e5dd89fcee6ec8bafbec8b6ceb4a627f4414d:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-amd64_4.19.171-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-common_4.19.171-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.171-1_amd64.deb
 acff4c1dd98386703b586a88e83ea2eae93e116147d9440774c9fca437f784b0:
   type: redhat
   packages:
@@ -7982,12 +7982,6 @@ ccc7d645c28e5d5f90c948442dd8e4348072a3cd71c8e11f2dde66df7f62c694:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-327.10.1.el7.x86_64.rpm
-ccc8d1e40b51198d79fcc1e24fe5e3dba13a1103afc42acb2a0139c8156c5b9a:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-14-amd64_4.19.171-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-14-common_4.19.171-1_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.171-1_amd64.deb
 ccf06ea0a6219feb72631e1475d3a478d2f9bb787203390137bff82f06704b8f:
   type: redhat
   packages:
