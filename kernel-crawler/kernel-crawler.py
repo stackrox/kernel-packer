@@ -27,8 +27,6 @@ XPATH_NAMESPACES = {
   "regex": "http://exslt.org/regular-expressions",
 }
 
-URL_TIMEOUT = 60
-
 #
 # This is the main configuration tree for easily analyze Linux repositories
 # hunting packages. When adding repos or so be sure to respect the same data
@@ -505,6 +503,9 @@ repos = {
     ],
 }
 
+retry = urllib3.util.Retry(connect=5, read=5, redirect=5, backoff_factor=1)
+timeout = urllib3.util.Timeout(connect=10, read=60)
+http = urllib3.PoolManager(retries=retry, timeout=timeout)
 
 def crawl_s3(repo):
     def val(xml, path):
@@ -577,7 +578,7 @@ def crawl(distro):
                                 continue
                             else:
                                 sys.stderr.write("Adding package " + rpm + "\n")
-                                raw_url = "{}{}".format(download_root, url_unquote(rpm))
+                                raw_url = "{}{}".format(download_root, urllib3.util.parse_url(rpm))
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
                     except urllib3.exceptions.HTTPError as e:
@@ -640,7 +641,7 @@ def descend_path(root, path, patterns):
     patterns = copy
 
     sys.stderr.write("Getting subdirs under " + path + " using pattern " + pattern + "\n")
-    page = urllib2.urlopen(root + path, timeout=URL_TIMEOUT).read()
+    page = http.request('GET', root + path).data
     subdirs = html.fromstring(page).xpath(pattern, namespaces=XPATH_NAMESPACES)
     if len(subdirs) == 0:
         return []
