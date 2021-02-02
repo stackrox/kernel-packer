@@ -492,7 +492,7 @@ repos = {
     "Fedora-CoreOS" : [
         {
             "root" : "https://kojipkgs.fedoraproject.org/packages/kernel/",
-            "discovery_pattern": "/html/body//a[regex:test(@href, '^5\..*/$')]/@href",
+            "discovery_pattern": "/html/body//a[regex:test(@href, '^5\.(8|9|1[0-9])\..*/$')]/@href",
             "subdir_patterns": [
                 "/html/body//a[regex:test(@href, '^[0-9]+\.fc[0-9]+/$')]/@href",
                 "/html/body//a[regex:test(@href, '^x86_64/$')]/@href",
