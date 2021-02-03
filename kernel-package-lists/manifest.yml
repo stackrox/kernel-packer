@@ -220,6 +220,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2025.403.3.el7uek.x86_64.rpm
+1a5d6708931ce2bbd2e23903b6a623335f6697892451a67305f0ba615a76d921:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-14-amd64_4.19.171-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.171-1_amd64.deb
 1c5dabd524cd28867b94ea9e5a16fc251470276b4175cef030773f3c523709a4:
   type: ubuntu
   packages:
@@ -679,6 +684,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1052_4.15.0-1052.57_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1052-azure_4.15.0-1052.57_amd64.deb
+2dbdf9704084b0b6d108e73406dd65bff5fe9838076dd428fe8bacab850fcc89:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-amd64_4.19.171-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.171-2_amd64.deb
 2bbf3cde0f9bb6e1fb1260fd5b5e1a6671ee4b2355703ba90273be78189c0a5b:
   type: ubuntu
   packages:
@@ -931,6 +941,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.5.2.el7uek.x86_64.rpm
+3ad05048ad32fef66c949f572bd8defca935f2ef0af90b1e3cceee8e0ef0a8c4:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-14-cloud-amd64_4.19.171-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.171-1_amd64.deb
 3edb4969f2480c7e3c50ca822747dbe05be4a72c1afd0d6f550e218dc37367fb:
   type: redhat
   packages:
@@ -5637,6 +5652,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-327.36.2.el7.x86_64.rpm
+77631d336663936f4b2e7a02f9b606a820b22b9a1fd9ddb86c556e5425466360:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-cloud-amd64_4.19.171-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.171-2_amd64.deb
 77752afbee1b174e8f85cb241c64212e242390b6dc4e9353a87aae42c3a00c61:
   type: suse
   packages:
@@ -6768,12 +6788,6 @@ acee9eac9044714ca3764803dd74735ea0b98959442bdcc931b2644b251f85ab:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-c6d10fb9a508d39c236f87146686f5649d6d6837153c1f1ad2f2de201304c19d-kernel-devel-4.14.70-72.55.amzn2.x86_64.rpm
-acf31d276259d64a6ca378fe027e5dd89fcee6ec8bafbec8b6ceb4a627f4414d:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-amd64_4.19.171-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-common_4.19.171-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.171-1_amd64.deb
 acff4c1dd98386703b586a88e83ea2eae93e116147d9440774c9fca437f784b0:
   type: redhat
   packages:
@@ -8305,12 +8319,6 @@ d64deca6c6cb66e1699f68065e3b8f2b2efae9dcec9608e0bb6aab485cf0edca:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.230-1.el7.elrepo.x86_64.rpm
-d66a17213c9187930a8e0708cdc6c49ebfac4e8bf91d39078a05feed4348b577:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-cloud-amd64_4.19.171-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-14-common_4.19.171-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.171-1_amd64.deb
 d70ad02e665e2401660b8f8e7fb44a8e4251ebb3227cc07d61c6f4205f7266ed:
   type: ubuntu
   packages:
