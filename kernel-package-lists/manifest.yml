@@ -1602,6 +1602,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-aacf53daeb34e5d547cccd61ab2c32bd8366f110fb3e3d460a95715d00b22f20-kernel-devel-4.14.114-103.97.amzn2.x86_64.rpm
+6ea0a4d829438a558d1108dc3529bb0be041676ac56e2209b1e180cc69119075:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.8.0-1022_5.8.0-1022.24_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.8.0-1022-azure_5.8.0-1022.24_amd64.deb
 6cbddec960fee09c75a77357fb41a928992003202c56c340f20b8314ff43b777:
   type: redhat
   packages:
@@ -1790,6 +1795,11 @@
   - http---18.185.215.86-packages-linux-headers-5.4.0-5-cloud-amd64_5.4.68-1_amd64.deb
   - http---18.185.215.86-packages-linux-headers-5.4.0-5-common_5.4.68-1_all.deb
   - http---18.185.215.86-packages-linux-kbuild-5.4_5.4.68-1_amd64.deb
+7c6747de9dba069106351e72f3b57dbac5c618ca2d9a94edfd916ba7b13ef0dd:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-43-generic_5.8.0-43.49_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-43_5.8.0-43.49_all.deb
 7c61800e9428fc0f034c49b54686cf07323448971516d649cb4e4be4ca12b077:
   type: ubuntu
   packages:
@@ -9767,6 +9777,11 @@ ff768dfe958799e67e8bb4002cd539095fed6a836e060b669c998006c3896ec0:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-161-generic_4.4.0-161.189_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-161_4.4.0-161.189_all.deb
+ff8578fc4fa1db1cb759bb72815bfc289eb786501139a85ed0e84b9cdb5ab0f9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.8.0-1023_5.8.0-1023.25_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.8.0-1023-aws_5.8.0-1023.25_amd64.deb
 ff9951e8e0369865bdb831ca6ccac97ea7be971418d3642ae3d96dfcdfc36715:
   type: ubuntu
   packages:
