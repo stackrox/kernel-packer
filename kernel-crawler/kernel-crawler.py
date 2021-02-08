@@ -223,7 +223,15 @@ repos = {
             "exclude_patterns": debian_excludes + debian_backport_excludes,
         },
     ],
-
+    "Docker-Desktop": [
+        {
+            "root": "https://docs.docker.com/docker-for-mac/release-notes/",
+            "download_root": "",
+            "discovery_pattern": "",
+            "page_pattern": "/html/body//a[regex:test(@href, '^https://desktop.docker.com/mac/stable/[0-9]+/Docker.dmg$')]/@href",
+            "subdirs": [""],
+        },
+    ],
     "Container-OptimizedOS": [
         {
             "type": "s3",
