@@ -10,9 +10,8 @@ IMAGE="docker/for-desktop-kernel"
 
 get_image_tags() {
   curl --silent "${REPO_URL}/${IMAGE}/tags" | \
-    sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | \
-    tr '}' '\n' | awk -F: '{print $3}' | \
-    grep  "\d\+\.\d\+\.\d\+-[a-z0-9]\{40\}-amd64"
+    jq -r '.[].name' | \
+    grep "^[0-9]\+\.[0-9]\+\.[0-9]\+-[a-z0-9]\{40\}-amd64$"
 }
 
 get_image_layer_urls() {
