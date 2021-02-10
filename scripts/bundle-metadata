@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+METADATA_KEYS=(BUNDLE_DISTRO BUNDLE_CHECKSUM BUNDLE_UNAME BUNDLE_VERSION BUNDLE_MINOR BUNDLE_MAJOR)
+
+extract_metadata() {
+  for key in "${METADATA_KEYS[@]}"; do
+      declare "${key}"="$(tar -O -xzf "$1" "./${key}")"
+  done
+  jq -n \
+    --arg checksum "$BUNDLE_CHECKSUM" \
+    --arg uname    "$BUNDLE_UNAME" \
+    --arg distro   "$BUNDLE_DISTRO" \
+    --arg version  "$BUNDLE_VERSION" \
+    --arg major    "$BUNDLE_MAJOR" \
+    --arg minor    "$BUNDLE_MINOR" \
+    '{uname: $uname, distro: $distro, checksum: $checksum, version: ($version + "." + $major + "." + $minor)}'
+}
+
+main() {
+    # build data directory to read metadata from
+    build_data_dir="${1:-./build-data}"
+
+    for bundle in $(find "${build_data_dir}/bundles" -name '*.tgz'); do
+      extract_metadata "${bundle}"
+    done | jq -s
+}
+
+main "$@"

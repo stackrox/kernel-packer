@@ -135,6 +135,13 @@ jobs:
           mkdir -p .build-data/bundles
           ls -lhR .build-data/bundles
     - run:
+        name: Generate bundle metadata
+        command: |
+          make bundle-metadata
+    - store_artifacts:
+        path: .build-data/bundle-metadata.json
+        destination: bundle-metadata.json
+    - run:
         name: Upload bundles
         command: |
           make upload-bundles

@@ -87,6 +87,10 @@ list-files:
 download-packages:
 	@./scripts/download-packages $(BUILD_DATA_DIR) $(KERNEL_PACKAGE_BUCKET)
 
+.PHONY: bundle-metadata
+bundle-metadata:
+	@./scripts/bundle-metadata $(BUILD_DATA_DIR) > $(BUILD_DATA_DIR)/bundle-metadata.json
+
 .PHONY: upload-bundles
 upload-bundles:
 	@./scripts/upload-bundles $(BUILD_DATA_DIR) $(KERNEL_BUNDLE_BUCKET)
