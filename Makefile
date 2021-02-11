@@ -89,7 +89,8 @@ download-packages:
 
 .PHONY: bundle-metadata
 bundle-metadata:
-	@./scripts/bundle-metadata $(BUILD_DATA_DIR)
+	@mkdir -p .build-data/bundle-metadata
+	@./scripts/bundle-metadata $(BUILD_DATA_DIR) > $(BUILD_DATA_DIR)/bundle-metadata/info_$(CIRCLE_NODE_INDEX).json
 
 .PHONY: upload-bundles
 upload-bundles:

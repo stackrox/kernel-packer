@@ -17,7 +17,6 @@ extract_metadata() {
 }
 
 main() {
-    # build data directory to read metadata from
     build_data_dir="${1:-./build-data}"
 
     for bundle in $(find "${build_data_dir}/bundles" -name '*.tgz'); do

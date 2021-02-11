@@ -153,6 +153,7 @@ jobs:
         root: .
         paths:
         - .build-data/cache
+        - .build-data/bundle-metadata
 
     - slack/status:
         fail_only: true
