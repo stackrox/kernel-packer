@@ -136,6 +136,7 @@ jobs:
           ls -lhR .build-data/bundles
     - run:
         name: Generate bundle metadata
+        no_output_timeout: 30m
         command: |
           make bundle-metadata
     - store_artifacts:
