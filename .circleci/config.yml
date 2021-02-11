@@ -205,8 +205,7 @@ jobs:
     - run:
         name: Join metadata
         command: |
-          cat ./build-data/bundle-metadata/*.json | \
-            jq -s > ./build-data/bundle-metadata.json
+          cat .build-data/bundle-metadata/*.json | jq -s > .build-data/bundle-metadata.json
     - store_artifacts:
         path: .build-data/bundle-metadata
         destination: bundle-metadata
