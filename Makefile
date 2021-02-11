@@ -89,7 +89,7 @@ download-packages:
 
 .PHONY: bundle-metadata
 bundle-metadata:
-	@./scripts/bundle-metadata $(BUILD_DATA_DIR) > $(BUILD_DATA_DIR)/bundle-metadata.json
+	@./scripts/bundle-metadata $(BUILD_DATA_DIR)
 
 .PHONY: upload-bundles
 upload-bundles:
