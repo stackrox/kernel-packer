@@ -202,13 +202,21 @@ jobs:
             gsutil ls "${bucket_name}/**.tgz" | \
               sed 's|^.*bundle-||' | sed 's|\.tgz$||' | sort || true
           done
+    - run:
+        name: Join metadata
+        command: |
+          cat ./build-data/bundle-metadata/*.json | \
+            jq -s > ./build-data/bundle-metadata.json
+    - store_artifacts:
+        path: .build-data/bundle-metadata
+        destination: bundle-metadata
+    - store_artifacts:
+        path: .build-data/bundle-metadata.json
+        destination: bundle-metadata.json
     - store_artifacts:
         path: .build-data/cache/cache.yml
         destination: cache.yml
         when: always
-    - store_artifacts:
-        path: .build-data/bundle-metadata
-        destination: bundle-metadata
     - run:
         name: Skip cache save if not master
         command: |
