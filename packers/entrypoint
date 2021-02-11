@@ -265,9 +265,6 @@ repackage_cos() {
         fi
         log "Kernel uname is ${kernel_uname}"
 
-        # Generate bundle meta files
-        meta_dir="$(bundle_meta "$checksum" 'cos' "${kernel_uname}" '.')"
-
         # Copy fixed kernel config
         cp /etc/includes/cos/.config .
 
@@ -290,6 +287,9 @@ repackage_cos() {
         log "Kernel version is ${kernel_version_cos}"
 
         local bundle_path="${output_dir}/bundle-${kernel_version_cos}.tgz"
+
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'cos' "${kernel_version_cos}" '.')"
 
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
