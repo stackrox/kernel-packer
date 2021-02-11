@@ -139,8 +139,8 @@ jobs:
         command: |
           make bundle-metadata
     - store_artifacts:
-        path: .build-data/bundle-metadata.json
-        destination: bundle-metadata.json
+        path: .build-data/bundle-metadata
+        destination: bundle-metadata
     - run:
         name: Upload bundles
         command: |
@@ -206,6 +206,9 @@ jobs:
         path: .build-data/cache/cache.yml
         destination: cache.yml
         when: always
+    - store_artifacts:
+        path: .build-data/bundle-metadata
+        destination: bundle-metadata
     - run:
         name: Skip cache save if not master
         command: |
