@@ -101,7 +101,6 @@ jobs:
         name: Check if PR with no-cache label
         command: |
           set +e
-          [[ "${CIRCLE_BRANCH}" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]] || exit 0
           .circleci/pr_has_label.sh "no-cache"
           if [[ $? -eq 0 ]]; then
             echo "PR has no-cache label, repackaging all kernel bundles."
