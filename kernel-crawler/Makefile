@@ -39,7 +39,12 @@ crawl-debian: build-crawl-container
 crawl-amazon: build-crawl-container
 	# Amazon doesn't actually publish a GPG signature for the package manifest, so
 	# we don't actually supply that argument here.
-	docker run --rm -i --entrypoint python3 kernel-crawler repo-crawler.py --print yum http://amazonlinux.us-west-2.amazonaws.com/2017.12/core/latest/x86_64/mirror.list --match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon.txt
+	docker run --rm -i --entrypoint python3 kernel-crawler repo-crawler.py --print yum \
+		http://amazonlinux.us-west-2.amazonaws.com/2/core/latest/x86_64/mirror.list \
+		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon.txt
+	docker run --rm -i --entrypoint python3 kernel-crawler repo-crawler.py --print yum \
+		http://amazonlinux.us-west-2.amazonaws.com/2/extras/kernel-5.4/latest/x86_64/mirror.list \
+		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon-extras.txt
 
 .PHONY: crawl-ubuntu-hwe
 crawl-ubuntu-hwe: build-crawl-container
