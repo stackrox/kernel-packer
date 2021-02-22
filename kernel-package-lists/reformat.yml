@@ -1,7 +1,13 @@
 - name: amazon
-  description: AWS kernels
+  description: Amazon Linux 2 kernels
   type: redhat
   file: amazon.txt
+  reformat: single
+
+- name: amazon-extras
+  description: Amazon Linux 2 kernels (extras)
+  type: redhat
+  file: amazon-extras.txt
   reformat: single
 
 - name: centos
