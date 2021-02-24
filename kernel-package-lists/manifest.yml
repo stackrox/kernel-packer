@@ -716,6 +716,11 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1409.9.0-coreos_developer_container.bin.bz2
+2fc578d65adab08981a2c7f328d2ebf73da624441cdbef8d76fb3d62062fe82b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1093_4.15.0-1093.106_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1093-gcp_4.15.0-1093.106_amd64.deb
 2bca1de587f5871fb1053db4279b6c1850d6f4add0378f1fa774f7e17f61a27c:
   type: ubuntu
   packages:
@@ -9700,11 +9705,6 @@ f57036e132fe71f4ab310ad4611a2630b2bc3eb382dd5b393beffa6d9cc0f5a7:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1007_4.15.0-1007.7_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1007-aws_4.15.0-1007.7_amd64.deb
-f66878cbc70e9444537f56f42de49263b62a6950adad7c971b01927fa7ecdca5:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1093_4.15.0-1093.106_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1093-gcp_4.15.0-1093.106_amd64.deb
 f595073ec4571912b9c129ac32593373a69c2510ba1eeb73d7e409559d90b9d2:
   type: suse
   packages:
