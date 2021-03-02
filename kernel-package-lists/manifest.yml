@@ -162,6 +162,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1032_4.15.0-1032.34_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1032-gcp_4.15.0-1032.34_amd64.deb
+0ab685dc9bf33c0cd54b7871152256a0e59fc983c8b3c0a1468a6d56cc7e6259:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.18.0.tar.gz
 0dba6149f2b2c933e7114afdf5b22075d7a73462200796f68f64b39a1b868182:
   type: redhat
   packages:
@@ -8965,10 +8969,6 @@ e3c498fc7b831a6fe36204e5e09151da092cc82234a0323a052f765f8a81db1e:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.219-1.el7.elrepo.x86_64.rpm
-e4f82e57f7b9c1e190744418dad3fe7911643a5646c59140a9c57e76f5eed696:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.14.0.tar.gz
 e05d17c91b73b142bfc3526819af5899fc0bdcaaab86b0121a51b5c53078ab0d:
   type: ubuntu
   packages:
