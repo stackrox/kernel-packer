@@ -228,7 +228,7 @@ repos = {
             "root": "https://docs.docker.com/docker-for-mac/release-notes/",
             "download_root": "",
             "discovery_pattern": "",
-            "page_pattern": "/html/body//a[regex:test(@href, '^https://desktop.docker.com/mac/stable/[0-9]+/Docker.dmg$')]/@href",
+            "page_pattern": "/html/body//a[regex:test(@href, '^https://desktop.docker.com/mac/stable/.*/Docker.dmg$')]/@href",
             "subdirs": [""],
         },
     ],
