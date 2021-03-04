@@ -242,6 +242,10 @@ jobs:
         name: Download and reupload crawled files
         command: make sync
     - run:
+        name: Filter kernels for docker desktop
+        command: |
+          make filter-kernels-docker-desktop
+    - run:
         name: Generate manifest
         command: |
           make manifest
