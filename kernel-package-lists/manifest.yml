@@ -2222,6 +2222,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1039_4.15.0-1039.41_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1039-aws_4.15.0-1039.41_amd64.deb
+8af2370983c795f3a7baa0c4bf2d81da91b0ae8ddb794e9932226b4d247e85e7:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-v1.18.1.tar.gz
 08c3bf4a2186624e78cea7eec0d6a06398c54591e5502fccb8bcc0bc10512cce:
   type: redhat
   packages:
@@ -8983,10 +8987,6 @@ e9e1ca9ace5a20463ffc3e3ce759eb99c36738b239f7fcdb363cdd8a14e6468c:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.66.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.66.1.x86_64.rpm
-e9f179550c76ee75ddf1d2d765f30f58e97053ddd2b370340319b3a7948e98bd:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.14.1.tar.gz
 e9afd6c211cff015bc41c13a3bcb922eeb5d6d8f2785864cea77784256b4ef1d:
   type: cos
   packages:
