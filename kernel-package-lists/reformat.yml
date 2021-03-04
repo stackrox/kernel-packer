@@ -201,3 +201,9 @@
   type: suse
   file: suse.txt
   reformat: suse
+
+- name: docker-desktop
+  description: Docker for Desktop
+  type: docker-desktop
+  file: docker-desktop.txt
+  reformat: single
