@@ -258,6 +258,7 @@ jobs:
         name: Prepare artifacts
         command: |
           rm -rf .build-data/downloads
+          rm -rf .build-data/packages
         when: always
     - store_artifacts:
         path: .build-data
