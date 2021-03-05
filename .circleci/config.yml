@@ -242,9 +242,11 @@ jobs:
         name: Download and reupload crawled files
         command: make sync
     - run:
-        name: Filter kernels for docker desktop
+        name: Filter kernels for docker desktop if new dmg or kernels are found
         command: |
-          make filter-kernels-docker-desktop
+          if git diff-index --quiet HEAD -- "kernel-package-lists/docker-desktop"* ; then
+            make filter-kernels-docker-desktop
+          fi
     - run:
         name: Generate manifest
         command: |

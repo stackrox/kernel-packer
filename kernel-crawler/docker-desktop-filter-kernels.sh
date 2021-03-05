@@ -14,6 +14,7 @@ simplify() {
 }
 
 kernel_bin_sha() {
+    kernel_file="$1"
     sha256sum "${kernel_file}" | cut -d' ' -f 1
 }
 
