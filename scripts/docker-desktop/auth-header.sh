@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Generate an authorization bearer token string for a hardcoded docker image repository.
 
 set -euo pipefail
 

@@ -1,19 +1,25 @@
 #!/usr/bin/env bash
 
+# Crawl tags of the docker for desktop kernel images and blob URL of each non-empty layer
+# Image details are here https://hub.docker.com/r/docker/for-desktop-kernel
+# and here: https://github.com/linuxkit/linuxkit/blob/master/kernel/Dockerfile
+
 set -euo pipefail
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
 REGISTRY_URL="https://registry-1.docker.io/v2"
 REPO_URL="https://registry.hub.docker.com/v1/repositories"
+TAG_PATTERN="^[0-9]\+\.[0-9]\+\.[0-9]\+-[a-z0-9]\{40\}-amd64$"
 IMAGE="docker/for-desktop-kernel"
 
+# Get all tags for the 'docker/for-desktop-kernel' that match the pattern
 get_image_tags() {
   curl --silent "${REPO_URL}/${IMAGE}/tags" | \
-    jq -r '.[].name' | \
-    grep "^[0-9]\+\.[0-9]\+\.[0-9]\+-[a-z0-9]\{40\}-amd64$"
+    jq -r '.[].name' | grep "${TAG_PATTERN}"
 }
 
+# Query the layer info for a tag and print a URL for each non-empty layer
 get_image_layer_urls() {
   local tag="$1"
   local auth_header="$2"
