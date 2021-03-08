@@ -2582,6 +2582,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1024_5.8.0-1024.25_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1024-gcp_5.8.0-1024.25_amd64.deb
+12fcc74db9e352c8792f4c7a2a58ab038848c08f4ce7f159052ecf0fc52e4118:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16234.0.0-kernel-src.tar.gz
 13bb2352d9a67e3a01557cc6c6beba16053d2298d30bab2a7ab76636d0bbc238:
   type: redhat
   packages:
@@ -7017,6 +7021,10 @@ ae2a760809755c417e6f75eaced54b904cacf2a54845226b420a009122f94485:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1353.6.0-coreos_developer_container.bin.bz2
+ae11a4883faddb02d9723c55addb72db64e2d7396c31cb9beae9872c13dafd21:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.0.376-kernel-src.tar.gz
 ae26dbcbb537882a6dd6fc888dc0bcb3975e3a4b28c0c9ae8e0f2329da2b4f3a:
   type: ubuntu
   packages:
