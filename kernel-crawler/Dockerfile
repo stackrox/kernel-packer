@@ -9,6 +9,7 @@ FROM python:3.7-slim
 RUN apt-get update \
  && apt-get install --no-install-recommends -y \
     python3-lxml \
+    python3-urllib3 \
     git \
  && rm -rf /var/lib/apt
 
