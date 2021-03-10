@@ -199,7 +199,7 @@ repackage_debian() {
 
         if [[ -n "$input_package_3" ]]; then
             # Update symbolic links to be relative.
-            local common_dir="linux-headers-$(echo "${kernel_version}" | sed -E 's/(cloud)?-amd64/common/')"
+            local common_dir="linux-headers-$(echo "${kernel_version}" | sed -E 's/(cloud-)?amd64/common/')"
             ln --force --relative --symbolic "usr/src/${common_dir}" "lib/modules/${kernel_version}/source"
 
             # Modify makefile arguments to work with relative paths.

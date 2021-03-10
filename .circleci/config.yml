@@ -58,6 +58,7 @@ commands:
             # Scripts may read from all buckets but only write to the first bucket in the list.
             KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-packages"
             KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-bundles"
+            echo "KERNEL_BUNDLES_STAGING_BUCKET=gs://stackrox-kernel-bundles-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1}"
           fi
 
           cat >>"$BASH_ENV" \<<EOF
@@ -96,12 +97,11 @@ jobs:
     - attach_workspace:
         at: .
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v16
+        key: stackrox-kernel-packer-cache-v17
     - run:
         name: Check if PR with no-cache label
         command: |
           set +e
-          [[ "${CIRCLE_BRANCH}" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]] || exit 0
           .circleci/pr_has_label.sh "no-cache"
           if [[ $? -eq 0 ]]; then
             echo "PR has no-cache label, repackaging all kernel bundles."
@@ -166,7 +166,7 @@ jobs:
     - attach_workspace:
         at: .
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v16
+        key: stackrox-kernel-packer-cache-v17
     - run:
         name: Move restored cache
         command: |
@@ -207,7 +207,7 @@ jobs:
           echo "Skipping CircleCI cache save on PR build"
           circleci step halt
     - save_cache:
-        key: stackrox-kernel-packer-cache-v16-{{ epoch }}
+        key: stackrox-kernel-packer-cache-v17-{{ epoch }}
         paths:
         - .build-data/cache/cache.yml
 
