@@ -14,7 +14,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt
 
 RUN pip install --no-cache-dir \
-    lxml==4.2.4
+    lxml==4.2.4 urllib3==1.26.3
 
 COPY ["kernel-crawler.py", "/"]
 COPY ["repo-crawler.py", "/"]
