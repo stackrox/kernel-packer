@@ -14,11 +14,14 @@
 import argparse
 import json
 import sys
-import urllib.request as urllib2
+import urllib3
+from urllib.parse import unquote as url_unquote
 from lxml import html
 import traceback
 import re
 import os.path
+
+http = urllib3.PoolManager()
 
 XPATH_NAMESPACES = {
   "regex": "http://exslt.org/regular-expressions",
@@ -463,7 +466,7 @@ def crawl_s3(repo):
         url = repo['root']
         if next_marker:
             url += "?marker=" + next_marker
-        body = urllib2.urlopen(url, timeout=30).read()
+        body = http.request('GET', url, timeout=30.0).data
         xml = html.fromstring(body)
         read_more = val(xml, '//istruncated/text()').lower() == "true"
         next_marker = val(xml, '//nextmarker/text()')
@@ -482,7 +485,7 @@ def crawl(distro):
     Navigate the `repos` tree and look for packages we need that match the
     patterns given.
     """
-    URL_TIMEOUT = 30
+    URL_TIMEOUT = 30.0
 
     kernel_urls = []
     for repo in repos[distro]:
@@ -494,7 +497,7 @@ def crawl(distro):
             continue
 
         try:
-            root = urllib2.urlopen(repo["root"], timeout=URL_TIMEOUT).read()
+            root = http.request('GET', repo["root"], timeout=URL_TIMEOUT).data
             versions = [""]
             if len(repo["discovery_pattern"]) > 0:
                 versions = html.fromstring(root).xpath(repo["discovery_pattern"], namespaces=XPATH_NAMESPACES)
@@ -505,7 +508,7 @@ def crawl(distro):
                         sys.stderr.write("Considering version " + version + " subdir " + subdir + "\n")
                         source = repo["root"] + version + subdir
                         download_root = source if "download_root" not in repo else repo["download_root"]
-                        page = urllib2.urlopen(source, timeout=URL_TIMEOUT).read()
+                        page = http.request('GET', source, timeout=URL_TIMEOUT).data
                         rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
                         if len(rpms) == 0:
                             sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
@@ -517,10 +520,10 @@ def crawl(distro):
                                 continue
                             else:
                                 sys.stderr.write("Adding package " + rpm + "\n")
-                                raw_url = "{}{}".format(download_root, urllib2.unquote(rpm))
+                                raw_url = "{}{}".format(download_root, url_unquote(rpm))
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
-                    except urllib2.HTTPError as e:
+                    except urllib3.exceptions.HTTPError as e:
                         sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
 
         except Exception as e:
