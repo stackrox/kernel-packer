@@ -97,7 +97,7 @@ jobs:
     - attach_workspace:
         at: .
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v16
+        key: stackrox-kernel-packer-cache-v17
     - run:
         name: Check if PR with no-cache label
         command: |
@@ -166,7 +166,7 @@ jobs:
     - attach_workspace:
         at: .
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v16
+        key: stackrox-kernel-packer-cache-v17
     - run:
         name: Move restored cache
         command: |
@@ -207,7 +207,7 @@ jobs:
           echo "Skipping CircleCI cache save on PR build"
           circleci step halt
     - save_cache:
-        key: stackrox-kernel-packer-cache-v16-{{ epoch }}
+        key: stackrox-kernel-packer-cache-v17-{{ epoch }}
         paths:
         - .build-data/cache/cache.yml
 
