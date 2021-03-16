@@ -21,6 +21,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-862.11.6.el7.x86_64.rpm
+0f5e4e5daebd6982369279d5dc1dbe2e54a20ceb708d5d18b2b4c27d567d7c15:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.63.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.63.1.x86_64.rpm
 0a05f32b3835b3c2078c832b515ea31a83705aaaf35f50f382be0c458a4b31c7:
   type: cos
   packages:
@@ -215,6 +220,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1022_5.8.0-1022.23_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1022-gcp_5.8.0-1022.23_amd64.deb
+1a2ee2fbe7a5db181fc19fbe0b74c306cb268804d0f2699836a05bfcc555e9d5:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.46.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.46.1.x86_64.rpm
 1e4da39c4cf009c72ceb53b02ebf2cc348c770eb49088ca33f66a14cb016734d:
   type: redhat
   packages:
@@ -603,10 +613,20 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-169-generic_4.4.0-169.198_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-169_4.4.0-169.198_all.deb
+2b582bea369b35ca53911ddcd058b90b43630afcb511018332e5f6127359c77f:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.9.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.9.1.x86_64.rpm
 2e647ec804ccf916928577c8539d21d57b98c6166dd9b4e11bcdb3baa595e8ff:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10323.62.0-kernel-src.tar.gz
+2c774b3f90891698eac708f0b530d8af460dca957b4181efb0f082f7bb71b19f:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.29.2.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.29.2.x86_64.rpm
 2e1321ec3550ac319409d1c292c9b8753d6738584982cabecf966acef045faff:
   type: ubuntu
   packages:
@@ -748,6 +768,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d42f478d8bb04b40a9ca5de254b7acbc39fd61894b70d475517189dfe836320d-kernel-devel-5.4.74-36.135.amzn2.x86_64.rpm
+2ff8f92b8af8bd9e9061d71eea781ac1bd9f6c3f60f4f22a50e1cffec8d2d81a:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.17.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.17.1.x86_64.rpm
 2cf17f4e7cef99c9a70e8a9f923c40232035dccdf5120125003d08bcdcdb0dbb:
   type: redhat
   packages:
@@ -779,11 +804,21 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1011_5.8.0-1011.11_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1011-gcp_5.8.0-1011.11_amd64.deb
+3c0b58ff02475723328e3bddf50c270bf464ac60153e5f5741806f3429fc800c:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.41.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.41.1.x86_64.rpm
 3c0f15192c6b907746110d49ccd4622ba54233e133d7ee6c64e4f8c527bd587a:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1108_4.15.0-1108.120_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1108-azure_4.15.0-1108.120_amd64.deb
+3f0deee45695af3a7bce6c29b76936d721558b1935bd1c256ebae9ccd182176f:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.29.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.29.1.x86_64.rpm
 3d1c23fd9835d906e3bec2a41c6d0a54f54ed20b46fc9cdbc2d9d0716ccf34be:
   type: redhat
   packages:
@@ -860,6 +895,16 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.el8.x86_64.rpm
+3e66fd52637fa82630887eeb7f6ae48a41a859cc24f63e9df0d3e12a757631d0:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-25.28.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-25.28.1.x86_64.rpm
+3d68b6f02ce72891de17e61112e15846647908ee82e16da539b0071abbde80d1:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.26.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.26.1.x86_64.rpm
 3c81c9088912d1813e84ae36658f7e451e3edee4bae369c5db0e4df352a8aae3:
   type: redhat
   packages:
@@ -962,6 +1007,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-os-x86_64-Packages-kernel-devel-3.10.0-514.el7.x86_64.rpm
+3ffd107e86b3798cc2fd669e52950e40166bd7f62cdb1dd7e19e4a7d2aa67fa2:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.29.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.29.1.x86_64.rpm
 3dfffc76d353cd1657d04f47689b63f6f1e13c26b481f5889bc39741929065cb:
   type: coreos
   packages:
@@ -1179,6 +1229,11 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2303.4.0-coreos_developer_container.bin.bz2
+4fe9b02fe51ff00a6a395184a848b1ad8114295070859bf1a5845346800c9684:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.63.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.63.1.x86_64.rpm
 4cecd4978d04f26c2c6eb3d5e0bd9f77d778dc8fc03b8d2f42451c982666ced5:
   type: cos
   packages:
@@ -1431,6 +1486,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11895.38.0-kernel-src.tar.gz
+5abe3166ea087fa7e83a988eac48e69b846feef3c86bc87a7e1b342db2eb9fe6:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.7.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.7.1.x86_64.rpm
 5dbfb74af2120776ca4fa4200472c22a16ab8cb4bb54529b2bc174002c1de14e:
   type: redhat
   packages:
@@ -1772,6 +1832,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.8.0-1016_5.8.0-1016.17_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.8.0-1016-aws_5.8.0-1016.17_amd64.deb
+7e302a35a20b4dcc180a73e3144d82b3c359180f10224faeddd17f1c17155823:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.40.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.40.1.x86_64.rpm
 7d365e74da7bb651ff63d5cc5285af8ab94aede67ffe9ac3d7122d6c8ba4a2d1:
   type: redhat
   packages:
@@ -1784,6 +1849,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-0c2fc20a36d00010828636f355baae1fee84c15fe0a773a78d94ce1c8ba99d70-kernel-devel-4.14.47-63.37.amzn2.x86_64.rpm
+7a624da600c97f479dca2476f840b7c90835f6382fdb92c3971bdebeee1190d2:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.72.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.72.1.x86_64.rpm
 7f841cea8b671238815e8585b706c35e9fe4c2a6caa841a8328c72c1431b7435:
   type: redhat
   packages:
@@ -1981,6 +2051,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.57-1.el7.elrepo.x86_64.rpm
+8d5d66a061fc7f7d34a01da6a1ef78fd582b7eba56dd7e406d48bd378d51aef7:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-25.3.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-25.3.1.x86_64.rpm
 8b7e2435e7f992469497ddfc1213646ec1c1e599156e7c135d2be77c11719ccd:
   type: cos
   packages:
@@ -2029,6 +2104,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-134-generic_4.4.0-134.160_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-134_4.4.0-134.160_all.deb
+8f88ecc264c89c40715ab398560fcf47e4972254306d6820d75e921e5bf422d0:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.12.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.12.1.x86_64.rpm
 8e378f095f3b6843d2a47694fa6020536fa70eca5622340a015b0c6e63fd4928:
   type: redhat
   packages:
@@ -2041,6 +2121,11 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.7.1.el7.x86_64.rpm
+8a4876d5c8877e6ac15fee01662fd980f839e43c8065acf251345aef0880bfb9:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.21.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.21.1.x86_64.rpm
 8d9352857faca54a8b6aafbb20a9bde12a6c75229d151667f16ca63656a4178d:
   type: cos
   packages:
@@ -2135,6 +2220,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1052_4.15.0-1052.55_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1052-gke_4.15.0-1052.55_amd64.deb
+8adea061b21ea2340790fc7fa472cb51bc4cf051e4c192c6b40bff1d68e98a45:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.78.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.78.1.x86_64.rpm
 8de4261232ecdd535c96a27ab738a869ce65ab1215a5b6afb939c1d4e3ceb649:
   type: ubuntu
   packages:
@@ -2243,6 +2333,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.205-1.el7.elrepo.x86_64.rpm
+9e75f1dd2c537e3b306f41452020aedee4511f23d0d359c037500c1c5fae4f7f:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.127.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.127.1.x86_64.rpm
 9e93a40f44ef49b34d7dfa89993301156e0e6ed1266d257ed3e93e68bd4cd195:
   type: redhat
   packages:
@@ -2401,6 +2496,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1020_5.0.0-1020.20-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1020-gke_5.0.0-1020.20-18.04.1_amd64.deb
+9fe796a47d565699de146ff3cccd120fdfd40209789a6e622ae20bc4295a8315:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.55.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.55.1.x86_64.rpm
 9ae85317e4ad569af0be3e7f6fefa703ad74b5e0031290d40c05e3048fb497bd:
   type: cos
   packages:
@@ -2573,6 +2673,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.61.2.el7.x86_64.rpm
+21b63ace0804b3389165b8af27066ba24063358267c553f0a23a2fded4d09479:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.51.2.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.51.2.x86_64.rpm
 21d47960004b6ac6daa2a4ba4f7efc852a611410ea9ba905a5013f1b363dab71:
   type: cos
   packages:
@@ -2591,6 +2696,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.77-1.el7.elrepo.x86_64.rpm
+23f6d3f0892449511ee9e8b9d23923bd0de8c573857e0b3bae33d0afaaa3e8fe:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.23.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.23.1.x86_64.rpm
 23f7ff618834712671d54072da060371224cc6e451248825b867fc5540a5ea20:
   type: redhat
   packages:
@@ -2604,6 +2714,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1028_5.4.0-1028.29_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1028-aws_5.4.0-1028.29_amd64.deb
+24d0e2f1bb3bb6674597c33380bc6af8d46f667627b790af37781127f86d99ad:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-25.6.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-25.6.1.x86_64.rpm
 24c428fb19338d91315e78b92228f48af92a96e82da12d58d015c6d8242c4cb4:
   type: redhat
   packages:
@@ -2666,6 +2781,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.222-1.el7.elrepo.x86_64.rpm
+28abf34c171237278d691e204b3b965d68a627ddbad07eb8e1062934c2bedcdf:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.12.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.12.1.x86_64.rpm
 29b3dba16a70159ad4d7d9042d6ac825d5dc6561a83e3257107c79d0bbaf9c48:
   type: redhat
   packages:
@@ -2674,6 +2794,16 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.189-1.el7.elrepo.x86_64.rpm
+29a4157a56eb99cada90ef2d54d0cfec732d21f61fa1a0e5a64cbc36343c8889:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.56.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.56.1.x86_64.rpm
+29fdd631a86b43420eaaf20b13f3f37d7f12677a96ce7512c61a91ed5af7e88d:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.68.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.68.1.x86_64.rpm
 30d2ae4df11bf186e72302e3082c5239717ea6d9df749a6b8cc12c3ef4d51f06:
   type: ubuntu
   packages:
@@ -2798,6 +2928,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.46-1.el7.elrepo.x86_64.rpm
+37c7ccfd6cae18182f8dd8664358aa69cfecd82e88640b6a988a01dfada1e3d2:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.46.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.46.1.x86_64.rpm
 37f16bc71d476259d63bc66ca7cfb237a361cb38054fd0f320b8eb193b6ea5c6:
   type: cos
   packages:
@@ -3195,6 +3330,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12871.181.0-kernel-src.tar.gz
+61f90c6175b1ae687350e548772ef1828c906daaf27b98960f460715127452b6:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.20.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.20.1.x86_64.rpm
 62c3c5a4414a7e31de6783ffc972e7aa3de91090a0a99f2a5af315df11e4547b:
   type: oracle
   packages:
@@ -3341,6 +3481,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1062.4.2.el7.x86_64.rpm
+070f156d63f30fe30f8da1071c98c3aea4532d25faf6e9dd40d72702e2e03cd3:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-25.13.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-25.13.1.x86_64.rpm
 71d9ce28821c3f64f7ab0f4b681df385eba3f2deb811a2370dc562d5b35656c5:
   type: ubuntu
   packages:
@@ -3556,6 +3701,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-693.el7.x86_64.rpm
+84ec9ad6a6795f7e523cbbeadee0be9a739ca5287483299766171f76cfec11b0:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.45.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.45.1.x86_64.rpm
 84df713276bad8a738f56502e3e21641417933e1807e5afd7f168b4d3a739aa6:
   type: ubuntu
   packages:
@@ -3565,10 +3715,20 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11229.0.0-kernel-src.tar.gz
+85a84d34a248d13ebba034f171020504206fe34dd8cfd8e7edf773306cdad7d8:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.100.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.100.1.x86_64.rpm
 85ea2f2875f559d15af843bdea8ebf806a0b4fe62a3bbbdb4aea94e4df226d89:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1062.12.1.el7.x86_64.rpm
+85bea28e3761bd8b583989ef9cf2f0f2987ba7a1f08a43f71479b812d6d2f2b7:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.71.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.71.1.x86_64.rpm
 86d0e65505a28bbd026a91cad9cf6d5c41cf29a817844ca9a39d5790436d5366:
   type: ubuntu
   packages:
@@ -3870,6 +4030,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1048_4.4.0-1048.57_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1048-aws_4.4.0-1048.57_amd64.deb
+158e6c1554161550000ac2e20f17a1fc4339ddb419bfef7ce5139fbe3fabc12d:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-25.16.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-25.16.1.x86_64.rpm
 159ad2a191ac737e50a55c873e575974f92ec10f016f61e14d8f5a41f0b6e513:
   type: redhat
   packages:
@@ -3887,6 +4052,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.305.0.el7uek.x86_64.rpm
+173f2bad61edf7a071735207be6be6a9e8a5ffed383370b17fc81cd306b06d26:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.57.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.57.1.x86_64.rpm
 173b710b5f0888ddd68b3fdba9bd6c38b89f480aa32db53fde2e60ef23abbdbc:
   type: ubuntu
   packages:
@@ -3926,6 +4096,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1127.el7.x86_64.rpm
+230aaab1616b85d4eded0b637eebbe29b01114bca382baee35df452a8e893081:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.113.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.113.1.x86_64.rpm
 0237d6f93a5a96403032247ad490edd0813641a96a8c2eb6fa28c048ccd42967:
   type: ubuntu
   packages:
@@ -4118,6 +4293,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10176.7.0-kernel-src.tar.gz
+398f3872d56bae547da9dc0ab0100244a965e2bc1c81ad8fb9be45f43e75a31c:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.67.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.67.1.x86_64.rpm
 406ac34961260a751a64b68a9791be7387b8c6cefc0dfbcd0e2eb163158b97a2:
   type: redhat
   packages:
@@ -4440,6 +4620,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1019.0-kernel-src.tar.gz
+702c281e5d38b77d0fd9fab845356ac624216e4e5ae8e6be807d8196d117d58f:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.17.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.17.1.x86_64.rpm
 706f0478d0814318c23ec90e1b6ca2f68fe4eacd28a06d6d96b306f2cbf79194:
   type: ubuntu
   packages:
@@ -4592,6 +4777,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1030_5.3.0-1030.32-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1030-gke_5.3.0-1030.32-18.04.1_amd64.deb
+893c5db0c5b7591e70a2f37f12cf65d77479fa672655c5f3a642b624e505193d:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-25.19.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-25.19.1.x86_64.rpm
 896d06d496f560cd199a7203f9cd023d8c9cdeeaa9ebab961f4ebeb30025c4bf:
   type: redhat
   packages:
@@ -4623,6 +4813,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10032.32.0-kernel-src.tar.gz
+923ab944d294d99b414751c0c7be955e68ab53d69a1d8f4d1133bf3babed91c7:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.138.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.138.1.x86_64.rpm
 925ba43df7c33e77c0ebe9bffcc7ae319253890b3de026abae1f22cd82677bee:
   type: redhat
   packages:
@@ -4636,6 +4831,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11316.171.0-kernel-src.tar.gz
+932c8c22162043e3cb16d793bdb329e66ee3003d759813eb71c1b3c9061f6a8d:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.14.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.14.2.x86_64.rpm
 942bd866f663065994dbc476f7e91cdc2932da05d88f42c51d8589b5a07f3a1d:
   type: redhat
   packages:
@@ -4703,6 +4903,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.20.1.el8_1.x86_64.rpm
+01538f1a5d34e6f6a05ec15c4861308e54621406b511392a4e7dd7744dda31af:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.60.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.60.1.x86_64.rpm
 1540c6b5fb7011f25b9f01a2b9637b79735b661311feb766f9fcadc1196adb34:
   type: cos
   packages:
@@ -4773,6 +4978,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.2.2.el7.x86_64.rpm
+3557d7594e0fb6e20cb8a0b4bf605c75d1a534a832d6ece06ed1157e1e66f094:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.37.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.37.1.x86_64.rpm
 3610a0cbb215361e81e02e6e358e7ebfb6b080fe445ff466e9606f8255594e8a:
   type: ubuntu
   packages:
@@ -4806,6 +5016,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1019_5.4.0-1019.19_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1019-azure_5.4.0-1019.19_amd64.deb
+3994d244b094e033b95a311f91218e9f6500cd02a2e6b0ba10ee50f799fa68d3:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.15.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.15.1.x86_64.rpm
 4119fb41494235269d6e58a4e573de4930f79d5bf5be6c20c7e2dd39d17ff75a:
   type: cos
   packages:
@@ -4818,6 +5033,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.11.1.el8_0.x86_64.rpm
+4190b6865071ba3067522ba443af73e474e9e6c0ae347e4193f7a1fc912b0d5f:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.38.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.38.1.x86_64.rpm
 4255d311defec7b228b4091243e4ab2107b0e5ad6828e5e41b4c1fecae530166:
   type: coreos
   packages:
@@ -4889,6 +5109,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-642.4.2.el6.x86_64.rpm
+5383fc31d5fb766b37ee618252dddfd13335e601c5fc29e882f04aaf10ac7802:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.52.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.52.1.x86_64.rpm
 5405bc2fd3d7b1f1502ac390d323c4ffa0ecc5a80b49cba60369eb7b34ad8d13:
   type: cos
   packages:
@@ -4912,6 +5137,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1046_4.15.0-1046.50_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1046-azure_4.15.0-1046.50_amd64.deb
+5508fde78d65523b24e956d3571f4a5243114a938ff8eb31f72ec80e3e5e1f84:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.141.2.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.141.2.x86_64.rpm
 5537c70c3da8359a680fcceee81e440b94c01338d3de092ac7bb43ff031b0778:
   type: ubuntu
   packages:
@@ -4983,6 +5213,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.70.0-kernel-src.tar.gz
+6341e756eea5732a93aa8b566947d69e78d6a47979b721cf35d843fe057439cf:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.49.2.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.49.2.x86_64.rpm
 6433f69b5c74536abc3aa85656d8ba298f715c8208043248e99d524de9b527dc:
   type: cos
   packages:
@@ -5090,6 +5325,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1098_4.15.0-1098.109-16.04.1_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1098-azure_4.15.0-1098.109-16.04.1_amd64.deb
+7720b4fda6229bffe3ee50cc92a37e675105a3dc192cd0fcee5a50bda65f0a1b:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.130.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.130.1.x86_64.rpm
 7779f516e0e9244fb677b3b167e94c5a3620fc0dcf82727c37fbadaf4ed7c2c5:
   type: cos
   packages:
@@ -5178,6 +5418,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.6.3.el8_2.x86_64.rpm
+8965e10d6dd634c329255d97f0b03a6502debab47e411b270e22b359c27904f9:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.7.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.7.1.x86_64.rpm
 8982ae19407cb695f6cf0c107b303ae500d62d7bd39047b90d88258259af4600:
   type: redhat
   packages:
@@ -5598,6 +5843,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-327.36.2.el7.x86_64.rpm
+77752afbee1b174e8f85cb241c64212e242390b6dc4e9353a87aae42c3a00c61:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.107.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.107.1.x86_64.rpm
 79111b519cb012b425b7d909f0ca1251fb13a003c7d4df680cc0485232dcd6fb:
   type: redhat
   packages:
@@ -5687,6 +5937,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-13078.0.0-kernel-src.tar.gz
+236177ab4691e8241675db523770006f5e0d29dce730bddefa076174af00dea1:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-25.22.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-25.22.1.x86_64.rpm
 248029d117f0ca98f5498c4ff6d1b56d02c75e46c76f7e6fa786ad065bb04887:
   type: cos
   packages:
@@ -5926,6 +6181,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1035_5.4.0-1035.36_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1035-azure_5.4.0-1035.36_amd64.deb
+2463533dd322c787c17a3c8eb60f71f241e5ea83dca181ef52bc3a52dd96b945:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.54.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.54.1.x86_64.rpm
 2869202b404454985ddc49967499060f58ae5d4dde43ee0ee6be4d8b9a8e3851:
   type: cos
   packages:
@@ -6037,6 +6297,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.108.0-kernel-src.tar.gz
+11727426c0adcd919698a611835b04e0c19c2b914c48ed8884f3c1e2c4987e00:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.48.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.48.1.x86_64.rpm
 18809826c9bab1179950f979cb58d1fe08bef2847e79d50ddfa6780ca172358a:
   type: ubuntu
   packages:
@@ -6426,6 +6691,11 @@ a78b69d96402df308ce75105a924f2d6f41c691289a3e5738677061556f7afa5:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1911.el7uek.x86_64.rpm
+a81b8ffc4e6a179185cf3329ff32513ad5a1c00987de3c561f7a7553d967a701:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.41.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.41.1.x86_64.rpm
 a85a852f2b6bf7724893edd4dd390ce7769942d342ac02652a0ac6d22e7fb092:
   type: ubuntu
   packages:
@@ -6846,14 +7116,29 @@ b0a042fc37b728a34319b426c7605f4b0192c7abcdb33c0dd7d6e1ec24a917df:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-33-generic_5.8.0-33.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-33_5.8.0-33.36_all.deb
+b0ebced533170957a495665744b43fb747623bb6d168aab2d1cf74655bb43f0b:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.58.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.58.1.x86_64.rpm
 b0ccb17fbf218e565fb82be22b53f175f6767f5026b8df1f11b66b6401864df6:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-123.6.3.el7.x86_64.rpm
+b0ed9616b323b7168dbdafe0cb61332da24decb39770f17640b6fe3850a64337:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.51.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.51.1.x86_64.rpm
 b1a45dd79517cb830dad2ed745e5f7b082335ebf78991984d4a18ebd2039942a:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.el8.x86_64.rpm
+b1f62495c2fe9759d31d04184f9c3c38b921d8f63fcb8585da77bc095035a4c2:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.43.2.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.43.2.x86_64.rpm
 b1db3d78bc054de54b4f5289cbcb1f09c22a0965961dc56f7d088561c0ad0c25:
   type: coreos
   packages:
@@ -6903,6 +7188,11 @@ b3e67bca41b711c04607d74277f153403fd1f338143b28762ea765879607ea5d:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.211-1.el7.elrepo.x86_64.rpm
+b3f632f0b82474b0b0dfbf8d93b541cf22edc475006b9f57ceb7e0ba99def9e4:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.64.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.64.1.x86_64.rpm
 b3c81383ded2d3f4eb971e67ec6d73dec76b5edd783a172e420a5054f5408104:
   type: cos
   packages:
@@ -6968,6 +7258,11 @@ b8d0bcffa361836eaa017fee414397ab8bf5c1cf38971c25ac46fa1257039ade:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-327.28.3.el7.x86_64.rpm
+b8e168e8f8f626c48ed83db248381228c9193237aa587d4d028b0c3afb241f8b:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.34.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.34.1.x86_64.rpm
 b8e603d1c06858fb8e5543437478d80b6737fa40795732fee56b961aacc4db33:
   type: redhat
   packages:
@@ -6977,6 +7272,11 @@ b8e274591630f4f542b25cbb521d0a7ad7940b3cde37a30709c22c8bd681812a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-88-generic_4.15.0-88.88_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-88_4.15.0-88.88_all.deb
+b9d1b5d4ec649b5805649e9fc273122381a9d670e1244fdbfe0b8cdb27279e46:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.18.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.18.1.x86_64.rpm
 b9da5a18cd6ea23c557fae396f45137baedad3a44f3e05275e6316dc0a978a66:
   type: cos
   packages:
@@ -7018,6 +7318,11 @@ b27b583a7a2cf6f07a6c8e396cba8c8fec77ddb5d9a15917763db07431234532:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1011_4.13.0-1011.14_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1011-azure_4.13.0-1011.14_amd64.deb
+b35cbdea8bc74f4369378567d0dffe1a180759e6d8973bad586e7b73b1c3af4a:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.37.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.37.1.x86_64.rpm
 b39ad6c3c0b68398839c936910508b2926122bf866fa717d384ef0776d528b32:
   type: cos
   packages:
@@ -7027,6 +7332,11 @@ b55c7517789f7b70494584d63b1b3a76e595ae6bb1a83488df38188f54bff250:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1027_4.4.0-1027.30_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1027-aws_4.4.0-1027.30_amd64.deb
+b58a04c437d67704d1a6fff86e1f84db83a20a02e84d22c905b73396e89bac61:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.61.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.61.1.x86_64.rpm
 b65ac4ebda976443680b5c69b2f11cddf02aff26ca466d3f6d46c6067bdd710a:
   type: cos
   packages:
@@ -7133,6 +7443,16 @@ b734a5f4a87f1b7c89b10407d47c2862a6d4f48aecc161afbd004f9b39126737:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1014_4.15.0-1014.14_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1014-azure_4.15.0-1014.14_amd64.deb
+b760b912c47d9afff6dd4fc619fcfaf0bc0d13392946f1ecf765cd1a56c0d258:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.24.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.24.1.x86_64.rpm
+b806dd17894ca84481a09f29bf06040c548a450d7ca125c2574d3644913f852a:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.15.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.15.1.x86_64.rpm
 b1307b7073d499cb3d50a57d07a6191a95bdcad11415f9e90f43008278039b81:
   type: oracle
   packages:
@@ -7202,6 +7522,11 @@ b072425e1ccdf20b5ef1dd86c7e7304a8b9d05c6454de5036d930458d3192681:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1038_5.4.0-1038.41_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1038-gcp_5.4.0-1038.41_amd64.deb
+b88515cb13569e1524d638c1a3dd18b14d806817b3a1fd8c5ad0e4b1f3d0e117:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.47.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.47.1.x86_64.rpm
 b92281d3fa00e08acaa898b2290078a134a0c25a1cf1af6adc7ea4f6ca141248:
   type: redhat
   packages:
@@ -7342,6 +7667,16 @@ bcbf0d8d4a9b7a13c20ad02c9dd6914876a26924daa3349d77f7021d709082a7:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-79-generic_4.4.0-79.100_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-79_4.4.0-79.100_all.deb
+bce5bbd5a9f8895fa9187f7861b4bd62777f3b8f908b5848a6423e794ca9b387:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.35.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.35.1.x86_64.rpm
+bcf8b0d556a13b385f002b82080c1cae59390be22708660571aff257eb6113b1:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.116.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.116.1.x86_64.rpm
 bd4ff6f23985fb235e449585e78b7a899d148d2a1bd306211697d4ac8110d0cd:
   type: oracle
   packages:
@@ -7414,6 +7749,11 @@ bf4c2f4101fc5dd9045fe3e38647842509aebbf99e98d580e640f62506ff9438:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.105-32.el7.x86_64.rpm
+bf84ec71b7d18ecd50510d66a456d7493c2aa36379f339f43500f25eb7cf2012:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.32.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.32.1.x86_64.rpm
 bf2650ff7c58167993f214185a8f814070875b3124565abdffb36c79d63371cb:
   type: redhat
   packages:
@@ -7485,6 +7825,11 @@ c3f5c5f6d76c3df57b11d4fac5de94743272311ab22ba7d796e449fe4f112004:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10895.85.0-kernel-src.tar.gz
+c4a9b47ab33adbe4088840d63e5b496ce6c5fcb3777a61798fa37bd1319e78ee:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.103.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.103.1.x86_64.rpm
 c4c60f7ef2a6eec7d55aa5adaec5486d1c66eec25f388fb886d69e94b57b6e45:
   type: cos
   packages:
@@ -7579,6 +7924,11 @@ c9eeb4afdec96522b743b6bc1bf76ccb68bfee907b99b54bc54e89377d646280:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-279.19.1.el6.x86_64.rpm
+c21a221bf7a35bb306bb2cf4e8c72c88d52a67b7816aa2677a9d41bad2972677:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.124.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.124.1.x86_64.rpm
 c39d9f7d2ed9d52b0c8e2cb90a9517c5937e6143ac8ce70a290b34026c8de268:
   type: redhat
   packages:
@@ -7620,10 +7970,20 @@ c71f61450955bb0fc0574ea0d4b357fde405628fc97cf54e49940870a89bf460:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.28.1.el8_2.x86_64.rpm
+c75c8adf56f7b6040ffbbdaf689d5457d18a856aefe0ee8133981bd4dd6ad2cd:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.52.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.52.1.x86_64.rpm
 c76e3b4354d1a99a408a6983c5c78f678059861a1b744cd1b31e91d150055906:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.102.0-kernel-src.tar.gz
+c83a5020893bcdf499062812f3ddfddddfca88c69f77fbd85dab3951ad24a079:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-25.25.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-25.25.1.x86_64.rpm
 c87a0433299a37bb14f7b2b0c6086ccf56977235c2115af2f3160d8259e3bf8a:
   type: ubuntu
   packages:
@@ -8071,6 +8431,11 @@ d5c143c92596785b49297813be1154b4f42bd8a07fcd2b75c2f5055854d123b1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1066_4.15.0-1066.71_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1066-azure_4.15.0-1066.71_amd64.deb
+d6e0ed38de6ea6aa9cc8d42430e930450850ea2bde63e3919e4ffef2594062af:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.60.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.60.1.x86_64.rpm
 d6b2ff76aaff6e95aea5d093e3a7fb383fc1ac89b19ebc7f69f40c8e5fd2506d:
   type: redhat
   packages:
@@ -8112,6 +8477,11 @@ d9f07bbf999065804d6beaf4cacc33eed9c49f59e222e12100ae80e35c450e4c:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-43-generic_4.4.0-43.63_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-43_4.4.0-43.63_all.deb
+d10e4d7a201b4ef538d602b74153f118b441a704ca7800017bb9b8fc8bee4217:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.75.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.75.1.x86_64.rpm
 d13e9fed3f2a3d4d2ef96b5247482afdf61b5ff900c5ee2f1ca6015c652bbb28:
   type: ubuntu
   packages:
@@ -8211,6 +8581,11 @@ d82b24709d1387dab604bd3922b230a3fd46ecb8701da820eff6f1638fbddb3a:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d18de6893e62da4cf448a7b82a716ce801c050b24706e7960f1e6f82dc456986-kernel-devel-5.4.38-17.76.amzn2.x86_64.rpm
+d82eba695ea37ebb21896dd4980f48934ac1f61ef207412dccee6b764d69b081:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.22.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.22.1.x86_64.rpm
 d85b0530349c2408585bd2c290d1d3d67b12bcbc634971cc5b7a7c251fc022aa:
   type: redhat
   packages:
@@ -8224,6 +8599,16 @@ d178dfb6d98551c4142740d62f2b985865410adf87cf48c24d903fd5840169e5:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-693.2.1.el7.x86_64.rpm
+d218c234f782d08c1a796ad5e96d1b4b7b5ebc0b1fad6c0b746ff3f8ff342840:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.10.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.10.1.x86_64.rpm
+d367f9656e3a7f08502f1a0ff746b0242ef5234a346656026248808c827a35af:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.32.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.32.1.x86_64.rpm
 d371f2b0baff829ae2cd286d6a31a314ff4ff28ac447c1ce48f92d9db318724c:
   type: redhat
   packages:
@@ -8396,6 +8781,11 @@ db57537b9be5aedcc8be4dbbd2e5ba2ae37dd79983f9bac2f072c90f747bf75d:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11647.182.0-kernel-src.tar.gz
+db9863392caa730c95ae58f92c0000ef0ee460810c7353e224845b1660666b4b:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.4.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.4.1.x86_64.rpm
 dba6e1ff44c54a92fe563018fb5b9dce3d2b08a8ca4fffdb703e8c84579e2253:
   type: redhat
   packages:
@@ -8416,6 +8806,11 @@ dc8df85577d409ff0961d658e0e349ece3984e675e74bdec9ca99e20aacbe078:
   type: redhat
   packages:
   - http---vault.centos.org-7.4.1708-updates-x86_64-Packages-kernel-devel-3.10.0-693.1.1.el7.x86_64.rpm
+dc9c661db0f4da533a96d1c8165eb781eaa6a14f4700f2900c3771f723e30cdd:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.135.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.135.1.x86_64.rpm
 dc93a83b9054320d394e763b64d17217c2127c1257d0e62d290a7495e613614e:
   type: ubuntu
   packages:
@@ -8508,6 +8903,11 @@ de273ce9c884cfb3601b314134bd61f4fae70938c7751c4a9d2a6cb0376383ca:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11892.0.0-kernel-src.tar.gz
+de7047baabfc2c705bd0c2f7ecaa3ef96999d0ae03d81f906ad297eebee67823:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.69.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.69.1.x86_64.rpm
 de7994ac308b01346f8a2cdfa7c5a47031c1b0b9bfa4c42a15e9446910e71086:
   type: ubuntu
   packages:
@@ -8631,6 +9031,11 @@ e2bf0ff03aa572e039ecc24b820b2e7a1a097c04a9732498c82a2a9b6d635e71:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1112_4.4.0-1112.124_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1112-aws_4.4.0-1112.124_amd64.deb
+e3a5f3076c0690523f1fc184b2644784feead02484853ab88731392295ea5945:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.37.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.37.1.x86_64.rpm
 e3c498fc7b831a6fe36204e5e09151da092cc82234a0323a052f765f8a81db1e:
   type: redhat
   packages:
@@ -8661,6 +9066,11 @@ e8c7941751df97468a6404167ddee61fbf3f77ebc33db7863c02d85140dc1f8c:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11895.32.0-kernel-src.tar.gz
+e9e1ca9ace5a20463ffc3e3ce759eb99c36738b239f7fcdb363cdd8a14e6468c:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.66.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.66.1.x86_64.rpm
 e9afd6c211cff015bc41c13a3bcb922eeb5d6d8f2785864cea77784256b4ef1d:
   type: cos
   packages:
@@ -8857,6 +9267,11 @@ e73472d182e1e6bbe217968afeba7576f1ee6900f0e02a358c21c8017f14ab86:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.89-1.el7.elrepo.x86_64.rpm
+e75838b4aaae18fd3605c4f897669843a6311620df09949a399aa8711bc09813:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.57.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.57.1.x86_64.rpm
 e775900ccd3fd27e78df380d948348af3bb372dd90206444447b809d4e434d81:
   type: ubuntu
   packages:
@@ -8986,6 +9401,11 @@ ed1a6d22b9ae54c7c9627c8037216f43330c59cc03c3e2ee1d2bc9929fe8780e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1016_4.13.0-1016.19_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1016-azure_4.13.0-1016.19_amd64.deb
+ed04e8f772b6c2065d2eae7ccb09037daa2a60c1d3f37be4744f88d2a912576a:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.26.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.26.1.x86_64.rpm
 ed23d90c8098c16ca55d9450ab7a98b30be99d1f50523695ba4c35fc1636d8d5:
   type: redhat
   packages:
@@ -9227,6 +9647,11 @@ f9b0096d5a8e77a89f55ac92ca100e5a5c7fe6b6c7041c7216b350b234d77493:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2103.el7uek.x86_64.rpm
+f9d0985ac59602c13f010a46a60f8a0de0d84a74578f00ba2fd2d22a71908932:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.65.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.65.1.x86_64.rpm
 f9da25d426c8230c59dfba4e37c0531ea6b0080f54c6916f059319b72a29fd6a:
   type: redhat
   packages:
@@ -9398,6 +9823,11 @@ f3397a2e8c86d1de4a2159aea59ecf46202ee825dc382de8012088cb18bd327e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1081_4.15.0-1081.92_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1081-gcp_4.15.0-1081.92_amd64.deb
+f4702b22510e7178cde34e217ce85b194a1b7d1c87a019946ea7f401f21813e3:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.34.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.34.1.x86_64.rpm
 f6460a913fad00f2981d5788abf03d74fc8c3dfdc992cee07a3295479386ff63:
   type: coreos
   packages:
@@ -9429,6 +9859,11 @@ f57036e132fe71f4ab310ad4611a2630b2bc3eb382dd5b393beffa6d9cc0f5a7:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1007_4.15.0-1007.7_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1007-aws_4.15.0-1007.7_amd64.deb
+f595073ec4571912b9c129ac32593373a69c2510ba1eeb73d7e409559d90b9d2:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.121.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.121.1.x86_64.rpm
 f647308e235c9f1acded9f43df7c38ef1bdc71933affd453043b01a43c060f7e:
   type: ubuntu
   packages:
@@ -9475,6 +9910,11 @@ faa641fd731bd37259e109791277f96e0861306076fe3a6335e4a877f6022ca2:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-514.el7.x86_64.rpm
+fab2e213ef64a5b1b63a188049be94b9f2fc891a909f1b51cd2b5db894ac81b4:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.27.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.27.1.x86_64.rpm
 facea65bc624cf402b81262e487d5f708b341cf9a98d515836011cae9085dfcf:
   type: redhat
   packages:
