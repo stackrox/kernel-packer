@@ -157,10 +157,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1032_4.15.0-1032.34_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1032-gcp_4.15.0-1032.34_amd64.deb
-0ab685dc9bf33c0cd54b7871152256a0e59fc983c8b3c0a1468a6d56cc7e6259:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.18.0.tar.gz
 0dba6149f2b2c933e7114afdf5b22075d7a73462200796f68f64b39a1b868182:
   type: redhat
   packages:
@@ -416,10 +412,6 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1520.7.0-coreos_developer_container.bin.bz2
-1bb340171ee4fab5f0b7459479993eb41541709091860263e90914c10a2fd221:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.16.0.tar.gz
 1dbaf00fcba20008e22388b5fed42a42da430af31de63405eff06d5caca497ef:
   type: cos
   packages:
@@ -500,10 +492,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11190.0.0-kernel-src.tar.gz
-2e2a1f2009be89037ba3ffc96a2e4955ca9a78547e9d7649a5c5843b55df306c:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.14.2.tar.gz
 2d2f54b9a94f883ccf71cbe9225974f7f866ae204ed7dc5f06947cec9d268e7a:
   type: ubuntu
   packages:
@@ -2031,10 +2019,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1042_4.15.0-1042.45_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1042-gcp_4.15.0-1042.45_amd64.deb
-8f1c45bfbda5ec2130daf4ea36b418603bd25b88c057ad61236d437906621481:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.15.0.tar.gz
 8e2c7a318499de44412796bb47bdc4a32ebf4f30ec85dbdd3a609b6ddfc5b5b9:
   type: ubuntu
   packages:
@@ -2253,10 +2237,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1039_4.15.0-1039.41_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1039-aws_4.15.0-1039.41_amd64.deb
-8af2370983c795f3a7baa0c4bf2d81da91b0ae8ddb794e9932226b4d247e85e7:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.18.1.tar.gz
 08c3bf4a2186624e78cea7eec0d6a06398c54591e5502fccb8bcc0bc10512cce:
   type: redhat
   packages:
@@ -2283,6 +2263,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-58-generic_5.4.0-58.64_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-58_5.4.0-58.64_all.deb
+9d1f2a0ea0d9c95ef96f938ecfe5cd13c5fbc8df7c97d9bbd758cf688fab7ea5:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.21.1.el7.x86_64.rpm
 9d01c68ce0edb17c525ce803a5efedc7e55628db73bd8453ddff4d9bc0f847c9:
   type: ubuntu
   packages:
@@ -3919,10 +3903,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11315.0.0-kernel-src.tar.gz
-96eab258c5e3e4e95e07f05079569de42ca5668b07e255bf0b7663e344232e77:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.17.1.tar.gz
 96aaba0a58beaaab31dbe8daa6e79e3b9839fc38f412061cbecec9f3997b1992:
   type: redhat
   packages:
@@ -7723,10 +7703,6 @@ bdcdbf2b5455ac330835c1526498e0b50261a5913cd55eab2453315b764f4053:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.6.3.el6.x86_64.rpm
-bdda2c78cf2aec9363a2d1d1071252ff5282269cc7b535ef1759ad79b3cda804:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.17.0.tar.gz
 bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   type: ubuntu
   packages:
@@ -9025,10 +9001,6 @@ e0c074f743f00fdace841dfdbd07d7420047185b26277ae697d8d2592801cba1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1027_4.4.0-1027.27_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1027-gke_4.4.0-1027.27_amd64.deb
-e0fa5468fbe423cf3099e54abdb0a7e1eebe5f38ef2e1d03c00526b62b75496b:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-v1.15.1.tar.gz
 e1e320fa1d2350a58a8723f95ddc0f3649be08dee9cef5a0f9dfd80264ed9f3b:
   type: redhat
   packages:
