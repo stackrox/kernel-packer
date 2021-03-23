@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
 info() {
     echo "[INFO] $*" 1>&2
 }
@@ -69,9 +71,13 @@ download() {
             --certificate .build-data/rhel-certs/rhel-cert.pem \
             --private-key .build-data/rhel-certs/rhel-key.pem \
             -nv "$url" -O "$file" || rm -f "$file"
+    elif echo "$url" | contains 'docker.io'; then
+        wget \
+            --header "$("${DIR}/docker-desktop/auth-header.sh")" \
+            -nv "$url" -O "$file" || rm -f "$file"
     elif echo "$url" | contains 'updates.suse.com'; then
         base_url="$(echo "$url" | rev | cut -d'/' -f3- | rev)/"
-        tokens_file=".build-data/suse-repo-tokens/repos.json"
+        tokens_file="${DIR}/../.build-data/suse-repo-tokens/repos.json"
         token="$(jq -r --arg BASE_URL "${base_url}" '.[]|select(.url|contains($BASE_URL))|.token' "${tokens_file}")"
         wget -nv "${url}?${token}" -O "$file" || rm -f "$file"
     else
@@ -80,7 +86,7 @@ download() {
 }
 
 simplify() {
-    echo "$1" | tr -c 'a-zA-Z0-9_.\n-' '-'
+    echo "$1" | tr -c 'a-zA-Z0-9_.\n' '-'
 }
 
 main "$@"

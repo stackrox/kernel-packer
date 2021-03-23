@@ -213,8 +213,33 @@ crawl-ubuntu-azure: build-crawl-container
 crawl-ubuntu-aws: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
 
+.PHONY: crawl-docker-desktop
+crawl-docker-desktop: build-crawl-container
+	docker run --rm -i kernel-crawler crawl Docker-Desktop \
+		> $(CRAWLED_PACKAGE_DIR)/docker-desktop-dmg.txt
+	$(ROOT_DIR)/scripts/docker-desktop/crawl-kernel-images.sh \
+		> $(CRAWLED_PACKAGE_DIR)/docker-desktop-kernel-layer.txt
+
+.PHONY: filter-kernels-docker-desktop
+filter-kernels-docker-desktop: build-crawl-container
+	cat $(CRAWLED_PACKAGE_DIR)/docker-desktop-dmg.txt \
+		$(CRAWLED_PACKAGE_DIR)/docker-desktop-kernel-layer.txt \
+		| tr -c 'a-zA-Z0-9_.\n' '-' | awk -v prefix="/" '$$0=prefix$$0' \
+		> /tmp/packages-docker-desktop.txt
+	$(ROOT_DIR)/scripts/download-packages \
+		$(BUILD_DATA_DIR) $(KERNEL_PACKAGE_BUCKET) /tmp/packages-docker-desktop.txt
+	rm /tmp/packages-docker-desktop.txt
+	docker run --rm -i \
+		-e BUILD_DATA_DIR=/build-data \
+		-v $(realpath $(BUILD_DATA_DIR)):/build-data \
+		-v $(realpath $(CRAWLED_PACKAGE_DIR)):/kernel-package-lists \
+		--entrypoint bash kernel-crawler docker-desktop-filter-kernels.sh \
+			/kernel-package-lists/docker-desktop-dmg.txt \
+			/kernel-package-lists/docker-desktop-kernel-layer.txt \
+		> $(CRAWLED_PACKAGE_DIR)/docker-desktop.txt
+
 .PHONY: crawl
-crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-gardenlinux crawl-ubuntu-aws
+crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop
 	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
 	docker run --rm -i kernel-crawler crawl Minikube > $(CRAWLED_PACKAGE_DIR)/minikube.txt

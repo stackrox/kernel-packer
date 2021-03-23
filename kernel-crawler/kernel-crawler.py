@@ -49,6 +49,14 @@ debian_excludes = [
 debian_backport_excludes = [
     "bpo",
 ]
+docker_desktop_excludes = [
+    "49550",
+    "46911",
+    "48506",
+    "49427",
+    "45519",
+    "48029",
+]
 minikube_excludes = [
     "kubernetes/minikube/archive/v0.35.0.tar.gz",
     "kubernetes/minikube/archive/v0.34.1.tar.gz",
@@ -223,7 +231,16 @@ repos = {
             "exclude_patterns": debian_excludes + debian_backport_excludes,
         },
     ],
-
+    "Docker-Desktop": [
+        {
+            "root": "https://docs.docker.com/docker-for-mac/release-notes/",
+            "download_root": "",
+            "discovery_pattern": "",
+            "page_pattern": "/html/body//a[regex:test(@href, '^https://desktop.docker.com/mac/stable/.*/Docker.dmg$')]/@href",
+            "subdirs": [""],
+            "exclude_patterns": docker_desktop_excludes,
+        },
+    ],
     "Container-OptimizedOS": [
         {
             "type": "s3",

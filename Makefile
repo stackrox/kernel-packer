@@ -36,6 +36,10 @@ sync:
 	@mkdir -p $(BUILD_DATA_DIR)/downloads
 	@./scripts/sync $(CRAWLED_PACKAGE_DIR) $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
 
+.PHONY: filter-kernels-docker-desktop
+filter-kernels-docker-desktop:
+	make -C kernel-crawler filter-kernels-docker-desktop
+
 .PHONY: crawled-inventory
 crawled-inventory:
 	@mkdir -p $(BUILD_DATA_DIR)
