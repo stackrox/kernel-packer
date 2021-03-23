@@ -86,7 +86,7 @@ download() {
 }
 
 simplify() {
-    echo "$1" | tr -c 'a-zA-Z0-9_.\n-' '-'
+    echo "$1" | tr -c 'a-zA-Z0-9_.\n' '-'
 }
 
 main "$@"

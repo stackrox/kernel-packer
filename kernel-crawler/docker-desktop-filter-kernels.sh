@@ -5,7 +5,7 @@
 # The seed is in the linux headers for the docker kernels, which, as of March
 # 2021, is not provided in the installation DMG file[1], but rather in a seperate
 # docker image[2]. There isn't a readily apparent way to match the image to dmg,
-# without compairing all pairs for a match. This script takes a list of Docker
+# without comparing all pairs for a match. This script takes a list of Docker
 # Desktop for Mac DMG installer file URLs and a list of docker layer URLs and
 # prints only the docker layer URLs that correspond to a kernel found in one of
 # the DMG files.
@@ -23,7 +23,7 @@ die() {
 }
 
 simplify() {
-    echo "$1" | tr -c 'a-zA-Z0-9_.\n-' '-'
+    echo "$1" | tr -c 'a-zA-Z0-9_.\n' '-'
 }
 
 kernel_bin_sha() {
@@ -46,7 +46,7 @@ kernel_sha_from_installer_dmg() {
 
     # Check kernel file is not empty/missing
     if [[ ! -s "${kernel_file}" ]]; then
-        rm "${kernel_file}"
+        rm -f "${kernel_file}" || true
         die "empty or missing kernel file in $pkg"
     fi
 

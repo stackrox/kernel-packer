@@ -216,16 +216,16 @@ crawl-ubuntu-aws: build-crawl-container
 .PHONY: crawl-docker-desktop
 crawl-docker-desktop: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Docker-Desktop \
-	> $(CRAWLED_PACKAGE_DIR)/docker-desktop-dmg.txt
+		> $(CRAWLED_PACKAGE_DIR)/docker-desktop-dmg.txt
 	$(ROOT_DIR)/scripts/docker-desktop/crawl-kernel-images.sh \
-	> $(CRAWLED_PACKAGE_DIR)/docker-desktop-kernel-layer.txt
+		> $(CRAWLED_PACKAGE_DIR)/docker-desktop-kernel-layer.txt
 
 .PHONY: filter-kernels-docker-desktop
 filter-kernels-docker-desktop: build-crawl-container
 	cat $(CRAWLED_PACKAGE_DIR)/docker-desktop-dmg.txt \
 		$(CRAWLED_PACKAGE_DIR)/docker-desktop-kernel-layer.txt \
-		| tr -c 'a-zA-Z0-9_.\n-' '-' | awk -v prefix="/" '$$0=prefix$$0' \
-	> /tmp/packages-docker-desktop.txt
+		| tr -c 'a-zA-Z0-9_.\n' '-' | awk -v prefix="/" '$$0=prefix$$0' \
+		> /tmp/packages-docker-desktop.txt
 	$(ROOT_DIR)/scripts/download-packages \
 		$(BUILD_DATA_DIR) $(KERNEL_PACKAGE_BUCKET) /tmp/packages-docker-desktop.txt
 	rm /tmp/packages-docker-desktop.txt
@@ -236,7 +236,7 @@ filter-kernels-docker-desktop: build-crawl-container
 		--entrypoint bash kernel-crawler docker-desktop-filter-kernels.sh \
 			/kernel-package-lists/docker-desktop-dmg.txt \
 			/kernel-package-lists/docker-desktop-kernel-layer.txt \
-	> $(CRAWLED_PACKAGE_DIR)/docker-desktop.txt
+		> $(CRAWLED_PACKAGE_DIR)/docker-desktop.txt
 
 .PHONY: crawl
 crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop

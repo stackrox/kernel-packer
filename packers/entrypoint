@@ -731,7 +731,7 @@ bundle_meta() {
 get_kernel_banner() {
     kernel_bin="$1"
     [[ -n "${kernel_bin}" ]] || ( log "empty kernel bin parameter" && exit 1 )
-    # Find location of the gzip magic number header
+    # Find location of the gzip magic number header (similar to linux/scripts/extract-vmlinux)
     skip="$(LC_ALL=C grep -a -b -o $'\x1f\x8b\x08\x00\x00\x00\x00\x00' "${kernel_bin}" | head -n 1 | cut -d ':' -f 1)"
     # Skip to start of compressed kernel region and extract uname banner
     dd if="${kernel_bin}" bs=1 skip="$skip" | zcat -q | tr -d '\0' | grep -a 'Linux version [0-9]' || true
