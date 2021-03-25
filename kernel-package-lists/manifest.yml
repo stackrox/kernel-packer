@@ -194,6 +194,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.306.2.el7uek.x86_64.rpm
+0ad95b4e04bf952ac14fad605d201f937b82e005494f477fe97e93761720124f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-141-generic_4.15.0-141.145_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-141_4.15.0-141.145_all.deb
 0edec593680e04774b3d8c97d513fe01f27c50e4a79fe8f75cd1ec82783bff3c:
   type: cos
   packages:
@@ -7851,6 +7856,11 @@ bf4c2f4101fc5dd9045fe3e38647842509aebbf99e98d580e640f62506ff9438:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.105-32.el7.x86_64.rpm
+bf4f2abfc16cdfdc784989718c42bf0b5eeacee58961adf007f3cf84b9c1d906:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-207-generic_4.4.0-207.239_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-207_4.4.0-207.239_all.deb
 bf84ec71b7d18ecd50510d66a456d7493c2aa36379f339f43500f25eb7cf2012:
   type: suse
   packages:
