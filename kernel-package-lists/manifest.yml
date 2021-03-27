@@ -1397,6 +1397,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.18-1.el7.elrepo.x86_64.rpm
+5c32ecd8dcb43b09bdf62e8fd181dbe826286201c99ba955c27da1debc97ac97:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.8.0-1028_5.8.0-1028.30_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.8.0-1028-aws_5.8.0-1028.30_amd64.deb
 5a40d0cfa232a466fae7e78ed4351900921e7f1df4e2c2ade8c8dea09901c7c4:
   type: ubuntu
   packages:
@@ -2475,6 +2480,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1046_4.15.0-1046.49_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1046-gke_4.15.0-1046.49_amd64.deb
+9f93983914e04c8492287bf846b7b761e1519f0a0b6e9c61132fc140322c8711:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1044_5.4.0-1044.46_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1044-azure_5.4.0-1044.46_amd64.deb
 9b764334551c4242f6aefa052bca3468148d7dd67dcbc9ccb912d28e107421d6:
   type: ubuntu
   packages:
@@ -8331,6 +8341,11 @@ cbfdf812f4c6c26a71d32e5dc11d52de55f25be04172a8a201ac5659278c7fb5:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-200-generic_4.4.0-200.232_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-200_4.4.0-200.232_all.deb
+cc02e01876052b951a198a778e4009af0975697bd2a192ae84ef1ec4bd2a5057:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1027_5.8.0-1027.28_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1027-gcp_5.8.0-1027.28_amd64.deb
 cc8eb328051650a5d3e81e9ed65b7c5e2b0f22a0d892431026e2c77db48ee1d4:
   type: debian
   packages:
@@ -9565,6 +9580,10 @@ ed1a6d22b9ae54c7c9627c8037216f43330c59cc03c3e2ee1d2bc9929fe8780e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1016_4.13.0-1016.19_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1016-azure_4.13.0-1016.19_amd64.deb
+ed2d1169378bf279a7691697322fefe275201aab0de198dd9928bf11caf01034:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-141afaf018a2cff4bde70333713080d1df72d2f5dfbc3c7d0c83a624245358e5-kernel-devel-5.4.105-48.177.amzn2.x86_64.rpm
 ed04e8f772b6c2065d2eae7ccb09037daa2a60c1d3f37be4744f88d2a912576a:
   type: suse
   packages:
