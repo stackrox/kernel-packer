@@ -7304,6 +7304,12 @@ b02f0647a60b9fba5519c98f9c57485be94c8166f79e0f3cfde605bc754ed397:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-aws-5.3-headers-5.3.0-1034_5.3.0-1034.36_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-headers-5.3.0-1034-aws_5.3.0-1034.36_amd64.deb
+b3e0d514952bdc320a8e0216dc3c4e3ffd08f8bbb657768cc49335faa906423b:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-5-cloud-amd64_5.10.26-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-5-common_5.10.26-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.26-1_amd64.deb
 b3a16cee9d47798614e42fb55d220eb93c1ae2a359b931b70101091ae2744cb8:
   type: ubuntu
   packages:
@@ -8104,6 +8110,12 @@ c46ff119553422d641b4bb2a437096f6aa0457746a35c648c347ff28426c58f8:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.0.3.el7uek.x86_64.rpm
+c53a8eadbcd720662f51900ba37910614b3ba00bd339f8a848e8a23d4944387e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-5-amd64_5.10.26-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-5-common_5.10.26-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.26-1_amd64.deb
 c061ece0dc7b99cf819ec996b7248543b926081788bfd2dd7130718e6f9c10b7:
   type: ubuntu
   packages:
