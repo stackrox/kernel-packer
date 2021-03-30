@@ -3731,6 +3731,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-431.3.1.el6.x86_64.rpm
+79c10edb0daf0d6548c20c04bef5c968a5c7c73cc1fbaa2dd77016e83adc07e1:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1097_4.15.0-1097.110_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1097-gcp_4.15.0-1097.110_amd64.deb
 079ee8a1b3ea6fa5f53c162f31e81c0c87187331efd0db5478b0ce8f82de5287:
   type: redhat
   packages:
@@ -5497,6 +5502,11 @@
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-15-amd64_4.9.258-1_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-15-common_4.9.258-1_all.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.258-1_amd64.deb
+8585c9562f39359fbb97b92a250975b77bd5f5bfefc99e6642b21ec6849b0e69:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1098_4.15.0-1098.105_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1098-aws_4.15.0-1098.105_amd64.deb
 8588aed89838730fa4cf1a7d557e7481962bf52d1206922f4e087a591bbbe08f:
   type: redhat
   packages:
