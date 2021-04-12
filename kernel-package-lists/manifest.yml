@@ -301,6 +301,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1095_4.15.0-1095.108_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1095-gcp_4.15.0-1095.108_amd64.deb
+1b27d26c1edf06fb77e95eb50c7aa685321d3dca2cd77d96f3f825bd19688723:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1209.29-kernel-src.tar.gz
 1d55fcb4438a9f563c3eb8b6a864a7d7093a6558f1f6d9fb22ca7d3eaeb92885:
   type: ubuntu
   packages:
@@ -3823,6 +3827,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.27.2.el7.x86_64.rpm
+83b098c455d4f23828f123d14262886fa4b7c78a724b67fb54d2078c10c91500:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16331.0.0-kernel-src.tar.gz
 83dc481b3563c31b36407c00597c69a4a93070c14c4c7ac83cc39ae5ed41caa0:
   type: ubuntu
   packages:
