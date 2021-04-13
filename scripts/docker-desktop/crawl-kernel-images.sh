@@ -10,7 +10,7 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 
 REGISTRY_URL="https://registry-1.docker.io/v2"
 REPO_URL="https://registry.hub.docker.com/v1/repositories"
-TAG_PATTERN="^[0-9]\+\.[0-9]\+\.[0-9]\+-[a-z0-9]\{40\}-amd64$"
+TAG_PATTERN="^[0-9]\+\.[0-9]\+\.[0-9]\+-[a-z0-9]\{40\}.*$"
 IMAGE="docker/for-desktop-kernel"
 
 # Get all tags for the 'docker/for-desktop-kernel' that match the pattern
