@@ -1651,6 +1651,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1050_5.0.0-1050.52_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1050-gke_5.0.0-1050.52_amd64.deb
+6e09e69c51c0a7968900770f9ce52faca18b825d87665c6b5a0b10e24d03806e:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1260.1-kernel-src.tar.gz
 6a19a422ea47a0d6ce1a27f70c6f23ecb14ff74ab7298f91152f0c503a6e9cbd:
   type: cos
   packages:
@@ -9616,6 +9620,10 @@ e02845002517f372113def7146ea9b2e62025d34a53df217720280e89c21ef6d:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.110.0-kernel-src.tar.gz
+e5501739830e417f4a2c36a64e644faa2418f38c6b27f65a285f14ecf5657150:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.44.1.el8_1.x86_64.rpm
 ea0a880e0f7993e666fd8c2f58c92f0f785a7105b4869cce00b97f36e1376547:
   type: redhat
   packages:
