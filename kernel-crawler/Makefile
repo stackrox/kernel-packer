@@ -176,34 +176,34 @@ crawl-rhel: build-crawl-container
 		> $(CRAWLED_PACKAGE_DIR)/rhel82-eus.txt
 
 	# Crawl for Red Hat OpenShift Container Platform 4.3 for RHEL 8 x86_64 (rhocp-4.3-for-rhel-8-x86_64-rpms)
-	docker run --rm \
-		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
-		--entrypoint /usr/bin/rhel-crawler \
-		kernel-crawler:latest \
-			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.3/os \
-			-cert /rhel-certs/rhel-cert.pem \
-			-key /rhel-certs/rhel-key.pem \
-		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.3.txt
+	#docker run --rm \
+	#	-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+	#	--entrypoint /usr/bin/rhel-crawler \
+	#	kernel-crawler:latest \
+	#		-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.3/os \
+	#		-cert /rhel-certs/rhel-cert.pem \
+	#		-key /rhel-certs/rhel-key.pem \
+	#	> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.3.txt
 
-	# Crawl for Red Hat OpenShift Container Platform 4.4 for RHEL 8 x86_64 (rhocp-4.3-for-rhel-8-x86_64-rpms)
-	docker run --rm \
-		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
-		--entrypoint /usr/bin/rhel-crawler \
-		kernel-crawler:latest \
-			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.4/os \
-			-cert /rhel-certs/rhel-cert.pem \
-			-key /rhel-certs/rhel-key.pem \
-		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.4.txt
+	# Crawl for Red Hat OpenShift Container Platform 4.4 for RHEL 8 x86_64 (rhocp-4.4-for-rhel-8-x86_64-rpms)
+	#docker run --rm \
+	#	-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+	#	--entrypoint /usr/bin/rhel-crawler \
+	#	kernel-crawler:latest \
+	#		-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.4/os \
+	#		-cert /rhel-certs/rhel-cert.pem \
+	#		-key /rhel-certs/rhel-key.pem \
+	#	> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.4.txt
 
-	# Crawl for Red Hat OpenShift Container Platform 4.5 for RHEL 8 x86_64 (rhocp-4.5-for-rhel-8-x86_64-rpms)
-	docker run --rm \
-		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
-		--entrypoint /usr/bin/rhel-crawler \
-		kernel-crawler:latest \
-			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.5/os \
-			-cert /rhel-certs/rhel-cert.pem \
-			-key /rhel-certs/rhel-key.pem \
-		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.5.txt
+	## Crawl for Red Hat OpenShift Container Platform 4.5 for RHEL 8 x86_64 (rhocp-4.5-for-rhel-8-x86_64-rpms)
+	#docker run --rm \
+	#	-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+	#	--entrypoint /usr/bin/rhel-crawler \
+	#	kernel-crawler:latest \
+	#		-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.5/os \
+	#		-cert /rhel-certs/rhel-cert.pem \
+	#		-key /rhel-certs/rhel-key.pem \
+	#	> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.5.txt
 
 .PHONY: crawl-ubuntu-azure
 crawl-ubuntu-azure: build-crawl-container
