@@ -611,12 +611,16 @@ repackage_dockerdesktop() {
         # Copy kernel config
         cp "${headers_dir}/.config" "${linux_src_dir}/"
 
-        # Copy pre-generated seed and seed hash used for struct randomization
+        # If present, copy pre-generated seed and seed hash used for struct randomization
         rand_seed_file="scripts/gcc-plugins/randomize_layout_seed.h"
+        if [[ -f "${rand_seed_file}" ]]; then
+            cp "${headers_dir}/${rand_seed_file}" "${linux_src_dir}/${rand_seed_file}"
+        fi
         rand_seed_hash_file="include/generated/randomize_layout_hash.h"
-        cp "${headers_dir}/${rand_seed_file}" "${linux_src_dir}/${rand_seed_file}"
-        mkdir -p "$(dirname ${rand_seed_hash_file})"
-        cp "${headers_dir}/${rand_seed_hash_file}" "${linux_src_dir}/${rand_seed_hash_file}"
+        if [[ -f "${rand_seed_hash_file}" ]]; then
+            mkdir -p "$(dirname ${rand_seed_hash_file})"
+            cp "${headers_dir}/${rand_seed_hash_file}" "${linux_src_dir}/${rand_seed_hash_file}"
+        fi
 
         # Get kernel version from Makefile
         cd "${linux_src_dir}"
