@@ -238,8 +238,17 @@ filter-kernels-docker-desktop: build-crawl-container
 			/kernel-package-lists/docker-desktop-kernel-layer.txt \
 		> $(CRAWLED_PACKAGE_DIR)/docker-desktop.txt
 
-.PHONY: crawl
-crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop
+.PHONY: crawl-cos
+crawl-cos: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
+
+.PHONY: crawl-ubuntu-standard
+crawl-ubuntu-standard: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
+
+.PHONY: crawl-minikube
+crawl-minikube: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Minikube > $(CRAWLED_PACKAGE_DIR)/minikube.txt
+
+.PHONY: crawl
+crawl: crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-cos crawl-ubuntu-standard crawl-minikube

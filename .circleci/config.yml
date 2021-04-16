@@ -237,7 +237,15 @@ jobs:
     - setup-staging
     - run:
         name: Crawl package repositories
-        command: make crawl
+        command: |
+          if ! make -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+            touch /tmp/crawl-failed
+          fi
+
+    - run:
+        name: Restore deleted lines, if any
+        command: |
+          scripts/restore-removed
     - run:
         name: Download and reupload crawled files
         command: make sync
@@ -249,6 +257,10 @@ jobs:
             exit 0
           fi
           make filter-kernels-docker-desktop
+    - run:
+        name: Diff package lists
+        command: |
+          git --no-pager diff kernel-package-lists/
     - run:
         name: Generate manifest
         command: |
@@ -280,6 +292,14 @@ jobs:
         command: |
           [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ ]] || exit 0
           make robo-crawl-commit
+
+    - run:
+        name: Test if crawling failed
+        command: |
+          if [[ ! -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
+            echo "'make crawl' failed. See the output of the 'Crawl package repositories' step for further details."
+            exit 1
+          fi
 
     - slack/status:
         fail_only: true

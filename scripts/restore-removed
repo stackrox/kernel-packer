@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Restores lines in kernel package lists that have been removed from git.
+# This script is expected to be run from the project root directory.
+
+# The following scripts prints out all lines, until it encounters a line containing a separator
+# sequence (---). From then on, it only prints lines it hasn't seen before.
+AWK_SCRIPT_SUPPRESS_DUPS_AFTER_SEP='
+{
+  if ($0 == "---") {
+    suppress_dups = 1;
+    dup = 1;  # treat this line as a duplicate to suppress printing
+    print >"/dev/null"; # dont print this line
+  } else {
+    dup = seen[$0]++;  # check if this line is a duplicate, and track it
+  }
+}
+!suppress_dups || !dup  # print all lines if not suppressing duplicates, or non-duplicate lines
+'
+
+while IFS='' read -r file || [[ -n "$file" ]]; do
+  {
+    cat "$file"
+    echo "---"
+    git --no-pager show "HEAD:$file"
+  } | awk "$AWK_SCRIPT_SUPPRESS_DUPS_AFTER_SEP" >"${file}.restored"
+  if ! cmp -s "${file}" "${file}.restored"; then
+    echo "Restored some lines in ${file}"
+    mv "${file}.restored" "$file"
+  else
+    rm "${file}.restored"
+  fi
+done < <(git diff HEAD --name-only -- kernel-package-lists/)
