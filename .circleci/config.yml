@@ -308,7 +308,7 @@ workflows:
         context: docker-io-pull
     - crawl:
         name: crawl-build
-        context: redhat-login
+        context: redhat-developer-account-login
         requires:
         - lint
     - repackage:
@@ -332,7 +332,7 @@ workflows:
     jobs:
     - crawl:
         name: crawl-cron
-        context: redhat-login
+        context: redhat-developer-account-login
     triggers:
     - schedule:
         cron: "0 * * * *"
