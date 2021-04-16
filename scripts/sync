@@ -2,8 +2,6 @@
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-DOCKER_DESKTOP_LATEST="https---desktop.docker.com-mac-stable-amd64-Docker.dmg"
-
 info() {
     echo "[INFO] $*" 1>&2
 }
@@ -42,7 +40,7 @@ main() {
         filename="$(simplify "$url")"
 
         # Check if this specific file exists in the bucket listing.
-        if [[ "$filename" == "$DOCKER_DESKTOP_LATEST" ]] || ! echo "$all_bucket_files" | contains "$filename"; then
+        if ! echo "$all_bucket_files" | contains "$filename"; then
             echo "Downloading $url"
 
             # This file didn't exist in the bucket listing, so download it.
