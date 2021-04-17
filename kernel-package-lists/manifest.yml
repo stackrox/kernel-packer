@@ -983,6 +983,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.0.11.el7uek.x86_64.rpm
+3d23422dca17e049c10e2b7de659f04684ccb4faa835a17ce1e22b8ad87bcf9a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1128_4.4.0-1128.142_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1128-aws_4.4.0-1128.142_amd64.deb
 3d82451c376acf73e84f4f40208d600047db5bc1e05f2e548b945deb3b37360e:
   type: ubuntu
   packages:
@@ -10451,6 +10456,11 @@ fee0c965e587d76359ea704288fa3cc9952c1ff602ad82f8f2ae5f47739d2107:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.24.1.el7.x86_64.rpm
+fee52d5feaa2744444daa2f9847ecf04c4166523b9e5116480fcfd12d272115c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-210-generic_4.4.0-210.242_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-210_4.4.0-210.242_all.deb
 fef6be600433e189dc470ae88dfe340ce5aa3d2bb49dec2cdc2c97578622d6a8:
   type: redhat
   packages:
