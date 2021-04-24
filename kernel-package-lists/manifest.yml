@@ -1090,6 +1090,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-16108.403.22-kernel-src.tar.gz
+03a367858490c2df58a7244f3d4ee04cde2a0d0eb23461881af042e857dcea44:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1114_4.15.0-1114.127_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1114-azure_4.15.0-1114.127_amd64.deb
 03ed890c83613542613c3b8ebc418439648bd247a6b89acfd115a67a27bf31c7:
   type: ubuntu
   packages:
@@ -6150,6 +6155,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-327.36.2.el7.x86_64.rpm
+77324cd4c31d77711ec52ef15393ec4f29594924b13fb963da2282e9138042e4:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1100_4.15.0-1100.107_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1100-aws_4.15.0-1100.107_amd64.deb
 77752afbee1b174e8f85cb241c64212e242390b6dc4e9353a87aae42c3a00c61:
   type: suse
   packages:
