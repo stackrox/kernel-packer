@@ -2832,6 +2832,11 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.7.1908-os-x86_64-Packages-kernel-devel-3.10.0-1062.el7.x86_64.rpm
+20dc48c6f3326b8335ac31702ae38a82ce8e7e87b758eac16298d5aea43769a7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-52-generic_5.8.0-52.59_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-52_5.8.0-52.59_all.deb
 20effbb5e61dd71d65cf465610621b5bc7a6eb7def6c956131413ef57cd78272:
   type: oracle
   packages:
@@ -4289,6 +4294,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1048_4.4.0-1048.57_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1048-aws_4.4.0-1048.57_amd64.deb
+154f1ea983f006d82ef69c8ff490421608f8ccab839eb9c4cfd30b2293f7cb3b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.8.0-1031_5.8.0-1031.33_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.8.0-1031-azure_5.8.0-1031.33_amd64.deb
 158e6c1554161550000ac2e20f17a1fc4339ddb419bfef7ce5139fbe3fabc12d:
   type: suse
   packages:
