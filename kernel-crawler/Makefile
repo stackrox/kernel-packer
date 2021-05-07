@@ -84,8 +84,8 @@ crawl-suse: build-crawl-container
 			-repos-names-file /suse/repo-names.txt \
 		> $(CRAWLED_PACKAGE_DIR)/suse.txt
 
-.PHONY: crawl-rhel
-crawl-rhel: build-crawl-container
+.PHONY: rhel-login
+$(BUILD_DATA_DIR)/rhel-certs/rhel-cert.pem $(BUILD_DATA_DIR)/rhel-certs/rhel-key.pem:
 	# Trade a username & password for a certificate keypair that allows up to
 	# authenticate with the RHEL package repos.
 	@mkdir -p $(BUILD_DATA_DIR)/rhel-certs
@@ -95,6 +95,23 @@ crawl-rhel: build-crawl-container
 		rhel-login:latest \
 	| tar -C $(BUILD_DATA_DIR)/rhel-certs -xf -
 
+.PHONY: rhel-login
+rhel-login: $(BUILD_DATA_DIR)/rhel-certs/rhel-cert.pem $(BUILD_DATA_DIR)/rhel-certs/rhel-key.pem
+
+.PHONY: crawl-rhel77-eus
+crawl-rhel77-eus: rhel-login build-crawl-container
+	# Crawl for RHEL 7.7 EUS (Extended Update Support) kernel-devel packages.
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-base-url https://cdn.redhat.com/content/eus/rhel/server/7/7.7/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel77-eus.txt
+
+.PHONY: crawl-rhel
+crawl-rhel: rhel-login build-crawl-container crawl-rhel77-eus
 	# Crawl for RHEL 6 kernel-devel packages.
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
