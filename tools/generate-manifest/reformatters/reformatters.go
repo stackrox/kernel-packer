@@ -81,12 +81,12 @@ func reformatOneToPairs(packages []string) ([][]string, error) {
 }
 
 var (
-	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_([^_]+)(?:_.*)?\.deb$`)
-	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-[^_]+_([^_]+)(?:_.*)?\.deb$`)
-	gardenHeaderVersionRegex = regexp.MustCompile(`^linux-headers(?:-cloud)?-amd64_([^_]+)(?:_.*)?\.deb$`)
+	debianKBuildVersionRegex      = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_([^_]+)(?:_.*)?\.deb$`)
+	debianHeaderVersionRegex      = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-[^_]+_([^_]+)(?:_.*)?\.deb$`)
+	gardenHeaderVersionRegex      = regexp.MustCompile(`^linux-headers(?:-cloud)?-amd64_([^_]+)(?:_.*)?\.deb$`)
 	debianCommonPackageIndicators = regexp.MustCompile("common|linux-headers-amd64_")
-	versionSepRegex          = regexp.MustCompile(`[-.]`)
-	debianSecurityURL        = "security.debian.org"
+	versionSepRegex               = regexp.MustCompile(`[-.]`)
+	debianSecurityURL             = "security.debian.org"
 )
 
 type packageInfo struct {

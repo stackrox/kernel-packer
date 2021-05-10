@@ -9,7 +9,7 @@ import (
 
 func TestGardenLinuxUncrawled(t *testing.T) {
 	tests := []struct {
-		name string
+		name  string
 		input []string
 	}{
 		{
@@ -33,7 +33,7 @@ func TestGardenLinuxUncrawled(t *testing.T) {
 	for index, test := range tests {
 		name := fmt.Sprintf("%d %s", index+1, test.name)
 		t.Run(name, func(t *testing.T) {
-			actual,err := reformatDebian(test.input)
+			actual, err := reformatDebian(test.input)
 			assert.Nil(t, err)
 			assert.Equal(t, 1, len(actual))
 			assert.ElementsMatch(t, test.input, actual[0])
