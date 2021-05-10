@@ -83,6 +83,8 @@ func reformatOneToPairs(packages []string) ([][]string, error) {
 var (
 	debianKBuildVersionRegex = regexp.MustCompile(`^linux-kbuild-(\d+(?:\.\d+)*)_([^_]+)(?:_.*)?\.deb$`)
 	debianHeaderVersionRegex = regexp.MustCompile(`^linux-headers-(\d+(?:\.\d+)*-\d+)-[^_]+_([^_]+)(?:_.*)?\.deb$`)
+	gardenHeaderVersionRegex = regexp.MustCompile(`^linux-headers(?:-cloud)?-amd64_([^_]+)(?:_.*)?\.deb$`)
+	debianCommonPackageIndicators = regexp.MustCompile("common|linux-headers-amd64_")
 	versionSepRegex          = regexp.MustCompile(`[-.]`)
 	debianSecurityURL        = "security.debian.org"
 )
@@ -144,15 +146,27 @@ func reformatDebian(packages []string) ([][]string, error) {
 
 	for _, pkg := range packages {
 		name := path.Base(pkg)
-		matches := debianHeaderVersionRegex.FindStringSubmatch(name)
-		if len(matches) < 3 {
+		if strings.Contains(name, "kbuild") {
 			continue
+		}
+		matches := debianHeaderVersionRegex.FindStringSubmatch(name)
+		var kernelVersion, packageVersion string
+		if len(matches) == 3 {
+			kernelVersion = matches[1]
+			packageVersion = matches[2]
+		} else {
+			gardenMatches := gardenHeaderVersionRegex.FindStringSubmatch(name)
+			if len(gardenMatches) != 2 {
+				return nil, errors.Errorf("unexpected debian header package name: %q", name)
+			}
+			kernelVersion = gardenMatches[1]
+			packageVersion = gardenMatches[1]
 		}
 		pkgInfo := packageInfo{
 			url:            pkg,
 			name:           name,
-			kernelVersion:  matches[1],
-			packageVersion: matches[2],
+			kernelVersion:  kernelVersion,
+			packageVersion: packageVersion,
 		}
 		// duplicates package files may exist across package pools, prefer security.debian.org over others
 		if existingPkg := headersByPackageName[pkgInfo.name]; !strings.Contains(existingPkg.url, debianSecurityURL) {
@@ -232,7 +246,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 		commonHeaderPkg := ""
 		archHeaderPkgs := make([]string, 0, 2)
 		for _, headerPkg := range headerPkgs {
-			if strings.Contains(headerPkg.url, "common") {
+			if debianCommonPackageIndicators.MatchString(path.Base(headerPkg.url)) {
 				if commonHeaderPkg != "" {
 					return nil, errors.Errorf("invalid number of common header packages for kernel version %s: %+v", version, headerPkgs)
 				}
