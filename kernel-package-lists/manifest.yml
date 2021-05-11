@@ -2201,6 +2201,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.57-1.el7.elrepo.x86_64.rpm
+8b5b9b336f7c5e3302823d06736dd5744148c3f857f1a0b91570d340569d9991:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1031_5.8.0-1031.32_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1031-gcp_5.8.0-1031.32_amd64.deb
 8d5d66a061fc7f7d34a01da6a1ef78fd582b7eba56dd7e406d48bd378d51aef7:
   type: suse
   packages:
@@ -5521,6 +5526,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-4c9bb7e4d425559a12975c7b2040f66b05cd4d4da42c783c64e47bee92506255-kernel-devel-4.14.203-156.332.amzn2.x86_64.rpm
+6240f5e6b9e4b05d39e0cc8df50c5a5671e591420f2f6eac46623adf6179a24a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.8.0-1032_5.8.0-1032.34_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.8.0-1032-azure_5.8.0-1032.34_amd64.deb
 6337fb4a2d0420aa04081c1f7f738d09bacd8ec12e4a119a0daec97d619f9b63:
   type: cos
   packages:
@@ -8260,6 +8270,11 @@ c1b574c87affb51f788fe739b25e2eff4c89ba8d4bb569357ee34f3adca77ffb:
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2605.11.0-flatcar_developer_container.bin.bz2
+c1f09433329a663fcb285cf73e07788a5498b3147e71d95e85d3baa68e0b8cc9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.8.0-1033_5.8.0-1033.35_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.8.0-1033-aws_5.8.0-1033.35_amd64.deb
 c1c13598192e4c1cab1fb33b4d68ff59828ef7921eacefdd1c03e42c0fd8ed53:
   type: coreos
   packages:
@@ -10476,6 +10491,11 @@ f4593843e46490a94b9870c9b5fcdae4604a8b5531ad795a038bbda2bd549c87:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2049.el7uek.x86_64.rpm
+f7537080d2c3b78b8438f35e504d783ee22c10bd4b180362b348579c7ed9c9fc:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-53-generic_5.8.0-53.60_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-53_5.8.0-53.60_all.deb
 f8891139d02a32c925ab359e6e0b1a8bff92c5d4d1a6f37f47329e26c7bb38dd:
   type: ubuntu
   packages:
