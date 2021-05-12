@@ -196,6 +196,12 @@
   file: rhel8-rhocp4.5.txt
   reformat: single
 
+- name: rhel-uncrawled
+  description: RHEL uncrawled kernels
+  type: redhat
+  file: rhel-uncrawled.txt
+  reformat: single
+
 - name: suse
   description: SUSE
   type: suse
