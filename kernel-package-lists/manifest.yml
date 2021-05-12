@@ -8871,6 +8871,12 @@ cf032316dacc893404680de58b2b680c185826ccd88a9a71043144c112adfc4a:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12871.146.0-kernel-src.tar.gz
+cf372999e56e8a01d026f8901ae76788617b1bd0a66c004e10c74fb6169744a3:
+  type: debian
+  packages:
+  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.4.0-6-cloud-amd64_5.4.93-1_amd64.deb
+  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.4.0-6-common_5.4.93-1_all.deb
+  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-kbuild-5.4_5.4.93-1_amd64.deb
 cfa5cc7e720b304fb5c7e43c9af9f33fc28bdb9e638f36ae3bba2932037fe4ae:
   type: redhat
   packages:
@@ -9200,6 +9206,10 @@ d914c3fe573a3374a281c78bac17a96bc7d958583205f8918ce9159e24eb7f0e:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-b73a5a824bd1eb23522128573839e862d4d89ef8d544371b7c2bc3ae4730125b-kernel-devel-4.14.77-81.59.amzn2.x86_64.rpm
+d995efcd95fde33ce799b5ca5ecfc88dc8124928607e5f11cff91f8b873eb1c8:
+  type: redhat
+  packages:
+  - http---download.eng.bos.redhat.com-brewroot-vol-kernelarchive-packages-kernel-3.10.0-1062.13.1.el7-x86_64-kernel-devel-3.10.0-1062.13.1.el7.x86_64.rpm
 d1918bda77f3694a4eaef3d292377f6077ea8c4f1bcbd1d33a8513104a095811:
   type: redhat
   packages:
