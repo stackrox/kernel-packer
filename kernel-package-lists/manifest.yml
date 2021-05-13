@@ -230,6 +230,11 @@
   type: dockerdesktop
   packages:
   - https---registry-1.docker.io-v2-docker-for-desktop-kernel-blobs-sha256-b9d31690b63ff8d2194d6fa4f7f732ec50cfe490950594549f6f02e3e1b089fa
+0eed1bf01e72e6f2ab21bfcd28e24ed7b9fc7d2f2e8a78d6efcd5d5fc8676c8b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-74-generic_5.4.0-74.83_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-74_5.4.0-74.83_all.deb
 0aefde8fe9706689fd7b254ff3c33f85f008b051bb039cfcd463b5d519f680a9:
   type: ubuntu
   packages:
@@ -2506,6 +2511,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.205-1.el7.elrepo.x86_64.rpm
+9d64de9ff60d42e3fd085fda76d1e2bf01737edb222890585cabfffac3ae6b05:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-144-generic_4.15.0-144.148_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-144_4.15.0-144.148_all.deb
 9a071d590934e1c53f796a1dbe2ddbac290e23e9fdcb289f6bdf33d6db158e67:
   type: dockerdesktop
   packages:
@@ -9562,6 +9572,11 @@ df566ac4b2993fb682f4c16dcd1e0bfdea8d141678e8de70e54dd5dca15860d0:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1046_5.4.0-1046.48_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1046-aws_5.4.0-1046.48_amd64.deb
+df93497117a351b4a9a4de537b02ef9efd78ab7942b0238b4e4a466e0efc7018:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-18-generic_5.11.0-18.19_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-18_5.11.0-18.19_all.deb
 dfbf7446e38ae5d8bbc5ddf361101eae77d34cface7847d59846638baba61e2a:
   type: ubuntu
   packages:
