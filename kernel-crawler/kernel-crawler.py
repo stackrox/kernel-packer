@@ -99,6 +99,30 @@ repos = {
         },
 
         {
+            # This is the root path of the repository in which the script will
+            # look for distros (HTML page)
+            "root" : "https://mirrors.kernel.org/centos/",
+
+            # This is the XPath + Regex (optional) for analyzing the `root`
+            # page and discover possible distro versions. Use the regex if you
+            # want to limit the version release.
+            # Here, we want subpaths like /8.0.1905/, /8-stream/. The path /8/ is always
+            # an alias to the latest release, so there is no use crawling it.
+            "discovery_pattern" : "/html/body//pre/a[regex:test(@href, '^8[.-].*$')]/@href",
+
+            # Once we have found every version available, we need to know were
+            # to go inside the tree to find packages we need (HTML pages)
+            "subdirs" : [
+                "BaseOS/x86_64/os/Packages/",
+            ],
+
+            # Finally, we need to inspect every page for packages we need.
+            # Again, this is a XPath + Regex query so use the regex if you want
+            # to limit the number of packages reported.
+            "page_pattern" : "/html/body//a[regex:test(@href, '^kernel-devel-?[0-9].*\.rpm$')]/@href",
+        },
+
+        {
             # CentOS Vault hosts packages that are no longer available on
             # the up-to-date mirrors.
             # Sysdig also crawls http://vault.centos.org/centos/, but that
