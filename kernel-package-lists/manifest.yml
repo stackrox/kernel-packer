@@ -8662,6 +8662,11 @@ c6879879fa9d8e774c4eb19d9e38e0da4f8ee58b27b011c37ae2ed3a667c7353:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-642.6.2.el6.x86_64.rpm
+c54959601c0eb0e5b2e8a92c7a1f928d51e67b90338cd7bac698ebaf3ca9ce9e:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.144.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.144.1.x86_64.rpm
 c90995887249dad6dbb168dc7fa88e4d2c6c2035100bc7b5a0ebc6683f992e16:
   type: cos
   packages:
@@ -9725,6 +9730,11 @@ e9afd6c211cff015bc41c13a3bcb922eeb5d6d8f2785864cea77784256b4ef1d:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11647.449.0-kernel-src.tar.gz
+e10fbd649e7023c9fa09cceefea90ee3f5366b81fe599f97093fb497d869b94f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.8.0-1033_5.8.0-1033.35_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.8.0-1033-azure_5.8.0-1033.35_amd64.deb
 e17b43f45b0be03780324ee12913f0b1ea1f4581fba59bab1caf9c3f4d8d56dc:
   type: cos
   packages:
