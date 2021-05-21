@@ -541,7 +541,6 @@ def crawl(distro):
     Navigate the `repos` tree and look for packages we need that match the
     patterns given.
     """
-    URL_TIMEOUT = 30.0
 
     kernel_urls = []
     for repo in repos[distro]:
@@ -553,7 +552,7 @@ def crawl(distro):
             continue
 
         try:
-            root = http.request('GET', repo["root"], timeout=URL_TIMEOUT).data
+            root = http.request('GET', repo["root"]).data
             versions = [""]
             if len(repo["discovery_pattern"]) > 0:
                 versions = html.fromstring(root).xpath(repo["discovery_pattern"], namespaces=XPATH_NAMESPACES)
@@ -566,7 +565,7 @@ def crawl(distro):
                         sys.stderr.write("Considering version " + version + " subdir " + subdir + "\n")
                         source = repo["root"] + version + subdir
                         download_root = source if "download_root" not in repo else repo["download_root"]
-                        page = http.request('GET', source, timeout=URL_TIMEOUT).data
+                        page = http.request('GET', source).data
                         rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
                         if len(rpms) == 0:
                             sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
