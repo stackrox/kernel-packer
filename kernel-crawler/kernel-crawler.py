@@ -15,7 +15,7 @@ import argparse
 import json
 import sys
 import urllib3
-from urllib.parse import unquote as url_unquote
+from urllib3.util import parse_url as url_unquote
 from lxml import html
 import traceback
 import re
@@ -489,8 +489,23 @@ repos = {
     		"subdirs": [""],
     	},
     ],
+    "Fedora-CoreOS" : [
+        {
+            "root" : "https://kojipkgs.fedoraproject.org/packages/kernel/",
+            "discovery_pattern": "/html/body//a[regex:test(@href, '^5\.(8|9|1[0-9])\..*/$')]/@href",
+            "subdir_patterns": [
+                "/html/body//a[regex:test(@href, '^[0-9]+\.fc[0-9]+/$')]/@href",
+                "/html/body//a[regex:test(@href, '^x86_64/$')]/@href",
+            ],
+            "subdirs":  [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^kernel-devel-[0-9].*\.rpm$')]/@href",
+         },
+    ],
 }
 
+retry = urllib3.util.Retry(connect=5, read=5, redirect=5, backoff_factor=1)
+timeout = urllib3.util.Timeout(connect=10, read=60)
+http = urllib3.PoolManager(retries=retry, timeout=timeout)
 
 def crawl_s3(repo):
     def val(xml, path):
@@ -526,7 +541,6 @@ def crawl(distro):
     Navigate the `repos` tree and look for packages we need that match the
     patterns given.
     """
-    URL_TIMEOUT = 30.0
 
     kernel_urls = []
     for repo in repos[distro]:
@@ -538,10 +552,12 @@ def crawl(distro):
             continue
 
         try:
-            root = http.request('GET', repo["root"], timeout=URL_TIMEOUT).data
+            root = http.request('GET', repo["root"]).data
             versions = [""]
             if len(repo["discovery_pattern"]) > 0:
                 versions = html.fromstring(root).xpath(repo["discovery_pattern"], namespaces=XPATH_NAMESPACES)
+            if "subdir_patterns" in repo:
+                versions = expand_versions_by_subdir_patterns(repo, versions)
             for version in sorted(set(versions)):
                 sys.stderr.write("Considering version "+version+"\n")
                 for subdir in sorted(set(repo["subdirs"])):
@@ -549,7 +565,7 @@ def crawl(distro):
                         sys.stderr.write("Considering version " + version + " subdir " + subdir + "\n")
                         source = repo["root"] + version + subdir
                         download_root = source if "download_root" not in repo else repo["download_root"]
-                        page = http.request('GET', source, timeout=URL_TIMEOUT).data
+                        page = http.request('GET', source).data
                         rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
                         if len(rpms) == 0:
                             sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
@@ -612,6 +628,33 @@ def handle_output_from_json(args):
     urls_dict = json.loads(sys.stdin.read())
     sort_and_output(urls_dict[args.mode])
 
+def expand_versions_by_subdir_patterns(repo, versions):
+    more = []
+    for version in versions:
+        more = more + descend_path(repo["root"], version, repo["subdir_patterns"])
+    return more
+
+def descend_path(root, path, patterns):
+    copy = patterns[:]
+    pattern = copy.pop(0)
+    patterns = copy
+
+    sys.stderr.write("Getting subdirs under " + path + " using pattern " + pattern + "\n")
+    page = http.request('GET', root + path).data
+    subdirs = html.fromstring(page).xpath(pattern, namespaces=XPATH_NAMESPACES)
+    if len(subdirs) == 0:
+        return []
+
+    paths = list(map(lambda subdir: path + subdir, subdirs))
+
+    if len(patterns) == 0:
+        return paths
+
+    more = []
+    for path in paths:
+        more = more + descend_path(root, path, patterns)
+
+    return more
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Kernel module crawler.")
