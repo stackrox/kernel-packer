@@ -577,7 +577,7 @@ def crawl(distro):
                                 continue
                             else:
                                 sys.stderr.write("Adding package " + rpm + "\n")
-                                raw_url = "{}{}".format(download_root, urllib3.util.parse_url(rpm))
+                                raw_url = "{}{}".format(download_root, url_unquote(rpm))
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
                     except urllib3.exceptions.HTTPError as e:
