@@ -57,6 +57,10 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2135.4.0-flatcar_developer_container.bin.bz2
+0b25a6397e2bf3de8b737a25d3434ba02a8e03456de9ab55363067efb4801606:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.403.47-kernel-src.tar.gz
 0e27c2964869a4d58bcf67d0ce057baefe30338b26173dc1f0daaf722e91a9f4:
   type: redhat
   packages:
@@ -11326,6 +11330,10 @@ fdecfa673d940d06b7d7f2262ba7a5ff94913946f68183a4ecf449836463bd21:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.70.1.el7.x86_64.rpm
+fe0fca0438b8e62bfc5f5982fcedeaaf9a160a913d22bf18d37c59666682893b:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1260.23-kernel-src.tar.gz
 fe881faa10ed4c17b7c8ba29f4faa78c1e712cad5bdd7117191564f93c2fa710:
   type: ubuntu
   packages:
