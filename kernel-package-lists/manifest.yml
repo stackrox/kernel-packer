@@ -292,6 +292,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.46.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.46.1.x86_64.rpm
+1e2ae9def50b8f0a5dc51b5d17547f2a86573410ff6d5732c3e65a7d0395ece5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.11.0-1011_5.11.0-1011.11_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.11.0-1011-aws_5.11.0-1011.11_amd64.deb
 1e4da39c4cf009c72ceb53b02ebf2cc348c770eb49088ca33f66a14cb016734d:
   type: redhat
   packages:
@@ -3147,6 +3152,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.7.1908-os-x86_64-Packages-kernel-devel-3.10.0-1062.el7.x86_64.rpm
+25f60aa0a1b204e8e9e44765d4d2fcf678bf9d211a74fdd2f8bb6e60e4e6a29e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.11.0-1011_5.11.0-1011.12_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.11.0-1011-gcp_5.11.0-1011.12_amd64.deb
 25ee7796ca286c002d4a9f5bb3b85ba48bfe11dfbd53756ed86b95d30cb05452:
   type: redhat
   packages:
@@ -5780,6 +5790,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10714.0.0-kernel-src.tar.gz
+5119fe00b09246fd872571795a67e18f1c53c5f46615710d6f9825179bd4bc09:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.8.0-1036_5.8.0-1036.38_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.8.0-1036-azure_5.8.0-1036.38_amd64.deb
 05216f5017b858d79aae14c8a5079fa5ce11901aadbc075bd6f1a7291d032653:
   type: ubuntu
   packages:
@@ -6312,6 +6327,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-693.1.1.el7.x86_64.rpm
+21857ef51e4fb58ece664cb42a33cd2d07e51909ecca8f0fa567cd29503ffcbc:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.11.0-1009_5.11.0-1009.9_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.11.0-1009-azure_5.11.0-1009.9_amd64.deb
 22877f96fefa91722984a474b5a5ff2f86a9dd7ad708de557ba388c6041ad029:
   type: redhat
   packages:
@@ -6923,6 +6943,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1012_4.4.0-1012.21_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1012-aws_4.4.0-1012.21_amd64.deb
+943391c7874887e8cda7e2909e2a98440ae4d91d32a5ae80efa37399394ed8f7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-59-generic_5.8.0-59.66_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-59_5.8.0-59.66_all.deb
 972123cd3145be7d18d0969348175bbf647c66958d711b88df0851dbe21b5f57:
   type: ubuntu
   packages:
@@ -7085,6 +7110,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-71-generic_5.4.0-71.79_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-71_5.4.0-71.79_all.deb
+08317771baf2b1a64fd7a4fd3b3ffdb164a021ea14401185ae4c8135cdb1e633:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.8.0-1035_5.8.0-1035.37_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.8.0-1035-gcp_5.8.0-1035.37_amd64.deb
 8325621f1a6ab7473ce972badf9f0f6efdbf9e9f7733d0449d75160b5861fb75:
   type: redhat
   packages:
@@ -7755,6 +7785,11 @@ a7950767ba3bcd7b41439d72cffbdea03287fbaddda1f40d98ac8140a99e5282:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11104.0.0-kernel-src.tar.gz
+a793621224acdd06e6198b4855c14a8281f6cd940051bd27297cd8503d3378aa:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
@@ -8931,6 +8966,11 @@ c43a97361587b5519c856cbb4ead8a22e8af27b4f11b7fdcf2bfc8d09bfdaad4:
   type: redhat
   packages:
   - http---vault.centos.org-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.4.3.el7.x86_64.rpm
+c58ad88176dc73399a88e6dd667dfad38ed9fc527637bc98ff079e4447739bf0:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
 c061ece0dc7b99cf819ec996b7248543b926081788bfd2dd7130718e6f9c10b7:
   type: ubuntu
   packages:
@@ -10145,6 +10185,11 @@ e4a3b478d2a0f23100d42364bc65adbccd36717bb199cf7ae8f0f7a1782d98fe:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2643.1.1-flatcar_developer_container.bin.bz2
+e5e07f6fcada5d3adf538994cfa46705897707da2894531f2486ef28aa170b1d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-22-generic_5.11.0-22.23_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-22_5.11.0-22.23_all.deb
 e5f754de4ba9e96a98c0716a5dab7d3cb382e0d2d05b95ae4469668dc45b1da0:
   type: redhat
   packages:
@@ -11169,6 +11214,11 @@ fa8071ad81776b8f5fb8a46d32df7eec15a72976d37931559a1dd7f2904dd389:
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2023.5.0-flatcar_developer_container.bin.bz2
+fa68874f45d53f67c09616d560affeee4d4f9ebba3009b6cd6c1293bcb9ca26d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.8.0-1038_5.8.0-1038.40_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.8.0-1038-aws_5.8.0-1038.40_amd64.deb
 faa641fd731bd37259e109791277f96e0861306076fe3a6335e4a877f6022ca2:
   type: redhat
   packages:
