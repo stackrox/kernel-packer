@@ -6174,12 +6174,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11316.6.0-kernel-src.tar.gz
-8551c10f6965b67ef4c191f3569f63b6ff32d53f4c20f6fbd8d46a7f7ee6a469:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-15-amd64_4.9.258-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-15-common_4.9.258-1_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.258-1_amd64.deb
 8585c9562f39359fbb97b92a250975b77bd5f5bfefc99e6642b21ec6849b0e69:
   type: ubuntu
   packages:
@@ -9838,6 +9832,12 @@ d85b0530349c2408585bd2c290d1d3d67b12bcbc634971cc5b7a7c251fc022aa:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-514.6.2.el7.x86_64.rpm
+d089e8e65561d737f6f52cd36972b081cff6ba002cabddcec59b4ac7a56ad411:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-15-amd64_4.9.258-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-15-common_4.9.258-1_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.272-1_amd64.deb
 d094cdb033603a7ae57a881d8c9ce114c6e74c2092fc3b61e00221517878256c:
   type: ubuntu
   packages:
