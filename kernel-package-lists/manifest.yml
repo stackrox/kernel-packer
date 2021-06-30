@@ -263,6 +263,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.22-100.fc32-x86_64-kernel-devel-5.10.22-100.fc32.x86_64.rpm
+0bfebc21e7b5f7d5a684c52ed89c327fad2c1cefc2cb04f870930dd839ce90aa:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.11.0-1011_5.11.0-1011.11_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.11.0-1011-azure_5.11.0-1011.11_amd64.deb
 00d5689ce637e3de3289ef1f7450d72e96deff669fca440bb4a23a43eaa47e82:
   type: redhat
   packages:
@@ -7484,6 +7489,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-15053.0.0-kernel-src.tar.gz
+695633952472b34d81292055bb6be93cf32a49b91e8a835d934908d540d75c58:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.11.0-1013_5.11.0-1013.13_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.11.0-1013-aws_5.11.0-1013.13_amd64.deb
 867151458303f80de5383f3f495266fa49321d7760aca12c8c6df58bd6e8536b:
   type: redhat
   packages:
