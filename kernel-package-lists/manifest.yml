@@ -3449,6 +3449,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11172.0.0-kernel-src.tar.gz
+37b087f217e973eeafe2f6be3d5623314a7f115830e91233732a8110dbfa86b5:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 37abea6ef4a9130739884b9f91d2aa0fa7c6fe9f39d293d41706d2e92fec1a39:
   type: cos
   packages:
@@ -6287,6 +6292,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1017_5.4.0-1017.17_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1017-aws_5.4.0-1017.17_amd64.deb
+9510ceb63e138b473680b348cc071bb61394c81566b95df2af97dae0892f688f:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 9550e6231107fe1e05f4a29d804731a1694fbf6918815a00e691b00b0981be4e:
   type: ubuntu
   packages:
@@ -10323,6 +10333,11 @@ e1a52399ed17d03d09bfde539063a7c7d67ea32adc608e241163c4a70848b648:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.el8.x86_64.rpm
+e1fc07f121da196ff1a40ce40e0b4eb19ec5586505808662f2ea4e0dd73f122b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-61-generic_5.8.0-61.68_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.8.0-61_5.8.0-61.68_all.deb
 e2d3ed02f50706a184d10afaec4ac58e1d66d3daed3e55dccca4b3403c3c0538:
   type: ubuntu
   packages:
@@ -11016,6 +11031,11 @@ f3fac8018ef659a1205e10c732b280846b98fde979224960533ea2abf9704d88:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.8.0-1011_5.8.0-1011.11_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.8.0-1011-aws_5.8.0-1011.11_amd64.deb
+f3bddd749fac88cddb858c93abe8432edf3fd621351ed88a0740c4f4ce1e0c99:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.11.0-1013_5.11.0-1013.14_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.11.0-1013-gcp_5.11.0-1013.14_amd64.deb
 f4d8fcf84c358e98103c9106527f0767b8a719b8f87912e3a88af2e9aa810af0:
   type: ubuntu
   packages:
