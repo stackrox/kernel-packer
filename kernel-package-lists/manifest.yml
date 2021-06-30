@@ -3449,6 +3449,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11172.0.0-kernel-src.tar.gz
+37b087f217e973eeafe2f6be3d5623314a7f115830e91233732a8110dbfa86b5:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 37abea6ef4a9130739884b9f91d2aa0fa7c6fe9f39d293d41706d2e92fec1a39:
   type: cos
   packages:
@@ -6287,6 +6292,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1017_5.4.0-1017.17_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1017-aws_5.4.0-1017.17_amd64.deb
+9510ceb63e138b473680b348cc071bb61394c81566b95df2af97dae0892f688f:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 9550e6231107fe1e05f4a29d804731a1694fbf6918815a00e691b00b0981be4e:
   type: ubuntu
   packages:
@@ -9695,6 +9705,10 @@ d7cf9ddba23b6be990fdbfd6a6e15ab04d2d7bc3743669709d077265b0c37280:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.3.2011-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-240.22.1.el8_3.x86_64.rpm
+d8a43ba07f8924235c377c25a770b24b2306f7c83bc6688ee4928ec1c87ab026:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8.4.2105-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.7.1.el8_4.x86_64.rpm
 d8b16602600a03cf33dd8ef4d75538d5fe55cf98013bcd5766cc233caca27897:
   type: redhat
   packages:
