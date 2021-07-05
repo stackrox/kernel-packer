@@ -213,6 +213,7 @@ jobs:
 
   crawl:
     machine: true
+    resource_class: large
     environment:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
