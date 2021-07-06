@@ -302,9 +302,14 @@ func reformatPairs(packages []string) ([][]string, error) {
 			}
 			if !pkgExists {
 				if !backport && r.backport {
-					r = rev{[]string{}, revision, backport}
+					// discard any backport(s) in favor of the non-backport.
+					// (handles non-backports listed after backports)
+					r = rev{[]string{pkg}, revision, backport}
+				} else if backport == r.backport {
+					// add missing packages but only of the same backport class
+					// (handles only backports or non-backports listed before backports)
+					r.packages = append(r.packages, pkg)
 				}
-				r.packages = append(r.packages, pkg)
 			}
 		case found && r.revision < revision:
 			r = rev{[]string{pkg}, revision, backport}
