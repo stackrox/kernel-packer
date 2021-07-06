@@ -18,10 +18,6 @@ func TestReformatPairs(t *testing.T) {
 			packages:  []string{},
 			manifests: [][]string{},
 		},
-		// [http://security.ubuntu.com/ubuntu/pool/main/l/linux-gke/linux-gke-headers-5.4.0-1048_5.4.0-1048.50_amd64.deb
-		// http://security.ubuntu.com/ubuntu/pool/main/l/linux-gke/linux-headers-5.4.0-1048-gke_5.4.0-1048.50_amd64.deb
-		// http://security.ubuntu.com/ubuntu/pool/main/l/linux-gke-5.4/linux-gke-5.4-headers-5.4.0-1048_5.4.0-1048.50~18.04.1_amd64.deb
-		// http://security.ubuntu.com/ubuntu/pool/main/l/linux-gke-5.4/linux-headers-5.4.0-1048-gke_5.4.0-1048.50~18.04.1_amd64.deb]
 		{
 			title: "pairs of debs",
 			packages: []string{
