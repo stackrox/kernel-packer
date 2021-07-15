@@ -5755,6 +5755,10 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.3-flatcar_developer_container.bin.bz2
+1379c5c33af37bec2a0b0b98b655104bcafb9eedf77a9b1df40fb3e0ed469dcc:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.17-200.fc33-x86_64-kernel-devel-5.12.17-200.fc33.x86_64.rpm
 01538f1a5d34e6f6a05ec15c4861308e54621406b511392a4e7dd7744dda31af:
   type: suse
   packages:
@@ -11587,6 +11591,11 @@ fa68874f45d53f67c09616d560affeee4d4f9ebba3009b6cd6c1293bcb9ca26d:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.8.0-1038_5.8.0-1038.40_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.8.0-1038-aws_5.8.0-1038.40_amd64.deb
+fa081978ecf2706def4b75914bd23d6772f67e16fa4b765c42b8733109254447:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.13.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.13.1.x86_64.rpm
 faa641fd731bd37259e109791277f96e0861306076fe3a6335e4a877f6022ca2:
   type: redhat
   packages:
