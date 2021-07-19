@@ -33,7 +33,7 @@ RUN apt-get update \
 
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
 && apt update -qq \
-&& apt install -yq gcc-7 gcc-8-plugin-dev \
+&& apt install -yq gcc-7 gcc-5-plugin-dev \
 ;
 
 COPY includes /etc/includes
