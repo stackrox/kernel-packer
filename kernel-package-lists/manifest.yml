@@ -1384,6 +1384,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-98-generic_4.4.0-98.121_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-98_4.4.0-98.121_all.deb
+4f39e7da2f0f56b6c08ddac76af89237109aa078bccabbc040c045ae6b3d4cda:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.10.2.el8_4.x86_64.rpm
 4b45cab6b17b09b10d9c401c6ce700414022db459524373fa1fac620d272c6f2:
   type: redhat
   packages:
@@ -2330,6 +2334,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1020_4.4.0-1020.29_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1020-aws_4.4.0-1020.29_amd64.deb
+7ab13fe174f583178bb950c3233bf9c5fc1e3b6f0d6b3682db627ea40074e6d8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.4-200.fc34-x86_64-kernel-devel-5.13.4-200.fc34.x86_64.rpm
 7fb9322fc06196cad8a3e4fa8697ba43669bd53c683ece1174796d45b08262ab:
   type: redhat
   packages:
@@ -5289,6 +5297,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1006_4.13.0-1006.8_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1006-azure_4.13.0-1006.8_amd64.deb
+562a8a94bf40be345d30850b4f9f8b2b7534b332ec626292c9e6944b5cbac5c4:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-16-amd64_4.9.272-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-16-common_4.9.272-1_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.272-1_amd64.deb
 565e10bbe01f72d140cf1b998d16f5ff1be0d21ce93c54d4b7210a8d1c39cc8d:
   type: ubuntu
   packages:
@@ -5839,12 +5853,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.163-1.el7.elrepo.x86_64.rpm
-2208c2a81de361a58cbb64f05919ce07f3ab78e578e7dd496d73316b103cd0cb:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-16-amd64_4.9.272-2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-16-common_4.9.272-2_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.272-2_amd64.deb
 2375b9691f8a7ae5e3604cfacd7d3884c454d679d02d73c0d724edc137ecc713:
   type: cos
   packages:
@@ -11239,6 +11247,10 @@ eff573e8d1592f3f8177a75e91ebaf6e765f2a8aa641ffd2e4d1440f2d8f1107:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-3.18.25-19.el7.x86_64.rpm
+f0e7589c9f19628aec5ed0d638c0af4f67e4a8e9a00132a2a0ed78421e68149f:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8.4.2105-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.10.2.el8_4.x86_64.rpm
 f0c47124019ba464fc261f03e5d9363cc2c9a60fe2e1ce385436d830283ee31f:
   type: redhat
   packages:
