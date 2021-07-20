@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM ubuntu:bionic
 
 RUN apt-get update \
  && apt-get upgrade -y \
@@ -6,9 +6,8 @@ RUN apt-get update \
       binutils \
       make \
       gcc \
-      # Use gcc-7 for COS
-      gcc-7 \
-      gcc-8-plugin-dev \
+      gcc-7-plugin-dev \
+      gcc-8 \
       libelf-dev \
       libc6-dev \
       bc \
