@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 RUN apt-get update \
  && apt-get upgrade -y \
@@ -6,6 +6,8 @@ RUN apt-get update \
       binutils \
       make \
       gcc \
+      gcc-7-plugin-dev \
+      gcc-8 \
       libelf-dev \
       libc6-dev \
       bc \
@@ -28,13 +30,8 @@ RUN apt-get update \
       unzip \
       bison \
       flex \
-      software-properties-common \
  ;
 
-RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test \
-&& apt update -qq \
-&& apt install -yq gcc-7 gcc-5-plugin-dev \
-;
 
 COPY includes /etc/includes
 
