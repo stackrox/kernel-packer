@@ -44,6 +44,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1104_4.4.0-1104.115_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1104-aws_4.4.0-1104.115_amd64.deb
+0f6ff729c7630140989e56153b1c4e5ed322313076477cf40328f42dd3d945b5:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-amd64_5.10.46-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-1_amd64.deb
 0f7dadd726351b846bdfb8d39690afd37c7e291f96f4dbfe3762de13123341c3:
   type: ubuntu
   packages:
@@ -4214,6 +4220,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1077_4.4.0-1077.87_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1077-aws_4.4.0-1077.87_amd64.deb
+00071c749d6b7eb20dffdc77c73be1d90c7aba459ecd8b34030b0c30bbafd48c:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.46-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-1_amd64.deb
 72f15208fc59c6204393749502dc4b1590c810af4cf381e9a27d0ff4ec0ee784:
   type: debian
   packages:
@@ -5297,12 +5309,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1006_4.13.0-1006.8_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1006-azure_4.13.0-1006.8_amd64.deb
-562a8a94bf40be345d30850b4f9f8b2b7534b332ec626292c9e6944b5cbac5c4:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-16-amd64_4.9.272-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-16-common_4.9.272-1_all.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.272-1_amd64.deb
 565e10bbe01f72d140cf1b998d16f5ff1be0d21ce93c54d4b7210a8d1c39cc8d:
   type: ubuntu
   packages:
