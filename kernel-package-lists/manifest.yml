@@ -5870,6 +5870,12 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.163-1.el7.elrepo.x86_64.rpm
+2208c2a81de361a58cbb64f05919ce07f3ab78e578e7dd496d73316b103cd0cb:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-16-amd64_4.9.272-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.9.0-16-common_4.9.272-2_all.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.9_4.9.272-2_amd64.deb
 2375b9691f8a7ae5e3604cfacd7d3884c454d679d02d73c0d724edc137ecc713:
   type: cos
   packages:
@@ -5970,12 +5976,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1034_4.15.0-1034.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1034-gke_4.15.0-1034.36_amd64.deb
-3908d8d8375c709faf3b14bbd3ccb01624e2db400eeb7aa2bd026442bec653dd:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 3979cf993fd699c9b1be0dac6fc16d7ee016a5eb5f0df5122d4950b62249c8c3:
   type: ubuntu
   packages:
@@ -8122,6 +8122,10 @@ a073722f958bcae46c4364de30ea93278959127478da4cc1020fc3c6cb969b5e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1029_5.4.0-1029.30_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1029-aws_5.4.0-1029.30_amd64.deb
+a84645ec238d06a9ccd8dece9e143d3592771c44bfcb061e6466d68ac4d594a2:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-76b33544679733c2c446ba38133cc48ed69b51bca09667ab89dbc4a89b7d1f6a-kernel-devel-5.4.129-63.229.amzn2.x86_64.rpm
 a85114c8db72a0804578803359c2dab37145f5ab11d9dead825d9170423c0b71:
   type: redhat
   packages:
