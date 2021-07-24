@@ -5983,6 +5983,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1034_4.15.0-1034.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1034-gke_4.15.0-1034.36_amd64.deb
+3908d8d8375c709faf3b14bbd3ccb01624e2db400eeb7aa2bd026442bec653dd:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 3979cf993fd699c9b1be0dac6fc16d7ee016a5eb5f0df5122d4950b62249c8c3:
   type: ubuntu
   packages:
@@ -7939,6 +7945,12 @@ a064e1dc82aa877ed026752db086de4676a66ca6ceb3e9cd948f30e0314c396e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1104_4.15.0-1104.111_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1104-aws_4.15.0-1104.111_amd64.deb
+a65f1f17c87ffdaf50da968a6dffa50e3554e22913ad137ddfbde02f07623c39:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-amd64_5.10.46-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-2_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-2_amd64.deb
 a70a20a0125164f2eda30306045a347909baa9f75e947144e701a7427ebed563:
   type: coreos
   packages:
@@ -10650,12 +10662,6 @@ e5f754de4ba9e96a98c0716a5dab7d3cb382e0d2d05b95ae4469668dc45b1da0:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.el8.x86_64.rpm
-e5dc520dbaf6b1b6a5f9e2bb62d42ce763c6ac262ba1c14553f38fb9dc33724f:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-7-amd64_5.10.40-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-7-common_5.10.40-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.40-1_amd64.deb
 e05d17c91b73b142bfc3526819af5899fc0bdcaaab86b0121a51b5c53078ab0d:
   type: ubuntu
   packages:
@@ -10908,12 +10914,6 @@ e4781b16677b90b1d58c40beda8103d0249e152f8fe2871134e905c19155021e:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10367.0.0-kernel-src.tar.gz
-e7194cdc82775fb050910621050568c4c8d7f633acf1cc8323e8722f0427b6c3:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-7-cloud-amd64_5.10.40-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-7-common_5.10.40-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.40-1_amd64.deb
 e07752b8b128a4c55de98b5201904421d902af89b59c81bbbc08023ae22b2614:
   type: cos
   packages:
@@ -10980,6 +10980,12 @@ e49485247dfbf3af73da12d32ac9889895b4760f3773b90198a998dd226592f1:
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.21.2.el7.x86_64.rpm
+e59249168db6ab8a1c70d6d39508dbc7344c9469324b8586157b7d6897ca3e63:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.46-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-2_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-2_amd64.deb
 e98062218e9e9e16aaced613febf39ed2258b30871e10171aa6ea3f32cd67090:
   type: cos
   packages:
