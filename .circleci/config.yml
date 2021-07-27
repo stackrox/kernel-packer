@@ -306,7 +306,9 @@ workflows:
   build:
     jobs:
     - lint:
-        context: docker-io-pull
+        context:
+          - quay-cgorman1-readonly
+          - docker-io-pull
     - crawl:
         name: crawl-build
         context: redhat-developer-account-login
@@ -316,11 +318,15 @@ workflows:
         requires:
         - crawl-build
     - combine:
-        context: docker-io-pull
+        context:
+          - quay-cgorman1-readonly
+          - docker-io-pull
         requires:
         - repackage
     - collector:
-        context: docker-io-pull
+        context:
+          - quay-cgorman1-readonly
+          - docker-io-pull
         requires:
         - combine
         filters:
