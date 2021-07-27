@@ -1,10 +1,10 @@
 version: 2.1
 
 defaultImage: &defaultImage
-  image: docker.io/stackrox/apollo-ci:collector-0.3.7
+  image: quay.io/cgorman1/apollo-ci:collector-0.3.7
   auth:
-    username: $DOCKER_IO_PULL_USERNAME
-    password: $DOCKER_IO_PULL_PASSWORD
+    username: $QUAY_CGORMAN1_RO_USER
+    password: $QUAY_CGORMAN1_RO_PASSWORD
 
 defaults: &defaults
   docker:
@@ -306,7 +306,9 @@ workflows:
   build:
     jobs:
     - lint:
-        context: docker-io-pull
+        context:
+          - quay-cgorman1-readonly
+          - docker-io-pull
     - crawl:
         name: crawl-build
         context: redhat-developer-account-login
@@ -316,11 +318,15 @@ workflows:
         requires:
         - crawl-build
     - combine:
-        context: docker-io-pull
+        context:
+          - quay-cgorman1-readonly
+          - docker-io-pull
         requires:
         - repackage
     - collector:
-        context: docker-io-pull
+        context:
+          - quay-cgorman1-readonly
+          - docker-io-pull
         requires:
         - combine
         filters:
