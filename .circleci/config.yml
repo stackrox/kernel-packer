@@ -7,11 +7,10 @@ defaultImage: &defaultImage
     password: $DOCKER_IO_PULL_PASSWORD
 
 defaults: &defaults
-  docker:
-    - *defaultImage
-  working_directory: /go/src/github.com/stackrox/kernel-packer
+  machine: true
   environment:
-    NO_INSTALL_GCLOUD: true
+  - GOPATH: /home/circleci/go
+  working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
 
 orbs:
   slack: circleci/slack@3.4.2
