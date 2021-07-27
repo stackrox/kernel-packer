@@ -1,16 +1,17 @@
 version: 2.1
 
 defaultImage: &defaultImage
-  image: docker.io/stackrox/apollo-ci:collector-0.3.7
+  image: quay.io/cgorman1/apollo-ci:collector-0.3.7
   auth:
-    username: $DOCKER_IO_PULL_USERNAME
-    password: $DOCKER_IO_PULL_PASSWORD
+    username: $QUAY_CGORMAN1_RO_USER
+    password: $QUAY_CGORMAN1_RO_PASSWORD
 
 defaults: &defaults
-  machine: true
+  docker:
+    - *defaultImage
+  working_directory: /go/src/github.com/stackrox/kernel-packer
   environment:
-  - GOPATH: /home/circleci/go
-  working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
+    NO_INSTALL_GCLOUD: true
 
 orbs:
   slack: circleci/slack@3.4.2
