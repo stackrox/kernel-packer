@@ -9170,6 +9170,12 @@ c21a221bf7a35bb306bb2cf4e8c72c88d52a67b7816aa2677a9d41bad2972677:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.124.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.124.1.x86_64.rpm
+c24f3b967c7291f34b5817bce90908885a5a311fb32ddeb713f3f1bf3b198412:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.46-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-3_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-3_amd64.deb
 c39d9f7d2ed9d52b0c8e2cb90a9517c5937e6143ac8ce70a290b34026c8de268:
   type: redhat
   packages:
@@ -10760,12 +10766,6 @@ e49485247dfbf3af73da12d32ac9889895b4760f3773b90198a998dd226592f1:
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.21.2.el7.x86_64.rpm
-e59249168db6ab8a1c70d6d39508dbc7344c9469324b8586157b7d6897ca3e63:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.46-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-2_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-2_amd64.deb
 e98062218e9e9e16aaced613febf39ed2258b30871e10171aa6ea3f32cd67090:
   type: cos
   packages:
