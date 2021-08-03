@@ -452,6 +452,7 @@ repackage_ubuntu() {
 
         # Special case for Ubuntu ESM packages
         esm_domain="esm.ubuntu.com"
+        kernel_version_base="${kernel_version}"
         if [[ "${input_package_1}" == *"${esm_domain}"* ||
               "${input_package_2}" == *"${esm_domain}"* ]]; then
           kernel_version="${kernel_version}-esm"
@@ -466,7 +467,7 @@ repackage_ubuntu() {
         tar --create --dereference --hard-dereference --file - \
             --exclude ./scripts/dtc \
             --directory "$meta_dir" . \
-            --directory "${tmp_dir}/usr/src/linux-headers-${kernel_version}" . \
+            --directory "${tmp_dir}/usr/src/linux-headers-${kernel_version_base}" . \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
     )
 }
