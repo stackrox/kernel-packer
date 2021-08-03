@@ -102,7 +102,11 @@ jobs:
     - attach_workspace:
         at: .
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v17
+        name: Restoring kernel packer cache
+        keys:
+          - stackrox-kernel-packer-cache-v17-{{ .Branch }}-{{ .Revision }}
+          - stackrox-kernel-packer-cache-v17-{{ .Branch }}-
+          - stackrox-kernel-packer-cache-v17-master-
     - run:
         name: Check if PR with no-cache label
         command: |
@@ -171,7 +175,11 @@ jobs:
     - attach_workspace:
         at: .
     - restore_cache:
-        key: stackrox-kernel-packer-cache-v17
+        name: Restoring kernel packer cache
+        keys:
+          - stackrox-kernel-packer-cache-v17-{{ .Branch }}-{{ .Revision }}
+          - stackrox-kernel-packer-cache-v17-{{ .Branch }}-
+          - stackrox-kernel-packer-cache-v17-master-
     - run:
         name: Move restored cache
         command: |
@@ -203,16 +211,9 @@ jobs:
         path: .build-data/cache/cache.yml
         destination: cache.yml
         when: always
-    - run:
-        name: Skip cache save if not master
-        command: |
-          if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ && -z "${CIRCLE_TAG}" ]]; then
-            exit 0
-          fi
-          echo "Skipping CircleCI cache save on PR build"
-          circleci step halt
     - save_cache:
-        key: stackrox-kernel-packer-cache-v17-{{ epoch }}
+        name: Saving kernel packer cache
+        key: stackrox-kernel-packer-cache-v17-{{ .Branch }}-{{ .Revision }}
         paths:
         - .build-data/cache/cache.yml
 
