@@ -449,6 +449,14 @@ repackage_ubuntu() {
             log "blank kernel dir"
             return 1
         fi
+
+        # Special case for Ubuntu ESM packages
+        esm_domain="esm.ubuntu.com"
+        if [[ "${input_package_1}" == *"${esm_domain}"* ||
+              "${input_package_2}" == *"${esm_domain}"* ]]; then
+          kernel_version="${kernel_version}-esm"
+        fi
+
         log "Kernel version is $kernel_version"
 
         # Generate bundle meta files
