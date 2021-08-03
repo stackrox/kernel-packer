@@ -311,7 +311,9 @@ workflows:
           - docker-io-pull
     - crawl:
         name: crawl-build
-        context: redhat-developer-account-login
+        context:
+        - redhat-developer-account-login
+        - ubuntu-esm-subscription-token
         requires:
         - lint
     - repackage:
@@ -339,7 +341,9 @@ workflows:
     jobs:
     - crawl:
         name: crawl-cron
-        context: redhat-developer-account-login
+        context:
+        - redhat-developer-account-login
+        - ubuntu-esm-subscription-token
     triggers:
     - schedule:
         cron: "0 * * * *"

@@ -481,6 +481,18 @@ repos = {
         },
 
     ],
+    "Ubuntu-ESM": [
+        {
+            "root" : "https://esm.ubuntu.com/infra/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-hwe(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            # Match linux-header packages with a backports identifier, e.g. linux-headers-4.15.0-151-generic_4.15.0-151.157~16.04.1_amd64.deb.
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*~(1[6-9]|[2-9][0-9]).[0-9]+[\.0-9]*_(all|amd64).deb$')]/@href",
+            "exclude_patterns": ["lowlatency"],
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_ESM_INFRA_BEARER_TOKEN",""))
+        },
+    ],
+
     "Oracle-UEK5": [
     	{
     		"root": "http://yum.oracle.com/repo/OracleLinux/OL7/developer_UEKR5/x86_64/",
@@ -522,7 +534,7 @@ def crawl_s3(repo):
         url = repo['root']
         if next_marker:
             url += "?marker=" + next_marker
-        body = http.request('GET', url, timeout=30.0).data
+        body = http.request('GET', repo["root"], timeout=30.0, headers=repo.get("http_request_headers",{})).data
         xml = html.fromstring(body)
         read_more = val(xml, '//istruncated/text()').lower() == "true"
         next_marker = val(xml, '//nextmarker/text()')
@@ -546,13 +558,14 @@ def crawl(distro):
     for repo in repos[distro]:
         sys.stderr.write("Considering repo " + repo["root"] + "\n")
 
+        http_request_headers=repo.get("http_request_headers", {})
         if "type" in repo and repo["type"] == "s3":
             sys.stderr.write("Crawling S3 bucket\n")
             kernel_urls += crawl_s3(repo)
             continue
 
         try:
-            root = http.request('GET', repo["root"]).data
+            root = http.request('GET', repo["root"], timeout=30.0, headers=http_request_headers).data
             versions = [""]
             if len(repo["discovery_pattern"]) > 0:
                 versions = html.fromstring(root).xpath(repo["discovery_pattern"], namespaces=XPATH_NAMESPACES)
@@ -565,7 +578,7 @@ def crawl(distro):
                         sys.stderr.write("Considering version " + version + " subdir " + subdir + "\n")
                         source = repo["root"] + version + subdir
                         download_root = source if "download_root" not in repo else repo["download_root"]
-                        page = http.request('GET', source).data
+                        page = http.request('GET', source, timeout=30.0, headers=http_request_headers).data
                         rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
                         if len(rpms) == 0:
                             sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")

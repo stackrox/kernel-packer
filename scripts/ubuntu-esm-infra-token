@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# Retrieve and print the esm-infra bearer token, based on https://github.com/canonical/ubuntu-advantage-client
+
+set -euo pipefail
+
+if [[ -z "$UBUNTU_ESM_SUBSCRIPTION_TOKEN" ]]; then
+    echo "Environment variable 'UBUNTU_ESM_SUBSCRIPTION_TOKEN' is undefined" 1>&2
+    exit 1
+fi
+
+UBUNTU_ESM_ATTACH_URL="${UBUNTU_ESM_ATTACH_URL:-https://contracts.canonical.com/v1/context/machines/token}"
+
+# Values in machine_details taken from log file (/var/log/ubuntu-advantage.log) of the ubuntu
+# advantage client after running 'ua attach ${UBUNTU_ESM_SUBSCRIPTION_TOKEN}'.
+machine_details=$(cat <<EOF
+{
+  "machineId": "2CFD84EC-3D43-416B-A45B-09EC50B2F765",
+  "architecture": "amd64",
+  "os": {
+    "distribution": "Ubuntu",
+    "type": "Linux",
+    "version": "20.04 LTS (Focal Fossa)",
+    "release": "20.04",
+    "series": "focal",
+    "kernel": "5.10.25-linuxkit"
+  }
+}
+EOF
+)
+
+# Attach fake machine and extract esm-infra bearer token used to access esm apt repositories.
+repo_esm_token="$(curl -kfs \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer ${UBUNTU_ESM_SUBSCRIPTION_TOKEN}" \
+  -d "${machine_details}" \
+  "${UBUNTU_ESM_ATTACH_URL}" | jq -r '.resourceTokens | .[] | select(.type=="esm-infra") | .token')"
+
+echo "${repo_esm_token}"

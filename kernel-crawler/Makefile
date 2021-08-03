@@ -58,6 +58,20 @@ crawl-ubuntu-gke: build-crawl-container
 crawl-ubuntu-gcp: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-GCP > $(CRAWLED_PACKAGE_DIR)/ubuntu-gcp.txt
 
+.PHONY: crawl-ubuntu-azure
+crawl-ubuntu-azure: build-crawl-container
+	docker run --rm -i kernel-crawler crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt
+
+.PHONY: crawl-ubuntu-aws
+crawl-ubuntu-aws: build-crawl-container
+	docker run --rm -i kernel-crawler crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
+
+crawl-ubuntu-esm: export UBUNTU_ESM_INFRA_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-esm-infra-token)
+
+.PHONY: crawl-ubuntu-esm
+crawl-ubuntu-esm: build-crawl-container
+	docker run --rm -i -e UBUNTU_ESM_INFRA_BEARER_TOKEN kernel-crawler crawl Ubuntu-ESM > $(CRAWLED_PACKAGE_DIR)/ubuntu-esm.txt
+
 .PHONY: crawl-oracle-uek
 crawl-oracle-uek: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Oracle-UEK5 > $(CRAWLED_PACKAGE_DIR)/oracle-uek.txt
@@ -204,14 +218,6 @@ crawl-rhel: build-crawl-container
 			-cert /rhel-certs/rhel-cert.pem \
 			-key /rhel-certs/rhel-key.pem \
 		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.5.txt
-
-.PHONY: crawl-ubuntu-azure
-crawl-ubuntu-azure: build-crawl-container
-	docker run --rm -i kernel-crawler crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt
-
-.PHONY: crawl-ubuntu-aws
-crawl-ubuntu-aws: build-crawl-container
-	docker run --rm -i kernel-crawler crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
 
 .PHONY: crawl-docker-desktop
 crawl-docker-desktop: build-crawl-container

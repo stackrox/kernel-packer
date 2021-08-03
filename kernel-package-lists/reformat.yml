@@ -118,6 +118,12 @@
   file: ubuntu-uncrawled.txt
   reformat: pairs
 
+- name: ubuntu-esm
+  description: Ubuntu Extended Security Maintainance Kernels
+  type: ubuntu
+  file: ubuntu-esm.txt
+  reformat: pairs
+
 - name: minikube
   description: Minikube VM Kernels
   type: minikube
