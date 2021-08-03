@@ -6,6 +6,10 @@ defaultImage: &defaultImage
     username: $QUAY_CGORMAN1_RO_USER
     password: $QUAY_CGORMAN1_RO_PASSWORD
 
+defaultMachine: &defaultMachine
+  machine:
+    image: ubuntu-2004:202104-01
+
 defaults: &defaults
   docker:
     - *defaultImage
@@ -85,7 +89,7 @@ jobs:
         command: go test -v ./...
 
   repackage:
-    machine: true
+    <<: *defaultMachine
     parallelism: 16
     environment:
     - GOPATH: /home/circleci/go
