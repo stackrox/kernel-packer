@@ -534,7 +534,7 @@ def crawl_s3(repo):
         url = repo['root']
         if next_marker:
             url += "?marker=" + next_marker
-        body = http.request('GET', repo["root"], timeout=30.0, headers=repo.get("http_request_headers",{})).data
+        body = http.request('GET', url, timeout=30.0, headers=repo.get("http_request_headers",{})).data
         xml = html.fromstring(body)
         read_more = val(xml, '//istruncated/text()').lower() == "true"
         next_marker = val(xml, '//nextmarker/text()')
