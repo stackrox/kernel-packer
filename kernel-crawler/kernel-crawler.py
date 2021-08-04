@@ -484,10 +484,10 @@ repos = {
     "Ubuntu-ESM": [
         {
             "root" : "https://esm.ubuntu.com/infra/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp|hwe)(-.*)?/$')]/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp|hwe|azure)(-.*)?/$')]/@href",
             "subdirs" : [""],
-            # Match linux-header packages with a backports identifier, e.g. linux-headers-4.15.0-151-generic_4.15.0-151.157~16.04.1_amd64.deb.
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp-)?headers-[4-9].*~(1[6-9]|[2-9][0-9]).[0-9]+[\.0-9]*_(all|amd64).deb$')]/@href",
+            # Match linux-header packages with a backport version 16.x or greater, e.g. linux-headers-4.15.0-151-generic_4.15.0-151.157~16.04.1_amd64.deb.
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp-|azure-)?headers-[4-9].*~(1[6-9]|[2-9][0-9]).[0-9]+[\.0-9]*_(all|amd64).deb$')]/@href",
             "exclude_patterns": ["lowlatency"],
             "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_ESM_INFRA_BEARER_TOKEN",""))
         },
