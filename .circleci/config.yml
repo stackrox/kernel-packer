@@ -105,7 +105,6 @@ jobs:
         name: Restoring kernel packer cache
         keys:
           - stackrox-kernel-packer-cache-v17-{{ .Branch }}-{{ .Revision }}
-          - stackrox-kernel-packer-cache-v17-{{ .Branch }}-
           - stackrox-kernel-packer-cache-v17-master-
     - run:
         name: Check if PR with no-cache label
@@ -178,7 +177,6 @@ jobs:
         name: Restoring kernel packer cache
         keys:
           - stackrox-kernel-packer-cache-v17-{{ .Branch }}-{{ .Revision }}
-          - stackrox-kernel-packer-cache-v17-{{ .Branch }}-
           - stackrox-kernel-packer-cache-v17-master-
     - run:
         name: Move restored cache
