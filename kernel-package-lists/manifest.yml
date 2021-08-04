@@ -836,6 +836,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.7-200.fc33-x86_64-kernel-devel-5.12.7-200.fc33.x86_64.rpm
+2eab44b80592a95d1a29d89eb84161293f667b648d71719a5f7996bc8800cbdb:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1122_4.15.0-1122.135_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1122-azure_4.15.0-1122.135_amd64.deb
 2dac9b701af4d46655e0d86d3332a44f725c85e70879096b1cbbfcb1fcd9dbe8:
   type: redhat
   packages:
@@ -5889,6 +5894,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1034_4.15.0-1034.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1034-gke_4.15.0-1034.36_amd64.deb
+3908d8d8375c709faf3b14bbd3ccb01624e2db400eeb7aa2bd026442bec653dd:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-1_all.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 3979cf993fd699c9b1be0dac6fc16d7ee016a5eb5f0df5122d4950b62249c8c3:
   type: ubuntu
   packages:
@@ -9336,6 +9347,11 @@ c3860b699a247c67a19c8a97a3ad3cc6ada5f918173726844b4d8819e3d89e57:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.21.1.el7.x86_64.rpm
+c7085e3875363c0343e133fbb03742188df32e05ee74dfd59b2d7aa8e44163b4:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-154-generic_4.15.0-154.161_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-154_4.15.0-154.161_all.deb
 c7339fa4201f536587700a1dcd3c9a9581c635ac13d0274925c79b05c5453474:
   type: redhat
   packages:
