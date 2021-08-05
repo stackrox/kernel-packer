@@ -85,8 +85,8 @@ func TestReformatPairs(t *testing.T) {
 					"http://security.ubuntu.com/ubuntu/pool/main/l/linux-gke/linux-headers-5.4.0-1048-gke_5.4.0-1048.50_amd64.deb",
 				},
 				{
-					"http://security.ubuntu.com/ubuntu/pool/main/l/linux-gke/linux-gke-headers-5.5.0-786_5.5.0-786.50~18.04.1_amd64.deb",
-					"http://security.ubuntu.com/ubuntu/pool/main/l/linux-gke/linux-headers-5.5.0-786-gke_5.5.0-786.50~18.04.1_amd64.deb",
+					"http://security.ubuntu.com/ubuntu/pool/main/l/linux-gke/linux-gke-headers-5.4.0-1048_5.4.0-1048.50~16.04.1_amd64.deb",
+					"http://security.ubuntu.com/ubuntu/pool/main/l/linux-gke/linux-headers-5.4.0-1048-gke_5.4.0-1048.50~16.04.1_amd64.deb",
 				},
 			},
 		},
