@@ -454,17 +454,14 @@ repackage_ubuntu() {
         # esm domain and contains a backport indicator, add the backport version
         # to the kernel version. Backported kernels may have different configurations.
         # Example: `CONFIG_VERSION_SIGNATURE="Ubuntu 4.15.0-147.151~16.04.1-generic 4.15.18`"
-        eval "grep CONFIG_VERSION_SIGNATURE ${tmp_dir}/usr/src/linux-headers-${kernel_version}/.config"
-        esm_domain="esm.ubuntu.com"
+        eval "$(grep "CONFIG_VERSION_SIGNATURE" "${tmp_dir}/usr/src/linux-headers-${kernel_version}/.config")"
         bundle_kernel_version="${kernel_version}"
-        if [[ "${input_package_1}" == *"${esm_domain}"* || "${input_package_2}" == *"${esm_domain}"* ]]; then
-          if [[ "${CONFIG_VERSION_SIGNATURE}" == *"~"* ]]; then
-              backport_version="$(echo "$CONFIG_VERSION_SIGNATURE" | cut -d '~' -f1 | cut -d '.' -f 0-1)"
-              bundle_kernel_version="${kernel_version}~${backport_version}"
-          fi
+        if [[ "${CONFIG_VERSION_SIGNATURE}" == *"~"* ]]; then
+            backport_version="$(echo "$CONFIG_VERSION_SIGNATURE" | cut -d '~' -f2 | cut -d '.' -f1-2)"
+            bundle_kernel_version="${kernel_version}~${backport_version}"
         fi
 
-        log "Kernel version is $kernel_version"
+        log "Kernel version is $bundle_kernel_version"
 
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'ubuntu' "$kernel_version" '.')"
