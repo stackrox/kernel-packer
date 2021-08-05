@@ -287,8 +287,11 @@ func reformatPairs(packages []string) ([][]string, error) {
 			panic(err)
 		}
 
-		r, found := versions[version]
 		backport := "" != matches[3]
+		if backport && strings.Contains(matches[3], "16.04") {
+			version = version + matches[3]
+		}
+		r, found := versions[version]
 
 		switch {
 		case found && r.revision > revision:
