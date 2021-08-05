@@ -41,7 +41,7 @@ ubuntu_excludes = [
     "5.10.0-13.14", # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
 ]
 ubuntu_backport_excludes = [
-    "\r~(?!16.04)", "+", # prevent duplicate backports from cluttering the list
+    "\r~(?!16.04)", "+", # Prevent duplicate backports from cluttering the list, execept for 16.04 backports.
 ]
 debian_excludes = [
     "3.2.0", "3.16.0" # legacy
