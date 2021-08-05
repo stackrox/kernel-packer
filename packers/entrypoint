@@ -456,7 +456,7 @@ repackage_ubuntu() {
         # Example: `CONFIG_VERSION_SIGNATURE="Ubuntu 4.15.0-147.151~16.04.1-generic 4.15.18`"
         eval "$(grep "CONFIG_VERSION_SIGNATURE" "${tmp_dir}/usr/src/linux-headers-${kernel_version}/.config")"
         bundle_kernel_version="${kernel_version}"
-        if [[ "${CONFIG_VERSION_SIGNATURE}" == *"~"* ]]; then
+        if [[ "${CONFIG_VERSION_SIGNATURE}" == *"~16.04"* ]]; then
             backport_version="$(echo "$CONFIG_VERSION_SIGNATURE" | cut -d '~' -f2 | cut -d '.' -f1-2)"
             bundle_kernel_version="${kernel_version}~${backport_version}"
         fi
