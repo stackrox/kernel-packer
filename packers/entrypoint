@@ -449,7 +449,19 @@ repackage_ubuntu() {
             log "blank kernel dir"
             return 1
         fi
-        log "Kernel version is $kernel_version"
+
+        # Special case for Ubuntu 16.04 backport packages: If the kernel config version signature
+        # contains a backport indicator, add the backport version to the kernel version name.
+        # Backported kernels may have different configurations and are handled in the collector bootstrap script.
+        eval "$(grep "CONFIG_VERSION_SIGNATURE" "${tmp_dir}/usr/src/linux-headers-${kernel_version}/.config")"
+        bundle_kernel_version="${kernel_version}"
+        if [[ "${CONFIG_VERSION_SIGNATURE}" == *"~16.04"* ]]; then
+            # Example value parsed: `CONFIG_VERSION_SIGNATURE="Ubuntu 4.15.0-147.151~16.04.1-generic 4.15.18`"
+            backport_version="$(echo "$CONFIG_VERSION_SIGNATURE" | cut -d '~' -f2 | cut -d '.' -f1-2)"
+            bundle_kernel_version="${kernel_version}~${backport_version}"
+        fi
+
+        log "Kernel version is $bundle_kernel_version"
 
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'ubuntu' "$kernel_version" '.')"
@@ -459,7 +471,7 @@ repackage_ubuntu() {
             --exclude ./scripts/dtc \
             --directory "$meta_dir" . \
             --directory "${tmp_dir}/usr/src/linux-headers-${kernel_version}" . \
-        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+        | pigz -9 -c > "${output_dir}/bundle-${bundle_kernel_version}.tgz"
     )
 }
 

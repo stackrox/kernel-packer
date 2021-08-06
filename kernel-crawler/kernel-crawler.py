@@ -41,7 +41,7 @@ ubuntu_excludes = [
     "5.10.0-13.14", # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
 ]
 ubuntu_backport_excludes = [
-    "~", "+", # prevent duplicate backports from cluttering the list
+    "\r~(?!16.04)", "+", # Prevent duplicate backports from cluttering the list, execept for 16.04 backports.
 ]
 debian_excludes = [
     "3.2.0", "3.16.0" # legacy
@@ -481,6 +481,18 @@ repos = {
         },
 
     ],
+    "Ubuntu-ESM": [
+        # Crawl Ubuntu 16.x Extended Security Maintainence backports, e.g. linux-headers-4.15.0-151-generic_4.15.0-151.157~16.04.1_amd64.deb.
+        {
+            "root" : "https://esm.ubuntu.com/infra/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp|hwe|azure)(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp-|azure-)?headers-[4-9].*~16.[\.0-9]+_(all|amd64).deb$')]/@href",
+            "exclude_patterns": ["lowlatency"],
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_ESM_INFRA_BEARER_TOKEN",""))
+        },
+    ],
+
     "Oracle-UEK5": [
     	{
     		"root": "http://yum.oracle.com/repo/OracleLinux/OL7/developer_UEKR5/x86_64/",
@@ -503,6 +515,11 @@ repos = {
     ],
 }
 
+def check_pattern(pattern, s):
+    if len(pattern) > 1 and pattern[0:2] == "\r":
+        return re.compile(pattern[2:]).match(s) != None
+    return pattern in s;
+
 retry = urllib3.util.Retry(connect=5, read=5, redirect=5, backoff_factor=1)
 timeout = urllib3.util.Timeout(connect=10, read=60)
 http = urllib3.PoolManager(retries=retry, timeout=timeout)
@@ -522,7 +539,7 @@ def crawl_s3(repo):
         url = repo['root']
         if next_marker:
             url += "?marker=" + next_marker
-        body = http.request('GET', url, timeout=30.0).data
+        body = http.request('GET', url, timeout=30.0, headers=repo.get("http_request_headers",{})).data
         xml = html.fromstring(body)
         read_more = val(xml, '//istruncated/text()').lower() == "true"
         next_marker = val(xml, '//nextmarker/text()')
@@ -546,13 +563,14 @@ def crawl(distro):
     for repo in repos[distro]:
         sys.stderr.write("Considering repo " + repo["root"] + "\n")
 
+        http_request_headers=repo.get("http_request_headers", {})
         if "type" in repo and repo["type"] == "s3":
             sys.stderr.write("Crawling S3 bucket\n")
             kernel_urls += crawl_s3(repo)
             continue
 
         try:
-            root = http.request('GET', repo["root"]).data
+            root = http.request('GET', repo["root"], timeout=30.0, headers=http_request_headers).data
             versions = [""]
             if len(repo["discovery_pattern"]) > 0:
                 versions = html.fromstring(root).xpath(repo["discovery_pattern"], namespaces=XPATH_NAMESPACES)
@@ -565,15 +583,15 @@ def crawl(distro):
                         sys.stderr.write("Considering version " + version + " subdir " + subdir + "\n")
                         source = repo["root"] + version + subdir
                         download_root = source if "download_root" not in repo else repo["download_root"]
-                        page = http.request('GET', source).data
+                        page = http.request('GET', source, timeout=30.0, headers=http_request_headers).data
                         rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
                         if len(rpms) == 0:
                             sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
                         for rpm in sorted(set(rpms)):
                             sys.stderr.write("Considering package " + rpm + "\n")
-                            if "exclude_patterns" in repo and any(x in rpm for x in repo["exclude_patterns"]):
+                            if "exclude_patterns" in repo and any(check_pattern(x,rpm) for x in repo["exclude_patterns"]):
                                 continue
-                            if "include_patterns" in repo and not any(x in rpm for x in repo["include_patterns"]):
+                            if "include_patterns" in repo and not any(check_pattern(x,rpm) for x in repo["include_patterns"]):
                                 continue
                             else:
                                 sys.stderr.write("Adding package " + rpm + "\n")

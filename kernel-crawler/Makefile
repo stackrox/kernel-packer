@@ -58,6 +58,20 @@ crawl-ubuntu-gke: build-crawl-container
 crawl-ubuntu-gcp: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-GCP > $(CRAWLED_PACKAGE_DIR)/ubuntu-gcp.txt
 
+.PHONY: crawl-ubuntu-azure
+crawl-ubuntu-azure: build-crawl-container
+	docker run --rm -i kernel-crawler crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt
+
+.PHONY: crawl-ubuntu-aws
+crawl-ubuntu-aws: build-crawl-container
+	docker run --rm -i kernel-crawler crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
+
+crawl-ubuntu-esm: export UBUNTU_ESM_INFRA_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-esm-infra-token)
+
+.PHONY: crawl-ubuntu-esm
+crawl-ubuntu-esm: build-crawl-container
+	docker run --rm -i -e UBUNTU_ESM_INFRA_BEARER_TOKEN kernel-crawler crawl Ubuntu-ESM > $(CRAWLED_PACKAGE_DIR)/ubuntu-esm.txt
+
 .PHONY: crawl-oracle-uek
 crawl-oracle-uek: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Oracle-UEK5 > $(CRAWLED_PACKAGE_DIR)/oracle-uek.txt
@@ -205,14 +219,6 @@ crawl-rhel: build-crawl-container
 			-key /rhel-certs/rhel-key.pem \
 		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.5.txt
 
-.PHONY: crawl-ubuntu-azure
-crawl-ubuntu-azure: build-crawl-container
-	docker run --rm -i kernel-crawler crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt
-
-.PHONY: crawl-ubuntu-aws
-crawl-ubuntu-aws: build-crawl-container
-	docker run --rm -i kernel-crawler crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
-
 .PHONY: crawl-docker-desktop
 crawl-docker-desktop: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Docker-Desktop \
@@ -243,7 +249,7 @@ crawl-fedora-coreos: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Fedora-CoreOS > $(CRAWLED_PACKAGE_DIR)/fedora-coreos.txt
 
 .PHONY: crawl
-crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos
+crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-esm crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos
 	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 	docker run --rm -i kernel-crawler crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
 	docker run --rm -i kernel-crawler crawl Minikube > $(CRAWLED_PACKAGE_DIR)/minikube.txt

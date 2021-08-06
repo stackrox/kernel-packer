@@ -80,6 +80,8 @@ download() {
         tokens_file="${DIR}/../.build-data/suse-repo-tokens/repos.json"
         token="$(jq -r --arg BASE_URL "${base_url}" '.[]|select(.url|contains($BASE_URL))|.token' "${tokens_file}")"
         wget -nv "${url}?${token}" -O "$file" || rm -f "$file"
+    elif echo "$url" | contains 'esm.ubuntu.com'; then
+        wget -nv --user "bearer" --password "$UBUNTU_ESM_INFRA_BEARER_TOKEN" "$url" -O "$file" || rm -f "$file"
     else
         wget -nv "$url" -O "$file" || rm -f "$file"
     fi

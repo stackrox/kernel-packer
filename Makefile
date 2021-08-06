@@ -31,6 +31,8 @@ robo-crawl-commit:
 robo-collector-commit:
 	@./scripts/robo-collector-commit $(KERNEL_BUNDLE_BUCKET)
 
+sync: export UBUNTU_ESM_INFRA_BEARER_TOKEN = $(shell ./scripts/ubuntu-esm-infra-token)
+
 .PHONY: sync
 sync:
 	@mkdir -p $(BUILD_DATA_DIR)/downloads
