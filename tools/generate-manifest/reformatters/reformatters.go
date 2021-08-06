@@ -291,7 +291,7 @@ func reformatPairs(packages []string) ([][]string, error) {
 
 		// Add the backport string for Ubuntu 16.04 to the version
 		// but drop all other backports that have an existing matching version.
-		if backport && strings.Contains(matches[3], "16.04") {
+		if backport && strings.HasPrefix(matches[3], "~16.04") {
 			version = version + matches[3]
 		}
 		r, found := versions[version]

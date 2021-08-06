@@ -41,7 +41,7 @@ ubuntu_excludes = [
     "5.10.0-13.14", # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
 ]
 ubuntu_backport_excludes = [
-    "\r~(?!16.04)", "+", # Prevent duplicate backports from cluttering the list, execept for 16.04 backports.
+    "\r~(?!16.04)", "+", # Prevent duplicate backports from cluttering the list, except for 16.04 backports.
 ]
 debian_excludes = [
     "3.2.0", "3.16.0" # legacy
@@ -516,9 +516,9 @@ repos = {
 }
 
 def check_pattern(pattern, s):
-    if len(pattern) > 1 and pattern[0:2] == "\r":
-        return re.compile(pattern[2:]).match(s) != None
-    return pattern in s;
+    if pattern.startswith("\r"):
+        return re.match(pattern[2:], s) != None
+    return pattern in s
 
 retry = urllib3.util.Retry(connect=5, read=5, redirect=5, backoff_factor=1)
 timeout = urllib3.util.Timeout(connect=10, read=60)
@@ -563,7 +563,7 @@ def crawl(distro):
     for repo in repos[distro]:
         sys.stderr.write("Considering repo " + repo["root"] + "\n")
 
-        http_request_headers=repo.get("http_request_headers", {})
+        http_request_headers = repo.get("http_request_headers", {})
         if "type" in repo and repo["type"] == "s3":
             sys.stderr.write("Crawling S3 bucket\n")
             kernel_urls += crawl_s3(repo)
@@ -589,9 +589,9 @@ def crawl(distro):
                             sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
                         for rpm in sorted(set(rpms)):
                             sys.stderr.write("Considering package " + rpm + "\n")
-                            if "exclude_patterns" in repo and any(check_pattern(x,rpm) for x in repo["exclude_patterns"]):
+                            if "exclude_patterns" in repo and any(check_pattern(x, rpm) for x in repo["exclude_patterns"]):
                                 continue
-                            if "include_patterns" in repo and not any(check_pattern(x,rpm) for x in repo["include_patterns"]):
+                            if "include_patterns" in repo and not any(check_pattern(x, rpm) for x in repo["include_patterns"]):
                                 continue
                             else:
                                 sys.stderr.write("Adding package " + rpm + "\n")

@@ -453,8 +453,8 @@ repackage_ubuntu() {
         # Special case for Ubuntu 16.04 backport packages: If the kernel config version signature
         # contains a backport indicator, add the backport version to the kernel version name.
         # Backported kernels may have different configurations and are handled in the collector bootstrap script.
-        eval "$(grep "CONFIG_VERSION_SIGNATURE" "${tmp_dir}/usr/src/linux-headers-${kernel_version}/.config")"
         bundle_kernel_version="${kernel_version}"
+        eval "$(grep "CONFIG_VERSION_SIGNATURE" "${tmp_dir}/usr/src/linux-headers-${kernel_version}/.config")"
         if [[ "${CONFIG_VERSION_SIGNATURE}" == *"~16.04"* ]]; then
             # Example value parsed: `CONFIG_VERSION_SIGNATURE="Ubuntu 4.15.0-147.151~16.04.1-generic 4.15.18`"
             backport_version="$(echo "$CONFIG_VERSION_SIGNATURE" | cut -d '~' -f2 | cut -d '.' -f1-2)"
