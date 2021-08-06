@@ -7455,12 +7455,6 @@
   type: redhat
   packages:
   - https---access.cdn.redhat.com-content-origin-rpms-kernel-devel-3.10.0-1062.1.1.el7-fd431d51-kernel-devel-3.10.0-1062.1.1.el7.x86_64.rpm
-63583809aa8748ca4514c26ed3f7db160b63bd598e2e5c511fc0936834e2214b:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 74883512fe882b8ee41edc800eb606d52c09a05346d918d8829f962d8ab639d3:
   type: redhat
   packages:
@@ -8412,6 +8406,11 @@ b2eb9131bdaec27acd56b55ffc16e416691e3cafbdfc1c64c3b100a80e1a0959:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-42-generic_4.4.0-42.62_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-42_4.4.0-42.62_all.deb
+b2fe1ad7b95cd7b7d09e725b28f460d58cad20b476282d737b062d719687b13d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1107_4.15.0-1107.121_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1107-gcp_4.15.0-1107.121_amd64.deb
 b02f0647a60b9fba5519c98f9c57485be94c8166f79e0f3cfde605bc754ed397:
   type: ubuntu
   packages:
