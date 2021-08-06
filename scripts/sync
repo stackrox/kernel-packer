@@ -70,20 +70,21 @@ download() {
             --no-check-certificate \
             --certificate .build-data/rhel-certs/rhel-cert.pem \
             --private-key .build-data/rhel-certs/rhel-key.pem \
-            -nv "$url" -O "$file"
+            -nv "$url" -O "$file" || info "Failed to download from ${url}" && rm -f "$file"
     elif echo "$url" | contains 'docker.io'; then
         wget \
             --header "$("${DIR}/docker-desktop/auth-header.sh")" \
-            -nv "$url" -O "$file"
+            -nv "$url" -O "$file" || info "Failed to download from ${url}" && rm -f "$file"
     elif echo "$url" | contains 'updates.suse.com'; then
         base_url="$(echo "$url" | rev | cut -d'/' -f3- | rev)/"
         tokens_file="${DIR}/../.build-data/suse-repo-tokens/repos.json"
         token="$(jq -r --arg BASE_URL "${base_url}" '.[]|select(.url|contains($BASE_URL))|.token' "${tokens_file}")"
-        wget -nv "${url}?${token}" -O "$file"
+        wget -nv "${url}?${token}" -O "$file" || info "Failed to download from ${url}" && rm -f "$file"
     elif echo "$url" | contains 'esm.ubuntu.com'; then
-        wget -nv --user "bearer" --password "$UBUNTU_ESM_INFRA_BEARER_TOKEN" "$url" -O "$file" || rm -f "$file"
+        wget -nv --user "bearer" --password "$UBUNTU_ESM_INFRA_BEARER_TOKEN" "$url" -O "$file" || \
+            info "Failed to download from ${url}" && rm -f "$file"
     else
-        wget -nv "$url" -O "$file"
+        wget -nv "$url" -O "$file" || info "Failed to download from ${url}" && rm -f "$file"
     fi
 }
 
