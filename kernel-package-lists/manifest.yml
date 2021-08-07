@@ -709,11 +709,6 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2247.5.0-coreos_developer_container.bin.bz2
-2f7c2a9ce8033f5265acc2480df170878132e9a5565fade07f39612efdf0be92:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-79-generic_5.4.0-79.88_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-79_5.4.0-79.88_all.deb
 2f7d7fb5b281e4d5bb563e9ab824b9ae1d203263d46f1d8ad68395a4cd03e3cb:
   type: redhat
   packages:
@@ -829,11 +824,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1013_4.18.0-1013.13-18.04.1_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1013-azure_4.18.0-1013.13-18.04.1_amd64.deb
-2b5294d490f5fc6abe50d1d5cf952ff6f87da575186b4ebc4e1f7e06ee6b6764:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1053_5.4.0-1053.55_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1053-azure_5.4.0-1053.55_amd64.deb
 2e5819c37484f544fdaa95265e2e893fefa8312cdf0556d0f7562adf4a24dfa0:
   type: redhat
   packages:
@@ -1220,11 +1210,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.247-1.el7.elrepo.x86_64.rpm
-3dad842674bb6c2a5e98e934dbb98e7dd074a626638efa34dd6e8b30dd04383d:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-76-generic_5.4.0-76.85_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-76_5.4.0-76.85_all.deb
 3dadd062bcbf4438ecaf3db533926832f1a2ea408941bdeffac4faae11b79fb3:
   type: cos
   packages:
@@ -1233,20 +1218,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.1.2.el7.x86_64.rpm
-3cb05ace6b311ec5995f25f05398a0010a6a339a0af73889c4d9cd99a9741e7f:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1101_4.15.0-1101.114_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1101-gcp_4.15.0-1101.114_amd64.deb
 3bb8925fcd9256d42e6bebc9c20a19393e81eb7730dbc9f0c4fbd45ba871ce15:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12688.0.0-kernel-src.tar.gz
-3ec5eadbe32d3abb7b79cd681f600bf5638c83eed43116a63911a75fcbf45ac5:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-149-generic_4.15.0-149.153_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-149_4.15.0-149.153_all.deb
 3dc165f91a7c60784f16e87214cc20fba9e0d2e81e6ef67522d30c99dd057390:
   type: ubuntu
   packages:
@@ -1303,12 +1278,6 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.25.1.el7.x86_64.rpm
-3dfa873291005e7e64dc997f2df0db5810e9bef877e2200302ef9514d5dd02fb:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-amd64_5.10.46-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-3_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-3_amd64.deb
 3bfc30591482405c2e1d21f7a51d5fd43c92d196ff248dba055dfc20e97ca880:
   type: ubuntu
   packages:
@@ -1336,6 +1305,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-16108.403.22-kernel-src.tar.gz
+03a708af53acbe57a81146fe8da407b653b9627cff9c8464b0cb6e45e39f080e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-aws-5.11-headers-5.11.0-1009_5.11.0-1009.9-20.04.2_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-headers-5.11.0-1009-aws_5.11.0-1009.9-20.04.2_amd64.deb
 03a367858490c2df58a7244f3d4ee04cde2a0d0eb23461881af042e857dcea44:
   type: ubuntu
   packages:
@@ -1371,11 +1345,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11021.39.0-kernel-src.tar.gz
-4f3bd65bebbec5c258e4290b6e5b6806c2a245982e90330f777bc7bf3e0a2ade:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1050_5.4.0-1050.52_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1050-azure_5.4.0-1050.52_amd64.deb
 4a3cf35cbcf93e91075065bf9414a9de9b3d54ebe7306d2a0d2f9d4bc2776934:
   type: redhat
   packages:
@@ -1419,6 +1388,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.0.2.el8_1.x86_64.rpm
+4e8b47f3fe9de2c6f63116b64a352f7b70d3b6e2548ff3527eeb2fc1062c76a5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.11-linux-gcp-5.11-headers-5.11.0-1009_5.11.0-1009.10-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.11-linux-headers-5.11.0-1009-gcp_5.11.0-1009.10-20.04.1_amd64.deb
 4e9f587f4a87ddef422deb462fea4cd50bb886dff462a0222ffe491584682beb:
   type: ubuntu
   packages:
@@ -1699,16 +1673,6 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.59-1.el7.elrepo.x86_64.rpm
-5c3b577d089eb3578194c5bbb388f1950f225b6b86f01d30ff1af7ef0fdcdace:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1045_5.4.0-1045.48_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1045-gcp_5.4.0-1045.48_amd64.deb
-5a4eec7308a20ab49d5ba90f0425652b599fbcef49f225ace06602df781eabdc:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.11.0-1012_5.11.0-1012.12_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.11.0-1012-aws_5.11.0-1012.12_amd64.deb
 5a4ff46156468c30a2be612f281647a1aa9227074c3e5d1ccc83e39cef6d346f:
   type: ubuntu
   packages:
@@ -1773,11 +1737,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1006_4.4.0-1006.6_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1006-aws_4.4.0-1006.6_amd64.deb
-5f55ff4b29089568a89ce623e2cb53b39f4b6394e9965263fb7d9af866392674:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-150-generic_4.15.0-150.155_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-150_4.15.0-150.155_all.deb
 5b59eb37990dc808ce983b55e8e1e9d780d0725ec29fc48405fcc37b07c443ee:
   type: redhat
   packages:
@@ -2319,11 +2278,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-48-generic_4.15.0-48.51_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-48_4.15.0-48.51_all.deb
-7b52b4db0db22c2b21c7f4e4f2f58201e9b8e886d53f5a6cdb3e2b846deaac57:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1104_4.15.0-1104.117_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1104-gcp_4.15.0-1104.117_amd64.deb
 7e52a1316fb44ddbafb83671bbce0d4c46e1f1b9dd0684da53c2fd1290be8545:
   type: ubuntu
   packages:
@@ -3531,11 +3485,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11151.16.0-kernel-src.tar.gz
-026c7ad0e292d0e8810a82ac77ebd22fdd41aea4ee497f8ca02fe8cc0fa2b6ec:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1047_5.4.0-1047.49_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1047-gke_5.4.0-1047.49_amd64.deb
 27d1d2a2fb1428125d952a420b02c2e333dbadac006327d46e877b3148c12dcf:
   type: redhat
   packages:
@@ -4839,20 +4788,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.0.2.el8_1.x86_64.rpm
-88a03ee441a23526288eb77d083819d26e4504c0fb56bd1c9f4949528426161f:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.11.0-1009_5.11.0-1009.9_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.11.0-1009-aws_5.11.0-1009.9_amd64.deb
 88d4a840d9e19124c2107030d979b396a6f44ce83abeb89ae96ab1f87c55d871:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11647.338.0-kernel-src.tar.gz
-88abc7b1d2d2787424a46b3abad8dd4878bc30f328ed50c14024148941bf388c:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.11.0-1009_5.11.0-1009.10_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.11.0-1009-gcp_5.11.0-1009.10_amd64.deb
 89c6ee052805e80e6a746f02928edca3eb8c67c20eda01e2cc42a848d9e90594:
   type: cos
   packages:
@@ -5279,11 +5218,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1024_4.18.0-1024.25-18.04.1_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1024-azure_4.18.0-1024.25-18.04.1_amd64.deb
-264a4aa82ae05c617a3f00ede40dcd310e5a7f6c6127d659b27eb1ecb37d39c2:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1116_4.15.0-1116.129_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1116-azure_4.15.0-1116.129_amd64.deb
 270a68b6b96b7c9f85f7f32da96b24b3468d0111e65a89af10decd0d822265c2:
   type: redhat
   packages:
@@ -5424,11 +5358,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.231-1.el7.elrepo.x86_64.rpm
-383dc997d91d0f9b9c523ef3de24ace501fbdbbf499c356dfb39e7f2d7ae4479:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1050_5.4.0-1050.54_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1050-gcp_5.4.0-1050.54_amd64.deb
 383afda7e15d2c7803823366e7d4ed91680ce16759e65da5a1214f97e5279bb9:
   type: redhat
   packages:
@@ -5442,11 +5371,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11647.214.0-kernel-src.tar.gz
-389c69255cfdbdcb103b117036d79c8588a9f280e475dee2fb81b04b343a4ed1:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.11.0-1012_5.11.0-1012.13_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.11.0-1012-gcp_5.11.0-1012.13_amd64.deb
 390cae1fee575f5df22e71c58a58163dce5f11d645eb9b604adf744894dbb9de:
   type: cos
   packages:
@@ -5622,11 +5546,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-39-generic_4.15.0-39.42_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-39_4.15.0-39.42_all.deb
-530a57b7e0d07ed689bae2affee17ebbf7d96a40478f9d5985821cb6193f90e6:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1047_5.4.0-1047.50_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1047-gcp_5.4.0-1047.50_amd64.deb
 531af6c9ee13952d9afb9eab19c9f400c29929c80c812a60c6b3c2328fc40646:
   type: ubuntu
   packages:
@@ -5739,11 +5658,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1117_4.4.0-1117.131_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1117-aws_4.4.0-1117.131_amd64.deb
-619e43bf5e5808da645b765f5c1fa952456d396f2d2d82c47fe276ee8709f988:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1052_5.4.0-1052.54_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1052-aws_5.4.0-1052.54_amd64.deb
 0631aa07ab3b893019890cd922dfb5ebfccb96806b702479b402da2aa9712b84:
   type: redhat
   packages:
@@ -6847,11 +6761,6 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.4.1708-updates-x86_64-Packages-kernel-devel-3.10.0-693.21.1.el7.x86_64.rpm
-9474ba8c28671273c73aa35b8d1b65020b7bb9ac805d175d65ef957b6396a632:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1045_5.4.0-1045.47_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1045-gke_5.4.0-1045.47_amd64.deb
 9485e76a8767ad405ea6fc369cd380c5c6a6bb667ebe1124194e1fce8d86d4eb:
   type: redhat
   packages:
@@ -6981,11 +6890,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.5-os-Packages-k-kernel-devel-4.18.0-193.13.2.el8_2.x86_64.rpm
-16561c965c11203596adab6763004542562d60e0b5189934704abee33d1622b8:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-152-generic_4.15.0-152.159_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-152_4.15.0-152.159_all.deb
 16820eba91ecac2b47939bbed1259589db0c02bcb0c5fca40605a68f874aa5ce:
   type: ubuntu
   packages:
@@ -7363,11 +7267,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.231-1.el7.elrepo.x86_64.rpm
-85219f2842d5641cea123b8fd5130104bc381ca616edc6fda63a38132483d94c:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-145-generic_4.15.0-145.149_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-145_4.15.0-145.149_all.deb
 87431c5a47552626061d6252cb632b4f30d372e0b57869958fbee22f5235450b:
   type: cos
   packages:
@@ -7435,11 +7334,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.0.3.el8_1.x86_64.rpm
-154933cc96774c9e9c6d0a9f66be3a8a67dc50696e24703d29f71f8e5e97b14d:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1050_5.4.0-1050.53_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1050-gke_5.4.0-1050.53_amd64.deb
 181802bb4eadc955cee5bf80fb6d352f826b3a7432e1b089711141f8dc519c11:
   type: cos
   packages:
@@ -7475,11 +7369,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12105.97.0-kernel-src.tar.gz
-249019ba3df90911067ac2d78f590b36b320b98e93b6e08009da410030ba7ce1:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-24-generic_5.11.0-24.25_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-24_5.11.0-24.25_all.deb
 254433e841384ebd8802c6e7587633bf4f049c0a4266088d9d32862c4fab0328:
   type: redhat
   packages:
@@ -7666,11 +7555,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1015_4.15.0-1015.15_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1015-gcp_4.15.0-1015.15_amd64.deb
-900970d0388190d0a69a852b8dbb79b01856fff0c99ad1b3607ec07045580981:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-13-generic_5.13.0-13.13_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-13_5.13.0-13.13_all.deb
 912627b0cbbb7edf9e6dba48d6bf723e2e0a04b2b01dbbf5a47ca2a4f17b407d:
   type: redhat
   packages:
@@ -7703,11 +7587,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1048_4.15.0-1048.51_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1048-gke_4.15.0-1048.51_amd64.deb
-999751a470fb980f5cf6a133ba9f5470d46c3f9dc7fb091008a78dfce3cd496a:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1052_5.4.0-1052.54_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1052-azure_5.4.0-1052.54_amd64.deb
 1001470df18ac0e34788fcd787a8cb73382246d517705ab4664aff8f21de9b4c:
   type: cos
   packages:
@@ -7786,11 +7665,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-15184.0.0-kernel-src.tar.gz
-3931936eb0cf1b5bf9fe73d752b6e1d62c7147492ce41dbe2287e82e5777af2b:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1119_4.15.0-1119.132_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1119-azure_4.15.0-1119.132_amd64.deb
 3949306aa20d7e0f3c59ae07c75c146320385805b200ba8427c15da3ab26e12c:
   type: redhat
   packages:
@@ -8393,11 +8267,6 @@ a51bcbf3f094554d0f7d1d62b09234500fdb24d01fa316c864c040da08637a54:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.11.1.el8_0.x86_64.rpm
-a51df40c7e020184a65ed4be85eb85ec2a4f8776570f72e171a8788cb15cfcf0:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-23-generic_5.11.0-23.24_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-23_5.11.0-23.24_all.deb
 a055a0f63ddd61da4ad13c85ec63eb03f816122f9a1365af1d303076ee5aca3c:
   type: debian
   packages:
@@ -8415,11 +8284,6 @@ a64cedfe7c074047a9b6c961e1cd130ecbf7213a88a05849f81383e9318d1977:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12371.1088.0-kernel-src.tar.gz
-a064e1dc82aa877ed026752db086de4676a66ca6ceb3e9cd948f30e0314c396e:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1104_4.15.0-1104.111_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1104-aws_4.15.0-1104.111_amd64.deb
 a70a20a0125164f2eda30306045a347909baa9f75e947144e701a7427ebed563:
   type: coreos
   packages:
@@ -9007,11 +8871,6 @@ b1bd82e0e7dc3a425c2fbe2544a9bf656606f64f1dc1329e6dc23ad4b8de0585:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.230-1.el7.elrepo.x86_64.rpm
-b1aefd76a24128906afa6998174db091d261c391854f291686ab58a31767ef8b:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-78-generic_5.4.0-78.87_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-78_5.4.0-78.87_all.deb
 b1ff7709dbde2a51971b2ef5bca3e882b76b5ce8c9d89ff9e15aae38c5b9ff77:
   type: ubuntu
   packages:
@@ -9479,11 +9338,6 @@ ba7b66ae142bfe7ffc66eb2484c3646690b04d5d9e0808ecf56c74bc5aa4f889:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.9-200.fc33-x86_64-kernel-devel-5.12.9-200.fc33.x86_64.rpm
-ba144086a64afa705e544d6a84b3d377e236bc0a570de023579e52de68dff1ff:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.11.0-1010_5.11.0-1010.10_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.11.0-1010-azure_5.11.0-1010.10_amd64.deb
 ba789505ab4bd5b3906db2941dfc5ed5e0d5a1132cc3850a2db930ad86b1601c:
   type: ubuntu
   packages:
@@ -9645,11 +9499,6 @@ be05ceab423c3d75e5b847ad3e539c717870c8dc82d01fd0da91db79d7c00b41:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-gcp-headers-4.15.0-1014_4.15.0-1014.14-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-headers-4.15.0-1014-gcp_4.15.0-1014.14-16.04.1_amd64.deb
-be6bf710cfbca6a5931509a739395091926f75cfac22ee5c21b86cc157c0143c:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.11.0-1007_5.11.0-1007.7_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.11.0-1007-azure_5.11.0-1007.7_amd64.deb
 be8cdfa229691e405a41686328cf04360351c13061af7fbe3e46668351367f24:
   type: redhat
   packages:
@@ -9926,12 +9775,6 @@ c21a221bf7a35bb306bb2cf4e8c72c88d52a67b7816aa2677a9d41bad2972677:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.124.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.124.1.x86_64.rpm
-c24f3b967c7291f34b5817bce90908885a5a311fb32ddeb713f3f1bf3b198412:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.46-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-3_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-3_amd64.deb
 c39d9f7d2ed9d52b0c8e2cb90a9517c5937e6143ac8ce70a290b34026c8de268:
   type: redhat
   packages:
@@ -10663,11 +10506,6 @@ d36da27b8c35bb25d485425e34003cab8af3ce9ca34ac85c02b39f1d4cacfbdc:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1078_4.15.0-1078.83_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1078-gke_4.15.0-1078.83_amd64.deb
-d37ccddc916a895bb3f23eeaf1ca98b6f8233b32d0b295862b92696bd1709aca:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1107_4.15.0-1107.114_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1107-aws_4.15.0-1107.114_amd64.deb
 d41cc734ecd45530762199ac51d3d3f0f07b1c87591983d43fa859c19f91bc6c:
   type: redhat
   packages:
@@ -10830,11 +10668,6 @@ d4216fa4e29a267c96bb6722f8fe87f39ba204ce02d03d41b3345188a068483c:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.200-1.el7.elrepo.x86_64.rpm
-d5346e7f30036c244f110dae34acec4fc1376397a0112c4c94b1c61c2861f53b:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1050_5.4.0-1050.52_all.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1050-aws_5.4.0-1050.52_amd64.deb
 d6278f226af0d0d01f8120cbf7c9a293059c007694320a02940f75fafb200908:
   type: redhat
   packages:
@@ -11138,11 +10971,6 @@ de273ce9c884cfb3601b314134bd61f4fae70938c7751c4a9d2a6cb0376383ca:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11892.0.0-kernel-src.tar.gz
-de650ce73f58cb2f6bded237c8332c50dafc07ff2e50a85c985935316f349a2c:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-75-generic_5.4.0-75.84_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-75_5.4.0-75.84_all.deb
 de6886e114cfa5f03f35bc5fa26c4766441ac366e40c5f7b1b1499eff7279b87:
   type: ubuntu
   packages:
@@ -11743,11 +11571,6 @@ eb942ac400831a0a67f0576836b3dfb152582705d5e6a353ead5cad739a9da44:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11147.0.0-kernel-src.tar.gz
-ebefe866d18b1618da5fe8264b614057ca67175abe29d92d4000d77f2484293d:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-20-generic_5.11.0-20.21_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.11.0-20_5.11.0-20.21_all.deb
 ebf8462410521a09c1bf9212098e96e54fb37f10fe2c7a817d793d30dadc7245:
   type: redhat
   packages:
@@ -12132,6 +11955,11 @@ f15e42158ecf42787f9282330dcf243ee6e3f7de6fe3b2e68945e0e9d8e803b8:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1113_4.15.0-1113.126-16.04.1_all.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1113-azure_4.15.0-1113.126-16.04.1_amd64.deb
+f15df0b86e72cc2322458f1213093d5959489bb96e672cc249cbc9d7c9cdb39f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.11-linux-azure-5.11-headers-5.11.0-1007_5.11.0-1007.7-20.04.2_all.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.11-linux-headers-5.11.0-1007-azure_5.11.0-1007.7-20.04.2_amd64.deb
 f24fcaec5d38c44de1b0a251ba152c517af7940d7e76bfdaaba77f073f4f602a:
   type: cos
   packages:
@@ -12401,11 +12229,6 @@ f316842105e53d38bacd6f4ba0d7f6a6cd4691200fae1c713b66115bffa0219d:
   type: linuxkit
   packages:
   - https---cdn.kernel.org-pub-linux-kernel-v4.x-linux-4.9.184.tar.gz
-f5987010282cf8d81aa9820fe562f9480538857c6098088d6f895aad491cc4de:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-12-generic_5.13.0-12.12_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-12_5.13.0-12.12_all.deb
 f493584818479e6bab4fd776b8f45d825c38f3c1911c652d0e0671ff2e9db3e6:
   type: redhat
   packages:
