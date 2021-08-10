@@ -6290,12 +6290,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1034_4.15.0-1034.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1034-gke_4.15.0-1034.36_amd64.deb
-3908d8d8375c709faf3b14bbd3ccb01624e2db400eeb7aa2bd026442bec653dd:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 3979cf993fd699c9b1be0dac6fc16d7ee016a5eb5f0df5122d4950b62249c8c3:
   type: ubuntu
   packages:
@@ -7043,6 +7037,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1127.8.2.el7.x86_64.rpm
+38718bfa96e9fe1f88d4424b2e3c8f6ae7ea1a386cf1e494da13554f4daccb44:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.9-100.fc33-x86_64-kernel-devel-5.13.9-100.fc33.x86_64.rpm
 39344f935160523ad4c2df8360d005f9989b89fdc68908b280ef606c0498619c:
   type: debian
   packages:
@@ -7896,12 +7894,6 @@
   type: redhat
   packages:
   - https---access.cdn.redhat.com-content-origin-rpms-kernel-devel-3.10.0-1062.1.1.el7-fd431d51-kernel-devel-3.10.0-1062.1.1.el7.x86_64.rpm
-63583809aa8748ca4514c26ed3f7db160b63bd598e2e5c511fc0936834e2214b:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-1_all.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
 74883512fe882b8ee41edc800eb606d52c09a05346d918d8829f962d8ab639d3:
   type: redhat
   packages:
@@ -11733,6 +11725,11 @@ ee33b7e13d19d2d70ea593fb1bba1eba333ea5cb701608a65ba10009a961574a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-gcp-headers-4.13.0-1007_4.13.0-1007.10_all.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-headers-4.13.0-1007-gcp_4.13.0-1007.10_amd64.deb
+ee9732fb612d00feb4b722595ce04b3ee27bc9ddef39f6082038a4ca37981a70:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.8-linux-gcp-5.8-headers-5.8.0-1039_5.8.0-1039.41_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.8-linux-headers-5.8.0-1039-gcp_5.8.0-1039.41_amd64.deb
 eed83b1a95fb7384bbd31b7152f83fdc1b3dfcc65230e3cbee5d659f0c806992:
   type: ubuntu
   packages:
