@@ -270,7 +270,8 @@ repos = {
             "type": "s3",
             "root": "https://storage.googleapis.com/cos-tools",
             "patterns": [
-                "kernel-src.tar.gz$"
+                "kernel-src.tar.gz$",
+                "kernel-headers\.t(ar\.)?gz$",
             ]
         },
     ],

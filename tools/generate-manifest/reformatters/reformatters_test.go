@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/stretchr/testify/require"
+
 	"github.com/stretchr/testify/assert"
 )
 
@@ -115,4 +117,33 @@ func TestReformatPairs(t *testing.T) {
 			assert.ElementsMatch(t, test.manifests, actual)
 		})
 	}
+}
+
+func TestReformatCOS(t *testing.T) {
+	packages := []string{
+		"https://storage.googleapis.com/cos-tools/13310.1308.6/kernel-headers.tgz",
+		"https://storage.googleapis.com/cos-tools/12871.1245.6/kernel-src.tar.gz",
+		"https://storage.googleapis.com/cos-tools/13310.1308.6/kernel-src.tar.gz",
+		"https://storage.googleapis.com/cos-tools/13310.1260.26/kernel-src.tar.gz",
+		"https://storage.googleapis.com/cos-tools/13310.1260.26/kernel-headers.tgz",
+	}
+
+	groups, err := reformatCOS(packages)
+	require.NoError(t, err)
+
+	expectedGroups := [][]string{
+		{
+			"https://storage.googleapis.com/cos-tools/12871.1245.6/kernel-src.tar.gz",
+		},
+		{
+			"https://storage.googleapis.com/cos-tools/13310.1308.6/kernel-src.tar.gz",
+			"https://storage.googleapis.com/cos-tools/13310.1308.6/kernel-headers.tgz",
+		},
+		{
+			"https://storage.googleapis.com/cos-tools/13310.1260.26/kernel-src.tar.gz",
+			"https://storage.googleapis.com/cos-tools/13310.1260.26/kernel-headers.tgz",
+		},
+	}
+
+	assert.ElementsMatch(t, expectedGroups, groups)
 }
