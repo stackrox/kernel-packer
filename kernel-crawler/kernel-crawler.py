@@ -257,7 +257,7 @@ repos = {
     ],
     "Docker-Desktop": [
         {
-            "root": "https://docs.docker.com/docker-for-mac/release-notes/",
+            "root": "https://docs.docker.com/desktop/mac/release-notes/",
             "download_root": "",
             "discovery_pattern": "",
             "page_pattern": "/html/body//a[regex:test(@href, '^https://desktop.docker.com/mac/stable/.*/Docker.dmg$')]/@href",
