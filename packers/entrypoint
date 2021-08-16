@@ -280,7 +280,7 @@ repackage_cos() {
         # Copy kernel config from headers package. Fallback to fixed kernel config
         # if no headers package available.
         if [[ -n "$headers_package" ]]; then
-          tar xzOf "$headers_package" "usr/src/linux-headers-${kernel_uname}/.config" >.config
+          tar xzOf "$headers_package" "./usr/src/linux-headers-${kernel_uname}/.config" >.config
         else
           cp /etc/includes/cos/.config .
         fi
