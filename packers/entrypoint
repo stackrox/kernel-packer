@@ -278,9 +278,10 @@ repackage_cos() {
         meta_dir="$(bundle_meta "$checksum" 'cos' "${kernel_uname}" '.')"
 
         # Copy kernel config from headers package. Fallback to fixed kernel config
-        # if no headers package available.
+        # if no headers package available. The kernel config file is expected to be within either
+        # './usr/src/linux-headers-*/' or 'usr/src/linux-headers-*/'.
         if [[ -n "$headers_package" ]]; then
-          tar xzOf "$headers_package" "./usr/src/linux-headers-${kernel_uname}/.config" >.config
+          tar --wildcards -xzOf "$headers_package" "*/src/linux-headers-${kernel_uname}/.config" >.config
         else
           cp /etc/includes/cos/.config .
         fi
