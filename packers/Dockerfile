@@ -27,6 +27,7 @@ RUN apt-get update \
       build-essential \
       wget \
       python \
+      python3 \
       unzip \
       bison \
       flex \
