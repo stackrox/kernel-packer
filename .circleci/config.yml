@@ -104,8 +104,8 @@ jobs:
     - restore_cache:
         name: Restoring kernel packer cache
         keys:
-          - stackrox-kernel-packer-cache-v18-{{ .Branch }}-{{ .Revision }}
-          - stackrox-kernel-packer-cache-v18-master-
+          - stackrox-kernel-packer-cache-v19-{{ .Branch }}-{{ .Revision }}
+          - stackrox-kernel-packer-cache-v19-master-
     - run:
         name: Check if PR with no-cache label
         command: |
@@ -211,7 +211,7 @@ jobs:
         when: always
     - save_cache:
         name: Saving kernel packer cache
-        key: stackrox-kernel-packer-cache-v18-{{ .Branch }}-{{ .Revision }}
+        key: stackrox-kernel-packer-cache-v19-{{ .Branch }}-{{ .Revision }}
         paths:
         - .build-data/cache/cache.yml
 
@@ -229,6 +229,9 @@ jobs:
           set +e
           if [[ "${CIRCLE_JOB}" == "crawl-cron" ]]; then
             echo "Running scheduled cron job"
+            exit 0
+          elif [[ "${CIRCLE_JOB}" == "crawl-build" && "$CIRCLE_BRANCH" =~ ^(master|main)$ && "${CIRCLE_USERNAME}" != "roxbot" ]]; then
+            echo "Running kernel crawler tasks on non-automated commit to default branch."
             exit 0
           fi
           .circleci/pr_has_label.sh "crawl"
