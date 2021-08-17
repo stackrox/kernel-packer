@@ -281,7 +281,7 @@ repackage_cos() {
         # if no headers package available. The kernel config file is expected to be within either
         # './usr/src/linux-headers-*/' or 'usr/src/linux-headers-*/'.
         if [[ -n "$headers_package" ]]; then
-          tar --wildcards -xzOf "$headers_package" "*/src/linux-headers-${kernel_uname}/.config" >.config
+          tar --wildcards -xzOf "$headers_package" "*/src/linux-headers-${kernel_version}*/\.config" > .config
         else
           cp /etc/includes/cos/.config .
         fi
