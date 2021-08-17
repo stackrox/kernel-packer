@@ -119,8 +119,9 @@ func checksumStrings(packages []string) string {
 		s = sha256.New()
 	)
 
-	sort.Strings(packages)
-	for _, pkg := range packages {
+	sortedPackages := append([]string{}, packages...)
+	sort.Strings(sortedPackages)
+	for _, pkg := range sortedPackages {
 		s.Write([]byte(pkg))
 	}
 

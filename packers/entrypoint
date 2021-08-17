@@ -231,7 +231,7 @@ repackage_debian() {
 }
 
 repackage_cos() {
-    if [[ $# -ne 3 ]]; then
+    if [[ $# -lt 3 || $# -gt 4 ]]; then
         log "invalid number of arguments"
         return 1
     fi
@@ -239,6 +239,7 @@ repackage_cos() {
     local checksum="$1"
     local output_dir="$2"
     local input_package="$3"
+    local headers_package="${4:-}"
 
     # Create a temporary directory for extracting the package tree.
     local tmp_dir="$(mktemp -d)"
@@ -276,8 +277,14 @@ repackage_cos() {
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'cos' "${kernel_uname}" '.')"
 
-        # Copy fixed kernel config
-        cp /etc/includes/cos/.config .
+        # Copy kernel config from headers package. Fallback to fixed kernel config
+        # if no headers package available. The kernel config file is expected to be within either
+        # './usr/src/linux-headers-*/' or 'usr/src/linux-headers-*/'.
+        if [[ -n "$headers_package" ]]; then
+          tar --wildcards -xzOf "$headers_package" "*/src/linux-headers-${kernel_version}*/\.config" > .config
+        else
+          cp /etc/includes/cos/.config .
+        fi
 
         sed -i 's/LOCALVERSION=""/LOCALVERSION="+"/' .config
         sed -i '/^#define randomized_struct_fields_start	struct {$/d' include/linux/compiler-clang.h

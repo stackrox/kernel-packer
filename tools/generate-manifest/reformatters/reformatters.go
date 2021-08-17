@@ -23,6 +23,7 @@ var (
 		"suse":         reformatSuse,
 		"single":       reformatSingle,
 		"debian":       reformatDebian,
+		"cos":          reformatCOS,
 	}
 )
 
@@ -352,6 +353,36 @@ func reformatSingle(packages []string) ([][]string, error) {
 	}
 
 	return sets, nil
+}
+
+// reformatCOS consumes a list of packages, and returns a list of package
+// groups. Each package group is comprised of the kernel sources, and an optional
+// kernel headers archive.
+//
+// For example:
+// [foo/kernel-src.tar.gz, bar/kernel-src.tar.gz, foo/kernel-headers.tgz] → [[foo/kernel-src.tar.gz, foo/kernel-headers.tgz], [foo/kernel-src.tar.gz]]
+func reformatCOS(packages []string) ([][]string, error) {
+	sort.Slice(packages, func(i, j int) bool {
+		return packages[i] > packages[j]
+	})
+	var allGroups [][]string
+	var currGroup []string
+	for _, pkg := range packages {
+		if len(currGroup) != 0 && path.Dir(currGroup[0]) != path.Dir(pkg) {
+			allGroups = append(allGroups, currGroup)
+			currGroup = nil
+		}
+		if len(currGroup) == 0 && path.Base(pkg) != "kernel-src.tar.gz" {
+			return nil, errors.Errorf("first entry in group should be a file called kernel-src.tar.gz, got %q", pkg)
+		}
+		currGroup = append(currGroup, pkg)
+	}
+
+	if len(currGroup) != 0 {
+		allGroups = append(allGroups, currGroup)
+	}
+
+	return allGroups, nil
 }
 
 // reformatSuse consumes a list of SUSE packages and matches versions

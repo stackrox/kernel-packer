@@ -104,8 +104,8 @@ jobs:
     - restore_cache:
         name: Restoring kernel packer cache
         keys:
-          - stackrox-kernel-packer-cache-v17-{{ .Branch }}-{{ .Revision }}
-          - stackrox-kernel-packer-cache-v17-master-
+          - stackrox-kernel-packer-cache-v18-{{ .Branch }}-{{ .Revision }}
+          - stackrox-kernel-packer-cache-v18-master-
     - run:
         name: Check if PR with no-cache label
         command: |
@@ -211,7 +211,7 @@ jobs:
         when: always
     - save_cache:
         name: Saving kernel packer cache
-        key: stackrox-kernel-packer-cache-v17-{{ .Branch }}-{{ .Revision }}
+        key: stackrox-kernel-packer-cache-v18-{{ .Branch }}-{{ .Revision }}
         paths:
         - .build-data/cache/cache.yml
 
