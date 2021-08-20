@@ -16,6 +16,7 @@ import json
 import sys
 import urllib3
 from urllib3.util import parse_url as url_unquote
+from urllib.parse import urljoin, urlparse
 from lxml import html
 import traceback
 import re
@@ -260,7 +261,7 @@ repos = {
             "root": "https://docs.docker.com/desktop/mac/release-notes/",
             "download_root": "",
             "discovery_pattern": "",
-            "page_pattern": "/html/body//a[regex:test(@href, '^https://desktop.docker.com/mac/stable/.*/Docker.dmg$')]/@href",
+            "page_pattern": "/html/body//a[regex:test(@href, '^https://desktop.docker.com/mac/stable/(?!arm64).*/Docker.dmg.*$')]/@href",
             "subdirs": [""],
             "exclude_patterns": docker_desktop_excludes,
         },
@@ -595,8 +596,9 @@ def crawl(distro):
                             if "include_patterns" in repo and not any(check_pattern(x,rpm) for x in repo["include_patterns"]):
                                 continue
                             else:
-                                sys.stderr.write("Adding package " + rpm + "\n")
-                                raw_url = "{}{}".format(download_root, url_unquote(rpm))
+                                base_url = urljoin(rpm, urlparse(rpm).path)
+                                raw_url = "{}{}".format(download_root, url_unquote(base_url))
+                                sys.stderr.write("Adding package " + raw_url + "\n")
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
                     except urllib3.exceptions.HTTPError as e:
