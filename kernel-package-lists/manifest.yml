@@ -4209,6 +4209,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.206-1.el7.elrepo.x86_64.rpm
+52c19e915b061518c4083b2b57d8dd4b76397907988ebaf3e572711033b62bad:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.12.1.el8_4.x86_64.rpm
 52a44d808e50c6e2d045bef4cdd18c46b9b0d1a3bc19245cd9d26efeff070066:
   type: cos
   packages:
@@ -8809,6 +8813,11 @@ a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
+a793621224acdd06e6198b4855c14a8281f6cd940051bd27297cd8503d3378aa:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
@@ -9143,6 +9152,10 @@ afc5304933d7563ba0963b341c9f98d4fc4636b0f535a259f206e469e14f4af4:
   packages:
   - https---storage.googleapis.com-cos-tools-11021.39.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11021.39.0-kernel-headers.tgz
+afcbc913652f9978a9ff0641abfade29d3570d40fa6f39eabe29c7563a824469:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-331.el8.x86_64.rpm
 b0ebced533170957a495665744b43fb747623bb6d168aab2d1cf74655bb43f0b:
   type: suse
   packages:
@@ -10131,6 +10144,11 @@ c55a5584ba8f6e707935e3581349c1eb00ba0ec6fc25cc2e89b5a82ffe8cd2f8:
   packages:
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-headers.tgz
+c58ad88176dc73399a88e6dd667dfad38ed9fc527637bc98ff079e4447739bf0:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-2_amd64.deb
 c61aaf94c39088b143603d8ec69c9a02921e2dfd97c5789777edafb5ee7af98d:
   type: ubuntu
   packages:
