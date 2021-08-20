@@ -8818,11 +8818,6 @@ a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
-a793621224acdd06e6198b4855c14a8281f6cd940051bd27297cd8503d3378aa:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
@@ -9971,6 +9966,11 @@ c02eda486e5b1f24006aa6dfc1eebf0ea2a40e5b42131f88ec51d4a80eec7439:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-gcp-5.3-headers-5.3.0-1018_5.3.0-1018.19-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-headers-5.3.0-1018-gcp_5.3.0-1018.19-18.04.1_amd64.deb
+c3bb2b854f5cab4f1ee223a79a92ab4bf4d341fda1eb078cd59db6b78eda9966:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-156-generic_4.15.0-156.163_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-156_4.15.0-156.163_all.deb
 c3af0d5401a40ad03842b592383562e57772fe4c3b3684a3340bdd7daca83be7:
   type: redhat
   packages:
@@ -10149,11 +10149,6 @@ c55a5584ba8f6e707935e3581349c1eb00ba0ec6fc25cc2e89b5a82ffe8cd2f8:
   packages:
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-headers.tgz
-c58ad88176dc73399a88e6dd667dfad38ed9fc527637bc98ff079e4447739bf0:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-2_amd64.deb
 c61aaf94c39088b143603d8ec69c9a02921e2dfd97c5789777edafb5ee7af98d:
   type: ubuntu
   packages:
@@ -12580,6 +12575,11 @@ f244ad010fd9840bac8607ea69e87015e02983e257f1a07cd02ad6963fd81405:
   packages:
   - https---storage.googleapis.com-cos-tools-11172.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11172.0.0-kernel-headers.tgz
+f345c428a490f196eb7696acf28660f74ab8caea6ee421e9fd5023029f3e1cc9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.11.0-1017-aws_5.11.0-1017.18_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.11.0-1017_5.11.0-1017.18_all.deb
 f401dff7959a0f267b0bf0248cc2acc3212589158077a73c30b0f4e323937f23:
   type: ubuntu
   packages:
