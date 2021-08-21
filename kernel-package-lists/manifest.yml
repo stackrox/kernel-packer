@@ -3898,11 +3898,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.46.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.46.1.x86_64.rpm
-37b087f217e973eeafe2f6be3d5623314a7f115830e91233732a8110dbfa86b5:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
 37c5073ff02c0ad3a70eb3f3aef1d73f53c97c3b2a600cfd58480a47361de356:
   type: suse
   packages:
@@ -7016,11 +7011,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1017-aws_5.4.0-1017.17_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1017_5.4.0-1017.17_all.deb
-9510ceb63e138b473680b348cc071bb61394c81566b95df2af97dae0892f688f:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-1_amd64.deb
 9550e6231107fe1e05f4a29d804731a1694fbf6918815a00e691b00b0981be4e:
   type: ubuntu
   packages:
@@ -9802,6 +9792,11 @@ bcf8b0d556a13b385f002b82080c1cae59390be22708660571aff257eb6113b1:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.116.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.116.1.x86_64.rpm
+bd76fac2dbe46bdd47e504cfdc3ec9e8f1d720b36bce0c5964c8650ff198a292:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
 bd244cfc75e46ad606c529dc03983155244f021c6660e57a05a5ff2ff973f289:
   type: ubuntu
   packages:
@@ -12025,6 +12020,11 @@ eb92bbfb115ff0b3ce2e995c6c19c4b18f9cf8685d61ce4e1d136a7945deb51b:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-101-generic_4.4.0-101.124_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-101_4.4.0-101.124_all.deb
+eb6141e4ca13856f1a696683f178c282a7270d73fdaf909803a30c482a2d17df:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
 ebb08880b2aed8020a53e65fcd7a606daee0bbc84f727db453d5369ca4ba25cd:
   type: cos
   packages:
