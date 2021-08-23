@@ -2847,6 +2847,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-957.21.2.el7.x86_64.rpm
+8cbb8bbccc5f4870948756b188557f2979174394a83869a68e62cd40ea41bbf7:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 8ac1a050ad3e32f6c8030529e2c2595cdae2484069e24fa25c158082121fab02:
   type: ubuntu
   packages:
@@ -6428,6 +6434,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.38.1.el7.x86_64.rpm
+3105b8185badfcb9c64ab64635b73a17c169d59ffd9c23a937adeab43473aea7:
+  type: dockerdesktop
+  packages:
+  - https---registry-1.docker.io-v2-docker-for-desktop-kernel-blobs-sha256-c8a5642387a57151555c511c5da665a2966229c7e01c279abc46264a29cefa5e
 3265dc3c29277e809f597c6991509c0957f0975d402a8665aef9fca488be85a5:
   type: cos
   packages:
@@ -7562,6 +7572,12 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.8-200.fc33-x86_64-kernel-devel-5.9.8-200.fc33.x86_64.rpm
+95764de4ddd3b0dc4d584d6a4cd5532715075d1d7f7e1954d9eca84e8d5e1dab:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 96938f3c88538dbd8c73007804c907e91a02a4a01163e2e4eed219a852590f6e:
   type: ubuntu
   packages:
