@@ -1,4 +1,4 @@
-FROM golang:1.14.4 AS build
+FROM golang:1.16 AS build
 
 COPY main.go /go/src/main.go
 

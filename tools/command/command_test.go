@@ -47,6 +47,7 @@ func Test(t *testing.T) {
 			packages:  []string{"/package.rpm"},
 			expectedArgs: []string{
 				"run", "--privileged", "--rm", "-t",
+				"-v", "/dev:/dev",
 				"-v", "/:/input:ro",
 				"-v", "/.build-data/bundles:/output",
 				"repackage:latest", "sha", "redhat", "/output", "/input/package.rpm",
@@ -64,6 +65,7 @@ func Test(t *testing.T) {
 			},
 			expectedArgs: []string{
 				"run", "--privileged", "--rm", "-t",
+				"-v", "/dev:/dev",
 				"-v", "/:/input:ro",
 				"-v", "/.build-data/bundles:/output",
 				"repackage:latest", "sha", "redhat", "/output",
