@@ -156,12 +156,8 @@ repackage_coreos() {
 
     # Clean up intermediate resources.
     umount "$tmp_dir"
-    echo "deleting partition mapping to $inflated_bundle"
+    log "Deleting partition mapping to $inflated_bundle"
     kpartx -dv "$inflated_bundle"
-    echo "removing device ${loop_device_partition}"
-    dmsetup remove "${loop_device_partition}"
-    echo "detaching /dev/${loop_device}"
-    losetup -d "/dev/${loop_device}"
     rm -f "$inflated_bundle"
 }
 

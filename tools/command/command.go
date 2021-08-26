@@ -57,6 +57,9 @@ func DockerCommand(checksum string, distroName string, outputDir string, package
 		}
 	}
 
+	// Add host mount for loopback device mounting
+	args = append(args, "-v", "/dev:/dev")
+
 	// Add a read-only volume mapping for directory containing the given packages.
 	args = append(args, "-v", fmt.Sprintf("%s:/input:ro", pkgDir))
 

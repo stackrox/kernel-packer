@@ -15,6 +15,7 @@ defaults: &defaults
 
 orbs:
   slack: circleci/slack@3.4.2
+  gcp-cli: circleci/gcp-cli@2.2.0
 
 crawlContext: &crawlContext
   context:
@@ -24,20 +25,12 @@ crawlContext: &crawlContext
 commands:
   gcloud-init:
     steps:
+    - gcp-cli/install
     - run:
         name: Install and configure gcloud
         working_directory: ~/.config/gcloud
         command: |
-          if [[ "$NO_INSTALL_GCLOUD" != "true" ]]; then
-            pip install --upgrade "pip < 21.0"
-            pip install wheel
-            pip install -U crcmod google_compute_engine
-            pip install -U gcloud gsutil
-            echo "Updating path to pick up proper gsutil binary"
-            export PATH="/opt/google-cloud-sdk/bin:$PATH"
-            echo 'export PATH="/opt/google-cloud-sdk/bin:$PATH"' >>"$BASH_ENV"
-            sudo chown circleci:circleci /opt
-          fi
+          which gcloud
           echo "Updating gcloud/gsutil ..."
           gcloud config set core/disable_prompts True
           gcloud components install gsutil -q
@@ -90,7 +83,8 @@ jobs:
         command: go test -v ./...
 
   repackage:
-    machine: true
+    machine:
+      image: ubuntu-2004:202107-02
     parallelism: 16
     environment:
     - GOPATH: /home/circleci/go
@@ -216,7 +210,8 @@ jobs:
         - .build-data/cache/cache.yml
 
   crawl:
-    machine: true
+    machine:
+      image: ubuntu-2004:202107-02
     resource_class: large
     environment:
     - GOPATH: /home/circleci/go
