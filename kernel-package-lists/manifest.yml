@@ -1302,6 +1302,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.69-1.el7.elrepo.x86_64.rpm
+3bdd3555991496db5406ce98ba19429c18ac5760a83bf6fd82ee60c3b1dd0acf:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1052_5.4.0-1052.55_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1052-gke_5.4.0-1052.55_amd64.deb
 3fe0f1084688ea7f5504d332f61975db01d9ba3a86db71c32f0df0fb072ba7cd:
   type: ubuntu
   packages:
@@ -5791,6 +5796,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-10575.67.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-10575.67.0-kernel-headers.tgz
+525e7099c7103f0282f2335ff6d9d8be45d44e0a162a38170dc6f3b6e8812fa8:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.0-flatcar_developer_container.bin.bz2
 525aeb881b9a6bacc7dda7d9f12c87cd4a7d04315fe2641cb1dbbfbbcd90451e:
   type: cos
   packages:
@@ -8559,6 +8568,11 @@ a31dd9246d3f8a847d8c2cac181e12cd021ed6c28b27e869890e8dcc42f3513a:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-3.18.32-20.el7.x86_64.rpm
+a33d9e650b2cf5eb36709e25d439452a228998c0c70f22cf07f74280ad7cbf60:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1052_5.4.0-1052.56_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1052-gcp_5.4.0-1052.56_amd64.deb
 a37d242a902ccb483bad0f76fb7cd65015194f2dfcb87a7064e6aa6c210010b4:
   type: ubuntu
   packages:
@@ -11376,6 +11390,11 @@ dd231dd0fb83db7fd0b7d0238686c9a4edb1491ef4d1da8d9802175beefbbd19:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.97-1.el7.elrepo.x86_64.rpm
+dd699dd93af6ba03e399e687b585867683e7d5d314e3cff89abefbeccff4fc5a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.11.0-1018_5.11.0-1018.20_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.11.0-1018-gcp_5.11.0-1018.20_amd64.deb
 dd9252c00a2943e50fb844a309d1879abebdd8a985fb89e7945fb1d88b6b6995:
   type: suse
   packages:
