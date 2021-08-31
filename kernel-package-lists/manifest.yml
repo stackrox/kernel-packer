@@ -1199,6 +1199,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1047-aws_4.15.0-1047.49_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1047_4.15.0-1047.49_all.deb
+3f618a13477db43ee4193c8a5e80de299398d8cfdb1672bc6cc35e31a1ce3689:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.41.1.el7.x86_64.rpm
 3b0648dcf3d68dd45e11ad6f2e2c7bbe0019009d23dd2661460e23cb2861f9ad:
   type: redhat
   packages:
@@ -2541,6 +2545,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11636.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11636.0.0-kernel-headers.tgz
+7fcc5acd4f21d24963d7cd0139e69740c9d9bc39a24742728e4f2baf7d3aef68:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.64.1.el8_2.x86_64.rpm
 7dcc69260ff3b918b249aa5663e0183a1d03ecdb88dd279c6e3acc48af100690:
   type: redhat
   packages:
@@ -9850,11 +9858,6 @@ bcf8b0d556a13b385f002b82080c1cae59390be22708660571aff257eb6113b1:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.116.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.116.1.x86_64.rpm
-bd76fac2dbe46bdd47e504cfdc3ec9e8f1d720b36bce0c5964c8650ff198a292:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
 bd244cfc75e46ad606c529dc03983155244f021c6660e57a05a5ff2ff973f289:
   type: ubuntu
   packages:
@@ -12086,11 +12089,6 @@ eb92bbfb115ff0b3ce2e995c6c19c4b18f9cf8685d61ce4e1d136a7945deb51b:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-101-generic_4.4.0-101.124_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-101_4.4.0-101.124_all.deb
-eb6141e4ca13856f1a696683f178c282a7270d73fdaf909803a30c482a2d17df:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
 ebb08880b2aed8020a53e65fcd7a606daee0bbc84f727db453d5369ca4ba25cd:
   type: cos
   packages:
