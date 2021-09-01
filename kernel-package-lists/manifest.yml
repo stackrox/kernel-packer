@@ -3928,6 +3928,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.46.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.46.1.x86_64.rpm
+37b087f217e973eeafe2f6be3d5623314a7f115830e91233732a8110dbfa86b5:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
 37c5073ff02c0ad3a70eb3f3aef1d73f53c97c3b2a600cfd58480a47361de356:
   type: suse
   packages:
@@ -7062,6 +7067,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1017-aws_5.4.0-1017.17_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1017_5.4.0-1017.17_all.deb
+9510ceb63e138b473680b348cc071bb61394c81566b95df2af97dae0892f688f:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-1_amd64.deb
 9550e6231107fe1e05f4a29d804731a1694fbf6918815a00e691b00b0981be4e:
   type: ubuntu
   packages:
@@ -9323,6 +9333,10 @@ b4f571a0293878a40ffffb9138af6c465405848dd8884e3e48820d7d0cc34774:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-229.1.2.el7.x86_64.rpm
+b5c4c8f2323b911adcfc2ffae924137e521228838039a90fba1b61befa3e0af2:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2905.2.3-flatcar_developer_container.bin.bz2
 b5b5cbe27756e0c491de305c3ba11096fe116b4e1d338d7842cd245c1784850e:
   type: redhat
   packages:
@@ -9681,6 +9695,10 @@ b072425e1ccdf20b5ef1dd86c7e7304a8b9d05c6454de5036d930458d3192681:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1038_5.4.0-1038.41_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1038-gcp_5.4.0-1038.41_amd64.deb
+b87939d500da4e764e5f3841baceb3f63b0fd796b10085e0a6a660382bf1a2a6:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.2-flatcar_developer_container.bin.bz2
 b88515cb13569e1524d638c1a3dd18b14d806817b3a1fd8c5ad0e4b1f3d0e117:
   type: suse
   packages:
