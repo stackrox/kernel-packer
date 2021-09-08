@@ -2324,6 +2324,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1035_5.0.0-1035.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1035-gke_5.0.0-1035.36_amd64.deb
+7b5b0717c245b6d3636ffd298b323fcc903630b7ba567e092ee4009d174e6688:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.15-100.fc33-x86_64-kernel-devel-5.13.15-100.fc33.x86_64.rpm
 7b5dc24ca00fa24090a61a0ffde0438504e41b694b54797dd6dbbc67c7a57eee:
   type: redhat
   packages:
@@ -8942,6 +8946,11 @@ a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
+a793621224acdd06e6198b4855c14a8281f6cd940051bd27297cd8503d3378aa:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
@@ -10295,6 +10304,11 @@ c55a5584ba8f6e707935e3581349c1eb00ba0ec6fc25cc2e89b5a82ffe8cd2f8:
   packages:
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-headers.tgz
+c58ad88176dc73399a88e6dd667dfad38ed9fc527637bc98ff079e4447739bf0:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-2_amd64.deb
 c61aaf94c39088b143603d8ec69c9a02921e2dfd97c5789777edafb5ee7af98d:
   type: ubuntu
   packages:
