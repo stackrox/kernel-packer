@@ -5023,6 +5023,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.11.1.el6.x86_64.rpm
+86bb6a5127d36c703b662d259acc8de69e3aca31865752b28f4525209859e6b2:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.144-1.el7.elrepo.x86_64.rpm
 86ade55e952f480c485b80361d0785c71581118c36a932000e90ca78113f03ce:
   type: ubuntu
   packages:
@@ -12530,6 +12534,12 @@ f5e88cfd761c60f0895f63b0250eefddb188a3b8eac067efa2f44d28fb5b6da9:
   packages:
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-headers.tgz
+f5f94fe8c883ed0ae9af7945f8c7c504744244a6ba5080f2d18b0f3e9950e77a:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-2_all.deb
 f5af2c1067aa9c8022c64a49b29e93a22ea54ce2ccab1f0ba6e35ce76a064d5f:
   type: redhat
   packages:
