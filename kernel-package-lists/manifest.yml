@@ -3950,11 +3950,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.46.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.46.1.x86_64.rpm
-37b087f217e973eeafe2f6be3d5623314a7f115830e91233732a8110dbfa86b5:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
 37c5073ff02c0ad3a70eb3f3aef1d73f53c97c3b2a600cfd58480a47361de356:
   type: suse
   packages:
@@ -7128,11 +7123,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1017-aws_5.4.0-1017.17_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1017_5.4.0-1017.17_all.deb
-9510ceb63e138b473680b348cc071bb61394c81566b95df2af97dae0892f688f:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-1_amd64.deb
 9550e6231107fe1e05f4a29d804731a1694fbf6918815a00e691b00b0981be4e:
   type: ubuntu
   packages:
@@ -9470,6 +9460,12 @@ b7ce8efab71e90cffaded2345e27b21517f520a80e1a1deff7aa8fd79a8e7d3f:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-693.el7.x86_64.rpm
+b7def17b261e11b0204229d057e6f1c0113589d0ae11dfc4a7d5f8020ca74dd3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-2_all.deb
 b8d0bcffa361836eaa017fee414397ab8bf5c1cf38971c25ac46fa1257039ade:
   type: redhat
   packages:
@@ -12569,6 +12565,12 @@ f5e88cfd761c60f0895f63b0250eefddb188a3b8eac067efa2f44d28fb5b6da9:
   packages:
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-headers.tgz
+f5f94fe8c883ed0ae9af7945f8c7c504744244a6ba5080f2d18b0f3e9950e77a:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-2_all.deb
 f5af2c1067aa9c8022c64a49b29e93a22ea54ce2ccab1f0ba6e35ce76a064d5f:
   type: redhat
   packages:
