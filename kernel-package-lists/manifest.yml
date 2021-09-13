@@ -2893,6 +2893,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-957.21.2.el7.x86_64.rpm
+8cbb8bbccc5f4870948756b188557f2979174394a83869a68e62cd40ea41bbf7:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 8ac1a050ad3e32f6c8030529e2c2595cdae2484069e24fa25c158082121fab02:
   type: ubuntu
   packages:
@@ -11299,6 +11305,10 @@ d41227de723ddf712d48c777ba680ef1ebb065037fd3e0d3e5ae7f561a1a4de9:
   packages:
   - https---storage.googleapis.com-cos-tools-11151.47.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11151.47.0-kernel-headers.tgz
+d61397cfa0394a95b0209cd6cbeaaf8a2953afc4e3c59da5ba22d9f74af53042:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.3-300.fc34-x86_64-kernel-devel-5.14.3-300.fc34.x86_64.rpm
 d65702bd813094e18d581b5bb3bfe18fde3bef03a70cfff37b9d70763e7683b3:
   type: ubuntu
   packages:
