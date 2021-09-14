@@ -221,6 +221,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1032_4.15.0-1032.34_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1032-gcp_4.15.0-1032.34_amd64.deb
+0fb688c22730741d431f58ca76f379b354c166faf97f6c7679e10acfd2c47884:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.11.0-1019_5.11.0-1019.21_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.11.0-1019-gcp_5.11.0-1019.21_amd64.deb
 0dba6ea28702de4402b76ad9e962dcec954b6a43ec01b82901d3beae51837c9c:
   type: cos
   packages:
@@ -1413,6 +1418,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.115-1.el7.elrepo.x86_64.rpm
+003d42524086b7d4a28625600c6eefeef1d99a19a85123bbeb581cf216bd4b39:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.3-300.fc35-x86_64-kernel-devel-5.14.3-300.fc35.x86_64.rpm
 4f1f5e752c54871ec30bf99fc3338629aeefec5e4b135196f50382bdb9802964:
   type: redhat
   packages:
@@ -2734,6 +2743,10 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.6.1810-os-x86_64-Packages-kernel-devel-3.10.0-957.el7.x86_64.rpm
+8d9ec385b2fe766f82d95d8d2198a02cb199564ac3d52d3659ca553cb2e07a79:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.16-100.fc33-x86_64-kernel-devel-5.13.16-100.fc33.x86_64.rpm
 8d27dbf49b3cfb4f4885593b96f17e7c588d666cb119d9e59c10c335177e6a44:
   type: cos
   packages:
@@ -4402,6 +4415,11 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-154-generic_4.15.0-154.161-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-154_4.15.0-154.161-16.04.1_all.deb
+57a04a7d8ca3b420f9d7cc0db3611b223165bf2025287992fa6ab883bab8286f:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16678.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16678.0.0-kernel-headers.tgz
 57c7b0faa5423b184103906fec88628ee31763f9de982727875731f1dc61e367:
   type: ubuntu
   packages:
@@ -4689,6 +4707,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.8.1.el8_1.x86_64.rpm
+70f57edffed2069c1dd51f6aa98c2694ae2cfd8ad318cd678d03049810f79555:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.470.25-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.470.25-kernel-headers.tgz
 70d63b063dbef7a45dea1c91ffd53d9fba0810c53c8ab1b776eaf030bd22ad50:
   type: ubuntu
   packages:
@@ -7629,6 +7652,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.123-1.el7.elrepo.x86_64.rpm
+79473f9257333b9de410ea69a9d5758a1979cf0449880851d0cb5f009cbd4a85:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1053_5.4.0-1053.56_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1053-gke_5.4.0-1053.56_amd64.deb
 81466ab111e3d11ef4466a4239992370c1d1993a14519b378f023c7408f458e9:
   type: redhat
   packages:
@@ -7665,6 +7693,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.0-61.fc36-x86_64-kernel-devel-5.14.0-61.fc36.x86_64.rpm
+91329a93dbda63f8dfbdd090a15a246150e5f0d95e0c017fa7eead5b2cf47622:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.16-200.fc34-x86_64-kernel-devel-5.13.16-200.fc34.x86_64.rpm
 93390f65f8a025b87b588bdac29cc34326884c3753b541ade97f4191b8fff3fb:
   type: redhat
   packages:
@@ -9321,6 +9353,11 @@ afcbc913652f9978a9ff0641abfade29d3570d40fa6f39eabe29c7563a824469:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-331.el8.x86_64.rpm
+b0e9a1a566f5b0a8b69965ba442a1f737655fe31fba79df5ce653311563cc238:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1308.18-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-13310.1308.18-kernel-headers.tgz
 b0ebced533170957a495665744b43fb747623bb6d168aab2d1cf74655bb43f0b:
   type: suse
   packages:
