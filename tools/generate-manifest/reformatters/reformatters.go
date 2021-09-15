@@ -25,6 +25,8 @@ var (
 		"debian":       reformatDebian,
 		"cos":          reformatCOS,
 	}
+
+	supportedUbuntuBackports = []string{"16.04", "20.04"}
 )
 
 type ReformatterFunc func(packages []string) ([][]string, error)
@@ -290,10 +292,14 @@ func reformatPairs(packages []string) ([][]string, error) {
 
 		backport := "" != matches[3]
 
-		// Add the backport string for Ubuntu 16.04 to the version
-		// but drop all other backports that have an existing matching version.
-		if backport && strings.Contains(matches[3], "16.04") {
-			version = version + matches[3]
+		// Add the backport string for Ubuntu to the version if it is supported
+		if backport {
+			for _, supported := range supportedUbuntuBackports {
+				if strings.Contains(matches[3], supported) {
+					version = version + matches[3]
+					break
+				}
+			}
 		}
 		r, found := versions[version]
 

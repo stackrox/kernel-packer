@@ -41,8 +41,12 @@ centos_excludes = [
 ubuntu_excludes = [
     "5.10.0-13.14", # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
 ]
+ubuntu_backport_supported = [
+    "16.04",
+    "20.04"
+]
 ubuntu_backport_excludes = [
-    "\r~(?!16.04)", "+", # Prevent duplicate backports from cluttering the list, execept for 16.04 backports.
+    f"\r~(?!{ '|'.join(re.escape(s) for s in ubuntu_backport_supported) })", "+", # Prevent duplicate backports from cluttering the list, execept for supported backports.
 ]
 debian_excludes = [
     "3.2.0", "3.16.0" # legacy
@@ -520,7 +524,7 @@ repos = {
 def check_pattern(pattern, s):
     if len(pattern) > 1 and pattern[0:2] == "\r":
         return re.compile(pattern[2:]).match(s) != None
-    return pattern in s;
+    return pattern in s
 
 retry = urllib3.util.Retry(connect=5, read=5, redirect=5, backoff_factor=1)
 timeout = urllib3.util.Timeout(connect=10, read=60)
