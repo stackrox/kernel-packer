@@ -6688,12 +6688,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1034_4.15.0-1034.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1034-gke_4.15.0-1034.36_amd64.deb
-3908d8d8375c709faf3b14bbd3ccb01624e2db400eeb7aa2bd026442bec653dd:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-1_all.deb
 3979cf993fd699c9b1be0dac6fc16d7ee016a5eb5f0df5122d4950b62249c8c3:
   type: ubuntu
   packages:
@@ -12401,6 +12395,10 @@ ebb08880b2aed8020a53e65fcd7a606daee0bbc84f727db453d5369ca4ba25cd:
   packages:
   - https---storage.googleapis.com-cos-tools-11316.21.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11316.21.0-kernel-headers.tgz
+ebccdced62231e2fe3cb6bd1155e0603b6c5f90c575e68b5f6c71c2d1d5ea8a1:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.5-300.fc34-x86_64-kernel-devel-5.14.5-300.fc34.x86_64.rpm
 ebdb6f5f7442d34efbe2b313e2fe94403d45a69579d0db29181fbea1c6e56994:
   type: ubuntu
   packages:
