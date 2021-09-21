@@ -3778,6 +3778,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11647.163.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.163.0-kernel-headers.tgz
+26c9a859344511342ae623e276e780234b578af77f2380480aa147a0ccabf704:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.13.0-1003-aws_5.13.0-1003.4_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.13.0-1003_5.13.0-1003.4_all.deb
 26a68c93bba91c9a1ea413305d49414e38cca992b96fd5005c0216f29a9b63f3:
   type: ubuntu
   packages:
@@ -10822,6 +10827,10 @@ ca32344a5dfc3e7de9c6aa84b169e6f55ba0d48186fdf87c138d19a9f94ab50b:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.27.1.el6.x86_64.rpm
+ca35593d3160642c028b1dc9027e7c2c93361df4971f342393b037b5ed04cae2:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-2e599557b2b05925c497e568b450b0a9479302f69a0b2eb5bb8e8290b1b8440a-kernel-devel-5.4.144-69.257.amzn2.x86_64.rpm
 ca98005a985f66a436e94d37c984863757135003dcce4d0f56894b8cbce6519c:
   type: redhat
   packages:
