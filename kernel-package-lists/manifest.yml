@@ -2068,6 +2068,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.52-1.el7.elrepo.x86_64.rpm
+05bb2e405a640d81ce3d74e02a867844798bfd0491a73bd1bdd504d0ff22ae48:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.11.0-1020-aws_5.11.0-1020.21_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.11.0-1020_5.11.0-1020.21_all.deb
 6a0c6e4e45b2bf3267aa7ff704afb654b4d66a185ba00d8e59194c9bf083058b:
   type: redhat
   packages:
@@ -4504,6 +4509,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1037_4.15.0-1037.39-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1037-gcp_4.15.0-1037.39-16.04.1_amd64.deb
+54cc17e6954e0fa8df2ae8c4977a908a1f008c9049f279798b258ebbf5c65d18:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1058-aws_5.4.0-1058.61_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1058_5.4.0-1058.61_all.deb
 55f1e3b619d01a2553e9c8e1f4de1384a8e6ec223cbd3c43585a14a5aa6a800f:
   type: redhat
   packages:
@@ -13385,6 +13395,11 @@ f493584818479e6bab4fd776b8f45d825c38f3c1911c652d0e0671ff2e9db3e6:
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.39-1.el7.elrepo.x86_64.rpm
+f46845375362851ba306910aee3b8fa3448d02bc9490f3c73ebae098bdb3430a:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.39.1-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.39.1-kernel-headers.tgz
 f049691585004478b48a3b78aca576eb1ddba6569e5db64c4e15d2e8f16ef870:
   type: debian
   packages:
