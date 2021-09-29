@@ -1147,6 +1147,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-573.7.1.el6.x86_64.rpm
+3a7b54071965161e530b1593718159038fc81cf33bcf8e072f8c6dd0e6c41dbe:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-4_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.46-4_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-4_all.deb
 3b7bb1bdd94d2735d54b16c24153c19311542994077e65103d61250b452313cb:
   type: redhat
   packages:
@@ -6194,6 +6200,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1117-aws_4.4.0-1117.131_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1117_4.4.0-1117.131_all.deb
+622ace55e2fe0e8fd107832621bf3035e7a1e80b8df2bb3acd5c3220ce0ef496:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.14_5.14.6-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-amd64_5.14.6-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-common_5.14.6-3_all.deb
 0631aa07ab3b893019890cd922dfb5ebfccb96806b702479b402da2aa9712b84:
   type: redhat
   packages:
@@ -13404,6 +13416,12 @@ fa081978ecf2706def4b75914bd23d6772f67e16fa4b765c42b8733109254447:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.13.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.13.1.x86_64.rpm
+faa42abfe0bd6c2df3d697e6203592a72cb980359951ced5a64c6250ecdb4b15:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.14_5.14.6-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-cloud-amd64_5.14.6-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-common_5.14.6-3_all.deb
 faa641fd731bd37259e109791277f96e0861306076fe3a6335e4a877f6022ca2:
   type: redhat
   packages:
