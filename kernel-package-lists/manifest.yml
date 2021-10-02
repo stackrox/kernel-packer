@@ -4077,6 +4077,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-40-generic_5.4.0-40.44_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-40_5.4.0-40.44_all.deb
+35c627f5eeead77b04faac8cc12af120159b99687272be37a0652d077a598c7e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.14_5.14.6-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-amd64_5.14.6-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-common_5.14.6-2_all.deb
 35b670a2319b8e78515fa4084bef6a31f1ea3bad32d985abe7ac082c99cbd6cf:
   type: ubuntu
   packages:
@@ -6394,11 +6400,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.175-1.el7.elrepo.x86_64.rpm
-740ba613c3a961111fdc02a02556d9b66672c9177e5316e27c03b02d58d7e880:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-5_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.46-5_amd64.deb
 740dcbb05d9a82c389518c73839f988d4bc8a96f482528a23713760273c08db8:
   type: redhat
   packages:
@@ -12272,11 +12273,6 @@ e7c2e632803190a2032b5cbda7d64a6feced40cbc01ec8fd760d4a8dc7a53e86:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.53.4.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.53.4.1.x86_64.rpm
-e7d9a49cdeef7b7a06926899c52b8ac113cca6c0a896a90da91746d37cd9f73f:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.46-5_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-amd64_5.10.46-5_amd64.deb
 e7e9b405c7365a1969c9c4c072aab0e427e882280852e7441648a9780d433882:
   type: cos
   packages:
