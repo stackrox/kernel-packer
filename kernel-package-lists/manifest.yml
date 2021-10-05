@@ -5997,6 +5997,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.20-100.fc32-x86_64-kernel-devel-5.10.20-100.fc32.x86_64.rpm
+392a33d036ed24ef35aa741bd9742195bad2d5492a5510f0f7bb7ec85010d05b:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.70-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-amd64_5.10.46-5_amd64.deb
 393ce93a5832afd33384c16e9c70676f67f5e337524d75c4114beee8b09fb312:
   type: redhat
   packages:
@@ -7853,12 +7858,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.125-1.el7.elrepo.x86_64.rpm
-51732d19ebd942189909e808d111f77e07510f7ba020128525a022a8cfbbd960:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.14_5.14.9-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-amd64_5.14.6-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-common_5.14.6-3_all.deb
 53268cdca480ed06e71f80a31d2ea95b1c00d1bbad7f8719e73c099808b5e467:
   type: ubuntu
   packages:
@@ -8692,12 +8691,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.16-300.fc34-x86_64-kernel-devel-5.11.16-300.fc34.x86_64.rpm
-221660149d11db09d2b3adc09faa9be4c09cad7e1d2ab5c41495afffd649cb83:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.14_5.14.9-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-cloud-amd64_5.14.6-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-common_5.14.6-3_all.deb
 249756017e7cd5ac6b5a6a6e58a180c72d1e516088c20e445553ef105da5a5f6:
   type: coreos
   packages:
@@ -13017,6 +13010,11 @@ eff573e8d1592f3f8177a75e91ebaf6e765f2a8aa641ffd2e4d1440f2d8f1107:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-3.18.25-19.el7.x86_64.rpm
+f0f956a7400665b5ebb28dd9a9404fa2cb78aef429691a3785afc13947a9cf7f:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.70-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.46-5_amd64.deb
 f0e7589c9f19628aec5ed0d638c0af4f67e4a8e9a00132a2a0ed78421e68149f:
   type: redhat
   packages:
