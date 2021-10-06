@@ -3141,12 +3141,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.78.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.78.1.x86_64.rpm
-8de569a0e47020cbeaf7935426ea529885404851da8147a4a65c0dc9c3bd3edc:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.14_5.14.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-cloud-amd64_5.14.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-common_5.14.6-2_all.deb
 8de4261232ecdd535c96a27ab738a869ce65ab1215a5b6afb939c1d4e3ceb649:
   type: ubuntu
   packages:
@@ -4121,12 +4115,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-40-generic_5.4.0-40.44_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-40_5.4.0-40.44_all.deb
-35c627f5eeead77b04faac8cc12af120159b99687272be37a0652d077a598c7e:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.14_5.14.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-amd64_5.14.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.14.0-1-common_5.14.6-2_all.deb
 35b670a2319b8e78515fa4084bef6a31f1ea3bad32d985abe7ac082c99cbd6cf:
   type: ubuntu
   packages:
@@ -5779,6 +5767,12 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.113.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.113.1.x86_64.rpm
+232a01f099e1f58fd1e006dd7a482e64b67239f355d1b2f6e3a784333cfc19fb:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.70-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.46-5_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.46-5_all.deb
 0237d6f93a5a96403032247ad490edd0813641a96a8c2eb6fa28c048ccd42967:
   type: ubuntu
   packages:
