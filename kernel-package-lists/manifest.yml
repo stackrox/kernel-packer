@@ -1700,6 +1700,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1041.38-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1041.38-kernel-headers.tgz
+4faa7dd54f4cc7cfc0ffb13b4436a635f732c04eab73fc627e994b0941204840:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.14-200.fc34-x86_64-kernel-devel-5.14.14-200.fc34.x86_64.rpm
 4fac5af9b4197e9a3f1ece41328569e585a8d7335ce49bda0a17b794dc13b833:
   type: cos
   packages:
@@ -9445,6 +9449,11 @@ a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
+a793621224acdd06e6198b4855c14a8281f6cd940051bd27297cd8503d3378aa:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
@@ -10014,6 +10023,10 @@ b27b583a7a2cf6f07a6c8e396cba8c8fec77ddb5d9a15917763db07431234532:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1011-azure_4.13.0-1011.14_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1011_4.13.0-1011.14_all.deb
+b28c5bda971d03fd8d50075b8e71f88a7bc342fdbfb6cd45a17fe7696b8cb4e1:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.14-100.fc33-x86_64-kernel-devel-5.14.14-100.fc33.x86_64.rpm
 b35cbdea8bc74f4369378567d0dffe1a180759e6d8973bad586e7b73b1c3af4a:
   type: suse
   packages:
@@ -10879,6 +10892,11 @@ c55a5584ba8f6e707935e3581349c1eb00ba0ec6fc25cc2e89b5a82ffe8cd2f8:
   packages:
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-headers.tgz
+c58ad88176dc73399a88e6dd667dfad38ed9fc527637bc98ff079e4447739bf0:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-2_amd64.deb
 c61aaf94c39088b143603d8ec69c9a02921e2dfd97c5789777edafb5ee7af98d:
   type: ubuntu
   packages:
@@ -13939,6 +13957,10 @@ ffbeeacf4866dbc419cba6d1b8696f714e87ed5babd19bf16ad72bbed1d456bb:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1099-aws_4.15.0-1099.106_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1099_4.15.0-1099.106_all.deb
+fff1ac2edb946fe1c3c962b29121eaea5ebb992be7db31ba58c4b4814f9845b0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.14-300.fc35-x86_64-kernel-devel-5.14.14-300.fc35.x86_64.rpm
 fffddc6d1bc9a54c7a51733265f275d2dda132bd5f31db105f67ead4573e5c8f:
   type: redhat
   packages:
