@@ -4342,6 +4342,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1067_4.15.0-1067.70_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1067-gke_4.15.0-1067.70_amd64.deb
+43e3ef98f3071e466c42bffa66c692b4d2b3aa6506d5cee99108996c417acb6e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 43b05e0ad0ae43ccdc1e98f9c3479d60baa676c6271d73831793f21735b69214:
   type: ubuntu
   packages:
@@ -11555,6 +11561,10 @@ d0c9c20b48c1628889fe9e38a0ccdd99f4abfebdd1b6d148b406a9464f7aba8c:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-3.18.41-20.el7.x86_64.rpm
+d0b0043099f22b1b7b1086c0e922026474b6572181e30187c11378de0aa91f0d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.16-301.fc35-x86_64-kernel-devel-5.14.16-301.fc35.x86_64.rpm
 d1f7a1932e018c6b042067ad559279ac682f59799c027400414507fbc3c060ce:
   type: cos
   packages:
@@ -13335,6 +13345,10 @@ f4ad129e95e0607d343934cda608ee8c55249a76a1f604f7c54a6651ca31fa04:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1051_5.4.0-1051.55_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1051-gcp_5.4.0-1051.55_amd64.deb
+f5f9b4e22ac3d2ed562793769334495992b16cf935489a8119945ac30ca0dd8e:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.16-201.fc34-x86_64-kernel-devel-5.14.16-201.fc34.x86_64.rpm
 f5e9b512671b0d40d4e7f391ad0df62f4449e70f5e70333583912cb92c9041d8:
   type: coreos
   packages:
