@@ -10080,6 +10080,12 @@ b7ce8efab71e90cffaded2345e27b21517f520a80e1a1deff7aa8fd79a8e7d3f:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-693.el7.x86_64.rpm
+b7def17b261e11b0204229d057e6f1c0113589d0ae11dfc4a7d5f8020ca74dd3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-2_all.deb
 b8d0bcffa361836eaa017fee414397ab8bf5c1cf38971c25ac46fa1257039ade:
   type: redhat
   packages:
@@ -10782,10 +10788,6 @@ c1a0e435a9f2e72f43f87e551e773af27cf45894330560a5d9eb885d0ccef20b:
   packages:
   - https---storage.googleapis.com-cos-tools-11647.501.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.501.0-kernel-headers.tgz
-c1a88a356dfe30c82f95ddba9360a690440d09cbfccfcd19ca866e0c809dbe58:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.0-198.fc35-x86_64-kernel-devel-5.12.0-198.fc35.x86_64.rpm
 c1b574c87affb51f788fe739b25e2eff4c89ba8d4bb569357ee34f3adca77ffb:
   type: coreos
   packages:
@@ -10815,6 +10817,10 @@ c2d599d48f69fdda73ff938a4ce661cf4697b985677b138c2073e08776119ce3:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-3.18.40-20.el7.x86_64.rpm
+c2f9813c78bbdef780ff75ea7d3b10cb908936fdc4f524d9af1478a000156191:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.157-1.el7.elrepo.x86_64.rpm
 c2fa16fafb163b2f64d8b9ab95a9becff510393b439f8748b5c1c8c76b3f353d:
   type: debian
   packages:
@@ -13400,6 +13406,12 @@ f5e88cfd761c60f0895f63b0250eefddb188a3b8eac067efa2f44d28fb5b6da9:
   packages:
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-headers.tgz
+f5f94fe8c883ed0ae9af7945f8c7c504744244a6ba5080f2d18b0f3e9950e77a:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-2_all.deb
 f5af2c1067aa9c8022c64a49b29e93a22ea54ce2ccab1f0ba6e35ce76a064d5f:
   type: redhat
   packages:
