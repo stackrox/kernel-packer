@@ -10506,6 +10506,11 @@ ba9a5a0414282d4c0ac4038d4e9f48ab4122fd9f8ad3a16eb645657817555ed9:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.11.0-1016-aws_5.11.0-1016.17_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.11.0-1016_5.11.0-1016.17_all.deb
+ba211ec36ce5e2d4bf790727347d83bd58b330bf52bff5ad7e7d3707f907fcad:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.39.16-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.39.16-kernel-headers.tgz
 ba789505ab4bd5b3906db2941dfc5ed5e0d5a1132cc3850a2db930ad86b1601c:
   type: ubuntu
   packages:
@@ -13414,12 +13419,6 @@ f5e88cfd761c60f0895f63b0250eefddb188a3b8eac067efa2f44d28fb5b6da9:
   packages:
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-headers.tgz
-f5f94fe8c883ed0ae9af7945f8c7c504744244a6ba5080f2d18b0f3e9950e77a:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-2_all.deb
 f5af2c1067aa9c8022c64a49b29e93a22ea54ce2ccab1f0ba6e35ce76a064d5f:
   type: redhat
   packages:
