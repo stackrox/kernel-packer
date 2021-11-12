@@ -6212,6 +6212,10 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-9765.66.0-kernel-src.tar.gz
+475aaa98309a78da3232a2d9c44dcc3e261deb418d68cc3acfb3675d7baa8ce1:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d9d2b313143d6cab97599686f64455440aa828db1be7de84818d82c289aed9c1-kernel-devel-5.4.156-83.273.amzn2.x86_64.rpm
 476fc7b53bd3537dc6c17b4be0840f3594b0c8df46346137ccdefb709cc33617:
   type: ubuntu
   packages:
@@ -13498,6 +13502,12 @@ f5e88cfd761c60f0895f63b0250eefddb188a3b8eac067efa2f44d28fb5b6da9:
   packages:
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.348.0-kernel-headers.tgz
+f5f94fe8c883ed0ae9af7945f8c7c504744244a6ba5080f2d18b0f3e9950e77a:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-2_all.deb
 f5af2c1067aa9c8022c64a49b29e93a22ea54ce2ccab1f0ba6e35ce76a064d5f:
   type: redhat
   packages:
