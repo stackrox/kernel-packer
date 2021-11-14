@@ -2222,6 +2222,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.16.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.16.1.x86_64.rpm
+6d9f424170e5d4c0d620692a5891b73ad5013ef1c793d5ca8fd42a43ea6870e0:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
 6c9a6972827393c412c9bdefe8fec65c204f4e3304cdcd9c10d911a1b9d2dfb4:
   type: redhat
   packages:
@@ -10761,12 +10766,6 @@ bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119-generic_4.4.0-119.143_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119_4.4.0-119.143_all.deb
-bdfd29b0bc4035875620300bb18be1f0b1d450cf9925366534d82e2f89e137e2:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 bdfef4c36280a3d5cfac934574049c61b8f80fb376c05bd7c12cffaf51dfb24f:
   type: cos
   packages:
@@ -13114,6 +13113,11 @@ ea04b74ac3a387f72d21a2e6ab892dad78635816aa537078b0bf85b0226123c1:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.15-200.fc33-x86_64-kernel-devel-5.12.15-200.fc33.x86_64.rpm
+ea5b3c015fc641967b3ecf43706a75a24c8ad6b87afeb655f4e8d5e37623dec1:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
 ea97b459f0f4d8175bba7eeb5ad97980877bd57f44f4bd0ecf36a0002f91bf3a:
   type: ubuntu
   packages:
