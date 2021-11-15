@@ -2691,6 +2691,10 @@
   - http---18.185.215.86-packages-linux-kbuild-5.4_5.4.68-1_amd64.deb
   - http---18.185.215.86-packages-linux-headers-5.4.0-5-cloud-amd64_5.4.68-1_amd64.deb
   - http---18.185.215.86-packages-linux-headers-5.4.0-5-common_5.4.68-1_all.deb
+7d6371c60209a50132025fa08cb876c268f00de5a9e5d941903852a4d5eff3bb:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-348.2.1.el8_5.x86_64.rpm
 7c61800e9428fc0f034c49b54686cf07323448971516d649cb4e4be4ca12b077:
   type: ubuntu
   packages:
@@ -14045,6 +14049,10 @@ fbf20a07e180c85eb7fd1c4aa1c073407ad26a3321f92c4185711deeae9e493a:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.16-200.fc33-x86_64-kernel-devel-5.10.16-200.fc33.x86_64.rpm
+fbf183b3e8455f9fd8cec4cabda36fd9f57ac6cd57443814af8b0d058fffe2e2:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8.5.2111-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-348.el8.x86_64.rpm
 fc4a4bef266742cfb041888ea69988c6323c5598b5ce64d2dd748a794d19bd21:
   type: redhat
   packages:
