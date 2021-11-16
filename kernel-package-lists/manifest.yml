@@ -1454,6 +1454,11 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.25.1.el7.x86_64.rpm
+3cfc1060f98e9fbf513e24667fa0a7054450a30e7cc954cb570cd325003fe153:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.4-linux-gcp-5.4-headers-5.4.0-1058_5.4.0-1058.62-18.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.4-linux-headers-5.4.0-1058-gcp_5.4.0-1058.62-18.04.1_amd64.deb
 3bfc30591482405c2e1d21f7a51d5fd43c92d196ff248dba055dfc20e97ca880:
   type: ubuntu
   packages:
@@ -2222,11 +2227,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.16.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.16.1.x86_64.rpm
-6d9f424170e5d4c0d620692a5891b73ad5013ef1c793d5ca8fd42a43ea6870e0:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
 6c9a6972827393c412c9bdefe8fec65c204f4e3304cdcd9c10d911a1b9d2dfb4:
   type: redhat
   packages:
@@ -7001,6 +7001,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.163-1.el7.elrepo.x86_64.rpm
+2126c2bd5f58361fcff72ef21919257a5597b45479340d45709c47c72ad21189:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.11.0-1023_5.11.0-1023.25_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.11.0-1023-gcp_5.11.0-1023.25_amd64.deb
 2208c2a81de361a58cbb64f05919ce07f3ab78e578e7dd496d73316b103cd0cb:
   type: debian
   packages:
@@ -13137,11 +13142,6 @@ ea04b74ac3a387f72d21a2e6ab892dad78635816aa537078b0bf85b0226123c1:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.15-200.fc33-x86_64-kernel-devel-5.12.15-200.fc33.x86_64.rpm
-ea5b3c015fc641967b3ecf43706a75a24c8ad6b87afeb655f4e8d5e37623dec1:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
 ea97b459f0f4d8175bba7eeb5ad97980877bd57f44f4bd0ecf36a0002f91bf3a:
   type: ubuntu
   packages:
@@ -13530,6 +13530,11 @@ f4ad129e95e0607d343934cda608ee8c55249a76a1f604f7c54a6651ca31fa04:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1051_5.4.0-1051.55_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1051-gcp_5.4.0-1051.55_amd64.deb
+f5c4d0eda0c467ac78ea94a292a929a989fd1a20c3b2318f6daa4d327b29ddb2:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.11.0-1022-aws_5.11.0-1022.23_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.11.0-1022_5.11.0-1022.23_all.deb
 f5f9b4e22ac3d2ed562793769334495992b16cf935489a8119945ac30ca0dd8e:
   type: redhat
   packages:
@@ -13993,6 +13998,11 @@ f049691585004478b48a3b78aca576eb1ddba6569e5db64c4e15d2e8f16ef870:
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
+fa2b65988bdda8854656ba17f331ca53a75acafb77bdcfba9d20969f4cef0f06:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1060-aws_5.4.0-1060.63_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1060_5.4.0-1060.63_all.deb
 fa7c05198c9aa55fc051e7c10b354f3ccb1aef114316dc8dc2729c352dceed55:
   type: redhat
   packages:
