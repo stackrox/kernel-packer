@@ -1454,11 +1454,6 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.25.1.el7.x86_64.rpm
-3cfc1060f98e9fbf513e24667fa0a7054450a30e7cc954cb570cd325003fe153:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.4-linux-gcp-5.4-headers-5.4.0-1058_5.4.0-1058.62-18.04.1_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.4-linux-headers-5.4.0-1058-gcp_5.4.0-1058.62-18.04.1_amd64.deb
 3bfc30591482405c2e1d21f7a51d5fd43c92d196ff248dba055dfc20e97ca880:
   type: ubuntu
   packages:
@@ -2082,6 +2077,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11647.600.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.600.0-kernel-headers.tgz
+5aab70b612815466110121aa67f81cc8153ab38393090d2cac3a3f55145eb043:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1058_5.4.0-1058.62_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1058-gcp_5.4.0-1058.62_amd64.deb
 5db3b28b8d1d0fe907ee42f27db2f8d93ea6a9f25d03ccc6bba2eeb4ca7cc228:
   type: redhat
   packages:
