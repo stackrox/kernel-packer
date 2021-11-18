@@ -1920,6 +1920,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1096-aws_4.15.0-1096.103_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1096_4.15.0-1096.103_all.deb
+5c6b07d219ab1cd53cddb3410c4c2c89c596a3d72235cc9b6e2fbb1ffdd1b90d:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-348.2.1.el8_5.x86_64.rpm
 5e6b0041db8897d13c1583668cb2b7438f24f1e0e988aab314c34b2509842dbe:
   type: ubuntu
   packages:
@@ -10824,12 +10828,6 @@ bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119-generic_4.4.0-119.143_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119_4.4.0-119.143_all.deb
-bdfd29b0bc4035875620300bb18be1f0b1d450cf9925366534d82e2f89e137e2:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 bdfef4c36280a3d5cfac934574049c61b8f80fb376c05bd7c12cffaf51dfb24f:
   type: cos
   packages:
