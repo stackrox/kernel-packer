@@ -9714,11 +9714,6 @@ a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
-a793621224acdd06e6198b4855c14a8281f6cd940051bd27297cd8503d3378aa:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-2_amd64.deb
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
@@ -11203,11 +11198,6 @@ c55a5584ba8f6e707935e3581349c1eb00ba0ec6fc25cc2e89b5a82ffe8cd2f8:
   packages:
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.14.0-kernel-headers.tgz
-c58ad88176dc73399a88e6dd667dfad38ed9fc527637bc98ff079e4447739bf0:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.194-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-2_amd64.deb
 c61aaf94c39088b143603d8ec69c9a02921e2dfd97c5789777edafb5ee7af98d:
   type: ubuntu
   packages:
@@ -12194,6 +12184,10 @@ d555ef99e09d4c2f11fb1164ca43dcf58a92efbe864483e7eee72a56ebe7bc0a:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.207-1.el7.elrepo.x86_64.rpm
+d704d21e8c7f1f9dfcdd46f865640626bed4ad8d1fbeb63f680869cf335869c0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.3-200.fc35-x86_64-kernel-devel-5.15.3-200.fc35.x86_64.rpm
 d0826e928686d7d9a97d93abfb97a8ddedc60cdc200a3bbb0979e0fc6836008c:
   type: redhat
   packages:
