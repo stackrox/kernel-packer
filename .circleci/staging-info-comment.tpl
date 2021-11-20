@@ -7,15 +7,15 @@ inspection purposes.
 The _crawl_ job downloaded and added `{{.Env.PACKAGE_COUNT}}` kernel header
 package(s) to GCS storage.
 
-{{if .Env.PACKAGE_COUNT}}
+{{if ne .Env.PACKAGE_COUNT "0" }}
 `KERNEL_PACKAGES_STAGING_BUCKET: {{.Env.KERNEL_PACKAGE_STAGING_BUCKET}}`
 {{end}}
 
 
 The _repackage_ job created `{{.Env.BUNDLE_COUNT}}` kernel header bundle(s)
-in a staging directory in GCS storage.
+in in GCS storage.
 
-{{if .Env.BUNDLE_COUNT}}
+{{if ne .Env.BUNDLE_COUNT "0" }}
 `KERNEL_BUNDLES_STAGING_BUCKET: {{.Env.KERNEL_BUNDLE_STAGING_BUCKET}}`
 {{end}}
 
