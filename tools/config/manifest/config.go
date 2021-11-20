@@ -24,7 +24,7 @@ type Builder struct {
 	NodeIndex int      `yaml:"nodeIndex,omitempty"`
 }
 
-// Add adds a Builder with the given kind and packages to the Manifest under an
+// Adds a Builder with the given kind and packages to the Manifest under an
 // id derived by checksumming the given set of packages.
 func (m Manifest) Add(kind string, packages []string) {
 	var id = checksumStrings(packages)
@@ -34,7 +34,7 @@ func (m Manifest) Add(kind string, packages []string) {
 	}
 }
 
-// Add adds a Builder to the Manifest under an id derived by checksumming the
+// Adds a Builder to the Manifest under an id derived by checksumming the
 // set of packages in the Builder.
 func (m Manifest) AddBuilder(builder Builder) {
 	id := checksumStrings(builder.Packages)

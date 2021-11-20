@@ -92,7 +92,7 @@ jobs:
   repackage:
     machine:
       image: ubuntu-2004:202107-02
-    parallelism: 16
+    parallelism: 32
     environment:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
@@ -174,17 +174,6 @@ jobs:
     - checkout
     - attach_workspace:
         at: .
-    - restore_cache:
-        name: Restoring kernel packer cache
-        keys:
-          - stackrox-kernel-packer-cache-v20-{{ .Branch }}-{{ .Revision }}
-          - stackrox-kernel-packer-cache-v20-master-
-    - run:
-        name: Move restored cache
-        command: |
-          mkdir -p .build-data/cache
-          touch .build-data/cache/cache.yml
-          mv .build-data/cache/cache.yml .build-data/cache/cache.yml.pre
     - run:
         name: Sanity check fragments
         command: ls -lh .build-data/cache
@@ -193,20 +182,6 @@ jobs:
         command: |
           make combine-cache
           make clean-cache
-    - run:
-        name: Diff of cache.yml after combine
-        command: |
-          diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml || [ $? -eq 1 ]
-    - run:
-        name: Remove cache.yml if PR has no-cache label
-        command: |
-          set +e
-          .circleci/pr_has_label.sh "no-cache"
-          if [[ $? -eq 0 ]]; then
-            echo "PR has no-cache label, removing cache.yml"
-            rm .build-data/cache/cache.yml
-            touch .build-data/cache/cache.yml
-          fi
     - run:
         name: Sanity check bundles
         command: |
