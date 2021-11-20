@@ -105,8 +105,8 @@ jobs:
     - restore_cache:
         name: Restoring kernel packer cache
         keys:
-          - stackrox-kernel-packer-cache-v19-{{ .Branch }}-{{ .Revision }}
-          - stackrox-kernel-packer-cache-v19-master-
+          - stackrox-kernel-packer-cache-v20-{{ .Branch }}-{{ .Revision }}
+          - stackrox-kernel-packer-cache-v20-master-
     - run:
         name: Check if PR with no-cache label
         command: |
@@ -177,8 +177,8 @@ jobs:
     - restore_cache:
         name: Restoring kernel packer cache
         keys:
-          - stackrox-kernel-packer-cache-v17-{{ .Branch }}-{{ .Revision }}
-          - stackrox-kernel-packer-cache-v17-master-
+          - stackrox-kernel-packer-cache-v20-{{ .Branch }}-{{ .Revision }}
+          - stackrox-kernel-packer-cache-v20-master-
     - run:
         name: Move restored cache
         command: |
@@ -197,6 +197,16 @@ jobs:
         name: Diff of cache.yml after combine
         command: |
           diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml || [ $? -eq 1 ]
+    - run:
+        name: Remove cache.yml if PR has no-cache label
+        command: |
+          set +e
+          .circleci/pr_has_label.sh "no-cache"
+          if [[ $? -eq 0 ]]; then
+            echo "PR has no-cache label, removing cache.yml"
+            rm .build-data/cache/cache.yml
+            touch .build-data/cache/cache.yml
+          fi
     - run:
         name: Sanity check bundles
         command: |
@@ -222,7 +232,7 @@ jobs:
         when: always
     - save_cache:
         name: Saving kernel packer cache
-        key: stackrox-kernel-packer-cache-v19-{{ .Branch }}-{{ .Revision }}
+        key: stackrox-kernel-packer-cache-v20-{{ .Branch }}-{{ .Revision }}
         paths:
         - .build-data/cache/cache.yml
 
