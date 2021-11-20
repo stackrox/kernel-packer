@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"path/filepath"
 	"sort"
@@ -118,14 +119,20 @@ func buildCmd(manifestFile string, cacheDir string, pkgDir string, bundleDir str
 		// This build failed. Report it and move along.
 		if err != nil {
 			color.Red("[FAIL] [%s] | %v\n", id, err)
-			color.Red("       ↳ %v\n", err)
+			failureCount += 1
+			continue
+		}
+
+		bundle, err := readBundleName(bundleDir, id)
+		if err != nil {
+			color.Red("[FAIL] [%s] | %v\n", id, err)
 			failureCount += 1
 			continue
 		}
 
 		// This build succeeded! Save a cache fragment for this specific id.
 		color.Green("[PASS] [%s]\n", id)
-		if err := saveCacheFragment(builder, id, cacheDir); err != nil {
+		if err := saveCacheFragment(builder, id, bundle, cacheDir); err != nil {
 			fmt.Printf("       Failed to save cache fragment: %v\n", err)
 		}
 	}
@@ -237,14 +244,14 @@ func build(builder manifest.Builder, id string, pkgDir string, bundleDir string)
 }
 
 // saveCacheFragment writes a cache fragment inside of the cache directory.
-func saveCacheFragment(builder manifest.Builder, id string, cacheDir string) error {
+func saveCacheFragment(builder manifest.Builder, id string, bundle string, cacheDir string) error {
 	var (
 		filename = filepath.Join(cacheDir, fmt.Sprintf("fragment-%s.yml", id))
 		mf       = manifest.New()
 	)
 
 	// A cache fragment contains a single entry.
-	mf.Add(builder.Kind, builder.Packages)
+	mf.AddBuilder(manifest.Builder{builder.Kind, builder.Packages, bundle, nodeIndex})
 
 	err := manifest.Save(mf, filename)
 	return errors.Wrap(err, "failed to save cache fragment")
@@ -285,4 +292,15 @@ func sortedSet(set map[string]struct{}) []string {
 
 	sort.Strings(list)
 	return list
+}
+
+func readBundleName(bundleDir string, id string) (string, error) {
+	files, err := ioutil.ReadDir(filepath.Join(bundleDir, id))
+	if err != nil {
+		return "", err
+	}
+	if len(files) > 1 {
+		return "", errors.New("Unexpected number of bundles")
+	}
+	return files[0].Name(), nil
 }
