@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM debian:buster
 
 RUN apt-get update \
  && apt-get upgrade -y \
@@ -7,6 +7,7 @@ RUN apt-get update \
       make \
       gcc \
       gcc-7-plugin-dev \
+      gcc-8-plugin-dev \
       gcc-8 \
       libelf-dev \
       libc6-dev \
@@ -31,6 +32,7 @@ RUN apt-get update \
       unzip \
       bison \
       flex \
+      zstd \
  ;
 
 
