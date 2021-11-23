@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"sort"
 
+	"github.com/fatih/color"
 	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 )
@@ -17,11 +18,13 @@ type Manifest map[string]Builder
 // Builder represents a single builder configuration. This captures all kernel
 // versions that can be produced by the given type.
 type Builder struct {
-	Kind     string   `yaml:"type"`
-	Packages []string `yaml:"packages"`
+	Kind      string   `yaml:"type"`
+	Packages  []string `yaml:"packages"`
+	Bundle    string   `yaml:"bundle,omitempty"`
+	NodeIndex int      `yaml:"nodeIndex,omitempty"`
 }
 
-// Add adds a Builder with the given kind and packages to the Manifest under an
+// Adds a Builder with the given kind and packages to the Manifest under an
 // id derived by checksumming the given set of packages.
 func (m Manifest) Add(kind string, packages []string) {
 	var id = checksumStrings(packages)
@@ -29,6 +32,13 @@ func (m Manifest) Add(kind string, packages []string) {
 		Kind:     kind,
 		Packages: packages,
 	}
+}
+
+// Adds a Builder to the Manifest under an id derived by checksumming the
+// set of packages in the Builder.
+func (m Manifest) AddBuilder(builder Builder) {
+	id := checksumStrings(builder.Packages)
+	m[id] = builder
 }
 
 // SortedIDs returns a list of all manifest ids, sorted in alphabetical order.
@@ -96,6 +106,11 @@ func CombineFiles(filenames []string) (Manifest, error) {
 		fragment, err := Load(filename)
 		if err != nil {
 			return nil, errors.Wrap(err, "failed to load cache fragment")
+		}
+		if filepath.Base(filename) != "cache.yml" {
+			for id, mf := range fragment {
+				color.Green("Built bundle %s on node %d with id %s\n", mf.Bundle, mf.NodeIndex, id)
+			}
 		}
 		fragments[index] = fragment
 	}

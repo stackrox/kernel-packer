@@ -54,12 +54,19 @@ commands:
           else
             # The below variables ontain a comma delimited list of GCP buckets,
             # Scripts may read from all buckets but only write to the first bucket in the list.
-            KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-packages"
-            KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1},gs://stackrox-kernel-bundles"
-            echo "KERNEL_BUNDLES_STAGING_BUCKET=gs://stackrox-kernel-bundles-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1}"
+            KERNEL_PACKAGE_STAGING_BUCKET="gs://stackrox-kernel-packages-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1}"
+            KERNEL_BUNDLE_STAGING_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1}"
+            KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET},gs://stackrox-kernel-packages"
+            KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET},gs://stackrox-kernel-bundles"
+            echo "KERNEL_BUNDLE_STAGING_BUCKET=${KERNEL_BUNDLE_STAGING_BUCKET}"
+            echo "KERNEL_PACKAGE_STAGING_BUCKET=${KERNEL_PACKAGE_STAGING_BUCKET}"
+            echo "KERNEL_BUNDLE_BUCKET=${KERNEL_BUNDLE_BUCKET}"
+            echo "KERNEL_PACKAGE_BUCKET=${KERNEL_PACKAGE_BUCKET}"
           fi
 
           cat >>"$BASH_ENV" \<<EOF
+          export KERNEL_PACKAGE_STAGING_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET}"
+          export KERNEL_BUNDLE_STAGING_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET}"
           export KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_BUCKET}"
           export KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_BUCKET}"
           EOF
@@ -98,8 +105,8 @@ jobs:
     - restore_cache:
         name: Restoring kernel packer cache
         keys:
-          - stackrox-kernel-packer-cache-v19-{{ .Branch }}-{{ .Revision }}
-          - stackrox-kernel-packer-cache-v19-master-
+          - stackrox-kernel-packer-cache-v20-{{ .Branch }}-{{ .Revision }}
+          - stackrox-kernel-packer-cache-v20-master-
     - run:
         name: Check if PR with no-cache label
         command: |
@@ -167,17 +174,6 @@ jobs:
     - checkout
     - attach_workspace:
         at: .
-    - restore_cache:
-        name: Restoring kernel packer cache
-        keys:
-          - stackrox-kernel-packer-cache-v17-{{ .Branch }}-{{ .Revision }}
-          - stackrox-kernel-packer-cache-v17-master-
-    - run:
-        name: Move restored cache
-        command: |
-          mkdir -p .build-data/cache
-          touch .build-data/cache/cache.yml
-          mv .build-data/cache/cache.yml .build-data/cache/cache.yml.pre
     - run:
         name: Sanity check fragments
         command: ls -lh .build-data/cache
@@ -187,10 +183,6 @@ jobs:
           make combine-cache
           make clean-cache
     - run:
-        name: Diff of cache.yml after combine
-        command: |
-          diff .build-data/cache/cache.yml.pre .build-data/cache/cache.yml || [ $? -eq 1 ]
-    - run:
         name: Sanity check bundles
         command: |
           IFS=',' read -r -a bucket_names \<<< "${KERNEL_BUNDLE_BUCKET}"
@@ -199,13 +191,23 @@ jobs:
             gsutil ls "${bucket_name}/**.tgz" | \
               sed 's|^.*bundle-||' | sed 's|\.tgz$||' | sort || true
           done
+    - run:
+        name: PR comment with staging info
+        command: |
+          wget --quiet "https://github.com/joshdk/hub-comment/releases/download/0.1.0-rc6/hub-comment_linux_amd64"
+          sudo install hub-comment_linux_amd64 /usr/bin/hub-comment
+          export PACKAGE_COUNT="$(gsutil ls "${KERNEL_PACKAGE_STAGING_BUCKET}" | wc -l | xargs)"
+          export BUNDLE_COUNT="$(gsutil ls "${KERNEL_BUNDLE_STAGING_BUCKET}" | wc -l | xargs)"
+          export LAST_UPDATED="$(date)"
+          hub-comment -template-file ".circleci/staging-info-comment.tpl"
+
     - store_artifacts:
         path: .build-data/cache/cache.yml
         destination: cache.yml
         when: always
     - save_cache:
         name: Saving kernel packer cache
-        key: stackrox-kernel-packer-cache-v19-{{ .Branch }}-{{ .Revision }}
+        key: stackrox-kernel-packer-cache-v20-{{ .Branch }}-{{ .Revision }}
         paths:
         - .build-data/cache/cache.yml
 
