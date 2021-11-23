@@ -92,7 +92,7 @@ jobs:
   repackage:
     machine:
       image: ubuntu-2004:202107-02
-    parallelism: 32
+    parallelism: 16
     environment:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
