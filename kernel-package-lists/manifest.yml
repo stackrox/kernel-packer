@@ -4197,6 +4197,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.242-1.el7.elrepo.x86_64.rpm
+33cfdbc19f52c57dde561b2bfba4490f363f512353d9900dfe5bdb3168cb1796:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-163-generic_4.15.0-163.171-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-163_4.15.0-163.171-16.04.1_all.deb
 033c936cd89b0fa85b5ddeec6594b2249a4cc63bbc880c4b12d65088ec91541e:
   type: redhat
   packages:
@@ -9437,6 +9442,11 @@ a57d4a154a80b2909a80f7d13a1ccbaf7a906e8a04d7a0fde9b7700d0c4c645a:
   type: linuxkit
   packages:
   - https---github.com-linuxkit-linux-archive-v4.9.125.tar.gz
+a61e7c85c0b2ae5af329f4c81c4a0f1fdc5ca8a2c1ca45f3d9f2e9034712164c:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1127-azure_4.15.0-1127.140-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1127_4.15.0-1127.140-16.04.1_all.deb
 a70a20a0125164f2eda30306045a347909baa9f75e947144e701a7427ebed563:
   type: coreos
   packages:
