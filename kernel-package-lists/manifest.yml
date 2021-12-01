@@ -2270,11 +2270,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.16.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.16.1.x86_64.rpm
-6d9f424170e5d4c0d620692a5891b73ad5013ef1c793d5ca8fd42a43ea6870e0:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
 6c9a6972827393c412c9bdefe8fec65c204f4e3304cdcd9c10d911a1b9d2dfb4:
   type: redhat
   packages:
@@ -13356,11 +13351,6 @@ ea04b74ac3a387f72d21a2e6ab892dad78635816aa537078b0bf85b0226123c1:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.15-200.fc33-x86_64-kernel-devel-5.12.15-200.fc33.x86_64.rpm
-ea5b3c015fc641967b3ecf43706a75a24c8ad6b87afeb655f4e8d5e37623dec1:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
 ea97b459f0f4d8175bba7eeb5ad97980877bd57f44f4bd0ecf36a0002f91bf3a:
   type: ubuntu
   packages:
@@ -13545,6 +13535,11 @@ edbd4b5cada123c3359e88a3b6f717776e519056d0a8a52941a229e3be65cd86:
   type: redhat
   packages:
   - http---vault.centos.org-7.4.1708-updates-x86_64-Packages-kernel-devel-3.10.0-693.11.6.el7.x86_64.rpm
+ede201a027f48e2c5033c46bfd172ebadac44bc8c2d2ef49f3eef3874acc9201:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1366.11-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-13310.1366.11-kernel-headers.tgz
 edeb5581bdcb7f7683f2f85ad592f90406eb5602f44d09c678a22dc7eeb2f90f:
   type: redhat
   packages:
@@ -14055,6 +14050,11 @@ f594b3c72fea35fcff4dc3f534d6b51e921dc59e11ed586cccc4422ea212138a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-108-generic_4.15.0-108.109_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-108_4.15.0-108.109_all.deb
+f601c2e629de38e8a2298ea1d839cbf139cbd1a321346e3a42a679871465628d:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1366.11-lakitu-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-13310.1366.11-lakitu-kernel-headers.tgz
 f783ddf7a45d9ba7e84eeba02422653e37e516622f5ee0bdd276d1f71b2e9882:
   type: ubuntu
   packages:
