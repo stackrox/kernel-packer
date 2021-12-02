@@ -248,8 +248,8 @@ repackage_cos() {
 
         # Extract the build id from the cos package name it will be of the form,
         # 'https---storage.googleapis.com-cos-tools-10718.52.0-kernel-src.tar.gz'
-        local build_id="$(echo "$input_package" | sed 's/^.*-\([0-9]\+\.[0-9]\+\.[0-9]\+\)-kernel-src\.tar\.gz$/\1/')"
-        if [ -z $build_id ]; then 
+        local build_id="$(echo "$input_package" | sed 's/^.*-\([0-9]\+\.[0-9]\+\.[0-9]\+\)\(-lakitu\)\?-kernel-src\.tar\.gz$/\1/')"
+        if [ -z $build_id ]; then
             log "empty COS build id"
             return 1
         fi
