@@ -189,6 +189,16 @@ crawl-rhel: build-crawl-container
 			-key /rhel-certs/rhel-key.pem \
 		> $(CRAWLED_PACKAGE_DIR)/rhel82-eus.txt
 
+	# Crawl for RHEL 8.4 EUS (Extended Update Support) kernel-devel packages.
+	docker run --rm \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		kernel-crawler:latest \
+			-base-url https://cdn.redhat.com/content/eus/rhel8/8.4/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel84-eus.txt
+
 	# Crawl for Red Hat OpenShift Container Platform 4.3 for RHEL 8 x86_64 (rhocp-4.3-for-rhel-8-x86_64-rpms)
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
