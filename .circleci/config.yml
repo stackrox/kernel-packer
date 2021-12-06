@@ -362,8 +362,9 @@ workflows:
             - main
     - check-for-sensitive-data:
         context:
-          - quay-cgorman1-readonly
           - docker-io-pull
+          - quay-cgorman1-readonly
+          - quay-rhacs-eng-readonly
           - redhat-developer-account-login # Provides environment variables REDHAT_USERNAME and REDHAT_PASSWORD.
           - ubuntu-esm-subscription-token # Provides environment variable UBUNTU_ESM_SUBSCRIPTION_TOKEN.
         requires:
