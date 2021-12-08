@@ -4514,12 +4514,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1067_4.15.0-1067.70_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1067-gke_4.15.0-1067.70_amd64.deb
-43e3ef98f3071e466c42bffa66c692b4d2b3aa6506d5cee99108996c417acb6e:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 43b05e0ad0ae43ccdc1e98f9c3479d60baa676c6271d73831793f21735b69214:
   type: ubuntu
   packages:
@@ -11120,12 +11114,6 @@ bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119-generic_4.4.0-119.143_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119_4.4.0-119.143_all.deb
-bdfd29b0bc4035875620300bb18be1f0b1d450cf9925366534d82e2f89e137e2:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 bdfef4c36280a3d5cfac934574049c61b8f80fb376c05bd7c12cffaf51dfb24f:
   type: cos
   packages:
@@ -14020,6 +14008,10 @@ f7b3e6e4081711e3b852d5defb857d4f33c18b80cb6e6f8a4af0c93ed0e751f3:
   packages:
   - https---storage.googleapis.com-cos-tools-11021.51.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11021.51.0-kernel-headers.tgz
+f7e3577b1d4a507429d2f771839b5c8e1b18c5c982a1d407294fc671f74ee768:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.7-100.fc34-x86_64-kernel-devel-5.15.7-100.fc34.x86_64.rpm
 f7c6690a614ff0c9cdfd016cde81a442aafb05d51537607391027860324cd4e6:
   type: redhat
   packages:
