@@ -2369,6 +2369,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.103.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.103.0-kernel-headers.tgz
+6d587f8b2a9d73b61763f97c1a62d3a9339dacc2854a5d28c0936f7f02e8f549:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.11-linux-headers-5.11.0-1023-azure_5.11.0-1023.24-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.11-linux-azure-5.11-headers-5.11.0-1023_5.11.0-1023.24-20.04.1_all.deb
 6b776a30d949d2b252fc6ffa99a18768aef3a60745674701fe0f6bc89fc14ef6:
   type: redhat
   packages:
@@ -6553,6 +6558,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.223-1.el7.elrepo.x86_64.rpm
+534e20a96b086d312450db4700fc3355fc3f6c098377fd15b1556e27b8c8d066:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.11.0-1023-azure_5.11.0-1023.24_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.11.0-1023_5.11.0-1023.24_all.deb
 537b33a67416d8dcfe993b1cd874b16f69ec41343860adde1a07c043c478d5f2:
   type: redhat
   packages:
@@ -13644,6 +13654,11 @@ ec53dcaad92b8c8d2f7926e02900f29a1d7f5acbcdab94b98c878ebe83a0df6e:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.12-200.fc33-x86_64-kernel-devel-5.9.12-200.fc33.x86_64.rpm
+ec62f1a0b55838361a3c59383059e74b496f9af3c9ace40031ecff2c4c3ab1ed:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-166-generic_4.15.0-166.174_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-166_4.15.0-166.174_all.deb
 ec89b988e3a6aecaa43160c34894e3c78224dd720f9be742afc21f5c63a44d61:
   type: ubuntu
   packages:
