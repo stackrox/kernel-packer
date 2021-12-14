@@ -4537,6 +4537,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1067_4.15.0-1067.70_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1067-gke_4.15.0-1067.70_amd64.deb
+43e3ef98f3071e466c42bffa66c692b4d2b3aa6506d5cee99108996c417acb6e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 43b05e0ad0ae43ccdc1e98f9c3479d60baa676c6271d73831793f21735b69214:
   type: ubuntu
   packages:
@@ -6189,10 +6195,6 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2303.4.0-flatcar_developer_container.bin.bz2
-0282a98f7d79e889668ca9a11f31f3c000fd1c8ffc0dd2f556de8f3511c6a2c3:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.0-155.fc35-x86_64-kernel-devel-5.11.0-155.fc35.x86_64.rpm
 0282a284bd43c6e4f7056f02bab30900859e09045d07ebd50d5d00c70e2c4cc0:
   type: ubuntu
   packages:
