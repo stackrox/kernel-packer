@@ -2305,6 +2305,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.16.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.16.1.x86_64.rpm
+6d9f424170e5d4c0d620692a5891b73ad5013ef1c793d5ca8fd42a43ea6870e0:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
 6c9a6972827393c412c9bdefe8fec65c204f4e3304cdcd9c10d911a1b9d2dfb4:
   type: redhat
   packages:
@@ -3473,6 +3478,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9f388164ea775e7a6c36c8628bb9a66a47d9fe27c99e732a210f357e1213dda7-kernel-devel-4.14.77-86.82.amzn2.x86_64.rpm
+9c222fdb45522b7285e5e7957ef2e38beaf317667b0d76d00aa960247c42cd28:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.0-flatcar_developer_container.bin.bz2
 9d287faa1356323929f9a55c004db7a42cd372eb6e2c064a119ac77e5d2cbd1f:
   type: ubuntu
   packages:
@@ -7244,6 +7253,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-b836550485e7ab9dddc4f091a8d92a89e5f13fb93eec8acd02a3b25d23112c43-kernel-devel-5.4.46-19.75.amzn2.x86_64.rpm
+1767cd2af18cba1df6974b5a1207703dcbff484d9fe2a16148cebc071eb88ae5:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-3033.2.0-flatcar_developer_container.bin.bz2
 1850e45e030e3dc506b09f2dd7872f348f7ef4072110991d80a2f7e9279e2242:
   type: redhat
   packages:
@@ -13618,6 +13631,11 @@ ea04b74ac3a387f72d21a2e6ab892dad78635816aa537078b0bf85b0226123c1:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.15-200.fc33-x86_64-kernel-devel-5.12.15-200.fc33.x86_64.rpm
+ea5b3c015fc641967b3ecf43706a75a24c8ad6b87afeb655f4e8d5e37623dec1:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
 ea97b459f0f4d8175bba7eeb5ad97980877bd57f44f4bd0ecf36a0002f91bf3a:
   type: ubuntu
   packages:
