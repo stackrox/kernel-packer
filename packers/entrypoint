@@ -40,6 +40,11 @@ main() {
             repackage_debian "$checksum" "$output_dir" "${packages[@]}"
         ;;
 
+        garden)
+            log 'Repackaging Garden'
+            repackage_garden "$checksum" "$output_dir" "${packages[@]}"
+        ;;
+
         cos)
             log 'Repackaging Container-Optimized OS'
             repackage_cos "$checksum" "$output_dir" "${packages[@]}"
@@ -223,6 +228,78 @@ repackage_debian() {
             --directory "$meta_dir" . \
             --directory "$tmp_dir" ./usr ./lib \
         | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
+    )
+}
+
+repackage_garden() {
+   if [[ $# -lt 4 || $# -gt 5 ]]; then
+        log "invalid number of arguments"
+        return 1
+    fi
+
+    local checksum="$1"
+    local output_dir="$2"
+    local input_package_1="$3"
+    local input_package_2="$4"
+    local input_package_3="${5:-}"
+
+    # Create a temporary directory for extracting the DEB package tree.
+    local tmp_dir="$(mktemp -d)"
+
+    (
+        cd "$tmp_dir"
+
+        # Extract the DEB packages.
+        dpkg -x "$input_package_1" .
+        dpkg -x "$input_package_2" .
+        if [[ -n "$input_package_3" ]]; then
+            dpkg -x "$input_package_3" .
+        fi
+
+        # Find the name of the kernel directory.
+        # Variable will contain a string that should looks like "4.4.39-k8s".
+        local kernel_version
+        kernel_version="$(ls -1 "usr/src" | grep linux-headers | sed 's/linux-headers-//' | head -n1)"
+
+        # Garden Linux actually has 2 kernel versions:
+        #   - The Debian configuration being used.
+        #   - The actual kernel being built from sources.
+        # We can extract the second kernel version from the UTS_VERSION variable.
+        local garden_kernel_version
+        garden_kernel_version="$(grep -Po '^#define UTS_VERSION.*\K[0-9]\.[0-9]+\.[0-9]+-[[:alnum:]]+' "usr/src/linux-headers-${kernel_version}/include/generated/compile.h")"
+
+        # Sanity check the derived kernel version.
+        if [[ -z "$kernel_version" || -z "$garden_kernel_version" ]]; then
+            log "blank kernel dir"
+            return 1
+        fi
+        log "Kernel version is $kernel_version - $garden_kernel_version"
+
+        # Update symbolic links to be relative.
+        ln --force --relative --symbolic "usr/src/linux-headers-${kernel_version}" "lib/modules/${kernel_version}/build"
+
+        if [[ -n "$input_package_3" ]]; then
+            # Update symbolic links to be relative.
+            local common_dir="linux-headers-$(echo "${kernel_version}" | sed -E 's/(cloud-)?amd64/common/')"
+            ln --force --relative --symbolic "usr/src/${common_dir}" "lib/modules/${kernel_version}/source"
+
+            # Modify makefile arguments to work with relative paths.
+            sed -i -e "s|^MAKEARGS :=.*$|MAKEARGS := -C ../${common_dir} O=\$(CURDIR)|g" \
+                "usr/src/linux-headers-${kernel_version}/Makefile"
+            find . -name 'Makefile' -type f -print0 | xargs -0 -n 1 sed -i -e 's|^include /|include $(BUILD_ROOT)/|g'
+        fi
+
+        # Generate bundle meta files
+        meta_dir="$(bundle_meta "$checksum" 'debian' "$kernel_version" "./usr/src/linux-headers-${kernel_version}")"
+
+        # Remove broken symlinks.
+        find .  -type l -exec test ! -e {} \; -exec unlink {} \;
+
+        # Compress the file hierarchy into a tarball.
+        tar --create --dereference --hard-dereference --file - \
+            --directory "$meta_dir" . \
+            --directory "$tmp_dir" ./usr ./lib \
+        | pigz -9 -c > "${output_dir}/bundle-${garden_kernel_version}.tgz"
     )
 }
 
