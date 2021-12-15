@@ -29,7 +29,7 @@ crawl-kops: build-crawl-container
 
 .PHONY: crawl-gardenlinux
 crawl-gardenlinux: build-crawl-container
-	docker run --rm -i --entrypoint bash kernel-crawler gardenlinux-crawler.sh >$(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
+	docker run --rm -i kernel-crawler crawl Garden-Linux >$(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
 
 .PHONY: crawl-debian
 crawl-debian: build-crawl-container
