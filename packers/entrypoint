@@ -270,7 +270,9 @@ repackage_garden() {
 
         # Sanity check the derived kernel version.
         if [[ -z "$kernel_version" || -z "$garden_kernel_version" ]]; then
-            log "blank kernel dir"
+            log "Blank kernel version"
+            log "Debian kernel is '${kernel_version}'"
+            log "Garden kernel is '${garden_kernel_version}'"
             return 1
         fi
         log "Kernel version is $kernel_version - $garden_kernel_version"
