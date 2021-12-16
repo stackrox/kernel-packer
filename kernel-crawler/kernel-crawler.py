@@ -73,6 +73,10 @@ minikube_excludes = [
     "kubernetes/minikube/archive/v0.30.0.tar.gz",
     "kubernetes/minikube/archive/v0.29.0.tar.gz",
 ]
+garden_excludes = [
+    "5.4.0",
+    "dbgsym",
+]
 repos = {
     "CentOS" : [
         {
@@ -533,14 +537,14 @@ repos = {
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-headers-[4-9].[0-9.]+-[^-]+-(?:cloud-)?(?:amd64|common_).*(?:amd64|all).deb$')]/@href",
-            "exclude_patterns": debian_excludes,
+            "exclude_patterns": garden_excludes,
         },
         {
             "root": "http://45.86.152.1/gardenlinux/pool/main/l/",
             "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-kbuild-[4-9]\..*_amd64\.deb$')]/@href",
-            "exclude_patterns": debian_excludes,
+            "exclude_patterns": garden_excludes,
         }
     ]
 }
