@@ -275,6 +275,11 @@ repackage_garden() {
             log "Garden kernel is '${garden_kernel_version}'"
             return 1
         fi
+
+        if [[ "${kernel_version}" =~ -cloud-amd64$ ]]; then
+            garden_kernel_version="${garden_kernel_version}-cloud"
+        fi
+
         log "Kernel version is $kernel_version - $garden_kernel_version"
 
         # Update symbolic links to be relative.
