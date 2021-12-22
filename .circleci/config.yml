@@ -301,7 +301,7 @@ jobs:
     - run:
         name: Test if crawling failed
         command: |
-          if [[ ! -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
+          if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
             echo "'make crawl' failed. See the output of the 'Crawl package repositories' step for further details."
             exit 1
           fi
