@@ -306,7 +306,7 @@ repackage_garden() {
         tar --create --dereference --hard-dereference --file - \
             --directory "$meta_dir" . \
             --directory "$tmp_dir" ./usr ./lib \
-        | pigz -9 -c > "${output_dir}/bundle-${garden_kernel_version}.tgz"
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}-gl-${garden_kernel_version}.tgz"
     )
 }
 
