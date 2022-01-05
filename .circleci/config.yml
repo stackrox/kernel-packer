@@ -301,7 +301,7 @@ jobs:
     - persist_to_workspace:
         root: /tmp
         paths:
-          - crawl-failed
+          - "*crawl*"
   crawl-status:
     <<: *defaults
     steps:
