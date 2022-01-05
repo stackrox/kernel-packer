@@ -349,8 +349,11 @@ workflows:
         requires:
         - lint
     - crawl-status:
+        context:
+          - quay-cgorman1-readonly
+          - docker-io-pull
         requires:
-        - crawl-build
+          - crawl-build
     - repackage:
         requires:
         - crawl-build
