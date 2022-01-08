@@ -2309,11 +2309,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.16.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.16.1.x86_64.rpm
-6d9f424170e5d4c0d620692a5891b73ad5013ef1c793d5ca8fd42a43ea6870e0:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
 6c9a6972827393c412c9bdefe8fec65c204f4e3304cdcd9c10d911a1b9d2dfb4:
   type: redhat
   packages:
@@ -4559,6 +4554,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1067_4.15.0-1067.70_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1067-gke_4.15.0-1067.70_amd64.deb
+43e3ef98f3071e466c42bffa66c692b4d2b3aa6506d5cee99108996c417acb6e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 43b05e0ad0ae43ccdc1e98f9c3479d60baa676c6271d73831793f21735b69214:
   type: ubuntu
   packages:
@@ -6864,6 +6865,11 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.4.2105-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.17.1.el8_4.x86_64.rpm
+739b09a5b3db330940a97e555810941bd5ae0de9dd451fd1bcebb278f524af3d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-94-generic_5.4.0-94.106_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-94_5.4.0-94.106_all.deb
 740b19c4364791fa4928e11801a2d49a6cd87a84b52e8ecfcbb117687af72615:
   type: redhat
   packages:
@@ -11169,6 +11175,12 @@ bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119-generic_4.4.0-119.143_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119_4.4.0-119.143_all.deb
+bdfd29b0bc4035875620300bb18be1f0b1d450cf9925366534d82e2f89e137e2:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 bdfef4c36280a3d5cfac934574049c61b8f80fb376c05bd7c12cffaf51dfb24f:
   type: cos
   packages:
@@ -13592,11 +13604,6 @@ ea04b74ac3a387f72d21a2e6ab892dad78635816aa537078b0bf85b0226123c1:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.15-200.fc33-x86_64-kernel-devel-5.12.15-200.fc33.x86_64.rpm
-ea5b3c015fc641967b3ecf43706a75a24c8ad6b87afeb655f4e8d5e37623dec1:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
 ea97b459f0f4d8175bba7eeb5ad97980877bd57f44f4bd0ecf36a0002f91bf3a:
   type: ubuntu
   packages:
@@ -14232,6 +14239,11 @@ f61b7fe9325b4428c310b0643e8f3e4962e0634c1ada0aac07816436d0070a52:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.184-1.el7.elrepo.x86_64.rpm
+f64f5c1aa7e325e60836d5ffa93b7d5e3bf21f39ab74aaaf072e7dc74dffac38:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1060_5.4.0-1060.64_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1060-gcp_5.4.0-1060.64_amd64.deb
 f66ddd7c67e10c57b86fb49b456ddb944d49dd609b92221112beb6ddbbceb47d:
   type: redhat
   packages:
