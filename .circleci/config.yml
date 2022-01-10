@@ -350,7 +350,7 @@ workflows:
         - lint
     - crawl-status:
         context:
-          - quay-rhacs-eng-readonly
+          - quay-cgorman1-readonly
           - docker-io-pull
         requires:
           - crawl-build
