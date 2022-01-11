@@ -242,7 +242,15 @@ jobs:
     - setup-staging
     - run:
         name: Crawl package repositories
-        command: make crawl
+        command: |
+          if ! make -j -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+            touch /tmp/crawl-failed
+          fi
+
+    - run:
+        name: Restore wiped files, if any
+        command: |
+          scripts/restore-removed
     - run:
         name: Download and reupload crawled files
         command: make sync
@@ -254,6 +262,10 @@ jobs:
             exit 0
           fi
           make filter-kernels-docker-desktop
+    - run:
+        name: Diff package lists
+        command: |
+          git --no-pager diff kernel-package-lists/
     - run:
         name: Generate manifest
         command: |
@@ -285,6 +297,24 @@ jobs:
         command: |
           [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ ]] || exit 0
           make robo-crawl-commit
+
+    - persist_to_workspace:
+        root: /tmp
+        paths:
+          - "*crawl*"
+  crawl-status:
+    <<: *defaults
+    steps:
+    - attach_workspace:
+        at: /tmp
+
+    - run:
+        name: Test if crawling failed
+        command: |
+          if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
+            echo >&2 "'make crawl' failed. See the output of the 'Crawl package repositories' step in the crawl job for further details."
+            exit 1
+          fi
 
     - slack/status:
         fail_only: true
@@ -318,6 +348,12 @@ workflows:
         <<: *crawlContext
         requires:
         - lint
+    - crawl-status:
+        context:
+          - quay-rhacs-eng-readonly
+          - docker-io-pull
+        requires:
+          - crawl-build
     - repackage:
         requires:
         - crawl-build

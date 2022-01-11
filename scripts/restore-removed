@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Restores files in kernel-package-lists/ that have been wiped due to a failing command.
+# This script is expected to be run from the project root directory.
+
+while IFS='' read -r file || [[ -n "$file" ]]; do
+  if [[ ! -s "$file" ]]; then
+    echo "$file appears to have been wiped, restoring from git ..."
+    git checkout HEAD -- "$file"
+  fi
+done < <(git diff HEAD --name-only -- kernel-package-lists/)
