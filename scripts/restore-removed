@@ -3,9 +3,17 @@
 # Restores files in kernel-package-lists/ that have been wiped due to a failing command.
 # This script is expected to be run from the project root directory.
 
+removed_files="$(git diff HEAD --name-only -- kernel-package-lists/)"
+
+[[ -z "$removed_files" ]] && exit 0
+
 while IFS='' read -r file || [[ -n "$file" ]]; do
   if [[ ! -s "$file" ]]; then
     echo "$file appears to have been wiped, restoring from git ..."
-    git checkout HEAD -- "$file"
+    if ! git checkout HEAD -- "$file" > /dev/null 2>&1; then
+      # Git might fail and leave a lock file, remove it and retry
+      rm -f .git/index.lock
+      git checkout HEAD -- "$file"
+    fi
   fi
-done < <(git diff HEAD --name-only -- kernel-package-lists/)
+done <<< "$removed_files"
