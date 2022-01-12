@@ -4181,6 +4181,10 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.12.2.el7.x86_64.rpm
+27c170dee6ae1863ac35044def35318259544d038bb6b4d5a1cc63ef6387b43c:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.1-flatcar_developer_container.bin.bz2
 27cdade6048ee1f5f1bdbba0fb2a882499fa091fad4745f205a977cf1501d4c2:
   type: redhat
   packages:
@@ -4593,6 +4597,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1067_4.15.0-1067.70_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1067-gke_4.15.0-1067.70_amd64.deb
+43e3ef98f3071e466c42bffa66c692b4d2b3aa6506d5cee99108996c417acb6e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 43b05e0ad0ae43ccdc1e98f9c3479d60baa676c6271d73831793f21735b69214:
   type: ubuntu
   packages:
@@ -9666,10 +9676,6 @@ a6b49240705302b3bab0a547746a6b56f507ec4d8ff2939eeca6b654144661f4:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-c181d3fc4dbd30a5d92eb506a0f220c015013b2a0ec515ccaa25463164cc55a5-kernel-devel-4.14.173-137.228.amzn2.x86_64.rpm
-a6ebfacdf700700367a374c81d8050358053ef04a74989e6f04b9d12089b6c6f:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2801.1.0-flatcar_developer_container.bin.bz2
 a7b428db6f87a4d13f731bdfe6c6e24d40de3bbaaf6d902bc3d4e4eb4b25f363:
   type: cos
   packages:
