@@ -3944,6 +3944,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.130-1.el7.elrepo.x86_64.rpm
+17f6ca4062b01a0b4c3fd9f726d2f4bcca4b085b86320bb35054ae9d794c88c7:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-358.el8.x86_64.rpm
 17c744d701371591faf5d8133a7a0e3f43be85d251763fe163fd94b8cb623f67:
   type: redhat
   packages:
@@ -4484,10 +4488,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.7-300.fc35-x86_64-kernel-devel-5.14.7-300.fc35.x86_64.rpm
-38d191ac429e0ccbca3549a11823b063952940c35242407745b22a1868388ef8:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.0-flatcar_developer_container.bin.bz2
 38c194d3024e1abdab49d953460ef42d581fad30c80c6cf4ed1bcc95b32d79c3:
   type: debian
   packages:
@@ -10086,10 +10086,6 @@ a39975396a714e3eeeee4cb09be38de0925f8b007d82aac8432d544c1af68af8:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-headers-4.15.0-1093-aws_4.15.0-1093.99-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-aws-headers-4.15.0-1093_4.15.0-1093.99-16.04.1_all.deb
-a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
