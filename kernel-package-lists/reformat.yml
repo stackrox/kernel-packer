@@ -60,13 +60,13 @@
 
 - name: gardenlinux
   description: SAP Garden Linux kernels
-  type: debian
+  type: garden
   file: gardenlinux.txt
   reformat: debian
 
 - name: gardenlinux-uncrawled
   description: SAP Garden Linux kernels (uncrawled)
-  type: debian
+  type: garden
   file: gardenlinux-uncrawled.txt
   reformat: debian
 
