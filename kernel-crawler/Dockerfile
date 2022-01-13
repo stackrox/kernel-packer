@@ -24,7 +24,6 @@ RUN pip install --no-cache-dir \
 COPY ["kernel-crawler.py", "/"]
 COPY ["repo-crawler.py", "/"]
 COPY ["kope.io.asc", "/"]
-COPY ["gardenlinux-crawler.sh", "/"]
 COPY ["docker-desktop-filter-kernels.sh", "/"]
 COPY --from=build /go/bin/rhel-crawler /usr/bin/rhel-crawler
 COPY --from=build /usr/local/bin/7z* /usr/local/bin/
