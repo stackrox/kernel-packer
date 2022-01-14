@@ -302,6 +302,13 @@ jobs:
         root: /tmp
         paths:
           - "*crawl*"
+
+    - slack/status:
+        fail_only: true
+        mentions: S0154UALQMB
+        only_for_branches: master,main
+        webhook: '${SLACK_WEBHOOK_ONCALL}'
+
   crawl-status:
     <<: *defaults
     steps:
