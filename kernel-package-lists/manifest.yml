@@ -10646,6 +10646,11 @@ b5d0311ebb1414f6b29d297f16d94de5a4f578af0f90ff09cf75807fc7620c9a:
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2905.2.4-flatcar_developer_container.bin.bz2
+b5ea7974b486ea47d340d04c0f3fc7f0fcc08ec24bc466242698c7177e2ca17e:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.534.43-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.534.43-kernel-headers.tgz
 b0005a4fad29129cc6a8943e27f2cf6f0b740166d79e23ab7c308248edeb978f:
   type: ubuntu
   packages:
@@ -13636,10 +13641,6 @@ e9236a218cf97b21f8309200b9c1253d1667d2863ed77f1fa445944c193c416d:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-696.10.1.el6.x86_64.rpm
-e15106ca84b7368f4e64921494812219f2fed7abec1804c438799ac5b3de6515:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.5.0-flatcar_developer_container.bin.bz2
 e43733bd80c81f61057ae9c87f4dbe80b0fc28b578bee77338f9da506254688e:
   type: cos
   packages:
@@ -14644,6 +14645,10 @@ fa7c05198c9aa55fc051e7c10b354f3ccb1aef114316dc8dc2729c352dceed55:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.5-100.fc33-x86_64-kernel-devel-5.13.5-100.fc33.x86_64.rpm
+fa8071ad81776b8f5fb8a46d32df7eec15a72976d37931559a1dd7f2904dd389:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2023.5.0-flatcar_developer_container.bin.bz2
 fa081978ecf2706def4b75914bd23d6772f67e16fa4b765c42b8733109254447:
   type: suse
   packages:
