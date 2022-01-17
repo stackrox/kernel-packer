@@ -9233,10 +9233,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-220.el6.x86_64.rpm
-8440398d5ad07a49306155652bfe48a84b3c3a887671038da5123bd82e123af4:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.5.0-flatcar_developer_container.bin.bz2
 8638994f0497fdae7d341f1c6542106e47cc87c772b44e27498c5f29d93051ee:
   type: redhat
   packages:
@@ -9698,6 +9694,10 @@ a6b49240705302b3bab0a547746a6b56f507ec4d8ff2939eeca6b654144661f4:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-c181d3fc4dbd30a5d92eb506a0f220c015013b2a0ec515ccaa25463164cc55a5-kernel-devel-4.14.173-137.228.amzn2.x86_64.rpm
+a6ebfacdf700700367a374c81d8050358053ef04a74989e6f04b9d12089b6c6f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2801.1.0-flatcar_developer_container.bin.bz2
 a7b428db6f87a4d13f731bdfe6c6e24d40de3bbaaf6d902bc3d4e4eb4b25f363:
   type: cos
   packages:
@@ -11294,12 +11294,6 @@ bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119-generic_4.4.0-119.143_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119_4.4.0-119.143_all.deb
-bdfd29b0bc4035875620300bb18be1f0b1d450cf9925366534d82e2f89e137e2:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 bdfef4c36280a3d5cfac934574049c61b8f80fb376c05bd7c12cffaf51dfb24f:
   type: cos
   packages:
