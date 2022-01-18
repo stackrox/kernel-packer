@@ -581,6 +581,7 @@ repackage_minikube() {
 
         # extract kernel
         cd "${buildroot}"
+	export FORCE_UNSAFE_CONFIGURE=1
 	make linux
 
         local linux_src=$(find "${buildroot}/output/build" -maxdepth 1 -name 'linux-[0-9]*' | head -n1)

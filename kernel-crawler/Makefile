@@ -260,6 +260,7 @@ crawl-fedora-coreos: build-crawl-container
 
 .PHONY: crawl-cos
 crawl-cos: build-crawl-container
+	docker run --rm -i kernel-crawler crawl Container-OptimizedOS > $(CRAWLED_PACKAGE_DIR)/cos.txt
 
 .PHONY: crawl-ubuntu-standard
 crawl-ubuntu-standard: build-crawl-container
