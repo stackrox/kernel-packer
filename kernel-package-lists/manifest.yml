@@ -1549,10 +1549,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.31.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.31.0-kernel-headers.tgz
-3dfffc76d353cd1657d04f47689b63f6f1e13c26b481f5889bc39741929065cb:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.3.0-flatcar_developer_container.bin.bz2
 03d0b0d51ea06247b35acf6630306482d87949d8f07c2d3f2b80d60de6bb4fe0:
   type: cos
   packages:
@@ -11450,12 +11446,6 @@ bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119-generic_4.4.0-119.143_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119_4.4.0-119.143_all.deb
-bdfd29b0bc4035875620300bb18be1f0b1d450cf9925366534d82e2f89e137e2:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 bdfef4c36280a3d5cfac934574049c61b8f80fb376c05bd7c12cffaf51dfb24f:
   type: cos
   packages:
@@ -12770,6 +12760,10 @@ d87cbebd71866facd2f4d68bee8eaf7fd0a317416277e0cd4851126cef6fbb72:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1019_4.15.0-1019.20-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1019-gcp_4.15.0-1019.20-16.04.1_amd64.deb
+d89b43be036f05287304902d7bc6aac1993c0bcc2a144fe67b9dbe5db4218dc4:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2920.1.0-flatcar_developer_container.bin.bz2
 d090bdb5ffdfc998ece1a98151b5429713d8835594b075479b9e5b4d09ea3db5:
   type: ubuntu
   packages:
