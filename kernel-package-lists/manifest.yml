@@ -4651,12 +4651,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1067_4.15.0-1067.70_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1067-gke_4.15.0-1067.70_amd64.deb
-43e3ef98f3071e466c42bffa66c692b4d2b3aa6506d5cee99108996c417acb6e:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 43b05e0ad0ae43ccdc1e98f9c3479d60baa676c6271d73831793f21735b69214:
   type: ubuntu
   packages:
@@ -8396,6 +8390,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1061-aws_5.4.0-1061.64_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1061_5.4.0-1061.64_all.deb
+32103d6acc44873ddfb205fff39c873af661d85f65a93ed63d1509987fbe91dc:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.102.1-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.102.1-kernel-headers.tgz
 32137e40bfc52b825827ea759050e9cae484e2d3aeaf5131e5704f46f059a1ee:
   type: ubuntu
   packages:
@@ -11392,12 +11391,6 @@ bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119-generic_4.4.0-119.143_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119_4.4.0-119.143_all.deb
-bdfd29b0bc4035875620300bb18be1f0b1d450cf9925366534d82e2f89e137e2:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 bdfef4c36280a3d5cfac934574049c61b8f80fb376c05bd7c12cffaf51dfb24f:
   type: cos
   packages:
@@ -14380,6 +14373,11 @@ f9db773f4a7218e9713d9534a21ed0cd42d0d791dcf4c17466fc0a914d6280cc:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-327.22.2.el7.x86_64.rpm
+f10feec86f25c8f601398f72cf2c370de1c403a3259fa96e3d3bb74f815edf8d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1130-azure_4.15.0-1130.143_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1130_4.15.0-1130.143_all.deb
 f15e42158ecf42787f9282330dcf243ee6e3f7de6fe3b2e68945e0e9d8e803b8:
   type: ubuntu
   packages:
@@ -14934,6 +14932,11 @@ fd79cf12201740b7115b705c7e0b4ee339c702f85270b855015a53f347fa8f3b:
   packages:
   - https---storage.googleapis.com-cos-tools-15103.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-15103.0.0-kernel-headers.tgz
+fd86ef71bc3061d806febb53017617362ef796233a8f617607a1df5b02acca19:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.604.1-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.604.1-kernel-headers.tgz
 fd89c5f396e8fc36b261aac9660a8bdc490ef20375d571e16c5f147d3334a314:
   type: ubuntu
   packages:
