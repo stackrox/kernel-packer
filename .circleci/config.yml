@@ -257,10 +257,10 @@ jobs:
     - run:
         name: Filter kernels for docker desktop if new dmg or kernels are found
         command: |
-          if git diff-index --quiet HEAD -- "kernel-package-lists/docker-desktop"* ; then
-            echo "Skipping Docker Desktop kernel filter, unchanged after crawl."
-            exit 0
-          fi
+          # if git diff-index --quiet HEAD -- "kernel-package-lists/docker-desktop"* ; then
+          #   echo "Skipping Docker Desktop kernel filter, unchanged after crawl."
+          #   exit 0
+          # fi
           make filter-kernels-docker-desktop
     - run:
         name: Diff package lists
