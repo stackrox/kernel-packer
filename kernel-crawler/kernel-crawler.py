@@ -299,7 +299,7 @@ repos = {
             "download_root": "https://github.com",
             "discovery_pattern" : "",
             "subdirs": [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^/kubernetes/minikube/archive/v[0-9]+.[0-9]+.[0-9]+.tar.gz')]/@href",
+            "page_pattern" : "/html/body//a[regex:test(@href, '^/kubernetes/minikube/archive/refs/tags/v[0-9]+.[0-9]+.[0-9]+.tar.gz')]/@href",
             "exclude_patterns": minikube_excludes,
         },
     ],
@@ -585,7 +585,6 @@ def crawl_s3(repo):
                     results.append(result)
     results.sort()
     return results
-
 
 def crawl(distro):
     """
