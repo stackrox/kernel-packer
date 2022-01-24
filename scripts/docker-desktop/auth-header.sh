@@ -3,13 +3,12 @@
 
 set -euo pipefail
 
-TARGET=$1
+TARGET=${1:-""}
 
 if [[ "$TARGET" =~ ^https://registry-1.docker.io/v2/([a-z]+/[a-z]+)/.* ]]; then
     IMAGE=${BASH_REMATCH[1]}
 else
-    echo >&2 "Failed to match expression"
-    return 1
+    IMAGE="docker/for-desktop-kernel"
 fi
 
 DOCKER_AUTH_URL="https://auth.docker.io/token?service=registry.docker.io&scope=repository"
