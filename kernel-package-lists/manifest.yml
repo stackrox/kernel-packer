@@ -3058,6 +3058,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.el8.x86_64.rpm
+8a0e3277ebaa9f55b10f3e2de5356217ff2d74b287a7d313e5f7c5b89bbc1a6b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.13-linux-gcp-5.13-headers-5.13.0-1013_5.13.0-1013.16-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.13-linux-headers-5.13.0-1013-gcp_5.13.0-1013.16-20.04.1_amd64.deb
 8c0ac0e490d60df17ab2e3bb9ff294ba3f1628ab5fae9013030f37ea8696a081:
   type: ubuntu
   packages:
@@ -5520,10 +5525,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.96.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.96.1.x86_64.rpm
-76b4480bfe8affcbccde1995aa64476211001c69ecea74466aa40c517984ea05:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.0-flatcar_developer_container.bin.bz2
 76dd689668e9fd810507fde2a43c2bc229e104e2db0b538c64feae54cf0206ba:
   type: redhat
   packages:
@@ -14154,6 +14155,11 @@ f0bc1edbea44925a97c305dd6e0984047c30a376e3c03ab220e04b537473781a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1033_4.15.0-1033.35-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1033-gcp_4.15.0-1033.35-16.04.1_amd64.deb
+f0ce52b2fa31ad4bfec15540d3ef2d3d7f645b40a2cb9dd322e5d7c8b277e967:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1060_5.4.0-1060.63_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1060-gke_5.4.0-1060.63_amd64.deb
 f1d68f4e66fbcadf439fcdb2354acc388380d30eca12d923ec704e6a88aa30ea:
   type: redhat
   packages:
