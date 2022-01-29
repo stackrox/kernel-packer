@@ -4769,6 +4769,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1083_4.15.0-1083.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1083-gcp_4.15.0-1083.94_amd64.deb
+47a20f6ca20ae19efed2b1650b4ba4d624cdec701d782f1f6046f5a74f751b9a:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
 47f53476a83df0de7b2d34560cb7b8637304ae4e4d1a72e53507e53f5791ffeb:
   type: redhat
   packages:
@@ -5031,6 +5035,10 @@
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-18-cloud-amd64_4.19.208-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-18-common_4.19.208-1_all.deb
+56d6d00ef1c8cc9ef9c3ebf58ec68282826b399ea53d7c3282ccbba456828fb1:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.2.0-flatcar_developer_container.bin.bz2
 56b31cdcbf82f1cbf2ef269b063c8ed16001597a2b8c9a8886506791a992fcae:
   type: coreos
   packages:
@@ -7147,6 +7155,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.21-200.fc33-x86_64-kernel-devel-5.10.21-200.fc33.x86_64.rpm
+872cb7314616bddec7bec9ec1e87e52647933771322d69ed87b58281e59bd120:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.18-200.fc35-x86_64-kernel-devel-5.15.18-200.fc35.x86_64.rpm
 883f94aeb1bd4067aa81494f7f9011f3ddedf31dd13d9176960c77d3c8c5edd7:
   type: ubuntu
   packages:
@@ -10173,10 +10185,6 @@ a39975396a714e3eeeee4cb09be38de0925f8b007d82aac8432d544c1af68af8:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-headers-4.15.0-1093-aws_4.15.0-1093.99-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-aws-headers-4.15.0-1093_4.15.0-1093.99-16.04.1_all.deb
-a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
