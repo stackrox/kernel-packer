@@ -387,6 +387,12 @@ workflows:
     - crawl:
         name: crawl-cron
         <<: *crawlContext
+    - crawl-status:
+        context:
+          - quay-rhacs-eng-readonly
+          - docker-io-pull
+        requires:
+          - crawl-cron
     triggers:
     - schedule:
         cron: "0 * * * *"
