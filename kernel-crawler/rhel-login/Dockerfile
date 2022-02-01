@@ -1,4 +1,4 @@
-FROM centos:8
+FROM registry.access.redhat.com/ubi8/ubi:8.5
 
 RUN yum --disablerepo='*' makecache \
  && yum install -y subscription-manager
