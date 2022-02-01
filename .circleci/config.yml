@@ -243,9 +243,7 @@ jobs:
     - run:
         name: Crawl package repositories
         command: |
-          if "$CIRCLE_STAGE" == "crawl-cron"; then
-            make -j -k crawl
-          else if ! make -j -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+          if ! make -j -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
             touch /tmp/crawl-failed
           fi
 
@@ -389,6 +387,12 @@ workflows:
     - crawl:
         name: crawl-cron
         <<: *crawlContext
+    - crawl-status:
+        context:
+          - quay-rhacs-eng-readonly
+          - docker-io-pull
+        requires:
+          - crawl-cron
     triggers:
     - schedule:
         cron: "0 * * * *"
