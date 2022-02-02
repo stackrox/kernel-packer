@@ -114,6 +114,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16669.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16669.0.0-kernel-headers.tgz
+0c55db5a209a39e9f44aa9a5de4309b6cc71cac081519cf52949229de9a96b4d:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.15_5.15.15-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.15.0-3-cloud-amd64_5.15.15-2_amd64.deb
 0e70af83a9c473883daf4ce4be716d968affb213498f63e98ae48e473874cd1b:
   type: redhat
   packages:
@@ -2147,6 +2152,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1037-azure_4.15.0-1037.39_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1037_4.15.0-1037.39_all.deb
+5f38320f86df4ae42c092d0d34cfdc12297bc84488f54a4db7327d0f5211d7f8:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.25.1.tar.gz
 5c299937ca3a1b2a48abc2ba1ed81bd2d1234dc0a3b840b3f26aa95ea3e46e47:
   type: ubuntu
   packages:
@@ -3197,6 +3206,10 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.12.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.12.1.x86_64.rpm
+8c194e3a1444366b0d0cb3bad924fad27ed7af6872f6824a8417e0fff00dd220:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.21.0.tar.gz
 8a351dda29f14ec332c28c60fffd9f8be29f711e5a4b2191e7c143fb3eb01bfb:
   type: redhat
   packages:
@@ -3264,6 +3277,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11895.125.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11895.125.0-kernel-headers.tgz
+8d4759dbae0504d939dba76542ab93db5e436b4911e68b7235e5946391602601:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.23.0.tar.gz
 8a4876d5c8877e6ac15fee01662fd980f839e43c8065acf251345aef0880bfb9:
   type: suse
   packages:
@@ -4882,6 +4899,10 @@
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.0-flatcar_developer_container.bin.bz2
+51ac14b87c5f050e29bb52c1656212ea52794a8efeb4ce4c9e392f60867fbd8c:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.23.2.tar.gz
 51de5ff13a62e4324eb2e20a7d13efd0c637df919031eaea4586ba2e9d6a147d:
   type: debian
   packages:
@@ -6868,6 +6889,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.17-101.fc33-x86_64-kernel-devel-5.14.17-101.fc33.x86_64.rpm
+647f99e48064cc45aaf364aaa565bc9b5aa80eac3ec569d4bcc99da7df768975:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.23.1.tar.gz
 650a1fdf1dfc36e9f5d174f0c0b44b18ea21b91739bc534910d84c91789900ac:
   type: ubuntu
   packages:
@@ -7894,6 +7919,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1040.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1040.0-kernel-headers.tgz
+7165bd0b410589af4596325c7409d90d75b63d208fe58a299d8d91aed111c483:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.25.0.tar.gz
 7233d1c92ac93a3fc49ec5024b6fdf691f0dbd1d15bfa046ddd10fab08ea416a:
   type: ubuntu
   packages:
@@ -10040,6 +10069,10 @@ a0972a47f4067daa3b0a50d6e317b8e1da497b89d3c8383443c6e9dd4f0c41fa:
   packages:
   - https---storage.googleapis.com-cos-tools-13288.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13288.0.0-kernel-headers.tgz
+a990b44d534c794dd93736f52d67f3de7d6e24c8efff057c7beee1c21cffd505:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.24.0.tar.gz
 a1505b41d2123a94ca2258d8ca094d55067c7e21951b0d82f1e1a46c98387b88:
   type: ubuntu
   packages:
@@ -13019,6 +13052,10 @@ dc03a0e5614c3326075f8646131fd79f60ade3aeab634c3ef224dfd3b61c74d1:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.8.2003-updates-x86_64-Packages-kernel-devel-3.10.0-1127.8.2.el7.x86_64.rpm
+dc8d35b602d3a608167c783871c82f5d53dc199b99b73f840b09e03a9f10ba48:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.22.0.tar.gz
 dc8df85577d409ff0961d658e0e349ece3984e675e74bdec9ca99e20aacbe078:
   type: redhat
   packages:
@@ -13386,6 +13423,11 @@ e4b185aa240032e583ca18add10d6ea9bf50340c95d0d9516eba9f7e9f373547:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1045_5.3.0-1045.48_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1045-gke_5.3.0-1045.48_amd64.deb
+e4f884eff3add08f2361289cc9ffeefd3fb98fe2edf2fe819e7767953aeffae1:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.15_5.15.15-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.15.0-3-amd64_5.15.15-2_amd64.deb
 e4cb0805322644627f4b665f622ed3d67f766b62cc6c600677034db3c9b4cba4:
   type: cos
   packages:
