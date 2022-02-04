@@ -32,8 +32,8 @@ robo-collector-commit:
 	@./scripts/robo-collector-commit $(KERNEL_BUNDLE_BUCKET)
 
 sync: export UBUNTU_ESM_INFRA_BEARER_TOKEN = $(shell ./scripts/ubuntu-esm-infra-token)
-sync: export UBUNTU_FIPS_BEARER_TOKEN = $(shell ./scripts/ubuntu-fips-token)
-sync: export UBUNTU_FIPS_UPDATES_BEARER_TOKEN = $(shell UBUNTU_FIPS_ATTACH_URL="https://contracts.canonical.com/v1/resources/fips-updates/context/machines/930f3ea7ac23ddc47f14216b9249d216" ./scripts/ubuntu-fips-token)
+sync: export UBUNTU_FIPS_BEARER_TOKEN = $(shell ./scripts/ubuntu-fips-token $(UBUNTU_FIPS_ATTACH_URL))
+sync: export UBUNTU_FIPS_UPDATES_BEARER_TOKEN = $(shell ./scripts/ubuntu-fips-token $(UBUNTU_FIPS_UPDATES_ATTACH_URL))
 
 .PHONY: sync
 sync:

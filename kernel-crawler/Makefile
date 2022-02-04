@@ -72,8 +72,8 @@ crawl-ubuntu-esm: export UBUNTU_ESM_INFRA_BEARER_TOKEN = $(shell $(ROOT_DIR)/scr
 crawl-ubuntu-esm: build-crawl-container
 	docker run --rm -i -e UBUNTU_ESM_INFRA_BEARER_TOKEN kernel-crawler crawl Ubuntu-ESM > $(CRAWLED_PACKAGE_DIR)/ubuntu-esm.txt
 
-crawl-ubuntu-fips: export UBUNTU_FIPS_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-fips-token)
-crawl-ubuntu-fips: export UBUNTU_FIPS_UPDATES_BEARER_TOKEN = $(shell UBUNTU_FIPS_ATTACH_URL="https://contracts.canonical.com/v1/resources/fips-updates/context/machines/930f3ea7ac23ddc47f14216b9249d216" $(ROOT_DIR)/scripts/ubuntu-fips-token)
+crawl-ubuntu-fips: export UBUNTU_FIPS_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-fips-token $(UBUNTU_FIPS_ATTACH_URL))
+crawl-ubuntu-fips: export UBUNTU_FIPS_UPDATES_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-fips-token $(UBUNTU_FIPS_UPDATES_ATTACH_URL))
 
 .PHONY: crawl-ubuntu-fips
 crawl-ubuntu-fips: build-crawl-container

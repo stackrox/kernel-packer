@@ -9,13 +9,13 @@ if [[ -z "$UBUNTU_FIPS_SUBSCRIPTION_TOKEN" ]]; then
     exit 1
 fi
 
-UBUNTU_FIPS_ATTACH_URL="${UBUNTU_FIPS_ATTACH_URL:-https://contracts.canonical.com/v1/resources/fips/context/machines/930f3ea7ac23ddc47f14216b9249d216}"
+ATTACH_URL="$1"
 
 # Attach fake machine and extract esm-infra bearer token used to access esm apt repositories.
 repo_esm_token="$(curl -kfs \
   -H "Content-Type: application/json" \
   -H "Accept: application/json" \
   -H "Authorization: Bearer ${UBUNTU_FIPS_SUBSCRIPTION_TOKEN}" \
-  "${UBUNTU_FIPS_ATTACH_URL}" | jq -r '.resourceToken')"
+  "${ATTACH_URL}" | jq -r '.resourceToken')"
 
 echo "${repo_esm_token}"
