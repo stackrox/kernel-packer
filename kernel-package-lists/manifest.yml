@@ -1852,10 +1852,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-headers.tgz
-4ab969585b132e1736a69c888c6146fc84b2f1692a1fbdc17a2e80db93242770:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.0-flatcar_developer_container.bin.bz2
 4fb12689714a9881c48d70ef60c7800ec63e9b1a7b842fecf27225d68e8f49ad:
   type: ubuntu
   packages:
@@ -5546,6 +5542,10 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.96.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.96.1.x86_64.rpm
+76b4480bfe8affcbccde1995aa64476211001c69ecea74466aa40c517984ea05:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.0-flatcar_developer_container.bin.bz2
 76dd689668e9fd810507fde2a43c2bc229e104e2db0b538c64feae54cf0206ba:
   type: redhat
   packages:
@@ -7518,10 +7518,6 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.2.2.el7.x86_64.rpm
-3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -13449,6 +13445,10 @@ e3bd5e8e44b2659d5f4ab7856e972173065d5bb9a4f3137c2fec392ccfbf28a6:
   packages:
   - https---storage.googleapis.com-cos-tools-12605.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12605.0.0-kernel-headers.tgz
+e4a3b478d2a0f23100d42364bc65adbccd36717bb199cf7ae8f0f7a1782d98fe:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2643.1.1-flatcar_developer_container.bin.bz2
 e4b185aa240032e583ca18add10d6ea9bf50340c95d0d9516eba9f7e9f373547:
   type: ubuntu
   packages:
