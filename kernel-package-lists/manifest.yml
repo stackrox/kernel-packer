@@ -3487,6 +3487,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.116-1.el7.elrepo.x86_64.rpm
+9e4e15bcc8ee375eedc6a55772ea86ab466d2cf626465e1e84a5a95a1d5b0304:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.2-flatcar_developer_container.bin.bz2
 9e4ccb04daf1cf3ab4d7df2c25294e738c819fb9aad582edd4481759e133ed16:
   type: redhat
   packages:
@@ -5046,10 +5050,6 @@
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-18-cloud-amd64_4.19.208-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-18-common_4.19.208-1_all.deb
-56d6d00ef1c8cc9ef9c3ebf58ec68282826b399ea53d7c3282ccbba456828fb1:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2605.2.0-flatcar_developer_container.bin.bz2
 56b31cdcbf82f1cbf2ef269b063c8ed16001597a2b8c9a8886506791a992fcae:
   type: coreos
   packages:
@@ -7894,6 +7894,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.204-1.el7.elrepo.x86_64.rpm
+6748f7f32ca213376da67974f4f54b6eb36ec4ef30881c14cd0d3aed968f6a03:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.6.0-flatcar_developer_container.bin.bz2
 6786fb54ff0e2f6ecf508971593b81e9baea209f31bb71c00d86291f9f47b7f8:
   type: ubuntu
   packages:
@@ -13194,6 +13198,10 @@ ddaf2d1a96509010a404280f9642b3e23de157cac15c4e9b2682285f491f9901:
   packages:
   - https---storage.googleapis.com-cos-tools-16108.470.11-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.470.11-kernel-headers.tgz
+ddafce21d9b6d4dbf82991338866eef2e7236627d7c1f15f4a710da701ca3762:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2905.1.0-flatcar_developer_container.bin.bz2
 ddbcda57c9659a4e55f3c6b20bc44b786211a3954aea1add04c51941eab038cc:
   type: ubuntu
   packages:
