@@ -10,18 +10,6 @@
   file: amazon-extras.txt
   reformat: single
 
-- name: centos
-  description: CentOS kernels
-  type: redhat
-  file: centos.txt
-  reformat: single
-
-- name: centos-uncrawled
-  description: CentOS uncrawled kernels
-  type: redhat
-  file: centos-uncrawled.txt
-  reformat: single
-
 - name: coreos
   description: CoreOS kernels
   type: coreos
@@ -69,12 +57,6 @@
   type: garden
   file: gardenlinux-uncrawled.txt
   reformat: debian
-
-- name: cos
-  description: Container-Optimized OS kernels
-  type: cos
-  file: cos.txt
-  reformat: cos
 
 - name: ubuntu-aws
   description: Ubuntu AWS Kernels
