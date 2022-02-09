@@ -14,7 +14,7 @@ import (
 
 var (
 	reVersion   = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)(~[\d.]+)?_`)
-	suseVersion = regexp.MustCompile(`\d+\.\d+\.\d+-[a-z]*\d+\.\d+`)
+	suseVersion = regexp.MustCompile(`\d+\.\d+\.\d+-[a-z]*(?:\d{6}\.)*\d+\.\d+`)
 
 	reformatters = map[string]ReformatterFunc{
 		"one-to-each":  reformatOneToEach,
@@ -402,7 +402,7 @@ func reformatSuse(packages []string) ([][]string, error) {
 	for _, pkg := range packages {
 		matches := suseVersion.FindStringSubmatch(pkg)
 		if len(matches) != 1 {
-			return nil, fmt.Errorf("regex failed to match")
+			return nil, fmt.Errorf("regex failed to match " + pkg)
 		}
 
 		version := matches[0]
