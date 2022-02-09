@@ -866,16 +866,19 @@ extract_deb() {
     zstd_file="data.tar.zst"
     gz_file="data.tar.gz"
     mkdir -p "${output_dir}"
-    if ar -t "${deb_file}" "${zstd_file}" ; then
+    if ar -t "${deb_file}" "${zstd_file}" > /dev/null; then
+        log "${zstd_file} in deb package"
         pushd "${output_dir}" > /dev/null
         ar -x "${deb_file}" "${zstd_file}"
         popd > /dev/null
         if [[ -f "${output_dir}/${zstd_file}" ]] ; then
+            log "ERROR: zstd not installed"
             zstd -dcfq "${output_dir}/${zstd_file}" | tar xf - -C "${output_dir}"
             rm -f "${output_dir}/${zstd_file}"
             return 0
         fi
-    elif ar -t "${deb_file}" "${gz_file}" ; then
+    elif ar -t "${deb_file}" "${gz_file}" > /dev/null ; then
+        log "${gz_file} in deb package"
         pushd "${output_dir}" > /dev/null
         ar -x "${deb_file}" "${gz_file}"
         popd > /dev/null
