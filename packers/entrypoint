@@ -863,12 +863,9 @@ get_kernel_banner() {
 extract_deb() {
     local deb_file="$1"
     local output_dir="$2"
-
     zstd_file="data.tar.zst"
     gz_file="data.tar.gz"
-
     mkdir -p "${output_dir}"
-
     if ar -t "${deb_file}" "${zstd_file}" ; then
         pushd "${output_dir}" > /dev/null
         ar -x "${deb_file}" "${zstd_file}"
@@ -890,7 +887,6 @@ extract_deb() {
     fi
     return 1
 }
-
 
 log() {
     printf '%s\n' "$*" 1>&2
