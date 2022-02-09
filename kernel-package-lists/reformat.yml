@@ -124,6 +124,12 @@
   file: ubuntu-esm.txt
   reformat: pairs
 
+- name: ubuntu-fips
+  description: Ubuntu FIPS Kernels
+  type: ubuntu
+  file: ubuntu-fips.txt
+  reformat: pairs
+
 - name: minikube
   description: Minikube VM Kernels
   type: minikube

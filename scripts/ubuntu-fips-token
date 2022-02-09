@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Retrieve and print the fips bearer token, based on https://github.com/canonical/ubuntu-advantage-client.
+
+set -euo pipefail
+
+if [[ -z "$UBUNTU_FIPS_SUBSCRIPTION_TOKEN" ]]; then
+    echo "Environment variable 'UBUNTU_FIPS_SUBSCRIPTION_TOKEN' is undefined" 1>&2
+    exit 1
+fi
+
+ATTACH_URL="$1"
+
+# Attach fake machine and extract esm-infra bearer token used to access esm apt repositories.
+repo_esm_token="$(curl -kfs \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer ${UBUNTU_FIPS_SUBSCRIPTION_TOKEN}" \
+  "${ATTACH_URL}" | jq -r '.resourceToken')"
+
+echo "${repo_esm_token}"

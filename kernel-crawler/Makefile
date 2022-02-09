@@ -72,6 +72,13 @@ crawl-ubuntu-esm: export UBUNTU_ESM_INFRA_BEARER_TOKEN = $(shell $(ROOT_DIR)/scr
 crawl-ubuntu-esm: build-crawl-container
 	docker run --rm -i -e UBUNTU_ESM_INFRA_BEARER_TOKEN kernel-crawler crawl Ubuntu-ESM > $(CRAWLED_PACKAGE_DIR)/ubuntu-esm.txt
 
+crawl-ubuntu-fips: export UBUNTU_FIPS_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-fips-token $(UBUNTU_FIPS_ATTACH_URL))
+crawl-ubuntu-fips: export UBUNTU_FIPS_UPDATES_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-fips-token $(UBUNTU_FIPS_UPDATES_ATTACH_URL))
+
+.PHONY: crawl-ubuntu-fips
+crawl-ubuntu-fips: build-crawl-container
+	docker run --rm -i -e UBUNTU_FIPS_BEARER_TOKEN -e UBUNTU_FIPS_UPDATES_BEARER_TOKEN kernel-crawler crawl Ubuntu-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-fips.txt
+
 .PHONY: crawl-oracle-uek
 crawl-oracle-uek: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Oracle-UEK5 > $(CRAWLED_PACKAGE_DIR)/oracle-uek.txt
@@ -272,4 +279,4 @@ crawl-minikube: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Minikube > $(CRAWLED_PACKAGE_DIR)/minikube.txt
 
 .PHONY: crawl
-crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-esm crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos crawl-cos crawl-ubuntu-standard crawl-minikube
+crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-esm crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos crawl-cos crawl-ubuntu-standard crawl-minikube crawl-ubuntu-fips
