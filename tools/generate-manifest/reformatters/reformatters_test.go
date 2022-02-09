@@ -147,3 +147,46 @@ func TestReformatCOS(t *testing.T) {
 
 	assert.ElementsMatch(t, expectedGroups, groups)
 }
+
+func TestReformatSuse(t *testing.T) {
+	packages := []string{
+		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/noarch/kernel-devel-5.3.18-150300.59.43.1.noarch.rpm",
+		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/noarch/kernel-devel-5.3.18-150300.59.46.1.noarch.rpm",
+		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/x86_64/kernel-default-devel-5.3.18-150300.59.43.1.x86_64.rpm",
+		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/x86_64/kernel-default-devel-5.3.18-150300.59.46.1.x86_64.rpm",
+		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP1/x86_64/update/noarch/kernel-devel-4.12.14-197.10.1.noarch.rpm",
+		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP1/x86_64/update/x86_64/kernel-default-devel-4.12.14-197.10.1.x86_64.rpm",
+		"https://updates.suse.com/SUSE/Updates/SLE-SERVER/12-SP5/x86_64/update/x86_64/kernel-default-devel-4.12.14-122.103.1.x86_64.rpm",
+		"https://updates.suse.com/SUSE/Updates/SLE-SERVER/12-SP5/x86_64/update/noarch/kernel-devel-4.12.14-122.103.1.noarch.rpm",
+		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP2/x86_64/update/noarch/kernel-devel-5.3.18-24.75.2.noarch.rpm",
+		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP2/x86_64/update/x86_64/kernel-default-devel-5.3.18-24.75.3.x86_64.rpm",
+	}
+
+	groups, err := reformatSuse(packages)
+	require.NoError(t, err)
+
+	expectedGroups := [][]string{
+		{
+			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/noarch/kernel-devel-5.3.18-150300.59.43.1.noarch.rpm",
+			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/x86_64/kernel-default-devel-5.3.18-150300.59.43.1.x86_64.rpm",
+		},
+		{
+			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/noarch/kernel-devel-5.3.18-150300.59.46.1.noarch.rpm",
+			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/x86_64/kernel-default-devel-5.3.18-150300.59.46.1.x86_64.rpm",
+		},
+		{
+			"https://updates.suse.com/SUSE/Updates/SLE-SERVER/12-SP5/x86_64/update/x86_64/kernel-default-devel-4.12.14-122.103.1.x86_64.rpm",
+			"https://updates.suse.com/SUSE/Updates/SLE-SERVER/12-SP5/x86_64/update/noarch/kernel-devel-4.12.14-122.103.1.noarch.rpm",
+		},
+		{
+			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP1/x86_64/update/noarch/kernel-devel-4.12.14-197.10.1.noarch.rpm",
+			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP1/x86_64/update/x86_64/kernel-default-devel-4.12.14-197.10.1.x86_64.rpm",
+		},
+		{
+			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP2/x86_64/update/noarch/kernel-devel-5.3.18-24.75.2.noarch.rpm",
+			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP2/x86_64/update/x86_64/kernel-default-devel-5.3.18-24.75.3.x86_64.rpm",
+		},
+	}
+
+	assert.ElementsMatch(t, expectedGroups, groups)
+}
