@@ -863,21 +863,34 @@ get_kernel_banner() {
 extract_deb() {
     local deb_file="$1"
     local output_dir="$2"
-    # Try to extract the deb file using dpkg, if that fails, attempt to extract with ar/zstd/tar.
-    if ! dpkg -x "${deb_file}" "${output_dir}" ; then
-        log "Trying manual zstd extract of ${deb_file}"
-        zstd_file="data.tar.zst"
-        mkdir -p "${output_dir}"
+
+    zstd_file="data.tar.zst"
+    gz_file="data.tar.gz"
+
+    mkdir -p "${output_dir}"
+
+    if ar -t "${deb_file}" "${zstd_file}" ; then
         pushd "${output_dir}" > /dev/null
         ar -x "${deb_file}" "${zstd_file}"
         popd > /dev/null
-        if [[ ! -f "${output_dir}/${zstd_file}" ]] ; then
-            return 1
+        if [[ -f "${output_dir}/${zstd_file}" ]] ; then
+            zstd -dcfq "${output_dir}/${zstd_file}" | tar xf - -C "${output_dir}"
+            rm -f "${output_dir}/${zstd_file}"
+            return 0
         fi
-        zstd -dcfq "${output_dir}/${zstd_file}" | tar xf - -C "${output_dir}"
+    elif ar -t "${deb_file}" "${gz_file}" ; then
+        pushd "${output_dir}" > /dev/null
+        ar -x "${deb_file}" "${gz_file}"
+        popd > /dev/null
+        if [[ -f "${output_dir}/${gz_file}" ]] ; then
+            tar xzf "${output_dir}/${gz_file}" -C "${output_dir}"
+            rm -f "${output_dir}/${gz_file}"
+            return 0
+        fi
     fi
-    return 0
+    return 1
 }
+
 
 log() {
     printf '%s\n' "$*" 1>&2
