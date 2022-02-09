@@ -25,6 +25,7 @@ RUN --mount=type=secret,id=REDHAT_PASSWORD \
         gcc-c++ \
         git \
         kmod \
+        kpartx \
         llvm-7.0.1 \
         make \
         openssl-devel \
