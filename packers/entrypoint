@@ -424,6 +424,9 @@ repackage_redhat() {
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'redhat' "$kernel_version" '.')"
 
+        log "DEBUG: utilties.mak error"
+        find "${tmp_dir}" -name 'utilities.mak'
+
         # Prepare kernel sources for module compilation
         cd "${tmp_dir}/usr/src/kernels/${kernel_version}"
 
