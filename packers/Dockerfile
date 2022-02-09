@@ -31,7 +31,7 @@ RUN --mount=type=secret,id=REDHAT_PASSWORD \
         patch \
         pigz \
         python3 \
-        rsync && \
+        rsync \
         zstd && \
     ln -s /usr/bin/gcc /usr/bin/gcc-8 && \
     subscription-manager remove --all && \
