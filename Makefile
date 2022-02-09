@@ -14,7 +14,7 @@ crawl-all: crawl sync manifest
 # Crawl kernel package repositories and record discovered packages.
 .PHONY: crawl
 crawl:
-	make -C kernel-crawler crawl
+	make -C kernel-crawler crawl-rhel # TODO revert before commit
 
 .PHONY: manifest
 manifest: package-inventory

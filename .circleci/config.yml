@@ -1,10 +1,18 @@
 version: 2.1
+parameters:
+  default-machine-image:
+    type: string
+    default: ubuntu-2004:202201-01
 
 defaultImage: &defaultImage
   image: quay.io/rhacs-eng/apollo-ci:collector-0.3.7
   auth:
     username: $QUAY_RHACS_ENG_RO_USERNAME
     password: $QUAY_RHACS_ENG_RO_PASSWORD
+
+defaultMachine: &defaultMachine
+  machine:
+    image: << pipeline.parameters.default-machine-image >>
 
 defaults: &defaults
   docker:
@@ -21,6 +29,10 @@ crawlContext: &crawlContext
   context:
     - redhat-developer-account-login # Provides environment variables REDHAT_USERNAME and REDHAT_PASSWORD.
     - ubuntu-esm-subscription-token # Provides environment variable UBUNTU_ESM_SUBSCRIPTION_TOKEN.
+
+repackageContext: &repackageContext
+  context:
+    - redhat-developer-account-login # Provides environment variables REDHAT_USERNAME and REDHAT_PASSWORD.
 
 commands:
   gcloud-init:
@@ -90,8 +102,7 @@ jobs:
         command: go test -v ./...
 
   repackage:
-    machine:
-      image: ubuntu-2004:202107-02
+    <<: *defaultMachine
     parallelism: 16
     environment:
     - GOPATH: /home/circleci/go
@@ -212,8 +223,7 @@ jobs:
         - .build-data/cache/cache.yml
 
   crawl:
-    machine:
-      image: ubuntu-2004:202107-02
+    <<: *defaultMachine
     resource_class: large
     environment:
     - GOPATH: /home/circleci/go
@@ -362,6 +372,7 @@ workflows:
         requires:
           - crawl-build
     - repackage:
+        <<: *repackageContext
         requires:
         - crawl-build
     - combine:

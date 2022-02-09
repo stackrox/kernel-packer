@@ -7,7 +7,7 @@ main() {
   fi
 
   if [[ -z "$REDHAT_PASSWORD" ]]; then
-    fatal "REDHAT_USERNAME not found in environment"
+    fatal "REDHAT_PASSWORD not found in environment"
   fi
 
   info "Registering subscription for user ${REDHAT_USERNAME}"

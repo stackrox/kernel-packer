@@ -104,7 +104,7 @@ repackage_coreos() {
 
     # developer container is Bzip encoded, so extract it first.
     inflated_bundle="$(mktemp)"
-    lbzip2 -dck "$input_package" > "$inflated_bundle"
+    bzip2 -dck "$input_package" > "$inflated_bundle"
 
     # Mount the extracted disk image on a loopback device.
     loop_device_partition="$(kpartx -asv "$inflated_bundle" | cut -d\  -f 3)"
@@ -423,6 +423,25 @@ repackage_redhat() {
 
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'redhat' "$kernel_version" '.')"
+
+        # Prepare kernel sources for module compilation
+        cd "${tmp_dir}/usr/src/kernels/${kernel_version}"
+
+        # Copy files for 'tools/objtool/sync-check.sh'
+        if [[ -f "tools/arch/x86/lib/inat.c" ]]; then
+            cp tools/arch/x86/lib/inat.c ./arch/x86/lib/inat.c
+        fi
+        if [[ -f "tools/arch/x86/lib/insn.c" ]]; then
+            cp tools/arch/x86/lib/insn.c ./arch/x86/lib/insn.c
+        fi
+
+        # Delete binaries that were built on original host and may use a different glibc version
+        make -C tools/objtool clean fixdep-clean
+        make -C tools/lib/subcmd clean
+        rm -f scripts/mod/{modpost,mk_elfconfig}
+
+        # Rebuild host programs
+        make CONFIG_BPF= CONFIG_HEADERS_INSTALL= prepare
 
         # Remove broken symlinks.
         find "${tmp_dir}/usr/src/kernels/${kernel_version}" -type l -exec test ! -e {} \; -exec unlink {} \;

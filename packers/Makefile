@@ -2,4 +2,4 @@
 
 .PHONY: all
 all:
-	@docker build -t repackage .
+	@DOCKER_BUILDKIT=1 docker build --build-arg REDHAT_USERNAME --secret id=REDHAT_PASSWORD -t repackage .
