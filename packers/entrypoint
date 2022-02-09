@@ -184,10 +184,10 @@ repackage_debian() {
         cd "$tmp_dir"
 
         # Extract the DEB packages.
-        dpkg -x "$input_package_1" .
-        dpkg -x "$input_package_2" .
+        extract_deb "$input_package_1" .
+        extract_deb "$input_package_2" .
         if [[ -n "$input_package_3" ]]; then
-            dpkg -x "$input_package_3" .
+            extract_deb "$input_package_3" .
         fi
 
         # Find the name of the kernel directory.
@@ -248,10 +248,10 @@ repackage_garden() {
         cd "$tmp_dir"
 
         # Extract the DEB packages.
-        dpkg -x "$input_package_1" .
-        dpkg -x "$input_package_2" .
+        extract_deb "$input_package_1" .
+        extract_deb "$input_package_2" .
         if [[ -n "$input_package_3" ]]; then
-            dpkg -x "$input_package_3" .
+            extract_deb "$input_package_3" .
         fi
 
         # Find the name of the kernel directory.
