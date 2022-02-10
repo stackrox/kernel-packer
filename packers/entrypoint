@@ -866,32 +866,34 @@ get_kernel_banner() {
 extract_deb() {
     local deb_file="$1"
     local output_dir="$2"
-    zstd_file="data.tar.zst"
-    gz_file="data.tar.gz"
+
+    extract_dir="$(mktemp -d)"
+    pushd "${extract_dir}" > /dev/null
+    ar -x "${deb_file}"
+    popd > /dev/null
+
+    zstd_file="${extract_dir}/data.tar.zst"
+    xz_file="${extract_dir}/data.tar.xz"
+    gz_file="${extract_dir}/data.tar.gz"
+
     mkdir -p "${output_dir}"
-    if ar -t "${deb_file}" "${zstd_file}" > /dev/null; then
-        log "${zstd_file} in deb package"
-        pushd "${output_dir}" > /dev/null
-        ar -x "${deb_file}" "${zstd_file}"
-        popd > /dev/null
-        if [[ -f "${output_dir}/${zstd_file}" ]] ; then
-            log "ERROR: zstd not installed"
-            zstd -dcfq "${output_dir}/${zstd_file}" | tar xf - -C "${output_dir}"
-            rm -f "${output_dir}/${zstd_file}"
-            return 0
-        fi
-    elif ar -t "${deb_file}" "${gz_file}" > /dev/null ; then
-        log "${gz_file} in deb package"
-        pushd "${output_dir}" > /dev/null
-        ar -x "${deb_file}" "${gz_file}"
-        popd > /dev/null
-        if [[ -f "${output_dir}/${gz_file}" ]] ; then
-            tar xzf "${output_dir}/${gz_file}" -C "${output_dir}"
-            rm -f "${output_dir}/${gz_file}"
-            return 0
-        fi
+    if [[ -f "${zstd_file}" ]] ; then
+        log "zstd file in deb package"
+        zstd -dcfq "${zstd_file}" | tar xf - -C "${output_dir}"
+    elif [[ -f "${xz_file}" ]] ; then
+        log "xz file in deb package"
+        tar -xf "${xz_file}" -C "${output_dir}"
+    elif [[ -f "${gz_file}" ]] ; then
+        log "gz file in deb package"
+        tar -xf "${gz_file}" -C "${output_dir}"
+    else
+        log "ERROR: unable to decompress deb data file"
+        ls -alh "${extract_dir}"
+        rm -rf "${extract_dir}"
+        return 1
     fi
-    return 1
+    rm -rf "${extract_dir}"
+    return 0
 }
 
 log() {

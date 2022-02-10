@@ -33,6 +33,7 @@ RUN --mount=type=secret,id=REDHAT_PASSWORD \
         pigz \
         python3 \
         rsync \
+        xz \
         zstd && \
     ln -s /usr/bin/gcc /usr/bin/gcc-8 && \
     subscription-manager remove --all && \
