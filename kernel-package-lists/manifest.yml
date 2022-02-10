@@ -616,12 +616,6 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.12.1.el7.x86_64.rpm
-1b970855f2bc318d2c844ec11fb2b0c3fa8d2afbcee36679c91fcf449b95eeca:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-1-amd64_5.16.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-1-common_5.16.7-1_all.deb
 1a1845874e474fe4f849759f9f2137e7b517637332936df028454a5180049223:
   type: redhat
   packages:
@@ -2798,6 +2792,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1025-fips_4.4.0-1025.30_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1025_4.4.0-1025.30_all.deb
+7a2bdcb3c1e896bef6585bba2bd60f42f5cd361130c6cb378e58eb8489da967c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1063_5.4.0-1063.66_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1063-gke_5.4.0-1063.66_amd64.deb
 7a3ffeb47c96982510611fcf0d40832acd52604ad534f41d2b95feead38f79cc:
   type: redhat
   packages:
@@ -3326,12 +3325,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.12.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.12.1.x86_64.rpm
-8c193bda527dfd3c83a03732abfe9ca1e385256e1e1f6df3d60d5f7bd79699de:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-1-cloud-amd64_5.16.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-1-common_5.16.7-1_all.deb
 8c194e3a1444366b0d0cb3bad924fad27ed7af6872f6824a8417e0fff00dd220:
   type: minikube
   packages:
@@ -10510,6 +10503,12 @@ a47ae9a9d73468fdd8f51c4ec688f3150cc690524a061dd172011acbee5bf302:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1114-aws_4.4.0-1114.127_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1114_4.4.0-1114.127_all.deb
+a48e76a810907867d25ac8317a3da6bddbed8ece0a8f7a87a6c1e26e27fc0baa:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.7-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-1-cloud-amd64_5.16.7-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-1-common_5.16.7-2_all.deb
 a50e5aea7782ca2656414273bc1dd04ac1cc35342c88abf308745c69f5848a47:
   type: redhat
   packages:
