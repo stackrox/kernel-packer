@@ -22,6 +22,7 @@ RUN --mount=type=secret,id=REDHAT_PASSWORD \
         elfutils-libelf \
         elfutils-libelf-devel \
         flex \
+        file \
         gcc-c++ \
         git \
         kmod \
