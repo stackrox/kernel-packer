@@ -13,6 +13,7 @@ RUN --mount=type=secret,id=REDHAT_PASSWORD \
 	dnf config-manager --enable rhel-8-for-x86_64-appstream-rpms && \
 	dnf -y update && \
 	dnf -y install \
+        bc \
         bison \ 
         binutils \ 
         bzip2 \
