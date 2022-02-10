@@ -30,7 +30,7 @@ func Run(name string, arg ...string) error {
 	return cmd.Run()
 }
 
-func DockerCommand(checksum string, distroName string, outputDir string, packages []string) (string, []string, error) {
+func DockerCommand(checksum string, packerImageTag string, distroName string, outputDir string, packages []string) (string, []string, error) {
 	var cmd = "docker"
 	var args = []string{
 		"run",
@@ -66,8 +66,12 @@ func DockerCommand(checksum string, distroName string, outputDir string, package
 	// Add a single volume mapping for the output directory.
 	args = append(args, "-v", fmt.Sprintf("%s:/output", outputDir))
 
+	if packerImageTag == "" {
+		packerImageTag = "latest"
+	}
+
 	// Add the Docker image name, distro name, and output directory alias
-	args = append(args, "repackage:latest", checksum, distroName, "/output")
+	args = append(args, "repackage:" + packerImageTag, checksum, distroName, "/output")
 
 	// Add a series of package names, same as the volume aliases.
 	for _, pkg := range packages {

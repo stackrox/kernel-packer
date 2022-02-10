@@ -10,6 +10,20 @@
   file: amazon-extras.txt
   reformat: single
 
+- name: centos
+  description: CentOS kernels
+  type: redhat
+  file: centos.txt
+  reformat: single
+  packerImage: debian
+
+- name: centos-uncrawled
+  description: CentOS uncrawled kernels
+  type: redhat
+  file: centos-uncrawled.txt
+  reformat: single
+  packerImage: debian
+
 - name: coreos
   description: CoreOS kernels
   type: coreos
@@ -57,6 +71,13 @@
   type: garden
   file: gardenlinux-uncrawled.txt
   reformat: debian
+
+- name: cos
+  description: Container-Optimized OS kernels
+  type: cos
+  file: cos.txt
+  reformat: cos
+  packerImage: debian
 
 - name: ubuntu-aws
   description: Ubuntu AWS Kernels
@@ -117,12 +138,14 @@
   type: minikube
   file: minikube.txt
   reformat: single
+  packerImage: debian
 
 - name: linuxkit
   description: Linuxkit VM Kernels
   type: linuxkit
   file: linuxkit.txt
   reformat: single
+  packerImage: debian
 
 - name: oracle
   description: Oracle UEK Kernels

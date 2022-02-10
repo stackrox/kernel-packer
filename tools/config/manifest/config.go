@@ -18,10 +18,11 @@ type Manifest map[string]Builder
 // Builder represents a single builder configuration. This captures all kernel
 // versions that can be produced by the given type.
 type Builder struct {
-	Kind      string   `yaml:"type"`
-	Packages  []string `yaml:"packages"`
-	Bundle    string   `yaml:"bundle,omitempty"`
-	NodeIndex int      `yaml:"nodeIndex,omitempty"`
+	Kind        string   `yaml:"type"`
+	Packages    []string `yaml:"packages"`
+	Bundle      string   `yaml:"bundle,omitempty"`
+	NodeIndex   int      `yaml:"nodeIndex,omitempty"`
+	PackerImage string   `yaml:"packerImage,omitempty"`
 }
 
 // Adds a Builder with the given kind and packages to the Manifest under an

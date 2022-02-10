@@ -125,7 +125,7 @@ func mainCmd() error {
 			}
 
 			// Add a builder for the given kind and package group.
-			mf.Add(entry.Type, packages)
+			mf.AddBuilder(manifest.Builder{Kind: entry.Type, Packages: packages, PackerImage: entry.PackerImage})
 		}
 	}
 
