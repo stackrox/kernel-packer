@@ -424,27 +424,30 @@ repackage_redhat() {
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'redhat' "$kernel_version" '.')"
 
-        log "DEBUG: utilties.mak error"
-        find "${tmp_dir}" -name 'utilities.mak'
 
-        # Prepare kernel sources for module compilation
-        cd "${tmp_dir}/usr/src/kernels/${kernel_version}"
+        if ! grep -q "el7" "${kernel_version}" ; then
+          log "DEBUG: utilties.mak error"
+          find "${tmp_dir}" -name 'utilities.mak'
 
-        # Copy files for 'tools/objtool/sync-check.sh'
-        if [[ -f "tools/arch/x86/lib/inat.c" ]]; then
-            cp tools/arch/x86/lib/inat.c ./arch/x86/lib/inat.c
+          # Prepare kernel sources for module compilation
+          cd "${tmp_dir}/usr/src/kernels/${kernel_version}"
+
+          # Copy files for 'tools/objtool/sync-check.sh'
+          if [[ -f "tools/arch/x86/lib/inat.c" ]]; then
+              cp tools/arch/x86/lib/inat.c ./arch/x86/lib/inat.c
+          fi
+          if [[ -f "tools/arch/x86/lib/insn.c" ]]; then
+              cp tools/arch/x86/lib/insn.c ./arch/x86/lib/insn.c
+          fi
+
+          # Delete binaries that were built on original host and may use a different glibc version
+          make -C tools/objtool clean fixdep-clean
+          make -C tools/lib/subcmd clean
+          rm -f scripts/mod/{modpost,mk_elfconfig}
+
+          # Rebuild host programs
+          make CONFIG_BPF= CONFIG_HEADERS_INSTALL= prepare
         fi
-        if [[ -f "tools/arch/x86/lib/insn.c" ]]; then
-            cp tools/arch/x86/lib/insn.c ./arch/x86/lib/insn.c
-        fi
-
-        # Delete binaries that were built on original host and may use a different glibc version
-        make -C tools/objtool clean fixdep-clean
-        make -C tools/lib/subcmd clean
-        rm -f scripts/mod/{modpost,mk_elfconfig}
-
-        # Rebuild host programs
-        make CONFIG_BPF= CONFIG_HEADERS_INSTALL= prepare
 
         # Remove broken symlinks.
         find "${tmp_dir}/usr/src/kernels/${kernel_version}" -type l -exec test ! -e {} \; -exec unlink {} \;
@@ -872,20 +875,15 @@ extract_deb() {
     ar -x "${deb_file}"
     popd > /dev/null
 
-    zstd_file="${extract_dir}/data.tar.zst"
-    xz_file="${extract_dir}/data.tar.xz"
-    gz_file="${extract_dir}/data.tar.gz"
+    data_file="${extract_dir}/data.tar"
+    zstd_file="${data_file}.zst"
+    xz_file="${data_file}.xz"
 
     mkdir -p "${output_dir}"
     if [[ -f "${zstd_file}" ]] ; then
-        log "zstd file in deb package"
         zstd -dcfq "${zstd_file}" | tar xf - -C "${output_dir}"
     elif [[ -f "${xz_file}" ]] ; then
-        log "xz file in deb package"
         tar -xf "${xz_file}" -C "${output_dir}"
-    elif [[ -f "${gz_file}" ]] ; then
-        log "gz file in deb package"
-        tar -xf "${gz_file}" -C "${output_dir}"
     else
         log "ERROR: unable to decompress deb data file"
         ls -alh "${extract_dir}"
