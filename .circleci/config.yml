@@ -99,7 +99,7 @@ jobs:
           test -z "$(goimports -l -local github.com/stackrox/kernel-packer $gofiles)"
     - run:
         name: Run tests
-        command: go test -v ./...
+        command: make unittest
 
   repackage:
     <<: *defaultMachine

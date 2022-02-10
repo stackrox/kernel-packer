@@ -12,6 +12,7 @@ func Test(t *testing.T) {
 		title        string
 		checksum     string
 		distro       string
+		imageTag     string
 		outputDir    string
 		packages     []string
 		err          string
@@ -42,6 +43,7 @@ func Test(t *testing.T) {
 		{
 			title:     "single package",
 			checksum:  "sha",
+			imageTag:  "",
 			distro:    "redhat",
 			outputDir: "/.build-data/bundles",
 			packages:  []string{"/package.rpm"},
@@ -56,6 +58,7 @@ func Test(t *testing.T) {
 		{
 			title:     "multiple package",
 			checksum:  "sha",
+			imageTag:  "debian",
 			distro:    "redhat",
 			outputDir: "/.build-data/bundles",
 			packages: []string{
@@ -68,7 +71,7 @@ func Test(t *testing.T) {
 				"-v", "/dev:/dev",
 				"-v", "/:/input:ro",
 				"-v", "/.build-data/bundles:/output",
-				"repackage:latest", "sha", "redhat", "/output",
+				"repackage:debian", "sha", "redhat", "/output",
 				"/input/package-a.rpm",
 				"/input/package-b.rpm",
 				"/input/package-c.rpm",
@@ -80,7 +83,7 @@ func Test(t *testing.T) {
 		name := fmt.Sprintf("%d %s", index+1, test.title)
 		t.Run(name, func(t *testing.T) {
 
-			actualCmd, actualArgs, actualErr := DockerCommand(test.checksum, test.distro, test.outputDir, test.packages)
+			actualCmd, actualArgs, actualErr := DockerCommand(test.checksum, test.imageTag, test.distro, test.outputDir, test.packages)
 
 			if test.err != "" {
 				require.EqualError(t, actualErr, test.err)

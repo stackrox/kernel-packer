@@ -91,6 +91,10 @@ list-files:
 		-cache-dir $(BUILD_DATA_DIR)/cache \
 		-action files | tee $(BUILD_DATA_DIR)/packages.txt
 
+.PHONY: unittest
+unittest:
+	go test -v ./...
+
 .PHONY: download-packages
 download-packages:
 	@./scripts/download-packages $(BUILD_DATA_DIR) $(KERNEL_PACKAGE_BUCKET)
