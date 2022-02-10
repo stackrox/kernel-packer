@@ -424,8 +424,7 @@ repackage_redhat() {
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'redhat' "$kernel_version" '.')"
 
-
-        if ! grep -q "el7" "${kernel_version}" ; then
+        if ! grep -q "el[6-7]" "${kernel_version}" ; then
           log "DEBUG: utilties.mak error"
           find "${tmp_dir}" -name 'utilities.mak'
 
