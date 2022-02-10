@@ -71,7 +71,7 @@ func DockerCommand(checksum string, packerImageTag string, distroName string, ou
 	}
 
 	// Add the Docker image name, distro name, and output directory alias
-	args = append(args, "repackage:" + packerImageTag, checksum, distroName, "/output")
+	args = append(args, "repackage:"+packerImageTag, checksum, distroName, "/output")
 
 	// Add a series of package names, same as the volume aliases.
 	for _, pkg := range packages {
