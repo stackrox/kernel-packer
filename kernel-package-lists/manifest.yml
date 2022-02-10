@@ -2685,6 +2685,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11021.29.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11021.29.0-kernel-headers.tgz
+6adc9be76879b015522414e9359c53d31858a0e897876c5cb56634044556c4ec:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.110.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.110.1.x86_64.rpm
 6ede69ea69a6b9367b9f1cf081ae1a6c838ce671edc36be4de42565238e764d0:
   type: ubuntu
   packages:
@@ -3512,6 +3517,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.225-1.el7.elrepo.x86_64.rpm
+8aca27915b953c38c48c014b58608eb703d7f87cfc4838a454cee81e2582db24:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1065_5.4.0-1065.69_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1065-gcp_5.4.0-1065.69_amd64.deb
 8dcbf82683a0698db023e720c87e1f766d65a646a7f95823765033cdd7ad72ff:
   type: cos
   packages:
@@ -5785,6 +5795,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1062_5.4.0-1062.65_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1062-gke_5.4.0-1062.65_amd64.deb
+75f32af1a53f58d705f1247277335bb30745f55a6d26e16c9418b851020f8d8f:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.153.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.153.1.x86_64.rpm
 75b9389bf27bd2ded4e2e9f85900aa9fd3973824857c973e7d1068aa4bbb6cec:
   type: redhat
   packages:
@@ -5803,10 +5818,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.96.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.96.1.x86_64.rpm
-76b4480bfe8affcbccde1995aa64476211001c69ecea74466aa40c517984ea05:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.0-flatcar_developer_container.bin.bz2
 76dd689668e9fd810507fde2a43c2bc229e104e2db0b538c64feae54cf0206ba:
   type: redhat
   packages:
@@ -9686,6 +9697,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.146-1.el7.elrepo.x86_64.rpm
+1208483db14d31791ea518c7d7a07a6521ee6b25b88c51c9e78c6acc873471f5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-22-generic_5.15.0-22.22_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-22_5.15.0-22.22_all.deb
 1496253acce8f206bcdc01c3ba8491f0f92addfd3258ce48e6e9956f0a60ddba:
   type: redhat
   packages:
@@ -10503,12 +10519,6 @@ a47ae9a9d73468fdd8f51c4ec688f3150cc690524a061dd172011acbee5bf302:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1114-aws_4.4.0-1114.127_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1114_4.4.0-1114.127_all.deb
-a48e76a810907867d25ac8317a3da6bddbed8ece0a8f7a87a6c1e26e27fc0baa:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.7-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-1-cloud-amd64_5.16.7-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-1-common_5.16.7-2_all.deb
 a50e5aea7782ca2656414273bc1dd04ac1cc35342c88abf308745c69f5848a47:
   type: redhat
   packages:
