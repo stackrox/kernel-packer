@@ -35,6 +35,8 @@ RUN --mount=type=secret,id=REDHAT_PASSWORD \
         pigz \
         python3 \
         rsync \
+        unzip \
+        wget \
         xz \
         zstd && \
     ln -s /usr/bin/gcc /usr/bin/gcc-8 && \
