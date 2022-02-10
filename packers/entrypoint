@@ -424,7 +424,7 @@ repackage_redhat() {
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'redhat' "$kernel_version" '.')"
 
-        if ! grep -q "el[6-7]" "${kernel_version}" || [[ -n $(find "${tmp_dir}" -name "utilities.mak") ]]; then
+        if ! grep -q "el[6-7]" "${kernel_version}" && [[ -n $(find "${tmp_dir}" -name "utilities.mak") ]]; then
           # Prepare kernel sources for module compilation
           cd "${tmp_dir}/usr/src/kernels/${kernel_version}"
 
