@@ -424,25 +424,32 @@ repackage_redhat() {
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'redhat' "$kernel_version" '.')"
 
-        if ! [[ "${kernel_version}" =~ "^.*el[6-7].*$" ]] && [[ -n $(find "${tmp_dir}" -name "utilities.mak") ]]; then
-          # Prepare kernel sources for module compilation
-          cd "${tmp_dir}/usr/src/kernels/${kernel_version}"
+        host_distro="$(get_os_release_value 'ID')"
+        if [[ "${host_distro}" != "rhel" ]] ||
+           [[ "${kernel_version}" =~ ^.*el[6-7].*$ ]] ||
+           [[ -z "$(find "${tmp_dir}" -name "utilities.mak")" ]]; then
+           log "using precompiled kernel utilities on ${host_distro} for $kernel_version"
+        else
+           log "compiling kernel utilities on ${host_distro} for $kernel_version"
 
-          # Copy files for 'tools/objtool/sync-check.sh'
-          if [[ -f "tools/arch/x86/lib/inat.c" ]]; then
-              cp tools/arch/x86/lib/inat.c ./arch/x86/lib/inat.c
-          fi
-          if [[ -f "tools/arch/x86/lib/insn.c" ]]; then
-              cp tools/arch/x86/lib/insn.c ./arch/x86/lib/insn.c
-          fi
+           # Prepare kernel sources for module compilation
+           cd "${tmp_dir}/usr/src/kernels/${kernel_version}"
 
-          # Delete binaries that were built on original host and may use a different glibc version
-          make -C tools/objtool clean fixdep-clean
-          make -C tools/lib/subcmd clean
-          rm -f scripts/mod/{modpost,mk_elfconfig}
+           # Copy files for 'tools/objtool/sync-check.sh'
+           if [[ -f "tools/arch/x86/lib/inat.c" ]]; then
+               cp tools/arch/x86/lib/inat.c ./arch/x86/lib/inat.c
+           fi
+           if [[ -f "tools/arch/x86/lib/insn.c" ]]; then
+               cp tools/arch/x86/lib/insn.c ./arch/x86/lib/insn.c
+           fi
 
-          # Rebuild host programs
-          make CONFIG_BPF= CONFIG_HEADERS_INSTALL= prepare
+           # Delete binaries that were built on original host and may use a different glibc version
+           make -C tools/objtool clean fixdep-clean
+           make -C tools/lib/subcmd clean
+           rm -f scripts/mod/{modpost,mk_elfconfig}
+
+           # Rebuild host programs
+           make CONFIG_BPF= CONFIG_HEADERS_INSTALL= prepare
         fi
 
         # Remove broken symlinks.
@@ -892,6 +899,25 @@ extract_deb() {
 
 log() {
     printf '%s\n' "$*" 1>&2
+}
+
+get_os_release_value() {
+    local key="$1"
+    local os_release_file="/etc/os-release"
+    if [[ ! -f "$os_release_file" ]]; then
+        os_release_file="/usr/lib/os-release"
+    fi
+    if [[ -f "$os_release_file" ]]; then
+    while IFS="=" read -r var value; do
+        if [[ "$key" == "$var" ]]; then
+            # remove quotes
+            local trimmed_value
+            trimmed_value="${value%\"}"
+            trimmed_value="${trimmed_value#\"}"
+            echo "$trimmed_value"
+        fi
+    done < "$os_release_file"
+    fi
 }
 
 main "$@"
