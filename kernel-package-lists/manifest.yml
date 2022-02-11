@@ -2743,6 +2743,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-edge-linux-headers-4.18.0-1007-azure_4.18.0-1007.7-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-edge-linux-azure-headers-4.18.0-1007_4.18.0-1007.7-18.04.1_all.deb
+6cfa24325fef6ba6e464ca17f056d61a0e72002a50b03a695e57cab37a030a78:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.88.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.88.1.x86_64.rpm
 6efdc1f97b8646913ac2f2b7544f9bf58adcd341633f6e245fde98b06fb8c03e:
   type: redhat
   packages:
@@ -13436,6 +13441,11 @@ d56cf8f7622d82196c690f425c2075e60a9ad579ab58a11cb7b83a0f629be3c1:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2048-aws-fips_4.15.0-2048.50_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2048_4.15.0-2048.50_all.deb
+d57cd85404d4b1d4444d1d65bd29f766e1c2722d67181d22ba4dd9e001041b34:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-150300.59.49.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-150300.59.49.1.x86_64.rpm
 d58ca252d961d4245d7c4cd1ad11c960d37e2624da72baae82c0fe2d5934289f:
   type: cos
   packages:
@@ -13953,10 +13963,6 @@ ddaf2d1a96509010a404280f9642b3e23de157cac15c4e9b2682285f491f9901:
   packages:
   - https---storage.googleapis.com-cos-tools-16108.470.11-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.470.11-kernel-headers.tgz
-ddafce21d9b6d4dbf82991338866eef2e7236627d7c1f15f4a710da701ca3762:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2905.1.0-flatcar_developer_container.bin.bz2
 ddbcda57c9659a4e55f3c6b20bc44b786211a3954aea1add04c51941eab038cc:
   type: ubuntu
   packages:
