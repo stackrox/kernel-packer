@@ -4197,6 +4197,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-504.30.3.el6.x86_64.rpm
+15bf6edd4f4d3e5d849c128ff095b7fda03aba50ce01a081c4cf71d3b5edf1a8:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.13-linux-headers-5.13.0-1014-aws_5.13.0-1014.15-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.13-linux-aws-5.13-headers-5.13.0-1014_5.13.0-1014.15-20.04.1_all.deb
 16d3c2b408abc07c919e771b6f0052a022b784df990128cbece520d3a22b480e:
   type: redhat
   packages:
@@ -8373,10 +8378,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1048-fips_4.15.0-1048.55_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1048_4.15.0-1048.55_all.deb
-6748f7f32ca213376da67974f4f54b6eb36ec4ef30881c14cd0d3aed968f6a03:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.6.0-flatcar_developer_container.bin.bz2
 6786fb54ff0e2f6ecf508971593b81e9baea209f31bb71c00d86291f9f47b7f8:
   type: ubuntu
   packages:
@@ -13024,6 +13025,11 @@ cdba836eef2b3cd73b6ba85cc16d944a07d90d9b0ced85e8724ddc03dd5c1c53:
   packages:
   - https---storage.googleapis.com-cos-tools-12371.1109.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12371.1109.0-kernel-headers.tgz
+cdd7ca06dcea493ee1961dc25cf41f8c8cb0b0d9190d37a5120620e84c9b45f5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.13.0-1014-aws_5.13.0-1014.15_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.13.0-1014_5.13.0-1014.15_all.deb
 cde2dec9c95a03d2e87404a67d49c7650c91d3e888d0f3bd2ddcc77079d25184:
   type: redhat
   packages:
