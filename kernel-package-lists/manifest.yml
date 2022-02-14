@@ -1959,6 +1959,10 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2303.4.0-coreos_developer_container.bin.bz2
+4fe8cc4357f3f57b4cb6fdcae3a489dd163a2c1ddacc2e8647388e6d9b6b34d1:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.178-1.el7.elrepo.x86_64.rpm
 4fe9b02fe51ff00a6a395184a848b1ad8114295070859bf1a5845346800c9684:
   type: suse
   packages:
@@ -4789,6 +4793,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.7-300.fc35-x86_64-kernel-devel-5.14.7-300.fc35.x86_64.rpm
+38d191ac429e0ccbca3549a11823b063952940c35242407745b22a1868388ef8:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.0-flatcar_developer_container.bin.bz2
 38c194d3024e1abdab49d953460ef42d581fad30c80c6cf4ed1bcc95b32d79c3:
   type: debian
   packages:
