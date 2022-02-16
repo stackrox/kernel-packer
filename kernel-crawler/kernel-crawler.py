@@ -39,7 +39,8 @@ centos_excludes = [
     "3.10.0-327", # 7.2.1511
 ]
 ubuntu_excludes = [
-    "5.10.0-13.14", # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
+    "5.10.0-13.14",  # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
+    "5.15.0-1001.3", # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
 ]
 ubuntu_backport_supported = [
     "16.04",
