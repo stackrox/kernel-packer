@@ -1274,6 +1274,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.16-200.fc35-x86_64-kernel-devel-5.15.16-200.fc35.x86_64.rpm
+3e2d4b6d42a7bee0aedf925ccf30ad5651df9580aa46b9e2b0d2dd705d0e163c:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.3-os-Packages-k-kernel-rt-devel-4.18.0-193.13.2.rt13.65.el8_2.x86_64.rpm
 3a2bce230e76c0a2eb04b60256296610b9704d6c8179e62b95be1e299d6fa91a:
   type: ubuntu
   packages:
@@ -3758,6 +3762,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1076-fips_4.15.0-1076.85_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1076_4.15.0-1076.85_all.deb
+9b124f1471b6b9884751801a0090068d34dc7c240c0ffbd2edc5730e43fe1d24:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.5-os-Packages-k-kernel-rt-devel-4.18.0-193.24.1.rt13.74.el8_2.dt1.x86_64.rpm
 9c181aebe83f57e4d43c6f82a12efe5b4aa569d632c2682374e900656c785304:
   type: redhat
   packages:
@@ -3831,6 +3839,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1066_4.15.0-1066.69_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1066-gke_4.15.0-1066.69_amd64.deb
+9d16468a46f3d208187d47a53a0875d39635ea18e1f321e508cb73869a3eaacf:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.5-os-Packages-k-kernel-rt-devel-4.18.0-193.13.2.rt13.65.el8_2.x86_64.rpm
 9a17034ad729a98cc106dda8e793673e3c350fbd126d6b13bb9c1614ccc2fd81:
   type: cos
   packages:
@@ -4609,6 +4621,10 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10032.88.0-kernel-src.tar.gz
+32a1ab90baebe58a4d75d3dd0754b1526639c7003640c46a1643348979dbf6a1:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.5-os-Packages-k-kernel-rt-devel-4.18.0-193.12.1.rt13.63.el8_2.x86_64.rpm
 32d7ac703ac82839cfe03522cc822e096195e11a570a69449266603e96cdd637:
   type: redhat
   packages:
@@ -9886,6 +9902,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.11.1.el8_0.x86_64.rpm
+07020358ea7ed7b9886e95a2611f74e5bce19d0d571905722837b5b865225492:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.4-os-Packages-k-kernel-rt-devel-4.18.0-193.13.2.rt13.65.el8_2.x86_64.rpm
 7167835bf114bf74c742f709cbb8258f097d3fa7a936a0f650ceb9c9c9b1bb1b:
   type: cos
   packages:
@@ -10907,10 +10927,6 @@ a39975396a714e3eeeee4cb09be38de0925f8b007d82aac8432d544c1af68af8:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-headers-4.15.0-1093-aws_4.15.0-1093.99-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-aws-headers-4.15.0-1093_4.15.0-1093.99-16.04.1_all.deb
-a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
@@ -10958,6 +10974,10 @@ aa98d176f4875bbe8310c8fcd19f4c74a784414a0c62d5dc5dc78a394885d72b:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-131.17.1.el6.x86_64.rpm
+aa941f12d3fbe1be7001b04455ee71d8c8cf03480c02716e1601e8ec93877488:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.4-os-Packages-k-kernel-rt-devel-4.18.0-193.24.1.rt13.74.el8_2.dt1.x86_64.rpm
 aa79289c757471c25763a8d2b7164d5cff894eb8d0107086d1b689d66b0b7b94:
   type: ubuntu
   packages:
@@ -14439,6 +14459,10 @@ e34e9bb5ec688704e5f17e869d072a8ec9462c5dd00b88982bc88ef02abbaa41:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.7.2.el8_0.x86_64.rpm
+e038dccbeb719b8513789f3ca738e2e14a1c569daf05a3180999a3dd721ce1b4:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.3-os-Packages-k-kernel-rt-devel-4.18.0-193.24.1.rt13.74.el8_2.dt1.x86_64.rpm
 e44e9a497837b7ea5caa795a7673d88d61c7c50422cf1c802cd117189a983a64:
   type: ubuntu
   packages:
