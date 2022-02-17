@@ -14,6 +14,7 @@
 import argparse
 import json
 import sys
+import time
 import urllib3
 from urllib3.util import parse_url as url_unquote
 from urllib.parse import urljoin, urlparse
@@ -607,6 +608,17 @@ def crawl_s3(repo):
     results.sort()
     return results
 
+def get_rpms(repo):
+    max_tries = 6
+    for i in range(max_tries):
+        try:
+            rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
+            return rpms
+        except:
+            sys.stderr.write("WARN: Unable to get repos. " + str(max_tries - i - 1)  + " tries left"
+            time.sleep(120)
+
+
 def crawl(distro):
     """
     Navigate the `repos` tree and look for packages we need that match the
@@ -638,7 +650,7 @@ def crawl(distro):
                         source = repo["root"] + version + subdir
                         download_root = source if "download_root" not in repo else repo["download_root"]
                         page = http.request('GET', source, timeout=30.0, headers=http_request_headers).data
-                        rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
+                        rpms = get_rpms(repo)
                         if len(rpms) == 0:
                             sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
                         for rpm in sorted(set(rpms)):
