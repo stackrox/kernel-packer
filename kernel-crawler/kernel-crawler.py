@@ -615,7 +615,7 @@ def get_rpms(repo):
             rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
             return rpms
         except:
-            sys.stderr.write("WARN: Unable to get repos. " + str(max_tries - i - 1)  + " tries left"
+            sys.stderr.write("WARN: Unable to get repos. " + str(max_tries - i - 1)  + " tries left")
             time.sleep(120)
 
 
