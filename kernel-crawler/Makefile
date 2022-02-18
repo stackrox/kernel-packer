@@ -10,11 +10,13 @@ all: crawl
 
 .PHONY: build-crawl-container
 build-crawl-container: Dockerfile kernel-crawler.py main.go
+	echo "In build-crawl-container"
 	docker build -t kernel-crawler .
 	docker build -t rhel-login rhel-login
 
 .PHONY: crawl-centos
 crawl-centos: build-crawl-container
+	echo "In crawl-centos"
 	docker run --rm -i kernel-crawler crawl CentOS --preserve-removed-urls < $(CRAWLED_PACKAGE_DIR)/centos.txt > /tmp/centos_urls_tmp.json
 	docker run --rm -i kernel-crawler output-from-json crawled < /tmp/centos_urls_tmp.json | sort > $(CRAWLED_PACKAGE_DIR)/centos.txt
 	# Inline sed is there to remove spurious blank lines
