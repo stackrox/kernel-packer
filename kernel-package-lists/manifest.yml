@@ -3253,6 +3253,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16511.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16511.0.0-kernel-headers.tgz
+8c2d664028d948918eb9d8b63042e598f583ca49b2fed483df6ba0e56fc8df73:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-2-amd64_5.16.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-2-common_5.16.10-1_all.deb
 8c4c31bb2887ae84c9f90ff46d041e3c7a8af6e78270e3b9492958c7c441fb67:
   type: cos
   packages:
@@ -4260,6 +4266,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1015.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1015.0-kernel-headers.tgz
+18a5611f4549eb5dbd9c1704357d13862ea350ed3f00a0107b4c5bfa136c6a54:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2247.7.0-flatcar_developer_container.bin.bz2
 18adfcdb000a6eb54b9dd344fa809e4d79a425f977937fff2f604bd3f6bc8d86:
   type: ubuntu
   packages:
@@ -4883,6 +4893,12 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.5-flatcar_developer_container.bin.bz2
+040ed6db84742f62c8e54452958db04419e4eb93eb3e753eebcc73b596503e89:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-2-cloud-amd64_5.16.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-2-common_5.16.10-1_all.deb
 41f5b783bb01ca97208bc6f87dd146ed3830cb9535df896327eee2619b235d4c:
   type: ubuntu
   packages:
