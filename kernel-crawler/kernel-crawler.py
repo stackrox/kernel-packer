@@ -18,6 +18,7 @@ import urllib3
 from urllib3.util import parse_url as url_unquote
 from urllib.parse import urljoin, urlparse
 from lxml import html
+from lxml.etree import ParserError
 import traceback
 import re
 import os.path
@@ -225,6 +226,9 @@ repos = {
             # we first see flatcar being used.
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^(\./)?flatcar_developer_container.bin.bz2$')]/@href",
+            # Crawling Flatcar faces empty pages from time to time due to
+            # moving stuff aroung, those are ok to ignore.
+            "exceptions": [ParserError("Document is empty")],
         },
     ],
     "Flatcar-Beta": [
@@ -570,6 +574,9 @@ repos = {
     ]
 }
 
+def compare_exceptions(a, b):
+    return isinstance(a, b.__class__) and a.args == b.args
+
 def check_pattern(pattern, s):
     if len(pattern) > 1 and pattern[0:2] == "\r":
         return re.compile(pattern[2:]).match(s) != None
@@ -659,7 +666,15 @@ def crawl(distro):
         except Exception as e:
             sys.stderr.write("ERROR: "+str(type(e))+str(e)+"\n")
             traceback.print_exc()
-            sys.exit(1)
+            comparison = [
+                compare_exceptions(e, ignored)
+                for ignored in repo.get("exceptions", [])
+            ]
+
+            if not any(comparison):
+                sys.exit(1)
+            else:
+                sys.stderr.write("Error is ignored, continue\n")
 
     return kernel_urls
 
