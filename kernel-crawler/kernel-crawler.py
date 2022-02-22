@@ -237,6 +237,9 @@ repos = {
             "discovery_pattern": r"/html/body//a[regex:test(@href, '^(\./)?(2513\.2\.0|2[6-9]|[3-9])')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^(\./)?flatcar_developer_container.bin.bz2$')]/@href",
+            # Crawling Flatcar faces empty pages from time to time due to
+            # moving stuff aroung, those are ok to ignore.
+            "exceptions": [ParserError("Document is empty")],
         },
     ],
     "Debian": [
@@ -660,21 +663,29 @@ def crawl(distro):
                                 sys.stderr.write("Adding package " + raw_url + "\n")
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
+
                     except urllib3.exceptions.HTTPError as e:
+                        # Network exceptions are generally ignored
                         sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
+
+                    except Exception as e:
+                        # All the other exceptions are subject to compare with
+                        # exceptions allowed per repo.
+                        sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
+                        comparison = [
+                            compare_exceptions(e, ignored)
+                            for ignored in repo.get("exceptions", [])
+                        ]
+
+                        if not any(comparison):
+                            raise e
+                        else:
+                            sys.stderr.write("Error is ignored, continue\n")
 
         except Exception as e:
             sys.stderr.write("ERROR: "+str(type(e))+str(e)+"\n")
             traceback.print_exc()
-            comparison = [
-                compare_exceptions(e, ignored)
-                for ignored in repo.get("exceptions", [])
-            ]
-
-            if not any(comparison):
-                sys.exit(1)
-            else:
-                sys.stderr.write("Error is ignored, continue\n")
+            sys.exit(1)
 
     return kernel_urls
 
