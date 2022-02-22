@@ -3179,6 +3179,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.245-1.el7.elrepo.x86_64.rpm
+7cf14df48e2f0ba58786a2859d0c37b02942a0d0e4ecd1521c0f015b00bc7cac:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.4.0-flatcar_developer_container.bin.bz2
 7af45a4b89dcc72e5ac617b524f5a73b1384c789e64fef2f1d48b13c605b9849:
   type: ubuntu
   packages:
@@ -6711,10 +6715,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-62-generic_4.15.0-62.69_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-62_4.15.0-62.69_all.deb
-0251ea1488dfc243feac47548f81412043be87e01b9c4e1b1bfdc8fdc68d7343:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.6.0-flatcar_developer_container.bin.bz2
 252fe05cee1146df17c4b22e1f7c3ac798f35eb4dafd2bbb0ddca443da880723:
   type: ubuntu
   packages:
@@ -7534,6 +7534,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1032-fips_4.4.0-1032.37_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1032_4.4.0-1032.37_all.deb
+758ee435596e785e10b791fbb5030814a6448fce548413456f2cf9e3f3e4b589:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.2-flatcar_developer_container.bin.bz2
 760f17883e41f3a7a117adad75e7eebb3177013bd436ae64632c9218ed99c32b:
   type: ubuntu
   packages:
@@ -12001,6 +12005,10 @@ b8908666b908bfff571a532e912d6830badf74ce92736c84184bde3d0c6d30d4:
   packages:
   - https---storage.googleapis.com-cos-tools-11316.134.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11316.134.0-kernel-headers.tgz
+b09408912a60d19b263389d9ec19dba8165daee26433b42a25f1499a6cb08110:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.59.1.el7.x86_64.rpm
 b45305728f51260d87d94afc69cdf43683f68d4585d0252c7467b31ebfc589f5:
   type: redhat
   packages:
