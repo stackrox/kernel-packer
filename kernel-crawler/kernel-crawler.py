@@ -677,10 +677,10 @@ def crawl(distro):
                             for ignored in repo.get("exceptions", [])
                         ]
 
-                        if not any(comparison):
-                            raise e
-                        else:
+                        if any(comparison):
                             sys.stderr.write("Error is ignored, continue\n")
+                        else:
+                            raise e
 
         except Exception as e:
             sys.stderr.write("ERROR: "+str(type(e))+str(e)+"\n")
