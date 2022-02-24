@@ -6511,10 +6511,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-693.2.1.el7.x86_64.rpm
-101ffdd037d151569cc7d95d1e558c384d8fc3b4e79a56d8de3216eb4ff6e14e:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2303.3.1-flatcar_developer_container.bin.bz2
 104ba2c9c7dfe170ebbff363aeb095129cdf03e9cef8adc1e8498ff71743061c:
   type: redhat
   packages:
@@ -10400,6 +10396,10 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1298.6.0-coreos_developer_container.bin.bz2
+99812299689334c5aec5dc2447adbc940685cbd07965028931b562a44742f783:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.0-flatcar_developer_container.bin.bz2
 a0e1ca49a7bc8f0ba7e227c340a82832e12d3759db27c674f214bf642b273cb0:
   type: ubuntu
   packages:
@@ -12483,6 +12483,11 @@ c04af904e69044b5f0faecdbf4c747d3eef5e4940db1c069fe4dd45877497c88:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.27.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.27.1.x86_64.rpm
+c5cfcf4f6013877f8300eeeb43022e0eb2968015b1f8bf1130a3153e041f5486:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1132-azure_4.15.0-1132.145_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1132_4.15.0-1132.145_all.deb
 c05c883d774eebadf75e240f0ed0971d1b6673211ea52b3cd0cd6e5fa7484a99:
   type: redhat
   packages:
@@ -15403,6 +15408,11 @@ f6c8c4872a558c8b90cc4020eb0bd15500abb7533f6820c4a5bd86d2957cff57:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.13.0-1007-aws_5.13.0-1007.8_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.13.0-1007_5.13.0-1007.8_all.deb
+f6c20c3532e151627632f1db2b7688fcfcfa45204fd81d1dd117caefbf7f2222:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-102-generic_5.4.0-102.115_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-102_5.4.0-102.115_all.deb
 f6f6388029331d118c41c1b50b9ce9bf4efed32d41a430c9348825807f60d041:
   type: coreos
   packages:
