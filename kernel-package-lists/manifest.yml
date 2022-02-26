@@ -99,6 +99,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69-generic_4.15.0-69.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69_4.15.0-69.78_all.deb
+0e23f898b0340790eab712e6b7a22730cde0392c52c56bf5b6326a0f925e4c45:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2135.4.0-flatcar_developer_container.bin.bz2
 0e27c2964869a4d58bcf67d0ce057baefe30338b26173dc1f0daaf722e91a9f4:
   type: redhat
   packages:
@@ -5201,10 +5205,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
-51d90cb355570b48aed6078aabfae3bed3e586df10f88a053da9c4d85a223b60:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.0-flatcar_developer_container.bin.bz2
 51ac14b87c5f050e29bb52c1656212ea52794a8efeb4ce4c9e392f60867fbd8c:
   type: minikube
   packages:
@@ -10042,6 +10042,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-220.el6.x86_64.rpm
+8440398d5ad07a49306155652bfe48a84b3c3a887671038da5123bd82e123af4:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.5.0-flatcar_developer_container.bin.bz2
 8638994f0497fdae7d341f1c6542106e47cc87c772b44e27498c5f29d93051ee:
   type: redhat
   packages:
@@ -12002,10 +12006,6 @@ b72691f49a4b24741bf50863cab1cf5f2d07b06612b7c1d1f216e71c1a41710b:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1068-fips_4.15.0-1068.77_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1068_4.15.0-1068.77_all.deb
-b87939d500da4e764e5f3841baceb3f63b0fd796b10085e0a6a660382bf1a2a6:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.2-flatcar_developer_container.bin.bz2
 b88515cb13569e1524d638c1a3dd18b14d806817b3a1fd8c5ad0e4b1f3d0e117:
   type: suse
   packages:
