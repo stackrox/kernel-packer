@@ -4133,6 +4133,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1110-azure_4.15.0-1110.122_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1110_4.15.0-1110.122_all.deb
+09ef04dd1ae230e5ff5d6a5b29a4e01dc79478cb98a0a11ca414b1319d86183a:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2023.4.0-flatcar_developer_container.bin.bz2
 10f0ce0720fe91446064a755f3e41718de68b405c740f89b82b3aa18e98c436f:
   type: redhat
   packages:
@@ -5201,6 +5205,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
+51d90cb355570b48aed6078aabfae3bed3e586df10f88a053da9c4d85a223b60:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.0-flatcar_developer_container.bin.bz2
 51ac14b87c5f050e29bb52c1656212ea52794a8efeb4ce4c9e392f60867fbd8c:
   type: minikube
   packages:
@@ -14278,10 +14286,6 @@ de7994ac308b01346f8a2cdfa7c5a47031c1b0b9bfa4c42a15e9446910e71086:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1024-gke_4.4.0-1024.24_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1024_4.4.0-1024.24_all.deb
-de9567f9a584ce9607ba55fa167df0116b1d1337b7cb15b6f24ede8f0a725563:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.4.0-flatcar_developer_container.bin.bz2
 de532750b238705ad548ef118173bd87c402ba54b4f2036f3cf5a8dd5a78e122:
   type: ubuntu
   packages:
