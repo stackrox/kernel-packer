@@ -9,6 +9,22 @@ RUN wget "https://github.com/jinfeihan57/p7zip/archive/${p7zip}.tar.gz" \
  && mkdir p7zip && tar xzf "${p7zip}.tar.gz" -C p7zip --strip-components=1 \
  && cd p7zip && make -j 4 all3 && make install
 
+FROM python:3.7-slim as unittest
+
+RUN apt-get update \
+ && apt-get install --no-install-recommends -y \
+    python3-lxml \
+    python3-urllib3 \
+    git \
+ && rm -rf /var/lib/apt
+
+RUN pip install --no-cache-dir \
+    lxml==4.2.4 urllib3==1.26.3
+
+COPY ["kernel-crawler.py", "/"]
+COPY ["tests.py", "/"]
+RUN python3 /tests.py
+
 FROM python:3.7-slim
 
 RUN apt-get update \
