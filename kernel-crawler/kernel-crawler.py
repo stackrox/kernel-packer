@@ -656,6 +656,9 @@ def crawl(distro):
                     except urllib3.exceptions.HTTPError as e:
                         sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
 
+        except urllib3.exceptions.ConnectTimeoutError as e:
+            sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
+
         except Exception as e:
             sys.stderr.write("ERROR: "+str(type(e))+str(e)+"\n")
             traceback.print_exc()
