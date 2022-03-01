@@ -511,6 +511,35 @@ repos = {
             "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_ESM_INFRA_BEARER_TOKEN",""))
         },
     ],
+    #"linux-azure-fips-cloud-tools-4.15.0-1002_4.15.0-1002.2_amd64.deb"
+    #"linux-azure-fips-cloud-tools-5.4.0-1022_5.4.0-1022.22%2Bfips1_amd64.deb"
+    #"linux-azure-fips-headers-4.15.0-1002_4.15.0-1002.2_all.deb"
+    #"linux-azure-fips-headers-5.4.0-1022_5.4.0-1022.22%2Bfips1_all.deb"
+    #"linux-azure-fips-tools-4.15.0-1002_4.15.0-1002.2_amd64.deb"
+    #"linux-azure-fips-tools-5.4.0-1022_5.4.0-1022.22%2Bfips1_amd64.deb"
+    #"linux-azure-fips_4.15.0-1002.2.diff.gz"
+    #"linux-azure-fips_4.15.0-1002.2.dsc"
+    #"linux-azure-fips_4.15.0.orig.tar.gz"
+    #"linux-azure-fips_5.4.0-1022.22%2Bfips1.diff.gz"
+    #"linux-azure-fips_5.4.0-1022.22%2Bfips1.dsc"
+    #"linux-azure-fips_5.4.0.orig.tar.gz"
+    #"linux-buildinfo-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb"
+    #"linux-buildinfo-5.4.0-1022-azure-fips_5.4.0-1022.22%2Bfips1_amd64.deb"
+    #"linux-cloud-tools-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb"
+    #"linux-cloud-tools-5.4.0-1022-azure-fips_5.4.0-1022.22%2Bfips1_amd64.deb"
+    #"linux-headers-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb"
+    #"linux-headers-5.4.0-1022-azure-fips_5.4.0-1022.22%2Bfips1_amd64.deb"
+    #"linux-image-unsigned-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb"
+    #"linux-image-unsigned-5.4.0-1022-azure-fips_5.4.0-1022.22%2Bfips1_amd64.deb"
+    #"linux-image-unsigned-hmac-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb"
+    #"linux-image-unsigned-hmac-5.4.0-1022-azure-fips_5.4.0-1022.22%2Bfips1_amd64.deb"
+    #"linux-modules-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb"
+    #"linux-modules-5.4.0-1022-azure-fips_5.4.0-1022.22%2Bfips1_amd64.deb"
+    #"linux-modules-extra-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb"
+    #"linux-modules-extra-5.4.0-1022-azure-fips_5.4.0-1022.22%2Bfips1_amd64.deb"
+    #"linux-tools-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb"
+    #"linux-tools-5.4.0-1022-azure-fips_5.4.0-1022.22%2Bfips1_amd64.deb"
+
     "Ubuntu-FIPS": [
         # Crawl Ubuntu FIPS kernel headers
         {
@@ -526,7 +555,8 @@ repos = {
             "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
             "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-fips/$')]/@href",
             "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]-azure(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-fips-headers-4.15.0-1002_4.15.0-1002.2_all.deb$')]/@href",
+            #"page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]-azure(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
             "exclude_patterns": ["lowlatency"],
             "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
         },
