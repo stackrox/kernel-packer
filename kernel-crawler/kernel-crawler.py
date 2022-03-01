@@ -555,14 +555,14 @@ repos = {
     "Garden-Linux" : [
         {
             "root": "http://45.86.152.1/gardenlinux/pool/main/l/",
-            "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
+            "discovery_pattern": "/html/body//a[regex:test(@href, '^(linux/|linux-signed-amd64/)')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-headers-[4-9].[0-9.]+-[^-]+-(?:cloud-)?(?:amd64|common_).*(?:amd64|all).deb$')]/@href",
             "exclude_patterns": garden_excludes,
         },
         {
             "root": "http://45.86.152.1/gardenlinux/pool/main/l/",
-            "discovery_pattern": "/html/body//a[regex:test(@href, '^linux/')]/@href",
+            "discovery_pattern": "/html/body//a[regex:test(@href, '^(linux/|linux-signed-amd64/)')]/@href",
             "subdirs": [""],
             "page_pattern": "/html/body//a[regex:test(@href, '^linux-kbuild-[4-9]\..*_amd64\.deb$')]/@href",
             "exclude_patterns": garden_excludes,
