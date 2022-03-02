@@ -193,16 +193,10 @@ func TestReformatSuse(t *testing.T) {
 
 func TestReformatAzureFips(t *testing.T) {
 	packages := []string{
-		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/noarch/kernel-devel-5.3.18-150300.59.43.1.noarch.rpm",
-		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/noarch/kernel-devel-5.3.18-150300.59.46.1.noarch.rpm",
-		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/x86_64/kernel-default-devel-5.3.18-150300.59.43.1.x86_64.rpm",
-		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/x86_64/kernel-default-devel-5.3.18-150300.59.46.1.x86_64.rpm",
-		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP1/x86_64/update/noarch/kernel-devel-4.12.14-197.10.1.noarch.rpm",
-		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP1/x86_64/update/x86_64/kernel-default-devel-4.12.14-197.10.1.x86_64.rpm",
-		"https://updates.suse.com/SUSE/Updates/SLE-SERVER/12-SP5/x86_64/update/x86_64/kernel-default-devel-4.12.14-122.103.1.x86_64.rpm",
-		"https://updates.suse.com/SUSE/Updates/SLE-SERVER/12-SP5/x86_64/update/noarch/kernel-devel-4.12.14-122.103.1.noarch.rpm",
-		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP2/x86_64/update/noarch/kernel-devel-5.3.18-24.75.2.noarch.rpm",
-		"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP2/x86_64/update/x86_64/kernel-default-devel-5.3.18-24.75.3.x86_64.rpm",
+		"---esm.ubuntu.com-fips-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-1002_4.15.0-1002.2_all.deb",
+		"---esm.ubuntu.com-fips-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb",
+		"---esm.ubuntu.com-fips-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-1002_4.15.0-1002.2_all.deb",
+		"---esm.ubuntu.com-fips-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb",
 	}
 
 	groups, err := reformatAzureFips(packages)
@@ -210,24 +204,10 @@ func TestReformatAzureFips(t *testing.T) {
 
 	expectedGroups := [][]string{
 		{
-			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/noarch/kernel-devel-5.3.18-150300.59.43.1.noarch.rpm",
-			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/x86_64/kernel-default-devel-5.3.18-150300.59.43.1.x86_64.rpm",
-		},
-		{
-			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/noarch/kernel-devel-5.3.18-150300.59.46.1.noarch.rpm",
-			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP3/x86_64/update/x86_64/kernel-default-devel-5.3.18-150300.59.46.1.x86_64.rpm",
-		},
-		{
-			"https://updates.suse.com/SUSE/Updates/SLE-SERVER/12-SP5/x86_64/update/x86_64/kernel-default-devel-4.12.14-122.103.1.x86_64.rpm",
-			"https://updates.suse.com/SUSE/Updates/SLE-SERVER/12-SP5/x86_64/update/noarch/kernel-devel-4.12.14-122.103.1.noarch.rpm",
-		},
-		{
-			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP1/x86_64/update/noarch/kernel-devel-4.12.14-197.10.1.noarch.rpm",
-			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP1/x86_64/update/x86_64/kernel-default-devel-4.12.14-197.10.1.x86_64.rpm",
-		},
-		{
-			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP2/x86_64/update/noarch/kernel-devel-5.3.18-24.75.2.noarch.rpm",
-			"https://updates.suse.com/SUSE/Updates/SLE-Module-Basesystem/15-SP2/x86_64/update/x86_64/kernel-default-devel-5.3.18-24.75.3.x86_64.rpm",
+			"---esm.ubuntu.com-fips-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-1002_4.15.0-1002.2_all.deb",
+			"---esm.ubuntu.com-fips-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb",
+			"---esm.ubuntu.com-fips-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-1002_4.15.0-1002.2_all.deb",
+			"---esm.ubuntu.com-fips-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb",
 		},
 	}
 
