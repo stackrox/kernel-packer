@@ -540,6 +540,64 @@ repos = {
     #"linux-tools-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb"
     #"linux-tools-5.4.0-1022-azure-fips_5.4.0-1022.22%2Bfips1_amd64.deb"
 
+    "Ubuntu-Azure-FIPS": [
+        # Crawl Ubuntu Azure FIPS kernel headers
+        {
+            "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-fips/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-fips-headers-4.15.0-1002_4.15.0-1002.2_all.deb$')]/@href",
+            #"page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]-azure(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ["lowlatency"],
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
+        },
+        {
+            "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-fips/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-4.15.0-1002-azure-fips_4.15.0-1002.2_amd64.deb$')]/@href",
+            #"page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]-azure(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ["lowlatency"],
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
+        },
+        # linux-azure AMD64 headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?/')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-[4-9].*-azure.*amd64\.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
+        },
+
+        # linux-azure "all" headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?/')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?-headers-[4-9].*_all\.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes + ubuntu_backport_excludes,
+        },
+
+        # Special case for Ubuntu Azure kernel 4.18, that only exists as a backport.
+        # linux-azure 4.18 backports AMD64 headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-azure/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-headers-4\.18[-.0-9]+azure_4\.18[-.0-9]+~.*amd64.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes,
+        },
+
+        # linux-azure 4.18 backports "all" headers, distributed from main
+        {
+            "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[@href = 'linux-azure/']/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-headers-4\.18[-.0-9]+_4\.18[-.0-9]+~.*_all.deb$')]/@href",
+            "exclude_patterns": ubuntu_excludes,
+        },
+    ],
+
     "Ubuntu-FIPS": [
         # Crawl Ubuntu FIPS kernel headers
         {
