@@ -8,8 +8,13 @@ SHELL=/bin/bash -o pipefail
 .PHONY: all
 all: crawl
 
+.PHONY: tests
+tests:
+	docker build -t kernel-crawler-tests -f tests/Dockerfile .
+	docker run --rm kernel-crawler-tests
+
 .PHONY: build-crawl-container
-build-crawl-container: Dockerfile kernel-crawler.py main.go
+build-crawl-container: Dockerfile kernel-crawler.py main.go tests
 	docker build -t kernel-crawler .
 	docker build -t rhel-login rhel-login
 
