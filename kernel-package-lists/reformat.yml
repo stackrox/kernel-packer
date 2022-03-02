@@ -130,6 +130,12 @@
   file: ubuntu-fips.txt
   reformat: pairs
 
+- name: ubuntu-azure-fips
+  description: Ubuntu Azure FIPS Kernels
+  type: ubuntu-azure-fips
+  file: ubuntu-azure-fips.txt
+  reformat: ubuntu-azure-fips
+
 - name: minikube
   description: Minikube VM Kernels
   type: minikube
