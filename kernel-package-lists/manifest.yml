@@ -5207,10 +5207,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
-51d90cb355570b48aed6078aabfae3bed3e586df10f88a053da9c4d85a223b60:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.0-flatcar_developer_container.bin.bz2
 51ac14b87c5f050e29bb52c1656212ea52794a8efeb4ce4c9e392f60867fbd8c:
   type: minikube
   packages:
@@ -8094,6 +8090,10 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.2.2.el7.x86_64.rpm
+3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -13952,6 +13952,11 @@ d65702bd813094e18d581b5bb3bfe18fde3bef03a70cfff37b9d70763e7683b3:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-184-generic_4.4.0-184.214_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-184_4.4.0-184.214_all.deb
+d73847df5776601f594b94cf3a164c5ebd9fc7d4f03804d553bf4e0ec9229399:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1064_5.4.0-1064.67_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1064-gke_5.4.0-1064.67_amd64.deb
 d277326d16e90b04acebc77b59eeb6a85bfb2ca17ba0c8021d27e88a05acb72d:
   type: redhat
   packages:
