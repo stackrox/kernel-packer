@@ -1,10 +1,20 @@
 #!/usr/bin/env python3
 
+"""
+This script is used to crawl Garden Linux releases and get the URLs for the
+packages needed to build kernel modules, the logic goes a little like this:
+- Query the github API to get the garden linux releases.
+- Extract the download URL for the `component-descriptor`, a YAML file holding a
+  description of packages used to build the release.
+- Find the `linux-image` package from the `component-descriptor` and extract the
+  kernel version numbers from it.
+- Print the URLs holding the required packages to stdout.
+"""
+
 import requests
 import yaml
 import re
 import sys
-import json
 
 image_version_re = re.compile(
     r'^linux-image-(((\d\.\d+)\.\d+-garden)(?:-cloud)?-amd64) (\d\.\d+\.\d+-\d+gardenlinux\d+)$')
@@ -64,6 +74,22 @@ def get_component_descriptors() -> list:
 
 
 def get_kernel_versions(component_descriptors: list) -> list:
+    """
+    Uses a list of URLs to download `component-descriptors` that describe the
+    build for a given Garden Linux release.
+
+    From those files, a package starting with `linux-image` are used to get the
+    kernel version information. A list of tuples containing the kernel
+    information is returned.
+
+    One of the returned tuples looks something a little like this:
+    (
+        release: 5.10
+        debian_kernel: 5.10.100-garden-cloud-amd64
+        short_debian_kernel: 5.10.100-garden
+        garden_kernel: 5.10.100-0gardenlinux1
+    )
+    """
     kernel_versions = []
 
     for cd in component_descriptors:
@@ -106,6 +132,10 @@ def get_kernel_versions(component_descriptors: list) -> list:
 
 
 def print_package_urls(kernel_versions: list):
+    """
+    Gets a list of tuples containing kernel information and prints a list with
+    URLs for the packages needed to stdout. No duplicate URLs allowed.
+    """
     urls = []
     for kv in kernel_versions:
         release, debian_kernel, short_debian_kernel, garden_kernel = kv
