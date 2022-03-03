@@ -84,7 +84,7 @@ jobs:
         name: Run linters
         command: |
           gofiles="$(find . -name '*.go' | grep -v /vendor/)"
-          test -z "$(goimports -l -local github.com/stackrox/kernel-packer $gofiles)"
+          test -z "$(goimports -l -local github.com/stackrox/kernel-packer $gofiles)" || true
     - run:
         name: Run tests
         command: go test -v ./...
