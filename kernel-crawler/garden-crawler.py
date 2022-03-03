@@ -4,19 +4,40 @@ import requests
 import yaml
 import re
 import sys
+import json
 
-image_version_re = re.compile(r'^linux-image-(((\d\.\d+)\.\d+-garden)(?:-cloud)?-amd64) (\d\.\d+\.\d+-\d+gardenlinux\d+)$')
+image_version_re = re.compile(
+    r'^linux-image-(((\d\.\d+)\.\d+-garden)(?:-cloud)?-amd64) (\d\.\d+\.\d+-\d+gardenlinux\d+)$')
 
 
-def get_releases() -> dict:
-    response = requests.get(
-        'https://api.github.com/repos/gardenlinux/gardenlinux/releases')
+def get_releases() -> list:
+    page = 1
+    per_page = 30
+    release_count = 30
 
-    if not response.ok:
-        sys.stderr.write(f'Failed to get tags for Garden Linux - {response.status_code}\n')
-        return None
+    releases = []
 
-    return response.json()
+    while release_count == per_page:
+        params = {
+            'page': page,
+            'per_page': per_page
+        }
+
+        response = requests.get(
+            'https://api.github.com/repos/gardenlinux/gardenlinux/releases', params=params)
+
+        if not response.ok:
+            sys.stderr.write(
+                f'Failed to get tags for Garden Linux - {response.status_code}\n')
+            return None
+
+        response_page = response.json()
+        releases += response_page
+
+        release_count = len(response_page)
+        page += 1
+
+    return releases
 
 
 def get_component_descriptors() -> list:
@@ -25,9 +46,6 @@ def get_component_descriptors() -> list:
     returns a list of URLs where said descriptors can be downloaded from.
     """
     releases = get_releases()
-
-    if releases is None:
-        return
 
     component_descriptors = []
     for release in releases:
@@ -77,7 +95,8 @@ def get_kernel_versions(component_descriptors: list) -> list:
                     short_debian_kernel = image[2]
                     garden_kernel = image[4]
 
-                    kernel_version = (release, debian_kernel, short_debian_kernel, garden_kernel)
+                    kernel_version = (release, debian_kernel,
+                                      short_debian_kernel, garden_kernel)
                     if kernel_version not in kernel_versions:
                         kernel_versions.append(kernel_version)
 
@@ -105,6 +124,7 @@ def print_package_urls(kernel_versions: list):
             urls.append(url_kbuild)
 
     print('\n'.join(urls))
+
 
 def main():
     component_descriptors = get_component_descriptors()
