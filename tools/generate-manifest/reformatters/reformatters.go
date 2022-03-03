@@ -20,7 +20,6 @@ var (
 	reformatters = map[string]ReformatterFunc{
 		"one-to-each":         reformatOneToEach,
 		"one-to-pairs":        reformatOneToPairs,
-		"ubuntu-azure-fips":   reformatAzureFips,
 		"pairs":               reformatPairs,
 		"suse":                reformatSuse,
 		"single":              reformatSingle,
