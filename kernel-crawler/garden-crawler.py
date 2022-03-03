@@ -87,12 +87,24 @@ def get_kernel_versions(component_descriptors: list) -> list:
 
 
 def print_package_urls(kernel_versions: list):
+    urls = []
     for kv in kernel_versions:
         release, debian_kernel, short_debian_kernel, garden_kernel = kv
 
-        print(f'http://repo.gardenlinux.io/gardenlinux/pool/main/l/linux-{release}/linux-headers-{short_debian_kernel}-common_{garden_kernel}_all.deb')
-        print(f'http://repo.gardenlinux.io/gardenlinux/pool/main/l/linux-{release}/linux-headers-{debian_kernel}_{garden_kernel}_amd64.deb')
-        print(f'http://repo.gardenlinux.io/gardenlinux/pool/main/l/linux-{release}/linux-kbuild-{release}_{garden_kernel}_amd64.deb')
+        url_all = f'http://repo.gardenlinux.io/gardenlinux/pool/main/l/linux-{release}/linux-headers-{short_debian_kernel}-common_{garden_kernel}_all.deb'
+        url_amd64 = f'http://repo.gardenlinux.io/gardenlinux/pool/main/l/linux-{release}/linux-headers-{debian_kernel}_{garden_kernel}_amd64.deb'
+        url_kbuild = f'http://repo.gardenlinux.io/gardenlinux/pool/main/l/linux-{release}/linux-kbuild-{release}_{garden_kernel}_amd64.deb'
+
+        if url_all not in urls:
+            urls.append(url_all)
+
+        if url_amd64 not in urls:
+            urls.append(url_amd64)
+
+        if url_kbuild not in urls:
+            urls.append(url_kbuild)
+
+    print('\n'.join(urls))
 
 def main():
     component_descriptors = get_component_descriptors()
