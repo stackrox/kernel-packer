@@ -17,13 +17,13 @@ var (
 	suseVersion = regexp.MustCompile(`\d+\.\d+\.\d+-[a-z]*(?:\d{6}\.)*\d+\.\d+`)
 
 	reformatters = map[string]ReformatterFunc{
-		"one-to-each":         reformatOneToEach,
-		"one-to-pairs":        reformatOneToPairs,
-		"pairs":               reformatPairs,
-		"suse":                reformatSuse,
-		"single":              reformatSingle,
-		"debian":              reformatDebian,
-		"cos":                 reformatCOS,
+		"one-to-each":  reformatOneToEach,
+		"one-to-pairs": reformatOneToPairs,
+		"pairs":        reformatPairs,
+		"suse":         reformatSuse,
+		"single":       reformatSingle,
+		"debian":       reformatDebian,
+		"cos":          reformatCOS,
 	}
 
 	supportedUbuntuBackports = []string{"16.04", "20.04"}
