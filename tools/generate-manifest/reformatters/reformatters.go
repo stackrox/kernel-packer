@@ -15,7 +15,6 @@ import (
 var (
 	reVersion   = regexp.MustCompile(`(\d+\.\d+\.\d+-\d+)\.(\d+)(~[\d.]+)?_`)
 	suseVersion = regexp.MustCompile(`\d+\.\d+\.\d+-[a-z]*(?:\d{6}\.)*\d+\.\d+`)
-	azureFipsVersion   = regexp.MustCompile(`\d+\.\d+.\d+-\d+`)
 
 	reformatters = map[string]ReformatterFunc{
 		"one-to-each":         reformatOneToEach,
