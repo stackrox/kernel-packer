@@ -424,33 +424,3 @@ func reformatSuse(packages []string) ([][]string, error) {
 
 	return manifests, nil
 }
-
-func reformatAzureFips(packages []string) ([][]string, error) {
-	var (
-		manifests = make([][]string, 0, len(packages)/4)
-		versions  = make(map[string][]string)
-	)
-
-	for _, pkg := range packages {
-		matches := azureFipsVersion.FindStringSubmatch(pkg)
-		if len(matches) != 1 {
-			return nil, fmt.Errorf("regex failed to match " + pkg)
-		}
-
-		version := matches[0]
-		if _, found := versions[version]; !found {
-			versions[version] = make([]string, 0, 4)
-		}
-		versions[version] = append(versions[version], pkg)
-	}
-
-	for ver, pkgPair := range versions {
-		// Sanity check, there should always be a pair of packages.
-		if len(pkgPair) != 4 {
-			return nil, fmt.Errorf("version %q: unpaired package %v", ver, pkgPair)
-		}
-		manifests = append(manifests, pkgPair)
-	}
-
-	return manifests, nil
-}
