@@ -5,7 +5,7 @@ import yaml
 import re
 import sys
 
-image_version_re = re.compile(r'^linux-image-(((\d\.\d+)\.\d+-garden)(?:-cloud)?-amd64) (\d\.\d+\.\d+-0gardenlinux1)$')
+image_version_re = re.compile(r'^linux-image-(((\d\.\d+)\.\d+-garden)(?:-cloud)?-amd64) (\d\.\d+\.\d+-\d+gardenlinux\d+)$')
 
 
 def get_releases() -> dict:
