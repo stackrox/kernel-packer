@@ -91,6 +91,7 @@ def get_kernel_versions(component_descriptors: list) -> list:
     )
     """
     kernel_versions = []
+    metadata_label = 'gardener.cloud/gardenlinux/ci/build-metadata'
 
     for cd in component_descriptors:
         response = requests.get(cd)
@@ -105,31 +106,31 @@ def get_kernel_versions(component_descriptors: list) -> list:
             sys.stderr.write(f'Failed to load component descriptors - {cd}: {e}\n')
             continue
 
-        labels = []
-        for resource in component['component']['resources']:
-            labels += resource['labels']
+        pkgs = [
+            pkg
+            for resource in component['component']['resources']
+            for label in resource['labels']
+            if label['name'] == metadata_label
+            for pkg in label['value']['debianPackages']
+            if 'linux-image' in pkg
+        ]
 
-        for label in labels:
-            if label['name'] != 'gardener.cloud/gardenlinux/ci/build-metadata':
+        for pkg in pkgs:
+            sys.stderr.write(f'{json.dumps(pkg)}\n')
+            image = image_version_re.match(pkg)
+
+            if image is None:
                 continue
 
-            for pkg in label['value']['debianPackages']:
-                image = image_version_re.match(pkg)
+            release = image[3]
+            debian_kernel = image[1]
+            short_debian_kernel = image[2]
+            garden_kernel = image[4]
 
-                if image is None:
-                    continue
-
-                release = image[3]
-                debian_kernel = image[1]
-                short_debian_kernel = image[2]
-                garden_kernel = image[4]
-
-                kernel_version = (release, debian_kernel,
-                                short_debian_kernel, garden_kernel)
-                if kernel_version not in kernel_versions:
-                    kernel_versions.append(kernel_version)
-
-                break
+            kernel_version = (release, debian_kernel,
+                            short_debian_kernel, garden_kernel)
+            if kernel_version not in kernel_versions:
+                kernel_versions.append(kernel_version)
 
     return kernel_versions
 
