@@ -105,28 +105,31 @@ def get_kernel_versions(component_descriptors: list) -> list:
             sys.stderr.write(f'Failed to load component descriptors - {cd}: {e}\n')
             continue
 
+        labels = []
         for resource in component['component']['resources']:
-            for label in resource['labels']:
-                if label['name'] != 'gardener.cloud/gardenlinux/ci/build-metadata':
+            labels += resource['labels']
+
+        for label in labels:
+            if label['name'] != 'gardener.cloud/gardenlinux/ci/build-metadata':
+                continue
+
+            for pkg in label['value']['debianPackages']:
+                image = image_version_re.match(pkg)
+
+                if image is None:
                     continue
 
-                for pkg in label['value']['debianPackages']:
-                    image = image_version_re.match(pkg)
+                release = image[3]
+                debian_kernel = image[1]
+                short_debian_kernel = image[2]
+                garden_kernel = image[4]
 
-                    if image is None:
-                        continue
+                kernel_version = (release, debian_kernel,
+                                short_debian_kernel, garden_kernel)
+                if kernel_version not in kernel_versions:
+                    kernel_versions.append(kernel_version)
 
-                    release = image[3]
-                    debian_kernel = image[1]
-                    short_debian_kernel = image[2]
-                    garden_kernel = image[4]
-
-                    kernel_version = (release, debian_kernel,
-                                      short_debian_kernel, garden_kernel)
-                    if kernel_version not in kernel_versions:
-                        kernel_versions.append(kernel_version)
-
-                    break
+                break
 
     return kernel_versions
 
