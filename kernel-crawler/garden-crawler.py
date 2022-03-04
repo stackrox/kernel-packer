@@ -116,7 +116,6 @@ def get_kernel_versions(component_descriptors: list) -> list:
         ]
 
         for pkg in pkgs:
-            sys.stderr.write(f'{json.dumps(pkg)}\n')
             image = image_version_re.match(pkg)
 
             if image is None:
