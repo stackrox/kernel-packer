@@ -102,7 +102,7 @@ def get_kernel_versions(component_descriptors: list) -> list:
         try:
             component = yaml.safe_load(response.text)
         except yaml.YAMLError as e:
-            sys.stderr.write(f'Failed to load component descriptors - {cd}\n')
+            sys.stderr.write(f'Failed to load component descriptors - {cd}: {e}\n')
             continue
 
         for resource in component['component']['resources']:
