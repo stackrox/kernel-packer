@@ -136,13 +136,15 @@ def print_package_urls(kernel_versions: list):
     Gets a list of tuples containing kernel information and prints a list with
     URLs for the packages needed to stdout. No duplicate URLs allowed.
     """
+    base_url = 'http://repo.gardenlinux.io/gardenlinux/pool/main/l'
+
     urls = []
     for kv in kernel_versions:
         release, debian_kernel, short_debian_kernel, garden_kernel = kv
 
-        url_all = f'http://repo.gardenlinux.io/gardenlinux/pool/main/l/linux-{release}/linux-headers-{short_debian_kernel}-common_{garden_kernel}_all.deb'
-        url_amd64 = f'http://repo.gardenlinux.io/gardenlinux/pool/main/l/linux-{release}/linux-headers-{debian_kernel}_{garden_kernel}_amd64.deb'
-        url_kbuild = f'http://repo.gardenlinux.io/gardenlinux/pool/main/l/linux-{release}/linux-kbuild-{release}_{garden_kernel}_amd64.deb'
+        url_all = f'{base_url}/linux-{release}/linux-headers-{short_debian_kernel}-common_{garden_kernel}_all.deb'
+        url_amd64 = f'{base_url}/linux-{release}/linux-headers-{debian_kernel}_{garden_kernel}_amd64.deb'
+        url_kbuild = f'{base_url}/linux-{release}/linux-kbuild-{release}_{garden_kernel}_amd64.deb'
 
         if url_all not in urls:
             urls.append(url_all)
