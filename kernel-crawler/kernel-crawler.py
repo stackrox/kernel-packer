@@ -560,6 +560,24 @@ repos = {
             "exclude_patterns": ["lowlatency"],
             "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
         },
+        {
+            "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '.*')]/@href",
+            #"page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]-azure(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ["lowlatency"],
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
+        },
+        {
+            "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '.*')]/@href",
+            #"page_pattern" : "/html/body//a[regex:test(@href, '^linux-azure-(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]-azure(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ["lowlatency"],
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
+        },
         # linux-azure AMD64 headers, distributed from main
         {
             "root" : "http://security.ubuntu.com/ubuntu/pool/main/l/",
