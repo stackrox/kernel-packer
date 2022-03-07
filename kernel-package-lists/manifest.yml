@@ -12283,6 +12283,12 @@ bcf8b0d556a13b385f002b82080c1cae59390be22708660571aff257eb6113b1:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.116.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.116.1.x86_64.rpm
+bd0c9d95082ef1d04d3ea223fc1beb38bd8793c063b18f0d476097135c7c13a4:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.92-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-cloud-amd64_5.10.92-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-common_5.10.92-1_all.deb
 bd3d4d461e3842d136eae63300a162ce4e188725f923abff6bd9f216680146bd:
   type: redhat
   packages:
@@ -13586,10 +13592,6 @@ d08d0877a0c46b66d51af2074940ec13f5f605343ff641b69f05311d9996d08d:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.8-linux-headers-5.8.0-1042-azure_5.8.0-1042.45-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.8-linux-azure-5.8-headers-5.8.0-1042_5.8.0-1042.45-20.04.1_all.deb
-d9e0c80152ff9b4656397ac316043c2d51cb9b157e60c12b29d59fcf55efdc09:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.2-flatcar_developer_container.bin.bz2
 d9d4d53bbc7cb1a64bfe04fbcda0d80dfb8ab4b2164b3f2d99051a7fcd141fd4:
   type: ubuntu
   packages:
@@ -14507,6 +14509,10 @@ e3bd5e8e44b2659d5f4ab7856e972173065d5bb9a4f3137c2fec392ccfbf28a6:
   packages:
   - https---storage.googleapis.com-cos-tools-12605.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12605.0.0-kernel-headers.tgz
+e4a3b478d2a0f23100d42364bc65adbccd36717bb199cf7ae8f0f7a1782d98fe:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2643.1.1-flatcar_developer_container.bin.bz2
 e4b185aa240032e583ca18add10d6ea9bf50340c95d0d9516eba9f7e9f373547:
   type: ubuntu
   packages:
