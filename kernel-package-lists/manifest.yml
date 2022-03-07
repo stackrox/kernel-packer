@@ -3154,6 +3154,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.11-100.fc32-x86_64-kernel-devel-5.9.11-100.fc32.x86_64.rpm
+7eced78a420f849feb7db5815bcb288ffb18a276e6f0379df1cf216ea47ae154:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1416.11-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-13310.1416.11-kernel-headers.tgz
 7ccf6924d22d12e9f04be19304d74bb54b986f65a1136e80c60124eeaa6d06ff:
   type: redhat
   packages:
@@ -3778,6 +3783,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16207.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16207.0.0-kernel-headers.tgz
+9b76b52d0f5f7222d08492d200b280914509f37083d8ab2fb0edef89292d16c2:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.604.19-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.604.19-kernel-headers.tgz
 9c85a386db4ee65858fd0d4c39750edf53cdecd5220ce8f4034a52a29e91bdee:
   type: cos
   packages:
@@ -14497,10 +14507,6 @@ e3bd5e8e44b2659d5f4ab7856e972173065d5bb9a4f3137c2fec392ccfbf28a6:
   packages:
   - https---storage.googleapis.com-cos-tools-12605.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12605.0.0-kernel-headers.tgz
-e4a3b478d2a0f23100d42364bc65adbccd36717bb199cf7ae8f0f7a1782d98fe:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2643.1.1-flatcar_developer_container.bin.bz2
 e4b185aa240032e583ca18add10d6ea9bf50340c95d0d9516eba9f7e9f373547:
   type: ubuntu
   packages:
@@ -15279,6 +15285,11 @@ ef99e4bcb3b55f2b46a91b5d6c0b99aa3e00b4793f559dfe4c2a5ca792d1ead3:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.78-1.el7.elrepo.x86_64.rpm
+ef99f20b2587df67097f54cc5bf4d2be4da4929a6e592f5aa6f4001977c53ebe:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.102.23-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.102.23-kernel-headers.tgz
 ef14654d03771ddffe50dd0b34ea4a7e5b7b31138b461ee1b08eedb5463255f3:
   type: redhat
   packages:
