@@ -546,7 +546,7 @@ repos = {
         # Crawl Ubuntu FIPS kernel headers
         {
             "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux(-gcp)?-fips/$')]/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-gcp)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
             "exclude_patterns": ubuntu_fips_excludes,
@@ -555,7 +555,7 @@ repos = {
         # Crawl Ubuntu FIPS Updates kernel headers
         {
             "root" : "https://esm.ubuntu.com/fips-updates/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux(-gcp)?-fips/$')]/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-gcp)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
             "exclude_patterns": ubuntu_fips_excludes,
@@ -567,7 +567,7 @@ repos = {
         # Crawl Ubuntu FIPS kernel headers
         {
             "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux(-aws)?-fips/$')]/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(aws-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-aws)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
             "exclude_patterns": ubuntu_fips_excludes,
@@ -576,7 +576,7 @@ repos = {
         # Crawl Ubuntu FIPS Updates kernel headers
         {
             "root" : "https://esm.ubuntu.com/fips-updates/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux(-aws)?-fips/$')]/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(aws-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-aws)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
             "exclude_patterns": ubuntu_fips_excludes,
@@ -588,7 +588,7 @@ repos = {
         # Crawl Ubuntu FIPS kernel headers
         {
             "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux(-azure)?-fips/$')]/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(azure-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-azure)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
             "exclude_patterns": ubuntu_fips_excludes,
@@ -597,7 +597,7 @@ repos = {
         # Crawl Ubuntu FIPS Updates kernel headers
         {
             "root" : "https://esm.ubuntu.com/fips-updates/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux(-azure)?-fips/$')]/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?/$')]/@href",
             "subdirs" : [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(azure-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-azure)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
             "exclude_patterns": ubuntu_fips_excludes,
