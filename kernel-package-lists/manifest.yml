@@ -5070,6 +5070,10 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1118-azure_4.15.0-1118.131-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1118_4.15.0-1118.131-16.04.1_all.deb
+46c61666ffc89bd1b937a4ac5c2fdb3d7d79c13c72f6b962674f8baac87247a2:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.10.0-flatcar_developer_container.bin.bz2
 46abcbfea9b4a5154640e78bd5b343b802f67d0d15da8abcdc94c4464b6d32f9:
   type: ubuntu
   packages:
@@ -10810,12 +10814,6 @@ a97bb6a7bf6ca3219047f56b1dd5af112383ecf0425fd2087220b95c4bc560a7:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.6-300.fc34-x86_64-kernel-devel-5.12.6-300.fc34.x86_64.rpm
-a160a0a9139647a015b7459e012a38d1bff9d08cf2d6b04e240ffebbef783048:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.92-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-amd64_5.10.92-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-common_5.10.92-1_all.deb
 a195a9650455df4ff047a208328befa50810a37c20f93a60620dc067bf6a9077:
   type: redhat
   packages:
@@ -12285,12 +12283,6 @@ bcf8b0d556a13b385f002b82080c1cae59390be22708660571aff257eb6113b1:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.116.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.116.1.x86_64.rpm
-bd0c9d95082ef1d04d3ea223fc1beb38bd8793c063b18f0d476097135c7c13a4:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.92-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-cloud-amd64_5.10.92-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-common_5.10.92-1_all.deb
 bd3d4d461e3842d136eae63300a162ce4e188725f923abff6bd9f216680146bd:
   type: redhat
   packages:
