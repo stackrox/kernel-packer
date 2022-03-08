@@ -82,8 +82,17 @@ crawl-ubuntu-fips: export UBUNTU_FIPS_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts
 crawl-ubuntu-fips: export UBUNTU_FIPS_UPDATES_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-fips-token $(UBUNTU_FIPS_UPDATES_ATTACH_URL))
 
 .PHONY: crawl-ubuntu-fips
-crawl-ubuntu-fips: build-crawl-container
+crawl-ubuntu-fips: build-crawl-container crawl-ubuntu-gcp-fips crawl-ubuntu-aws-fips crawl-ubuntu-azure-fips
 	docker run --rm -i -e UBUNTU_FIPS_BEARER_TOKEN -e UBUNTU_FIPS_UPDATES_BEARER_TOKEN kernel-crawler crawl Ubuntu-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-fips.txt
+
+crawl-ubuntu-gcp-fips: build-crawl-container
+	docker run --rm -i -e UBUNTU_FIPS_BEARER_TOKEN -e UBUNTU_FIPS_UPDATES_BEARER_TOKEN kernel-crawler crawl Ubuntu-GCP-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-gcp-fips.txt
+
+crawl-ubuntu-aws-fips: build-crawl-container
+	docker run --rm -i -e UBUNTU_FIPS_BEARER_TOKEN -e UBUNTU_FIPS_UPDATES_BEARER_TOKEN kernel-crawler crawl Ubuntu-AWS-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws-fips.txt
+
+crawl-ubuntu-azure-fips: build-crawl-container
+	docker run --rm -i -e UBUNTU_FIPS_BEARER_TOKEN -e UBUNTU_FIPS_UPDATES_BEARER_TOKEN kernel-crawler crawl Ubuntu-Azure-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure-fips.txt
 
 .PHONY: crawl-oracle-uek
 crawl-oracle-uek: build-crawl-container
