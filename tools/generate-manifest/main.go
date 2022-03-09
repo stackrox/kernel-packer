@@ -30,7 +30,6 @@ func main() {
 func partitionURLs(urls []string) ([][]string, error) {
 	urlsByHost := make(map[string][]string)
 	for _, urlStr := range urls {
-		// Probably not the best solution
 		r := regexp.MustCompile(`.*https\:`)
 		urlStr = r.ReplaceAllString(urlStr, "https:")
 		u, err := url.Parse(urlStr)
