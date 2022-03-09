@@ -105,6 +105,17 @@ crawl-suse: build-crawl-container
 			-repos-names-file /suse/repo-names.txt \
 		> $(CRAWLED_PACKAGE_DIR)/suse.txt
 
+.PHONY: build-rhsm-crawler
+build-rhsm-crawler:
+	docker build --tag rhsm-crawler $(CURDIR)/rhel-subscription-crawler
+
+
+.PHONY: crawl-rhsm
+crawl-rhsm: build-rhsm-crawler
+	docker run -e RHSM_OFFLINE_TOKEN --rm -i rhsm-crawler:latest > $(CRAWLED_PACKAGE_DIR)/rhel.txt
+	@cat $(CRAWLED_PACKAGE_DIR)/rhel.txt | tr -d '@\^\r' > $(CRAWLED_PACKAGE_DIR)/rhel_2.txt
+	@mv $(CRAWLED_PACKAGE_DIR)/rhel_2.txt $(CRAWLED_PACKAGE_DIR)/rhel.txt
+
 .PHONY: crawl-rhel
 crawl-rhel: build-crawl-container
 	# Trade a username & password for a certificate keypair that allows up to
@@ -278,4 +289,4 @@ crawl-minikube: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Minikube > $(CRAWLED_PACKAGE_DIR)/minikube.txt
 
 .PHONY: crawl
-crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-esm crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos crawl-cos crawl-ubuntu-standard crawl-minikube crawl-ubuntu-fips
+crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-esm crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos crawl-cos crawl-ubuntu-standard crawl-minikube crawl-rhsm crawl-ubuntu-fips

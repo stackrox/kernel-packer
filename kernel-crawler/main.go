@@ -231,7 +231,7 @@ func getRPMURLs(client *http.Client, baseURL string, primaryURL string, authToke
 					return nil, err
 				}
 
-				// Only keep kernel-devel, kernel-rt-devel, and kernel-default-devel packages.
+				// Only keep kernel-devel, kernel-default-devel, and kernel-rt-devel packages.
 				if pkg.Name != "kernel-devel" && pkg.Name != "kernel-default-devel" && pkg.Name != "kernel-rt-devel" {
 					continue
 				}

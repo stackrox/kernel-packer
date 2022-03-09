@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"os"
 	"path"
+	"regexp"
 
 	"github.com/pkg/errors"
 
@@ -29,6 +30,9 @@ func main() {
 func partitionURLs(urls []string) ([][]string, error) {
 	urlsByHost := make(map[string][]string)
 	for _, urlStr := range urls {
+		// Probably not the best solution
+		r := regexp.MustCompile(`.*https\:`)
+		urlStr = r.ReplaceAllString(urlStr, "https:")
 		u, err := url.Parse(urlStr)
 		if err != nil {
 			return nil, errors.Wrapf(err, "unparseable URL %q", urlStr)

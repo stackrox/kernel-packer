@@ -220,6 +220,12 @@
   file: rhel8-rhocp4.5.txt
   reformat: single
 
+- name: rhel
+  description: RHEL
+  type: redhat
+  file: rhel.txt
+  reformat: single
+
 - name: rhel-uncrawled
   description: RHEL uncrawled kernels
   type: redhat
