@@ -59,8 +59,7 @@ main() {
 }
 
 contains_exact() {
-    #grep -qF "$1"
-    grep -Eq ^"$1"$ # Should be exact match not partial match
+    grep -Eq ^"$1"$
 }
 
 contains() {
@@ -116,7 +115,6 @@ download() {
 }
 
 simplify() {
-    #echo "$1" | tr -c 'a-zA-Z0-9_.' '-' | tr -d '\r'
     echo "$1" | tr -c 'a-zA-Z0-9_.\n' '-'
 }
 
