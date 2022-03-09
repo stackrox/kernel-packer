@@ -8,8 +8,13 @@ SHELL=/bin/bash -o pipefail
 .PHONY: all
 all: crawl
 
+.PHONY: tests
+tests:
+	docker build -t kernel-crawler-tests -f tests/Dockerfile .
+	docker run --rm kernel-crawler-tests
+
 .PHONY: build-crawl-container
-build-crawl-container: Dockerfile kernel-crawler.py main.go
+build-crawl-container: Dockerfile kernel-crawler.py main.go tests
 	docker build -t kernel-crawler .
 	docker build -t rhel-login rhel-login
 
@@ -30,6 +35,7 @@ crawl-kops: build-crawl-container
 .PHONY: crawl-gardenlinux
 crawl-gardenlinux: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Garden-Linux >$(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
+	docker run --rm -i --entrypoint python3 kernel-crawler garden-crawler.py >> $(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
 
 .PHONY: crawl-debian
 crawl-debian: build-crawl-container

@@ -19,8 +19,10 @@ RUN apt-get update \
  && rm -rf /var/lib/apt
 
 RUN pip install --no-cache-dir \
-    lxml==4.2.4 urllib3==1.26.3
+    lxml==4.2.4 urllib3==1.26.3 \
+    requests==2.27.1 pyyaml==6.0
 
+COPY ["garden-crawler.py", "/"]
 COPY ["kernel-crawler.py", "/"]
 COPY ["repo-crawler.py", "/"]
 COPY ["kope.io.asc", "/"]
