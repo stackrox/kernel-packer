@@ -4166,6 +4166,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11647.29.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.29.0-kernel-headers.tgz
+09a5d64bf250d49e457215a367999021c14822896f18d24f5504b261f147f7e3:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.86.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.86.1.x86_64.rpm
 09a8de4a23c3f95b7fa6473c4ef3faa4375bc98d8c89dd484fb898502e936312:
   type: redhat
   packages:
@@ -9703,6 +9708,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-696.10.3.el6.x86_64.rpm
+357835b6b8beef755eb30a9654e4d0320cf4d2aec2b170c1156fbf420a1cbc9c:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-150300.59.54.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-150300.59.54.1.x86_64.rpm
 400272de90578760a31dfc09cf53a6c3de2dda573911f2b8599ebc823a931f16:
   type: coreos
   packages:
@@ -16124,10 +16134,6 @@ fa7c05198c9aa55fc051e7c10b354f3ccb1aef114316dc8dc2729c352dceed55:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.5-100.fc33-x86_64-kernel-devel-5.13.5-100.fc33.x86_64.rpm
-fa8071ad81776b8f5fb8a46d32df7eec15a72976d37931559a1dd7f2904dd389:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2023.5.0-flatcar_developer_container.bin.bz2
 fa081978ecf2706def4b75914bd23d6772f67e16fa4b765c42b8733109254447:
   type: suse
   packages:
