@@ -119,8 +119,7 @@ build-rhsm-crawler:
 .PHONY: crawl-rhsm
 crawl-rhsm: build-rhsm-crawler
 	docker run -e RHSM_OFFLINE_TOKEN --rm -i rhsm-crawler:latest > $(CRAWLED_PACKAGE_DIR)/rhel.txt
-	@cat $(CRAWLED_PACKAGE_DIR)/rhel.txt | tr -d '@\^\r' > $(CRAWLED_PACKAGE_DIR)/rhel_2.txt
-	@mv $(CRAWLED_PACKAGE_DIR)/rhel_2.txt $(CRAWLED_PACKAGE_DIR)/rhel.txt
+	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
 
 .PHONY: crawl-rhel
 crawl-rhel: build-crawl-container

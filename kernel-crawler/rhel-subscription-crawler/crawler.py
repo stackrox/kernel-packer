@@ -10,9 +10,12 @@ logging.basicConfig()
 logger = logging.getLogger('rhsm-crawler')
 logger.setLevel("INFO")
 
+# The swagger file for the RHSM API can be found here https://access.redhat.com/management/api/rhsm
+
 class Crawler:
-    def __init__(self, offline_token: str):
+    def __init__(self, offline_token: str, get_latest: bool):
         self.offline_token = offline_token
+        self.get_latest = get_latest
         self.api_url = 'https://api.access.redhat.com/management/v1'
         self.crawled_repos = set()
         self.non_empty_repos = set()
@@ -25,12 +28,13 @@ class Crawler:
             re.compile(r'^.*-devtools-.*$'),
             re.compile(r'^.*-debug-.*$'),
             re.compile(r'^.*-source-.*$'),
+            re.compile(r'^.*-beta-.*$'),
             re.compile(r'^.*-isos$'),
             re.compile(r'^codeready-builder-.*$')
         ]
 
         self.repo_include_patterns = [
-            re.compile(r'^rhel-[5-9].*$'),
+            re.compile(r'^rhel-[7-8].*$'),
             re.compile(r'^rhel-server.*$'),
             re.compile(r'^rhocp-4.*$'),
             re.compile(r'^.*-rt-.*$')
@@ -60,29 +64,19 @@ class Crawler:
 
         self.repos = [
                 "rhocp-4.7-for-rhel-8-x86_64-rpms",
-                "rhel-6-server-els-rpms",
-                "rhel-6-server-for-sap-hana-eus-rpms",
                 "rhel-7-server-aus-rpms",
-                "rhel-5-workstation-desktop-beta-rpms",
                 "rhel-7-server-rhui-beta-rpms",
                 "rhocp-4.3-for-rhel-8-x86_64-rpms",
-                "rhel-9-for-x86_64-appstream-beta-rpms",
                 "rhocp-4.5-for-rhel-8-x86_64-rpms",
                 "rhel-server-ost-6-3-rpms",
                 "rhel-7-server-e4s-rpms",
                 "rhel-8-for-x86_64-baseos-rpms",
                 "rhel-7-server-rpms",
-                "rhel-6-server-eus-rpms",
                 "rhel-7-server-eus-rpms",
                 "rhel-8-for-x86_64-baseos-e4s-rpms",
-                "rhel-6-server-rpms",
-                "rhel-7-public-beta-rpms",
                 "rhel-8-for-x86_64-rt-tus-rpms",
                 "rhel-8-for-x86_64-baseos-eus-rpms",
-                "rhel-5-server-retired-els-rpms",
-                "rhel-9-for-x86_64-rt-beta-rpms",
                 "rhel-8-for-x86_64-rt-rpms",
-                "rhel-6-server-aus-rpms"
         ]
 
         self.headers = self.get_headers(True)
@@ -217,7 +211,11 @@ class Crawler:
 
             self.crawled_repos.add(repo)
 
-            for packages in self.paginate_request(f'/packages/cset/{repo}/arch/x86_64'):
+            endpoint = f'/packages/cset/{repo}/arch/x86_64'
+            if self.get_latest:
+                endpoint += '?filter=latest'
+
+            for packages in self.paginate_request(endpoint):
                 repo_urls = self.filter_kernel_headers(packages)
                 urls |= repo_urls
 
@@ -301,14 +299,17 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for RHSM API crawler')
     parser.add_argument('--all', type=bool, default=False)
     parser.add_argument('--logLevel', type=str, default="INFO")
+    parser.add_argument('--getLatest', type=bool, default=False) # TODO: Set default to True
     args = parser.parse_args()
+
     logger.setLevel(args.logLevel)
+    get_latest = args.getLatest
 
     # Go to https://access.redhat.com/management/api to get a token
     # and supply it as an environment variable.
     token = os.getenv('RHSM_OFFLINE_TOKEN')
 
-    crawler = Crawler(token)
+    crawler = Crawler(token, get_latest)
 
     if args.all:
         crawler.crawl_all()
