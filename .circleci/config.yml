@@ -397,7 +397,7 @@ workflows:
           - crawl-cron
     triggers:
     - schedule:
-        cron: "0 * * * *"
+        cron: "0 */2 * * *"
         filters:
           branches:
             only:
