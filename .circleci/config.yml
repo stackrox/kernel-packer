@@ -21,6 +21,7 @@ crawlContext: &crawlContext
   context:
     - redhat-developer-account-login # Provides environment variables REDHAT_USERNAME and REDHAT_PASSWORD.
     - ubuntu-esm-subscription-token # Provides environment variable UBUNTU_ESM_SUBSCRIPTION_TOKEN.
+    - rhsm_api_temp
 
 commands:
   gcloud-init:
@@ -242,6 +243,7 @@ jobs:
     - setup-staging
     - run:
         name: Crawl package repositories
+        no_output_timeout: 60m
         command: |
           if ! make -j -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
             touch /tmp/crawl-failed
@@ -395,7 +397,7 @@ workflows:
           - crawl-cron
     triggers:
     - schedule:
-        cron: "0 * * * *"
+        cron: "0 0,2,4,6,8,10,12,14,16,18,20,22 * * *"
         filters:
           branches:
             only:

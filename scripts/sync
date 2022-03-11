@@ -40,7 +40,7 @@ main() {
         filename="$(simplify "$url")"
 
         # Check if this specific file exists in the bucket listing.
-        if ! echo "$all_bucket_files" | contains "$filename"; then
+        if ! echo "$all_bucket_files" | contains_exact "$filename"; then
             echo "Downloading $url"
 
             # This file didn't exist in the bucket listing, so download it.
@@ -58,8 +58,27 @@ main() {
     echo
 }
 
+contains_exact() {
+    grep -Eq ^"$1"$
+}
+
 contains() {
     grep -qF "$1"
+}
+
+get_rhsm_api_access_token() {
+    token_url=https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
+    curl $token_url -d grant_type=refresh_token -d client_id=rhsm-api -d refresh_token=$RHSM_OFFLINE_TOKEN | jq -r '.access_token'
+}
+
+download_using_rhsm_api() {
+	url=$1
+	file=$2
+
+	token="$(get_rhsm_api_access_token)"
+	url_info="$(curl -H "Authorization: Bearer $token" "$url" -H "accept: application/json")"
+	temp_url="$(echo $url_info | jq -r .body.href)"
+	curl -H "Authorization: Bearer $token" "$temp_url" --output "$file" || rm -f "$file"
 }
 
 download() {
@@ -71,6 +90,8 @@ download() {
             --certificate .build-data/rhel-certs/rhel-cert.pem \
             --private-key .build-data/rhel-certs/rhel-key.pem \
             -nv "$url" -O "$file" || rm -f "$file"
+    elif echo "$url" | contains 'api.access.redhat.com'; then
+        download_using_rhsm_api "$url" "$file"
     elif echo "$url" | contains 'docker.io'; then
         wget \
             --header "$("${DIR}/docker-desktop/auth-header.sh")" \
