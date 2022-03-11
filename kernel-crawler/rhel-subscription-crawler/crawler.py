@@ -13,7 +13,7 @@ logger.setLevel("INFO")
 # The swagger file for the RHSM API can be found here https://access.redhat.com/management/api/rhsm
 
 class Crawler:
-    def __init__(self, offline_token: str, get_latest: bool):
+    def __init__(self, offline_token: str, get_latest: bool, rhel_package_lists: str):
         self.offline_token = offline_token
         self.get_latest = get_latest
         self.api_url = 'https://api.access.redhat.com/management/v1'
@@ -79,7 +79,29 @@ class Crawler:
                 "rhel-8-for-x86_64-rt-rpms",
         ]
 
+        self.already_crawled_packages = self.get_already_crawled_packages(rhel_package_lists)
+
         self.headers = self.get_headers(True)
+
+    def get_already_crawled_packages(self, rhel_package_lists):
+        already_crawled_packages = set()
+
+        with open(rhel_package_lists) as f:
+            rhel_package_list_files = f.readlines()
+
+        #rhel_package_list_files = list(map(lambda x, x.strip()))
+
+        already_crawled_packages_raw = []
+        for rhel_package_list_file in rhel_package_list_files:
+            with open(rhel_package_list_file.strip()) as f:
+                already_crawled_packages_raw += f.readlines()
+
+        for already_crawled_package in already_crawled_packages_raw:
+            already_crawled_package = already_crawled_package.strip().split("/")[-1].replace(".rpm", "")
+        
+            already_crawled_packages.add(already_crawled_package)
+
+        return already_crawled_packages
 
     def query_url(self, endpoint: str):
         return f'{self.api_url}{endpoint}'
@@ -237,6 +259,10 @@ class Crawler:
             if not pkg_name in self.allowed_pkg_names:
                 continue
 
+            kernel = f'{pkg_name}-{pkg["version"]}-{pkg["release"]}.x86_64'
+            if kernel in self.already_crawled_packages:
+                continue
+
             url = pkg['downloadHref']
 
             if self.check_exclude_checksum(url):
@@ -244,8 +270,8 @@ class Crawler:
 
             urls.add(url)
 
-            kernel = f'{pkg_name}-{pkg["version"]}-{pkg["release"]}.x86_64'
             logger.debug(kernel)
+
 
         return urls
 
@@ -300,16 +326,18 @@ if __name__ == '__main__':
     parser.add_argument('--all', type=bool, default=False)
     parser.add_argument('--logLevel', type=str, default="INFO")
     parser.add_argument('--getLatest', type=bool, default=False) # TODO: Set default to True
+    parser.add_argument('--rhelPackageLists', type=str, default="/tmp/rhel_package_lists.txt")
     args = parser.parse_args()
 
     logger.setLevel(args.logLevel)
     get_latest = args.getLatest
+    rhel_package_lists = args.rhelPackageLists
 
     # Go to https://access.redhat.com/management/api to get a token
     # and supply it as an environment variable.
     token = os.getenv('RHSM_OFFLINE_TOKEN')
 
-    crawler = Crawler(token, get_latest)
+    crawler = Crawler(token, get_latest, rhel_package_lists)
 
     if args.all:
         crawler.crawl_all()

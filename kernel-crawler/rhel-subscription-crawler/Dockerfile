@@ -6,5 +6,6 @@ RUN pip install -r requirements.txt && \
     rm requirements.txt
 
 COPY crawler.py .
+COPY crawl.sh .
 
-CMD python crawler.py
+CMD ./crawl.sh
