@@ -243,7 +243,7 @@ jobs:
     - setup-staging
     - run:
         name: Crawl package repositories
-        no_output_timeout: 180m
+        no_output_timeout: 60m
         command: |
           if ! make -j -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
             touch /tmp/crawl-failed
