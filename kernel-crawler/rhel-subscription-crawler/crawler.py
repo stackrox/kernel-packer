@@ -325,7 +325,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for RHSM API crawler')
     parser.add_argument('--all', type=bool, default=False)
     parser.add_argument('--logLevel', type=str, default="INFO")
-    parser.add_argument('--getLatest', type=bool, default=True) # TODO: Set default to True
+    parser.add_argument('--getLatest', type=bool, default=True)
     parser.add_argument('--rhelPackageLists', type=str, default="/tmp/rhel_package_lists.txt")
     args = parser.parse_args()
 
