@@ -261,6 +261,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
+0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0fa789d6c18092154d5b3f0910f0658c058637f5320c7ae8e9f97dca51e2e730:
   type: redhat
   packages:
@@ -4248,12 +4252,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-220.7.1.el6.x86_64.rpm
-9cb2f0217fd645cfc202ce8ccaf2822825491df076fa3a3a8096265a25608185:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.92-2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-cloud-amd64_5.10.92-2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-common_5.10.92-2_all.deb
 9eb20df35e469a16b5555ab062d8b784fb2a3c95098053221f3857fa4235ada0:
   type: redhat
   packages:
@@ -7733,12 +7731,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.93-1.el7.elrepo.x86_64.rpm
-492aba2d2826dfc193a4d20427895cdd69912023b8bae96ce49966d24ed2b6e4:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 493a3cb2de65eaeb1d4a0eaa15aa35230e5e33bec7c04a2c3c08ccc2e4cbe6fd:
   type: cos
   packages:
@@ -10164,6 +10156,12 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.83.2.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.83.2.x86_64.rpm
+85751f22fec0d3d08c69f8387d7267f6c0ea118e4771a278f638e8a82f01c78d:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.232-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 86985e1c93baa2cd71efe6a54a0ee4c2a38585221060f07361a0489b75bd0d58:
   type: redhat
   packages:
@@ -10645,6 +10643,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-22-generic_5.15.0-22.22_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-22_5.15.0-22.22_all.deb
+1261709ef8c05d8c92eeaa8e7df46f33d3c4e593f3e3613dc5c2dcc16c6b24da:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.103-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-amd64_5.10.92-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-common_5.10.92-2_all.deb
 1496253acce8f206bcdc01c3ba8491f0f92addfd3258ce48e6e9956f0a60ddba:
   type: redhat
   packages:
@@ -12478,12 +12482,6 @@ b3ddec3ce2ba62a4d41566ba551ff28bb23f6361d8a01a19fbeb6a6ad8213b18:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.13.0-1007_5.13.0-1007.8_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.13.0-1007-gcp_5.13.0-1007.8_amd64.deb
-b03c7700398384e2fd3952eb72bf9cd14e4316c3737e3f163933edeac733a704:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.92-2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-amd64_5.10.92-2_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-common_5.10.92-2_all.deb
 b4e4a786d6c7cae85464142c18ab01ef9f64fd1d7a7fe53c4853496e0e3024b6:
   type: redhat
   packages:
@@ -13886,6 +13884,12 @@ c9320e9e229ed5ad65e1ea7dbb08c375f75c6684da1ffedd1982b3de6ad015ab:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-headers-4.13.0-1019-gcp_4.13.0-1019.23_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-gcp-headers-4.13.0-1019_4.13.0-1019.23_all.deb
+c9376be063a3f8c04bc62ab5f4fe5097a2d799c1f0a09e8621dcb21471efa414:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.232-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-cloud-amd64_4.19.194-3_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 c9419e179d85b4e4271ddc208464c890aaa49eb63fa59710a1dc77276a872c14:
   type: redhat
   packages:
@@ -17212,12 +17216,6 @@ f46845375362851ba306910aee3b8fa3448d02bc9490f3c73ebae098bdb3430a:
   packages:
   - https---storage.googleapis.com-cos-tools-16623.39.1-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.39.1-kernel-headers.tgz
-f049691585004478b48a3b78aca576eb1ddba6569e5db64c4e15d2e8f16ef870:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.194-3_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-amd64_4.19.194-3_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-17-common_4.19.194-3_all.deb
 fa2b65988bdda8854656ba17f331ca53a75acafb77bdcfba9d20969f4cef0f06:
   type: ubuntu
   packages:
@@ -17468,6 +17466,12 @@ fdf75070211c192b27ada2cc94ffca25fe477158a9b7324dc973eb523d212f78:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-headers-5.0.0-1022-aws_5.0.0-1022.25-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-aws-headers-5.0.0-1022_5.0.0-1022.25-18.04.1_all.deb
+fe8c23c71c701261a72bdd6293565652ba252f631d8a34ce8f42c237f891694e:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.103-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-cloud-amd64_5.10.92-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-11-common_5.10.92-2_all.deb
 fe280e12d0b5e6b418a62bd8f67e2d3238ef125fd04971af41b60bb244e0f179:
   type: cos
   packages:
