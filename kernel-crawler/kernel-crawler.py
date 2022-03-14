@@ -50,6 +50,9 @@ ubuntu_backport_supported = [
 ubuntu_backport_excludes = [
     f"\r~(?!{ '|'.join(re.escape(s) for s in ubuntu_backport_supported) })", "+", # Prevent duplicate backports from cluttering the list, execept for supported backports.
 ]
+ubuntu_fips_excludes = [
+    "4.15.0-1002" # Excluding this kernel since the header package is broken.
+]
 debian_excludes = [
     "3.2.0", "3.16.0" # legacy
 ]
@@ -522,19 +525,82 @@ repos = {
         # Crawl Ubuntu FIPS kernel headers
         {
             "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux(-gcp|-aws)?-fips/$')]/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-fips/$')]/@href",
             "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp-|aws-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-gcp|-aws)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
-            "exclude_patterns": ["lowlatency"],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ubuntu_fips_excludes,
             "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
         },
         # Crawl Ubuntu FIPS Updates kernel headers
         {
             "root" : "https://esm.ubuntu.com/fips-updates/ubuntu/pool/main/l/",
-            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux(-gcp|-aws)?-fips/$')]/@href",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-fips/$')]/@href",
             "subdirs" : [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp-|aws-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-gcp|-aws)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
-            "exclude_patterns": ["lowlatency"],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ubuntu_fips_excludes,
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_UPDATES_BEARER_TOKEN",""))
+        },
+    ],
+
+    "Ubuntu-GCP-FIPS": [
+        # Crawl Ubuntu FIPS kernel headers
+        {
+            "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-gcp)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ubuntu_fips_excludes,
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
+        },
+        # Crawl Ubuntu FIPS Updates kernel headers
+        {
+            "root" : "https://esm.ubuntu.com/fips-updates/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-gcp(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(gcp-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-gcp)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ubuntu_fips_excludes,
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_UPDATES_BEARER_TOKEN",""))
+        },
+    ],
+
+    "Ubuntu-AWS-FIPS": [
+        # Crawl Ubuntu FIPS kernel headers
+        {
+            "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(aws-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-aws)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ubuntu_fips_excludes,
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
+        },
+        # Crawl Ubuntu FIPS Updates kernel headers
+        {
+            "root" : "https://esm.ubuntu.com/fips-updates/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-aws(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(aws-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-aws)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ubuntu_fips_excludes,
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_UPDATES_BEARER_TOKEN",""))
+        },
+    ],
+
+   "Ubuntu-Azure-FIPS": [
+        # Crawl Ubuntu FIPS kernel headers
+        {
+            "root" : "https://esm.ubuntu.com/fips/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(azure-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-azure)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ubuntu_fips_excludes,
+            "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_BEARER_TOKEN",""))
+        },
+        # Crawl Ubuntu FIPS Updates kernel headers
+        {
+            "root" : "https://esm.ubuntu.com/fips-updates/ubuntu/pool/main/l/",
+            "discovery_pattern" : "/html/body//a[regex:test(@href, '^linux-azure(-.*)?/$')]/@href",
+            "subdirs" : [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^linux-(azure-)?(fips-)?headers-[4-9]\.[0-9]+\.[0-9]+-[0-9]+(-azure)?(-fips)?_[4-9]\.[0-9]+\.[0-9]+-[0-9]+\.[0-9]+(_all|_amd64)?.deb$')]/@href",
+            "exclude_patterns": ubuntu_fips_excludes,
             "http_request_headers" : urllib3.make_headers(basic_auth="bearer:"+os.getenv("UBUNTU_FIPS_UPDATES_BEARER_TOKEN",""))
         },
     ],
