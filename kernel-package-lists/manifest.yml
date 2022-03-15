@@ -5669,6 +5669,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
+51d90cb355570b48aed6078aabfae3bed3e586df10f88a053da9c4d85a223b60:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.0-flatcar_developer_container.bin.bz2
 51fb9feecf8655146f05efff9eb954cfe6c5041bc15b179b250ee4a31548a78b:
   type: redhat
   packages:
@@ -8782,10 +8786,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.20-300.fc35-x86_64-kernel-devel-5.14.20-300.fc35.x86_64.rpm
-2750df51844826fa3dff3f0163f3d1c4fed07a1d0d02008466ee492f5a7edd12:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.6-100.fc34-x86_64-kernel-devel-5.16.6-100.fc34.x86_64.rpm
 2757b7fc99f95aa77d62382c822f2a3e9cebaa8c01f9444832afd8870d6ee24e:
   type: redhat
   packages:
@@ -9035,10 +9035,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-70-generic_4.15.0-70.79_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-70_4.15.0-70.79_all.deb
-4687cae5e159af3f267621036aa22359057b861d953984be64185840119bcfe9:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.6-200.fc35-x86_64-kernel-devel-5.16.6-200.fc35.x86_64.rpm
 04754fe78fafc1f50fa9967e1e1d24eeb1d6e1d462988cf8a413da664d75f19d:
   type: suse
   packages:
