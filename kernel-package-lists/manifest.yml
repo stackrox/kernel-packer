@@ -3470,10 +3470,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.245-1.el7.elrepo.x86_64.rpm
-7cf14df48e2f0ba58786a2859d0c37b02942a0d0e4ecd1521c0f015b00bc7cac:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.4.0-flatcar_developer_container.bin.bz2
 7af45a4b89dcc72e5ac617b524f5a73b1384c789e64fef2f1d48b13c605b9849:
   type: ubuntu
   packages:
@@ -4711,6 +4707,12 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.9-200.fc33-x86_64-kernel-devel-5.9.9-200.fc33.x86_64.rpm
+20c175a4861db1278044ea167887435514cc965367ccc41f70282a8c3827502a:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.14-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-5-cloud-amd64_5.16.14-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-5-common_5.16.14-1_all.deb
 20a318a4653c405754adca1ced40667fa16ab21a8e4919e47c6f7ff519eaa2f3:
   type: redhat
   packages:
@@ -4770,6 +4772,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-headers.tgz
+22e60d16f32f3ba410351e4a02d183a1e8a0c31e2090fbc5d3be8072886ca3b0:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.1-flatcar_developer_container.bin.bz2
 22f69369fad763c169ab4fd6450c4b777b4e6014f168309a7828a03baa61b3c6:
   type: ubuntu
   packages:
@@ -12004,6 +12010,10 @@ a39975396a714e3eeeee4cb09be38de0925f8b007d82aac8432d544c1af68af8:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-headers-4.15.0-1093-aws_4.15.0-1093.99-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-aws-headers-4.15.0-1093_4.15.0-1093.99-16.04.1_all.deb
+a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
@@ -15839,6 +15849,12 @@ e7ef5a320482b6b514aeb66c0fa7944b775cf038fdd9538dc64f334dcb5d2900:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.148-1.el7.elrepo.x86_64.rpm
+e8c4d4d35b79990399cb7e17b97eab670e74250d740b1386a84361f426732d48:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.14-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-5-amd64_5.16.14-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-5-common_5.16.14-1_all.deb
 e8c4bcc3ff0a727e132dc49b1d1eed0ed30f6ce1b94cd7f8ae12811a3fc4925a:
   type: redhat
   packages:
