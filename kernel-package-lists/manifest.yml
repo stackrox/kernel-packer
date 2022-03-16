@@ -13786,6 +13786,11 @@ c26f2418d046e8e8b9f2bd300d6c79eff748104a58f58f372d7c89576f51519a:
   packages:
   - https---storage.googleapis.com-cos-tools-12871.1245.10-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.1245.10-kernel-headers.tgz
+c32dae7dc2ad3473b0cd6fafdf32b27987f8f23125111a09dd944b4f183b16f8:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16963.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16963.0.0-kernel-headers.tgz
 c35bb2a11ab42bbc93da6b1efe491a6ea1a8499a0faaf2ab0ad690d57c076e7b:
   type: ubuntu
   packages:
@@ -15575,10 +15580,6 @@ de7994ac308b01346f8a2cdfa7c5a47031c1b0b9bfa4c42a15e9446910e71086:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1024-gke_4.4.0-1024.24_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1024_4.4.0-1024.24_all.deb
-de9567f9a584ce9607ba55fa167df0116b1d1337b7cb15b6f24ede8f0a725563:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.4.0-flatcar_developer_container.bin.bz2
 de532750b238705ad548ef118173bd87c402ba54b4f2036f3cf5a8dd5a78e122:
   type: ubuntu
   packages:
@@ -15615,6 +15616,11 @@ df2d0462372de85cf35ed3bbfdf57057462e9a44ea924a594c89e655e6436516:
   packages:
   - https---storage.googleapis.com-cos-tools-15978.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-15978.0.0-kernel-headers.tgz
+df02d3c6770ace4e8b3be41bb5ab45d2b10455ca1ecb89e05d668874b7f91855:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.13.0-1019-aws_5.13.0-1019.21_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.13.0-1019_5.13.0-1019.21_all.deb
 df6e47a2405f88efd09c76be774a312a4278fa0e476c6f1832cd676827dea91e:
   type: ubuntu
   packages:
@@ -16995,6 +17001,11 @@ f9db773f4a7218e9713d9534a21ed0cd42d0d791dcf4c17466fc0a914d6280cc:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-327.22.2.el7.x86_64.rpm
+f9eb6307769206706a9ac0a865705efe85ca45fe62a5d7c2cb48ae1fcda3e778:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.0.14-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.0.14-kernel-headers.tgz
 f9bda1f07ff8c739db8e4ba36c77c96199c21353601eadf47c1b2fe4deee79f7:
   type: suse
   packages:
