@@ -3229,6 +3229,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.8-linux-headers-5.8.0-1033-azure_5.8.0-1033.35-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.8-linux-azure-5.8-headers-5.8.0-1033_5.8.0-1033.35-20.04.1_all.deb
+7d54be92ce792d424496de77199a4c6fa1c4acb59213b8cfb9e401853305267c:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.232-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-20-cloud-amd64_4.19.235-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-20-common_4.19.235-1_all.deb
 7d55ae4a0cb753c5bed9283bba7700764da007bee31fa360fe64105a2c767ba9:
   type: redhat
   packages:
@@ -9070,6 +9076,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1026_5.3.0-1026.28-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1026-gke_5.3.0-1026.28-18.04.1_amd64.deb
+4507ee5a2c802f8fdad5590b5b92e148feecffa94d24fae57a0968077a3f8110:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.5.0-flatcar_developer_container.bin.bz2
 4519affb139bca9dbe6bdd7b5f8a7af54b57dab43cfbd93bcd8a744e81a8c65b:
   type: ubuntu
   packages:
@@ -16220,6 +16230,12 @@ e4781b16677b90b1d58c40beda8103d0249e152f8fe2871134e905c19155021e:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10367.0.0-kernel-src.tar.gz
+e6599cc9d1807298742c6d9cc2e66c0ae17cf80e081d83aa5d1d25993bc6eb74:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.232-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-20-amd64_4.19.235-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-20-common_4.19.235-1_all.deb
 e07752b8b128a4c55de98b5201904421d902af89b59c81bbbc08023ae22b2614:
   type: cos
   packages:
