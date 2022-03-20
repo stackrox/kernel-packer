@@ -2923,10 +2923,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-6a28e21cbbb4f49d77f50bac4546b89c1b2b803c740a87abbcbbff59e538b3f5-download
-6ca406d0fc6fd6ea4b02cb8a18efa31c1b74873a5d95c207bacc9d2601354c1d:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.1-flatcar_developer_container.bin.bz2
 6aac5b2129e1a571d1132e46ab4ba7dc21bbb522b49ebc6992c7b2fcec944c71:
   type: redhat
   packages:
@@ -9352,6 +9348,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1048-fips_4.15.0-1048.55_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1048_4.15.0-1048.55_all.deb
+6748f7f32ca213376da67974f4f54b6eb36ec4ef30881c14cd0d3aed968f6a03:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.6.0-flatcar_developer_container.bin.bz2
 6786fb54ff0e2f6ecf508971593b81e9baea209f31bb71c00d86291f9f47b7f8:
   type: ubuntu
   packages:
