@@ -397,6 +397,7 @@ workflows:
           - crawl-cron
     triggers:
     - schedule:
+        # Run once an hour on the hour
         cron: "0 * * * *"
         filters:
           branches:
