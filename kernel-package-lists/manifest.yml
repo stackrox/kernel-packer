@@ -3102,6 +3102,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.98-1.el7.elrepo.x86_64.rpm
+06f1824fee68a71ca4688c02d0092d36a43d654a64b1229b74cdafd37e5714be:
+  type: dockerdesktop
+  packages:
+  - https---registry-1.docker.io-v2-docker-for-desktop-kernel-blobs-sha256-d02178be7489f002dfc01c45fa3d6f1021c36743681488159bdbc831202c320b
 06cc8d2e128d107590a046aac3f0542aa4650d0bd7658f14a8c8549025dcb97e:
   type: cos
   packages:
@@ -11513,10 +11517,6 @@ a2e2e9952ce8d5e9f7f6b7adc3d5de8a32488d7e9006a47d311ee03e36072637:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1036-azure_4.15.0-1036.38_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1036_4.15.0-1036.38_all.deb
-a2b3b666e16daf31949d339d10458f26801a1a9731223f41c5cbdf074c43cd11:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.1-flatcar_developer_container.bin.bz2
 a2ac9654047f0098e9bfddac39fbbdc0048baab710a334b50281e84c14ec65c7:
   type: coreos
   packages:
