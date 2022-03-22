@@ -2147,6 +2147,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.143-1.el7.elrepo.x86_64.rpm
+4cc03f6ae30c0ca4d4984da138216b0d9102ed3542794428ee06a5ee2ecb4833:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2046-azure-fips_4.15.0-2046.50_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2046_4.15.0-2046.50_all.deb
 4ac70505f0df1b87eb0d8261165b566506cfa4665520b60e601a831e556fc4ea:
   type: redhat
   packages:
@@ -6251,6 +6256,11 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2191.4.1-coreos_developer_container.bin.bz2
+067f2d6821c33f2ff0ad3c959767fad0223a728146dc990a6c670d7a7051ea77:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-gcp-fips-headers-4.15.0-2029_4.15.0-2029.32_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-headers-4.15.0-2029-gcp-fips_4.15.0-2029.32_amd64.deb
 067eb97dfcb146cc4c228761a8335e0a6f1ab91c458c9e349b25ddbf1ac0e1da:
   type: ubuntu
   packages:
@@ -10840,11 +10850,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.146-1.el7.elrepo.x86_64.rpm
-1208483db14d31791ea518c7d7a07a6521ee6b25b88c51c9e78c6acc873471f5:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-22-generic_5.15.0-22.22_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-22_5.15.0-22.22_all.deb
 1496253acce8f206bcdc01c3ba8491f0f92addfd3258ce48e6e9956f0a60ddba:
   type: redhat
   packages:
@@ -14619,6 +14624,11 @@ cf842af7e2a47c650662e0283f727e956679924509f076db036084e8fb13a8a8:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.9-201.fc33-x86_64-kernel-devel-5.10.9-201.fc33.x86_64.rpm
+cf965a1cc8b977af978eb5defef4d234d87e27bec6ab7b71f35448cce2c77871:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1081-fips_4.15.0-1081.90_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1081_4.15.0-1081.90_all.deb
 cf4375f4f6a0ebe3a14207359bca6b83a8c9462f1a982ab3181277a0fd8b2d78:
   type: redhat
   packages:
@@ -15301,6 +15311,11 @@ d661911a63e3eade35d6702e083144968f53b1eaef1d07e74cedfaaf88145d77:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1049-aws_4.4.0-1049.58_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1049_4.4.0-1049.58_all.deb
+d728687f7c18766b8daf0969f5a9b86746a967609b7633a3a5534c77cbf5f2cc:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-173-generic_4.15.0-173.182-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-173_4.15.0-173.182-16.04.1_all.deb
 d2672309e17ad9e4183ce69b5ee7b52c23360ff8844d8c1d1626af67a52c5295:
   type: debian
   packages:
@@ -16516,6 +16531,11 @@ eaf8f204bb3a39befcb940049c216f1ddb8053be01f8f41d1bf33478f499cfb6:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.1-flatcar_developer_container.bin.bz2
+eaf81411049275bb31a0f55842a6da4e2d7ebac6b0dbdb459b7ec5bb06aaa9f0:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2064-aws-fips_4.15.0-2064.67_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2064_4.15.0-2064.67_all.deb
 eb5b1d8c626a4cb2b3ad4c563301afc00530f3adfbe5e25e41b691d629fcbb56:
   type: cos
   packages:
