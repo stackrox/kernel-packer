@@ -1664,6 +1664,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.247-1.el7.elrepo.x86_64.rpm
+3fa7225e85af7540e7c01c74f10e5e09ee374694b9ba1bb1f8f1834b002e68c9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.13.0-1022_5.13.0-1022.26_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.13.0-1022-gcp_5.13.0-1022.26_amd64.deb
 3cab04c256ba14845fa5c1f4058a230bc8f9f9708a578ca53a6ca1eb2acf56c8:
   type: redhat
   packages:
@@ -5579,6 +5584,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-0507194634b6d387c01bfdde0460c3f7f23271a291b824bdccfe2545d64b7a72-download
+46c61666ffc89bd1b937a4ac5c2fdb3d7d79c13c72f6b962674f8baac87247a2:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.10.0-flatcar_developer_container.bin.bz2
 46abcbfea9b4a5154640e78bd5b343b802f67d0d15da8abcdc94c4464b6d32f9:
   type: ubuntu
   packages:
