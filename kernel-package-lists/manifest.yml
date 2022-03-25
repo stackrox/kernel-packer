@@ -532,6 +532,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.8-200.fc32-x86_64-kernel-devel-5.8.8-200.fc32.x86_64.rpm
+1d7fb282172a24930096c9d60942946609aad7913989b26ba40fba69661730b5:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1416.17-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-13310.1416.17-kernel-headers.tgz
 1b7fcdfe48da9a37d0c55014b07e0ee788ad44be06a78320c52df4b717b64dbf:
   type: ubuntu
   packages:
@@ -2951,6 +2956,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-6a28e21cbbb4f49d77f50bac4546b89c1b2b803c740a87abbcbbff59e538b3f5-download
+6ca406d0fc6fd6ea4b02cb8a18efa31c1b74873a5d95c207bacc9d2601354c1d:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.1-flatcar_developer_container.bin.bz2
 6aac5b2129e1a571d1132e46ab4ba7dc21bbb522b49ebc6992c7b2fcec944c71:
   type: redhat
   packages:
@@ -5636,6 +5645,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1083_4.15.0-1083.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1083-gcp_4.15.0-1083.94_amd64.deb
+47a20f6ca20ae19efed2b1650b4ba4d624cdec701d782f1f6046f5a74f751b9a:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
 47b2471b531434c6651c1b7cc414d584541da9474e0929f9d0767f2ba30d1138:
   type: ubuntu
   packages:
@@ -9166,6 +9179,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.26-1.el7.elrepo.x86_64.rpm
+4482cf51c8e55ce9fb697ce36360d9002b9c39fa49c5b16ecb325496695dabe1:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.0.22-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.0.22-kernel-headers.tgz
 4504eea08456a81f088725000d69ff703ae416aa6e54551054dc1d5c0e437ed0:
   type: ubuntu
   packages:
@@ -12130,6 +12148,11 @@ a00657759a1037cfaa921168a1685de97c51afd9cf5f75fd3e85d14a9fe5cae1:
   packages:
   - https---storage.googleapis.com-cos-tools-16108.403.22-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.403.22-kernel-headers.tgz
+a1368851e76b1165704dd731ff5ee494009b7a526e52e2a32c254b8592d6cfe1:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.102.34-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.102.34-kernel-headers.tgz
 a3541905f6916f8cbbde444a3c636e8bba324be6ad667f227525d6d84b126378:
   type: ubuntu
   packages:
@@ -13601,10 +13624,6 @@ be12184b8b0d004f4d909ba777d397190cd11bed446d227bbd1ea72ca65fcd19:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1032-azure_4.15.0-1032.33-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1032_4.15.0-1032.33-16.04.1_all.deb
-be3631239d295d1a43ea70d8903825a6bcb883536143ee79a19f9f8871981f4a:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2632.1.0-flatcar_developer_container.bin.bz2
 beafa1bb712e1bbfb107fa14df9364d9f6c16ea5955a07f5d47df7a5f4e2f1cb:
   type: redhat
   packages:
@@ -14072,6 +14091,10 @@ c215db065b09b62a1b55dfb6801d5b3abf782e1fe90379842af0785b622f9e5c:
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-4.19_4.19.208-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-18-amd64_4.19.208-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-4.19.0-18-common_4.19.208-1_all.deb
+c258aab538c588d9c9dd1f5d5a249eb53ccfa2a799a3c3bc257d0fa3919d7c84:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2135.5.0-flatcar_developer_container.bin.bz2
 c346c42f9cc9060cb7ba68645c0e971e3e8d30f48d20c6aac8d09cbae433b8dc:
   type: suse
   packages:
@@ -16402,6 +16425,11 @@ e3003d863834143a5ec76b366830372ebe306e8f1917553c643da656cf054a13:
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.6.2.el7.x86_64.rpm
+e3683c65a112e51a4e53fad19657cc543f1c1f054c1b88f736c7c1509e304244:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.604.28-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.604.28-kernel-headers.tgz
 e4781b16677b90b1d58c40beda8103d0249e152f8fe2871134e905c19155021e:
   type: cos
   packages:
