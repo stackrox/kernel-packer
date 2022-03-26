@@ -2956,10 +2956,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-6a28e21cbbb4f49d77f50bac4546b89c1b2b803c740a87abbcbbff59e538b3f5-download
-6ca406d0fc6fd6ea4b02cb8a18efa31c1b74873a5d95c207bacc9d2601354c1d:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.1-flatcar_developer_container.bin.bz2
 6aac5b2129e1a571d1132e46ab4ba7dc21bbb522b49ebc6992c7b2fcec944c71:
   type: redhat
   packages:
@@ -7604,6 +7600,10 @@
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.0-flatcar_developer_container.bin.bz2
+282e7cd60a3e487ea627daeb750b217be2bb486ecf72f96533dfa974c591feda:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2303.4.0-flatcar_developer_container.bin.bz2
 0282a284bd43c6e4f7056f02bab30900859e09045d07ebd50d5d00c70e2c4cc0:
   type: ubuntu
   packages:
@@ -10464,6 +10464,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.16-200.fc34-x86_64-kernel-devel-5.13.16-200.fc34.x86_64.rpm
+93225cf6863b5843886c86b11cc7dce4dbf1225e973c541d957dd525e0602d60:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1136-azure_4.15.0-1136.149_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1136_4.15.0-1136.149_all.deb
 93390f65f8a025b87b588bdac29cc34326884c3753b541ade97f4191b8fff3fb:
   type: redhat
   packages:
@@ -12506,6 +12511,11 @@ adf2c28480deeff3470c62be33cbfe6459b4d69c1b01d03903af5fb857f648c1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1026-azure_5.4.0-1026.26_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1026_5.4.0-1026.26_all.deb
+ae0c6e3c8a3865dad4f24ed392360c78e1c7e4156e2c70d8635314763bf8361f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1074-azure_5.4.0-1074.77_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1074_5.4.0-1074.77_all.deb
 ae0dc7ea603846054e02de1193ca8bcd4b4728250a40b19343071329e142e9b1:
   type: redhat
   packages:
