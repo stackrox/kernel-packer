@@ -5330,10 +5330,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16623.39.28-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.39.28-kernel-headers.tgz
-37b0c75da1a7ddd8a2b5e294feb2552d0a12f55dcc0276ad943ceda44398bbe2:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2765.1.0-flatcar_developer_container.bin.bz2
 37f5bb914dac3b2416a10db6cfad4b647ef17a1223d646b6876b1c340a53d717:
   type: redhat
   packages:
@@ -9049,10 +9045,6 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.2.2.el7.x86_64.rpm
-3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -12098,6 +12090,11 @@ a5872a16f067424b0e60ee77eb938cf17ea49634892cb11b43afb4a455e884a2:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1014-aws_4.4.0-1014.14_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1014_4.4.0-1014.14_all.deb
+a6052a0d6f6e98a74e022c5a28eebabfe377a08e00773e99500877cff4855daf:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.13-linux-gcp-5.13-headers-5.13.0-1023_5.13.0-1023.28-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.13-linux-headers-5.13.0-1023-gcp_5.13.0-1023.28-20.04.1_amd64.deb
 a7926e89cd635f3dd3d2b6f44fd16e80048430c26d169c3f13f4487ed428b082:
   type: redhat
   packages:
@@ -14854,6 +14851,11 @@ d1d5944d4d5919a621c9790cf44b58fd7686ff7e109154d4256d441ba1f94ca2:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1745.3.1-coreos_developer_container.bin.bz2
+d1bbebc66ccb10f60f08c51b1582da571c7895dddcf3100c2d5bee05fc182914:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1120_4.15.0-1120.134_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1120-gcp_4.15.0-1120.134_amd64.deb
 d1ed1ab0efa093f9d769019d3c6e8dbfffb086eb516b152f426579a87549e1f9:
   type: redhat
   packages:
