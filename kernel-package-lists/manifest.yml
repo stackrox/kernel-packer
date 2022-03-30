@@ -5072,6 +5072,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-4e787425b935b6e2cd6fb6d18942108e5af5b7e637103f32a959d30e3a2539b1-download
+28ae2f627bb898aae60325988a0500c804bc02fc1393c01c7baeceae80f311ff:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.29.2-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.29.2-kernel-headers.tgz
 28eeefc5bf02538d770370cbd3857c8dcdc8bfd39805c67b28688f8657f6655a:
   type: redhat
   packages:
@@ -5330,10 +5335,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16623.39.28-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.39.28-kernel-headers.tgz
-37b0c75da1a7ddd8a2b5e294feb2552d0a12f55dcc0276ad943ceda44398bbe2:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2765.1.0-flatcar_developer_container.bin.bz2
 37f5bb914dac3b2416a10db6cfad4b647ef17a1223d646b6876b1c340a53d717:
   type: redhat
   packages:
@@ -10625,6 +10626,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d59c3695e9b79c253a02ee63051880df267700db4180ff05f97b28b095085791-kernel-devel-4.14.133-113.105.amzn2.x86_64.rpm
+308077b773b44875a31a8e94b3e492f969b81df4c05b79190a56c1e10bf9a444:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.0-flatcar_developer_container.bin.bz2
 314909f5d92a825bfa0261bc0f6725429c3d66026597ff3e12b03aa390145e3a:
   type: ubuntu
   packages:
