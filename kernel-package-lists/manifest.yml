@@ -920,10 +920,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-573.18.1.el6.x86_64.rpm
-2f3f644fcf410e2f74028749293029f6b1b2ffc06f89ad90b6c25992c854b59b:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2643.1.0-flatcar_developer_container.bin.bz2
 2c3e2844d3528b0a04d859bd1002d57713cf0b972dbef59c93072675c2398292:
   type: ubuntu
   packages:
@@ -2953,6 +2949,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-6a28e21cbbb4f49d77f50bac4546b89c1b2b803c740a87abbcbbff59e538b3f5-download
+6ca406d0fc6fd6ea4b02cb8a18efa31c1b74873a5d95c207bacc9d2601354c1d:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.1-flatcar_developer_container.bin.bz2
 6aac5b2129e1a571d1132e46ab4ba7dc21bbb522b49ebc6992c7b2fcec944c71:
   type: redhat
   packages:
@@ -5345,6 +5345,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16623.39.28-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.39.28-kernel-headers.tgz
+37b0c75da1a7ddd8a2b5e294feb2552d0a12f55dcc0276ad943ceda44398bbe2:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2765.1.0-flatcar_developer_container.bin.bz2
 37f5bb914dac3b2416a10db6cfad4b647ef17a1223d646b6876b1c340a53d717:
   type: redhat
   packages:
