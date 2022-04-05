@@ -260,6 +260,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
+0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0fa789d6c18092154d5b3f0910f0658c058637f5320c7ae8e9f97dca51e2e730:
   type: redhat
   packages:
@@ -5582,6 +5586,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1416.3-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1416.3-kernel-headers.tgz
+44c9b2c10ebf6dca79790877cee648d17c84500f59cbea9f27504dcfe8848f92:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1075-azure_5.4.0-1075.78_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1075_5.4.0-1075.78_all.deb
 44a788e56f971683adbc47cb8c566f6c5cf9811acede5d47d56da3b7d1879015:
   type: ubuntu
   packages:
@@ -8294,11 +8303,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.90-1.el7.elrepo.x86_64.rpm
-653bb78f15a68c651a0273d1404020fd9ea7f7ce335258ebff7f2573ed123ede:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1002-aws_5.15.0-1002.4_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1002_5.15.0-1002.4_all.deb
 655e2c7805ac919dac7d277849be35fa1571120e376a2f93be05eb45cb116aa2:
   type: redhat
   packages:
@@ -14717,11 +14721,6 @@ cdf1a1347390991c15f29936c95ef32dfbaf1ecb695fe1b3a71de75f2c14eded:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.91-1.el7.elrepo.x86_64.rpm
-ce0b4ff5071cfdc46f38d5e3746f0477c73f20b59c48fa053032781bf5aa5f17:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.15.0-1001-azure_5.15.0-1001.2_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.15.0-1001_5.15.0-1001.2_all.deb
 ce0c509818ac3a25cc616829037dad1c96fa4d750980b1876f07862de7d9cf97:
   type: cos
   packages:
