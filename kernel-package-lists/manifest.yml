@@ -2819,6 +2819,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-327.4.5.el7.x86_64.rpm
+6d39e7a848bdbab0842208f8117b24811eae37281a10a8838bfee295e9a8233d:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.604.31-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.604.31-kernel-headers.tgz
 6e47b9f3f0398d28af7ad39e0c6ade41e6a5b5d61b74e6c48882d2e15e304144:
   type: redhat
   packages:
@@ -13308,6 +13313,11 @@ b985ad36fed5845bbcb6d0fd14aeb3a42a6865ea200a90b2da81f8d849912a58:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-19-generic_5.13.0-19.19_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-19_5.13.0-19.19_all.deb
+b1275fffaa8e4d5e34ddefd6ff84bf208e16c595bd4aa41f7eca3455b99fb09c:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.29.5-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.29.5-kernel-headers.tgz
 b1440d467650945229ade57d77f6053edf83f1314b4fc526335b688b967034b0:
   type: redhat
   packages:
