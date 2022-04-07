@@ -3813,6 +3813,10 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.7.1.el7.x86_64.rpm
+8e463afba9f406191480db78bae35a4d9445b0aa4bf7bec7b175e66ef161a4d7:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9d5b8276f60a1fd4bbfb2c0a7140fe3d8d85fb16aa547bef1a453f91bc721244-kernel-devel-5.4.186-102.354.amzn2.x86_64.rpm
 8b591c2da1b260728d9ad0c9d5f43ac2e36f884924e2dc469f0f9c5e7c3e0647:
   type: ubuntu
   packages:
@@ -8142,6 +8146,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-26607f2215328de1462ac99ce96a2a21204bef510b35a734d0c1c83fdbe117a0-kernel-devel-4.14.173-137.229.amzn2.x86_64.rpm
+532afa547804d4103cecc85bcefc91a7289fc18ada9606755f0b1ff740586291:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.171.1-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.171.1-kernel-headers.tgz
 533bd46697eef654ae194a49e010ccec93698045ab700cbf76374a836e969dab:
   type: redhat
   packages:
@@ -16698,10 +16707,6 @@ e721252768b5e5f17f03f9ff8c1bf01a186aea6246acbeeed7153928074304e9:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1045-fips_4.15.0-1045.52_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1045_4.15.0-1045.52_all.deb
-e859762084f3cc3cbe8d67e912c4ded72db634977f5e7cf06ffe6e8f9db82ae0:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.12.0-flatcar_developer_container.bin.bz2
 e0926909249d062e0e69981c164fb225e0036e1f3869627fe66c0949b56088fb:
   type: ubuntu
   packages:
