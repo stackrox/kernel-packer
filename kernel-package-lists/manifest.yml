@@ -2962,6 +2962,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-6a28e21cbbb4f49d77f50bac4546b89c1b2b803c740a87abbcbbff59e538b3f5-download
+6ca406d0fc6fd6ea4b02cb8a18efa31c1b74873a5d95c207bacc9d2601354c1d:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.1-flatcar_developer_container.bin.bz2
 6aac5b2129e1a571d1132e46ab4ba7dc21bbb522b49ebc6992c7b2fcec944c71:
   type: redhat
   packages:
@@ -3684,12 +3688,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1416.18-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1416.18-kernel-headers.tgz
-8b4f6336d8b47a27efe597bdf3ac3810842f419a54f05851a97b5b461a749b58:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.18-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-5-cloud-amd64_5.16.14-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-5-common_5.16.14-1_all.deb
 8d4bc19240b84a147d5301a114ba4e42e9aee0118341c221e05a442f16f9a491:
   type: redhat
   packages:
@@ -6722,12 +6720,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.0.0-1034_5.0.0-1034.35_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.0.0-1034-gcp_5.0.0-1034.35_amd64.deb
-078b724a029f907d945c8fa74bfd995471c6c66a8854af783255d43b58ae01fe:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.16_5.16.18-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-5-amd64_5.16.14-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.16.0-5-common_5.16.14-1_all.deb
 79f5f784259f0351966b4d97369c09f3abbd8878a715b05b6d031237a908b35e:
   type: ubuntu
   packages:
