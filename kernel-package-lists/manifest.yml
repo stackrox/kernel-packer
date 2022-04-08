@@ -2962,10 +2962,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-6a28e21cbbb4f49d77f50bac4546b89c1b2b803c740a87abbcbbff59e538b3f5-download
-6ca406d0fc6fd6ea4b02cb8a18efa31c1b74873a5d95c207bacc9d2601354c1d:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.1-flatcar_developer_container.bin.bz2
 6aac5b2129e1a571d1132e46ab4ba7dc21bbb522b49ebc6992c7b2fcec944c71:
   type: redhat
   packages:
@@ -7628,6 +7624,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-62-generic_4.15.0-62.69_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-62_4.15.0-62.69_all.deb
+0251ea1488dfc243feac47548f81412043be87e01b9c4e1b1bfdc8fdc68d7343:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.6.0-flatcar_developer_container.bin.bz2
 252fe05cee1146df17c4b22e1f7c3ac798f35eb4dafd2bbb0ddca443da880723:
   type: ubuntu
   packages:
@@ -7673,6 +7673,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2061-aws-fips_4.15.0-2061.63_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2061_4.15.0-2061.63_all.deb
+280ee31fec1e32441b5699f8cc759797c5aa6d361129c9d5779444b665191809:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.0-flatcar_developer_container.bin.bz2
 282e7cd60a3e487ea627daeb750b217be2bb486ecf72f96533dfa974c591feda:
   type: coreos
   packages:
@@ -9763,6 +9767,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.14-300.fc33-x86_64-kernel-devel-5.8.14-300.fc33.x86_64.rpm
+8722ab354f2958c7dd8f21aa29216a8d02c664ad328c1ac443c2c68ee087fcef:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.13-linux-headers-5.13.0-1022-aws_5.13.0-1022.24-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.13-linux-aws-5.13-headers-5.13.0-1022_5.13.0-1022.24-20.04.1_all.deb
 08752b64595f7e8d3623685bbdcd91bc9cdc85ca52f30db3e8c0194409bc7d70:
   type: redhat
   packages:
@@ -16902,6 +16911,11 @@ ec3865e3b1446064699f9649b93850936c95fd6b5abe46e9dbef5dc3588c9c98:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-1cfe22ace2042e898940b42d8be829d255e6ce2a5b171880805feb74797282c1-download
+ec09638efc70e9dd1b0ee788ad61339b2d4f02773d4bae09f7ccb9150bb386a6:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1121_4.15.0-1121.135_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1121-gcp_4.15.0-1121.135_amd64.deb
 ec77059f53c0215d395a3d687c7bc6c1ccc39459b9001651a39b1db611402ba5:
   type: ubuntu
   packages:
