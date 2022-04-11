@@ -2966,10 +2966,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-6a28e21cbbb4f49d77f50bac4546b89c1b2b803c740a87abbcbbff59e538b3f5-download
-6ca406d0fc6fd6ea4b02cb8a18efa31c1b74873a5d95c207bacc9d2601354c1d:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.1-flatcar_developer_container.bin.bz2
 6aac5b2129e1a571d1132e46ab4ba7dc21bbb522b49ebc6992c7b2fcec944c71:
   type: redhat
   packages:
@@ -3584,6 +3580,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.245-1.el7.elrepo.x86_64.rpm
+7cf14df48e2f0ba58786a2859d0c37b02942a0d0e4ecd1521c0f015b00bc7cac:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.4.0-flatcar_developer_container.bin.bz2
 7af45a4b89dcc72e5ac617b524f5a73b1384c789e64fef2f1d48b13c605b9849:
   type: ubuntu
   packages:
@@ -5146,6 +5146,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.68.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.68.1.x86_64.rpm
+29be787b7c1cac1ee1e9db9e9b82646b1fc9733b9d9f1b8b7b2a245e0267acad:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-109-generic_5.4.0-109.123_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-109_5.4.0-109.123_all.deb
 30d2ae4df11bf186e72302e3082c5239717ea6d9df749a6b8cc12c3ef4d51f06:
   type: ubuntu
   packages:
@@ -5678,10 +5683,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1083_4.15.0-1083.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1083-gcp_4.15.0-1083.94_amd64.deb
-47a20f6ca20ae19efed2b1650b4ba4d624cdec701d782f1f6046f5a74f751b9a:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
 47b2471b531434c6651c1b7cc414d584541da9474e0929f9d0767f2ba30d1138:
   type: ubuntu
   packages:
@@ -8519,6 +8520,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1032-fips_4.4.0-1032.37_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1032_4.4.0-1032.37_all.deb
+758ee435596e785e10b791fbb5030814a6448fce548413456f2cf9e3f3e4b589:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.2-flatcar_developer_container.bin.bz2
 760f17883e41f3a7a117adad75e7eebb3177013bd436ae64632c9218ed99c32b:
   type: ubuntu
   packages:
