@@ -3584,10 +3584,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.245-1.el7.elrepo.x86_64.rpm
-7cf14df48e2f0ba58786a2859d0c37b02942a0d0e4ecd1521c0f015b00bc7cac:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.4.0-flatcar_developer_container.bin.bz2
 7af45a4b89dcc72e5ac617b524f5a73b1384c789e64fef2f1d48b13c605b9849:
   type: ubuntu
   packages:
@@ -8523,10 +8519,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1032-fips_4.4.0-1032.37_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1032_4.4.0-1032.37_all.deb
-758ee435596e785e10b791fbb5030814a6448fce548413456f2cf9e3f3e4b589:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.2-flatcar_developer_container.bin.bz2
 760f17883e41f3a7a117adad75e7eebb3177013bd436ae64632c9218ed99c32b:
   type: ubuntu
   packages:
@@ -11007,6 +10999,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.146-1.el7.elrepo.x86_64.rpm
+1342319d9bdd041d65ce645f3a0182b7a879302c00384826a9940392623cb938:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3139.1.1-flatcar_developer_container.bin.bz2
 1496253acce8f206bcdc01c3ba8491f0f92addfd3258ce48e6e9956f0a60ddba:
   type: redhat
   packages:
