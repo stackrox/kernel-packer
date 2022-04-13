@@ -129,6 +129,7 @@ build-rhsm-crawler:
 crawl-rhsm: build-rhsm-crawler
 	docker run -e RHSM_OFFLINE_TOKEN --rm -i -v $(CRAWLED_PACKAGE_DIR):/kernel-package-lists:ro rhsm-crawler:latest > $(CRAWLED_PACKAGE_DIR)/rhel.txt
 	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
+	@cat $(CRAWLED_PACKAGE_DIR)/rhel.txt
 
 .PHONY: crawl-rhel
 crawl-rhel: build-crawl-container
@@ -303,4 +304,5 @@ crawl-minikube: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Minikube > $(CRAWLED_PACKAGE_DIR)/minikube.txt
 
 .PHONY: crawl
-crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-esm crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos crawl-cos crawl-ubuntu-standard crawl-minikube crawl-rhsm crawl-ubuntu-fips
+crawl: cralw-rhsm
+#crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-esm crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos crawl-cos crawl-ubuntu-standard crawl-minikube crawl-rhsm crawl-ubuntu-fips

@@ -209,9 +209,9 @@ class Crawler:
                 logger.debug(f'Skipping duplicated repository - {repo}')
                 continue
 
-            if self.exclude_repo(repo) or not self.include_repo(repo):
-                logger.debug(f'Skipping {repo}')
-                continue
+            #if self.exclude_repo(repo) or not self.include_repo(repo):
+            #    logger.debug(f'Skipping {repo}')
+            #    continue
 
             if 'arch' not in content_set:
                 logger.debug(f'No arch - Skipping {content_set}')
@@ -329,7 +329,7 @@ if __name__ == '__main__':
     parser.add_argument('--rhelPackageLists', type=str, default="/tmp/rhel_package_lists.txt")
     args = parser.parse_args()
 
-    logger.setLevel(args.logLevel)
+    logger.setLevel("DEBUG")
     get_latest = args.getLatest
     rhel_package_lists = args.rhelPackageLists
 
@@ -339,8 +339,9 @@ if __name__ == '__main__':
 
     crawler = Crawler(token, get_latest, rhel_package_lists)
 
-    if args.all:
-        crawler.crawl_all()
-    else:
-        crawler.crawl_repos()
+    crawler.crawl_all()
+    #if args.all:
+    #    crawler.crawl_all()
+    #else:
+    #    crawler.crawl_repos()
 
