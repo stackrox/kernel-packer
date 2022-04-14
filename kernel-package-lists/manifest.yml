@@ -2976,10 +2976,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-6a28e21cbbb4f49d77f50bac4546b89c1b2b803c740a87abbcbbff59e538b3f5-download
-6ca406d0fc6fd6ea4b02cb8a18efa31c1b74873a5d95c207bacc9d2601354c1d:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.1-flatcar_developer_container.bin.bz2
 6aac5b2129e1a571d1132e46ab4ba7dc21bbb522b49ebc6992c7b2fcec944c71:
   type: redhat
   packages:
@@ -7273,6 +7269,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.190-1.el7.elrepo.x86_64.rpm
+96b1010d40b34508e7c54ba5eb0cf9245dd9869f33967050991da920d990a7dd:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.20-100.fc34-x86_64-kernel-devel-5.16.20-100.fc34.x86_64.rpm
 96f3203cff7e1cf3c5b4754c76c5d7116464c8b6a81a7d63183e124bc2ce5e2c:
   type: redhat
   packages:
@@ -11677,6 +11677,10 @@ a00b49b04374510e3a48cc93e3124e504ecbdbc1218407a3f97c3959ca87ab0d:
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.40-1.el7.elrepo.x86_64.rpm
+a1e5c027f7ed64ca0e27ac7a351951a02b8eb1929b1be8ac0968c1e9e64691c8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.3-300.fc36-x86_64-kernel-devel-5.17.3-300.fc36.x86_64.rpm
 a1b493790d83894cc46c5cb7638765150db56a917785fa6a1acec692cda797dd:
   type: ubuntu
   packages:
@@ -12702,6 +12706,10 @@ ae5ede0337463ddddeeb9be88a45721a1a0bcc3ee0d705767730c7cd7e647526:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.51.2.el8_1.x86_64.rpm
+ae24c923e0e7faaf7d246ce033ad7c8b8eb65e6c7f1870b6823c22b4e20b7d33:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.20-200.fc35-x86_64-kernel-devel-5.16.20-200.fc35.x86_64.rpm
 ae35ac127ed7164c766b960e8c69be40cf8c93e274c8fa027f9124d710686087:
   type: garden
   packages:
