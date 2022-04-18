@@ -303,4 +303,4 @@ crawl-minikube: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Minikube > $(CRAWLED_PACKAGE_DIR)/minikube.txt
 
 .PHONY: crawl
-crawl: build-crawl-container crawl-suse crawl-rhel crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-esm crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos crawl-cos crawl-ubuntu-standard crawl-minikube crawl-rhsm crawl-ubuntu-fips
+crawl: build-crawl-container crawl-suse crawl-centos crawl-kops crawl-amazon crawl-debian crawl-ubuntu-esm crawl-ubuntu-gcp crawl-ubuntu-hwe crawl-ubuntu-gke crawl-oracle-uek crawl-ubuntu-azure crawl-flatcar crawl-flatcar-beta crawl-gardenlinux crawl-ubuntu-aws crawl-docker-desktop crawl-fedora-coreos crawl-cos crawl-ubuntu-standard crawl-minikube crawl-rhsm crawl-ubuntu-fips
