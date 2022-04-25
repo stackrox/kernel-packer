@@ -1829,6 +1829,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.31.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.31.0-kernel-headers.tgz
+3dfffc76d353cd1657d04f47689b63f6f1e13c26b481f5889bc39741929065cb:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.3.0-flatcar_developer_container.bin.bz2
 03d0b0d51ea06247b35acf6630306482d87949d8f07c2d3f2b80d60de6bb4fe0:
   type: cos
   packages:
@@ -17006,6 +17010,11 @@ ea6aa85de498fc9796b1e9c6f9b2abb7660098ddc50dc549157aa1343d0a9b2b:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1052-fips_4.4.0-1052.58_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1052_4.4.0-1052.58_all.deb
+ea8cf9b4bd89d426bb7a0c0ee056c487336d78fd14a666e4a742457182ad1d14:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.13.0-1025_5.13.0-1025.30_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.13.0-1025-gcp_5.13.0-1025.30_amd64.deb
 ea91e04aa9c4712a5918ff1b7fe5015c63a18acd384de3492fb5bd2adce8e406:
   type: redhat
   packages:
