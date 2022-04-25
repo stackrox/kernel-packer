@@ -92,10 +92,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-28-generic_4.4.0-28.47_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-28_4.4.0-28.47_all.deb
-0c8c7cb58b590f45e36bb42c554ad9ed8a20215d47fb2a3151a24a1c7622c6cc:
-  type: redhat
-  packages:
-  - https---api.access.redhat.com-management-v1-packages-0a3f5b620b1ffbd4c1d2790d51ce367ee46e7e7c11857a3bc54285de67f728d2-download
 0e008f5069b1b01928ff74b2c8d80199b2c03892e42a338b5cd72c417bf7b9a7:
   type: redhat
   packages:
@@ -268,6 +264,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
+0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0fa789d6c18092154d5b3f0910f0658c058637f5320c7ae8e9f97dca51e2e730:
   type: redhat
   packages:
@@ -15601,10 +15601,6 @@ d92d007a5b134f1f2395ef57efbf5ba9590cbc2f4afb2064d03582991ae9f15e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.11-linux-headers-5.11.0-1019-azure_5.11.0-1019.20-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.11-linux-azure-5.11-headers-5.11.0-1019_5.11.0-1019.20-20.04.1_all.deb
-d93b74cb6243d0df3a8527a030bd16e72cbe819cbcd0d46678e549a47a49920f:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3185.1.0-flatcar_developer_container.bin.bz2
 d094cdb033603a7ae57a881d8c9ce114c6e74c2092fc3b61e00221517878256c:
   type: ubuntu
   packages:
