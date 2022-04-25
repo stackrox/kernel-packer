@@ -268,10 +268,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
-0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0fa789d6c18092154d5b3f0910f0658c058637f5320c7ae8e9f97dca51e2e730:
   type: redhat
   packages:
@@ -8189,6 +8185,10 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.7-1.el7.elrepo.x86_64.rpm
+515b80cfb412267b681225f31ccbb82e8abe7a7a3790ebb28a38cf5291c7aa57:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.45.1.el8_4.x86_64.rpm
 518ac4956694127d1fd557f0af06d92a2f2cfb20139c9c480b763c21ab71e3fd:
   type: redhat
   packages:
@@ -13038,6 +13038,10 @@ b1f62495c2fe9759d31d04184f9c3c38b921d8f63fcb8585da77bc095035a4c2:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.43.2.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.43.2.x86_64.rpm
+b1db3d78bc054de54b4f5289cbcb1f09c22a0965961dc56f7d088561c0ad0c25:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.3.0-flatcar_developer_container.bin.bz2
 b1fceff506ed73fcf52d71b87f532b073f185c498fb869723605ac2338bb600b:
   type: redhat
   packages:
