@@ -4354,10 +4354,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-gcp-5.3-headers-5.3.0-1010_5.3.0-1010.11-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-headers-5.3.0-1010-gcp_5.3.0-1010.11-18.04.1_amd64.deb
-9e776d3bb0360fcf90c62ca535f7e902ae497eae1dbbe6ead1771f33789cba38:
-  type: redhat
-  packages:
-  - https---api.access.redhat.com-management-v1-packages-e0b33105529a7039f5c39591d31c34eb861d95032067307214a4e60cf4694e81-download
 9f980f547f0cab9fd4a47de7113b14bbcd9bd2784aa15ba2f6c44f68df3cc7cb:
   type: ubuntu
   packages:
@@ -4872,10 +4868,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1015.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1015.0-kernel-headers.tgz
-18a5611f4549eb5dbd9c1704357d13862ea350ed3f00a0107b4c5bfa136c6a54:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2247.7.0-flatcar_developer_container.bin.bz2
 18adfcdb000a6eb54b9dd344fa809e4d79a425f977937fff2f604bd3f6bc8d86:
   type: ubuntu
   packages:
@@ -10882,6 +10874,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d59c3695e9b79c253a02ee63051880df267700db4180ff05f97b28b095085791-kernel-devel-4.14.133-113.105.amzn2.x86_64.rpm
+308077b773b44875a31a8e94b3e492f969b81df4c05b79190a56c1e10bf9a444:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.0-flatcar_developer_container.bin.bz2
 314909f5d92a825bfa0261bc0f6725429c3d66026597ff3e12b03aa390145e3a:
   type: ubuntu
   packages:
@@ -11410,10 +11406,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-220.el6.x86_64.rpm
-8440398d5ad07a49306155652bfe48a84b3c3a887671038da5123bd82e123af4:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.5.0-flatcar_developer_container.bin.bz2
 8638994f0497fdae7d341f1c6542106e47cc87c772b44e27498c5f29d93051ee:
   type: redhat
   packages:
