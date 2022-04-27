@@ -2096,6 +2096,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-358.2.1.el6.x86_64.rpm
+4c686154fa775daeefd262baedc3b1be538f7f5d29649fa856cd2d687baa5a88:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.1-flatcar_developer_container.bin.bz2
 4c763746ac40dbb660b59a9d851170126a473048dc41fdda8864638a6b0e7389:
   type: ubuntu
   packages:
@@ -11770,6 +11774,11 @@
   type: redhat
   packages:
   - https---buildlogs.centos.org-c7.1908.00.x86_64-kernel-20190808101829-3.10.0-1062.el7.x86_64-kernel-devel-3.10.0-1062.el7.x86_64.rpm
+076929515760c49f0b8159515edbb510b2114f070a49eb17f1f3a3e7b58f1fc7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1073_5.4.0-1073.78_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1073-gcp_5.4.0-1073.78_amd64.deb
 094692400321fc11a0e8367d1817ab2a41ceca6a5a6c75d2c0d629be62fb93d2:
   type: redhat
   packages:
