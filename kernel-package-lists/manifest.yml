@@ -264,6 +264,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
+0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0fa789d6c18092154d5b3f0910f0658c058637f5320c7ae8e9f97dca51e2e730:
   type: redhat
   packages:
@@ -3754,10 +3758,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12371.1105.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12371.1105.0-kernel-headers.tgz
-8b6e912a1ada7410518ecebfca2541db62809f638280611ba25862cef0f9b5a2:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.3-flatcar_developer_container.bin.bz2
 8e6ff1a4124535b92bd2d0a5059f3190c38c776231949c63a4cc775b19af1084:
   type: redhat
   packages:
@@ -4874,10 +4874,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1015.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1015.0-kernel-headers.tgz
-18a5611f4549eb5dbd9c1704357d13862ea350ed3f00a0107b4c5bfa136c6a54:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2247.7.0-flatcar_developer_container.bin.bz2
 18adfcdb000a6eb54b9dd344fa809e4d79a425f977937fff2f604bd3f6bc8d86:
   type: ubuntu
   packages:
@@ -9429,6 +9425,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1026_5.3.0-1026.28-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1026-gke_5.3.0-1026.28-18.04.1_amd64.deb
+4507ee5a2c802f8fdad5590b5b92e148feecffa94d24fae57a0968077a3f8110:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.5.0-flatcar_developer_container.bin.bz2
 4519affb139bca9dbe6bdd7b5f8a7af54b57dab43cfbd93bcd8a744e81a8c65b:
   type: ubuntu
   packages:
