@@ -4701,10 +4701,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-41-generic_5.13.0-41.46_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-41_5.13.0-41.46_all.deb
-09ef04dd1ae230e5ff5d6a5b29a4e01dc79478cb98a0a11ca414b1319d86183a:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2023.4.0-flatcar_developer_container.bin.bz2
 10f0ce0720fe91446064a755f3e41718de68b405c740f89b82b3aa18e98c436f:
   type: redhat
   packages:
@@ -5142,10 +5138,6 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.12.2.el7.x86_64.rpm
-27c170dee6ae1863ac35044def35318259544d038bb6b4d5a1cc63ef6387b43c:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.1-flatcar_developer_container.bin.bz2
 27b76073ba9346f92da233a37b8a621944a2058ee8ecda411f5886a6a2bebbfb:
   type: ubuntu
   packages:
@@ -6938,10 +6930,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1068-aws_5.4.0-1068.72_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1068_5.4.0-1068.72_all.deb
-83f4bb22f280012141a426efba2668f2410ba926c2b6654c8e095ecda8a70379:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2247.5.0-flatcar_developer_container.bin.bz2
 83b12e1b2d58ef101119e4097853de643dc2db896cde719fb18adae5063dd3bc:
   type: ubuntu
   packages:
@@ -12113,6 +12101,10 @@ a23b595743659c3137015d4264deff5b9d769883494e1233d228c5ee109f2203:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.18-100.fc31-x86_64-kernel-devel-5.8.18-100.fc31.x86_64.rpm
+a25a1b53c2444824a682def0f5e6797232fabcbd23ac7324185b72cf4c789552:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.1-flatcar_developer_container.bin.bz2
 a29b3af39619d0396f0d0d224817fa4d6b2b398ec46f9106653d9679cc1d41e7:
   type: redhat
   packages:
