@@ -2161,10 +2161,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-headers.tgz
-4ab969585b132e1736a69c888c6146fc84b2f1692a1fbdc17a2e80db93242770:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.0-flatcar_developer_container.bin.bz2
 4fb12689714a9881c48d70ef60c7800ec63e9b1a7b842fecf27225d68e8f49ad:
   type: ubuntu
   packages:
@@ -5920,10 +5916,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
-51d90cb355570b48aed6078aabfae3bed3e586df10f88a053da9c4d85a223b60:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.0-flatcar_developer_container.bin.bz2
 51fb9feecf8655146f05efff9eb954cfe6c5041bc15b179b250ee4a31548a78b:
   type: redhat
   packages:
@@ -14827,6 +14819,11 @@ ca8c98e7cb9ef02115c04aec5b23cdecd44b4cd7afd78313fa2ec4009ed2d5c3:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-cbb0091c3e727af757720d44e0e53975a6b7932538d50fdf5ad15b259609d22d-download
+ca24d2ad0a24f54250b0584bf159e2d112f354d962ff2ed7aafea968e0d7c8c8:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1071_5.4.0-1071.76_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1071-gke_5.4.0-1071.76_amd64.deb
 ca87a763f9b89016b450481786dd3c54413198140bc3137d8f8d212c3b308b01:
   type: cos
   packages:
