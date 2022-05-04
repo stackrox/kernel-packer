@@ -2528,10 +2528,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1037-azure_4.15.0-1037.39_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1037_4.15.0-1037.39_all.deb
-5a6433b433cbad54ade8ac0345650a40281803d35e9f30cea62371def758c6d4:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3139.1.0-flatcar_developer_container.bin.bz2
 5b9713d3a0d93782731d802bcdbdd9876f01c84f7273b9d2158495e4157dc3db:
   type: ubuntu
   packages:
@@ -4345,10 +4341,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9f388164ea775e7a6c36c8628bb9a66a47d9fe27c99e732a210f357e1213dda7-kernel-devel-4.14.77-86.82.amzn2.x86_64.rpm
-9c222fdb45522b7285e5e7957ef2e38beaf317667b0d76d00aa960247c42cd28:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.0-flatcar_developer_container.bin.bz2
 9d287faa1356323929f9a55c004db7a42cd372eb6e2c064a119ac77e5d2cbd1f:
   type: ubuntu
   packages:
@@ -9283,6 +9275,10 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.2.2.el7.x86_64.rpm
+3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -11451,6 +11447,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-220.el6.x86_64.rpm
+8440398d5ad07a49306155652bfe48a84b3c3a887671038da5123bd82e123af4:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.5.0-flatcar_developer_container.bin.bz2
 8638994f0497fdae7d341f1c6542106e47cc87c772b44e27498c5f29d93051ee:
   type: redhat
   packages:
@@ -16305,6 +16305,11 @@ deb1928b6bc2b41d6407ed80bddd4329f1820825b54f0b48eb99269e1542a8c9:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-123.4.2.el7.x86_64.rpm
+debb06b887226ce3371e8d5e4600166bc655e7426a38abd0ea119b1f61165fc8:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-29-generic_5.15.0-29.30_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-29_5.15.0-29.30_all.deb
 dece0f6571d92b30e91a63164f7196786e6a589780d5d48713eae83e8a397fe3:
   type: redhat
   packages:
