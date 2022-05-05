@@ -4888,10 +4888,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1015.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1015.0-kernel-headers.tgz
-18a5611f4549eb5dbd9c1704357d13862ea350ed3f00a0107b4c5bfa136c6a54:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2247.7.0-flatcar_developer_container.bin.bz2
 18adfcdb000a6eb54b9dd344fa809e4d79a425f977937fff2f604bd3f6bc8d86:
   type: ubuntu
   packages:
@@ -5530,10 +5526,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.7-300.fc35-x86_64-kernel-devel-5.14.7-300.fc35.x86_64.rpm
-38d191ac429e0ccbca3549a11823b063952940c35242407745b22a1868388ef8:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.0-flatcar_developer_container.bin.bz2
 38f455a14fe22c68059ef0ef4802955e058132dfa9f3043f173421c206e07b17:
   type: redhat
   packages:
@@ -6089,6 +6081,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.13.0-1009-aws_5.13.0-1009.10_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.13.0-1009_5.13.0-1009.10_all.deb
+56d6d00ef1c8cc9ef9c3ebf58ec68282826b399ea53d7c3282ccbba456828fb1:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.2.0-flatcar_developer_container.bin.bz2
 56b31cdcbf82f1cbf2ef269b063c8ed16001597a2b8c9a8886506791a992fcae:
   type: coreos
   packages:
