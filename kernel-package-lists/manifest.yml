@@ -4355,6 +4355,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9f388164ea775e7a6c36c8628bb9a66a47d9fe27c99e732a210f357e1213dda7-kernel-devel-4.14.77-86.82.amzn2.x86_64.rpm
+9c222fdb45522b7285e5e7957ef2e38beaf317667b0d76d00aa960247c42cd28:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.0-flatcar_developer_container.bin.bz2
 9d287faa1356323929f9a55c004db7a42cd372eb6e2c064a119ac77e5d2cbd1f:
   type: ubuntu
   packages:
@@ -9812,6 +9816,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.213-1.el7.elrepo.x86_64.rpm
+7420d1274a1426af58c7c745064c98aabc8398b2feeaac9ae53d8a968e6b69c7:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17047.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17047.0.0-kernel-headers.tgz
 7454ad0edc9c59dffd93b8186f900609726f610669394c9a07cfa1f740f2d8fe:
   type: ubuntu
   packages:
@@ -14588,6 +14597,10 @@ c173a60128a5c5e48ecda9485038d73b6fa1b3878213ae8838cfb3a08fd0d20d:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1112_4.15.0-1112.126-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1112-gcp_4.15.0-1112.126-16.04.1_amd64.deb
+c258aab538c588d9c9dd1f5d5a249eb53ccfa2a799a3c3bc257d0fa3919d7c84:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2135.5.0-flatcar_developer_container.bin.bz2
 c346c42f9cc9060cb7ba68645c0e971e3e8d30f48d20c6aac8d09cbae433b8dc:
   type: suse
   packages:
@@ -17859,6 +17872,10 @@ f9bda1f07ff8c739db8e4ba36c77c96199c21353601eadf47c1b2fe4deee79f7:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.113.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.113.1.x86_64.rpm
+f10ed7664389bb42e9a0a27a4792dc56eda2e36719f13e5551ab9e21939d06ac:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.6-300.fc36-x86_64-kernel-devel-5.17.6-300.fc36.x86_64.rpm
 f10feec86f25c8f601398f72cf2c370de1c403a3259fa96e3d3bb74f815edf8d:
   type: ubuntu
   packages:
