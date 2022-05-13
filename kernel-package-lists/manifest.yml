@@ -540,6 +540,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1041-azure_4.15.0-1041.45_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1041_4.15.0-1041.45_all.deb
+1c8a3b4a4b4ddd433c423f2d22868eb8481b7e803a506c0cf85b953c6c78116f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.15.0-1006-azure_5.15.0-1006.7_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.15.0-1006_5.15.0-1006.7_all.deb
 1a8c725eed01e3d57083ec1a94c9f938674be7869908e3d3b478729312896ca2:
   type: redhat
   packages:
@@ -1670,6 +1675,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1033_4.15.0-1033.35_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1033-gcp_4.15.0-1033.35_amd64.deb
+3b218423d90d9cdb2e977b6afa2ec243975f8361e0ff21e7f9bedaf659192212:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.13.0-1024-aws_5.13.0-1024.26_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.13.0-1024_5.13.0-1024.26_all.deb
 3f27993481ecd1092b113afba77241747e5349594d3ba35b1146d730c58e1c83:
   type: redhat
   packages:
@@ -3796,10 +3806,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12371.1105.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12371.1105.0-kernel-headers.tgz
-8b6e912a1ada7410518ecebfca2541db62809f638280611ba25862cef0f9b5a2:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.3-flatcar_developer_container.bin.bz2
 8e6ff1a4124535b92bd2d0a5059f3190c38c776231949c63a4cc775b19af1084:
   type: redhat
   packages:
@@ -4230,6 +4236,10 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-150300.59.60.4.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-150300.59.60.4.x86_64.rpm
+9e4e15bcc8ee375eedc6a55772ea86ab466d2cf626465e1e84a5a95a1d5b0304:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.2-flatcar_developer_container.bin.bz2
 9e4ccb04daf1cf3ab4d7df2c25294e738c819fb9aad582edd4481759e133ed16:
   type: redhat
   packages:
@@ -6346,6 +6356,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1062.1.1.el7.x86_64.rpm
+63c27efe9e56663469f30cdcf7a356d1df6d27eacdf2f63e8e4042fb3048cf39:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-32-generic_5.15.0-32.33_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-32_5.15.0-32.33_all.deb
 63f35d4932cdef08521d43ab7a80a3b9d4231d2242fc93a36ff0eab324eded6f:
   type: redhat
   packages:
@@ -8304,10 +8319,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2039-aws-fips_4.15.0-2039.41_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2039_4.15.0-2039.41_all.deb
-525e7099c7103f0282f2335ff6d9d8be45d44e0a162a38170dc6f3b6e8812fa8:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.0-flatcar_developer_container.bin.bz2
 525aeb881b9a6bacc7dda7d9f12c87cd4a7d04315fe2641cb1dbbfbbcd90451e:
   type: cos
   packages:
@@ -8737,6 +8748,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1032-fips_4.4.0-1032.37_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1032_4.4.0-1032.37_all.deb
+758ee435596e785e10b791fbb5030814a6448fce548413456f2cf9e3f3e4b589:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.2-flatcar_developer_container.bin.bz2
 760f17883e41f3a7a117adad75e7eebb3177013bd436ae64632c9218ed99c32b:
   type: ubuntu
   packages:
@@ -9784,10 +9799,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1048-fips_4.15.0-1048.55_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1048_4.15.0-1048.55_all.deb
-6748f7f32ca213376da67974f4f54b6eb36ec4ef30881c14cd0d3aed968f6a03:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.6.0-flatcar_developer_container.bin.bz2
 6786fb54ff0e2f6ecf508971593b81e9baea209f31bb71c00d86291f9f47b7f8:
   type: ubuntu
   packages:
@@ -15804,6 +15815,10 @@ d87cbebd71866facd2f4d68bee8eaf7fd0a317416277e0cd4851126cef6fbb72:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1019_4.15.0-1019.20-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1019-gcp_4.15.0-1019.20-16.04.1_amd64.deb
+d89b43be036f05287304902d7bc6aac1993c0bcc2a144fe67b9dbe5db4218dc4:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2920.1.0-flatcar_developer_container.bin.bz2
 d090bdb5ffdfc998ece1a98151b5429713d8835594b075479b9e5b4d09ea3db5:
   type: ubuntu
   packages:
@@ -18279,6 +18294,11 @@ f4211eeba42e3c34fb4d2c66df15dce9b02be33eef6ae8a354bc1f58864d6fd8:
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1209.17-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1209.17-kernel-headers.tgz
+f4468bbf837ca34022383ce9b369554f343ba15ab8e0dfd357301bc6244b091a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1129-aws_4.15.0-1129.138_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1129_4.15.0-1129.138_all.deb
 f4702b22510e7178cde34e217ce85b194a1b7d1c87a019946ea7f401f21813e3:
   type: suse
   packages:
