@@ -2126,10 +2126,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-358.2.1.el6.x86_64.rpm
-4c686154fa775daeefd262baedc3b1be538f7f5d29649fa856cd2d687baa5a88:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.1-flatcar_developer_container.bin.bz2
 4c763746ac40dbb660b59a9d851170126a473048dc41fdda8864638a6b0e7389:
   type: ubuntu
   packages:
@@ -14829,6 +14825,11 @@ c9419e179d85b4e4271ddc208464c890aaa49eb63fa59710a1dc77276a872c14:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-131.21.1.el6.x86_64.rpm
+c11307dab3b130bb9b6d0bf01a8c816975f91c072a37cbfc4e36ee5fbf8868c3:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-150300.59.68.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-150300.59.68.1.x86_64.rpm
 c26441d2bf1422b2f3c27959564810f78edeca46dadf35d17c4d8e4ffca77b63:
   type: cos
   packages:
@@ -17388,6 +17389,10 @@ eadfe27b9200504c92b0666e9bfb422babeb83ed66698c648ef48992732c8c7f:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1055-fips_4.4.0-1055.61_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1055_4.4.0-1055.61_all.deb
+eaf8f204bb3a39befcb940049c216f1ddb8053be01f8f41d1bf33478f499cfb6:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.1-flatcar_developer_container.bin.bz2
 eaf81411049275bb31a0f55842a6da4e2d7ebac6b0dbdb459b7ec5bb06aaa9f0:
   type: ubuntu
   packages:
