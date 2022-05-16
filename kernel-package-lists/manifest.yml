@@ -939,6 +939,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-573.18.1.el6.x86_64.rpm
+2f3f644fcf410e2f74028749293029f6b1b2ffc06f89ad90b6c25992c854b59b:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2643.1.0-flatcar_developer_container.bin.bz2
 2c3e2844d3528b0a04d859bd1002d57713cf0b972dbef59c93072675c2398292:
   type: ubuntu
   packages:
@@ -2706,6 +2710,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-121-generic_4.15.0-121.123_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-121_4.15.0-121.123_all.deb
+5ecbcec13a71893b2429f3cec633939ac2cc0c006b39e55e1fe3ba73e454ea88:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.6-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-2-cloud-amd64_5.17.6-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-2-common_5.17.6-1_all.deb
 5dce0e0e3b5c00418d7821585e2648d242178f1285f7bd1dddc0021699a0560b:
   type: garden
   packages:
@@ -4750,6 +4760,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-41-generic_5.13.0-41.46_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.13.0-41_5.13.0-41.46_all.deb
+09ef04dd1ae230e5ff5d6a5b29a4e01dc79478cb98a0a11ca414b1319d86183a:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2023.4.0-flatcar_developer_container.bin.bz2
 10f0ce0720fe91446064a755f3e41718de68b405c740f89b82b3aa18e98c436f:
   type: redhat
   packages:
@@ -5198,6 +5212,10 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.12.2.el7.x86_64.rpm
+27c170dee6ae1863ac35044def35318259544d038bb6b4d5a1cc63ef6387b43c:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.1-flatcar_developer_container.bin.bz2
 27b76073ba9346f92da233a37b8a621944a2058ee8ecda411f5886a6a2bebbfb:
   type: ubuntu
   packages:
@@ -5835,10 +5853,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1083_4.15.0-1083.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1083-gcp_4.15.0-1083.94_amd64.deb
-47a20f6ca20ae19efed2b1650b4ba4d624cdec701d782f1f6046f5a74f751b9a:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
 47f95e49161e337bab8ae59d1f16fc85ad58a558d67e763617b03d7d37ea7093:
   type: redhat
   packages:
@@ -14327,6 +14341,12 @@ c2fd4dd758d72470aae0b256abb0c757085ebf3153b016d821f3a2c047a6f820:
   packages:
   - https---storage.googleapis.com-cos-tools-11647.18.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.18.0-kernel-headers.tgz
+c2de156f1c0e44ab2dc9d2430f3e9449073ab666ea455ab46b2587bd9bed678f:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.6-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-2-amd64_5.17.6-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-2-common_5.17.6-1_all.deb
 c02eda486e5b1f24006aa6dfc1eebf0ea2a40e5b42131f88ec51d4a80eec7439:
   type: ubuntu
   packages:
@@ -17145,10 +17165,6 @@ e9236a218cf97b21f8309200b9c1253d1667d2863ed77f1fa445944c193c416d:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-696.10.1.el6.x86_64.rpm
-e15106ca84b7368f4e64921494812219f2fed7abec1804c438799ac5b3de6515:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.5.0-flatcar_developer_container.bin.bz2
 e15836ebd333f85658050de10714683f7e62926143af07d14e09f0668a9252b2:
   type: ubuntu
   packages:
