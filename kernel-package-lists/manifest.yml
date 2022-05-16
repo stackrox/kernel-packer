@@ -4031,6 +4031,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-edge-linux-gcp-headers-4.18.0-1007_4.18.0-1007.8-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-edge-linux-headers-4.18.0-1007-gcp_4.18.0-1007.8-18.04.1_amd64.deb
+8ab56aa26cb3d80d084760d2772ec4cd168c5f11afcfc5178dec68da3fd36330:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1123_4.15.0-1123.137_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1123-gcp_4.15.0-1123.137_amd64.deb
 8eb346b29ff7af625ee66e00f4370cca0016c46f84c3301fe8883c1945113dd6:
   type: ubuntu
   packages:
@@ -5898,6 +5903,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1129-azure_4.15.0-1129.142_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1129_4.15.0-1129.142_all.deb
+48d88eafbcde80e07b202123dafcedbead67505b879d073b50c75aa26948c8ac:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.121.2.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.121.2.x86_64.rpm
 48e05645e14596ed78d61b947e140faae6a537b33d48955d631ddf074a3df044:
   type: ubuntu
   packages:
@@ -12814,6 +12824,11 @@ ab22fba91d408d261a93bdb5c4fafa4c0cc39a6b5a48052a7a8f400169029eb6:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.10.2.el8_4.x86_64.rpm
+ab42df091c8e081e717f74ec9a7b45be908f2abe71fb23729851b216fb3bb094:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.13.0-1026_5.13.0-1026.31_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.13.0-1026-gcp_5.13.0-1026.31_amd64.deb
 ab69f61f6193d6c3e3db9b4657618c96074502148c6dc23cab541dbf77b74d8b:
   type: ubuntu
   packages:
@@ -15874,6 +15889,11 @@ d096c9dec6d9ed2e2e827983bd5812f63255fba12668841e80467df54b6fca1c:
   packages:
   - https---storage.googleapis.com-cos-tools-12163.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12163.0.0-kernel-headers.tgz
+d134ec924a42d636fbdfedbb107b4ab931e88635e3ae92f2457263f7c1dae57d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1074_5.4.0-1074.79_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1074-gcp_5.4.0-1074.79_amd64.deb
 d178dfb6d98551c4142740d62f2b985865410adf87cf48c24d903fd5840169e5:
   type: redhat
   packages:
@@ -17368,10 +17388,6 @@ eadfe27b9200504c92b0666e9bfb422babeb83ed66698c648ef48992732c8c7f:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1055-fips_4.4.0-1055.61_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1055_4.4.0-1055.61_all.deb
-eaf8f204bb3a39befcb940049c216f1ddb8053be01f8f41d1bf33478f499cfb6:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.1-flatcar_developer_container.bin.bz2
 eaf81411049275bb31a0f55842a6da4e2d7ebac6b0dbdb459b7ec5bb06aaa9f0:
   type: ubuntu
   packages:
