@@ -115,6 +115,18 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2135.4.0-flatcar_developer_container.bin.bz2
+0e27c2964869a4d58bcf67d0ce057baefe30338b26173dc1f0daaf722e91a9f4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.16-100.fc32-x86_64-kernel-devel-5.10.16-100.fc32.x86_64.rpm
+0d28a6fb6f808a0517247ccc3fa4290acbc4abf20026bc2a3009d583fe60718c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.18-200.fc33-x86_64-kernel-devel-5.10.18-200.fc33.x86_64.rpm
+0c032dd9293b06769412705eb10036bff2bff79211890f9219109f0d52933e67:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.12-300.fc34-x86_64-kernel-devel-5.12.12-300.fc34.x86_64.rpm
 0c45a277de398a36a2d4e5d2c8914e44fa713e2be74ebb80156ec94b9924e9a5:
   type: cos
   packages:
@@ -124,6 +136,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.51.1.el8_2.x86_64.rpm
+0a82c2880ec4aa6fda08de22708fdab5e1c160e1efebb66d966bb7dedffdfec0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.10-200.fc32-x86_64-kernel-devel-5.8.10-200.fc32.x86_64.rpm
 0a87cbb3f6a6fa31a552204792a4586d85514358e57f3ba3a0224b195f02e858:
   type: ubuntu
   packages:
@@ -191,6 +207,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-8c7cdcdf5689927509ff21e0563dafeb7601d59287a7f607d4f56e8c0a2bb25c-download
+0b9181d599cc1cb94d936855b7855c56501e25891e82e7d114463fc278f28980:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.15-200.fc35-x86_64-kernel-devel-5.15.15-200.fc35.x86_64.rpm
 0d9486d803da91a43c7000e23674c8d946b08f83eb4dd41d80270fa97b70e4b4:
   type: cos
   packages:
@@ -210,6 +230,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-gcp-5.3-headers-5.3.0-1020_5.3.0-1020.22-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-headers-5.3.0-1020-gcp_5.3.0-1020.22-18.04.1_amd64.deb
+0b67150e02e132fd478f9f5cca2216f12091fc18ece650dae6e455b1444c501a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.19-200.fc35-x86_64-kernel-devel-5.16.19-200.fc35.x86_64.rpm
 0c599258b582c02cf48520ff17b9e09fe49cb004ae3b96c685bf53396d7b208e:
   type: redhat
   packages:
@@ -248,6 +272,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.25.1.el6.x86_64.rpm
+0da44486150e5952bbbbfd2cb7424f6a47366f572785c10adc31e2dc69a09c6f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.9-200.fc34-x86_64-kernel-devel-5.13.9-200.fc34.x86_64.rpm
 0daa4ef99e22ebb79050cf865723b25d7bbeb2a4d1724a23ffc922cdb5322812:
   type: ubuntu
   packages:
@@ -368,6 +396,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1045-fips_5.4.0-1045.51_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1045_5.4.0-1045.51_all.deb
+0bfa482d79596ec5851d4f8379e99cc8ddd45582da95ab43d81e6cbca5706c9d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.22-100.fc32-x86_64-kernel-devel-5.10.22-100.fc32.x86_64.rpm
 0ffb9b1d756ff8632a14e591a9fb0502d7828dac599b04eef3fd6ec369f7327d:
   type: ubuntu
   packages:
@@ -406,6 +438,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16695.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16695.0.0-kernel-headers.tgz
+1c0e99dcf15fea68fe5e46e53cf26d1c38bb2b9ae057ec2ea078294eb44e40c4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.18-300.fc33-x86_64-kernel-devel-5.8.18-300.fc33.x86_64.rpm
 1f1e1edf3823b3efd48e05e3bdcb19fa5b11a2b6d4497dd6ceda086e472a8e7c:
   type: ubuntu
   packages:
@@ -490,6 +526,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1021_4.15.0-1021.22_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1021-gcp_4.15.0-1021.22_amd64.deb
+1c6ba55c2e2c87f89685ccb41f99f0a8f1df0f8064a6a50d5ccd84e272fc3dee:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.8-200.fc32-x86_64-kernel-devel-5.8.8-200.fc32.x86_64.rpm
 1d7fb282172a24930096c9d60942946609aad7913989b26ba40fba69661730b5:
   type: cos
   packages:
@@ -648,6 +688,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1040-azure_5.4.0-1040.42_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1040_5.4.0-1040.42_all.deb
+1a5582e9a0b5151ec4f5d7faf3a032677decdd0a508cd6052dc12ae5fef8c02b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.9-100.fc33-x86_64-kernel-devel-5.14.9-100.fc33.x86_64.rpm
 1e6940f8290d67a3f46df71edd141a0455ebc24c69558985102549240559efca:
   type: ubuntu
   packages:
@@ -716,10 +760,18 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2605.7.0-flatcar_developer_container.bin.bz2
+1fafc8746cba8726bccafe39e5be1a10ec83c866cbbcad39bbd4d20093aed9c4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.8-300.fc34-x86_64-kernel-devel-5.12.8-300.fc34.x86_64.rpm
 1bafdd3348c75e691ee2ae9db9b389cb82592d6cd9055c5f9b8ed4d44e000b60:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1520.7.0-coreos_developer_container.bin.bz2
+1fb1373025b53518f855aab1bbcf0144a20c00c26fb4b3fed16a3af2feaaf725:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.8-100.fc32-x86_64-kernel-devel-5.9.8-100.fc32.x86_64.rpm
 1cc27e35ab02572c1f2cd468842a0dac76641837e6f27cd6ded1eb8af137abe8:
   type: ubuntu
   packages:
@@ -761,6 +813,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.11.2.el8_0.x86_64.rpm
+1fd23176b2cad8a19437e2cc0a33cf31ae39efdd626a38d81ae6d5bb301bb488:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.4-100.fc34-x86_64-kernel-devel-5.15.4-100.fc34.x86_64.rpm
 1fda392c3e944e4b3f77da01aebcf59db1c8e0ff860ca06114a097e3a35698e0:
   type: redhat
   packages:
@@ -779,6 +835,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-105-generic_5.4.0-105.119_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-105_5.4.0-105.119_all.deb
+1de9fe4027503add4a4dfcf52f95570f2a89eb9a20fd51798592eeafb25ac78f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.5-100.fc34-x86_64-kernel-devel-5.16.5-100.fc34.x86_64.rpm
 1be83b3428d00a17e6fdc0de8b0e4cc00a29228abb16d53169d3d2967f920440:
   type: redhat
   packages:
@@ -938,6 +998,10 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2247.5.0-coreos_developer_container.bin.bz2
+2f7d7fb5b281e4d5bb563e9ab824b9ae1d203263d46f1d8ad68395a4cd03e3cb:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.17-100.fc31-x86_64-kernel-devel-5.8.17-100.fc31.x86_64.rpm
 2c7d9e08a6369b0a86d268f9803e611bbb2b4d96af629d32336ff85a3d99bf97:
   type: redhat
   packages:
@@ -1001,6 +1065,14 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1047-azure_4.15.0-1047.51_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1047_4.15.0-1047.51_all.deb
+2f39f9fe840218bac25e86cf9ec562247641042f2780fa84f08d10de9b2a5d06:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.17-200.fc33-x86_64-kernel-devel-5.11.17-200.fc33.x86_64.rpm
+2a42b37e2163c2e2057026272ae782e0134b8c471f796ef66c34d98116c5139d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.5-200.fc33-x86_64-kernel-devel-5.12.5-200.fc33.x86_64.rpm
 2d52b85ed57b7685bb3a6a91387fde0dd68aec1fd4ca093c1e05eb529aaefded:
   type: ubuntu
   packages:
@@ -1098,6 +1170,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1008-gke_4.4.0-1008.8_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1008_4.4.0-1008.8_all.deb
+2a30568b03e434413747b21e3f6fc74b2ebd68c17034a75502423cd3eb839e3a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.0-60.fc36-x86_64-kernel-devel-5.16.0-60.fc36.x86_64.rpm
 2e42966fb30eb8f80a1eee41e3b15857bc453875919bd14682b9f627a2073f35:
   type: redhat
   packages:
@@ -1159,11 +1235,19 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-327.4.4.el7.x86_64.rpm
+2da7e8b08cf809f892680e93c38965d0d26892e1bfeeed8585e0fb0162e5f8e3:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.7-200.fc33-x86_64-kernel-devel-5.12.7-200.fc33.x86_64.rpm
 2eab44b80592a95d1a29d89eb84161293f667b648d71719a5f7996bc8800cbdb:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1122-azure_4.15.0-1122.135_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1122_4.15.0-1122.135_all.deb
+2dac9b701af4d46655e0d86d3332a44f725c85e70879096b1cbbfcb1fcd9dbe8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.13-100.fc32-x86_64-kernel-devel-5.9.13-100.fc32.x86_64.rpm
 2fadaf65e231a2483773e5cdba4babdae4deaa23ef7519ec4bf5354148b8f0e1:
   type: cos
   packages:
@@ -1255,6 +1339,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1113_4.15.0-1113.127_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1113-gcp_4.15.0-1113.127_amd64.deb
+2cdd4cbaa5cce7b037d632c90985b50aaac3e5e927ccb8f0974321c44cdf90bf:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.19-200.fc33-x86_64-kernel-devel-5.11.19-200.fc33.x86_64.rpm
 2ade600a300a36eaa1b36329792ab7f359b18fe00102ed77ccfadd1ec03cdf55:
   type: ubuntu
   packages:
@@ -1377,6 +1465,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-10895.201.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-10895.201.0-kernel-headers.tgz
+3b2c3dae742e536aab563d4143a05493d69f62cc2ac7d740104c3812dfead900:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.16-200.fc35-x86_64-kernel-devel-5.15.16-200.fc35.x86_64.rpm
 3e2d4b6d42a7bee0aedf925ccf30ad5651df9580aa46b9e2b0d2dd705d0e163c:
   type: redhat
   packages:
@@ -1390,6 +1482,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.12.2.el7.x86_64.rpm
+3b3d2597bd321a8b097b82126cacbebfc3df4378d9ea68678a50e3fffe09d628:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.11-200.fc35-x86_64-kernel-devel-5.15.11-200.fc35.x86_64.rpm
 3b003cd0addb79dc7108c8bd3f2a9bf8326323769ad00384b43526139b9e8625:
   type: ubuntu
   packages:
@@ -1431,6 +1527,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-573.7.1.el6.x86_64.rpm
+3b7bb1bdd94d2735d54b16c24153c19311542994077e65103d61250b452313cb:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.17-300.fc34-x86_64-kernel-devel-5.12.17-300.fc34.x86_64.rpm
 3e7dd04543e0b9cad49720903f6270e72b796dd2eed7bd233a18decf39388064:
   type: ubuntu
   packages:
@@ -1489,6 +1589,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16748.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16748.0.0-kernel-headers.tgz
+3e064d68b02f264f849c74c6e02558e5045b436ee141368a5ec15be06b39eed7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.12-100.fc33-x86_64-kernel-devel-5.13.12-100.fc33.x86_64.rpm
 3f65e095dec006c879c391f12c51b854132ded9ee32cefd2d2eb571c16d88cc1:
   type: redhat
   packages:
@@ -1538,6 +1642,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.86-1.el7.elrepo.x86_64.rpm
+3d1735a11c44a5a86fdbf67697f4375d28c6ee1c6e15fc90897850a4ad564c2c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.8-200.fc34-x86_64-kernel-devel-5.13.8-200.fc34.x86_64.rpm
 3d8230b742654ea35ca7096b905847fea9d1887fcbbb9d40923bf6d48f05f8ce:
   type: ubuntu
   packages:
@@ -1562,6 +1670,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-65e33a9e9b5c0879708f91dd3c28d1e62d87a49976085909c7338ba8993ca5c1-download
+3b61888edcd3813974462c101f0ebc206a63da5323db0d3b521e346e1b707291:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.17-300.fc34-x86_64-kernel-devel-5.11.17-300.fc34.x86_64.rpm
 3c73754ba91879745160a6cf0a9305de82e0e038d8a6ce9214e244d66adc1477:
   type: ubuntu
   packages:
@@ -1647,6 +1759,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-170-generic_4.4.0-170.199_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-170_4.4.0-170.199_all.deb
+3fc500418e1f10a54928cf004fe5d15b810e2fd461a80f686c9632503921826b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.4-101.fc34-x86_64-kernel-devel-5.15.4-101.fc34.x86_64.rpm
 3ccc035b5c6d3849bedd45a2f431dc3afb715a274f5ed1b6471248b57c385474:
   type: redhat
   packages:
@@ -1665,6 +1781,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-8b8257a1d302851ba4b4813192b741ebe40e70ee46f7799ac6e71b0c2d4bf972-download
+3ada04b3e47a7a04b4a9a02e41a36d7e0609afaed643436329124a67e145d236:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.10-100.fc32-x86_64-kernel-devel-5.9.10-100.fc32.x86_64.rpm
 3edb4969f2480c7e3c50ca822747dbe05be4a72c1afd0d6f550e218dc37367fb:
   type: redhat
   packages:
@@ -1689,6 +1809,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.229-1.el7.elrepo.x86_64.rpm
+3fe5c7b885bd0367c5c63673d06fe0c856bac475551d2ee086db6112955451f5:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.18-200.fc32-x86_64-kernel-devel-5.8.18-200.fc32.x86_64.rpm
 3de6e6cfcb1dac6008ac8b753751cb7daf100ddeaa2e4b0275e1c0d9f8243f9b:
   type: redhat
   packages:
@@ -1809,6 +1933,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.115-1.el7.elrepo.x86_64.rpm
+003d42524086b7d4a28625600c6eefeef1d99a19a85123bbeb581cf216bd4b39:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.3-300.fc35-x86_64-kernel-devel-5.14.3-300.fc35.x86_64.rpm
 4f1f5e752c54871ec30bf99fc3338629aeefec5e4b135196f50382bdb9802964:
   type: redhat
   packages:
@@ -1826,6 +1954,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1072_4.15.0-1072.76_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1072-gke_4.15.0-1072.76_amd64.deb
+4a3cf35cbcf93e91075065bf9414a9de9b3d54ebe7306d2a0d2f9d4bc2776934:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.14-200.fc33-x86_64-kernel-devel-5.11.14-200.fc33.x86_64.rpm
 4c4e63298300aac3f1189fbc51cccbe01b2ec4fd805e1b5a7640f15ffcb4510b:
   type: ubuntu
   packages:
@@ -1845,6 +1977,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-123-generic_4.15.0-123.126_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-123_4.15.0-123.126_all.deb
+4e6f42b3fab164e6f6e0f72615da34764a5621043d5c6a90d997837a2e688d1d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.9-100.fc34-x86_64-kernel-devel-5.17.9-100.fc34.x86_64.rpm
 4d6a5343be5a65bb0d756011cabeab613fd7ead2827f67f42c4fa03299389111:
   type: ubuntu
   packages:
@@ -1860,6 +1996,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-133-generic_4.4.0-133.159_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-133_4.4.0-133.159_all.deb
+4e7faa67f74a460696b698616d871bab43255eedfc20a30a743f96cffee43f29:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.20-200.fc33-x86_64-kernel-devel-5.11.20-200.fc33.x86_64.rpm
 4f07cc1bf728b664e54216f94e77e88afaf5670aba9853eb41562681a8bad1c4:
   type: redhat
   packages:
@@ -1878,6 +2018,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-headers-4.15.0-1096-aws_4.15.0-1096.103-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-aws-headers-4.15.0-1096_4.15.0-1096.103-16.04.1_all.deb
+4b13f2f4130c70ae8828d7f792bc67c8903b3dbd5722495065914d62a9f5d2e2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.18-100.fc32-x86_64-kernel-devel-5.10.18-100.fc32.x86_64.rpm
 4d14e40149fd92817be4b8ee4ff13084fd3d09575fdeb00fd95f210fa8941706:
   type: ubuntu
   packages:
@@ -1949,6 +2093,10 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.18.1.el7.x86_64.rpm
+4f874f00b5744186ce282521d0246fb72b4e1487fce40b20dd2bc0a4b81d63c4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.16-100.fc32-x86_64-kernel-devel-5.11.16-100.fc32.x86_64.rpm
 4d1459b1f8ab460c82f9aefd38a4311254aa9e17e13f5f57a854ed2dc87f2f17:
   type: cos
   packages:
@@ -2018,6 +2166,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1041.38-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1041.38-kernel-headers.tgz
+4faa7dd54f4cc7cfc0ffb13b4436a635f732c04eab73fc627e994b0941204840:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.14-200.fc34-x86_64-kernel-devel-5.14.14-200.fc34.x86_64.rpm
 4fac5af9b4197e9a3f1ece41328569e585a8d7335ce49bda0a17b794dc13b833:
   type: cos
   packages:
@@ -2123,6 +2275,14 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.63.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.63.1.x86_64.rpm
+4ce567db964e873e664f33b364b2dd9bc4452aba213542e441eee06300805c41:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.15-101.fc31-x86_64-kernel-devel-5.8.15-101.fc31.x86_64.rpm
+4be8599a819a92f19349b77cc6396ed19a6c8948b35a00abd7918e6d5a6398c4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.18-200.fc33-x86_64-kernel-devel-5.11.18-200.fc33.x86_64.rpm
 4ded4b3ea454e11bce9efc1c53ea91dcd2a1a1435580286caab19a255b369f22:
   type: redhat
   packages:
@@ -2158,6 +2318,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-514.26.1.el7.x86_64.rpm
+04f1c301b48c79bca639cb06c657079db927685b1b8dec7617c0a17672878560:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.12-100.fc32-x86_64-kernel-devel-5.11.12-100.fc32.x86_64.rpm
 04d1af8d0a6bf8a1d48bd86ed502b452a9876f82d82cea626245cbc664d26d97:
   type: ubuntu
   packages:
@@ -2191,6 +2355,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1012-azure_4.13.0-1012.15_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1012_4.13.0-1012.15_all.deb
+04fede34365351cda0f57a81e1f9e7d5d8f318989bc9aa54f167c0742b9abdbc:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.12-100.fc34-x86_64-kernel-devel-5.15.12-100.fc34.x86_64.rpm
 04ffd15b85a51811e53489deb7ebfc9710256f0a5f9b3b7ef9ecb835a5b8620d:
   type: ubuntu
   packages:
@@ -2216,6 +2384,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.11-linux-gcp-5.11-headers-5.11.0-1018_5.11.0-1018.20-20.04.2_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.11-linux-headers-5.11.0-1018-gcp_5.11.0-1018.20-20.04.2_amd64.deb
+5e2cd4aa8f617ac9275044afebe6e65b6d732eb778a3ba0844479ba288553151:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.11-200.fc32-x86_64-kernel-devel-5.8.11-200.fc32.x86_64.rpm
 5b3e3a9c91adae1c2532c65e8a6171a210479058ca1ab88fd66068162024c173:
   type: debian
   packages:
@@ -2287,6 +2459,14 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1010-azure_5.4.0-1010.10_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1010_5.4.0-1010.10_all.deb
+5f7aa5eca13aaf9b027e83d037930bebbffd91b2b5a9204ea662a3dd50510083:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.6-200.fc35-x86_64-kernel-devel-5.15.6-200.fc35.x86_64.rpm
+5d7fe1ba6d1ec862f4f18768840bb9565bd40f0372f1f2500dac9b9877ef9aad:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.10-200.fc35-x86_64-kernel-devel-5.15.10-200.fc35.x86_64.rpm
 5f8a412dd3d7042369ee46d040077455a8a745d27ae4e70d2c295acd2233aab0:
   type: redhat
   packages:
@@ -2309,6 +2489,10 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.18-1.el7.elrepo.x86_64.rpm
+5c9f193d2d3ced43a528d5e8e2b8463368b55adce32c466e5b061e00f05a8b4f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.5-100.fc34-x86_64-kernel-devel-5.17.5-100.fc34.x86_64.rpm
 5b9ba469ca9a77ca07befafb38099301ade8d95b49c674c94867c75c159e6510:
   type: redhat
   packages:
@@ -2362,6 +2546,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1111-azure_4.15.0-1111.123_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1111_4.15.0-1111.123_all.deb
+5d436a83d50184e1c14b12a11bcaad3bff2e2cef6b452cb1f40b61410f77182a:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.6-1-b1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-2-cloud-amd64_5.17.6-1-b1_amd64.deb
 5d540c018a4940a12a405067221854d4d1a6c3f3930ba9c4104679889946c48a:
   type: redhat
   packages:
@@ -2374,6 +2563,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.0.3.el8_1.x86_64.rpm
+5e812e7e1b918ca26a5878e37ddd096e0fffa3314ec4b3e977956c0269be5b2d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.9-300.fc35-x86_64-kernel-devel-5.14.9-300.fc35.x86_64.rpm
 5f815a9654194987d9f06eab858e7b8e1927e9a1262045a7ca8fd3f8e6ab703f:
   type: redhat
   packages:
@@ -2546,11 +2739,19 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.116.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.116.1.x86_64.rpm
+5ad4de0bf0847f57865efed8c1de7effcda62523bcf41b6040d589729ff747ae:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.7-200.fc34-x86_64-kernel-devel-5.13.7-200.fc34.x86_64.rpm
 5ad35cad90625faab37aec08fe0b2cfc462dffcfbfb53186a59b60f492249f2c:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1013-aws_4.4.0-1013.22_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1013_4.4.0-1013.22_all.deb
+5dd842a9adcab3e2991375eb55fdf4c80697e9e19bbf26e6fdb86e7c5dee9e73:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.18-100.fc32-x86_64-kernel-devel-5.11.18-100.fc32.x86_64.rpm
 5dd419589d9ab3e2a431fde9824b1ab145f5ccdaac2edbe58712e2607a2a9362:
   type: redhat
   packages:
@@ -2560,6 +2761,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1063-fips_4.15.0-1063.71_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1063_4.15.0-1063.71_all.deb
+5fef47f35b3957365088e9d36238c45bc759b909877b58b904fd490ee10de6ec:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.13-200.fc35-x86_64-kernel-devel-5.15.13-200.fc35.x86_64.rpm
 5bf5bfde78a3774a95d8f0a944831ed80b86196c9d746fd1ac71b1622ab95f58:
   type: ubuntu
   packages:
@@ -2579,6 +2784,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.0.180-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.0.180-kernel-headers.tgz
+5cfdd840783fe439c1d19d7a634bd5668eb235a41c8b6266c8e83f82864955a2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.12-200.fc35-x86_64-kernel-devel-5.16.12-200.fc35.x86_64.rpm
 5bff14f4d6cbfdfe2d1b0bbb01f3ce9deffc1f39a2170b5ad64edf800013d6e3:
   type: ubuntu
   packages:
@@ -2588,6 +2797,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-3e5b0dc7380dd87f4748ba992081cbf0edd456c3b7473e99e96000f32ed01f18-download
+05b5ae835ece51dcbd810bf7792a99dbb5868a5ec963040c27800ea005b7a819:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.16-100.fc32-x86_64-kernel-devel-5.9.16-100.fc32.x86_64.rpm
 05f6a5ac17155d6e4a88669fbf3233d5098260d62c74b4e44ee8c030b6874a8d:
   type: redhat
   packages:
@@ -2623,6 +2836,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1047_5.0.0-1047.48_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1047-gke_5.0.0-1047.48_amd64.deb
+6e3a2a19396b6732e8bd44c7e5b48b495b172fbd6850fa0e75075bdd54258bb7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.8-300.fc34-x86_64-kernel-devel-5.11.8-300.fc34.x86_64.rpm
 6b3b9ca53d59c82616867b804cfedb68cc45e838304d36e52c800407d37d9c4b:
   type: redhat
   packages:
@@ -2688,6 +2905,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1050_5.0.0-1050.52_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1050-gke_5.0.0-1050.52_amd64.deb
+6a26f50d557e9e36219f7f7fb2082a9bd5b4478b4e4fee0340c5994804620c86:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.9-300.fc36-x86_64-kernel-devel-5.17.9-300.fc36.x86_64.rpm
 6b26ab0ab778db578a72ffe62ba929813dca64215f9667f04f5b6cea3db8c2ee:
   type: redhat
   packages:
@@ -2842,6 +3063,10 @@
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.1-flatcar_developer_container.bin.bz2
+6aac5b2129e1a571d1132e46ab4ba7dc21bbb522b49ebc6992c7b2fcec944c71:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.12-300.fc35-x86_64-kernel-devel-5.14.12-300.fc35.x86_64.rpm
 6cac22f9abc64196d105e8b7180caa9cd82d06371931742d8a4636b466d23571:
   type: ubuntu
   packages:
@@ -2852,6 +3077,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1098_4.15.0-1098.111_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1098-gcp_4.15.0-1098.111_amd64.deb
+6ab181a2619a99038d6441b0e17efb8b24f7940a457550d84b383de89989994d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.19-100.fc33-x86_64-kernel-devel-5.13.19-100.fc33.x86_64.rpm
 6abd049c1b8303d06a82d3b36509efe9743421c5944f16f2709596f44dbb476c:
   type: ubuntu
   packages:
@@ -2982,6 +3211,10 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.88.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.88.1.x86_64.rpm
+6efdc1f97b8646913ac2f2b7544f9bf58adcd341633f6e245fde98b06fb8c03e:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.15-300.fc34-x86_64-kernel-devel-5.11.15-300.fc34.x86_64.rpm
 06b5fe0a2a21ed1ca7f6a0ca336cef08c76cb7dd496f8de9d9e79c1b02f8c105:
   type: redhat
   packages:
@@ -3064,6 +3297,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1035_5.0.0-1035.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1035-gke_5.0.0-1035.36_amd64.deb
+7b5b0717c245b6d3636ffd298b323fcc903630b7ba567e092ee4009d174e6688:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.15-100.fc33-x86_64-kernel-devel-5.13.15-100.fc33.x86_64.rpm
 7b5dc24ca00fa24090a61a0ffde0438504e41b694b54797dd6dbbc67c7a57eee:
   type: redhat
   packages:
@@ -3095,6 +3332,14 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.37.1.el8_2.x86_64.rpm
+7a9e1464c62b4f9e7582145eebb3488d53ebe516a9d7a4cda572e883357a93c4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.12-200.fc35-x86_64-kernel-devel-5.15.12-200.fc35.x86_64.rpm
+7e9fd19d77467c6d9b20f28096c3facb35259de017206dce06e63f95b9273aa6:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.16-200.fc33-x86_64-kernel-devel-5.9.16-200.fc33.x86_64.rpm
 7b9cf8997146b9591dd5544aa5040db11640004ba8c339dc94ee154cb0e6bb03:
   type: ubuntu
   packages:
@@ -3323,6 +3568,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-471e8f7c80a9109f4e1be04ceb1b8661d63b11cafb769dacadab0ac31df71644-download
+7ab13fe174f583178bb950c3233bf9c5fc1e3b6f0d6b3682db627ea40074e6d8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.4-200.fc34-x86_64-kernel-devel-5.13.4-200.fc34.x86_64.rpm
 7fb9322fc06196cad8a3e4fa8697ba43669bd53c683ece1174796d45b08262ab:
   type: redhat
   packages:
@@ -3366,6 +3615,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.64.1.el8_2.x86_64.rpm
+7dcc69260ff3b918b249aa5663e0183a1d03ecdb88dd279c6e3acc48af100690:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.11-100.fc32-x86_64-kernel-devel-5.9.11-100.fc32.x86_64.rpm
 7eced78a420f849feb7db5815bcb288ffb18a276e6f0379df1cf216ea47ae154:
   type: cos
   packages:
@@ -3501,6 +3754,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11895.32.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11895.32.0-kernel-headers.tgz
+8d1f7448d79a2c45e46eaa552d2a73b60ea39c1fce9a9817b2ab6f2d7218dbf0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.14-200.fc33-x86_64-kernel-devel-5.12.14-200.fc33.x86_64.rpm
 8e2c7a318499de44412796bb47bdc4a32ebf4f30ec85dbdd3a609b6ddfc5b5b9:
   type: ubuntu
   packages:
@@ -3565,6 +3822,10 @@
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.3-flatcar_developer_container.bin.bz2
+8e6ff1a4124535b92bd2d0a5059f3190c38c776231949c63a4cc775b19af1084:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.3-301.fc36-x86_64-kernel-devel-5.17.3-301.fc36.x86_64.rpm
 8b7ca1b92b43618562907d6128c3db67db5dea9c6dd84a2817d054ac3b98744a:
   type: ubuntu
   packages:
@@ -3582,6 +3843,10 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.6.1810-os-x86_64-Packages-kernel-devel-3.10.0-957.el7.x86_64.rpm
+8d9ec385b2fe766f82d95d8d2198a02cb199564ac3d52d3659ca553cb2e07a79:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.16-100.fc33-x86_64-kernel-devel-5.13.16-100.fc33.x86_64.rpm
 8d27dbf49b3cfb4f4885593b96f17e7c588d666cb119d9e59c10c335177e6a44:
   type: cos
   packages:
@@ -3638,10 +3903,18 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.78.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.78.1.x86_64.rpm
+8a377f24bab64b01777b707b51bee186b0cb7bb44c9551c277c2c4e5b0d8c34c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.7-100.fc32-x86_64-kernel-devel-5.11.7-100.fc32.x86_64.rpm
 8e378f095f3b6843d2a47694fa6020536fa70eca5622340a015b0c6e63fd4928:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.32.1.el8_1.x86_64.rpm
+8a398ae79b82fbd179ab6a17d53399a6ae01ab545d8f02420149cb64fbe9eecc:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.7-300.fc34-x86_64-kernel-devel-5.11.7-300.fc34.x86_64.rpm
 8a429daed6c7a92279c88a95e81d7f9de1040236aeb4a9215ee879506773a4ec:
   type: coreos
   packages:
@@ -3659,6 +3932,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.8-linux-gcp-5.8-headers-5.8.0-1033_5.8.0-1033.35-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.8-linux-headers-5.8.0-1033-gcp_5.8.0-1033.35-20.04.1_amd64.deb
+8a778dcc82f60c0dbddba6155daeb7748b4208a5c98e9e8498f437b7a1a9f0bd:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.13-300.fc34-x86_64-kernel-devel-5.11.13-300.fc34.x86_64.rpm
 8b796a75182a2ce8b6c992cbf12ec5856260a1a0159a83a8e617408369c7bda8:
   type: ubuntu
   packages:
@@ -3847,6 +4124,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.71.1.el8_2.x86_64.rpm
+8cd3b4749534c4b91df67fb20add15be67dfd57ce108cb38ebf9c726fa02fc24:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.12-200.fc32-x86_64-kernel-devel-5.8.12-200.fc32.x86_64.rpm
 8cd8d900ce0c7ec5a054a601ac2afd4a6b1deb4b78aae041336d28753933059e:
   type: ubuntu
   packages:
@@ -3959,6 +4240,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-headers-5.3.0-1035-aws_5.3.0-1035.37_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-aws-5.3-headers-5.3.0-1035_5.3.0-1035.37_all.deb
+9a2dd2ba0d7d92990d62f0db062a7be3f7e0d483d49a98598a7e5a7024ad39df:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.9-100.fc34-x86_64-kernel-devel-5.16.9-100.fc34.x86_64.rpm
 9a3e98e8113c36a42ba2e4b37aa5df1f0f7fc24418bfba17d4dd688edbd3a0f9:
   type: cos
   packages:
@@ -3984,6 +4269,10 @@
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.37-29.el7.x86_64.rpm
+9a7c1b8624f96edd508b995d95bed3cbec925709d8ad772049ccbe57fb975f40:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.6-301.fc33-x86_64-kernel-devel-5.8.6-301.fc33.x86_64.rpm
 9d7d4b01f3dde22f42182f9052ca41be4e76d36e6cab2030ab4396fd681f32cb:
   type: redhat
   packages:
@@ -4006,6 +4295,10 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.23.0-kernel-src.tar.gz
+9a8a9b0dc2af8e8acdd2aa3d4400ef8ec45b1f869e88f7a77b7827a8abffd0ce:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.11-300.fc33-x86_64-kernel-devel-5.8.11-300.fc33.x86_64.rpm
 9f8c953b7979615714db5d78d8dd0833e0895bae0564a775b30109344ee8f161:
   type: redhat
   packages:
@@ -4263,6 +4556,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-220.7.1.el6.x86_64.rpm
+9eb20df35e469a16b5555ab062d8b784fb2a3c95098053221f3857fa4235ada0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.4-200.fc32-x86_64-kernel-devel-5.8.4-200.fc32.x86_64.rpm
 9ab24b4ed22099d70acc3dfcd981c9cd3c1dad5df0635d9d4a1fa19b03f65d85:
   type: ubuntu
   packages:
@@ -4290,6 +4587,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-headers-5.3.0-1028-azure_5.3.0-1028.29-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-azure-5.3-headers-5.3.0-1028_5.3.0-1028.29-18.04.1_all.deb
+9ac281e223a704d7e497ead562dbbb1d190d86065c9f99e2e89c88b3d374d472:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.8-100.fc34-x86_64-kernel-devel-5.15.8-100.fc34.x86_64.rpm
 9aca1ea752ec5481a7151108cfcc44b4dd5eee8eeef9441e9f99b5528cf9f38f:
   type: redhat
   packages:
@@ -4302,6 +4603,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.107-1.el7.elrepo.x86_64.rpm
+9cd4bbbc21c0f79975d8133007362b9829568cc4fe96b8f453b65bac89931f60:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.10-200.fc33-x86_64-kernel-devel-5.10.10-200.fc33.x86_64.rpm
 9ed6acbc2d393ca37000f36e4d46787d52e2e73efd671925507c9f26bb7c1e29:
   type: redhat
   packages:
@@ -4471,6 +4776,10 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2023.4.0-flatcar_developer_container.bin.bz2
+10f0ce0720fe91446064a755f3e41718de68b405c740f89b82b3aa18e98c436f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.3-300.fc33-x86_64-kernel-devel-5.8.3-300.fc33.x86_64.rpm
 10b3e69bb7cb44e1f9546a33b9e134c630210acc9cc4e7af501594cacdba53e0:
   type: redhat
   packages:
@@ -4562,6 +4871,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12834.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12834.0.0-kernel-headers.tgz
+14d39c772d5fcd43eba8f2b4468ba9b4f94dc897b8432c1e52ebd9995a749824:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.10-200.fc33-x86_64-kernel-devel-5.11.10-200.fc33.x86_64.rpm
 14e81be2c8ae20d2a10b5c9ff216f36f348cf6a971bc16be3fcc32073a0a2e3e:
   type: redhat
   packages:
@@ -4602,6 +4915,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-279.1.1.el6.x86_64.rpm
+16c5191b9a492a2f69262b05700175a6e6af7a66ae080ef092d0607f6bd74589:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.11-300.fc34-x86_64-kernel-devel-5.11.11-300.fc34.x86_64.rpm
 16aa108fc305b8617fa8d2c39787390f12547026540016eca1b8c56f1818e6f4:
   type: redhat
   packages:
@@ -4651,6 +4968,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-159-generic_4.15.0-159.167_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-159_4.15.0-159.167_all.deb
+18ef3b95461459ed7fe566c49f16fda3950f4024d91aec0e1fd8356cfbc4ab2a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.9-300.fc34-x86_64-kernel-devel-5.11.9-300.fc34.x86_64.rpm
 19c1db1762931aaf70b689ae3d0367c65b76fbfa96534b9c8bbb85bba87937ce:
   type: redhat
   packages:
@@ -4692,6 +5013,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.135-1.el7.elrepo.x86_64.rpm
+20e9ebb4301240cc65e9221db2fe127287b2510b7bd3aa9c5b72779c7a32a0f9:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.9-200.fc33-x86_64-kernel-devel-5.9.9-200.fc33.x86_64.rpm
 20a318a4653c405754adca1ced40667fa16ab21a8e4919e47c6f7ff519eaa2f3:
   type: redhat
   packages:
@@ -4700,6 +5025,14 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.7.1908-os-x86_64-Packages-kernel-devel-3.10.0-1062.el7.x86_64.rpm
+20ec0d3e6284e43c3b7dd8a47a0745a32cfa506cb3df70750a8a18824fe0fa2d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.18-100.fc33-x86_64-kernel-devel-5.14.18-100.fc33.x86_64.rpm
+20ccec6f07db813347e6428b8bcbb2195a54358c774e4f0ea4ec9de0ae64f0f0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.11-200.fc34-x86_64-kernel-devel-5.14.11-200.fc34.x86_64.rpm
 21f01c20711cd81dc719c535a2a0b3969cd2942f1568f72cb17f12161c75722b:
   type: ubuntu
   packages:
@@ -4771,6 +5104,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.77-1.el7.elrepo.x86_64.rpm
+022a24404fb0470879eb2a0af2f813084c1268e5c82d2682b07454ffbdd64136:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.10-100.fc34-x86_64-kernel-devel-5.15.10-100.fc34.x86_64.rpm
 23f6d3f0892449511ee9e8b9d23923bd0de8c573857e0b3bae33d0afaaa3e8fe:
   type: suse
   packages:
@@ -4797,6 +5134,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.126-1.el7.elrepo.x86_64.rpm
+23ab9716ce4f8e5c27a8ed572e5feaf9950873f488ab4a4be28a10c54655071b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.20-300.fc34-x86_64-kernel-devel-5.11.20-300.fc34.x86_64.rpm
 23dc9408d1e1487ab76692826a9595c7e5d3c44be38e27aefdb337d9022b4366:
   type: ubuntu
   packages:
@@ -4927,6 +5268,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.29.2-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.29.2-kernel-headers.tgz
+28eeefc5bf02538d770370cbd3857c8dcdc8bfd39805c67b28688f8657f6655a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.14-300.fc34-x86_64-kernel-devel-5.12.14-300.fc34.x86_64.rpm
 028badf837f114f6eb9e4984b69e91cb798799aee4cef51a9c4463b92d572383:
   type: redhat
   packages:
@@ -4948,6 +5293,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-75892bec53949590d5242ba363b53074316969c0752ab7aa334c9a28d5a3e07f-download
+29ad0a73a1850fb891aed8ec0ff7877fbe472754f29c89103211d8c31ac148a1:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.12-100.fc33-x86_64-kernel-devel-5.14.12-100.fc33.x86_64.rpm
 29fdd631a86b43420eaaf20b13f3f37d7f12677a96ce7512c61a91ed5af7e88d:
   type: suse
   packages:
@@ -4963,6 +5312,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1029-aws_4.15.0-1029.30_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1029_4.15.0-1029.30_all.deb
+30b4c50eae3785bb92324229bfef8296c771fe3e997291e52dedfedea97c73b8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.13-200.fc33-x86_64-kernel-devel-5.10.13-200.fc33.x86_64.rpm
 30e022df4ec2327fbc670d609f969c446591096d643287085f75f8f2f90620f1:
   type: ubuntu
   packages:
@@ -5037,6 +5390,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.5-os-Packages-k-kernel-rt-devel-4.18.0-193.12.1.rt13.63.el8_2.x86_64.rpm
+32d7ac703ac82839cfe03522cc822e096195e11a570a69449266603e96cdd637:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.15-301.fc33-x86_64-kernel-devel-5.8.15-301.fc33.x86_64.rpm
 32e9b3a1e3671f71f3dd278348a71b568003bb2677a7108ae3fbed1982ee50de:
   type: redhat
   packages:
@@ -5060,6 +5417,14 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.155-1.el7.elrepo.x86_64.rpm
+33eaeaede28ad58adfd0e081a818b46573a5a2ad152559c240a764db469172a7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.13-200.fc32-x86_64-kernel-devel-5.8.13-200.fc32.x86_64.rpm
+33fb27c450f8286f0abae127aab579781d0087cf3fa3020ca1e481b0edcf60e0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.7-300.fc36-x86_64-kernel-devel-5.17.7-300.fc36.x86_64.rpm
 33eecf5ed5cc18a11d5449d2ac4bccfbff6216e64a64988d0f5932c27aa2a001:
   type: ubuntu
   packages:
@@ -5179,6 +5544,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16623.39.28-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.39.28-kernel-headers.tgz
+36cfc2e49e87ddc72ab90355cc847b3777d842f31c68103a929cb5952bf41bb2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.4-300.fc36-x86_64-kernel-devel-5.17.4-300.fc36.x86_64.rpm
 37b0c75da1a7ddd8a2b5e294feb2552d0a12f55dcc0276ad943ceda44398bbe2:
   type: coreos
   packages:
@@ -5224,6 +5593,10 @@
   packages:
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.20-k8s-linux-headers-4.4.20-k8s_4.4.20-20160928_amd64.deb
+037c7f18bb3f2ce7ddf62b88cb40a0864d220253cef102eabaf818350a9748c2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.14-100.fc33-x86_64-kernel-devel-5.13.14-100.fc33.x86_64.rpm
 38d7f5038c6eb41ee0299bd29d10ce23cc33d1194ba28e548f2c8784d460f57d:
   type: ubuntu
   packages:
@@ -5233,6 +5606,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-2392cafac491216b881fe8b60b8092dd2690649230375fab9f45cb16c4154b76-download
+38b33a87372d0e698d8e5aa0fd765e9f55e92504bbecf0b872534c26201eb422:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.7-300.fc35-x86_64-kernel-devel-5.14.7-300.fc35.x86_64.rpm
 38d191ac429e0ccbca3549a11823b063952940c35242407745b22a1868388ef8:
   type: coreos
   packages:
@@ -5327,6 +5704,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1092_4.15.0-1092.105-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1092-gcp_4.15.0-1092.105-16.04.1_amd64.deb
+41f56b793c2c5a51312f7d2b6164ac90e436475584aeb98e0d0682c2b4290ad8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.10-300.fc35-x86_64-kernel-devel-5.14.10-300.fc35.x86_64.rpm
 41d057015ba6b836d139a5507db99bf778f0c56e3cf61a00e7b6f86b6c6ef7fc:
   type: ubuntu
   packages:
@@ -5403,6 +5784,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.7.1.el8_4.x86_64.rpm
+44d5c65fef698d447a33442e5f143e0e350589d3f11541180f50960a71068d39:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.19-100.fc32-x86_64-kernel-devel-5.10.19-100.fc32.x86_64.rpm
 44d5a469220c2db5bc4ef171c8087d88b78583c3acc4dbb35eb13e324f6dbcb6:
   type: cos
   packages:
@@ -5423,6 +5808,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1031-azure_5.4.0-1031.32_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1031_5.4.0-1031.32_all.deb
+44cb03268a06df4842e2eb0700d8fb9c067151e31f92d739804e0ba57372b632:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.7-100.fc33-x86_64-kernel-devel-5.13.7-100.fc33.x86_64.rpm
 45a3a6394fd44682e8837dcce99dce059b57c5f97cb00330b6c97a14be00d323:
   type: ubuntu
   packages:
@@ -5432,6 +5821,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-862.9.1.el7.x86_64.rpm
+45cc34ac623f73714cf0b61f07ec70c16c4bcd6ac9d0279a28acee03f8018160:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.10-200.fc33-x86_64-kernel-devel-5.9.10-200.fc33.x86_64.rpm
 45be6ac97e54634bffb3d4344d9e73661c316ee927a727f32e0757d0568113a4:
   type: redhat
   packages:
@@ -5477,15 +5870,19 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1083_4.15.0-1083.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1083-gcp_4.15.0-1083.94_amd64.deb
-47a20f6ca20ae19efed2b1650b4ba4d624cdec701d782f1f6046f5a74f751b9a:
-  type: coreos
+47f95e49161e337bab8ae59d1f16fc85ad58a558d67e763617b03d7d37ea7093:
+  type: redhat
   packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.5-200.fc35-x86_64-kernel-devel-5.17.5-200.fc35.x86_64.rpm
 47b2471b531434c6651c1b7cc414d584541da9474e0929f9d0767f2ba30d1138:
   type: ubuntu
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1067-fips_4.4.0-1067.73_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1067_4.4.0-1067.73_all.deb
+47f53476a83df0de7b2d34560cb7b8637304ae4e4d1a72e53507e53f5791ffeb:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.13-200.fc34-x86_64-kernel-devel-5.13.13-200.fc34.x86_64.rpm
 47a5569869a5397826c8f09a734e2af4cee5abe7065ba66d58bdce6a0d549611:
   type: ubuntu
   packages:
@@ -5564,6 +5961,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-58-generic_4.15.0-58.64_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-58_4.15.0-58.64_all.deb
+50a7c67779675568a2a5fc8dcad33fad53eab3012faff0f69ea30524f81cbf68:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.19-300.fc34-x86_64-kernel-devel-5.11.19-300.fc34.x86_64.rpm
 50d39fc1975389303f1f2a3dca612d9117870a174de64ce9547cd3716f75dcf5:
   type: redhat
   packages:
@@ -5607,6 +6008,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.7.1.el8_0.x86_64.rpm
+51b5d4a23bdb521e3872f2b61874759dcc06364ca2e3b0c5a42ead3976ab2e35:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.8-100.fc34-x86_64-kernel-devel-5.16.8-100.fc34.x86_64.rpm
 51d70e4de6a04f528a1b33eddd4fdce8ec72ed070b5e11b420646bf5f05626e4:
   type: redhat
   packages:
@@ -5727,6 +6132,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2036-aws-fips_4.15.0-2036.38_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2036_4.15.0-2036.38_all.deb
+54d50568b859ba3d13c0a8da1d91f79a26044d08b485fd23902c4fd1ebe651b9:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.13-200.fc33-x86_64-kernel-devel-5.12.13-200.fc33.x86_64.rpm
 54f8995672e8fdec34bee112206ea0ea06a9512b29e34108de2acfdaa796e455:
   type: ubuntu
   packages:
@@ -5795,6 +6204,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.123-1.el7.elrepo.x86_64.rpm
+56ffa6c9486c1f10e3d240be3544efa220b4b2442d783edc5818ddcdab7417c1:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.11-100.fc33-x86_64-kernel-devel-5.14.11-100.fc33.x86_64.rpm
 56fffac7daf869e3fc1e8f2a8fcd17389bc6157a6b408100ea19303a43d244fb:
   type: ubuntu
   packages:
@@ -5819,6 +6232,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-108-generic_4.4.0-108.131_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-108_4.4.0-108.131_all.deb
+57e792631b201c89e2eb4c0241d087e032dcd8404ea8bffe16aaf3b780f54e56:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.1-300.fc36-x86_64-kernel-devel-5.17.1-300.fc36.x86_64.rpm
 57b97582496b0ef76d0d6d47b2c0a2ba82d601ab2a69f695573d89f555076ed9:
   type: redhat
   packages:
@@ -5847,10 +6264,18 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1096_4.15.0-1096.109_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1096-gcp_4.15.0-1096.109_amd64.deb
+58d45c360053e4dcaaf897624ee88f209f26768e9e7041746f00cc9ae5d49866:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.7-200.fc33-x86_64-kernel-devel-5.11.7-200.fc33.x86_64.rpm
 58c01818bdd81d8e0bd6aa1f3783f07864fcf02399842b1baa99cd5b8ea5212a:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.148-1.el7.elrepo.x86_64.rpm
+58fab5a936e9c80df85d7345b7790868e924fbc5d37acba3b8a4be9e24219cb5:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.7-200.fc35-x86_64-kernel-devel-5.16.7-200.fc35.x86_64.rpm
 59d0bff8548f9be7422bcc1accf770953dc39b711d2943984a97ceab46178e28:
   type: redhat
   packages:
@@ -5880,6 +6305,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-8981115cae33fce35ce6cd9203618dd40cd5823017fe132990792253159042bf-download
+60c536e1b4cace30413b8d5bd48dc598882a9e3910a7936cfc10f8967669fa23:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.14-100.fc32-x86_64-kernel-devel-5.11.14-100.fc32.x86_64.rpm
 60d8957108fb7619615274a84aaab06a491e703ddbd4b5538f7c6d0875e596a8:
   type: redhat
   packages:
@@ -5994,6 +6423,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.146.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.146.0-kernel-headers.tgz
+64f53ff576ae99903472fdff4e3c2a30c07313659ebe9692643a13e530e822a7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.13-100.fc32-x86_64-kernel-devel-5.10.13-100.fc32.x86_64.rpm
 64b73898b385c5eb4086470733e3972a691f137917edc67ed384af60f7f726bd:
   type: redhat
   packages:
@@ -6016,6 +6449,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-327.18.2.el7.x86_64.rpm
+65c8d7ac8f3677ec4d4439b249a415be63699d61ae226ac4ed6cf4f355b334ca:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.12-300.fc34-x86_64-kernel-devel-5.11.12-300.fc34.x86_64.rpm
 65a34d6ffd19c154a6a992c6445e9c606718da23c472bc070d3b8c2d58c6b819:
   type: ubuntu
   packages:
@@ -6054,6 +6491,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-10895.102.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-10895.102.0-kernel-headers.tgz
+66b8ebc971d8b0d4c02887faa70f6d013b237a832184c99bada34d00d5d16b4c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.23-200.fc33-x86_64-kernel-devel-5.10.23-200.fc33.x86_64.rpm
 66c1467692421f880647c7d2f8c90317593c914e42191fc004d092d606a4573e:
   type: cos
   packages:
@@ -6171,6 +6612,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1049_4.15.0-1049.52_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1049-gke_4.15.0-1049.52_amd64.deb
+69d7e13704e6f6d3ab1b3dfbfbcd436dc6fd9d060ad2d434f4dff4b404c58c65:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.14-200.fc35-x86_64-kernel-devel-5.15.14-200.fc35.x86_64.rpm
 69b075c5b7cde5d4e097e55085833c4fdf8424a1fae016e76e58988843e8cb33:
   type: ubuntu
   packages:
@@ -6253,6 +6698,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-171-generic_4.4.0-171.200_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-171_4.4.0-171.200_all.deb
+71becb9f3a7ab7ed102f27309b82c6ad2e16b351aae0a11c5126865ace5a32ed:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.4-100.fc33-x86_64-kernel-devel-5.13.4-100.fc33.x86_64.rpm
 71bef7cae2dea6d2cadc84eece81c12d41dbf5ca930895c64e502a8be924718e:
   type: redhat
   packages:
@@ -6262,6 +6711,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1077-aws_4.4.0-1077.87_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1077_4.4.0-1077.87_all.deb
+71df665d03e1f41067a005b3bfcf4f8b38337d203cf62646a8645f3940da4b11:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.11-100.fc34-x86_64-kernel-devel-5.15.11-100.fc34.x86_64.rpm
 72d9cc60753fae7f409af2d4c1e7a585470fb5ad1091399634f858ca402a6b2d:
   type: ubuntu
   packages:
@@ -6323,6 +6776,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-c7c6df00d2308b8e27a66334ce1b66ff61cd533c7ede5c8bba4eaaf3d429c1a7-download
+74e763c4c6ca0c58881b711e245c1dc7ee166f5a9e5eec6fe4ea92b3d047e960:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.15-200.fc34-x86_64-kernel-devel-5.13.15-200.fc34.x86_64.rpm
 74bc9dd1804efbb2703ee304aad98961f3e51bf083ccd95e8deb809b9a1373c4:
   type: coreos
   packages:
@@ -6401,6 +6858,10 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.1.1.el7.x86_64.rpm
+77cf6e14da8ee8255b951b71c187d6910f4a2efb61f9d16c3b124b0ad2a5f41a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.17-100.fc32-x86_64-kernel-devel-5.10.17-100.fc32.x86_64.rpm
 77afae951fcc4050ec7cae5511bc227c0922d079d677efb8a72134d3a135b94d:
   type: redhat
   packages:
@@ -6591,6 +7052,14 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.27.2.el7.x86_64.rpm
+83ef7be83672a83fc930eec46b10d049088123a017b9a3e6204eb31f163f0e8e:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.19-100.fc34-x86_64-kernel-devel-5.16.19-100.fc34.x86_64.rpm
+083c21a46765c461db006c106222ffa75595651f2848f7e24bba5b3d0367fb7b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.7-100.fc34-x86_64-kernel-devel-5.17.7-100.fc34.x86_64.rpm
 84f4b6967d79c97e9b4caffbe525272bf6a3e2b80520e9aac92396491b94028b:
   type: ubuntu
   packages:
@@ -6601,6 +7070,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-91-generic_4.15.0-91.92_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-91_4.15.0-91.92_all.deb
+84f7b5e2e02f50d3f5fbd6cbfa1d9e578ff5ab2ce06072f11ebefaf1a91f8b24:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.7-200.fc34-x86_64-kernel-devel-5.14.7-200.fc34.x86_64.rpm
 84b242bfbdd7e059ab75e34d0f7991bf053967ce4cd594bd0f999a4b8b7d085e:
   type: ubuntu
   packages:
@@ -6767,11 +7240,19 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1072-azure_5.4.0-1072.75_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1072_5.4.0-1072.75_all.deb
+89fccef72078d0f232085484354f52f81c511a8d65eb06ea5bf7aec0d195779f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.15-200.fc33-x86_64-kernel-devel-5.11.15-200.fc33.x86_64.rpm
 89be0a36d6810f3c46afc2679247d440a2ca8c8b93e2f283be6b7b6326ba1a63:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12871.1200.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.1200.0-kernel-headers.tgz
+89ce5470e1c7a74bc7933f3883bbfb1e871bc4656d7423af2027c9ba660cce5b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.15-100.fc32-x86_64-kernel-devel-5.9.15-100.fc32.x86_64.rpm
 90c642ac2565647c6f246d2642fe7f264dea6fa6ef467eaca1cffad6cdcc924b:
   type: redhat
   packages:
@@ -6842,6 +7323,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-28373203da84097ec9c65ae21209fb41f0032e9eb45e3ac2bc74baf06695fab5-download
+92f52a853f9b8acdf443d79b9227c97599dce8a61be0db0191d1bc267d88628b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.5-200.fc35-x86_64-kernel-devel-5.16.5-200.fc35.x86_64.rpm
 92c52bd8a5457e8de0e5e825eacc0b195a96ac233098706740cf72c675ea2df7:
   type: suse
   packages:
@@ -6856,11 +7341,19 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.137-1.el7.elrepo.x86_64.rpm
+92e3490a79aa189366a47919ab13592e6e64c5519145501322e502492b4e176a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.6-100.fc34-x86_64-kernel-devel-5.15.6-100.fc34.x86_64.rpm
 92cafc1da7695e8cf68b6d531df3a5da3ee8a04d2ed33e6107a8556db1e4b267:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.8-linux-headers-5.8.0-1036-azure_5.8.0-1036.38-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.8-linux-azure-5.8-headers-5.8.0-1036_5.8.0-1036.38-20.04.1_all.deb
+92bb1e0c43c51af01c52ace35e8ce6cc2a8da08e279026a27e5f17e331bf7d3b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.15-101.fc34-x86_64-kernel-devel-5.16.15-101.fc34.x86_64.rpm
 92eb45fc36d2224cd9a0a6d662105daeb5a8e4bfeeb2a993eb3300ac64738abe:
   type: ubuntu
   packages:
@@ -6909,6 +7402,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-123.8.1.el7.x86_64.rpm
+94d9154ebee7b023aa274f14a83ecb17f9989e2deeec18ba9887fd3bada9fdce:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.6-1-b1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-2-amd64_5.17.6-1-b1_amd64.deb
 94e57025711e80f8690d7fd6a027a10bf3d9cf7f44cd5a9ac1328945471f0416:
   type: ubuntu
   packages:
@@ -6927,6 +7425,10 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10895.23.0-kernel-src.tar.gz
+95f7e91e0c87baab254ba5e8b835459f204f2fda914653f87ae56de7aa6d7dd8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.0-1.fc33-x86_64-kernel-devel-5.8.0-1.fc33.x86_64.rpm
 95e7314ce31af7271bd3f627b817149040051691bf977812894bdeca9157f045:
   type: redhat
   packages:
@@ -6967,6 +7469,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.190-1.el7.elrepo.x86_64.rpm
+96b1010d40b34508e7c54ba5eb0cf9245dd9869f33967050991da920d990a7dd:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.20-100.fc34-x86_64-kernel-devel-5.16.20-100.fc34.x86_64.rpm
 96f3203cff7e1cf3c5b4754c76c5d7116464c8b6a81a7d63183e124bc2ce5e2c:
   type: redhat
   packages:
@@ -7089,6 +7595,10 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2303.3.1-flatcar_developer_container.bin.bz2
+104ba2c9c7dfe170ebbff363aeb095129cdf03e9cef8adc1e8498ff71743061c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.7-300.fc33-x86_64-kernel-devel-5.8.7-300.fc33.x86_64.rpm
 110f2d03319d696caa48901e68a6cffad852cef2b9049286c049b924be4b545c:
   type: redhat
   packages:
@@ -7097,6 +7607,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.89-1.el7.elrepo.x86_64.rpm
+120e4be4abb96b3ad3999ea8574a495f3e1146de383699ae792d68133466463f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.2-300.fc35-x86_64-kernel-devel-5.14.2-300.fc35.x86_64.rpm
 121b0bd93640c683b73b85e5e5697a7b7b4c63e5531f6312f2f3ef2bd68dbc77:
   type: ubuntu
   packages:
@@ -7128,6 +7642,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-f31514d804035b669f75eb2e346d0dff3781d87bab6c4ef14909bc052e31d6f0-kernel-devel-4.14.219-161.340.amzn2.x86_64.rpm
+140d312e50bad79647fd50629b3125408d0b205be8836297cc0c682abd7cea35:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.18-100.fc34-x86_64-kernel-devel-5.15.18-100.fc34.x86_64.rpm
 141d7d83094b8b11578837784b3e22e9c00c2c30834a71bb910e558015eb2fb9:
   type: redhat
   packages:
@@ -7564,6 +8082,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.177-1.el7.elrepo.x86_64.rpm
+381cb5e366a869824fd05a8beb4201877a9f2c135f1d4b01bbb38b44f68a74c2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.15-100.fc32-x86_64-kernel-devel-5.10.15-100.fc32.x86_64.rpm
 00381b6e1b3f2050d3cb5827d65b4341b4bda3084eb1c204a7b94516f073a4cb:
   type: redhat
   packages:
@@ -7596,6 +8118,10 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1131-azure_4.15.0-1131.144-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1131_4.15.0-1131.144-16.04.1_all.deb
+391b16dafc840bad6e5efc5ab8a31b9f459f497ba26b513c8821abe7b4878993:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.20-100.fc32-x86_64-kernel-devel-5.10.20-100.fc32.x86_64.rpm
 393ce93a5832afd33384c16e9c70676f67f5e337524d75c4114beee8b09fb312:
   type: redhat
   packages:
@@ -7673,6 +8199,10 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.6-1.el7.elrepo.x86_64.rpm
+433f79cd83e789088f6beb74a1872e302503890e7675beb771c685dfdcbedf1a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.7-300.fc34-x86_64-kernel-devel-5.12.7-300.fc34.x86_64.rpm
 433ad37267d820d75fc39d89819a391c7ec6ff35a94613e683ad030e604aac38:
   type: ubuntu
   packages:
@@ -7767,6 +8297,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.13-linux-headers-5.13.0-1012-azure_5.13.0-1012.14-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.13-linux-azure-5.13-headers-5.13.0-1012_5.13.0-1012.14-20.04.1_all.deb
+496b8b4a03a137f0e8a94f774659d0806d104970d77998813c96e6cf36f1a508:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.14-200.fc33-x86_64-kernel-devel-5.10.14-200.fc33.x86_64.rpm
 499abb27e5d3a8ccc50a9c21a88e17b1668ff34ce270098b526d759bb55987f7:
   type: redhat
   packages:
@@ -7835,6 +8369,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-89-generic_5.4.0-89.100_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-89_5.4.0-89.100_all.deb
+527de71d12b64cbabb0d92968ced0420cb8dc9f32fa5b594b1ce4aa4f6115af2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.16-200.fc33-x86_64-kernel-devel-5.11.16-200.fc33.x86_64.rpm
 528e25714670bcf7fa82c83b52343581787b95f262e6164c46b0de9ad77eea8e:
   type: ubuntu
   packages:
@@ -7915,6 +8453,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1037-fips_5.4.0-1037.43_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1037_5.4.0-1037.43_all.deb
+0571b9763468b8384809432e04d9e569527dec71352ba97e641ffd0a4f2c53ff:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.6-200.fc35-x86_64-kernel-devel-5.17.6-200.fc35.x86_64.rpm
 573c395c2f22fdb9f02f6c6a5339c942698f9181d26874f327eed6a13b18220d:
   type: ubuntu
   packages:
@@ -7976,6 +8518,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.21.3.el7.x86_64.rpm
+597d70d6cb4dd9ab57b51f13ed5fccb4c488ea009c4289e26685ad5ca3f410db:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.9-200.fc34-x86_64-kernel-devel-5.14.9-200.fc34.x86_64.rpm
 598c2d7bd8ad89127931d4cfa8c8c5314c7bca8006405e0ab0724136aaae43d8:
   type: ubuntu
   packages:
@@ -7985,6 +8531,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.160-1.el7.elrepo.x86_64.rpm
+608bb902fa3dd3a09edffb85e5da30ef1767106f01b39abda2f63c1ebe4919d7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.20-200.fc33-x86_64-kernel-devel-5.10.20-200.fc33.x86_64.rpm
 610b7e4e4d08799eeeebc21cf1b629ab78c1c3d6a7cd888dff7878edb6ebe288:
   type: redhat
   packages:
@@ -8019,6 +8569,14 @@
   packages:
   - https---storage.googleapis.com-cos-tools-10718.106.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-10718.106.0-kernel-headers.tgz
+642dfd4cf6a2182490fa6d9beab47044e764bf4320a653398540f1f16d511eca:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.10-200.fc35-x86_64-kernel-devel-5.16.10-200.fc35.x86_64.rpm
+645e369e96f70152129acb044d424ae40df807d889cf9c6e256131e2f14985ad:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.17-101.fc33-x86_64-kernel-devel-5.14.17-101.fc33.x86_64.rpm
 647f99e48064cc45aaf364aaa565bc9b5aa80eac3ec569d4bcc99da7df768975:
   type: minikube
   packages:
@@ -8256,6 +8814,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.5.1.el8_1.x86_64.rpm
+765f795f263694284f98437a170e9dc369741baf14abe9eb135716a4b974f848:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.2-300.fc34-x86_64-kernel-devel-5.11.2-300.fc34.x86_64.rpm
 765bca3bb5f9e0bd64d335b845bc124d535cf238d7f30847d74e6fe82f5416b8:
   type: garden
   packages:
@@ -8303,6 +8865,14 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.218-1.el7.elrepo.x86_64.rpm
+798c51b786cd2762969adc750c5c51adea3c0eb08c41b50a78007535cdf7aece:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.15-200.fc34-x86_64-kernel-devel-5.14.15-200.fc34.x86_64.rpm
+801f93d7a4bc45eb3e83d1e48b3da64cd3ece2fabf989f586c780472aefc733d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.18-300.fc34-x86_64-kernel-devel-5.11.18-300.fc34.x86_64.rpm
 808a9cdb03e5556a7fba5251367489fdb95c219278ea952df87e8f5b1b7b1fef:
   type: ubuntu
   packages:
@@ -8316,6 +8886,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1062.el7.x86_64.rpm
+818a6ff2009e62bcf40a57f3d2638f9f6547d77423bd72d77d00dfb461ad1af5:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.14-100.fc32-x86_64-kernel-devel-5.9.14-100.fc32.x86_64.rpm
 823da49092a79d7115e690693cb04fc748730570f13f05fadd415645212d7c5b:
   type: ubuntu
   packages:
@@ -8387,6 +8961,14 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.41.1.el7.x86_64.rpm
+869c674559e307954951f5f374dd9adc36e8591c77e0e76f30040b320e3134f0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.21-200.fc33-x86_64-kernel-devel-5.10.21-200.fc33.x86_64.rpm
+872cb7314616bddec7bec9ec1e87e52647933771322d69ed87b58281e59bd120:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.18-200.fc35-x86_64-kernel-devel-5.15.18-200.fc35.x86_64.rpm
 883f94aeb1bd4067aa81494f7f9011f3ddedf31dd13d9176960c77d3c8c5edd7:
   type: ubuntu
   packages:
@@ -8433,6 +9015,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.92-1.el7.elrepo.x86_64.rpm
+909a28aa789c5f14a80a9e1a96707dc476b665eaf301400eab624d98843e21b2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.11-100.fc34-x86_64-kernel-devel-5.16.11-100.fc34.x86_64.rpm
 909fb18503f1c966e3c4d376b0562497326ba8144a64d14c4f92c23ea77a8af9:
   type: ubuntu
   packages:
@@ -8546,6 +9132,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-168-generic_4.15.0-168.176_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-168_4.15.0-168.176_all.deb
+985ffcf30f60473a74fae8bb509896f201b0170e1cacecea86237d4fcac36e1c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.14-300.fc34-x86_64-kernel-devel-5.11.14-300.fc34.x86_64.rpm
 999a50b8c4b308419413e363d93f0d03d489a6d182f24baa1fe4adc1a38a97bc:
   type: redhat
   packages:
@@ -8634,11 +9224,19 @@
   packages:
   - https---storage.googleapis.com-cos-tools-10895.348.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-10895.348.0-kernel-headers.tgz
+1379c5c33af37bec2a0b0b98b655104bcafb9eedf77a9b1df40fb3e0ed469dcc:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.17-200.fc33-x86_64-kernel-devel-5.12.17-200.fc33.x86_64.rpm
 1390ac797fe5497416f43a9f6badc31cd47dac366f03d7fd3a02f6de0cea4f57:
   type: ubuntu
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2041-aws-fips_4.15.0-2041.43_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2041_4.15.0-2041.43_all.deb
+1490c644c4ee5937888882946bbb1b8f69f27ea459bfa482ac32be0a8bb91f75:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.4-201.fc35-x86_64-kernel-devel-5.15.4-201.fc35.x86_64.rpm
 01538f1a5d34e6f6a05ec15c4861308e54621406b511392a4e7dd7744dda31af:
   type: suse
   packages:
@@ -8665,6 +9263,10 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10615.0.0-kernel-src.tar.gz
+2002b4aa009ed5d5eadbd3249a0eb2f936148f9bff2d05bb86d6b31950d3799d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.10-100.fc34-x86_64-kernel-devel-5.16.10-100.fc34.x86_64.rpm
 2018c15478aa3aa3141797f74055d1b926ba07c5114f0cff8bca4b3ad26a0bb6:
   type: ubuntu
   packages:
@@ -8745,6 +9347,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-e30fc570fd5d7eb1d80ff1029ccce803f12b4fe1145c591aea337f5300174084-kernel-devel-4.14.154-128.181.amzn2.x86_64.rpm
+3084dd4f8570c3cb55acc4e054c5d10ae1ec8d53540250a0a5bacc2e37a208e9:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.13-200.fc33-x86_64-kernel-devel-5.9.13-200.fc33.x86_64.rpm
 3088fbae1b419a76d998e4846017d0db9eec93939bad1e7328d8dcb5888490a5:
   type: redhat
   packages:
@@ -8820,6 +9426,14 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-137-generic_4.4.0-137.163_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-137_4.4.0-137.163_all.deb
+03630f3f7e9d0a0be0229aea59253557f6a82933abece87cd1dc7352edc764b2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.16-200.fc32-x86_64-kernel-devel-5.8.16-200.fc32.x86_64.rpm
+3645ac4c6d50c583da0516767135171265a164fb151f15dd1a9da12b835bdf48:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.0-58.fc35-x86_64-kernel-devel-5.13.0-58.fc35.x86_64.rpm
 3671ac377b1699959a231efe97364ee830397296f5b0fbeb8aae11f390e17383:
   type: ubuntu
   packages:
@@ -8830,6 +9444,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1040-fips_5.4.0-1040.46_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1040_5.4.0-1040.46_all.deb
+3687b01aeac7b5e8be97249dac2c5b82b8a0fcaa5bee6f549a88b7e5beef5a9b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.11-300.fc35-x86_64-kernel-devel-5.14.11-300.fc35.x86_64.rpm
 3731ef66cff742416714f02c3d708760441e9719f77682509cd10efd124bbe1e:
   type: redhat
   packages:
@@ -8862,6 +9480,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1019-azure_5.4.0-1019.19_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1019_5.4.0-1019.19_all.deb
+3980b0f7c77441ef11b1a8f9bada0002f10eddb76a1f10939e159f4cb9b6f78c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.6-201.fc32-x86_64-kernel-devel-5.8.6-201.fc32.x86_64.rpm
 3988e22a7c8a9d24659ad6cc317f746e06d537f672e4dcdd41202ab1cad74f9d:
   type: redhat
   packages:
@@ -9363,6 +9985,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-159-generic_4.4.0-159.187_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-159_4.4.0-159.187_all.deb
+7895a9718664519cb7a0d5d0f29d1f3fa5ba4119d77143a8b34424d144b3fb97:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.13-200.fc34-x86_64-kernel-devel-5.14.13-200.fc34.x86_64.rpm
 7922bc3860204f28a854334b53a7660cff6a948fe9d7af1ffdb5579307f793e8:
   type: redhat
   packages:
@@ -9372,6 +9998,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-gcp-fips-headers-4.15.0-2022_4.15.0-2022.24_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-headers-4.15.0-2022-gcp-fips_4.15.0-2022.24_amd64.deb
+8037d4d0b939581b10ddb16914af6c4b73522bfb0ef78332a42faa64ae09e7c3:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.4-100.fc34-x86_64-kernel-devel-5.17.4-100.fc34.x86_64.rpm
 8052b939fad461a48af776de7eaa9889b71e0a60d84d5e4a2bba42558abba720:
   type: cos
   packages:
@@ -9391,6 +10021,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1109-aws_4.15.0-1109.116_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1109_4.15.0-1109.116_all.deb
+8156f569c6cfcd1462e0304cad14d576938a59623ed281a1e2fabd92d574cedc:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.8-300.fc36-x86_64-kernel-devel-5.17.8-300.fc36.x86_64.rpm
 8178dfa30862377a3e66b6378e83a5a9ca0b8789bdffc473970b0fbc488f8c08:
   type: ubuntu
   packages:
@@ -9430,6 +10064,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1061-aws_4.4.0-1061.70_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1061_4.4.0-1061.70_all.deb
+8503fcca18c0a6bd0831efca5cc9181bf77db7be12e62de3e9ac029d972ea7c9:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.14-200.fc32-x86_64-kernel-devel-5.8.14-200.fc32.x86_64.rpm
 8526f3078bf54f17377c614e5e16c5cce759f1c679b6d439d537d85413297332:
   type: debian
   packages:
@@ -9455,6 +10093,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.12.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.12.0-kernel-headers.tgz
+8693ff7f581d9e58b13088a094674ddf27d5a07cc0e7eb20d279116e2688a276:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.14-300.fc33-x86_64-kernel-devel-5.8.14-300.fc33.x86_64.rpm
 8722ab354f2958c7dd8f21aa29216a8d02c664ad328c1ac443c2c68ee087fcef:
   type: ubuntu
   packages:
@@ -9478,6 +10120,10 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.5.2111-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-348.7.1.el8_5.x86_64.rpm
+8892d649cd0b909360aa5d23c6a09e803626f15da0e5ff3ee066f60674448acc:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.15-300.fc34-x86_64-kernel-devel-5.12.15-300.fc34.x86_64.rpm
 8965e10d6dd634c329255d97f0b03a6502debab47e411b270e22b359c27904f9:
   type: suse
   packages:
@@ -9798,6 +10444,14 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1019_5.4.0-1019.19_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1019-gcp_5.4.0-1019.19_amd64.deb
+29905e5dd9fb33ef8a0f9d1541e723c9eeff5b4561d404571ddf380ae04742ac:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.11-200.fc33-x86_64-kernel-devel-5.12.11-200.fc33.x86_64.rpm
+029948e80086f565d008b23a0a1984b63f511f97d484603dd83e3ce95a97dce9:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.15-200.fc33-x86_64-kernel-devel-5.10.15-200.fc33.x86_64.rpm
 30060bf028e6b00045a01ee1ab6c05dab6f9eb07e4c52bcb4a48a49c46b087ed:
   type: ubuntu
   packages:
@@ -9879,6 +10533,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1127.8.2.el7.x86_64.rpm
+38718bfa96e9fe1f88d4424b2e3c8f6ae7ea1a386cf1e494da13554f4daccb44:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.9-100.fc33-x86_64-kernel-devel-5.13.9-100.fc33.x86_64.rpm
 38960e5e2f76c84f6db2210554817070c8c8fd0057112514f4e036963fd8a0aa:
   type: cos
   packages:
@@ -9998,6 +10656,10 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.36.0-kernel-src.tar.gz
+49262cfd262f41b243ed850b8d4a7fee884d711e277868bb37cb071964add63b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.8-100.fc31-x86_64-kernel-devel-5.8.8-100.fc31.x86_64.rpm
 051199fbb0dcc7adc1b708753079a16604e2878604affcabe71b5bcd9e9918bd:
   type: ubuntu
   packages:
@@ -10022,6 +10684,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-headers-5.11.0-1019-aws_5.11.0-1019.20-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-aws-5.11-headers-5.11.0-1019_5.11.0-1019.20-20.04.1_all.deb
+56978f33077cf3392b754bd0653606772152fcb006a205e78d16ab315d4c522b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.12-100.fc32-x86_64-kernel-devel-5.9.12-100.fc32.x86_64.rpm
 57456cbbce19df8f6f6c72b2af9876a5207d7f8b285c3849154bea718a535c37:
   type: redhat
   packages:
@@ -10150,6 +10816,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12739.37.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12739.37.0-kernel-headers.tgz
+75273bdc7e61341c42c23f8bb1579e75afdeee3441ccb61bd8b8ec2a1fd172fe:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.8-200.fc35-x86_64-kernel-devel-5.16.8-200.fc35.x86_64.rpm
 75849bb6516bb3f43d08ff5ba17bf20258bd0322495afe05a51ab795abc680ca:
   type: ubuntu
   packages:
@@ -10169,6 +10839,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.29.16-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.29.16-kernel-headers.tgz
+78074c9bf6dcd7c17afda29e5f5d8c483737b8c0cc7575cfe7a1f7a44a388fd2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.11-200.fc35-x86_64-kernel-devel-5.16.11-200.fc35.x86_64.rpm
 79111b519cb012b425b7d909f0ca1251fb13a003c7d4df680cc0485232dcd6fb:
   type: redhat
   packages:
@@ -10182,6 +10856,14 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1053_5.4.0-1053.56_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1053-gke_5.4.0-1053.56_amd64.deb
+80257dca094841c4310c2fee686ffe5748edf99ee10acc5bb91e2741c5507f61:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.7-200.fc35-x86_64-kernel-devel-5.15.7-200.fc35.x86_64.rpm
+81466ab111e3d11ef4466a4239992370c1d1993a14519b378f023c7408f458e9:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.11-100.fc32-x86_64-kernel-devel-5.11.11-100.fc32.x86_64.rpm
 81850dcc4a82ba3bef91e9c4f1f554eaf642fe4189dcd66d3a279898f66252cf:
   type: coreos
   packages:
@@ -10229,16 +10911,32 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.7.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.7.0-kernel-headers.tgz
+90488ba2657845b237f1c47c8ee657ba1aeda63115e28e32a5992f9e805ff569:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.0-61.fc36-x86_64-kernel-devel-5.14.0-61.fc36.x86_64.rpm
 90510e95c2badff1b82171ee7ffeeb398f4f36bbb11bac1f8e1d99b4cbf9a2aa:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1065-aws_5.4.0-1065.68_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1065_5.4.0-1065.68_all.deb
+91329a93dbda63f8dfbdd090a15a246150e5f0d95e0c017fa7eead5b2cf47622:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.16-200.fc34-x86_64-kernel-devel-5.13.16-200.fc34.x86_64.rpm
 93225cf6863b5843886c86b11cc7dce4dbf1225e973c541d957dd525e0602d60:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1136-azure_4.15.0-1136.149_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1136_4.15.0-1136.149_all.deb
+93390f65f8a025b87b588bdac29cc34326884c3753b541ade97f4191b8fff3fb:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.8-200.fc33-x86_64-kernel-devel-5.9.8-200.fc33.x86_64.rpm
+94225b4903fd35bea2333d3a44bcefec90dc9c4c07c50601096a2be1f8f78fee:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.16-200.fc35-x86_64-kernel-devel-5.16.16-200.fc35.x86_64.rpm
 94636f5a287ad4a528d579e58fc0c85797c3cc843a8ccdc58d4427a55f3459df:
   type: redhat
   packages:
@@ -10267,6 +10965,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1123-azure_4.15.0-1123.136_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1123_4.15.0-1123.136_all.deb
+99818e838bfa512c8ea8cb17f5ca37715272ae6c8e8be7989241b1fa8a38cb08:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.9-100.fc32-x86_64-kernel-devel-5.9.9-100.fc32.x86_64.rpm
 101467bb317f009de64384dddb6e7c2aa82e0fc37d5c2d121d27906bc4c31198:
   type: ubuntu
   packages:
@@ -10328,6 +11030,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-123.el7.x86_64.rpm
+256896b102119812e7163abc9d30c4c2018118c17add4d9128dcfe9dafb350e7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.13-300.fc35-x86_64-kernel-devel-5.14.13-300.fc35.x86_64.rpm
 257265fc20913b1b74d7337e836e2f81bf3e96b2087007757b4bbfe39049be3e:
   type: redhat
   packages:
@@ -10588,6 +11294,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16623.0.13-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.0.13-kernel-headers.tgz
+875360bdda0013ca96820f590277e45287db02f7a963130f3e66d0797473617c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.10-200.fc33-x86_64-kernel-devel-5.12.10-200.fc33.x86_64.rpm
 875674c1d124163018c21b915f5ec040c8d492eaca8d56ddfc45c281ad08a5ef:
   type: redhat
   packages:
@@ -10748,6 +11458,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1125-aws_4.15.0-1125.134_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1125_4.15.0-1125.134_all.deb
+3886126e9200cd6e55c565d4834c2faa40ad2dd53812d930e7820fd20518628b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.14-100.fc34-x86_64-kernel-devel-5.15.14-100.fc34.x86_64.rpm
 3949306aa20d7e0f3c59ae07c75c146320385805b200ba8427c15da3ab26e12c:
   type: redhat
   packages:
@@ -10785,6 +11499,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.196-1.el7.elrepo.x86_64.rpm
+5404500e138067c71e30484426a175eefed344949901d789928f5b97128c1a59:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.15-300.fc35-x86_64-kernel-devel-5.14.15-300.fc35.x86_64.rpm
 5463621fb220085ba4794fcc0f576c4d628eb9a9ac7104faf1b2e631798b6609:
   type: redhat
   packages:
@@ -10847,6 +11565,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.87-1.el7.elrepo.x86_64.rpm
+7528145d6b304c3ee7a1228af4d7a7034a2acaf878956bfc7cde9a118788ac37:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.22-100.fc32-x86_64-kernel-devel-5.11.22-100.fc32.x86_64.rpm
 7889229ef17678ed436225fddd08e1c9fe7ed29537991e5e750108d7d7ba1bbf:
   type: redhat
   packages:
@@ -10927,11 +11649,19 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.108.0-kernel-src.tar.gz
+9898791a55d6a387bb203de103de63c966c3f751b02e2ed03d81506013956ceb:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.13-100.fc33-x86_64-kernel-devel-5.14.13-100.fc33.x86_64.rpm
 9999721c46dce809f8cafea99847461aa5e8b995f88b201b972999b8d53eed79:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1051-azure_5.4.0-1051.53_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1051_5.4.0-1051.53_all.deb
+10384750fe6535cad786a9220c2437f33a37db09110eea1581964a62b1038782:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.1-200.fc35-x86_64-kernel-devel-5.17.1-200.fc35.x86_64.rpm
 11053200cfdbaabfc61a57bbd105b41d8b48df13dbdb22130cd0fcd2b1f7350c:
   type: ubuntu
   packages:
@@ -11052,6 +11782,14 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.143-1.el7.elrepo.x86_64.rpm
+99626846d45ff4dd42283e0f7a6a78671ece913477942860c2ca5479a53f45f4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.7-200.fc32-x86_64-kernel-devel-5.8.7-200.fc32.x86_64.rpm
+109547218d3695267618ebd3a6274608b5f175182d1fb0f22655cad438a62f2a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.16-300.fc34-x86_64-kernel-devel-5.11.16-300.fc34.x86_64.rpm
 249756017e7cd5ac6b5a6a6e58a180c72d1e516088c20e445553ef105da5a5f6:
   type: coreos
   packages:
@@ -11077,6 +11815,14 @@
   packages:
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.78-k8s-linux-headers-4.4.78-k8s_4.4.78-20170728_amd64.deb
+597316349d07c73af26ca9b67f7e77a8027a79d8b4f3b988a3e7bff6552bacbb:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.14-200.fc34-x86_64-kernel-devel-5.13.14-200.fc34.x86_64.rpm
+644644791d6e5af4dbcd5d7b525fb072bbc90d903af324f17b3f1d871b0c6d75:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.10-100.fc33-x86_64-kernel-devel-5.14.10-100.fc33.x86_64.rpm
 650325518e54643fca78c97a7875c9fcf4a8a4f76db6d102d4876e15037830dd:
   type: redhat
   packages:
@@ -11146,6 +11892,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-gcp-5.3-headers-5.3.0-1032_5.3.0-1032.34-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-headers-5.3.0-1032-gcp_5.3.0-1032.34-18.04.1_amd64.deb
+4815338952ca3d0e1ba84f33d2093fbf53f1334200e722bca1c6c315b0bf396c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.9-200.fc32-x86_64-kernel-devel-5.8.9-200.fc32.x86_64.rpm
 4959354501c86d4c8bc848c15334f6c0efd5b932fd68ba4630aa3ef841c029e8:
   type: cos
   packages:
@@ -11295,6 +12045,10 @@ a00b49b04374510e3a48cc93e3124e504ecbdbc1218407a3f97c3959ca87ab0d:
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.40-1.el7.elrepo.x86_64.rpm
+a1e5c027f7ed64ca0e27ac7a351951a02b8eb1929b1be8ac0968c1e9e64691c8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.3-300.fc36-x86_64-kernel-devel-5.17.3-300.fc36.x86_64.rpm
 a1b493790d83894cc46c5cb7638765150db56a917785fa6a1acec692cda797dd:
   type: ubuntu
   packages:
@@ -11348,6 +12102,10 @@ a2ac9654047f0098e9bfddac39fbbdc0048baab710a334b50281e84c14ec65c7:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1911.3.0-coreos_developer_container.bin.bz2
+a3c2633ad0a88f9a53e95086ea8b68150af079bba3f42dc603c248de803e7553:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.8-200.fc35-x86_64-kernel-devel-5.15.8-200.fc35.x86_64.rpm
 a3aa5e2286bb89565602b9c6559cfaeb6e565d8a97c0a1ede1fbc89aa98632cf:
   type: ubuntu
   packages:
@@ -11399,6 +12157,10 @@ a4afe4351e27055f9026b47d0e68a506ce5e98a247a89764ac1fa681769dadf4:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.14.3.el8_2.x86_64.rpm
+a5e3feaf6ed43e4249bc4fc9e6b83f6c2a7745b312badcdf232b0080e0e899a3:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.20-100.fc32-x86_64-kernel-devel-5.11.20-100.fc32.x86_64.rpm
 a5cabf016d2bc6bc08e422d0da90b785ae93256822b9811c6821cade52411ed9:
   type: cos
   packages:
@@ -11456,6 +12218,10 @@ a8e034ae52850362e8ddecb2d97cd4211b92134437d5ff56a51c70f60a4314c4:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.14.3.el8_2.x86_64.rpm
+a8bb5ecfb0496aab0c7de80f277257f0aced805d116305d890d06c2d59316858:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.17-200.fc33-x86_64-kernel-devel-5.10.17-200.fc33.x86_64.rpm
 a8cd6e239bff0f1b01ae9ca2c619ca77b5ef915c828b8c23bf2fae41a4548ea3:
   type: ubuntu
   packages:
@@ -11502,11 +12268,19 @@ a11df5093e4119566049db2bb7de134fee7e2aa9a73ec41bc8c99763ddced5de:
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.58-1.el7.elrepo.x86_64.rpm
+a12cef642be8c1f94270459c9364125b5b3d038a76aa7b2cf8f1a5594873b2e8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.16-100.fc34-x86_64-kernel-devel-5.16.16-100.fc34.x86_64.rpm
 a21ad0d29ca6827a985f596f042a0e3e1729567eaf74d8a715c8d7c6e20451f2:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.0.0-1036-azure_5.0.0-1036.38_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.0.0-1036_5.0.0-1036.38_all.deb
+a23b595743659c3137015d4264deff5b9d769883494e1233d228c5ee109f2203:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.18-100.fc31-x86_64-kernel-devel-5.8.18-100.fc31.x86_64.rpm
 a25a1b53c2444824a682def0f5e6797232fabcbd23ac7324185b72cf4c789552:
   type: coreos
   packages:
@@ -11548,6 +12322,10 @@ a47ae9a9d73468fdd8f51c4ec688f3150cc690524a061dd172011acbee5bf302:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1114-aws_4.4.0-1114.127_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1114_4.4.0-1114.127_all.deb
+a50e5aea7782ca2656414273bc1dd04ac1cc35342c88abf308745c69f5848a47:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.12-200.fc33-x86_64-kernel-devel-5.11.12-200.fc33.x86_64.rpm
 a50b28ab2572bfc10bd8a257d00ee8131d44705f0bfe2323706fe4ad7d2318c6:
   type: redhat
   packages:
@@ -11637,6 +12415,10 @@ a95aa071a4aaf7e0b8125ea81ca5a3724349f26f3d356e9464425dcc980baac5:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1688.5.3-coreos_developer_container.bin.bz2
+a97bb6a7bf6ca3219047f56b1dd5af112383ecf0425fd2087220b95c4bc560a7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.6-300.fc34-x86_64-kernel-devel-5.12.6-300.fc34.x86_64.rpm
 a195a9650455df4ff047a208328befa50810a37c20f93a60620dc067bf6a9077:
   type: redhat
   packages:
@@ -11689,6 +12471,10 @@ a522cc7b6f5acac806788f351ae0a8ad899e8b77e94016463d88ac90c564f04c:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-28a2aaff65bc27d02dc5de2ba33765cb639a9a9c33afdaff6b99490bf3f830fc-download
+a600c30e2848c5dc1040ab65c3f68d9553c94fd2feb7f0010454021130751e05:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.9-101.fc31-x86_64-kernel-devel-5.8.9-101.fc31.x86_64.rpm
 a683c2d7602f0d8407fd4eaf2c4793ca01d429b6c47bf2f0621c04aa83a1e0a1:
   type: ubuntu
   packages:
@@ -11806,6 +12592,10 @@ a6994c88e4fcf99da75d03c199d2e6a3d2356d8727d5bd005f6a8bbc9ba8cd5b:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-383.el8.x86_64.rpm
+a7926e89cd635f3dd3d2b6f44fd16e80048430c26d169c3f13f4487ed428b082:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.6-300.fc34-x86_64-kernel-devel-5.11.6-300.fc34.x86_64.rpm
 a8360ae32b4da93c433a0cf380342d3d8ab870be53fb7b385ae7c8e70ef96984:
   type: redhat
   packages:
@@ -11823,6 +12613,14 @@ a8827c0f23a6658152410ae8339b0948bba954e4b6bf85d401c0df9935a86366:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-e66cb7ecd7a9809e009c2731233a5da58bc480068a3f9aba765fbe2e34d4f84e-download
+a14817adf0abcb8f46a80d9e7518a27afcbf413db73807c2d289f834b6da1d56:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.13-300.fc33-x86_64-kernel-devel-5.8.13-300.fc33.x86_64.rpm
+a21209acf890941a8d9fe150997b13322feecc9236bc55ecd04d75b0b2a55a67:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.13-100.fc31-x86_64-kernel-devel-5.8.13-100.fc31.x86_64.rpm
 a30521e37aec9d940021b1174cb6e1dfb2cdeb61f33888c89a78044d7b7afd75:
   type: redhat
   packages:
@@ -11853,6 +12651,14 @@ a85114c8db72a0804578803359c2dab37145f5ab11d9dead825d9170423c0b71:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-862.el7.x86_64.rpm
+a94133f148a15669587b62500096dd6ec199e5cfdf46ed350816162dcbd1c655:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.12-200.fc34-x86_64-kernel-devel-5.14.12-200.fc34.x86_64.rpm
+a359910af69b88bd4febc7f4de156b0624f99e5b2148949393c44ae5b3a99c99:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.6-200.fc33-x86_64-kernel-devel-5.10.6-200.fc33.x86_64.rpm
 a424478a07c26053041dbbbc420984542d152b08838a587232c9dec4db2b9cf2:
   type: ubuntu
   packages:
@@ -12025,6 +12831,10 @@ ab6d0efd524e864330dbf7d4a5bf7ae15e821005ea864f7aaa142931ff5d03cf:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-edge-linux-gcp-headers-4.18.0-1012_4.18.0-1012.13-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-edge-linux-headers-4.18.0-1012-gcp_4.18.0-1012.13-18.04.1_amd64.deb
+ab7c8d359eaefc1669d36420ca774facbd4d4ef533992483ffb20af001dc4235:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.6-100.fc33-x86_64-kernel-devel-5.13.6-100.fc33.x86_64.rpm
 ab19fbf128db427e884abfde88e0893a94bc804848e61b63138af2117e80204a:
   type: cos
   packages:
@@ -12079,6 +12889,10 @@ abdefd8b2b76f13dad7e0273a5930513d8240efd67ad98ad264983efb52ea65c:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1065-azure_5.4.0-1065.68_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1065_5.4.0-1065.68_all.deb
+abe9432dc4e58dd81485230bac3dd77cf4bb7bad2cc9783a548d37df72a19784:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.3-200.fc34-x86_64-kernel-devel-5.13.3-200.fc34.x86_64.rpm
 abf4dec74936153ceb7fdd1c8438c0757549fe44b511db8baa96bc1df4dd2b5e:
   type: coreos
   packages:
@@ -12125,6 +12939,10 @@ ac8f10af54163cac75ae86eeadaf490ad113d380cbf0690718b78528a104a589:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1094-aws_4.4.0-1094.105_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1094_4.4.0-1094.105_all.deb
+ac39a3da8b847cbfb28a5dccce9d8f4d05fb1445dc58db0194b30d79b9e8f956:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.15-200.fc33-x86_64-kernel-devel-5.9.15-200.fc33.x86_64.rpm
 ac58e38dcece8b4aebf77b364562b7a731fb753a9d919d334ee419242d6b1dfc:
   type: cos
   packages:
@@ -12224,6 +13042,14 @@ ad96ad753f6e517702015d2ad2c5b1df374a25d4d66b854f0f18079ea8fd9b00:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.103-1.el7.elrepo.x86_64.rpm
+ad867b3519586418a0694b48db7ea7b700783fb5bdae3b884ea1ffcfaefb747a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.8-100.fc32-x86_64-kernel-devel-5.10.8-100.fc32.x86_64.rpm
+ad2666c8b917975895d6fb8c5f24a037a60669d7ce865a740aaba6c931bb08b8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.7-200.fc33-x86_64-kernel-devel-5.10.7-200.fc33.x86_64.rpm
 ad2894815bf3f201e3de614d803561f2b6748cd018060c7dc1c7dba1a146142b:
   type: ubuntu
   packages:
@@ -12233,6 +13059,10 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
+adc79b5ee4d400b13592a3771fde4b2bf51450aa956d46c0a84b472c58d81f34:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.12-100.fc34-x86_64-kernel-devel-5.16.12-100.fc34.x86_64.rpm
 add6c2164e096f2b11f2ff4552ce334d9e4d660405d9bfedc5a583ea1cac7f13:
   type: redhat
   packages:
@@ -12277,6 +13107,10 @@ ae5ede0337463ddddeeb9be88a45721a1a0bcc3ee0d705767730c7cd7e647526:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.51.2.el8_1.x86_64.rpm
+ae24c923e0e7faaf7d246ce033ad7c8b8eb65e6c7f1870b6823c22b4e20b7d33:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.20-200.fc35-x86_64-kernel-devel-5.16.20-200.fc35.x86_64.rpm
 ae35ac127ed7164c766b960e8c69be40cf8c93e274c8fa027f9124d710686087:
   type: garden
   packages:
@@ -12307,6 +13141,10 @@ af2acaf2f0b4ee06ee785df77986eaf124e62bb6a4af6082e04cefdfe3b100a3:
   packages:
   - https---storage.googleapis.com-cos-tools-16240.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16240.0.0-kernel-headers.tgz
+af4d13317dcc2d08b931040613e7b48b685a16f5fb40fd62aee132234cc2bf0b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.17-100.fc34-x86_64-kernel-devel-5.16.17-100.fc34.x86_64.rpm
 af7cd83591d3764fdfbd8c608981d521fff19dbfe43b5cdaba5c6fba1ba0edbd:
   type: ubuntu
   packages:
@@ -12334,11 +13172,23 @@ af694b0be97adf6e1b57300a739ffc1ee0c95fef66b9914cfadd85b7287fafcb:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10895.0.0-kernel-src.tar.gz
+af4307efa5023447e4816bd196c54b40d4908868be085efa822bdbccd7584ac3:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.22-200.fc33-x86_64-kernel-devel-5.10.22-200.fc33.x86_64.rpm
 af5988d192874cc0080115d89c2b71e1f1cc30adb705e5036a808b271866df2e:
   type: ubuntu
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1100_4.15.0-1100.113-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1100-gcp_4.15.0-1100.113-16.04.1_amd64.deb
+af63733d7da7a45fbd7771b10c42b02487e3494209051834501114e5323d1e4c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.18-300.fc35-x86_64-kernel-devel-5.14.18-300.fc35.x86_64.rpm
+af69855e0e113d142ab83c4b3953de88b0771b0215b6dad593728005d121e0f2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.19-200.fc33-x86_64-kernel-devel-5.10.19-200.fc33.x86_64.rpm
 af441238d4e06ff3d2e2d81b603902f31b5de38f880e49c1c93e30ff2f822de9:
   type: redhat
   packages:
@@ -12367,6 +13217,10 @@ b0c0ca6073b4fb6e3b5a5ed69a44be3ea576340f73144c1b384d43e3a9c59fa6:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1075-fips_4.15.0-1075.84_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1075_4.15.0-1075.84_all.deb
+b0d1c639e4d01a9ae3528c0c80cb8f8e38e7283847f61dcb5c29e4b17571a904:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.9-200.fc35-x86_64-kernel-devel-5.16.9-200.fc35.x86_64.rpm
 b0e9a1a566f5b0a8b69965ba442a1f737655fe31fba79df5ce653311563cc238:
   type: cos
   packages:
@@ -12400,6 +13254,10 @@ b1a0fd4ac8aa03b11b107c004810b243d0f8144427513fe34dbfd5ba7cf36898:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1015-fips_4.4.0-1015.20_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1015_4.4.0-1015.20_all.deb
+b1b9cbedd64326705bce627768e3f5e9e0a592e84ecc649dafdbd8d41442be66:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.5-300.fc35-x86_64-kernel-devel-5.14.5-300.fc35.x86_64.rpm
 b1a45dd79517cb830dad2ed745e5f7b082335ebf78991984d4a18ebd2039942a:
   type: redhat
   packages:
@@ -12539,6 +13397,14 @@ b5b5cbe27756e0c491de305c3ba11096fe116b4e1d338d7842cd245c1784850e:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-ede82888a2a4bedac8dce3b992d510e5af06cf7ec91d30098b2830ab6a37ca46-kernel-devel-4.14.101-91.76.amzn2.x86_64.rpm
+b5a9ca72ef5cd5e6a8ff3bf965ffd7c9557a783a75f9aa6593f07dc0698cc342:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.3-100.fc33-x86_64-kernel-devel-5.13.3-100.fc33.x86_64.rpm
+b5f133fddb066c3161392f480b1ba74b8d4bfc7eed88672156b4d63f6b37cf21:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.1-300.fc35-x86_64-kernel-devel-5.14.1-300.fc35.x86_64.rpm
 b5d0311ebb1414f6b29d297f16d94de5a4f578af0f90ff09cf75807fc7620c9a:
   type: coreos
   packages:
@@ -12602,6 +13468,10 @@ b8b1f401b77110249adf7e9ab8b17ad05143d540ce7a47b6929a36f8b99eef83:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2043-azure-fips_4.15.0-2043.47_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2043_4.15.0-2043.47_all.deb
+b8d5b609374e7bc56e85222ba628da5b484b4cfbfb6578b2710b2c7ef0788995:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.3-302.fc36-x86_64-kernel-devel-5.17.3-302.fc36.x86_64.rpm
 b8f0145f05f7e22a282f45885acfc9ac224887ee76c09f5770ad4e992ba193a3:
   type: redhat
   packages:
@@ -12615,6 +13485,10 @@ b8e603d1c06858fb8e5543437478d80b6737fa40795732fee56b961aacc4db33:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-229.7.2.el7.x86_64.rpm
+b8d1007f9f416397b094658459ba7207dfc6cc3aa6d788ccc20f25913dc4fefc:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.13-100.fc32-x86_64-kernel-devel-5.11.13-100.fc32.x86_64.rpm
 b8e274591630f4f542b25cbb521d0a7ad7940b3cde37a30709c22c8bd681812a:
   type: ubuntu
   packages:
@@ -12641,6 +13515,10 @@ b9d4b61a1b54aa3cd8abaea32bedd9abbcf6bb2747add3658a18ecfc0983344a:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-5ec8d4123319e1b267386533a2c585271d18d9d141c25f9dce5f4b6bed222b1a-download
+b9cbf99d3dbc21503d206ccc800b1e10b6ff2bcd59af3379ee5a4d3691de966d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.18-200.fc35-x86_64-kernel-devel-5.16.18-200.fc35.x86_64.rpm
 b9af9500557e09e42ed2fcdfbc42a1954e7aa4e3821989227881e45facd6ef2a:
   type: redhat
   packages:
@@ -12743,6 +13621,10 @@ b71d51f35f0e5fd4e8f3068930f4e8f083de741218adf296ba07831a45b92d71:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-headers-4.10.0-1006-gcp_4.10.0-1006.6_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-linux-gcp-headers-4.10.0-1006_4.10.0-1006.6_all.deb
+b72dd42701aa68845366ab87e769e9e0153dfad250d7bf85e8700426c15a612b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.16-300.fc33-x86_64-kernel-devel-5.8.16-300.fc33.x86_64.rpm
 b75ea597384edf1beccd15ace5ed7bfdfb8fd12e88efd5f642c1c135a0c953c4:
   type: ubuntu
   packages:
@@ -12893,6 +13775,10 @@ b966b32e54a9df1f5c22d3dd5d9aadc571abf9f1abf31af602aff73111e081b8:
   packages:
   - https---storage.googleapis.com-cos-tools-12371.37.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12371.37.0-kernel-headers.tgz
+b979b0e945b206415b7a5b7e5aef0fa7f430ba5615afa5968ded10f2365c99d1:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.10-200.fc34-x86_64-kernel-devel-5.13.10-200.fc34.x86_64.rpm
 b985ad36fed5845bbcb6d0fd14aeb3a42a6865ea200a90b2da81f8d849912a58:
   type: ubuntu
   packages:
@@ -13056,6 +13942,10 @@ b45305728f51260d87d94afc69cdf43683f68d4585d0252c7467b31ebfc589f5:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.181-1.el7.elrepo.x86_64.rpm
+b234275932b06e7a56439ad1748b27d5e8964dd76aeb6f329825aadb3d70098d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.7-100.fc34-x86_64-kernel-devel-5.16.7-100.fc34.x86_64.rpm
 b0458361050d220c5a43f7a1e8868202e1ec0d40343fb36b02dfd439ca3f4f2b:
   type: ubuntu
   packages:
@@ -13082,6 +13972,10 @@ ba3bed068324f8f9e00b6cbfb714bb4a9a3ede83bc6a76269f2338456969aa59:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.15-22.el7.x86_64.rpm
+ba7b66ae142bfe7ffc66eb2484c3646690b04d5d9e0808ecf56c74bc5aa4f889:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.9-200.fc33-x86_64-kernel-devel-5.12.9-200.fc33.x86_64.rpm
 ba211ec36ce5e2d4bf790727347d83bd58b330bf52bff5ad7e7d3707f907fcad:
   type: cos
   packages:
@@ -13111,6 +14005,10 @@ bac3ef72500f18c4f1241da47b66d383c63a1324f86844b72b5febf4105ba98e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1030_5.0.0-1030.31_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1030-gke_5.0.0-1030.31_amd64.deb
+baf48ead9e0795d7393341ad2a8759f77800793dade466123cb89f7af08e78c1:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.9-200.fc33-x86_64-kernel-devel-5.11.9-200.fc33.x86_64.rpm
 baf63e69986739c52d661d79b8949d907f8e8e4430ff428694c51ed309ccbb5d:
   type: redhat
   packages:
@@ -13174,10 +14072,22 @@ bbea29c76d86a6e71f5ad4e743e5f198974c3a5f53a3427926205a78019c5d12:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-908f96cc3c4f55a5db898c8ba144f03af703ffcb6be337c6bb55b7e72dcbc5ca-download
+bbf345ec624530194d16501f8bd737bf5e65da00da7774fbf8c9966e45ffe738:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.5-300.fc34-x86_64-kernel-devel-5.11.5-300.fc34.x86_64.rpm
 bbfcb0a606fd002ab480b0751ccafad7d9d28efd450a9a4a21bdb8aa35ad0209:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-d54df3f0948147e31673652313be4c644e6b5ad50931346abde22e440db35270-download
+bc1b07ce4eddaa0e1e0771b25c160315d1fdd858133a431204f3bcef4d1d23f6:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.18-100.fc34-x86_64-kernel-devel-5.16.18-100.fc34.x86_64.rpm
+bc5d391e3fa8dc0f9debbd342b4f5424e8aabc19a5618116b849482af9f4c9b0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.11-200.fc33-x86_64-kernel-devel-5.9.11-200.fc33.x86_64.rpm
 bc8b6eeb849f6dc5b782b4f2652382bc914644a2feea045894dc3a2ee254549f:
   type: cos
   packages:
@@ -13247,6 +14157,14 @@ bcf8b0d556a13b385f002b82080c1cae59390be22708660571aff257eb6113b1:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.116.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.116.1.x86_64.rpm
+bd3d4d461e3842d136eae63300a162ce4e188725f923abff6bd9f216680146bd:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.19-200.fc34-x86_64-kernel-devel-5.13.19-200.fc34.x86_64.rpm
+bd14d3f370cd8706d7070e45a290c33806f67db99299e49f97d218bd28ab66d5:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.16-101.fc33-x86_64-kernel-devel-5.14.16-101.fc33.x86_64.rpm
 bd244cfc75e46ad606c529dc03983155244f021c6660e57a05a5ff2ff973f289:
   type: ubuntu
   packages:
@@ -13286,6 +14204,10 @@ bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119-generic_4.4.0-119.143_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-119_4.4.0-119.143_all.deb
+bdf2724eb8d24c9f7b5aac6ec0073b1d43f7f982c681fb75404d4df749d3efe0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.13-200.fc35-x86_64-kernel-devel-5.16.13-200.fc35.x86_64.rpm
 bdfef4c36280a3d5cfac934574049c61b8f80fb376c05bd7c12cffaf51dfb24f:
   type: cos
   packages:
@@ -13353,6 +14275,10 @@ bf4f2abfc16cdfdc784989718c42bf0b5eeacee58961adf007f3cf84b9c1d906:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-207-generic_4.4.0-207.239_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-207_4.4.0-207.239_all.deb
+bf7edf81740bdd93f08a4e9d9ac77982899f8afe57f2929b594ab9f64b7b2c10:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.1-300.fc33-x86_64-kernel-devel-5.8.1-300.fc33.x86_64.rpm
 bf84ec71b7d18ecd50510d66a456d7493c2aa36379f339f43500f25eb7cf2012:
   type: suse
   packages:
@@ -13469,11 +14395,19 @@ c02eda486e5b1f24006aa6dfc1eebf0ea2a40e5b42131f88ec51d4a80eec7439:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-gcp-5.3-headers-5.3.0-1018_5.3.0-1018.19-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-headers-5.3.0-1018-gcp_5.3.0-1018.19-18.04.1_amd64.deb
+c3a2776e8b0061b117021ae15880b36b439c589516c73129b83ee57d6f5112e0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.17-200.fc35-x86_64-kernel-devel-5.16.17-200.fc35.x86_64.rpm
 c3bb2b854f5cab4f1ee223a79a92ab4bf4d341fda1eb078cd59db6b78eda9966:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-156-generic_4.15.0-156.163_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-156_4.15.0-156.163_all.deb
+c3af0d5401a40ad03842b592383562e57772fe4c3b3684a3340bdd7daca83be7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.11-200.fc33-x86_64-kernel-devel-5.10.11-200.fc33.x86_64.rpm
 c4d2b6c146f6baf5f7dd45182906bd61e61f848aaf0e2c859d73548691658e0a:
   type: redhat
   packages:
@@ -13551,6 +14485,10 @@ c6c0092e3cc45a528040afbc8ddf9ecf6ff9fb09c0df952af99cb9e946e2a981:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.243-1.el7.elrepo.x86_64.rpm
+c6f470f47e35d070d4a420e3ac91b5e9a30582e9ad78c810ba828753b11434ff:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.5-100.fc34-x86_64-kernel-devel-5.15.5-100.fc34.x86_64.rpm
 c6c705d34b837426fbcf28ee98b1289d2ca7b5d3b52f1b2d173c786338a78453:
   type: ubuntu
   packages:
@@ -13595,6 +14533,10 @@ c7ff8256f53186499cdf579432f9a365ac9b4f1c9cd96b01a920da94dc8f9bb9:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-df87ab5931f4ec34c86ee21fddfc6db3af5b6532473d5873748ad8362068c5b9-kernel-devel-4.14.158-129.185.amzn2.x86_64.rpm
+c07bc23d267b42fc1c6e59435c05181fb1afef2758d1ef7ec2b7acad9f3d0897:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.9-300.fc34-x86_64-kernel-devel-5.12.9-300.fc34.x86_64.rpm
 c8e3f4fae84c5f274ddd39970574484b9f9802a629a0d3ac5f5ba7a5fb4594d0:
   type: cos
   packages:
@@ -13609,6 +14551,10 @@ c9d05d1f9fca2b75077205c83422a2ae7894c7d694c08f564e7c3c5323c08a3a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1093_4.15.0-1093.106-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1093-gcp_4.15.0-1093.106-16.04.1_amd64.deb
+c9d51f526afda904c084eb9a4ac4510c4175ceebaf62e36ada6af8fd9f544b76:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.8-200.fc33-x86_64-kernel-devel-5.12.8-200.fc33.x86_64.rpm
 c9b9461963200c8abc2c5bf1c259fc2a0f8e8dbd04bfa213328e5298bc289640:
   type: ubuntu
   packages:
@@ -13618,6 +14564,10 @@ c9eeb4afdec96522b743b6bc1bf76ccb68bfee907b99b54bc54e89377d646280:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-279.19.1.el6.x86_64.rpm
+c10fba445847192f782447f2aa4eb38d7b6403485487169a08fd4da18f4d309d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.11-100.fc32-x86_64-kernel-devel-5.10.11-100.fc32.x86_64.rpm
 c21a221bf7a35bb306bb2cf4e8c72c88d52a67b7816aa2677a9d41bad2972677:
   type: suse
   packages:
@@ -13674,6 +14624,10 @@ c43a97361587b5519c856cbb4ead8a22e8af27b4f11b7fdcf2bfc8d09bfdaad4:
   type: redhat
   packages:
   - http---vault.centos.org-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.4.3.el7.x86_64.rpm
+c45f5536b3316508ca52f001e8c5f3fd3c0a64734795c2e5139f90028386d2a3:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.12-200.fc34-x86_64-kernel-devel-5.13.12-200.fc34.x86_64.rpm
 c47cb06a268c4f2202cf3b8321d09ffeb9c935ef184a20c45be05f3195a07fd2:
   type: ubuntu
   packages:
@@ -13715,6 +14669,14 @@ c66d0c7a8ef4a83a30e30609e68b3524cec88d8913dd1da47dcc588796b2b2a3:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.29.2.el6.x86_64.rpm
+c66d68cc439b30d295d111de39e0586eb33d01e99dd750e136cc240250a88ba3:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.5-300.fc36-x86_64-kernel-devel-5.17.5-300.fc36.x86_64.rpm
+c67f88c6949f4afdeb9d44b0e4b02a8051914c697e68773303e907d276eee7ef:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.0-60.fc36-x86_64-kernel-devel-5.14.0-60.fc36.x86_64.rpm
 c70b1e070c8288f4552c46ef09ee0cf05cc81cdfec081f09f09487b6e74fcff3:
   type: redhat
   packages:
@@ -13758,6 +14720,10 @@ c97c9f6986919c62b80cb8ab385020fd46794b9edeec09d4ef4ed5416da454ec:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.13.0-1013_5.13.0-1013.16_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.13.0-1013-gcp_5.13.0-1013.16_amd64.deb
+c139a6dc7246fcfd4f471445340d81f1e0dc3c88974d048949978ebcedb50f54:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.15-201.fc32-x86_64-kernel-devel-5.8.15-201.fc32.x86_64.rpm
 c173a60128a5c5e48ecda9485038d73b6fa1b3878213ae8838cfb3a08fd0d20d:
   type: ubuntu
   packages:
@@ -13807,6 +14773,14 @@ c706ed70a1f039d09268425a9d421c82b3473114998cc9a887a49343a59c1f13:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-754.el6.x86_64.rpm
+c728a4b145c3cfc1f55e06425d4bfa82dff1c0e21107e8b81ea2e2391cf7c452:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.12-100.fc31-x86_64-kernel-devel-5.8.12-100.fc31.x86_64.rpm
+c766fe5b3c4c1c709cc0492ff03929b0f749e8b519df6a14e0d1bab24046d0a7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.19-300.fc34-x86_64-kernel-devel-5.12.19-300.fc34.x86_64.rpm
 c943e28d4808c44b6e87c1942ef097395452b4757e50971522ffde2578536aa9:
   type: redhat
   packages:
@@ -13830,6 +14804,10 @@ c1014c56470d162e91096feca36a6a26972f5b127a37f8a16174fccfde7718e1:
   packages:
   - https---storage.googleapis.com-cos-tools-12871.181.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.181.0-kernel-headers.tgz
+c1450ae3fefff11c0ac0cad633adc0635bfc852b7505c9e32870c6190032f3a5:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.21-100.fc32-x86_64-kernel-devel-5.11.21-100.fc32.x86_64.rpm
 c2670f37c52e8b54fe2c9d91f0a71ba418a0e0699af33fed595866f46169275e:
   type: redhat
   packages:
@@ -13842,6 +14820,10 @@ c4335a579fbeed922ea88ff35fe62630c92834ef2f57f15b3af6d3c3a928b53b:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-300a47581f742c2b6eab4a3e6527596ca603717525b4a857f83f9654d5b07319-download
+c5112db1a8736ea098ca6d1700b0a78896910a628bc7aaed343cb7ff15d8c0f3:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.0-60.fc36-x86_64-kernel-devel-5.15.0-60.fc36.x86_64.rpm
 c5880c415bda9f8499e842b1797b6568bcc2b92bae586c2452d192d9aed7b0a7:
   type: ubuntu
   packages:
@@ -13889,6 +14871,10 @@ c33607a03cd2ba838af6cf3b6ddfa46a053ea1d9670862a6d29d6d8d883ddd90:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.227-1.el7.elrepo.x86_64.rpm
+c40837e26df240dc85766b138ca4591074796f8191416f9288fb83320fdb949c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.8-100.fc33-x86_64-kernel-devel-5.13.8-100.fc33.x86_64.rpm
 c42269bd822e71a6b08e587b80c49301f0437c34447cd943b488e5af2bff62ec:
   type: redhat
   packages:
@@ -14126,6 +15112,10 @@ cbd48428d6a8854d621253dd21cce32989c2307aa83798cca594509864694fa1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-headers-5.3.0-1033-aws_5.3.0-1033.35_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-aws-5.3-headers-5.3.0-1033_5.3.0-1033.35_all.deb
+cbe15ba0fbe623810b31a5154554906fdd7823dbe00dbff7da4bee73b41a1cf7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.13-100.fc34-x86_64-kernel-devel-5.15.13-100.fc34.x86_64.rpm
 cbee2fe572d609db9e478770dae3062047c26bb07e1a2d613d17f9ccecaea0d0:
   type: ubuntu
   packages:
@@ -14154,6 +15144,10 @@ cc44cf2e89ac1389d93f6e5178b680e3c32c2016b9ce1cccaf07955b90bf95ec:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.7.2.el8_0.x86_64.rpm
+cc65d854b81ff850e3be533c083a28ad341b0cbaed210e6383d199e233af29d2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.10-100.fc33-x86_64-kernel-devel-5.13.10-100.fc33.x86_64.rpm
 cc86fa2a55732787614bfdddce46989a32d9bc3f88505b3ec4c180bab15382d9:
   type: cos
   packages:
@@ -14169,6 +15163,10 @@ cc710d6854a7be6b4b3ec5635ae1e31127d0573f9a8f5e4c6982c643e667f5ea:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1011-azure_4.18.0-1011.11-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1011_4.18.0-1011.11-18.04.1_all.deb
+cc32031a4cc0480be23fb65640ff420b72bdad8ab8277c9a3f22a38a5fcccf5b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.11-300.fc34-x86_64-kernel-devel-5.12.11-300.fc34.x86_64.rpm
 cc615641cd7a14bed71091d48a9cb838655adf13ef0981e206f8c9e0cda11974:
   type: redhat
   packages:
@@ -14212,6 +15210,10 @@ cd3c01d0d23bd5585c51fdb977984e90f160613087a88ec022a8d94704028fad:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.56.1.el7.x86_64.rpm
+cd6fc812fc075628334c39010de92e2d22ef2c8783db7f74de23785460f6c16a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.17-201.fc34-x86_64-kernel-devel-5.14.17-201.fc34.x86_64.rpm
 cd91c350f5466ae89bca67e1b1b0466e63e7eca1a9607c39263a8ee31dc7176e:
   type: redhat
   packages:
@@ -14225,6 +15227,10 @@ cd934e844f50170631dd1e89ac811d99cd0c364dc59a392f5e24cf9707e4c574:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.78.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.78.1.x86_64.rpm
+cd7434ffdd2b081c0462394e384d297966bfbb4a4c09ccaef9fb813cf87c6996:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.5-200.fc35-x86_64-kernel-devel-5.15.5-200.fc35.x86_64.rpm
 cd38470bb7a49735732adba4d3476274a454d37b3cbff18683d659e6db42c258:
   type: cos
   packages:
@@ -14249,6 +15255,10 @@ cdd7ca06dcea493ee1961dc25cf41f8c8cb0b0d9190d37a5120620e84c9b45f5:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.13.0-1014-aws_5.13.0-1014.15_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.13.0-1014_5.13.0-1014.15_all.deb
+cde2dec9c95a03d2e87404a67d49c7650c91d3e888d0f3bd2ddcc77079d25184:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.4-200.fc35-x86_64-kernel-devel-5.15.4-200.fc35.x86_64.rpm
 cdf1a1347390991c15f29936c95ef32dfbaf1ecb695fe1b3a71de75f2c14eded:
   type: redhat
   packages:
@@ -14361,6 +15371,10 @@ cf574f58613b7fb9d7f95f8d4a851c6142eaf0d9e7a78bf74d234ce4a726f9ea:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-194-generic_4.4.0-194.226_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-194_4.4.0-194.226_all.deb
+cf842af7e2a47c650662e0283f727e956679924509f076db036084e8fb13a8a8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.9-201.fc33-x86_64-kernel-devel-5.10.9-201.fc33.x86_64.rpm
 cf965a1cc8b977af978eb5defef4d234d87e27bec6ab7b71f35448cce2c77871:
   type: ubuntu
   packages:
@@ -14404,6 +15418,10 @@ d0a9c48ca146ec21647d71dd702e542eb33916ee65ab2fffc07adbfd71fe4bc9:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1122_4.15.0-1122.136-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1122-gcp_4.15.0-1122.136-16.04.1_amd64.deb
+d0b0043099f22b1b7b1086c0e922026474b6572181e30187c11378de0aa91f0d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.16-301.fc35-x86_64-kernel-devel-5.14.16-301.fc35.x86_64.rpm
 d1c04e4c4bae475a68e406467dab820569e39c26e02b141afccd47d6682cc16c:
   type: redhat
   packages:
@@ -14444,6 +15462,10 @@ d1ed1ab0efa093f9d769019d3c6e8dbfffb086eb516b152f426579a87549e1f9:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.43.1.el8_1.x86_64.rpm
+d1ff1b31574245bb1e90df5555e66b0e91109aa1a68d12dc3622ddccb0140fff:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.10-100.fc32-x86_64-kernel-devel-5.11.10-100.fc32.x86_64.rpm
 d2d3ed3c809f3464ec9d03a7f6dd4394132659980df1fabe15c71fe6c8fc3b54:
   type: ubuntu
   packages:
@@ -14464,6 +15486,10 @@ d2abf499e819376befb375a6cce978d551bf0b816bfebea8ccf6c45845e7565d:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1071-azure_5.4.0-1071.74_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1071_5.4.0-1071.74_all.deb
+d2cf3d152d397c7a392b277ded2b5fbdfa5d5280598fd7131502440679d4529f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.0-60.fc35-x86_64-kernel-devel-5.14.0-60.fc35.x86_64.rpm
 d02cffc47b98f096684c72dadd903203563b98da9b5cbd567a98a109b38e31a5:
   type: redhat
   packages:
@@ -14626,6 +15652,10 @@ d8d025792f458001897ad3cece54c8d042656de9e13cef1a413295aaafbc7c18:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.42.2.el7.x86_64.rpm
+d8b16602600a03cf33dd8ef4d75538d5fe55cf98013bcd5766cc233caca27897:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.12-300.fc33-x86_64-kernel-devel-5.8.12-300.fc33.x86_64.rpm
 d8ba49a7978f4af4939bdd4123b38fab910593b7280cd5b8eb8af3490e1dded4:
   type: ubuntu
   packages:
@@ -14673,6 +15703,10 @@ d9dc3034beaea5d618a812927e259726dbd12fcca8f349f1348d7e6b47c962dd:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-73-generic_5.4.0-73.82_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-73_5.4.0-73.82_all.deb
+d9cf9683c12926c0516801162b98e83fb1d7e14921e4ecf3accd9038fd1e026f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.8-200.fc33-x86_64-kernel-devel-5.11.8-200.fc33.x86_64.rpm
 d10e4d7a201b4ef538d602b74153f118b441a704ca7800017bb9b8fc8bee4217:
   type: suse
   packages:
@@ -14755,6 +15789,10 @@ d50e5889cd10a693926f1782eb6cf0192d3c39ed320dd80f268832889aba5c49:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1127.10.1.el7.x86_64.rpm
+d51ea3618b4aaced0622dd84dbf77567f29ce1a0dc28cad0d654b129f6827fd5:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.18-200.fc34-x86_64-kernel-devel-5.14.18-200.fc34.x86_64.rpm
 d56f9eadfb886a171dab11b579abc3475736a260635a747952b8a72f37f49f8f:
   type: ubuntu
   packages:
@@ -14784,6 +15822,10 @@ d60d7e3e82ca685d4f20588c60fb53651d638f78bc79b4f92e77b1ea226f9124:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.72.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.72.1.x86_64.rpm
+d62ec0281c1ce3653ebc6a5cbf1cb95c89753b35efedef7e3ae430a06450dee1:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.8-100.fc34-x86_64-kernel-devel-5.17.8-100.fc34.x86_64.rpm
 d64c3d16d5f3776abdc04aaf35ab1e95d9d4256c691c83c1279a426a17f59fda:
   type: redhat
   packages:
@@ -14802,6 +15844,10 @@ d70ad02e665e2401660b8f8e7fb44a8e4251ebb3227cc07d61c6f4205f7266ed:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1024-aws_5.4.0-1024.24_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1024_5.4.0-1024.24_all.deb
+d71e2714913bc286595e6300fa7050e72c07b8133c7ee70149224d6c86d81105:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.13-300.fc34-x86_64-kernel-devel-5.12.13-300.fc34.x86_64.rpm
 d76c1e6593e7c25397775932728bd11bf578c81b7159b7b755a39f22d47e97e4:
   type: cos
   packages:
@@ -14895,6 +15941,10 @@ d218c234f782d08c1a796ad5e96d1b4b7b5ebc0b1fad6c0b746ff3f8ff342840:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.10.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.10.1.x86_64.rpm
+d222b152df5b94baab99358812f20acd1f3a5035ffbb83b1bc7343b9aa81af47:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.0-36.fc34-x86_64-kernel-devel-5.9.0-36.fc34.x86_64.rpm
 d289e1007bba80e55c5920722273f24310ca92bebe30a541025e3a955250c4f4:
   type: redhat
   packages:
@@ -14913,6 +15963,10 @@ d444b1afa12d32f69f8dc7c7fbd353e7ceb48718c9c2b0ab12cc4e965946b696:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1138-azure_4.15.0-1138.151-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1138_4.15.0-1138.151-16.04.1_all.deb
+d468ae4488e9b7a0361f75711fc5dddce26009979196c7a33109b42dcfe892fb:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.10-200.fc34-x86_64-kernel-devel-5.14.10-200.fc34.x86_64.rpm
 d503ea493c9f0a4801efb066b37495df6bafa7cd33958999aacbd0824da466d4:
   type: redhat
   packages:
@@ -14966,6 +16020,10 @@ d1918bda77f3694a4eaef3d292377f6077ea8c4f1bcbd1d33a8513104a095811:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.166-1.el7.elrepo.x86_64.rpm
+d2132a09591c57cd7b946ae95bc58054d85a9d00b891acee1d0d87b07532bbd2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.21-100.fc32-x86_64-kernel-devel-5.10.21-100.fc32.x86_64.rpm
 d2319e9a0e3af75070622e7d8410462589ed109f8989dd2dfb9f106a04d3d73f:
   type: redhat
   packages:
@@ -14982,6 +16040,10 @@ d4216fa4e29a267c96bb6722f8fe87f39ba204ce02d03d41b3345188a068483c:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.200-1.el7.elrepo.x86_64.rpm
+d6278f226af0d0d01f8120cbf7c9a293059c007694320a02940f75fafb200908:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.7-100.fc32-x86_64-kernel-devel-5.10.7-100.fc32.x86_64.rpm
 d6519b2fe667425e6deed16d20e00f0fd2ebd22c3f372a0eeeda7b0abc30b585:
   type: cos
   packages:
@@ -14997,6 +16059,10 @@ d6829a2ed1b9e3b8aecfad2d5c63a019d8d9d4edd3195798b0f1542042231705:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.13.0-1005-aws_5.13.0-1005.6_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.13.0-1005_5.13.0-1005.6_all.deb
+d7904d8c637be792a4093ede950f622cd366c4f75194035a3731a83e56c415ee:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.0-300.fc36-x86_64-kernel-devel-5.17.0-300.fc36.x86_64.rpm
 d8223bade43f52dff3a40a69a35392bc6fbd8d7d265f60080e1c9d336a0fc50e:
   type: ubuntu
   packages:
@@ -15036,6 +16102,10 @@ d65702bd813094e18d581b5bb3bfe18fde3bef03a70cfff37b9d70763e7683b3:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-184-generic_4.4.0-184.214_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-184_4.4.0-184.214_all.deb
+d277326d16e90b04acebc77b59eeb6a85bfb2ca17ba0c8021d27e88a05acb72d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.15-100.fc32-x86_64-kernel-devel-5.11.15-100.fc32.x86_64.rpm
 d384524a05444704c66be72a230daabfd94dff7f832e27497d4914b02814f573:
   type: cos
   packages:
@@ -15069,6 +16139,10 @@ d04898029db0961dcfd1d20fd19183e94bff0b0808355a5b448779de7e756f6b:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1076-aws_4.15.0-1076.80_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1076_4.15.0-1076.80_all.deb
+d6343635e21c28e4d392ca0fd245d7ed7c856f4482bea21ad2cd7e9cdd3d7fef:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.15-100.fc33-x86_64-kernel-devel-5.14.15-100.fc33.x86_64.rpm
 d6684897c1c6bd06d1eb576d63c98cd5a38e00ab75723790a65e80937b6b96b6:
   type: cos
   packages:
@@ -15079,6 +16153,10 @@ d9261044c1d2c5b56e812f0a22287193b56762d1a9a752daee7bd261d5389ed8:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1025-azure_5.4.0-1025.25_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1025_5.4.0-1025.25_all.deb
+d28915134d0a84b1835e0b951ca5aa294b0c7bde44ffa6102d16fa6061e7b988:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.8-200.fc35-x86_64-kernel-devel-5.17.8-200.fc35.x86_64.rpm
 d5175204876d346502685f8624930f942fc500e13678b4fc85f174108401c046:
   type: redhat
   packages:
@@ -15092,6 +16170,10 @@ d54571289570a4b7ea08e43c3ca1a0a1bccc2eca7b5042ac55988981cec69431:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1035-aws_4.15.0-1035.37_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1035_4.15.0-1035.37_all.deb
+d551676610606bb32681815755cf40942f34343fe99de85ad78e6503d81dd416:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.9-200.fc35-x86_64-kernel-devel-5.17.9-200.fc35.x86_64.rpm
 d585371512580afffd5cb3e441083937b0c6ed080d985f1792d30d0e755ee62d:
   type: ubuntu
   packages:
@@ -15250,6 +16332,14 @@ dc5761bc58c7d024078424b83513570534d8af25ac04879fef9624ad09cd474f:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-gcp-5.3-headers-5.3.0-1012_5.3.0-1012.13-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-headers-5.3.0-1012-gcp_5.3.0-1012.13-18.04.1_amd64.deb
+dc84468e7bf6826cdc1db2bcad1c7bfb911e30206c3935c50338adc925c61225:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.2-200.fc35-x86_64-kernel-devel-5.17.2-200.fc35.x86_64.rpm
+dc649538f18e40450066c5dc6201b547af782a2309e8938afa18f08e7e7847ba:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.6-300.fc35-x86_64-kernel-devel-5.14.6-300.fc35.x86_64.rpm
 dc75620928e359f1d49075e11eeea4cd1f105d493943b1fe79b5464155c5330f:
   type: suse
   packages:
@@ -15264,6 +16354,10 @@ dcad002c9b2201bcf016d536cbe68e386f933785da5936f201a2b1119adf82f2:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.27.1.el8_1.x86_64.rpm
+dcc75f6513ec2136b0329e0a9e88bd5e1ff1ef4524e6e3405e8c4e7848c68e36:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.12-100.fc32-x86_64-kernel-devel-5.10.12-100.fc32.x86_64.rpm
 dce37efe662279c3cceeae95c92ddc0ff9996c8d10f894618a72af7c17aba2a0:
   type: redhat
   packages:
@@ -15276,6 +16370,10 @@ dcfcd13b3b635754bc3d90e1fafac7b955845a36755e19ff303682ef7f9b7099:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.161-1.el7.elrepo.x86_64.rpm
+dcfec66f0ce68d72a2b65a97f1344443c674a01ae983d9b3261f7b978c051ce2:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.14-100.fc34-x86_64-kernel-devel-5.16.14-100.fc34.x86_64.rpm
 dd4c8f3b15fdef70513cec5bff51edb47c66228477475f0179b93035e6296e9f:
   type: ubuntu
   packages:
@@ -15371,6 +16469,10 @@ de4daf26f540f1e51934fd59d56b9f2f48049ec82947da3d22c2c70ba5b2b195:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.131-1.el7.elrepo.x86_64.rpm
+de5a3a517f3bda6ee3654c9dc93d29eab0bbc64ce8d51675cc7ae4486eb705ac:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.19-100.fc32-x86_64-kernel-devel-5.11.19-100.fc32.x86_64.rpm
 de6e9f4dbcbc68455c376b007b1970a94b178f05d3438ad4b0ee84f1a463bff1:
   type: cos
   packages:
@@ -15410,6 +16512,10 @@ de6886e114cfa5f03f35bc5fa26c4766441ac366e40c5f7b1b1499eff7279b87:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-edge-linux-gcp-headers-5.0.0-1013_5.0.0-1013.13-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-edge-linux-headers-5.0.0-1013-gcp_5.0.0-1013.13-18.04.1_amd64.deb
+de6924f7a9bd4a664672996e2b47d5a5a8c22393fc21075b966cf2f68d016c07:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.17-200.fc35-x86_64-kernel-devel-5.15.17-200.fc35.x86_64.rpm
 de7047baabfc2c705bd0c2f7ecaa3ef96999d0ae03d81f906ad297eebee67823:
   type: suse
   packages:
@@ -15550,11 +16656,19 @@ e0b4ccd19abd5384286458df038cf11482677c57060ff9fba54f3c51203d6e0f:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1040-aws_4.15.0-1040.42_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1040_4.15.0-1040.42_all.deb
+e0e6ddc96dc2c18874152290b9f4ab87f52528d61f9753f4e363ee405264a6a4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.13-100.fc34-x86_64-kernel-devel-5.16.13-100.fc34.x86_64.rpm
 e0c074f743f00fdace841dfdbd07d7420047185b26277ae697d8d2592801cba1:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1027-gke_4.4.0-1027.27_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1027_4.4.0-1027.27_all.deb
+e0f599445226be74a10a70145a6d663c3a6cc5b8d56c636e5da6f253bb1d325a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.14-200.fc33-x86_64-kernel-devel-5.9.14-200.fc33.x86_64.rpm
 e0dd7a4d4261d7c00dd3d42297cdaa824302598eea47614157562d2d6d09bbf6:
   type: ubuntu
   packages:
@@ -15629,6 +16743,10 @@ e3a5f3076c0690523f1fc184b2644784feead02484853ab88731392295ea5945:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.37.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.37.1.x86_64.rpm
+e3e98d8243e82c6f0aa2374d0bfaa2c99766be7c8f5f7dd27ad8676ad7e176a4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.17-100.fc32-x86_64-kernel-devel-5.11.17-100.fc32.x86_64.rpm
 e3c498fc7b831a6fe36204e5e09151da092cc82234a0323a052f765f8a81db1e:
   type: redhat
   packages:
@@ -15680,6 +16798,10 @@ e6c9d42c95d5d9601d5022ba2fc6b9a289c7715cacf4e87d58e0efd2fd3e2739:
   packages:
   - https---storage.googleapis.com-cos-tools-16108.403.51-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.403.51-kernel-headers.tgz
+e6f1102b409d78e1d25068267fc1cfea20f2e524ab07141379b8521f53201826:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.21-200.fc33-x86_64-kernel-devel-5.11.21-200.fc33.x86_64.rpm
 e7c2e632803190a2032b5cbda7d64a6feced40cbc01ec8fd760d4a8dc7a53e86:
   type: suse
   packages:
@@ -15709,14 +16831,26 @@ e7c920490c288cc7ffbf7862fb237d6d342afe7d45d1158de3c23c6720e400ca:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.120-1.el7.elrepo.x86_64.rpm
+e7d7203928adeab565e1888f5617f38e18e1462113e294d1d430c18155b77540:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.8-200.fc33-x86_64-kernel-devel-5.10.8-200.fc33.x86_64.rpm
 e7ef5a320482b6b514aeb66c0fa7944b775cf038fdd9538dc64f334dcb5d2900:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.148-1.el7.elrepo.x86_64.rpm
+e07a517eaafccce15685c5706b2dff7b83a2670a797b84a5586cc1ec47bf2d14:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.4-200.fc35-x86_64-kernel-devel-5.17.4-200.fc35.x86_64.rpm
 e8c4bcc3ff0a727e132dc49b1d1eed0ed30f6ce1b94cd7f8ae12811a3fc4925a:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-229.14.1.el7.x86_64.rpm
+e8f90fd29dece32ce7a3438ceb5d26f762f4725f3ea3b694a168f396ced8710a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.6-101.fc31-x86_64-kernel-devel-5.8.6-101.fc31.x86_64.rpm
 e08a79a1c6f74453452b3ab7bb23a08023d5586533441aaffd19ec3af3c989a1:
   type: ubuntu
   packages:
@@ -15927,6 +17061,10 @@ e96ca5c95787d5f02a9463c0f1f830aadeceef27267bbfd9be634a8faabd55a6:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.41.1.el7.x86_64.rpm
+e112aeec9cc04e9ee132ea1b8a301d6851212481df43c6dc98164688a1987bf8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.15-100.fc34-x86_64-kernel-devel-5.15.15-100.fc34.x86_64.rpm
 e167bdce18c10ff998a021d61af13774cdb365f856ae1e899399bb100eb31fc4:
   type: redhat
   packages:
@@ -15940,6 +17078,14 @@ e240fbf39bb4d644a1d517a32157e84efbdb48031b141b58661441a9967baa28:
   packages:
   - https---storage.googleapis.com-cos-tools-12477.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12477.0.0-kernel-headers.tgz
+e310be9f2e7c49e7c8296c7dc56a848cf32d84df978e4f20da2fee68bfb84c0b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.11-200.fc33-x86_64-kernel-devel-5.11.11-200.fc33.x86_64.rpm
+e374c9a6f1e5e1c0be528c0d1b60f96435457ed59895eaae431b8b495bc6dc79:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.5-300.fc34-x86_64-kernel-devel-5.12.5-300.fc34.x86_64.rpm
 e488dba288ce0b0e29c8cbb6bfb20f36610ba6bd563b60cda94e61f6cf187416:
   type: redhat
   packages:
@@ -16053,6 +17199,10 @@ e8003ae70b6ce4fb3e38139332ad398479d0e7b508e49f323674d50d7eecd5a2:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-52-generic_4.15.0-52.56_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-52_4.15.0-52.56_all.deb
+e8204e9014956d269fa0e6b8929657269b654125afb1f26eafacbfbc8bc3d4b3:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.0-156.fc34-x86_64-kernel-devel-5.11.0-156.fc34.x86_64.rpm
 e008228a32b41d66cd18868bd5701dfbd3a07458f18a39d4c2505184e13ba323:
   type: debian
   packages:
@@ -16189,6 +17339,10 @@ e5501739830e417f4a2c36a64e644faa2418f38c6b27f65a285f14ecf5657150:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.44.1.el8_1.x86_64.rpm
+e031740037891b645a8651d73bb9ca76e8521a2553a7ecc717be6635e891c79d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.6-100.fc34-x86_64-kernel-devel-5.17.6-100.fc34.x86_64.rpm
 ea0a880e0f7993e666fd8c2f58c92f0f785a7105b4869cce00b97f36e1376547:
   type: redhat
   packages:
@@ -16198,6 +17352,10 @@ ea2a7bdb2d980596fde506202afd1e4b28243e1355af6b65ae6a291a50b02189:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1111_4.15.0-1111.125-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1111-gcp_4.15.0-1111.125-16.04.1_amd64.deb
+ea04b74ac3a387f72d21a2e6ab892dad78635816aa537078b0bf85b0226123c1:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.15-200.fc33-x86_64-kernel-devel-5.12.15-200.fc33.x86_64.rpm
 ea6aa85de498fc9796b1e9c6f9b2abb7660098ddc50dc549157aa1343d0a9b2b:
   type: ubuntu
   packages:
@@ -16326,11 +17484,27 @@ ebdb6f5f7442d34efbe2b313e2fe94403d45a69579d0db29181fbea1c6e56994:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.11-linux-gcp-5.11-headers-5.11.0-1017_5.11.0-1017.19-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.11-linux-headers-5.11.0-1017-gcp_5.11.0-1017.19-20.04.1_amd64.deb
+ebf8462410521a09c1bf9212098e96e54fb37f10fe2c7a817d793d30dadc7245:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.21-300.fc34-x86_64-kernel-devel-5.11.21-300.fc34.x86_64.rpm
+ec0d478f0428ebf0191c23f8da8cb609c088cf242711e7a1948ec54677be981b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.11-100.fc31-x86_64-kernel-devel-5.8.11-100.fc31.x86_64.rpm
+ec7e24c2a0aa1b8b9bb6ec13c0af15a11ff18f8ff6d6fb1bb5288868d481d5c4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.12-200.fc33-x86_64-kernel-devel-5.12.12-200.fc33.x86_64.rpm
 ec8cc43367e14f87ab845d4ae52509e95e1cb6132ab1e13e55c4578132ad7436:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-headers-5.3.0-1020-azure_5.3.0-1020.21-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-azure-5.3-headers-5.3.0-1020_5.3.0-1020.21-18.04.1_all.deb
+ec53dcaad92b8c8d2f7926e02900f29a1d7f5acbcdab94b98c878ebe83a0df6e:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.12-200.fc33-x86_64-kernel-devel-5.9.12-200.fc33.x86_64.rpm
 ec62f1a0b55838361a3c59383059e74b496f9af3c9ace40031ecff2c4c3ab1ed:
   type: ubuntu
   packages:
@@ -16382,6 +17556,10 @@ ecebbc29ec8320e61c6c0f687c6694b7c6e46e50eba6aedb33d7c20d13c31c95:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1022-aws_4.4.0-1022.31_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1022_4.4.0-1022.31_all.deb
+ecf013ea4b6b131d0a995259f892810c3ec25e010fbba095a7b8966bd2b201c0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.17-301.fc35-x86_64-kernel-devel-5.14.17-301.fc35.x86_64.rpm
 ecf067377e8c142b43bce3392eb1d41e746cc98025eedc640d1fdec75359631d:
   type: cos
   packages:
@@ -16419,6 +17597,14 @@ ed89cb1bf679faceb9d793f64d6a60bdd96d6212ab1b9ce3b28a36fe2b65331a:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10323.91.0-kernel-src.tar.gz
+ed530af509c755f0b0537065b296ab55404e00c2b5538725923e294d2ba9f898:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.6-200.fc34-x86_64-kernel-devel-5.13.6-200.fc34.x86_64.rpm
+ed562e84f890b64119e865e9da16b3c6407ce34ce1ed700e5b3ce96d8555850c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.10-300.fc33-x86_64-kernel-devel-5.8.10-300.fc33.x86_64.rpm
 ed894c41c602746463240eecfbae51618aad583d4733157db53e16c5211c6478:
   type: redhat
   packages:
@@ -16532,6 +17718,10 @@ ef99f20b2587df67097f54cc5bf4d2be4da4929a6e592f5aa6f4001977c53ebe:
   packages:
   - https---storage.googleapis.com-cos-tools-16623.102.23-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.102.23-kernel-headers.tgz
+ef14654d03771ddffe50dd0b34ea4a7e5b7b31138b461ee1b08eedb5463255f3:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.2-300.fc33-x86_64-kernel-devel-5.8.2-300.fc33.x86_64.rpm
 ef2199342cfc65bc5ccac8336b6c8e5a6819fbd4de2e7b61ee456295ab451f46:
   type: ubuntu
   packages:
@@ -16562,6 +17752,10 @@ efd76e174db49170ef2dc34db83177a2dc0141d3d2b18324390b556fcd334977:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-327.3.1.el7.x86_64.rpm
+efef1317504d5555e6883515250da283ded8f3c6d91c950ce5957c3fb5caec64:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.0-128.fc37-x86_64-kernel-devel-5.17.0-128.fc37.x86_64.rpm
 eff7be05f973fb10a405f6c3f67b1a45a9b15934a64e63f3e56aec3f9ce967d9:
   type: cos
   packages:
@@ -16672,10 +17866,18 @@ f3a570df6a34bb1808bc709fe25f13e708dd783092d4e1838758d06afd3e4f9c:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.8.1.el8_1.x86_64.rpm
+f3df64dc2158ab87ef44111be3a14ecb4e71d8f55d13fdea44e38c3182b8d7b9:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.14-200.fc35-x86_64-kernel-devel-5.16.14-200.fc35.x86_64.rpm
 f4d3c0c88720ce9e4c30d9808bec6929651e6b6362e08d275b1d77fb85a1edda:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-4e132936b401f4ef8ea509ed1325072724059e6443b9744efc067d5dcfeaf997-download
+f4d7bbcb745566cefe7d22dde998292c56193c9598e4513c7c54c5e6bc214443:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.7-200.fc35-x86_64-kernel-devel-5.17.7-200.fc35.x86_64.rpm
 f4d8fcf84c358e98103c9106527f0767b8a719b8f87912e3a88af2e9aa810af0:
   type: ubuntu
   packages:
@@ -16723,10 +17925,18 @@ f5c4d0eda0c467ac78ea94a292a929a989fd1a20c3b2318f6daa4d327b29ddb2:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.11.0-1022-aws_5.11.0-1022.23_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.11.0-1022_5.11.0-1022.23_all.deb
+f5f9b4e22ac3d2ed562793769334495992b16cf935489a8119945ac30ca0dd8e:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.16-201.fc34-x86_64-kernel-devel-5.14.16-201.fc34.x86_64.rpm
 f5e9b512671b0d40d4e7f391ad0df62f4449e70f5e70333583912cb92c9041d8:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2079.3.0-coreos_developer_container.bin.bz2
+f5e9df0ed1020595bb1ef69d884499218324aa7156a6788ac06425af554fae87:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.10-300.fc34-x86_64-kernel-devel-5.11.10-300.fc34.x86_64.rpm
 f5c87a78ce04537e3191742422c72d02a0942a573f358e2bdf822f34c090ba0e:
   type: cos
   packages:
@@ -16787,6 +17997,10 @@ f7c664ba0017fead01f74cba9260b0f80aaffc54778241456e7c3189d271077b:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-9dfb76e3a53f107234612fc2820b9a7d74d0605bd7da87986def920e856b23d6-download
+f7e3577b1d4a507429d2f771839b5c8e1b18c5c982a1d407294fc671f74ee768:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.7-100.fc34-x86_64-kernel-devel-5.15.7-100.fc34.x86_64.rpm
 f7c6690a614ff0c9cdfd016cde81a442aafb05d51537607391027860324cd4e6:
   type: redhat
   packages:
@@ -16869,11 +18083,19 @@ f9bda1f07ff8c739db8e4ba36c77c96199c21353601eadf47c1b2fe4deee79f7:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.113.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.113.1.x86_64.rpm
+f10ed7664389bb42e9a0a27a4792dc56eda2e36719f13e5551ab9e21939d06ac:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.6-300.fc36-x86_64-kernel-devel-5.17.6-300.fc36.x86_64.rpm
 f10feec86f25c8f601398f72cf2c370de1c403a3259fa96e3d3bb74f815edf8d:
   type: ubuntu
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1130-azure_4.15.0-1130.143_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1130_4.15.0-1130.143_all.deb
+f14d69ad66fe74584895db556c09d96d7aeb940c81727fba6ef968bacabbb399:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.2-300.fc36-x86_64-kernel-devel-5.17.2-300.fc36.x86_64.rpm
 f15e42158ecf42787f9282330dcf243ee6e3f7de6fe3b2e68945e0e9d8e803b8:
   type: ubuntu
   packages:
@@ -16898,6 +18120,10 @@ f24fcaec5d38c44de1b0a251ba152c517af7940d7e76bfdaaba77f073f4f602a:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10884.0.0-kernel-src.tar.gz
+f25e61e3974ae9d82172b5bacbc773853c0eabe68475a5e42c7cace08f234874:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.15-201.fc35-x86_64-kernel-devel-5.16.15-201.fc35.x86_64.rpm
 f27e0c7e4b1dba2a3bf2b9b92438685aada55ce60399db4cada928557b456a30:
   type: coreos
   packages:
@@ -17021,6 +18247,10 @@ f79ee3f680374da1b9daf6bbb5d80a7b4f98dfb008837861da17be70c41731fd:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1083-azure_4.15.0-1083.93_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1083_4.15.0-1083.93_all.deb
+f81c9a094befff55a1a6cc5b45396b6a9ca9bc297c63b182ee2a256c19e63553:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.10-100.fc31-x86_64-kernel-devel-5.8.10-100.fc31.x86_64.rpm
 f84b0e891197e3c8b6e76262efe9ee6927994eac5449d80571330c0c4eb712fb:
   type: redhat
   packages:
@@ -17044,11 +18274,19 @@ f96e1963165c4efeebbba18ee401959760420a30eadf13a5520a666b45f327a9:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1037_5.0.0-1037.38_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1037-gke_5.0.0-1037.38_amd64.deb
+f117e3aee611810aa14c42457186df62382d09ef6a6d7d0a01a4b0bb71291c73:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.6-200.fc33-x86_64-kernel-devel-5.12.6-200.fc33.x86_64.rpm
 f237c53ee309ce3e31a1cf346f4363abfb17211315e8548cf2906aea2dcf58fc:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1041.161-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1041.161-kernel-headers.tgz
+f0242ab9d1fe643bcced323cd5a9d5d81c429f3f30088a00a6410407a3ebd50d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.5-200.fc34-x86_64-kernel-devel-5.13.5-200.fc34.x86_64.rpm
 f244ad010fd9840bac8607ea69e87015e02983e257f1a07cd02ad6963fd81405:
   type: cos
   packages:
@@ -17201,6 +18439,14 @@ f57036e132fe71f4ab310ad4611a2630b2bc3eb382dd5b393beffa6d9cc0f5a7:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1007-aws_4.15.0-1007.7_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1007_4.15.0-1007.7_all.deb
+f66567bb067203b04176d108f03f6afb707a98907a3dda76bb14700c7bdd2c56:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.16-100.fc31-x86_64-kernel-devel-5.8.16-100.fc31.x86_64.rpm
+f83862ef3e9fea49e73991d218fa4542da6d61b67148b47401fbbeaf319171b4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.12-200.fc33-x86_64-kernel-devel-5.10.12-200.fc33.x86_64.rpm
 f88643b9b395550aa5070bbec9b0c00bbc4b6987e24ed471873b18ce0ef7b1f6:
   type: redhat
   packages:
@@ -17233,6 +18479,10 @@ f743747da1e898883b144f076f71fcf62fa6f0e5e5f893e858978a607733c8ea:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1071_5.4.0-1071.76_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1071-gcp_5.4.0-1071.76_amd64.deb
+f799867a2a4f8942e4d7df849447268f67170fa729e9fb7eef9eb58442649449:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.10-300.fc34-x86_64-kernel-devel-5.12.10-300.fc34.x86_64.rpm
 f884118d630ebe8d3c60bb43d2b3e1a6eaec9e016df84a16021a1bc2b1770bd4:
   type: ubuntu
   packages:
@@ -17286,6 +18536,10 @@ fa2b65988bdda8854656ba17f331ca53a75acafb77bdcfba9d20969f4cef0f06:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1060-aws_5.4.0-1060.63_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1060_5.4.0-1060.63_all.deb
+fa7c05198c9aa55fc051e7c10b354f3ccb1aef114316dc8dc2729c352dceed55:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.5-100.fc33-x86_64-kernel-devel-5.13.5-100.fc33.x86_64.rpm
 fa14a4c70258615a732a16fb354252fead056d6be4368060dda104c36cf51a6d:
   type: ubuntu
   packages:
@@ -17353,11 +18607,19 @@ fb2c3114901279f3580c3c167155be7d3a839151c68e0a1086ac2b6c15cf1216:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1094_4.15.0-1094.107-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1094-gcp_4.15.0-1094.107-16.04.1_amd64.deb
+fb2ab971d10cf64caa744774a790e3e446b196994159da8914138ff7e9cabdf0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.15-100.fc34-x86_64-kernel-devel-5.16.15-100.fc34.x86_64.rpm
 fb5dcb0e9d911a13b4d3312c8988800c01a94aa4992372dd51f1ba6bac371f96:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-11647.90.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.90.0-kernel-headers.tgz
+fb9e84169713d16319e9656a92089a44d5e10db51462bb0a131d44e03b21af73:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.16-100.fc34-x86_64-kernel-devel-5.15.16-100.fc34.x86_64.rpm
 fb18e79f9f920320c74f47169c4c29eab24c9233e64f291bcae2b6e60e4d88cb:
   type: redhat
   packages:
@@ -17385,6 +18647,10 @@ fbd8c4fcbe184a4f99489a7db5b9c79a91e39cbb6fdcc14461d6d83747d5978e:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10385.0.0-kernel-src.tar.gz
+fbf20a07e180c85eb7fd1c4aa1c073407ad26a3321f92c4185711deeae9e493a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.16-200.fc33-x86_64-kernel-devel-5.10.16-200.fc33.x86_64.rpm
 fbf183b3e8455f9fd8cec4cabda36fd9f57ac6cd57443814af8b0d058fffe2e2:
   type: redhat
   packages:
@@ -17421,11 +18687,19 @@ fc761f4e68599f04252bffa2c8ce9575c3dd7800c55da41dc2cbf61a1e5f6bb0:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1018-aws_5.4.0-1018.18_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1018_5.4.0-1018.18_all.deb
+fc66644da8881a1e3825dce4c8da88055d6b6c4a7cd1679d699bbfbf7c1852f6:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.17-300.fc33-x86_64-kernel-devel-5.8.17-300.fc33.x86_64.rpm
 fca2ac761b1b49b27d9e649f3d536c6314b1c6ddd2def35f6c95fb63e9bf265d:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-12688.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12688.0.0-kernel-headers.tgz
+fca629d9019088d3a30e39da8f45b2a31e8175ff5d4c0b884f28e7b900f75496:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.13-200.fc33-x86_64-kernel-devel-5.11.13-200.fc33.x86_64.rpm
 fccd09a56b6978da4d9a004f332e5d4c0ac82cd9e87b649aa8eed7511f55afcf:
   type: ubuntu
   packages:
@@ -17435,6 +18709,10 @@ fcd298e2a75c348ee68a6a3cd87def321fcb5c0714a39013f0eaff9407bd1110:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-f409be3f2eb1230b00a727d994ed025ef69fdaab1be2bd98d5d2ebdc6baf4307-download
+fcda0679871507a7ee9e2996bdae73a57bc5af75fcc4e799e65a16bbe0f3195e:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.3-300.fc34-x86_64-kernel-devel-5.11.3-300.fc34.x86_64.rpm
 fcdb67f8e11b5919dd7f612be8ac5eace04163039a533df6c34405e34249df29:
   type: cos
   packages:
@@ -17505,6 +18783,10 @@ fdac6e26215440dc47939294d41e69495dfb2d255cdc5254ecdaf767167b6537:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1023-fips_4.4.0-1023.28_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1023_4.4.0-1023.28_all.deb
+fdb9d54f75543b320d1bb28898a628e00dae906af9837a99e886d80bb3d26b2c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.17-200.fc32-x86_64-kernel-devel-5.8.17-200.fc32.x86_64.rpm
 fdbaef2d9b16462d07ddfdd0c0518881027b249b14506c8247f11b1d2dbfa15f:
   type: redhat
   packages:
@@ -17628,6 +18910,10 @@ ffbeeacf4866dbc419cba6d1b8696f714e87ed5babd19bf16ad72bbed1d456bb:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1099-aws_4.15.0-1099.106_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1099_4.15.0-1099.106_all.deb
+fff1ac2edb946fe1c3c962b29121eaea5ebb992be7db31ba58c4b4814f9845b0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.14-300.fc35-x86_64-kernel-devel-5.14.14-300.fc35.x86_64.rpm
 fffddc6d1bc9a54c7a51733265f275d2dda132bd5f31db105f67ead4573e5c8f:
   type: redhat
   packages:
