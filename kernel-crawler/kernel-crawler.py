@@ -277,7 +277,7 @@ repos = {
     ],
     "Docker-Desktop": [
         {
-            "root": "https://docs.docker.com/desktop/mac/release-notes/",
+            "root": "https://docs.docker.com/desktop/release-notes/",
             "download_root": "",
             "discovery_pattern": "",
             "page_pattern": "/html/body//a[regex:test(@href, '^https://desktop.docker.com/mac/main/(?!arm64).*/Docker.dmg.*$')]/@href",
@@ -285,7 +285,7 @@ repos = {
             "exclude_patterns": docker_desktop_excludes,
         },
         {
-            "root": "https://docs.docker.com/desktop/mac/release-notes/3.x/",
+            "root": "https://docs.docker.com/desktop/previous-versions/3.x-mac/",
             "download_root": "",
             "discovery_pattern": "",
             "page_pattern": "/html/body//a[regex:test(@href, '^https://desktop.docker.com/mac/stable/(?!arm64).*/Docker.dmg.*$')]/@href",
