@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+# Inspired by the implementation from CircleCI gcp-cli-orb
+# https://github.com/CircleCI-Public/gcp-cli-orb
+
 GOOGLE_CLOUD_SDK_VERSION=383.0.0
 
 install () {
