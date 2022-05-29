@@ -2196,10 +2196,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-358.2.1.el6.x86_64.rpm
-4c686154fa775daeefd262baedc3b1be538f7f5d29649fa856cd2d687baa5a88:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.1-flatcar_developer_container.bin.bz2
 4c763746ac40dbb660b59a9d851170126a473048dc41fdda8864638a6b0e7389:
   type: ubuntu
   packages:
@@ -4524,10 +4520,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9f388164ea775e7a6c36c8628bb9a66a47d9fe27c99e732a210f357e1213dda7-kernel-devel-4.14.77-86.82.amzn2.x86_64.rpm
-9c222fdb45522b7285e5e7957ef2e38beaf317667b0d76d00aa960247c42cd28:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.0-flatcar_developer_container.bin.bz2
 9d287faa1356323929f9a55c004db7a42cd372eb6e2c064a119ac77e5d2cbd1f:
   type: ubuntu
   packages:
@@ -8763,6 +8755,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53-generic_4.4.0-53.74_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53_4.4.0-53.74_all.deb
+657e47a5a57124a0fc46ccb5c8b5834e7fa48e56d53f54e9e342540c09d83184:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.2-flatcar_developer_container.bin.bz2
 660a0764b101c3bdf2db3cd4c4a336cdf05205316cf557cc789ef7e69f49934b:
   type: ubuntu
   packages:
@@ -13649,6 +13645,10 @@ b4ae0e5cc689ff8560ff462088ffb8273d0b26064eb4341e92739af3c3df8879:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1061_5.4.0-1061.64_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1061-gke_5.4.0-1061.64_amd64.deb
+b5c4c8f2323b911adcfc2ffae924137e521228838039a90fba1b61befa3e0af2:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2905.2.3-flatcar_developer_container.bin.bz2
 b5b5cbe27756e0c491de305c3ba11096fe116b4e1d338d7842cd245c1784850e:
   type: redhat
   packages:
