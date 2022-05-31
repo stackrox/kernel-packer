@@ -4524,10 +4524,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9f388164ea775e7a6c36c8628bb9a66a47d9fe27c99e732a210f357e1213dda7-kernel-devel-4.14.77-86.82.amzn2.x86_64.rpm
-9c222fdb45522b7285e5e7957ef2e38beaf317667b0d76d00aa960247c42cd28:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.0-flatcar_developer_container.bin.bz2
 9d287faa1356323929f9a55c004db7a42cd372eb6e2c064a119ac77e5d2cbd1f:
   type: ubuntu
   packages:
@@ -9576,6 +9572,10 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.2.2.el7.x86_64.rpm
+3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -10014,6 +10014,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1048-fips_4.15.0-1048.55_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1048_4.15.0-1048.55_all.deb
+6748f7f32ca213376da67974f4f54b6eb36ec4ef30881c14cd0d3aed968f6a03:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.6.0-flatcar_developer_container.bin.bz2
 6786fb54ff0e2f6ecf508971593b81e9baea209f31bb71c00d86291f9f47b7f8:
   type: ubuntu
   packages:
@@ -17571,10 +17575,6 @@ e9236a218cf97b21f8309200b9c1253d1667d2863ed77f1fa445944c193c416d:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-6-6Server-x86_64-os-Packages-k-kernel-devel-2.6.32-696.10.1.el6.x86_64.rpm
-e15106ca84b7368f4e64921494812219f2fed7abec1804c438799ac5b3de6515:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.5.0-flatcar_developer_container.bin.bz2
 e15836ebd333f85658050de10714683f7e62926143af07d14e09f0668a9252b2:
   type: ubuntu
   packages:
