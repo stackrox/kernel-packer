@@ -3,6 +3,8 @@ set -eo pipefail
 
 which gcloud
 echo "Updating gcloud/gsutil ..."
+
+export CLOUDSDK_CONFIG=$(realpath gcloudconfig)
 gcloud config set core/disable_prompts True
 gcloud components install gsutil -q
 gcloud components update -q
@@ -12,4 +14,4 @@ gcloud auth list
 # Sanity check
 echo "Using gsutil from $(which gsutil)"
 echo "Checking that gsutil binary is functional"
-gsutil ls 'gs://stackrox-kernel-packages/' >/dev/null
+gsutil ls 'gs://stackrox-kernel-packages-test/' >/dev/null
