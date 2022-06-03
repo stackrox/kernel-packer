@@ -1,4 +1,4 @@
-FROM golang:1.16 AS build
+FROM registry.ci.openshift.org/openshift/release:golang-1.16 AS build
 
 COPY main.go /go/src/main.go
 
@@ -9,15 +9,9 @@ RUN wget "https://github.com/jinfeihan57/p7zip/archive/${p7zip}.tar.gz" \
  && mkdir p7zip && tar xzf "${p7zip}.tar.gz" -C p7zip --strip-components=1 \
  && cd p7zip && make -j 4 all3 && make install
 
-FROM python:3.7-slim
+FROM registry.ci.openshift.org/ocp/ubi-python-39:8
 
-RUN apt-get update \
- && apt-get install --no-install-recommends -y \
-    python3-lxml \
-    python3-urllib3 \
-    git \
- && rm -rf /var/lib/apt
-
+RUN dnf -y update && dnf clean all
 RUN pip install --no-cache-dir \
     lxml==4.2.4 urllib3==1.26.3 \
     requests==2.27.1 pyyaml==6.0
