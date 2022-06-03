@@ -5,9 +5,8 @@ COPY main.go /go/src/main.go
 RUN CGO_ENABLED=0 go build -o /go/bin/rhel-crawler /go/src/main.go
 
 ARG p7zip="v17.03"
-RUN wget "https://github.com/jinfeihan57/p7zip/archive/${p7zip}.tar.gz" \
- && mkdir p7zip && tar xzf "${p7zip}.tar.gz" -C p7zip --strip-components=1 \
- && cd p7zip && make -j 4 all3 && make install
+RUN wget "https://github.com/jinfeihan57/p7zip/releases/download/${p7zip}/linux-p7zip.zip" \
+ && mkdir p7zip && unzip "${p7zip}.tar.gz" -C p7zip --strip-components=1
 
 FROM registry.ci.openshift.org/ocp/ubi-python-39:8
 
@@ -22,7 +21,6 @@ COPY ["repo-crawler.py", "/"]
 COPY ["kope.io.asc", "/"]
 COPY ["docker-desktop-filter-kernels.sh", "/"]
 COPY --from=build /go/bin/rhel-crawler /usr/bin/rhel-crawler
-COPY --from=build /usr/local/bin/7z* /usr/local/bin/
-COPY --from=build /usr/local/lib/p7zip /usr/local/lib/p7zip
+COPY --from=build p7zip/7z* /usr/local/bin/
 
 ENTRYPOINT ["python3", "kernel-crawler.py"]
