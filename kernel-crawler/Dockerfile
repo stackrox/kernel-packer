@@ -11,8 +11,9 @@ RUN wget "https://github.com/jinfeihan57/p7zip/releases/download/${p7zip}/linux-
 FROM registry.access.redhat.com/ubi8/ubi:8.6
 
 RUN dnf -y update && \
-    dnf -y install \
-        python3
+    dnf -y install  \
+        python3     \
+        git
 
 RUN pip3 install --no-cache-dir \
     lxml==4.2.4 urllib3==1.26.3 \
