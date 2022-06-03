@@ -8,9 +8,13 @@ ARG p7zip="v17.03"
 RUN wget "https://github.com/jinfeihan57/p7zip/releases/download/${p7zip}/linux-p7zip.zip" \
  && mkdir p7zip && unzip linux-p7zip.zip -d p7zip
 
-FROM registry.ci.openshift.org/ocp/ubi-python-39:8
+FROM registry.access.redhat.com/ubi8/ubi:8.6
 
-RUN pip install --no-cache-dir \
+RUN dnf -y update && \
+    dnf -y install \
+        python3
+
+RUN pip3 install --no-cache-dir \
     lxml==4.2.4 urllib3==1.26.3 \
     requests==2.27.1 pyyaml==6.0
 
