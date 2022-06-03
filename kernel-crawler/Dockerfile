@@ -10,7 +10,6 @@ RUN wget "https://github.com/jinfeihan57/p7zip/releases/download/${p7zip}/linux-
 
 FROM registry.ci.openshift.org/ocp/ubi-python-39:8
 
-RUN dnf -y update && dnf clean all
 RUN pip install --no-cache-dir \
     lxml==4.2.4 urllib3==1.26.3 \
     requests==2.27.1 pyyaml==6.0
