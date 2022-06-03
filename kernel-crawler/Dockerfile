@@ -6,7 +6,7 @@ RUN CGO_ENABLED=0 go build -o /go/bin/rhel-crawler /go/src/main.go
 
 ARG p7zip="v17.03"
 RUN wget "https://github.com/jinfeihan57/p7zip/releases/download/${p7zip}/linux-p7zip.zip" \
- && mkdir p7zip && unzip "${p7zip}.tar.gz" -C p7zip --strip-components=1
+ && mkdir p7zip && unzip "${p7zip}.zip" -C p7zip --strip-components=1
 
 FROM registry.ci.openshift.org/ocp/ubi-python-39:8
 
