@@ -1,24 +1,22 @@
-FROM golang:1.16 AS build
+FROM registry.ci.openshift.org/openshift/release:golang-1.16 AS build
 
 COPY main.go /go/src/main.go
 
 RUN CGO_ENABLED=0 go build -o /go/bin/rhel-crawler /go/src/main.go
 
 ARG p7zip="v17.03"
-RUN wget "https://github.com/jinfeihan57/p7zip/archive/${p7zip}.tar.gz" \
- && mkdir p7zip && tar xzf "${p7zip}.tar.gz" -C p7zip --strip-components=1 \
- && cd p7zip && make -j 4 all3 && make install
+RUN wget "https://github.com/jinfeihan57/p7zip/releases/download/${p7zip}/linux-p7zip.zip" \
+ && mkdir p7zip && unzip linux-p7zip.zip -d p7zip && cp p7zip/7z* /usr/local/bin
 
-FROM python:3.7-slim
+FROM registry.access.redhat.com/ubi8/ubi:8.6
 
-RUN apt-get update \
- && apt-get install --no-install-recommends -y \
-    python3-lxml \
-    python3-urllib3 \
-    git \
- && rm -rf /var/lib/apt
+RUN dnf -y update && \
+    dnf -y install  \
+        python3     \
+        git         \
+        make
 
-RUN pip install --no-cache-dir \
+RUN pip3 install --no-cache-dir \
     lxml==4.2.4 urllib3==1.26.3 \
     requests==2.27.1 pyyaml==6.0
 
@@ -29,6 +27,5 @@ COPY ["kope.io.asc", "/"]
 COPY ["docker-desktop-filter-kernels.sh", "/"]
 COPY --from=build /go/bin/rhel-crawler /usr/bin/rhel-crawler
 COPY --from=build /usr/local/bin/7z* /usr/local/bin/
-COPY --from=build /usr/local/lib/p7zip /usr/local/lib/p7zip
 
 ENTRYPOINT ["python3", "kernel-crawler.py"]

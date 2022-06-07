@@ -20,9 +20,7 @@ export KERNEL_BUNDLE_STAGING_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET}"
 export KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_BUCKET}"
 export KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_BUCKET}"
 
-python3 /kernel-crawler.py crawl CentOS > /tmp/centos_urls_tmp.json
-
-if ! make -j -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+if ! make -j -k crawl-centos-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
     touch /tmp/crawl-failed
 fi
 
