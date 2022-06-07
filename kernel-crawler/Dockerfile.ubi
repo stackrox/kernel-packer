@@ -28,4 +28,7 @@ COPY ["docker-desktop-filter-kernels.sh", "/"]
 COPY --from=build /go/bin/rhel-crawler /usr/bin/rhel-crawler
 COPY --from=build /usr/local/bin/7z* /usr/local/bin/
 
+# RHEL crawler bits
+COPY rhel-subscription-crawler/ /rhel-subscription-crawler/
+
 ENTRYPOINT ["python3", "kernel-crawler.py"]
