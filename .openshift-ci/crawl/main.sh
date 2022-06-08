@@ -20,6 +20,9 @@ export KERNEL_BUNDLE_STAGING_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET}"
 export KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_BUCKET}"
 export KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_BUCKET}"
 
+.openshift-ci/google-cloud-sdk/install.sh
+.openshift-ci/google-cloud-sdk/init.sh
+
 if ! make -j -k crawl-centos-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
     touch /tmp/crawl-failed
 fi

@@ -14,7 +14,9 @@ RUN dnf -y update && \
     dnf -y install  \
         python3     \
         git         \
-        make
+        make        \
+        wget        \
+        jq
 
 RUN pip3 install --no-cache-dir \
     lxml==4.2.4 urllib3==1.26.3 \
