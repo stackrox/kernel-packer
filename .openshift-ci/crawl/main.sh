@@ -24,6 +24,9 @@ source .openshift-ci/env.sh
 source .openshift-ci/google-cloud-sdk/install.sh
 source .openshift-ci/google-cloud-sdk/init.sh
 
+# temporary clean-up package list to reduce crawling time
+rm kernel-package-lists/*
+
 if ! make -j -k crawl-centos-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
     touch /tmp/crawl-failed
 fi
