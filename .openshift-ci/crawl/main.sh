@@ -28,6 +28,6 @@ if ! make -j -k crawl-centos-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; th
     touch /tmp/crawl-failed
 fi
 
-./scripts/restore-removed
+#./scripts/restore-removed
 
 make sync
