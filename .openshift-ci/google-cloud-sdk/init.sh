@@ -14,4 +14,4 @@ gcloud auth list
 # Sanity check
 echo "Using gsutil from $(which gsutil)"
 echo "Checking that gsutil binary is functional"
-gsutil ls 'gs://stackrox-kernel-packages/' >/dev/null
+gsutil ls 'gs://stackrox-kernel-packages-test/' >/dev/null
