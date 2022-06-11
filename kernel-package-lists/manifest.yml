@@ -1275,10 +1275,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1032-aws_5.4.0-1032.33_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1032_5.4.0-1032.33_all.deb
-2ab8392ba9e22d7b8a7cc872491b6e97f4be6b9a0957add6964c997064f5d510:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.0-flatcar_developer_container.bin.bz2
 2cb75013935404b750c700bf318417379c5e6442f44c2f08f55aea4e2f399ea5:
   type: ubuntu
   packages:
@@ -6736,6 +6732,10 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.96.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.96.1.x86_64.rpm
+76b4480bfe8affcbccde1995aa64476211001c69ecea74466aa40c517984ea05:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.0-flatcar_developer_container.bin.bz2
 76dd689668e9fd810507fde2a43c2bc229e104e2db0b538c64feae54cf0206ba:
   type: redhat
   packages:
@@ -7736,10 +7736,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-62-generic_4.15.0-62.69_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-62_4.15.0-62.69_all.deb
-0251ea1488dfc243feac47548f81412043be87e01b9c4e1b1bfdc8fdc68d7343:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.6.0-flatcar_developer_container.bin.bz2
 252fe05cee1146df17c4b22e1f7c3ac798f35eb4dafd2bbb0ddca443da880723:
   type: ubuntu
   packages:
@@ -8489,10 +8485,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53-generic_4.4.0-53.74_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53_4.4.0-53.74_all.deb
-657e47a5a57124a0fc46ccb5c8b5834e7fa48e56d53f54e9e342540c09d83184:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.2-flatcar_developer_container.bin.bz2
 660a0764b101c3bdf2db3cd4c4a336cdf05205316cf557cc789ef7e69f49934b:
   type: ubuntu
   packages:
@@ -18268,6 +18260,10 @@ f93414d8ed82a16fc8f183916a55aa31c68ff1a26f2b7f1fc0f29d713e99a7f5:
   packages:
   - https---storage.googleapis.com-cos-tools-12371.175.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12371.175.0-kernel-headers.tgz
+f98071aeb3eaaed34563e3628bd98ee663bb57c415365848fe98dd5cd7f08cf6:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-361e3031d7a0657084986ffb601fd088be3bdee6abea3ef9afba646d9d7a788b-download
 f595073ec4571912b9c129ac32593373a69c2510ba1eeb73d7e409559d90b9d2:
   type: suse
   packages:
