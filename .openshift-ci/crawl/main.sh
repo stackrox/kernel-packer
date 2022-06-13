@@ -61,4 +61,4 @@ cp kernel-package-lists/manifest.yml ${ARTIFACT_DIR}/kernel-package-lists/manife
 
 # push changes
 echo $PULL_BASE_REF
-#make robo-crawl-commit
+make robo-crawl-commit
