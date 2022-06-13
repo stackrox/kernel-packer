@@ -26,7 +26,7 @@ source .openshift-ci/google-cloud-sdk/init.sh
 
 # temporary clean-up package list to reduce crawling time
 shopt -s extglob
-rm !(centos.txt|centos-uncrawled.txt|reformat.yml)
+rm kernel-package-lists/!(centos.txt|centos-uncrawled.txt|reformat.yml)
 
 if ! make -j -k crawl-centos-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
     touch /tmp/crawl-failed
