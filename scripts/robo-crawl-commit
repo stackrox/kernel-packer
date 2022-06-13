@@ -15,15 +15,20 @@ main() {
 
     echo "New crawled packages found!"
 
+    # At the moment there is no remote git repository set, we have to configure
+    # it first. Redirect to devnull so this doesn't print the value of the
+    # token on failure.
+    git remote add pushtarget https://roxbot:$GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
+
     # temporary test branch
-    git checkout -b crawl-test
+    git stash
+    git fetch --all
+    git checkout crawl-test
+    git stash pop
 
     # Create a commit with any modified files, and push it to GitHub.
     git add "$CRAWLED_PACKAGE_DIR"
     git -c "user.name=roxbot" -c "user.email=roxbot@stackrox.com" commit --message "🤖 Updated crawled packages"
-
-    # redirect to devnull so this doesn't print the value of the token on failure.
-    git remote add pushtarget https://roxbot:$GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
 
     # redirect to devnull so this doesn't print the value of the token on failure.
     # temporary test branch
