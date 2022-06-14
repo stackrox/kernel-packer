@@ -136,7 +136,6 @@ cp -r .build-data ${ARTIFACT_DIR}/build-data
 cp kernel-package-lists/manifest.yml ${ARTIFACT_DIR}/kernel-package-lists/manifest.yaml
 
 # push changes
-echo $PULL_BASE_REF
 BRANCH="$(echo "$JOB_SPEC" | jq -r '.extra_refs[0].base_ref')"
 
 if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ ]]; then

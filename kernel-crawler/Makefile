@@ -358,7 +358,7 @@ crawl-rhel-no-docker:
 	# Trade a username & password for a certificate keypair that allows up to
 	# authenticate with the RHEL package repos.
 	@mkdir -p $(BUILD_DATA_DIR)/rhel-certs
-	/rhel-login/entrypoint
+	sudo /rhel-login/entrypoint
 	| tar -C $(BUILD_DATA_DIR)/rhel-certs -xf -
 
 	# Crawl for RHEL 6 kernel-devel packages.
