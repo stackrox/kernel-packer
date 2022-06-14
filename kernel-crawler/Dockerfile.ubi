@@ -17,7 +17,8 @@ RUN dnf -y update && \
         make        \
         wget        \
         jq          \
-        go
+        go          \
+        sudo
 
 RUN pip3 install --no-cache-dir \
     lxml==4.2.4 urllib3==1.26.3 \
