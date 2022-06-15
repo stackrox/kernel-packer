@@ -26,7 +26,7 @@ source .openshift-ci/google-cloud-sdk/init.sh
 
 # temporary clean-up package list to reduce crawling time
 shopt -s extglob
-rm kernel-package-lists/!(centos.txt|centos-uncrawled.txt|rhel6.txt|rhel76-eus.txt|rhel7.txt|rhel81-eus.txt|rhel81.txt|rhel82-eus.txt|rhel82.txt|rhel84-eus.txt|rhel8-rhocp4.3.txt|rhel8-rhocp4.4.txt|rhel8-rhocp4.5.txt|rhel8.txt|reformat.yml)
+rm kernel-package-lists/!(centos.txt|centos-uncrawled.txt|rhel.txt|rhel-uncrawled.txt|reformat.yml)
 cat <<EOT > kernel-package-lists/reformat.yml
 - name: centos
   description: CentOS kernels
@@ -34,84 +34,19 @@ cat <<EOT > kernel-package-lists/reformat.yml
   file: centos.txt
   reformat: single
 
-- name: rhel6
-  description: RHEL 6 Kernels
+- name: rhel
+  description: RHEL
   type: redhat
-  file: rhel6.txt
+  file: rhel.txt
   reformat: single
 
-- name: rhel7
-  description: RHEL 7 Kernels
-  type: redhat
-  file: rhel7.txt
-  reformat: single
-
-- name: rhel76-eus
-  description: RHEL 7.6 EUS Kernels
-  type: redhat
-  file: rhel76-eus.txt
-  reformat: single
-
-- name: rhel8
-  description: RHEL 8 Kernels
-  type: redhat
-  file: rhel8.txt
-  reformat: single
-
-- name: rhel81
-  description: RHEL 8.1 Kernels
-  type: redhat
-  file: rhel81.txt
-  reformat: single
-
-- name: rhel82
-  description: RHEL 8.2 Kernels
-  type: redhat
-  file: rhel82.txt
-  reformat: single
-
-- name: rhel81-eus
-  description: RHEL 8.1 EUS Kernels
-  type: redhat
-  file: rhel81-eus.txt
-  reformat: single
-
-- name: rhel82-eus
-  description: RHEL 8.2 EUS Kernels
-  type: redhat
-  file: rhel82-eus.txt
-  reformat: single
-
-- name: rhel84-eus
-  description: RHEL 8.4 EUS Kernels
-  type: redhat
-  file: rhel84-eus.txt
-  reformat: single
-
-- name: rhel8-rhocp4.3
-  description: RHEL 8 OpenShift Container Platform 4.3
-  type: redhat
-  file: rhel8-rhocp4.3.txt
-  reformat: single
-
-- name: rhel8-rhocp4.4
-  description: RHEL 8 OpenShift Container Platform 4.4
-  type: redhat
-  file: rhel8-rhocp4.4.txt
-  reformat: single
-
-- name: rhel8-rhocp4.5
-  description: RHEL 8 OpenShift Container Platform 4.5
-  type: redhat
-  file: rhel8-rhocp4.5.txt
-  reformat: single
 EOT
 
 if ! make -j -k crawl-centos-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
     touch /tmp/crawl-failed
 fi
 
-if ! make -j -k crawl-rhel-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+if ! make -j -k crawl-rhsm-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
     touch /tmp/crawl-failed
 fi
 

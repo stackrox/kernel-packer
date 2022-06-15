@@ -222,6 +222,11 @@ crawl-rhsm: build-rhsm-crawler
 	docker run -e RHSM_OFFLINE_TOKEN --rm -i -v $(CRAWLED_PACKAGE_DIR):/kernel-package-lists:ro rhsm-crawler:latest > $(CRAWLED_PACKAGE_DIR)/rhel.txt
 	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
 
+.PHONY: crawl-rhsm-no-docker
+crawl-rhsm-no-docker:
+	/rhel-subscription-crawler/crawl.sh > $(CRAWLED_PACKAGE_DIR)/rhel.txt
+	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
+
 .PHONY: crawl-rhel
 crawl-rhel: build-crawl-container
 	# Trade a username & password for a certificate keypair that allows up to
