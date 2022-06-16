@@ -224,7 +224,8 @@ crawl-rhsm: build-rhsm-crawler
 
 .PHONY: crawl-rhsm-no-docker
 crawl-rhsm-no-docker:
-	/rhel-subscription-crawler/crawl.sh > $(CRAWLED_PACKAGE_DIR)/rhel.txt
+	ls $(CRAWLED_PACKAGE_DIR)/rhel.txt > "/tmp/rhel_package_lists.txt"
+	/rhel-subscription-crawler/crawl.sh /tmp/rhel_package_lists.txt > $(CRAWLED_PACKAGE_DIR)/rhel.txt
 	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
 
 .PHONY: crawl-rhel
