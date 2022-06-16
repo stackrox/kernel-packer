@@ -141,16 +141,6 @@ crawl-rhel: build-crawl-container
 		rhel-login:latest \
 	| tar -C $(BUILD_DATA_DIR)/rhel-certs -xf -
 
-	# Crawl for RHEL 6 kernel-devel packages.
-	docker run --rm \
-		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
-		--entrypoint /usr/bin/rhel-crawler \
-		kernel-crawler:latest \
-			-base-url https://cdn.redhat.com/content/dist/rhel/server/6/6Server/x86_64/os \
-			-cert /rhel-certs/rhel-cert.pem \
-			-key /rhel-certs/rhel-key.pem \
-		> $(CRAWLED_PACKAGE_DIR)/rhel6.txt
-
 	# Crawl for RHEL 7 kernel-devel packages.
 	docker run --rm \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
