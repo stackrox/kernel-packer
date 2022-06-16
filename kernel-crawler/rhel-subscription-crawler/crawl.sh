@@ -5,4 +5,4 @@ set -eou pipefail
 #ls /kernel-package-lists/rhel[0-9]*.txt > "$rhel_package_lists"
 
 #python crawler.py --all=true --rhelPackageLists "$rhel_package_lists"
-python crawler.py --all=true --rhelPackageLists "$1"
+python3 crawler.py --all=true --rhelPackageLists "$1"
