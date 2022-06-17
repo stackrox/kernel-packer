@@ -8769,6 +8769,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53-generic_4.4.0-53.74_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53_4.4.0-53.74_all.deb
+657e47a5a57124a0fc46ccb5c8b5834e7fa48e56d53f54e9e342540c09d83184:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.2-flatcar_developer_container.bin.bz2
 660a0764b101c3bdf2db3cd4c4a336cdf05205316cf557cc789ef7e69f49934b:
   type: ubuntu
   packages:
@@ -11298,6 +11302,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.82-1.el7.elrepo.x86_64.rpm
+473386c4315b476d2ef93468ccb8a8fdb23f5878e4927aa547aad110e1fc6d5f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1013-azure_5.15.0-1013.16-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1013_5.15.0-1013.16-20.04.1_all.deb
 486821e3c4da5063f3e512248ade03c5a31d6f5b3eb7e1c0a9388eccba45cb12:
   type: redhat
   packages:
@@ -11322,6 +11331,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-67-generic_4.4.0-67.88_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-67_4.4.0-67.88_all.deb
+550333ed8a3c6a3b3822d569ab5626930f53956551159756f7b4dfaacf819d8e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.18_5.18.5-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.18.0-2-cloud-amd64_5.18.5-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.18.0-2-common_5.18.5-1_all.deb
 566135ca73d79a22dccd6466a65371b0a41da3f4d8483810c070ad710701c7a8:
   type: redhat
   packages:
@@ -11451,6 +11466,11 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1298.7.0-coreos_developer_container.bin.bz2
+810250e9e69f4a3ff5d9e68d0fff317a54a6407e4805d36b5ffb01369ae17927:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.11-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-2-amd64_5.17.6-1-b1_amd64.deb
 818221c0d46d28e52c36942c875afadaa8531b50cfc6ed6f301346cf7f7bdd0e:
   type: ubuntu
   packages:
@@ -11608,6 +11628,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.13-linux-gcp-5.13-headers-5.13.0-1019_5.13.0-1019.23-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.13-linux-headers-5.13.0-1019-gcp_5.13.0-1019.23-20.04.1_amd64.deb
+2194447d3a1e41709a1717232e4f0b8d86ba810cceff7dab7f198e94c2feffc7:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.11-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-2-cloud-amd64_5.17.6-1-b1_amd64.deb
 2289001aee50f50a6dff7309d9d57f32b088191df290f140a68cc23b4caf6039:
   type: cos
   packages:
@@ -13569,6 +13594,11 @@ b02f0647a60b9fba5519c98f9c57485be94c8166f79e0f3cfde605bc754ed397:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-headers-5.3.0-1034-aws_5.3.0-1034.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-aws-5.3-headers-5.3.0-1034_5.3.0-1034.36_all.deb
+b3a3f7cff360bc29a333780b016e0873f3c6505bacf3c3c62fef4879fb6dc963:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-headers-5.15.0-1014-aws_5.15.0-1014.18-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-aws-5.15-headers-5.15.0-1014_5.15.0-1014.18-20.04.1_all.deb
 b3e3bb120a005d79bbb71f002e1917e8896199cf1299302924491f3e3b1f4f4b:
   type: cos
   packages:
@@ -16070,6 +16100,12 @@ d36da27b8c35bb25d485425e34003cab8af3ce9ca34ac85c02b39f1d4cacfbdc:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1078_4.15.0-1078.83_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1078-gke_4.15.0-1078.83_amd64.deb
+d41cad9d1ee0da6d079e3405ea3635365bd5915f59e9a3927a6fcdb6ce05a3ad:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.18_5.18.5-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.18.0-2-amd64_5.18.5-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.18.0-2-common_5.18.5-1_all.deb
 d41cc734ecd45530762199ac51d3d3f0f07b1c87591983d43fa859c19f91bc6c:
   type: redhat
   packages:
@@ -16498,6 +16534,10 @@ da57e7b74417984c8d7fe31716cf26261717cf812a8617ad28a3da31194c9220:
   type: redhat
   packages:
   - http---vault.centos.org-7.8.2003-updates-x86_64-Packages-kernel-devel-3.10.0-1127.19.1.el7.x86_64.rpm
+da79f6f3dd5a66161516dba7d7d81680fbea9066161e1cf5443b611aaee2bfca:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.8.0-flatcar_developer_container.bin.bz2
 da0163cedfb65f723bcbdc8889bdb2e4f706cc624078209b976a9fd9d579ba2c:
   type: redhat
   packages:
@@ -17669,6 +17709,11 @@ e5501739830e417f4a2c36a64e644faa2418f38c6b27f65a285f14ecf5657150:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.44.1.el8_1.x86_64.rpm
+e8478848244a5e600b30c4916f4ded9dc2264179158e7206a923ec4cf813916f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.15.0-1013-azure_5.15.0-1013.16_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.15.0-1013_5.15.0-1013.16_all.deb
 e031740037891b645a8651d73bb9ca76e8521a2553a7ecc717be6635e891c79d:
   type: redhat
   packages:
