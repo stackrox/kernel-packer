@@ -115,10 +115,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69-generic_4.15.0-69.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69_4.15.0-69.78_all.deb
-0e23f898b0340790eab712e6b7a22730cde0392c52c56bf5b6326a0f925e4c45:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2135.4.0-flatcar_developer_container.bin.bz2
 0e27c2964869a4d58bcf67d0ce057baefe30338b26173dc1f0daaf722e91a9f4:
   type: redhat
   packages:
@@ -272,6 +268,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
+0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0da44486150e5952bbbbfd2cb7424f6a47366f572785c10adc31e2dc69a09c6f:
   type: redhat
   packages:
@@ -3962,12 +3962,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1121-aws_4.4.0-1121.135_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1121_4.4.0-1121.135_all.deb
-8f70a2218db87cec847f8772de4b112e306961ee4f8e0a941af74ec5a1e2295c:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.11-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-1-amd64_5.17.3-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-1-common_5.17.3-1_all.deb
 8e70cb6c66915956b301000adb80d6d8cc7a444fb5a12f79010d776941e4f6d7:
   type: ubuntu
   packages:
@@ -4288,12 +4282,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1035-aws_5.4.0-1035.37_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1035_5.4.0-1035.37_all.deb
-8ee40206783ec015e6803a0097f88c1275102e92929de0c8eb75c434d9d6d21a:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.11-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-3-cloud-amd64_5.17.11-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-3-common_5.17.11-1_all.deb
 8af6e1a0df83f608c7fd6e58e4b27d45569d18107c0fa2d5a54b8edb95821989:
   type: redhat
   packages:
@@ -8789,12 +8777,6 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.2.1.el7.x86_64.rpm
-679cfe5b00407f738e9e9aa20dd67b67880c7afc18455fbbc5575f80c3b50d3f:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.11-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-3-amd64_5.17.11-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-3-common_5.17.11-1_all.deb
 683a399c600fee3ee618a0acf88fb4aeda525e452a40a64ea11c4d7177f4c834:
   type: ubuntu
   packages:
@@ -8880,12 +8862,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-79a6863d04b58657bcde5c2fe59556c920092fa09ed493f18e38d5411d6de62a-download
-733e91c267b5e756aecd2eb655af0f8303c43e82afd8221177966a24ba7cf971:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.17_5.17.11-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-1-cloud-amd64_5.17.3-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.17.0-1-common_5.17.3-1_all.deb
 734deed28c17edb2e4b7dc5616f89f19d60596babc4ada684e21632e6fd2d1d6:
   type: ubuntu
   packages:
@@ -12459,6 +12435,10 @@ a23b595743659c3137015d4264deff5b9d769883494e1233d228c5ee109f2203:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.18-100.fc31-x86_64-kernel-devel-5.8.18-100.fc31.x86_64.rpm
+a25a1b53c2444824a682def0f5e6797232fabcbd23ac7324185b72cf4c789552:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.1-flatcar_developer_container.bin.bz2
 a29b3af39619d0396f0d0d224817fa4d6b2b398ec46f9106653d9679cc1d41e7:
   type: redhat
   packages:
