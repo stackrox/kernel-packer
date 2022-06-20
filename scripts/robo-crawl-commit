@@ -16,7 +16,7 @@ main() {
     echo "New crawled packages found!"
 
     # temporary test branch
-    git checkout -b crawl-test
+    git checkout crawl-test
 
     # Create a commit with any modified files, and push it to GitHub.
     git add "$CRAWLED_PACKAGE_DIR"
