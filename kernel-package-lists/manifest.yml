@@ -2136,10 +2136,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-115-generic_4.15.0-115.116_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-115_4.15.0-115.116_all.deb
-4e82c8056323495fbb60362bab525e6f4062b53c1a3daf042f8b823f277ad927:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.9.0-flatcar_developer_container.bin.bz2
 4b87e8cb924bdff1bd2bca47aa80c16264c645052f28569dc6bf37adfc652196:
   type: ubuntu
   packages:
@@ -6269,10 +6265,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.13.0-1009-aws_5.13.0-1009.10_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.13.0-1009_5.13.0-1009.10_all.deb
-56d6d00ef1c8cc9ef9c3ebf58ec68282826b399ea53d7c3282ccbba456828fb1:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2605.2.0-flatcar_developer_container.bin.bz2
 56b31cdcbf82f1cbf2ef269b063c8ed16001597a2b8c9a8886506791a992fcae:
   type: coreos
   packages:
@@ -10250,6 +10242,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-c4527b77d9e528c448e984624d019cae9a0d41bbc08f9aab75f4e0f449273fac-download
+9415bb908d4b7ea6edde23e85473134f421f1655a7fb5ca81e18705522aef2e0:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3185.1.1-flatcar_developer_container.bin.bz2
 9416b37505043de40bef6bd88773c3be10f8e56d76c94d1b3fa9aecda8da858c:
   type: ubuntu
   packages:
@@ -13438,10 +13434,6 @@ b1f62495c2fe9759d31d04184f9c3c38b921d8f63fcb8585da77bc095035a4c2:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.43.2.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.43.2.x86_64.rpm
-b1db3d78bc054de54b4f5289cbcb1f09c22a0965961dc56f7d088561c0ad0c25:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2605.3.0-flatcar_developer_container.bin.bz2
 b1fceff506ed73fcf52d71b87f532b073f185c498fb869723605ac2338bb600b:
   type: redhat
   packages:
@@ -17468,6 +17460,10 @@ e8776d0495a86e7e52f2ccd1dc7eb2397a325f7a2afdcf3e15efa45fb88c82fa:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-0c74fb60a95b408b9faff8886a853e7cb6f517b0faf2c408e5eec8ff84b3020a-download
+e15106ca84b7368f4e64921494812219f2fed7abec1804c438799ac5b3de6515:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.5.0-flatcar_developer_container.bin.bz2
 e15836ebd333f85658050de10714683f7e62926143af07d14e09f0668a9252b2:
   type: ubuntu
   packages:
