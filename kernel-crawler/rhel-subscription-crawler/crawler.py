@@ -6,6 +6,8 @@ import time
 import logging
 import argparse
 
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor, as_completed
+
 logging.basicConfig()
 logger = logging.getLogger('rhsm-crawler')
 logger.setLevel("INFO")
@@ -98,7 +100,7 @@ class Crawler:
 
         for already_crawled_package in already_crawled_packages_raw:
             already_crawled_package = already_crawled_package.strip().split("/")[-1].replace(".rpm", "")
-        
+
             already_crawled_packages.add(already_crawled_package)
 
         return already_crawled_packages
@@ -154,7 +156,7 @@ class Crawler:
 
         return self.headers
 
-    def paginate_request(self, endpoint: str):
+    def paginate_request(self, endpoint: str, session):
         limit = 100
         offset = 0
         count = 100
@@ -164,17 +166,18 @@ class Crawler:
                 'limit': limit,
                 'offset': offset
             }
-            resp = requests.get(self.query_url(endpoint),
+            logger.debug(f'Query {endpoint}: {params}')
+            resp = session.get(self.query_url(endpoint),
                                 headers=self.get_headers(), params=params)
 
             if resp.status_code == 429:
                 logger.debug(f'Rate limit exceeded, wait and retry...')
                 time.sleep(int(resp.headers['x-ratelimit-delay']))
-                resp = requests.get(self.query_url(endpoint),
+                resp = session.get(self.query_url(endpoint),
                                     headers=self.headers, params=params)
-        
+
             if resp.status_code == 401:
-                resp = requests.get(self.query_url(endpoint),
+                resp = session.get(self.query_url(endpoint),
                                     headers=self.get_headers(True), params=params)
 
             if not resp.ok:
@@ -183,23 +186,24 @@ class Crawler:
 
             response = resp.json()
 
+            logger.debug(f"Pagination: {response['pagination']}")
             count = response['pagination']['count']
             offset += count
-            
+
             if count == 0:
                 break
 
             yield response['body']
 
-    def get_subscriptions(self) -> list:
-        for subscriptions in self.paginate_request('/subscriptions'):
+    def get_subscriptions(self, session) -> list:
+        for subscriptions in self.paginate_request('/subscriptions', session):
             for subscription in subscriptions:
                 yield subscription
 
-    def get_content_sets(self, subscription: list):
+    def get_content_sets(self, subscription: list, session):
         subscription_number = subscription['subscriptionNumber']
         logger.debug("subscription_number= " + subscription_number)
-        yield from self.paginate_request(f'/subscriptions/{subscription_number}/contentSets')
+        yield from self.paginate_request(f'/subscriptions/{subscription_number}/contentSets', session)
 
     def filter_repos(self, content_sets):
         repos = []
@@ -226,7 +230,7 @@ class Crawler:
         return repos
 
 
-    def get_packages(self, repos):
+    def get_packages(self, repos, session):
         urls = set()
         for repo in repos:
             logger.debug(f'################ {repo} ################')
@@ -237,7 +241,7 @@ class Crawler:
             if self.get_latest:
                 endpoint += '?filter=latest'
 
-            for packages in self.paginate_request(endpoint):
+            for packages in self.paginate_request(endpoint, session):
                 repo_urls = self.filter_kernel_headers(packages)
                 urls |= repo_urls
 
@@ -254,7 +258,7 @@ class Crawler:
     def filter_kernel_headers(self, packages):
         urls = set()
         for pkg in packages:
-            pkg_name = pkg['name'] 
+            pkg_name = pkg['name']
 
             if not pkg_name in self.allowed_pkg_names:
                 continue
@@ -292,23 +296,49 @@ class Crawler:
             if not repo in self.non_empty_repos:
                 logger.debug(repo)
 
+    def process_subsciption(self, subscription):
+        subscription_urls = set()
+
+        with requests.Session() as session:
+            for content_sets in self.get_content_sets(subscription, session):
+                logger.debug(f"Content Set: {content_sets}")
+                repos = self.filter_repos(content_sets)
+                repo_urls = self.get_packages(repos, session)
+                subscription_urls |= repo_urls
+
+        return subscription_urls
+
     def crawl_all(self):
         urls = set()
-        for subscription in self.get_subscriptions():
-            nurl_before = len(urls)  
-            for content_sets in self.get_content_sets(subscription):
-                repos = self.filter_repos(content_sets)
-                repo_urls = self.get_packages(repos)
-                urls |= repo_urls
-            nurl_after = len(urls)
-            
-            if nurl_before == nurl_after:
-                logger.debug("empty subscription= " + subscription['subscriptionName'])
-                self.empty_subscriptions.add(subscription['subscriptionName'])
-            else:
-                logger.debug("non empty subscription= " + subscription['subscriptionName'])
-                self.non_empty_subscriptions.add(subscription['subscriptionName'])
+        with requests.Session() as session:
+            subscriptions = list(self.get_subscriptions(session))
+            logger.debug(len(subscriptions))
 
+            with ProcessPoolExecutor() as executor:
+                future_urls = {
+                    executor.submit(self.process_subsciption, subscription): subscription
+                    for subscription in subscriptions
+                }
+
+                for future in as_completed(future_urls):
+                    subscription = future_urls[future]
+
+                    try:
+                        result = future.result()
+
+                        nurl_before = len(urls)
+                        urls |= result
+                        nurl_after = len(urls)
+
+                        if nurl_before == nurl_after:
+                            logger.debug("empty subscription= " + subscription['subscriptionName'])
+                            self.empty_subscriptions.add(subscription['subscriptionName'])
+                        else:
+                            logger.debug("non empty subscription= " + subscription['subscriptionName'])
+                            self.non_empty_subscriptions.add(subscription['subscriptionName'])
+
+                    except Exception as exc:
+                        print('%r generated an exception: %s' % (url, exc))
 
         self.sort_and_output(list(urls))
 
@@ -316,7 +346,7 @@ class Crawler:
 
         self.print_non_empty_repos()
         self.print_empty_repos()
-        
+
     def crawl_repos(self):
         urls = self.get_packages(self.repos)
         self.sort_and_output(list(urls))
