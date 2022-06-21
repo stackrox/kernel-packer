@@ -21,7 +21,7 @@ main() {
     git remote add pushtarget https://roxbot:$GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
 
     # temporary test branch
-    git fetch
+    git fetch --all
     git checkout crawl-test
 
     # Create a commit with any modified files, and push it to GitHub.
