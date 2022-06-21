@@ -21,8 +21,10 @@ main() {
     git remote add pushtarget https://roxbot:$GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
 
     # temporary test branch
+    git stash
     git fetch --all
     git checkout crawl-test
+    git stash pop
 
     # Create a commit with any modified files, and push it to GitHub.
     git add "$CRAWLED_PACKAGE_DIR"
