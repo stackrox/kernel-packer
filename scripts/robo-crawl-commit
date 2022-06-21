@@ -16,6 +16,7 @@ main() {
     echo "New crawled packages found!"
 
     # temporary test branch
+    git fetch
     git checkout crawl-test
 
     # Create a commit with any modified files, and push it to GitHub.
