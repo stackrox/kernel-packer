@@ -6,3 +6,4 @@ set -eou pipefail
 
 #python crawler.py --all=true --rhelPackageLists "$rhel_package_lists"
 python3 /rhel-subscription-crawler/crawler.py --all=true --rhelPackageLists "$1"
+sleep 10000
