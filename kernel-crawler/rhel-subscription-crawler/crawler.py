@@ -234,6 +234,7 @@ class Crawler:
     def get_packages(self, repos, session):
         urls = set()
         for repo in repos:
+            logger.info(f'Processing repo {repo}')
             logger.debug(f'################ {repo} ################')
 
             self.crawled_repos.add(repo)
@@ -307,7 +308,6 @@ class Crawler:
                 if not repos:
                     continue
 
-                logger.info(f'Processing repos {repos}')
                 repo_urls = self.get_packages(repos, session)
                 subscription_urls |= repo_urls
 
