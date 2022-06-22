@@ -171,12 +171,13 @@ class Crawler:
                                 headers=self.get_headers(), params=params)
 
             if resp.status_code == 429:
-                logger.debug(f'Rate limit exceeded, wait and retry...')
+                logger.warning(f'Rate limit exceeded, wait and retry...')
                 time.sleep(int(resp.headers['x-ratelimit-delay']))
                 resp = session.get(self.query_url(endpoint),
                                     headers=self.headers, params=params)
 
             if resp.status_code == 401:
+                logger.warning(f'Token has expired, refreshing...')
                 resp = session.get(self.query_url(endpoint),
                                     headers=self.get_headers(True), params=params)
 
@@ -297,12 +298,16 @@ class Crawler:
                 logger.debug(repo)
 
     def process_subsciption(self, subscription):
+        logger.info(f'Processing subscription {subscription["subscriptionName"]}')
         subscription_urls = set()
 
         with requests.Session() as session:
             for content_sets in self.get_content_sets(subscription, session):
-                logger.debug(f"Content Set: {content_sets}")
                 repos = self.filter_repos(content_sets)
+                if not repos:
+                    continue
+
+                logger.info(f'Processing repos {repos}')
                 repo_urls = self.get_packages(repos, session)
                 subscription_urls |= repo_urls
 
@@ -312,7 +317,7 @@ class Crawler:
         urls = set()
         with requests.Session() as session:
             subscriptions = list(self.get_subscriptions(session))
-            logger.debug(len(subscriptions))
+            logger.info(f'Number of subscriptions {len(subscriptions)}')
 
             with ProcessPoolExecutor() as executor:
                 future_urls = {
