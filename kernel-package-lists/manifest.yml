@@ -4091,10 +4091,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11895.125.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11895.125.0-kernel-headers.tgz
-8d4759dbae0504d939dba76542ab93db5e436b4911e68b7235e5946391602601:
-  type: minikube
-  packages:
-  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.23.0.tar.gz
 8a4876d5c8877e6ac15fee01662fd980f839e43c8065acf251345aef0880bfb9:
   type: suse
   packages:
@@ -9921,6 +9917,10 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.25-1.el7.elrepo.x86_64.rpm
+6218d83960f9028ab5df5b2616842443ec4c1fe5e8368fc4a5d024a267abb32a:
+  type: minikube
+  packages:
+  - https---github.com-kubernetes-minikube-archive-refs-tags-v1.26.0.tar.gz
 6227c8f602b9053ceef703d73966f039c46b42933ce1d4454f6ecae7505cb24c:
   type: redhat
   packages:
