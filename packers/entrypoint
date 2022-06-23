@@ -573,6 +573,8 @@ repackage_minikube() {
         tar --strip 1 -C "${minikube}" -xzf "${input_package_1}"
         cd "${minikube}"
 
+        headers_relative_path="."
+
         # extract buildroot
         if grep -qe '^minikube_iso:' Makefile; then
             sed -i 's|^minikube_iso:.*|minikube_iso:|' Makefile # Make it so that auto-pause is not built. This means we do not need to worry about the go version.
@@ -589,12 +591,14 @@ repackage_minikube() {
             # Since we are not creating the iso, don't move it
             sed -ie '/# x86_64 ISO is still BIOS rather than EFI because of AppArmor issues for KVM, and Gen 2 issues for Hyper-V/,+5d' Makefile
             make minikube-iso-x86_64
+
+            headers_relative_path="output-x86_64"
         fi
 
         # extract kernel
         cd "${buildroot}"
         export FORCE_UNSAFE_CONFIGURE=1
-        make linux
+        make -C "$headers_relative_path" linux
 
         local linux_src=$(find "${buildroot}/output/build" -maxdepth 1 -name 'linux-[0-9]*' | head -n1)
         local kernel_version="$(echo "$linux_src" | sed -n 's/^.*\/linux-\([0-9]\+\.[0-9]\+\.[0-9]\+\)$/\1/p')"
