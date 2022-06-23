@@ -574,15 +574,27 @@ repackage_minikube() {
         cd "${minikube}"
 
         # extract buildroot
-	sed -i 's|^minikube_iso:.*|minikube_iso:|' Makefile # Make it so that auto-pause is not built. This means we do not need to worry about the go version.
-        sed -i '/$(MAKE) -C $(BUILD_DIR)\/buildroot/d' Makefile # Make it so that the minikube iso is not actually built
-	sed -i '/rootfs.iso9660/d' Makefile # Since we are not creating the iso, don't move the iso
-        make minikube_iso
+        if grep -qe '^minikube_iso:' Makefile; then
+            sed -i 's|^minikube_iso:.*|minikube_iso:|' Makefile # Make it so that auto-pause is not built. This means we do not need to worry about the go version.
+            sed -i '/$(MAKE) -C $(BUILD_DIR)\/buildroot/d' Makefile # Make it so that the minikube iso is not actually built
+            sed -i '/rootfs.iso9660/d' Makefile # Since we are not creating the iso, don't move the iso
+            make minikube_iso
+        else
+            sed -i 's|^minikube-iso-%:.*|minikube-iso-%:|' Makefile # Make it so that auto-pause is not built. This means we do not need to worry about the go version.
+
+            # Make it so that the minikube iso is not actually built
+            sed -ie '/\$\(MAKE\) -C \$\(BUILD_DIR\)\/buildroot \$\(BUILDROOT_OPTIONS\) host-python$/d' Makefile
+            sed -ie '/\$\(MAKE\) -C \$\(BUILD_DIR\)\/buildroot \$\(BUILDROOT_OPTIONS\)$/d' Makefile
+
+            # Since we are not creating the iso, don't move it
+            sed -ie '/# x86_64 ISO is still BIOS rather than EFI because of AppArmor issues for KVM, and Gen 2 issues for Hyper-V/,+5d' Makefile
+            make minikube-iso-x86_64
+        fi
 
         # extract kernel
         cd "${buildroot}"
-	export FORCE_UNSAFE_CONFIGURE=1
-	make linux
+        export FORCE_UNSAFE_CONFIGURE=1
+        make linux
 
         local linux_src=$(find "${buildroot}/output/build" -maxdepth 1 -name 'linux-[0-9]*' | head -n1)
         local kernel_version="$(echo "$linux_src" | sed -n 's/^.*\/linux-\([0-9]\+\.[0-9]\+\.[0-9]\+\)$/\1/p')"
@@ -595,7 +607,7 @@ repackage_minikube() {
             return 1
         fi
 
-	local kernel_version_minikube="${kernel_version}-minikube"
+        local kernel_version_minikube="${kernel_version}-minikube"
 
         log "Kernel version is $kernel_version_minikube"
 
