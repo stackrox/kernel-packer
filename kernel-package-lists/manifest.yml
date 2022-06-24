@@ -2657,10 +2657,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1037-azure_4.15.0-1037.39_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1037_4.15.0-1037.39_all.deb
-5a6433b433cbad54ade8ac0345650a40281803d35e9f30cea62371def758c6d4:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3139.1.0-flatcar_developer_container.bin.bz2
 5b9713d3a0d93782731d802bcdbdd9876f01c84f7273b9d2158495e4157dc3db:
   type: ubuntu
   packages:
@@ -11730,6 +11726,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12371.89.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12371.89.0-kernel-headers.tgz
+8440398d5ad07a49306155652bfe48a84b3c3a887671038da5123bd82e123af4:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.5.0-flatcar_developer_container.bin.bz2
 8597476a117d48962d41a84c3d9c8fd6f956fb2cc5735d43c28682943d6b8116:
   type: ubuntu
   packages:
