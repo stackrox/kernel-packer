@@ -148,11 +148,11 @@
   file: ubuntu-azure-fips.txt
   reformat: pairs
 
-- name: minikube
-  description: Minikube VM Kernels
-  type: minikube
-  file: minikube.txt
-  reformat: single
+# - name: minikube
+#   description: Minikube VM Kernels
+#   type: minikube
+#   file: minikube.txt
+#   reformat: single
 
 - name: linuxkit
   description: Linuxkit VM Kernels
