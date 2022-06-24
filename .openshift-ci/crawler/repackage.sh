@@ -4,7 +4,8 @@ set -eo pipefail
 # Assume we need to run in staging mode unconditionally for testing purposes.
 
 source .openshift-ci/env.sh
-source /tmp/google-cloud-sdk/path.bash.inc
+source .openshift-ci/google-cloud-sdk/install.sh
+source .openshift-ci/google-cloud-sdk/init.sh
 source .openshift-ci/crawler/setup-staging.sh
 
 mkdir -p .build-data/cache
