@@ -15,7 +15,7 @@ cat kernel-package-lists/manifest.yml
 
 make list-files
 make download-packages
-make packers
+#make packers
 make repackage
 
 mkdir -p .build-data/bundles
