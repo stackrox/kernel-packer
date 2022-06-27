@@ -11184,10 +11184,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d59c3695e9b79c253a02ee63051880df267700db4180ff05f97b28b095085791-kernel-devel-4.14.133-113.105.amzn2.x86_64.rpm
-308077b773b44875a31a8e94b3e492f969b81df4c05b79190a56c1e10bf9a444:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.0-flatcar_developer_container.bin.bz2
 314909f5d92a825bfa0261bc0f6725429c3d66026597ff3e12b03aa390145e3a:
   type: ubuntu
   packages:
@@ -12290,6 +12286,11 @@ a4c13ff08a252e0ee0a0477381c5f87c78e47e9f35bdebb6516287bff25e1992:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-321f81113d30c558394ced64995037e055105c891e002ec7002b2fb2ff5fd6fd-download
+a4d58c08ec0a32a48c038d80b16ee4b4c2b4c874eb04d5fc167c9c2802428996:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Products-SLE-Module-Basesystem-15-SP4-x86_64-product-noarch-kernel-devel-5.14.21-150400.22.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Products-SLE-Module-Basesystem-15-SP4-x86_64-product-x86_64-kernel-default-devel-5.14.21-150400.22.1.x86_64.rpm
 a4c59ab9327a5ead32260db9c22057f1bfd6fdbfdecdd0987784203efc7852cf:
   type: coreos
   packages:
@@ -16470,6 +16471,10 @@ da57e7b74417984c8d7fe31716cf26261717cf812a8617ad28a3da31194c9220:
   type: redhat
   packages:
   - http---vault.centos.org-7.8.2003-updates-x86_64-Packages-kernel-devel-3.10.0-1127.19.1.el7.x86_64.rpm
+da79f6f3dd5a66161516dba7d7d81680fbea9066161e1cf5443b611aaee2bfca:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.8.0-flatcar_developer_container.bin.bz2
 da0163cedfb65f723bcbdc8889bdb2e4f706cc624078209b976a9fd9d579ba2c:
   type: redhat
   packages:
