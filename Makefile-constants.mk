@@ -18,6 +18,9 @@ KERNEL_PACKAGE_BUCKET ?= gs://stackrox-kernel-packages
 # GCS bucket for storing kernel bundles
 KERNEL_BUNDLE_BUCKET ?= gs://stackrox-kernel-bundles
 
+# GCS public bucket for storing kernel bundles
+PUBLIC_KERNEL_BUNDLE_BUCKET ?= gs://collector-support-public/stackrox-kernel-bundles
+
 # Ubuntu FIPS contract URLs
 UBUNTU_FIPS_ATTACH_URL ?= https://contracts.canonical.com/v1/resources/fips/context/machines/930f3ea7ac23ddc47f14216b9249d216
 UBUNTU_FIPS_UPDATES_ATTACH_URL ?= https://contracts.canonical.com/v1/resources/fips-updates/context/machines/930f3ea7ac23ddc47f14216b9249d216

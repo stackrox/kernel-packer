@@ -99,6 +99,10 @@ download-packages:
 upload-bundles:
 	@./scripts/upload-bundles $(BUILD_DATA_DIR) $(KERNEL_BUNDLE_BUCKET)
 
+.PHONY: upload-bundles
+upload-bundles-public-mirror:
+	@./scripts/upload-bundles $(BUILD_DATA_DIR) $(PUBLIC_KERNEL_BUNDLE_BUCKET)
+
 .PHONY: clean-cache
 clean-cache:
 	@rm -rf $(BUILD_DATA_DIR)/cache/fragment-*
