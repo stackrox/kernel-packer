@@ -619,6 +619,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.0.0-1033_5.0.0-1033.34_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.0.0-1033-gcp_5.0.0-1033.34_amd64.deb
+1a64d6722277105a09c3e4ea5734a75e74bed70fe24ec6f78164a1f489a22e45:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-d57f1d6c18878c4d1223e41ecaaae4a9487e4d0155280caf2f9086db45baf1be-download
 1a072fb94d009231b14367dec4e3dee6fe9789f981f81be317fda9d0b14d3cf2:
   type: ubuntu
   packages:
@@ -2675,6 +2679,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1005-fips_4.4.0-1005.5_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1005_4.4.0-1005.5_all.deb
+5d99356adaa7a3e70429890f576ddff8b09ac35a36d1e07bf6aa92ed51c32940:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-69e5866415307029d59b1e88bfc9d1fade725f0c041565f4fcea8150cd493655-download
 5c299937ca3a1b2a48abc2ba1ed81bd2d1234dc0a3b840b3f26aa95ea3e46e47:
   type: ubuntu
   packages:
@@ -2724,6 +2732,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1030_4.15.0-1030.32_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1030-gke_4.15.0-1030.32_amd64.deb
+5fa5a6db5ca6413a17cee659934531fb832600337507b95439e3c5bf24083ac7:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.87.1.el8_2.x86_64.rpm
 5ba54fc856e0ed8dc09e279c634aa73c4b47f9b8831cb5b4256b1d200b7de6b0:
   type: cos
   packages:
@@ -5647,10 +5659,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.4-300.fc36-x86_64-kernel-devel-5.17.4-300.fc36.x86_64.rpm
-37b0c75da1a7ddd8a2b5e294feb2552d0a12f55dcc0276ad943ceda44398bbe2:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2765.1.0-flatcar_developer_container.bin.bz2
 37c4c3207731885762ed484ab28f68ff42df7ea8016f204af4d6266b75682a51:
   type: redhat
   packages:
@@ -11189,10 +11197,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d59c3695e9b79c253a02ee63051880df267700db4180ff05f97b28b095085791-kernel-devel-4.14.133-113.105.amzn2.x86_64.rpm
-308077b773b44875a31a8e94b3e492f969b81df4c05b79190a56c1e10bf9a444:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.0-flatcar_developer_container.bin.bz2
 314909f5d92a825bfa0261bc0f6725429c3d66026597ff3e12b03aa390145e3a:
   type: ubuntu
   packages:
@@ -14526,6 +14530,10 @@ bf39773e6c881f3512c45139feaa0a487e6c2602d1352c86c8367929903b9673:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-206-generic_4.4.0-206.238_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-206_4.4.0-206.238_all.deb
+bf49060e2cc699ba3fcfd64b6a6b2d663d4b41ec900669458b5895f6c084047c:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.201-1.el7.elrepo.x86_64.rpm
 bfb131063e292611d16e4a4a93ba46c8cc962f29240efbe6fd5305dfc0656df2:
   type: ubuntu
   packages:
@@ -14965,10 +14973,6 @@ c219e286f1225133b172cf56141d16b1cb117ae01dc53e27b8b99b6ddb9c0ce7:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.18.7-200.fc36-x86_64-kernel-devel-5.18.7-200.fc36.x86_64.rpm
-c258aab538c588d9c9dd1f5d5a249eb53ccfa2a799a3c3bc257d0fa3919d7c84:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2135.5.0-flatcar_developer_container.bin.bz2
 c346c42f9cc9060cb7ba68645c0e971e3e8d30f48d20c6aac8d09cbae433b8dc:
   type: suse
   packages:
