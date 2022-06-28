@@ -2,7 +2,7 @@ FROM debian:buster
 
 RUN apt-get update \
  && apt-get upgrade -y \
- && apt-get install --no-install-recommends -y \
+ && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
       binutils \
       make \
       gcc \
