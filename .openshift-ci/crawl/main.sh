@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+# push changes
+BRANCH="$(echo "$JOB_SPEC" | jq -r '.extra_refs[0].base_ref')"
+
 # Assume we need to run in staging mode unconditionally for testing purposes.
 
 # The below variables ontain a comma delimited list of GCP buckets,
 # Scripts may read from all buckets but only write to the first bucket in the list.
-KERNEL_PACKAGE_STAGING_BUCKET="gs://stackrox-kernel-packages-test/${CIRCLE_BRANCH}/${CIRCLE_SHA1}"
-KERNEL_BUNDLE_STAGING_BUCKET="gs://stackrox-kernel-bundles-test/${CIRCLE_BRANCH}/${CIRCLE_SHA1}"
+KERNEL_PACKAGE_STAGING_BUCKET="gs://stackrox-kernel-packages-test/${BRANCH}/${BUILD_ID}"
+KERNEL_BUNDLE_STAGING_BUCKET="gs://stackrox-kernel-bundles-test/${BRANCH}/${BUILD_ID}"
 KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET}"
 KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET}"
 
@@ -59,10 +62,6 @@ mkdir -p ${ARTIFACT_DIR}/kernel-package-lists
 cp -r .build-data ${ARTIFACT_DIR}/build-data
 cp kernel-package-lists/manifest.yml ${ARTIFACT_DIR}/kernel-package-lists/manifest.yaml
 
-# push changes
-echo $PULL_BASE_REF
-BRANCH="$(echo "$JOB_SPEC" | jq -r '.extra_refs[0].base_ref')"
-
-if [[ "$CIRCLE_BRANCH" =~ ^(master|main|ddolgov-feature-crawling)$ ]]; then
+if [[ "$BRANCH" =~ ^(master|main|ddolgov-feature-crawling)$ ]]; then
     make robo-crawl-commit
 fi;
