@@ -17,7 +17,8 @@ RUN dnf -y update && \
         make        \
         wget        \
         jq          \
-        go
+        go          \
+        sudo
 
 RUN pip3 install --no-cache-dir \
     lxml==4.2.4 urllib3==1.26.3 \
@@ -32,6 +33,13 @@ COPY --from=build /go/bin/rhel-crawler /usr/bin/rhel-crawler
 COPY --from=build /usr/local/bin/7z* /usr/local/bin/
 
 # RHEL crawler bits
+RUN dnf --disablerepo='*' makecache \
+ && dnf install -y --skip-broken subscription-manager
+
+COPY rhel-login/69.pem /etc/pki/product-default/69.pem
+COPY rhel-login/290.pem /etc/pki/product/290.pem
+COPY rhel-login/entrypoint /rhel-login/entrypoint
+
 COPY rhel-subscription-crawler/ /rhel-subscription-crawler/
 
 ENTRYPOINT ["python3", "kernel-crawler.py"]

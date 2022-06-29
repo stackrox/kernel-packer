@@ -222,6 +222,12 @@ crawl-rhsm: build-rhsm-crawler
 	docker run -e RHSM_OFFLINE_TOKEN --rm -i -v $(CRAWLED_PACKAGE_DIR):/kernel-package-lists:ro rhsm-crawler:latest > $(CRAWLED_PACKAGE_DIR)/rhel.txt
 	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
 
+.PHONY: crawl-rhsm-no-docker
+crawl-rhsm-no-docker:
+	ls $(CRAWLED_PACKAGE_DIR)/rhel.txt > "/tmp/rhel_package_lists.txt"
+	/rhel-subscription-crawler/crawl.sh /tmp/rhel_package_lists.txt > $(CRAWLED_PACKAGE_DIR)/rhel.txt
+	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
+
 .PHONY: crawl-rhel
 crawl-rhel: build-crawl-container
 	# Trade a username & password for a certificate keypair that allows up to
@@ -348,6 +354,98 @@ crawl-rhel: build-crawl-container
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
 		--entrypoint /usr/bin/rhel-crawler \
 		kernel-crawler:latest \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.5/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.5.txt
+
+.PHONY: crawl-rhel-no-docker
+crawl-rhel-no-docker:
+	# Trade a username & password for a certificate keypair that allows up to
+	# authenticate with the RHEL package repos.
+	@mkdir -p $(BUILD_DATA_DIR)/rhel-certs
+	sudo /rhel-login/entrypoint
+	| tar -C $(BUILD_DATA_DIR)/rhel-certs -xf -
+
+	# Crawl for RHEL 6 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel/server/6/6Server/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel6.txt
+
+	# Crawl for RHEL 7 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel7.txt
+
+	# Crawl for RHEL 8 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8.txt
+
+	# Crawl for RHEL 8.1 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel8/8.1/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel81.txt
+
+	# Crawl for RHEL 8.2 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel8/8.2/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel82.txt
+
+	# Crawl for RHEL 7.6 EUS (Extended Update Support) kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/eus/rhel/server/7/7.6/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel76-eus.txt
+
+	# Crawl for RHEL 8.1 EUS (Extended Update Support) kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/eus/rhel8/8.1/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel81-eus.txt
+
+	# Crawl for RHEL 8.2 EUS (Extended Update Support) kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/eus/rhel8/8.2/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel82-eus.txt
+
+	# Crawl for RHEL 8.4 EUS (Extended Update Support) kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/eus/rhel8/8.4/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel84-eus.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.3 for RHEL 8 x86_64 (rhocp-4.3-for-rhel-8-x86_64-rpms)
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.3/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.3.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.4 for RHEL 8 x86_64 (rhocp-4.4-for-rhel-8-x86_64-rpms)
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.4/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.4.txt
+
+	## Crawl for Red Hat OpenShift Container Platform 4.5 for RHEL 8 x86_64 (rhocp-4.5-for-rhel-8-x86_64-rpms)
+	/usr/bin/rhel-crawler \
 			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.5/os \
 			-cert /rhel-certs/rhel-cert.pem \
 			-key /rhel-certs/rhel-key.pem \
