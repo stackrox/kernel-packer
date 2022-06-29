@@ -585,8 +585,10 @@ repackage_minikube() {
             sed -i 's|^minikube-iso-%:.*|minikube-iso-%:|' Makefile # Make it so that auto-pause is not built. This means we do not need to worry about the go version.
 
             # Make it so that the minikube iso is not actually built
-            sed -ie '/\$(MAKE) -C \$(BUILD_DIR)\/buildroot \$(BUILDROOT_OPTIONS) O=\$(BUILD_DIR)\/buildroot\/output-\$\* host-python$/d' Makefile
-            sed -ie '/\$(MAKE) -C \$(BUILD_DIR)\/buildroot \$(BUILDROOT_OPTIONS) O=\$(BUILD_DIR)\/buildroot\/output-\$\*$/d' Makefile
+            #sed -ie '/\$(MAKE) -C \$(BUILD_DIR)\/buildroot \$(BUILDROOT_OPTIONS) O=\$(BUILD_DIR)\/buildroot\/output-\$\* host-python$/d' Makefile
+            #sed -ie '/\$(MAKE) -C \$(BUILD_DIR)\/buildroot \$(BUILDROOT_OPTIONS) O=\$(BUILD_DIR)\/buildroot\/output-\$\*$/d' Makefile
+	    # Above two were not removing all lines that needed to be removed
+	    sed -e '/\$(MAKE) -C \$(BUILD_DIR)\/buildroot/d' Makefile
 
             # Since we are not creating the iso, don't move it
             sed -ie '/# x86_64 ISO is still BIOS rather than EFI because of AppArmor issues for KVM, and Gen 2 issues for Hyper-V/,+5d' Makefile
