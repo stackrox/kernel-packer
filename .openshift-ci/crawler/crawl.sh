@@ -57,6 +57,6 @@ mkdir -p ${ARTIFACT_DIR}/kernel-package-lists
 cp -r .build-data ${ARTIFACT_DIR}/build-data
 cp kernel-package-lists/manifest.yml ${ARTIFACT_DIR}/kernel-package-lists/manifest.yaml
 
-if [[ "$BRANCH" =~ ^(master|main|ddolgov-feature-crawling)$ ]]; then
-    make robo-crawl-commit
-fi;
+#if [[ "$BRANCH" =~ ^(master|main|ddolgov-feature-crawling)$ ]]; then
+    #make robo-crawl-commit
+#fi;

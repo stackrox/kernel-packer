@@ -36,10 +36,11 @@ class Crawler:
         ]
 
         self.repo_include_patterns = [
-            re.compile(r'^rhel-[7-8].*$'),
-            re.compile(r'^rhel-server.*$'),
-            re.compile(r'^rhocp-4.*$'),
-            re.compile(r'^.*-rt-.*$')
+            # re.compile(r'^rhel-[6-8].*$'),
+            re.compile(r'^rhel-8.*$'),
+            # re.compile(r'^rhel-server.*$'),
+            # re.compile(r'^rhocp-4.*$'),
+            # re.compile(r'^.*-rt-.*$')
         ]
 
         self.subscription_include_patterns = [
