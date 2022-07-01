@@ -1,3 +1,5 @@
+FROM src as base
+
 FROM debian:buster
 
 RUN apt-get update \
@@ -39,5 +41,8 @@ RUN apt-get update \
 COPY includes /etc/includes
 
 COPY entrypoint /usr/bin/entrypoint
+
+RUN mkdir -p /go/src/github.com/stackrox/kernel-packer/
+COPY --from=src /go/src/github.com/stackrox/kernel-packer/ /go/src/github.com/stackrox/kernel-packer/
 
 ENTRYPOINT ["/usr/bin/entrypoint"]
