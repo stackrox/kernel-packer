@@ -354,6 +354,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.40.2.el8_4.x86_64.rpm
+0cd01c04227fc6eb80a03c39dda63602375dc1f0079296bc6a9c861be34819f7:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.1-flatcar_developer_container.bin.bz2
 0ad95b4e04bf952ac14fad605d201f937b82e005494f477fe97e93761720124f:
   type: ubuntu
   packages:
@@ -2279,6 +2283,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-headers.tgz
+4ab969585b132e1736a69c888c6146fc84b2f1692a1fbdc17a2e80db93242770:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.0-flatcar_developer_container.bin.bz2
 4fb12689714a9881c48d70ef60c7800ec63e9b1a7b842fecf27225d68e8f49ad:
   type: ubuntu
   packages:
@@ -8520,6 +8528,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2039-aws-fips_4.15.0-2039.41_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2039_4.15.0-2039.41_all.deb
+525e7099c7103f0282f2335ff6d9d8be45d44e0a162a38170dc6f3b6e8812fa8:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.0-flatcar_developer_container.bin.bz2
 525aeb881b9a6bacc7dda7d9f12c87cd4a7d04315fe2641cb1dbbfbbcd90451e:
   type: cos
   packages:
@@ -9566,10 +9578,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.15.0-1008_5.15.0-1008.12_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.15.0-1008-gcp_5.15.0-1008.12_amd64.deb
-3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
