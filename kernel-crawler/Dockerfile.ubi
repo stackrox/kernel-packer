@@ -1,6 +1,6 @@
 FROM registry.ci.openshift.org/openshift/release:golang-1.16 AS build
 
-COPY main.go /go/src/main.go
+COPY kernel-crawler/main.go /go/src/main.go
 
 RUN CGO_ENABLED=0 go build -o /go/bin/rhel-crawler /go/src/main.go
 
@@ -24,11 +24,11 @@ RUN pip3 install --no-cache-dir \
     lxml==4.2.4 urllib3==1.26.3 \
     requests==2.27.1 pyyaml==6.0
 
-COPY ["garden-crawler.py", "/"]
-COPY ["kernel-crawler.py", "/"]
-COPY ["repo-crawler.py", "/"]
-COPY ["kope.io.asc", "/"]
-COPY ["docker-desktop-filter-kernels.sh", "/"]
+COPY ["kernel-crawler/garden-crawler.py", "/"]
+COPY ["kernel-crawler/kernel-crawler.py", "/"]
+COPY ["kernel-crawler/repo-crawler.py", "/"]
+COPY ["kernel-crawler/kope.io.asc", "/"]
+COPY ["kernel-crawler/docker-desktop-filter-kernels.sh", "/"]
 COPY --from=build /go/bin/rhel-crawler /usr/bin/rhel-crawler
 COPY --from=build /usr/local/bin/7z* /usr/local/bin/
 
@@ -36,10 +36,10 @@ COPY --from=build /usr/local/bin/7z* /usr/local/bin/
 RUN dnf --disablerepo='*' makecache \
  && dnf install -y --skip-broken subscription-manager
 
-COPY rhel-login/69.pem /etc/pki/product-default/69.pem
-COPY rhel-login/290.pem /etc/pki/product/290.pem
-COPY rhel-login/entrypoint /rhel-login/entrypoint
+COPY kernel-crawler/rhel-login/69.pem /etc/pki/product-default/69.pem
+COPY kernel-crawler/rhel-login/290.pem /etc/pki/product/290.pem
+COPY kernel-crawler/rhel-login/entrypoint /rhel-login/entrypoint
 
-COPY rhel-subscription-crawler/ /rhel-subscription-crawler/
+COPY kernel-crawler/rhel-subscription-crawler/ /rhel-subscription-crawler/
 
 ENTRYPOINT ["python3", "kernel-crawler.py"]
