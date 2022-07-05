@@ -36,9 +36,9 @@ RUN apt-get update \
  ;
 
 
-COPY includes /etc/includes
+COPY packers/includes /etc/includes
 
-COPY entrypoint /usr/bin/entrypoint
+COPY packers/entrypoint /usr/bin/entrypoint
 
 COPY . /go/src/github.com/stackrox/kernel-packer
 
