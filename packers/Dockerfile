@@ -33,6 +33,7 @@ RUN apt-get update \
       bison \
       flex \
       zstd \
+      curl \
  ;
 
 
