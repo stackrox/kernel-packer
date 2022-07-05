@@ -8,9 +8,12 @@ source .openshift-ci/google-cloud-sdk/install.sh
 source .openshift-ci/google-cloud-sdk/init.sh
 source .openshift-ci/crawler/setup-staging.sh
 
-mkdir -p .build-data/cache
-touch .build-data/cache/cache.yml
-cat .build-data/cache/cache.yml
+mkdir -p /tmp/repackaging
+export ROOT_DIR=/tmp/repackaging
+
+mkdir -p ${ROOT_DIR}/.build-data/cache
+touch ${ROOT_DIR}/.build-data/cache/cache.yml
+cat ${ROOT_DIR}/.build-data/cache/cache.yml
 cat kernel-package-lists/manifest.yml
 
 make list-files
