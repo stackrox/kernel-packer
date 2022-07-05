@@ -40,6 +40,8 @@ COPY includes /etc/includes
 
 COPY entrypoint /usr/bin/entrypoint
 
+COPY . /go/src/github.com/stackrox/kernel-packer
+
 RUN mkdir -p /go/src/github.com/stackrox/kernel-packer/
 
 ENTRYPOINT ["/usr/bin/entrypoint"]
