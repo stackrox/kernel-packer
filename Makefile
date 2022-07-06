@@ -1,4 +1,3 @@
-ROOT_DIR = /tmp/repackaging
 include Makefile-constants.mk
 
 MANIFEST_FILE ?= "kernel-package-lists/manifest.yml"

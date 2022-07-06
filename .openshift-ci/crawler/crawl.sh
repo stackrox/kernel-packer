@@ -11,6 +11,8 @@ source .openshift-ci/google-cloud-sdk/install.sh
 source .openshift-ci/google-cloud-sdk/init.sh
 source .openshift-ci/crawler/setup-staging.sh
 
+export ROOT_DIR=/tmp/crawler
+
 # temporary clean-up package list to reduce crawling time
 shopt -s extglob
 rm kernel-package-lists/!(centos.txt|centos-uncrawled.txt|rhel.txt|rhel-uncrawled.txt|reformat.yml)
