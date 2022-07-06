@@ -24,11 +24,12 @@ make download-packages
 #make packers
 
 echo "Repackage..."
-make repackage
+make repackage-no-docker
 
 mkdir -p .build-data/bundles
 ls -lhR .build-data/bundles
 
+echo "Upload bundles..."
 make upload-bundles
 
 cp -r .build-data/gsutil-download.log ${ARTIFACT_DIR}/build-data/

@@ -62,6 +62,17 @@ repackage-pre:
 repackage-post:
 	mkdir -p .build-data/bundles
 
+.PHONY: repackage-no-docker
+repackage-no-docker:
+	@mkdir -p $(BUILD_DATA_DIR)/cache
+	@touch $(BUILD_DATA_DIR)/cache/cache.yml
+	@go run ./tools/repackage-kernels/main.go \
+		-manifest $(MANIFEST_FILE) \
+		-cache-dir $(BUILD_DATA_DIR)/cache \
+		-pkg-dir $(BUILD_DATA_DIR)/packages \
+		-bundle-dir $(BUILD_DATA_DIR)/bundles \
+		-action build
+
 .PHONY: repackage
 repackage: packers
 	@mkdir -p $(BUILD_DATA_DIR)/cache
