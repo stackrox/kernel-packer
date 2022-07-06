@@ -33,9 +33,9 @@ if ! make -j -k crawl-centos-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; th
     touch /tmp/crawl-failed
 fi
 
-if ! make -j -k crawl-rhsm-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
-    touch /tmp/crawl-failed
-fi
+#if ! make -j -k crawl-rhsm-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+    #touch /tmp/crawl-failed
+#fi
 
 #./scripts/restore-removed
 
