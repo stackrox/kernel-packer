@@ -16,9 +16,14 @@ touch ${ROOT_DIR}/.build-data/cache/cache.yml
 cat ${ROOT_DIR}/.build-data/cache/cache.yml
 cat kernel-package-lists/manifest.yml
 
+echo "List files..."
 make list-files
+
+echo "Download packages..."
 make download-packages
 #make packers
+
+echo "Repackage..."
 make repackage
 
 mkdir -p .build-data/bundles
