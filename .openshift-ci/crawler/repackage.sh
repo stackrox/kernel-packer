@@ -8,8 +8,8 @@ source .openshift-ci/google-cloud-sdk/install.sh
 source .openshift-ci/google-cloud-sdk/init.sh
 source .openshift-ci/crawler/setup-staging.sh
 
-mkdir -p /tmp/repackaging
 export ROOT_DIR=/tmp/repackaging
+mkdir -p ${ROOT_DIR}
 
 mkdir -p ${ROOT_DIR}/.build-data/cache
 touch ${ROOT_DIR}/.build-data/cache/cache.yml

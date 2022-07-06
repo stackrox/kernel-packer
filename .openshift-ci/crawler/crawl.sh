@@ -12,6 +12,7 @@ source .openshift-ci/google-cloud-sdk/init.sh
 source .openshift-ci/crawler/setup-staging.sh
 
 export ROOT_DIR=/tmp/crawler
+mkdir -p ${ROOT_DIR}
 
 # temporary clean-up package list to reduce crawling time
 shopt -s extglob
