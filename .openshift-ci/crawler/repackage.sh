@@ -18,20 +18,20 @@ cp ${ARTIFACT_DIR}/kernel-package-lists/manifest.yaml kernel-package-lists/manif
 cat kernel-package-lists/manifest.yml
 
 echo "List files..."
-make list-files
+make SHELL="sh -x" list-files
 
 echo "Download packages..."
-make download-packages
+make SHELL="sh -x" download-packages
 #make packers
 
 echo "Repackage..."
-make repackage-no-docker
+make SHELL="sh -x" repackage-no-docker
 
 mkdir -p .build-data/bundles
 ls -lhR .build-data/bundles
 
 echo "Upload bundles..."
-make upload-bundles
+make SHELL="sh -x" upload-bundles
 
 cp -r .build-data/gsutil-download.log ${ARTIFACT_DIR}/build-data/
 cp -r .build-data/cache ${ARTIFACT_DIR}/build-data/cache
