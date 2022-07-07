@@ -34,6 +34,7 @@ RUN apt-get update \
       flex \
       zstd \
       curl \
+      jq   \
  ;
 
 
