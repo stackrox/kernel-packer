@@ -10,7 +10,7 @@ source .openshift-ci/crawler/setup-staging.sh
 export ROOT_DIR=.
 #mkdir -p ${ROOT_DIR}
 
-if ! make -j -k crawl-centos-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+if ! make SHELL="sh -x" -j -k crawl-centos-no-docker 2> >(tee /tmp/make-crawl-stderr >&2) ; then
     touch /tmp/crawl-failed
 fi
 
@@ -20,15 +20,18 @@ fi
 
 #./scripts/restore-removed
 
-make sync
+echo "Sync..."
+make SHELL="sh -x" sync
 git --no-pager diff kernel-package-lists/
 
 # generate manifest
-make manifest
+echo "Manifest..."
+make SHELL="sh -x" manifest
 cat kernel-package-lists/manifest.yml
 git --no-pager diff kernel-package-lists/manifest.yml
 
 # prepare artifacts
+echo "Artifacts..."
 rm -rf .build-data/downloads
 rm -rf .build-data/packages
 
