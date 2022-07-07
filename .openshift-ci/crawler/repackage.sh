@@ -16,6 +16,23 @@ touch ${ROOT_DIR}/.build-data/cache/cache.yml
 cat ${ROOT_DIR}/.build-data/cache/cache.yml
 cat kernel-package-lists/manifest.yml
 
+shopt -s extglob
+rm kernel-package-lists/!(centos.txt|centos-uncrawled.txt|rhel.txt|rhel-uncrawled.txt|reformat.yml)
+cat <<EOT > kernel-package-lists/reformat.yml
+- name: centos
+  description: CentOS kernels
+  type: redhat
+  file: centos.txt
+  reformat: single
+
+- name: rhel
+  description: RHEL
+  type: redhat
+  file: rhel.txt
+  reformat: single
+
+EOT
+
 echo "List files..."
 make list-files
 
