@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-# push changes
-BRANCH="$(echo "$JOB_SPEC" | jq -r '.extra_refs[0].base_ref')"
-
 # Assume we need to run in staging mode unconditionally for testing purposes.
-
 source .openshift-ci/env.sh
 source .openshift-ci/google-cloud-sdk/install.sh
 source .openshift-ci/google-cloud-sdk/init.sh
