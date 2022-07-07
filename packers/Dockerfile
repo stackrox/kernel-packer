@@ -2,7 +2,7 @@ FROM debian:buster
 
 RUN apt-get update \
  && apt-get upgrade -y \
- && apt-get install --no-install-recommends -y \
+ && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
       binutils \
       make \
       gcc \
@@ -33,11 +33,17 @@ RUN apt-get update \
       bison \
       flex \
       zstd \
+      curl \
+      jq   \
  ;
 
 
-COPY includes /etc/includes
+COPY packers/includes /etc/includes
 
-COPY entrypoint /usr/bin/entrypoint
+COPY packers/entrypoint /usr/bin/entrypoint
+
+COPY . /go/src/github.com/stackrox/kernel-packer
+
+RUN mkdir -p /go/src/github.com/stackrox/kernel-packer/
 
 ENTRYPOINT ["/usr/bin/entrypoint"]

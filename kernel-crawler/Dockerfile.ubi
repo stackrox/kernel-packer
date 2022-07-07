@@ -1,0 +1,45 @@
+FROM registry.ci.openshift.org/openshift/release:golang-1.16 AS build
+
+COPY kernel-crawler/main.go /go/src/main.go
+
+RUN CGO_ENABLED=0 go build -o /go/bin/rhel-crawler /go/src/main.go
+
+ARG p7zip="v17.03"
+RUN wget "https://github.com/jinfeihan57/p7zip/releases/download/${p7zip}/linux-p7zip.zip" \
+ && mkdir p7zip && unzip linux-p7zip.zip -d p7zip && cp p7zip/7z* /usr/local/bin
+
+FROM registry.access.redhat.com/ubi8/ubi:8.6
+
+RUN dnf -y update && \
+    dnf -y install  \
+        python3     \
+        git         \
+        make        \
+        wget        \
+        jq          \
+        go          \
+        sudo
+
+RUN pip3 install --no-cache-dir \
+    lxml==4.2.4 urllib3==1.26.3 \
+    requests==2.27.1 pyyaml==6.0
+
+COPY ["kernel-crawler/garden-crawler.py", "/"]
+COPY ["kernel-crawler/kernel-crawler.py", "/"]
+COPY ["kernel-crawler/repo-crawler.py", "/"]
+COPY ["kernel-crawler/kope.io.asc", "/"]
+COPY ["kernel-crawler/docker-desktop-filter-kernels.sh", "/"]
+COPY --from=build /go/bin/rhel-crawler /usr/bin/rhel-crawler
+COPY --from=build /usr/local/bin/7z* /usr/local/bin/
+
+# RHEL crawler bits
+RUN dnf --disablerepo='*' makecache \
+ && dnf install -y --skip-broken subscription-manager
+
+COPY kernel-crawler/rhel-login/69.pem /etc/pki/product-default/69.pem
+COPY kernel-crawler/rhel-login/290.pem /etc/pki/product/290.pem
+COPY kernel-crawler/rhel-login/entrypoint /rhel-login/entrypoint
+
+COPY kernel-crawler/rhel-subscription-crawler/ /rhel-subscription-crawler/
+
+ENTRYPOINT ["python3", "kernel-crawler.py"]

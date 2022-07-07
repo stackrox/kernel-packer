@@ -26,20 +26,43 @@ crawl-centos: build-crawl-container
 	docker run --rm -i kernel-crawler output-from-json removed < /tmp/centos_urls_tmp.json | sed -e '/^$$/d' | sort >> $(CRAWLED_PACKAGE_DIR)/centos-uncrawled.txt
 	rm /tmp/centos_urls_tmp.json
 
+.PHONY: crawl-centos-no-docker
+crawl-centos-no-docker:
+	python3 /kernel-crawler.py crawl CentOS --preserve-removed-urls < $(CRAWLED_PACKAGE_DIR)/centos.txt > /tmp/centos_urls_tmp.json
+	python3 /kernel-crawler.py output-from-json crawled < /tmp/centos_urls_tmp.json | sort > $(CRAWLED_PACKAGE_DIR)/centos.txt
+	# Inline sed is there to remove spurious blank lines
+	python3 /kernel-crawler.py output-from-json removed < /tmp/centos_urls_tmp.json | sed -e '/^$$/d' | sort >> $(CRAWLED_PACKAGE_DIR)/centos-uncrawled.txt
+	rm /tmp/centos_urls_tmp.json
+
 .PHONY: crawl-kops
 crawl-kops: build-crawl-container
 	# The kbuild tools are required for each major version of the kernel for Debian.
 	echo 'http://http.us.debian.org/debian/pool/main/l/linux-tools/linux-kbuild-4.4_4.4-4~bpo8+1_amd64.deb' > $(CRAWLED_PACKAGE_DIR)/kops.txt
 	docker run --rm -i --entrypoint python3 kernel-crawler repo-crawler.py --print apt http://dist.kope.io/apt jessie main --match-prefix=Package=linux-headers-4 | sort >> $(CRAWLED_PACKAGE_DIR)/kops.txt
 
+.PHONY: crawl-kops-no-docker
+crawl-kops-no-docker:
+	# The kbuild tools are required for each major version of the kernel for Debian.
+	echo 'http://http.us.debian.org/debian/pool/main/l/linux-tools/linux-kbuild-4.4_4.4-4~bpo8+1_amd64.deb' > $(CRAWLED_PACKAGE_DIR)/kops.txt
+	python3 /repo-crawler.py --print apt http://dist.kope.io/apt jessie main --match-prefix=Package=linux-headers-4 | sort >> $(CRAWLED_PACKAGE_DIR)/kops.txt
+
 .PHONY: crawl-gardenlinux
 crawl-gardenlinux: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Garden-Linux >$(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
 	docker run --rm -i --entrypoint python3 kernel-crawler garden-crawler.py >> $(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
 
+.PHONY: crawl-gardenlinux-no-docker
+crawl-gardenlinux-no-docker:
+	python3 /kernel-crawler.py crawl Garden-Linux >$(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
+	python3 /garden-crawler.py >> $(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
+
 .PHONY: crawl-debian
 crawl-debian: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Debian > $(CRAWLED_PACKAGE_DIR)/debian.txt
+
+.PHONY: crawl-debian-no-docker
+crawl-debian-no-docker:
+	python3 /kernel-crawler.py crawl Debian > $(CRAWLED_PACKAGE_DIR)/debian.txt
 
 .PHONY: crawl-amazon
 crawl-amazon: build-crawl-container
@@ -52,31 +75,66 @@ crawl-amazon: build-crawl-container
 		http://amazonlinux.us-west-2.amazonaws.com/2/extras/kernel-5.4/latest/x86_64/mirror.list \
 		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon-extras.txt
 
+.PHONY: crawl-amazon-no-docker
+crawl-amazon-no-docker:
+	# Amazon doesn't actually publish a GPG signature for the package manifest, so
+	# we don't actually supply that argument here.
+	python3 /repo-crawler.py --print yum \
+		http://amazonlinux.us-west-2.amazonaws.com/2/core/latest/x86_64/mirror.list \
+		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon.txt
+	python3 /repo-crawler.py --print yum \
+		http://amazonlinux.us-west-2.amazonaws.com/2/extras/kernel-5.4/latest/x86_64/mirror.list \
+		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon-extras.txt
+
 .PHONY: crawl-ubuntu-hwe
 crawl-ubuntu-hwe: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-HWE > $(CRAWLED_PACKAGE_DIR)/ubuntu-hwe.txt
+
+.PHONY: crawl-ubuntu-hwe-no-docker
+crawl-ubuntu-hwe-no-docker:
+	python3 /kernel-crawler.py crawl Ubuntu-HWE > $(CRAWLED_PACKAGE_DIR)/ubuntu-hwe.txt
 
 .PHONY: crawl-ubuntu-gke
 crawl-ubuntu-gke: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-GKE > $(CRAWLED_PACKAGE_DIR)/ubuntu-gke.txt
 
+.PHONY: crawl-ubuntu-gke-no-docker
+crawl-ubuntu-gke-no-docker:
+	python3 /kernel-crawler.py crawl Ubuntu-GKE > $(CRAWLED_PACKAGE_DIR)/ubuntu-gke.txt
+
 .PHONY: crawl-ubuntu-gcp
 crawl-ubuntu-gcp: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-GCP > $(CRAWLED_PACKAGE_DIR)/ubuntu-gcp.txt
+
+.PHONY: crawl-ubuntu-gcp-no-docker
+crawl-ubuntu-gcp-no-docker:
+	python3 /kernel-crawler.py crawl Ubuntu-GCP > $(CRAWLED_PACKAGE_DIR)/ubuntu-gcp.txt
 
 .PHONY: crawl-ubuntu-azure
 crawl-ubuntu-azure: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt
 
+.PHONY: crawl-ubuntu-azure-no-docker
+crawl-ubuntu-azure-no-docker:
+	python3 /kernel-crawler.py crawl Ubuntu-Azure > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure.txt
+
 .PHONY: crawl-ubuntu-aws
 crawl-ubuntu-aws: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
+
+.PHONY: crawl-ubuntu-aws-no-docker
+crawl-ubuntu-aws-no-docker:
+	python3 /kernel-crawler.py crawl Ubuntu-AWS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws.txt
 
 crawl-ubuntu-esm: export UBUNTU_ESM_INFRA_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-esm-infra-token)
 
 .PHONY: crawl-ubuntu-esm
 crawl-ubuntu-esm: build-crawl-container
 	docker run --rm -i -e UBUNTU_ESM_INFRA_BEARER_TOKEN kernel-crawler crawl Ubuntu-ESM > $(CRAWLED_PACKAGE_DIR)/ubuntu-esm.txt
+
+.PHONY: crawl-ubuntu-esm-no-docker
+crawl-ubuntu-esm-no-docker:
+	python3 /kernel-crawler.py crawl Ubuntu-ESM > $(CRAWLED_PACKAGE_DIR)/ubuntu-esm.txt
 
 crawl-ubuntu-fips: export UBUNTU_FIPS_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-fips-token $(UBUNTU_FIPS_ATTACH_URL))
 crawl-ubuntu-fips: export UBUNTU_FIPS_UPDATES_BEARER_TOKEN = $(shell $(ROOT_DIR)/scripts/ubuntu-fips-token $(UBUNTU_FIPS_UPDATES_ATTACH_URL))
@@ -94,17 +152,42 @@ crawl-ubuntu-aws-fips: build-crawl-container
 crawl-ubuntu-azure-fips: build-crawl-container
 	docker run --rm -i -e UBUNTU_FIPS_BEARER_TOKEN -e UBUNTU_FIPS_UPDATES_BEARER_TOKEN kernel-crawler crawl Ubuntu-Azure-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure-fips.txt
 
+.PHONY: crawl-ubuntu-fips-no-docker
+crawl-ubuntu-fips-no-docker: crawl-ubuntu-gcp-fips-no-docker crawl-ubuntu-aws-fips-no-docker crawl-ubuntu-azure-fips-no-docker
+	python3 /kernel-crawler.py crawl Ubuntu-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-fips.txt
+
+crawl-ubuntu-gcp-fips-no-docker:
+	python3 /kernel-crawler.py crawl Ubuntu-GCP-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-gcp-fips.txt
+
+crawl-ubuntu-aws-fips-no-docker:
+	python3 /kernel-crawler.py crawl Ubuntu-AWS-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-aws-fips.txt
+
+crawl-ubuntu-azure-fips-no-docker:
+	python3 /kernel-crawler.py crawl Ubuntu-Azure-FIPS > $(CRAWLED_PACKAGE_DIR)/ubuntu-azure-fips.txt
+
 .PHONY: crawl-oracle-uek
 crawl-oracle-uek: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Oracle-UEK5 > $(CRAWLED_PACKAGE_DIR)/oracle-uek.txt
+
+.PHONY: crawl-oracle-uek-no-docker
+crawl-oracle-uek-no-docker:
+	python3 /kernel-crawler.py crawl Oracle-UEK5 > $(CRAWLED_PACKAGE_DIR)/oracle-uek.txt
 
 .PHONY: crawl-flatcar
 crawl-flatcar: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Flatcar > $(CRAWLED_PACKAGE_DIR)/flatcar.txt
 
+.PHONY: crawl-flatcar-no-docker
+crawl-flatcar-no-docker:
+	python3 /kernel-crawler.py crawl Flatcar > $(CRAWLED_PACKAGE_DIR)/flatcar.txt
+
 .PHONY: crawl-flatcar-beta
 crawl-flatcar-beta: build-crawl-container
 	docker run --rm -i kernel-crawler crawl Flatcar-Beta > $(CRAWLED_PACKAGE_DIR)/flatcar-beta.txt
+
+.PHONY: crawl-flatcar-beta-no-docker
+crawl-flatcar-beta-no-docker:
+	python3 /kernel-crawler.py crawl Flatcar-Beta > $(CRAWLED_PACKAGE_DIR)/flatcar-beta.txt
 
 .PHONY: crawl-suse
 crawl-suse: build-crawl-container
@@ -120,14 +203,29 @@ crawl-suse: build-crawl-container
 			-repos-names-file /suse/repo-names.txt \
 		> $(CRAWLED_PACKAGE_DIR)/suse.txt
 
+.PHONY: crawl-suse-no-docker
+crawl-suse-no-docker:
+	# Get repository auth tokens using SUSE mirroring proxy user/password credentials
+	@mkdir -p $(BUILD_DATA_DIR)/suse-repo-tokens
+	./suse/get-repo-tokens.sh > $(BUILD_DATA_DIR)/suse-repo-tokens/repos.json
+	/usr/bin/rhel-crawler \
+			-repos-file $(BUILD_DATA_DIR)/suse-repo-tokens/repos.json \
+			-repos-names-file $(ROOT_DIR_ABS)/kernel-crawler/suse/repo-names.txt \
+		> $(CRAWLED_PACKAGE_DIR)/suse.txt
+
 .PHONY: build-rhsm-crawler
 build-rhsm-crawler:
 	docker build --tag rhsm-crawler $(CURDIR)/rhel-subscription-crawler
 
-
 .PHONY: crawl-rhsm
 crawl-rhsm: build-rhsm-crawler
 	docker run -e RHSM_OFFLINE_TOKEN --rm -i -v $(CRAWLED_PACKAGE_DIR):/kernel-package-lists:ro rhsm-crawler:latest > $(CRAWLED_PACKAGE_DIR)/rhel.txt
+	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
+
+.PHONY: crawl-rhsm-no-docker
+crawl-rhsm-no-docker:
+	ls $(CRAWLED_PACKAGE_DIR)/rhel.txt > "/tmp/rhel_package_lists.txt"
+	/rhel-subscription-crawler/crawl.sh /tmp/rhel_package_lists.txt > $(CRAWLED_PACKAGE_DIR)/rhel.txt
 	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
 
 .PHONY: crawl-rhel
@@ -246,6 +344,98 @@ crawl-rhel: build-crawl-container
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
 		--entrypoint /usr/bin/rhel-crawler \
 		kernel-crawler:latest \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.5/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.5.txt
+
+.PHONY: crawl-rhel-no-docker
+crawl-rhel-no-docker:
+	# Trade a username & password for a certificate keypair that allows up to
+	# authenticate with the RHEL package repos.
+	@mkdir -p $(BUILD_DATA_DIR)/rhel-certs
+	sudo /rhel-login/entrypoint
+	| tar -C $(BUILD_DATA_DIR)/rhel-certs -xf -
+
+	# Crawl for RHEL 6 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel/server/6/6Server/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel6.txt
+
+	# Crawl for RHEL 7 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel7.txt
+
+	# Crawl for RHEL 8 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel8/8/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8.txt
+
+	# Crawl for RHEL 8.1 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel8/8.1/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel81.txt
+
+	# Crawl for RHEL 8.2 kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/rhel8/8.2/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel82.txt
+
+	# Crawl for RHEL 7.6 EUS (Extended Update Support) kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/eus/rhel/server/7/7.6/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel76-eus.txt
+
+	# Crawl for RHEL 8.1 EUS (Extended Update Support) kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/eus/rhel8/8.1/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel81-eus.txt
+
+	# Crawl for RHEL 8.2 EUS (Extended Update Support) kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/eus/rhel8/8.2/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel82-eus.txt
+
+	# Crawl for RHEL 8.4 EUS (Extended Update Support) kernel-devel packages.
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/eus/rhel8/8.4/x86_64/baseos/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel84-eus.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.3 for RHEL 8 x86_64 (rhocp-4.3-for-rhel-8-x86_64-rpms)
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.3/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.3.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.4 for RHEL 8 x86_64 (rhocp-4.4-for-rhel-8-x86_64-rpms)
+	/usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.4/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.4.txt
+
+	## Crawl for Red Hat OpenShift Container Platform 4.5 for RHEL 8 x86_64 (rhocp-4.5-for-rhel-8-x86_64-rpms)
+	/usr/bin/rhel-crawler \
 			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.5/os \
 			-cert /rhel-certs/rhel-cert.pem \
 			-key /rhel-certs/rhel-key.pem \
