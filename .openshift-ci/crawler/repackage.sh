@@ -14,6 +14,7 @@ mkdir -p ${ROOT_DIR}
 mkdir -p ${ROOT_DIR}/.build-data/cache
 touch ${ROOT_DIR}/.build-data/cache/cache.yml
 cat ${ROOT_DIR}/.build-data/cache/cache.yml
+cp ${ARTIFACT_DIR}/kernel-package-lists/manifest.yaml kernel-package-lists/manifest.yml
 cat kernel-package-lists/manifest.yml
 
 echo "List files..."
