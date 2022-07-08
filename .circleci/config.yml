@@ -351,7 +351,6 @@ workflows:
     - lint:
         context:
           - quay-rhacs-eng-readonly
-          - docker-io-pull
     - crawl:
         name: crawl-build
         <<: *crawlContext
@@ -360,7 +359,6 @@ workflows:
     - crawl-status:
         context:
           - quay-rhacs-eng-readonly
-          - docker-io-pull
         requires:
           - crawl-build
     - repackage:
@@ -369,13 +367,11 @@ workflows:
     - combine:
         context:
           - quay-rhacs-eng-readonly
-          - docker-io-pull
         requires:
         - repackage
     - collector:
         context:
           - quay-rhacs-eng-readonly
-          - docker-io-pull
         requires:
         - combine
         filters:
@@ -392,7 +388,6 @@ workflows:
     - crawl-status:
         context:
           - quay-rhacs-eng-readonly
-          - docker-io-pull
         requires:
           - crawl-cron
     triggers:
