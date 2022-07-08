@@ -14,7 +14,7 @@ mkdir -p ${ROOT_DIR}
 mkdir -p ${ROOT_DIR}/.build-data/cache
 touch ${ROOT_DIR}/.build-data/cache/cache.yml
 cat ${ROOT_DIR}/.build-data/cache/cache.yml
-cp ${ARTIFACT_DIR}/kernel-package-lists/manifest.yaml kernel-package-lists/manifest.yml
+cp ${SHARED_DIR}/kernel-package-lists/manifest.yaml kernel-package-lists/manifest.yml
 cat kernel-package-lists/manifest.yml
 
 echo "List files..."
@@ -33,5 +33,5 @@ ls -lhR .build-data/bundles
 echo "Upload bundles..."
 make SHELL="sh -x" upload-bundles
 
-cp -r .build-data/gsutil-download.log ${ARTIFACT_DIR}/build-data/
-cp -r .build-data/cache ${ARTIFACT_DIR}/build-data/cache
+cp -r .build-data/gsutil-download.log ${SHARED_DIR}/build-data/
+cp -r .build-data/cache ${SHARED_DIR}/build-data/cache
