@@ -1483,6 +1483,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.47.1.el8_2.x86_64.rpm
+02ee0ffcaa2e190cf5b01085c808a09dcf0ed2ab4ffb8d67ebd28e7c8e0c1d80:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-189-generic_4.15.0-189.200-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-189_4.15.0-189.200-16.04.1_all.deb
 3c0b58ff02475723328e3bddf50c270bf464ac60153e5f5741806f3429fc800c:
   type: suse
   packages:
@@ -11095,6 +11100,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2020-azure-fips_4.15.0-2020.23_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2020_4.15.0-2020.23_all.deb
+83481d85c4f20cb5d23f14c181bd2a1feb6808f6695e5fd687384d418a699382:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1057-fips_5.4.0-1057.65_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1057_5.4.0-1057.65_all.deb
 83893a71a529e31db5770888559577a45c80fb6530b7b1258bdaa2d2cca6b5ae:
   type: redhat
   packages:
@@ -11287,10 +11297,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d59c3695e9b79c253a02ee63051880df267700db4180ff05f97b28b095085791-kernel-devel-4.14.133-113.105.amzn2.x86_64.rpm
-308077b773b44875a31a8e94b3e492f969b81df4c05b79190a56c1e10bf9a444:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.0-flatcar_developer_container.bin.bz2
 314909f5d92a825bfa0261bc0f6725429c3d66026597ff3e12b03aa390145e3a:
   type: ubuntu
   packages:
@@ -14767,6 +14773,11 @@ c2fc1538bb050138aa4b5d3c7b5fce64aece281ca31d20414062fd5af4f7a3e7:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2039-azure-fips_4.15.0-2039.43_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2039_4.15.0-2039.43_all.deb
+c2ac4814db95d8c6b4026f352485744e673b8ca874c6cc67d69ae197a1084fd5:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2076-aws-fips_4.15.0-2076.81_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2076_4.15.0-2076.81_all.deb
 c2fd4dd758d72470aae0b256abb0c757085ebf3153b016d821f3a2c047a6f820:
   type: cos
   packages:
@@ -18920,6 +18931,10 @@ f6449db97fe9af5571c475b3b9c93797a1e63b0fe9ca2e45591c8976cb1b8a0c:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-headers-5.3.0-1022-azure_5.3.0-1022.23-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-azure-5.3-headers-5.3.0-1022_5.3.0-1022.23-18.04.1_all.deb
+f6460a913fad00f2981d5788abf03d74fc8c3dfdc992cee07a3295479386ff63:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2303.3.0-flatcar_developer_container.bin.bz2
 f7695fbdb3469e9e998dced58b5172943c0269ac898029621c42517d7fe555e8:
   type: ubuntu
   packages:
@@ -18997,6 +19012,11 @@ f743747da1e898883b144f076f71fcf62fa6f0e5e5f893e858978a607733c8ea:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1071_5.4.0-1071.76_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1071-gcp_5.4.0-1071.76_amd64.deb
+f792929fb17f8265e805132d0058e6ee587072c170ef825de056c2e4826a9e3b:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1094-fips_4.15.0-1094.105_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1094_4.15.0-1094.105_all.deb
 f799867a2a4f8942e4d7df849447268f67170fa729e9fb7eef9eb58442649449:
   type: redhat
   packages:
