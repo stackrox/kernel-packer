@@ -2224,10 +2224,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1078-fips_4.15.0-1078.87_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1078_4.15.0-1078.87_all.deb
-4c686154fa775daeefd262baedc3b1be538f7f5d29649fa856cd2d687baa5a88:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.1-flatcar_developer_container.bin.bz2
 4c763746ac40dbb660b59a9d851170126a473048dc41fdda8864638a6b0e7389:
   type: ubuntu
   packages:
@@ -3479,6 +3475,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-157-generic_4.4.0-157.185_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-157_4.4.0-157.185_all.deb
+7a12fc5d3d949848784c289c8f5082505e535a39e3fe45de4b2f4c5d4cbe3147:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-372.16.1.el8_6.x86_64.rpm
 7c13ce524500f942914aa19d4f84c837c6345ad78aa760719f2caceda38dfbad:
   type: ubuntu
   packages:
@@ -6047,6 +6047,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1083_4.15.0-1083.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1083-gcp_4.15.0-1083.94_amd64.deb
+47a20f6ca20ae19efed2b1650b4ba4d624cdec701d782f1f6046f5a74f751b9a:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
 47f95e49161e337bab8ae59d1f16fc85ad58a558d67e763617b03d7d37ea7093:
   type: redhat
   packages:
@@ -6094,6 +6098,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1129-azure_4.15.0-1129.142_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1129_4.15.0-1129.142_all.deb
+48c9ea6e5dc2ab0df7263bc0aecfe22cc1d7f9f26060024127c67c43c1ea9025:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.127.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.127.1.x86_64.rpm
 48d82d46bbc8bf4ccadf33ba700ef5148b06aab1bd275b6760909b3c01706e97:
   type: redhat
   packages:
@@ -7614,6 +7623,10 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10895.23.0-kernel-src.tar.gz
+95d3e392a811e612b4323ebd6b0adf72ed2ffb6d244706c44f65d3fe52ac3991:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-bfe653328263858434fee4f634952f169dc5f8e5dd5b9d751176090757b9ff87-download
 95f7e91e0c87baab254ba5e8b835459f204f2fda914653f87ae56de7aa6d7dd8:
   type: redhat
   packages:
@@ -10160,6 +10173,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1056-azure_5.4.0-1056.58_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1056_5.4.0-1056.58_all.deb
+7278d11ff1f1027f790f857b7c8664ebe964210f828d612e97c9864d457fcc47:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-e8eaa49ee87f3afec7b51d878a3ae0fab6eca08dab95f9d6699961e71cd560f8-download
 7312f9d999fb84895f16318f25c25bf77490abac35732cc8529d0ff7cfaa2376:
   type: cos
   packages:
@@ -16379,6 +16396,10 @@ d092e20b1bc316749b825e28e73e75af6e5b3ae8faa0d90508d8487ed4fdeca1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-gcp-5.15-headers-5.15.0-1012_5.15.0-1012.17-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-headers-5.15.0-1012-gcp_5.15.0-1012.17-20.04.1_amd64.deb
+d93b74cb6243d0df3a8527a030bd16e72cbe819cbcd0d46678e549a47a49920f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3185.1.0-flatcar_developer_container.bin.bz2
 d93e958063fbdec414772dea150e68bbf8fb28278da0ccc48a93bb09a699c77a:
   type: redhat
   packages:
