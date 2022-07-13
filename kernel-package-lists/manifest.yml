@@ -2153,10 +2153,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-115-generic_4.15.0-115.116_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-115_4.15.0-115.116_all.deb
-4e82c8056323495fbb60362bab525e6f4062b53c1a3daf042f8b823f277ad927:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.9.0-flatcar_developer_container.bin.bz2
 4b87e8cb924bdff1bd2bca47aa80c16264c645052f28569dc6bf37adfc652196:
   type: ubuntu
   packages:
@@ -7774,10 +7770,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-693.2.1.el7.x86_64.rpm
-101ffdd037d151569cc7d95d1e558c384d8fc3b4e79a56d8de3216eb4ff6e14e:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2303.3.1-flatcar_developer_container.bin.bz2
 104ba2c9c7dfe170ebbff363aeb095129cdf03e9cef8adc1e8498ff71743061c:
   type: redhat
   packages:
@@ -13056,6 +13048,10 @@ a75504816ca2eeacbaccb2a73a705f4de9897f37e9cdfb76a1bdc8142dc66702:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-25-generic_5.15.0-25.25_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-25_5.15.0-25.25_all.deb
+a91458588db4f691878129e1869cce5046983cc19465341820ca487e6e53b924:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.18.11-100.fc35-x86_64-kernel-devel-5.18.11-100.fc35.x86_64.rpm
 a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
   type: coreos
   packages:
@@ -17225,6 +17221,10 @@ e2c5564265705afeff7d17e7bd1a2b37c486664f0766669e3fd01378ea944b8d:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10323.64.0-kernel-src.tar.gz
+e2eaba8930eb7a6ece237a7516330c0baff3d81fc07cf4d61576f1d1e1d8263f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.18.11-200.fc36-x86_64-kernel-devel-5.18.11-200.fc36.x86_64.rpm
 e2dbcaf55718b476434beb1dad3738508521d3347ec0fa3ecc25c0d5b95be5da:
   type: redhat
   packages:
