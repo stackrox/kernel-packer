@@ -277,6 +277,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
+0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0da44486150e5952bbbbfd2cb7424f6a47366f572785c10adc31e2dc69a09c6f:
   type: redhat
   packages:
@@ -12899,6 +12903,11 @@ a707b8e046c817d56dcbc3cc1a5d6d052c8cc95f5437df6b154e6a44830ae40b:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.65.1.el7.x86_64.rpm
+a716a387f606692e1cd7b805072a15badf645fc3723c2d077fd1e2a9c529903f:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150000.150.95.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150000.150.95.1.x86_64.rpm
 a781c8a2285e46362074aea67e5e4e61bafb1096e751563301405a67e064fae3:
   type: ubuntu
   packages:
