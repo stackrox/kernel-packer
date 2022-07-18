@@ -272,10 +272,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
-0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0da44486150e5952bbbbfd2cb7424f6a47366f572785c10adc31e2dc69a09c6f:
   type: redhat
   packages:
@@ -788,6 +784,10 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-3033.2.3-flatcar_developer_container.bin.bz2
+1eacf4fdacfd90f9fc71b831fa15893b05b17419b0b7b9becbfaa1c8f8a1cb2c:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.7.0-flatcar_developer_container.bin.bz2
 1fafc8746cba8726bccafe39e5be1a10ec83c866cbbcad39bbd4d20093aed9c4:
   type: redhat
   packages:
@@ -2172,6 +2172,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-2440a50a3c88180ac239a5d53a633e437ce45de8a56e45bff61c2c7dcd4ae7b1-download
+4a3718d2d33f14cda38509cf304013bfb39ed235ff4cab21fcd205a6c6005238:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.2-flatcar_developer_container.bin.bz2
 4b5591e4a11e7d6b028bedf33dde57ed3889396158de225952637b65b02911cc:
   type: cos
   packages:
@@ -2196,6 +2200,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1078-fips_4.15.0-1078.87_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1078_4.15.0-1078.87_all.deb
+4c686154fa775daeefd262baedc3b1be538f7f5d29649fa856cd2d687baa5a88:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.1-flatcar_developer_container.bin.bz2
 4c763746ac40dbb660b59a9d851170126a473048dc41fdda8864638a6b0e7389:
   type: ubuntu
   packages:
@@ -10477,6 +10485,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1044-aws_4.15.0-1044.46_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1044_4.15.0-1044.46_all.deb
+13448d0c5bbe6efdb1617c6e014f851477621e52e99447d775e751de5017f4ae:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-13310.1498.3-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-13310.1498.3-kernel-headers.tgz
 013759a577fb67679a8372394e323064ea52364869a6f25fc3e6c5be22a05a87:
   type: ubuntu
   packages:
@@ -10912,6 +10925,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12239.21.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.21.0-kernel-headers.tgz
+64284c43d9068d40c3a9298d1f65c59276f6235222a522ddc3ed1545f183aa9b:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.717.3-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.717.3-kernel-headers.tgz
 64373e57e933583442a7b4a4088aeb7b3acc7291dcb4c8643fcfb10a87a223a5:
   type: redhat
   packages:
