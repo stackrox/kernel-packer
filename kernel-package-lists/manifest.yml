@@ -788,10 +788,6 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-3033.2.3-flatcar_developer_container.bin.bz2
-1eacf4fdacfd90f9fc71b831fa15893b05b17419b0b7b9becbfaa1c8f8a1cb2c:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.7.0-flatcar_developer_container.bin.bz2
 1fafc8746cba8726bccafe39e5be1a10ec83c866cbbcad39bbd4d20093aed9c4:
   type: redhat
   packages:
@@ -2176,10 +2172,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-2440a50a3c88180ac239a5d53a633e437ce45de8a56e45bff61c2c7dcd4ae7b1-download
-4a3718d2d33f14cda38509cf304013bfb39ed235ff4cab21fcd205a6c6005238:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.2-flatcar_developer_container.bin.bz2
 4b5591e4a11e7d6b028bedf33dde57ed3889396158de225952637b65b02911cc:
   type: cos
   packages:
@@ -2204,10 +2196,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1078-fips_4.15.0-1078.87_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1078_4.15.0-1078.87_all.deb
-4c686154fa775daeefd262baedc3b1be538f7f5d29649fa856cd2d687baa5a88:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.1-flatcar_developer_container.bin.bz2
 4c763746ac40dbb660b59a9d851170126a473048dc41fdda8864638a6b0e7389:
   type: ubuntu
   packages:
@@ -11330,6 +11318,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-gcp-fips-headers-4.15.0-2019_4.15.0-2019.21_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-headers-4.15.0-2019-gcp-fips_4.15.0-2019.21_amd64.deb
+536599e640b01364c4ea653ee2b67e8408d4c8ae2eff86aa876ab2d762b2ec70:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.103.16-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.103.16-kernel-headers.tgz
 538648e0887a65a4b11ada3b11f3f5a5fe613aae9b69190cc6ccc5e7e008a808:
   type: ubuntu
   packages:
@@ -12340,6 +12333,10 @@ a2e2e9952ce8d5e9f7f6b7adc3d5de8a32488d7e9006a47d311ee03e36072637:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1036-azure_4.15.0-1036.38_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1036_4.15.0-1036.38_all.deb
+a2b3b666e16daf31949d339d10458f26801a1a9731223f41c5cbdf074c43cd11:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.1-flatcar_developer_container.bin.bz2
 a2ac9654047f0098e9bfddac39fbbdc0048baab710a334b50281e84c14ec65c7:
   type: coreos
   packages:
@@ -14688,6 +14685,11 @@ c1a0e435a9f2e72f43f87e551e773af27cf45894330560a5d9eb885d0ccef20b:
   packages:
   - https---storage.googleapis.com-cos-tools-11647.501.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11647.501.0-kernel-headers.tgz
+c1a8bcbe82f8b9f58ff558c4ce7116f0afa7cb6226f0ae9d0e76b2029064f549:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.227.6-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.227.6-kernel-headers.tgz
 c1b574c87affb51f788fe739b25e2eff4c89ba8d4bb569357ee34f3adca77ffb:
   type: coreos
   packages:
@@ -15616,6 +15618,11 @@ cdba836eef2b3cd73b6ba85cc16d944a07d90d9b0ced85e8724ddc03dd5c1c53:
   packages:
   - https---storage.googleapis.com-cos-tools-12371.1109.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12371.1109.0-kernel-headers.tgz
+cdbb37331ac94c748f137bb5d32c9c4bce0e362a48098f81c6e29d3eb80ca1b7:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17148.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17148.0.0-kernel-headers.tgz
 cdc921469c73ae2df56ad9c271309ed8448d71e06a79f943fe724024c98afd95:
   type: ubuntu
   packages:
