@@ -115,6 +115,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69-generic_4.15.0-69.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69_4.15.0-69.78_all.deb
+0e23f898b0340790eab712e6b7a22730cde0392c52c56bf5b6326a0f925e4c45:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2135.4.0-flatcar_developer_container.bin.bz2
 0e27c2964869a4d58bcf67d0ce057baefe30338b26173dc1f0daaf722e91a9f4:
   type: redhat
   packages:
@@ -268,10 +272,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
-0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0da44486150e5952bbbbfd2cb7424f6a47366f572785c10adc31e2dc69a09c6f:
   type: redhat
   packages:
@@ -8258,11 +8258,6 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10176.7.0-kernel-src.tar.gz
-391f7c7049362f2d41670d3cdb1fce11748bad66dcf8a13872406930a571720c:
-  type: ubuntu
-  packages:
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1131-azure_4.15.0-1131.144-16.04.1_amd64.deb
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1131_4.15.0-1131.144-16.04.1_all.deb
 391b16dafc840bad6e5efc5ab8a31b9f459f497ba26b513c8821abe7b4878993:
   type: redhat
   packages:
@@ -8767,6 +8762,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53-generic_4.4.0-53.74_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53_4.4.0-53.74_all.deb
+657e47a5a57124a0fc46ccb5c8b5834e7fa48e56d53f54e9e342540c09d83184:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.2-flatcar_developer_container.bin.bz2
 660a0764b101c3bdf2db3cd4c4a336cdf05205316cf557cc789ef7e69f49934b:
   type: ubuntu
   packages:
@@ -13917,6 +13916,11 @@ b43d173ac6682aa8ca5d5715aaa18f33f5b68791e9fe85d4a34f6be890854c36:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1013-aws_5.15.0-1013.17_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1013_5.15.0-1013.17_all.deb
+b45a8ddfabc05304c377232a42feeb978cba894a23e9f4fe53d7331c0447934d:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1131_4.15.0-1131.147-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1131-gcp_4.15.0-1131.147-16.04.1_amd64.deb
 b55c7517789f7b70494584d63b1b3a76e595ae6bb1a83488df38188f54bff250:
   type: ubuntu
   packages:
@@ -16316,6 +16320,10 @@ d87cbebd71866facd2f4d68bee8eaf7fd0a317416277e0cd4851126cef6fbb72:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1019_4.15.0-1019.20-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1019-gcp_4.15.0-1019.20-16.04.1_amd64.deb
+d89b43be036f05287304902d7bc6aac1993c0bcc2a144fe67b9dbe5db4218dc4:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2920.1.0-flatcar_developer_container.bin.bz2
 d090bdb5ffdfc998ece1a98151b5429713d8835594b075479b9e5b4d09ea3db5:
   type: ubuntu
   packages:
