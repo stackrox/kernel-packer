@@ -788,6 +788,10 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-3033.2.3-flatcar_developer_container.bin.bz2
+1eacf4fdacfd90f9fc71b831fa15893b05b17419b0b7b9becbfaa1c8f8a1cb2c:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.7.0-flatcar_developer_container.bin.bz2
 1fafc8746cba8726bccafe39e5be1a10ec83c866cbbcad39bbd4d20093aed9c4:
   type: redhat
   packages:
@@ -2269,10 +2273,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-headers.tgz
-4ab969585b132e1736a69c888c6146fc84b2f1692a1fbdc17a2e80db93242770:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.0-flatcar_developer_container.bin.bz2
 4fb12689714a9881c48d70ef60c7800ec63e9b1a7b842fecf27225d68e8f49ad:
   type: ubuntu
   packages:
@@ -4511,6 +4511,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1061-azure_5.4.0-1061.64_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1061_5.4.0-1061.64_all.deb
+9e98f11a6c8da08677d58cbf148cbe209cdde8ae3425b96a5676c3fbbe684861:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-b7bc6d05e2a84c6f3f8ba0b61db2c9cb04e8c2cfe03ad45c56cc5a038733cebd-download
 9e113ee8967d4901fee31d31c0fefda74cc2888b00d8e61aa55c7702806854c2:
   type: ubuntu
   packages:
@@ -16918,10 +16922,6 @@ dddbbf0d247183e9b32794b1b31c1725c521676d4ac8f2f4632dccec55d48d6d:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-ae757f139e69f930fe9f703974265e913367cc2c798b69d5dd5cf062992c80e4-kernel-devel-4.9.75-1.56.amzn2.x86_64.rpm
-dde8c31179c6c1a2d6d25620988ff5351e81832f9ed58751f9c7c8e60f8b3976:
-  type: redhat
-  packages:
-  - https---api.access.redhat.com-management-v1-packages-8aa4198c8cec192a196121ba6ff96eec203aeb60b671b238db9eb26674b833f9-download
 de0bdfde27e761f4d352cf24011931ae61509016a7d540ee951676d6dc2d77f7:
   type: redhat
   packages:
