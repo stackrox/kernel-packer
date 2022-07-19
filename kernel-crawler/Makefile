@@ -124,7 +124,6 @@ crawl-suse: build-crawl-container
 build-rhsm-crawler:
 	docker build --tag rhsm-crawler $(CURDIR)/rhel-subscription-crawler
 
-
 .PHONY: crawl-rhsm
 crawl-rhsm: build-rhsm-crawler
 	docker run -e RHSM_OFFLINE_TOKEN --rm -i -v $(CRAWLED_PACKAGE_DIR):/kernel-package-lists:ro rhsm-crawler:latest > $(CRAWLED_PACKAGE_DIR)/rhel.txt
