@@ -2133,6 +2133,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-115-generic_4.15.0-115.116_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-115_4.15.0-115.116_all.deb
+4e82c8056323495fbb60362bab525e6f4062b53c1a3daf042f8b823f277ad927:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.9.0-flatcar_developer_container.bin.bz2
 4b87e8cb924bdff1bd2bca47aa80c16264c645052f28569dc6bf37adfc652196:
   type: ubuntu
   packages:
@@ -3794,6 +3798,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.245-1.el7.elrepo.x86_64.rpm
+7cf14df48e2f0ba58786a2859d0c37b02942a0d0e4ecd1521c0f015b00bc7cac:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.4.0-flatcar_developer_container.bin.bz2
 7af45a4b89dcc72e5ac617b524f5a73b1384c789e64fef2f1d48b13c605b9849:
   type: ubuntu
   packages:
@@ -9590,6 +9598,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.37.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.37.1.x86_64.rpm
+3573e6d012b234c4632add4cfff09a42e697e0e16962a2ebc283ba9d03d01e2a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-10-generic_5.19.0-10.10_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-10_5.19.0-10.10_all.deb
 3610a0cbb215361e81e02e6e358e7ebfb6b080fe445ff466e9606f8255594e8a:
   type: ubuntu
   packages:
