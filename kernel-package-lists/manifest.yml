@@ -2189,6 +2189,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-2440a50a3c88180ac239a5d53a633e437ce45de8a56e45bff61c2c7dcd4ae7b1-download
+4a3718d2d33f14cda38509cf304013bfb39ed235ff4cab21fcd205a6c6005238:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.2-flatcar_developer_container.bin.bz2
 4b5591e4a11e7d6b028bedf33dde57ed3889396158de225952637b65b02911cc:
   type: cos
   packages:
@@ -4774,6 +4778,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-de84c64ed45a9402a755cb22903f74c7bacc88296f1d67a0524e2f84d4d72126-download
+9cdd907f30a433945e7835ee099ab9176471f331ecbceb0a171e1a7bb76c602f:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-noarch-kernel-devel-5.14.21-150400.24.11.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-x86_64-kernel-default-devel-5.14.21-150400.24.11.1.x86_64.rpm
 9bdedbc7d29e5b5c168f385b274c5b8953cdc5a3d7ea7a8caa3744a014762b45:
   type: redhat
   packages:
@@ -7197,6 +7206,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1068-aws_5.4.0-1068.72_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1068_5.4.0-1068.72_all.deb
+83f4bb22f280012141a426efba2668f2410ba926c2b6654c8e095ecda8a70379:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2247.5.0-flatcar_developer_container.bin.bz2
 83b12e1b2d58ef101119e4097853de643dc2db896cde719fb18adae5063dd3bc:
   type: ubuntu
   packages:
@@ -9425,10 +9438,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.11-linux-headers-5.11.0-1029-azure_5.11.0-1029.32-20.04.2_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.11-linux-azure-5.11-headers-5.11.0-1029_5.11.0-1029.32-20.04.2_all.deb
-1767cd2af18cba1df6974b5a1207703dcbff484d9fe2a16148cebc071eb88ae5:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-3033.2.0-flatcar_developer_container.bin.bz2
 1850e45e030e3dc506b09f2dd7872f348f7ef4072110991d80a2f7e9279e2242:
   type: redhat
   packages:
@@ -19082,6 +19091,10 @@ fa7c05198c9aa55fc051e7c10b354f3ccb1aef114316dc8dc2729c352dceed55:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.5-100.fc33-x86_64-kernel-devel-5.13.5-100.fc33.x86_64.rpm
+fa8071ad81776b8f5fb8a46d32df7eec15a72976d37931559a1dd7f2904dd389:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2023.5.0-flatcar_developer_container.bin.bz2
 fa081978ecf2706def4b75914bd23d6772f67e16fa4b765c42b8733109254447:
   type: suse
   packages:
