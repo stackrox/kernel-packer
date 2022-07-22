@@ -322,10 +322,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-84-generic_5.4.0-84.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-84_5.4.0-84.94_all.deb
-0cc664ea580c5dadd282436af97f4a39ddb30636147148e8c3f55d43fa87cab9:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3277.1.0-flatcar_developer_container.bin.bz2
 0ac903e4b220c27ac9ff8d3a24feb22708f6fcff0f6fcae00193c2d7415a6d8b:
   type: debian
   packages:
@@ -2669,6 +2665,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1037-azure_4.15.0-1037.39_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1037_4.15.0-1037.39_all.deb
+5a6433b433cbad54ade8ac0345650a40281803d35e9f30cea62371def758c6d4:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3139.1.0-flatcar_developer_container.bin.bz2
 5b9713d3a0d93782731d802bcdbdd9876f01c84f7273b9d2158495e4157dc3db:
   type: ubuntu
   packages:
@@ -3808,6 +3808,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.245-1.el7.elrepo.x86_64.rpm
+7cf14df48e2f0ba58786a2859d0c37b02942a0d0e4ecd1521c0f015b00bc7cac:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.4.0-flatcar_developer_container.bin.bz2
 7af45a4b89dcc72e5ac617b524f5a73b1384c789e64fef2f1d48b13c605b9849:
   type: ubuntu
   packages:
