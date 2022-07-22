@@ -322,6 +322,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-84-generic_5.4.0-84.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-84_5.4.0-84.94_all.deb
+0cc664ea580c5dadd282436af97f4a39ddb30636147148e8c3f55d43fa87cab9:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3277.1.0-flatcar_developer_container.bin.bz2
 0ac903e4b220c27ac9ff8d3a24feb22708f6fcff0f6fcae00193c2d7415a6d8b:
   type: debian
   packages:
@@ -1150,6 +1154,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-263f38801af518399235b2206301fc5c1510bacce54b6bb1987bdae14384e4e8-download
+2d500ad5011923d6df7c2c3023fd160afb39664a7be862f66c09c5d9de471a89:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.18.13-100.fc35-x86_64-kernel-devel-5.18.13-100.fc35.x86_64.rpm
 2c553c81ee823123037e820d272d2c1644dff143b19d96326c14396883fe0181:
   type: ubuntu
   packages:
@@ -9330,6 +9338,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.14-300.fc34-x86_64-kernel-devel-5.11.14-300.fc34.x86_64.rpm
+997bb6d9d5f20c4b42e5d54487382ed2415fc5f41430d83142fd5d39695be053:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.18.13-200.fc36-x86_64-kernel-devel-5.18.13-200.fc36.x86_64.rpm
 999a50b8c4b308419413e363d93f0d03d489a6d182f24baa1fe4adc1a38a97bc:
   type: redhat
   packages:
@@ -10029,6 +10041,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.21.0-kernel-src.tar.gz
+6456c1e21d0fe636010e60c3c052304b8113da099d39a1ee85679641e13628f7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-gcp-5.15-headers-5.15.0-1015_5.15.0-1015.20-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-headers-5.15.0-1015-gcp_5.15.0-1015.20-20.04.1_amd64.deb
 6504b96be8e3bfd967c0ada734d713da7ac5ee1f990980e2dc88f6b55c19ebd1:
   type: redhat
   packages:
