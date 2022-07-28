@@ -5,11 +5,6 @@ main() {
     CRAWLED_PACKAGE_DIR="${1:-kernel-package-lists}"
     BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-    if [[ $BRANCH != "ddolgov-feature-crawling-on-vm" ]];
-    then
-        exit 0
-    fi;
-
     refresh_repo .
 
     # Check if there are actually any changes. If no files have been modified,
