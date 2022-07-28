@@ -1,7 +1,7 @@
 # The below variables ontain a comma delimited list of GCP buckets,
 # Scripts may read from all buckets but only write to the first bucket in the list.
-KERNEL_PACKAGE_STAGING_BUCKET="gs://stackrox-kernel-packages-staging/copy/"
-KERNEL_BUNDLE_STAGING_BUCKET="gs://stackrox-kernel-bundles-staging/copy/"
+KERNEL_PACKAGE_STAGING_BUCKET="gs://stackrox-kernel-packages-staging/copy"
+KERNEL_BUNDLE_STAGING_BUCKET="gs://stackrox-kernel-bundles-staging/copy"
 KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET}"
 KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET}"
 
