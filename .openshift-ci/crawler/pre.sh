@@ -9,4 +9,4 @@ source .openshift-ci/google-cloud-sdk/install.sh
 source .openshift-ci/google-cloud-sdk/init.sh
 
 .openshift-ci/gcp/create-vm.sh
-.openshift-ci/crawler/copy-init.sh
+.openshift-ci/crawler/bootstrap-vm.sh

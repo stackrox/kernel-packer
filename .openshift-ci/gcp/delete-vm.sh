@@ -2,12 +2,16 @@
 
 set -e
 
+function die() {
+    echo >&2 "$@"
+    exit 1
+}
+
 deleteGCPVM() {
     local GCP_VM_NAME="$1"
     shift
 
-    [ -z "$GCP_VM_NAME" ] && \
-        echo "error: missing parameter GCP_VM_NAME" && return 1
+    [ -z "$GCP_VM_NAME" ] && die "error: missing parameter GCP_VM_NAME"
 
     success=false
     for _ in {1..3}; do
@@ -18,9 +22,8 @@ deleteGCPVM() {
         fi
     done
 
-    if test ! "$success" = "true"; then
-        echo "Could not delete instance."
-        return 1
+    if [[ "$success" != "true" ]]; then
+        die "Could not delete instance"
     fi
 
     echo "Instance deleted successfully: $GCP_VM_NAME"
@@ -34,8 +37,7 @@ main() {
 
     if ! command -v gcloud &> /dev/null
     then
-        echo "gcloud is not found, stop..."
-        exit
+        die "gcloud is not found, stop..."
     fi
 
     echo "Deleting the VM..."

@@ -7,6 +7,11 @@ set -e
 # set up all the necessary variables needed on the next steps.
 
 export BASH_ENV=/tmp/bash_env
+
+# Cleanup previous state if exists
+rm -f "$BASH_ENV"
+rm -rf kernel-packer
+
 touch $BASH_ENV
 
 cat >>"$BASH_ENV" <<EOF

@@ -5,12 +5,16 @@ set -e
 # This script bootstraps a freshly created GCP VM by copying into it and
 # running an init script.
 
+function die() {
+    echo >&2 "$@"
+    exit 1
+}
+
 copyAndRunInitScript() {
     local GCP_VM_NAME="$1"
     shift
 
-    [ -z "$GCP_VM_NAME" ] && \
-        echo "error: missing parameter GCP_VM_NAME" && return 1
+    [ -z "$GCP_VM_NAME" ] && die "error: missing parameter GCP_VM_NAME"
 
     success=false
     for _ in {1..3}; do
@@ -24,8 +28,7 @@ copyAndRunInitScript() {
     done
 
     if [[ "$success" != "true" ]]; then
-        echo "Failed to copy the init script after 3 retries"
-        return 1
+        die "Failed to copy the init script after 3 retries"
     fi
 
     success=false
@@ -40,8 +43,7 @@ copyAndRunInitScript() {
     done
 
     if [[ "$success" != "true" ]]; then
-        echo "Failed to run the init script after 3 retries"
-        return 1
+        die "Failed to run the init script after 3 retries"
     fi
 
     return 0
@@ -62,7 +64,10 @@ main() {
         < .openshift-ci/crawler/init.sh \
         > /tmp/init.sh
 
-    which gcloud || true
+    if ! command -v gcloud &> /dev/null
+    then
+        die "gcloud is not found, stop..."
+    fi
 
     echo "Copying and executing init script..."
     copyAndRunInitScript "$GCP_VM_NAME"

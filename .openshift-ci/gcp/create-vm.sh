@@ -6,6 +6,11 @@
 
 set -e
 
+function die() {
+    echo >&2 "$@"
+    exit 1
+}
+
 createGCPVM() {
     local GCP_VM_NAME="$1"
     shift
@@ -14,12 +19,9 @@ createGCPVM() {
     local GCP_IMAGE_FAMILY="$1"
     shift
 
-    [ -z "$GCP_VM_NAME" ] && \
-            echo "error: missing parameter GCP_VM_NAME" && return 1
-    [ -z "$GCP_IMAGE_FAMILY" ] && \
-        echo "error: missing parameter GCP_IMAGE_FAMILY" && return 1
-    [ -z "$GCP_IMAGE_PROJECT" ] && \
-        echo "error: missing parameter GCP_IMAGE_PROJECT" && return 1
+    [ -z "$GCP_VM_NAME" ] && die "error: missing parameter GCP_VM_NAME"
+    [ -z "$GCP_IMAGE_FAMILY" ] && die "error: missing parameter GCP_IMAGE_FAMILY"
+    [ -z "$GCP_IMAGE_PROJECT" ] && die "error: missing parameter GCP_IMAGE_PROJECT"
 
     success=false
     # Three attempts is sometimes not enough.
@@ -59,9 +61,8 @@ createGCPVM() {
         fi
     done
 
-    if test ! "$success" = "true"; then
-        echo "Could not boot instance."
-        return 1
+    if [[ "$success" != "true" ]]; then
+        die "Could not boot instance"
     fi
 
     gcloud compute instances add-metadata "$GCP_VM_NAME" --metadata serial-port-logging-enable=true
@@ -81,8 +82,7 @@ main() {
 
     if ! command -v gcloud &> /dev/null
     then
-        echo "gcloud is not found, stop..."
-        exit
+        die "gcloud is not found, stop..."
     fi
 
     echo "Creating the VM..."

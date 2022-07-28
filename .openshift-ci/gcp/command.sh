@@ -5,17 +5,20 @@
 
 set -e
 
+function die() {
+    echo >&2 "$@"
+    exit 1
+}
+
 runCommand() {
     local GCP_VM_NAME="$1"
     shift
     local GCP_VM_COMMAND="$1"
     shift
 
-    [ -z "$GCP_VM_NAME" ] && \
-        echo "error: missing parameter GCP_VM_NAME" && return 1
+    [ -z "$GCP_VM_NAME" ] && die "error: missing parameter GCP_VM_NAME"
 
-    [ -z "$GCP_VM_COMMAND" ] && \
-        echo "error: missing parameter GCP_VM_COMMAND" && return 1
+    [ -z "$GCP_VM_COMMAND" ] && die "error: missing parameter GCP_VM_COMMAND"
 
     success=false
     for _ in {1..3}; do
@@ -29,8 +32,7 @@ runCommand() {
     done
 
     if [[ "$success" != "true" ]]; then
-        echo "Failed to run command after 3 retries"
-        return 1
+        die "Failed to run command after 3 retries"
     fi
 
     return 0
@@ -44,8 +46,7 @@ main() {
 
     if ! command -v gcloud &> /dev/null
     then
-        echo "gcloud is not found, stop..."
-        exit
+        die "gcloud is not found, stop..."
     fi
 
     echo "Running command $GCP_VM_COMMAND..."
