@@ -18,6 +18,12 @@ gcloud secrets versions access latest \
 
 echo >> $BASH_ENV
 
+gcloud secrets versions access latest \
+    --secret="collector-kernel-crawler-suse-credentials" \
+    | sed -e 's/^/export /' >> $BASH_ENV
+
+echo >> $BASH_ENV
+
 echo "export GITHUB_TOKEN="$(gcloud secrets versions access latest \
     --secret="collector-github-token") >> $BASH_ENV
 

@@ -7,6 +7,8 @@
 # See the RMT source code for more details:
 # https://github.com/SUSE/rmt/blob/master/lib/suse/connect/api.rb#L108
 
+set -euo pipefail
+
 SUSE_REPO_URL="https://scc.suse.com/connect/organizations/repositories"
 
 main() {
