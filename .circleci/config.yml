@@ -1,19 +1,400 @@
 version: 2.1
 
-parameters:
-  run_it:
-    type: boolean
-    default: false
+defaultImage: &defaultImage
+  image: quay.io/rhacs-eng/apollo-ci:collector-0.3.7
+  auth:
+    username: $QUAY_RHACS_ENG_RO_USERNAME
+    password: $QUAY_RHACS_ENG_RO_PASSWORD
+
+defaults: &defaults
+  docker:
+    - *defaultImage
+  working_directory: /go/src/github.com/stackrox/kernel-packer
+  environment:
+    NO_INSTALL_GCLOUD: true
+
+orbs:
+  slack: circleci/slack@3.4.2
+  gcp-cli: circleci/gcp-cli@2.2.0
+
+crawlContext: &crawlContext
+  context:
+    - rhacs-automation-credentials # Provides environment variables REDHAT_USERNAME and REDHAT_PASSWORD.
+    - ubuntu-esm-subscription-token # Provides environment variable UBUNTU_ESM_SUBSCRIPTION_TOKEN.
+    - rhsm_api_temp
+
+commands:
+  gcloud-init:
+    steps:
+    - gcp-cli/install
+    - run:
+        name: Install and configure gcloud
+        working_directory: ~/.config/gcloud
+        command: |
+          which gcloud
+          echo "Updating gcloud/gsutil ..."
+          gcloud config set core/disable_prompts True
+          gcloud components install gsutil -q
+          gcloud components update -q
+          gcloud auth activate-service-account --key-file <(echo "$GOOGLE_CREDENTIALS_KERNEL_CACHE")
+          gcloud auth list
+
+          # Sanity check
+          echo "Using gsutil from $(which gsutil)"
+          echo "Checking that gsutil binary is functional"
+          gsutil ls 'gs://stackrox-kernel-packages/' >/dev/null
+
+  setup-staging:
+    steps:
+    - run:
+        name: Setup staging on PR builds
+        command: |
+          if [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ || -n "$CIRCLE_TAG" ]]; then
+            KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages"
+            KERNEL_BUNDLE_BUCKET="gs://stackrox-kernel-bundles"
+          else
+            # The below variables ontain a comma delimited list of GCP buckets,
+            # Scripts may read from all buckets but only write to the first bucket in the list.
+            KERNEL_PACKAGE_STAGING_BUCKET="gs://stackrox-kernel-packages-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1}"
+            KERNEL_BUNDLE_STAGING_BUCKET="gs://stackrox-kernel-bundles-staging/${CIRCLE_BRANCH}/${CIRCLE_SHA1}"
+            KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET},gs://stackrox-kernel-packages"
+            KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET},gs://stackrox-kernel-bundles"
+            echo "KERNEL_BUNDLE_STAGING_BUCKET=${KERNEL_BUNDLE_STAGING_BUCKET}"
+            echo "KERNEL_PACKAGE_STAGING_BUCKET=${KERNEL_PACKAGE_STAGING_BUCKET}"
+            echo "KERNEL_BUNDLE_BUCKET=${KERNEL_BUNDLE_BUCKET}"
+            echo "KERNEL_PACKAGE_BUCKET=${KERNEL_PACKAGE_BUCKET}"
+          fi
+
+          cat >>"$BASH_ENV" \<<EOF
+          export KERNEL_PACKAGE_STAGING_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET}"
+          export KERNEL_BUNDLE_STAGING_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET}"
+          export KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_BUCKET}"
+          export KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_BUCKET}"
+          EOF
 
 jobs:
-  eol:
-    docker:
-    - image: cimg/base:2022.05
+  lint:
+    <<: *defaults
     steps:
-    - run: echo "Null job to disable CCI"
+    - checkout
+    - run:
+        name: Install dependencies
+        command: |
+          go get golang.org/x/tools/cmd/goimports
+    - run:
+        name: Run linters
+        command: |
+          gofiles="$(find . -name '*.go' | grep -v /vendor/)"
+          test -z "$(goimports -l -local github.com/stackrox/kernel-packer $gofiles)"
+    - run:
+        name: Run tests
+        command: go test -v ./...
+
+  repackage:
+    machine:
+      image: ubuntu-2004:202107-02
+    parallelism: 16
+    environment:
+    - GOPATH: /home/circleci/go
+    working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
+    steps:
+    - gcloud-init
+    - checkout
+    - setup-staging
+    - attach_workspace:
+        at: .
+    - restore_cache:
+        name: Restoring kernel packer cache
+        keys:
+          - stackrox-kernel-packer-cache-v20-{{ .Branch }}-{{ .Revision }}
+          - stackrox-kernel-packer-cache-v20-master-
+    - run:
+        name: Check if PR with no-cache label
+        command: |
+          set +e
+          .circleci/pr_has_label.sh "no-cache"
+          if [[ $? -eq 0 ]]; then
+            echo "PR has no-cache label, repackaging all kernel bundles."
+            rm .build-data/cache/cache.yml
+            exit 0
+          fi
+    - run:
+        name: Sanity check cache
+        command: |
+          mkdir -p .build-data/cache
+          touch .build-data/cache/cache.yml
+          cat .build-data/cache/cache.yml
+    - run:
+        name: Sanity check manifest
+        command: cat kernel-package-lists/manifest.yml
+    - run:
+        name: Generate package list
+        command: make list-files
+    - run:
+        name: Download package list
+        command: make download-packages
+    - run:
+        name: Build repackage image
+        command: make packers
+    - run:
+        name: Repackage kernels
+        command: make repackage
+    - run:
+        name: Sanity check bundles
+        command: |
+          mkdir -p .build-data/bundles
+          ls -lhR .build-data/bundles
+    - run:
+        name: Upload bundles
+        command: |
+          make upload-bundles
+    - store_artifacts:
+        path: .build-data/gsutil-download.log
+        destination: gsutil-download.log
+        when: always
+    - persist_to_workspace:
+        root: .
+        paths:
+        - .build-data/cache
+
+    - slack/status:
+        fail_only: true
+        mentions: S0154UALQMB
+        only_for_branches: master,main
+        webhook: '${SLACK_WEBHOOK_ONCALL}'
+
+  combine:
+    <<: *defaults
+    environment:
+      GOPATH: /home/circleci/go
+
+    working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
+    steps:
+    - gcloud-init
+    - setup-staging
+    - checkout
+    - attach_workspace:
+        at: .
+    - run:
+        name: Sanity check fragments
+        command: ls -lh .build-data/cache
+    - run:
+        name: Combine cache fragments
+        command: |
+          make combine-cache
+          make clean-cache
+    - run:
+        name: Sanity check bundles
+        command: |
+          IFS=',' read -r -a bucket_names \<<< "${KERNEL_BUNDLE_BUCKET}"
+          for bucket_name in "${bucket_names[@]}"; do
+            echo "Kernel versions in ${bucket_name}"
+            gsutil ls "${bucket_name}/**.tgz" | \
+              sed 's|^.*bundle-||' | sed 's|\.tgz$||' | sort || true
+          done
+    - run:
+        name: PR comment with staging info
+        command: |
+          wget --quiet "https://github.com/joshdk/hub-comment/releases/download/0.1.0-rc6/hub-comment_linux_amd64"
+          sudo install hub-comment_linux_amd64 /usr/bin/hub-comment
+          export PACKAGE_COUNT="$(gsutil ls "${KERNEL_PACKAGE_STAGING_BUCKET}" | wc -l | xargs)"
+          export BUNDLE_COUNT="$(gsutil ls "${KERNEL_BUNDLE_STAGING_BUCKET}" | wc -l | xargs)"
+          export LAST_UPDATED="$(date)"
+          hub-comment -template-file ".circleci/staging-info-comment.tpl"
+
+    - store_artifacts:
+        path: .build-data/cache/cache.yml
+        destination: cache.yml
+        when: always
+    - save_cache:
+        name: Saving kernel packer cache
+        key: stackrox-kernel-packer-cache-v20-{{ .Branch }}-{{ .Revision }}
+        paths:
+        - .build-data/cache/cache.yml
+
+  crawl:
+    machine:
+      image: ubuntu-2004:202107-02
+    resource_class: large
+    environment:
+    - GOPATH: /home/circleci/go
+    working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
+    steps:
+    - checkout
+    - run:
+        name: Check if crawl job should run
+        command: |
+          set +e
+          if [[ "${CIRCLE_JOB}" == "crawl-cron" ]]; then
+            echo "Running scheduled cron job"
+            exit 0
+          elif [[ "${CIRCLE_JOB}" == "crawl-build" && "$CIRCLE_BRANCH" =~ ^(master|main)$ && "${CIRCLE_USERNAME}" != "roxbot" ]]; then
+            echo "Running kernel crawler tasks on non-automated commit to default branch."
+            exit 0
+          fi
+          .circleci/pr_has_label.sh "crawl"
+          if [[ $? -eq 0 ]]; then
+            echo "PR has crawl label, running kernel-crawler."
+            exit 0
+          fi
+          echo "Not running crawl job"
+          circleci step halt
+    - gcloud-init
+    - setup-staging
+    - run:
+        name: Crawl package repositories
+        no_output_timeout: 60m
+        command: |
+          if ! make -j -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+            touch /tmp/crawl-failed
+          fi
+
+    - run:
+        name: Restore wiped files, if any
+        command: |
+          scripts/restore-removed
+    - run:
+        name: Download and reupload crawled files
+        command: make sync
+    - run:
+        name: Filter kernels for docker desktop if new dmg or kernels are found
+        command: |
+          if git diff-index --quiet HEAD -- "kernel-package-lists/docker-desktop"* ; then
+            echo "Skipping Docker Desktop kernel filter, unchanged after crawl."
+            exit 0
+          fi
+          make filter-kernels-docker-desktop
+    - run:
+        name: Diff package lists
+        command: |
+          git --no-pager diff kernel-package-lists/
+    - run:
+        name: Generate manifest
+        command: |
+          make manifest
+          cat kernel-package-lists/manifest.yml
+    - run:
+        name: Diff manifest
+        command: |
+          git --no-pager diff kernel-package-lists/manifest.yml
+    - run:
+        name: Prepare artifacts
+        command: |
+          rm -rf .build-data/downloads
+          rm -rf .build-data/packages
+        when: always
+    - store_artifacts:
+        path: .build-data
+        destination: build-data
+        when: always
+    - persist_to_workspace:
+        root: .
+        paths:
+        - kernel-package-lists/manifest.yml
+    - add_ssh_keys:
+        fingerprints:
+        - 'dd:79:df:69:0f:13:db:0e:08:3e:3b:f4:b2:e3:57:77'
+    - run:
+        name: Push any changes
+        command: |
+          [[ "$CIRCLE_BRANCH" =~ ^(master|main)$ ]] || exit 0
+          make robo-crawl-commit
+
+    - persist_to_workspace:
+        root: /tmp
+        paths:
+          - "*crawl*"
+
+    - slack/status:
+        fail_only: true
+        mentions: S0154UALQMB
+        only_for_branches: master,main
+        webhook: '${SLACK_WEBHOOK_ONCALL}'
+
+  crawl-status:
+    <<: *defaults
+    steps:
+    - attach_workspace:
+        at: /tmp
+
+    - run:
+        name: Test if crawling failed
+        command: |
+          if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
+            echo >&2 "'make crawl' failed. See the output of the 'Crawl package repositories' step in the crawl job for further details."
+            exit 1
+          fi
+
+    - slack/status:
+        fail_only: true
+        mentions: S0154UALQMB
+        only_for_branches: master,main
+        webhook: '${SLACK_WEBHOOK_ONCALL}'
+
+  collector:
+    <<: *defaults
+    steps:
+      - gcloud-init
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+          - "7f:08:58:1e:80:80:6e:66:99:9a:37:cb:e9:96:0b:40"
+      - run:
+          name: Update collector kernel versions
+          command: make robo-collector-commit
 
 workflows:
-  eol:
-    when: << pipeline.parameters.run_it >>
+  version: 2
+
+  build:
     jobs:
-      - eol
+    - lint:
+        context:
+          - quay-rhacs-eng-readonly
+    - crawl:
+        name: crawl-build
+        <<: *crawlContext
+        requires:
+        - lint
+    - crawl-status:
+        context:
+          - quay-rhacs-eng-readonly
+        requires:
+          - crawl-build
+    - repackage:
+        requires:
+        - crawl-build
+    - combine:
+        context:
+          - quay-rhacs-eng-readonly
+        requires:
+        - repackage
+    - collector:
+        context:
+          - quay-rhacs-eng-readonly
+        requires:
+        - combine
+        filters:
+          branches:
+            only:
+            - master
+            - main
+
+  cron:
+    jobs:
+    - crawl:
+        name: crawl-cron
+        <<: *crawlContext
+    - crawl-status:
+        context:
+          - quay-rhacs-eng-readonly
+        requires:
+          - crawl-cron
+    triggers:
+    - schedule:
+        cron: "0 0,2,4,6,8,10,12,14,16,18,20,22 * * *"
+        filters:
+          branches:
+            only:
+            - master
+            - main
