@@ -214,7 +214,6 @@ jobs:
   crawl:
     machine:
       image: ubuntu-2004:202107-02
-    resource_class: large
     environment:
     - GOPATH: /home/circleci/go
     working_directory: /home/circleci/go/src/github.com/stackrox/kernel-packer
@@ -373,25 +372,6 @@ workflows:
           - quay-rhacs-eng-readonly
         requires:
         - combine
-        filters:
-          branches:
-            only:
-            - master
-            - main
-
-  cron:
-    jobs:
-    - crawl:
-        name: crawl-cron
-        <<: *crawlContext
-    - crawl-status:
-        context:
-          - quay-rhacs-eng-readonly
-        requires:
-          - crawl-cron
-    triggers:
-    - schedule:
-        cron: "0 0,2,4,6,8,10,12,14,16,18,20,22 * * *"
         filters:
           branches:
             only:
