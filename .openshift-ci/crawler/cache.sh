@@ -24,4 +24,4 @@ gsutil ls "${bucket_name}/**.tgz" | \
   sed 's|^.*bundle-||' | sed 's|\.tgz$||' | sort || true
 done
 
-gsutil cp .build-data/cache/cache.yml gs://${KERNEL_BUNDLE_BUCKET}/cache.yml
+gsutil cp .build-data/cache/cache.yml "${KERNEL_BUNDLE_BUCKET}/cache.yml"
