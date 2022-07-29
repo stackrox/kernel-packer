@@ -8,6 +8,8 @@ source .openshift-ci/crawler/env.sh
 source .openshift-ci/crawler/setup-staging.sh
 
 mkdir -p .build-data/cache
+
+gsutil cp gs://${KERNEL_BUNDLE_BUCKET}/cache.yml .build-data/cache/cache.yml || true
 touch .build-data/cache/cache.yml
 cat .build-data/cache/cache.yml
 cat kernel-package-lists/manifest.yml
