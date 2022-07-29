@@ -17,7 +17,7 @@ echo "Clean cache..."
 make clean-cache
 
 echo "Sanity check bundles..."
-IFS=',' read -r -a bucket_names \<<< "${KERNEL_BUNDLE_BUCKET}"
+IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
 for bucket_name in "${bucket_names[@]}"; do
 echo "Kernel versions in ${bucket_name}"
 gsutil ls "${bucket_name}/**.tgz" | \
