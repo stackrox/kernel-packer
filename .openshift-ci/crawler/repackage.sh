@@ -9,9 +9,14 @@ source .openshift-ci/crawler/setup-staging.sh
 
 mkdir -p .build-data/cache
 
+echo "Prepare cache..."
 gsutil cp gs://${KERNEL_BUNDLE_BUCKET}/cache.yml .build-data/cache/cache.yml || true
 touch .build-data/cache/cache.yml
+
+echo "Cache content..."
 cat .build-data/cache/cache.yml
+
+echo "Manifest content..."
 cat kernel-package-lists/manifest.yml
 
 echo "List files..."
