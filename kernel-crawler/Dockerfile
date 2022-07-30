@@ -26,7 +26,6 @@ COPY ["garden-crawler.py", "/"]
 COPY ["kernel-crawler.py", "/"]
 COPY ["repo-crawler.py", "/"]
 COPY ["kope.io.asc", "/"]
-COPY ["docker-desktop-filter-kernels.sh", "/"]
 COPY --from=build /go/bin/rhel-crawler /usr/bin/rhel-crawler
 COPY --from=build /usr/local/bin/7z* /usr/local/bin/
 COPY --from=build /usr/local/lib/p7zip /usr/local/lib/p7zip
