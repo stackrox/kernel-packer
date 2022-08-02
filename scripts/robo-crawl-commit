@@ -19,15 +19,20 @@ main() {
     # At the moment there is no remote git repository set, we have to configure
     # it first. Redirect to devnull so this doesn't print the value of the
     # token on failure.
+    echo "Add target..."
     git remote add pushtarget https://roxbot:$GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
 
     # Create a commit with any modified files, and push it to GitHub.
+    echo "Commit changes..."
     git add "$CRAWLED_PACKAGE_DIR"
     git -c "user.name=roxbot" -c "user.email=roxbot@stackrox.com" commit --message "🤖 Updated crawled packages"
 
     # redirect to devnull so this doesn't print the value of the token on failure.
     # temporary test branch
-    git push pushtarget $BRANCH &> /dev/null
+    echo "Push changes..."
+    if ! git push pushtarget $BRANCH &> /dev/null; then
+        sleep 1000000
+    fi
     echo "Crawled packages have been pushed."
 }
 
