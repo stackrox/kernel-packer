@@ -97,7 +97,7 @@ main() {
     # GCP_SSH_KEY_FILE is provided via env variables mounted from secrets
     echo "Set up ssh keys"
     mkdir -p "$(dirname "${GCP_SSH_KEY_FILE}")"
-    chmod 0700 "$(dirname "${GCP_SSH_KEY_FILE}")"
+    #chmod 0700 "$(dirname "${GCP_SSH_KEY_FILE}")"
 
     copy_secret GCP_SSH_KEY "${GCP_SSH_KEY_FILE}" 0600
     copy_secret GCP_SSH_KEY_PUB "${GCP_SSH_KEY_FILE}.pub" 0600
