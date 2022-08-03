@@ -13,16 +13,22 @@ function die() {
 runCommand() {
     local GCP_VM_NAME="$1"
     shift
+    local GCP_VM_USER="$1"
+    shift
     local GCP_VM_COMMAND="$1"
     shift
 
     [ -z "$GCP_VM_NAME" ] && die "error: missing parameter GCP_VM_NAME"
 
+    [ -z "$GCP_VM_USER" ] && die "error: missing parameter GCP_VM_USER"
+
     [ -z "$GCP_VM_COMMAND" ] && die "error: missing parameter GCP_VM_COMMAND"
 
     success=false
     for _ in {1..3}; do
-        if gcloud compute ssh "$GCP_VM_NAME" --command "cd kernel-packer; $GCP_VM_COMMAND"; then
+        if gcloud compute ssh "${GCP_VM_USER}@${GCP_VM_NAME}"\
+            --ssh-key-file="${GCP_SSH_KEY_FILE}"\
+            --command "cd kernel-packer; ${GCP_VM_COMMAND}"; then
             success=true
             break
         else
@@ -41,6 +47,8 @@ runCommand() {
 main() {
     local GCP_VM_NAME="$1"
     shift
+    local GCP_VM_USER="$1"
+    shift
     local GCP_VM_COMMAND="$1"
     shift
 
@@ -50,7 +58,10 @@ main() {
     fi
 
     echo "Running command $GCP_VM_COMMAND..."
-    runCommand "$GCP_VM_NAME" "$GCP_VM_COMMAND"
+    runCommand \
+        "$GCP_VM_NAME"\
+        "$GCP_VM_USER"\
+        "$GCP_VM_COMMAND"
 }
 
 COMMAND=$@
@@ -59,4 +70,4 @@ source .openshift-ci/env.sh
 source .openshift-ci/google-cloud-sdk/install.sh
 source .openshift-ci/google-cloud-sdk/init.sh
 
-main "kernel-packer-osci" $COMMAND
+main "kernel-packer-osci" "${GCP_SSH_KEY_USER}" $COMMAND

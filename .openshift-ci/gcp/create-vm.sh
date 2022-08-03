@@ -72,6 +72,15 @@ createGCPVM() {
     return 0
 }
 
+copy_secret() {
+    local NAME="$1"
+    local DEST="$2"
+    local PERMS="$3"
+
+    cp "/tmp/secret/stackrox-kernel-packer-crawl/$NAME" "$DEST"
+    chmod "$PERMS" "$DEST"
+}
+
 main() {
     local GCP_VM_NAME="$1"
     shift
@@ -84,6 +93,14 @@ main() {
     then
         die "gcloud is not found, stop..."
     fi
+
+    # GCP_SSH_KEY_FILE is provided via env variables mounted from secrets
+    echo "Set up ssh keys"
+    mkdir -p "$(dirname "${GCP_SSH_KEY_FILE}")"
+    chmod 0700 "$(dirname "${GCP_SSH_KEY_FILE}")"
+
+    copy_secret GCP_SSH_KEY "${GCP_SSH_KEY_FILE}" 0600
+    copy_secret GCP_SSH_KEY_PUB "${GCP_SSH_KEY_FILE}.pub" 0600
 
     echo "Creating the VM..."
     createGCPVM \
