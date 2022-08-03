@@ -30,9 +30,7 @@ main() {
     # redirect to devnull so this doesn't print the value of the token on failure.
     # temporary test branch
     echo "Push changes..."
-    if ! git push pushtarget $BRANCH &> /dev/null; then
-        sleep 1000000
-    fi
+    git push pushtarget $BRANCH &> /dev/null
     echo "Crawled packages have been pushed."
 }
 
