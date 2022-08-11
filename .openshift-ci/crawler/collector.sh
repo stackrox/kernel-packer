@@ -8,4 +8,4 @@ source .openshift-ci/crawler/env.sh
 source .openshift-ci/crawler/setup-staging.sh
 
 echo "Collector commit..."
-make robo-crawl-commit
+make robo-collector-commit
