@@ -6,7 +6,13 @@
 set -e
 
 function die() {
-    echo >&2 "$@"
+    local STEP="$1"
+    shift
+    local ERROR_MESSAGE="$1"
+    shift
+
+    echo >&2 "$ERROR_MESSAGE"
+    .openshift-ci/slack/notify.sh $STEP $ERROR_MESSAGE
     exit 1
 }
 
@@ -18,11 +24,11 @@ runCommand() {
     local GCP_VM_COMMAND="$1"
     shift
 
-    [ -z "$GCP_VM_NAME" ] && die "error: missing parameter GCP_VM_NAME"
+    [ -z "$GCP_VM_NAME" ] && die $GCP_VM_COMMAND "error: missing parameter GCP_VM_NAME"
 
-    [ -z "$GCP_VM_USER" ] && die "error: missing parameter GCP_VM_USER"
+    [ -z "$GCP_VM_USER" ] && die $GCP_VM_COMMAND "error: missing parameter GCP_VM_USER"
 
-    [ -z "$GCP_VM_COMMAND" ] && die "error: missing parameter GCP_VM_COMMAND"
+    [ -z "$GCP_VM_COMMAND" ] && die $GCP_VM_COMMAND "error: missing parameter GCP_VM_COMMAND"
 
     success=false
     for _ in {1..3}; do
@@ -38,7 +44,7 @@ runCommand() {
     done
 
     if [[ "$success" != "true" ]]; then
-        die "Failed to run command after 3 retries"
+        die $GCP_VM_COMMAND "Failed to run command after 3 retries"
     fi
 
     return 0
@@ -54,7 +60,7 @@ main() {
 
     if ! command -v gcloud &> /dev/null
     then
-        die "gcloud is not found, stop..."
+        die $GCP_VM_COMMAND "gcloud is not found, stop..."
     fi
 
     echo "Running command $GCP_VM_COMMAND..."

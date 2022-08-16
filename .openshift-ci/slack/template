@@ -1,0 +1,22 @@
+{
+    "text": "*Job Name:* \($job_name)",
+    "blocks": [
+        {
+            "type": "header",
+            "text": {
+                "type": "plain_text",
+                "text": "Prow job failure: \($job_name)"
+            }
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "Error:* \($error_message)\nUrl:* \($job_url)\nStep:* \($job_step)\nMentions:* \($mentions)\n"
+            }
+        },
+        {
+          "type": "divider"
+        }
+    ]
+}

@@ -7,7 +7,13 @@
 set -e
 
 function die() {
-    echo >&2 "$@"
+    local STEP="$1"
+    shift
+    local ERROR_MESSAGE="$1"
+    shift
+
+    echo >&2 "$ERROR_MESSAGE"
+    .openshift-ci/slack/notify.sh $STEP $ERROR_MESSAGE
     exit 1
 }
 
@@ -19,9 +25,9 @@ createGCPVM() {
     local GCP_IMAGE_FAMILY="$1"
     shift
 
-    [ -z "$GCP_VM_NAME" ] && die "error: missing parameter GCP_VM_NAME"
-    [ -z "$GCP_IMAGE_FAMILY" ] && die "error: missing parameter GCP_IMAGE_FAMILY"
-    [ -z "$GCP_IMAGE_PROJECT" ] && die "error: missing parameter GCP_IMAGE_PROJECT"
+    [ -z "$GCP_VM_NAME" ] && die "VM create" "error: missing parameter GCP_VM_NAME"
+    [ -z "$GCP_IMAGE_FAMILY" ] && die "VM create" "error: missing parameter GCP_IMAGE_FAMILY"
+    [ -z "$GCP_IMAGE_PROJECT" ] && die "VM create" "error: missing parameter GCP_IMAGE_PROJECT"
 
     success=false
     # Three attempts is sometimes not enough.
@@ -62,7 +68,7 @@ createGCPVM() {
     done
 
     if [[ "$success" != "true" ]]; then
-        die "Could not boot instance"
+        die "VM create" "Could not boot instance"
     fi
 
     gcloud compute instances add-metadata "$GCP_VM_NAME" --metadata serial-port-logging-enable=true
@@ -91,7 +97,7 @@ main() {
 
     if ! command -v gcloud &> /dev/null
     then
-        die "gcloud is not found, stop..."
+        die "VM create" "gcloud is not found, stop..."
     fi
 
     # GCP_SSH_KEY_FILE is provided via env variables mounted from secrets

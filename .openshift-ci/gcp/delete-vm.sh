@@ -3,7 +3,13 @@
 set -e
 
 function die() {
-    echo >&2 "$@"
+    local STEP="$1"
+    shift
+    local ERROR_MESSAGE="$1"
+    shift
+
+    echo >&2 "$ERROR_MESSAGE"
+    .openshift-ci/slack/notify.sh $STEP $ERROR_MESSAGE
     exit 1
 }
 
@@ -11,7 +17,7 @@ deleteGCPVM() {
     local GCP_VM_NAME="$1"
     shift
 
-    [ -z "$GCP_VM_NAME" ] && die "error: missing parameter GCP_VM_NAME"
+    [ -z "$GCP_VM_NAME" ] && die "VM delete" "error: missing parameter GCP_VM_NAME"
 
     success=false
     for _ in {1..3}; do
@@ -23,7 +29,7 @@ deleteGCPVM() {
     done
 
     if [[ "$success" != "true" ]]; then
-        die "Could not delete instance"
+        die "VM delete" "Could not delete instance"
     fi
 
     echo "Instance deleted successfully: $GCP_VM_NAME"
@@ -37,7 +43,7 @@ main() {
 
     if ! command -v gcloud &> /dev/null
     then
-        die "gcloud is not found, stop..."
+        die "VM delete" "gcloud is not found, stop..."
     fi
 
     echo "Deleting the VM..."
