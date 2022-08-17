@@ -13,7 +13,7 @@ function die() {
     shift
 
     echo >&2 "$ERROR_MESSAGE"
-    .openshift-ci/slack/notify.sh $STEP $ERROR_MESSAGE
+    .openshift-ci/slack/notify.sh "$STEP" "$ERROR_MESSAGE"
     exit 1
 }
 
