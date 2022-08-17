@@ -6,7 +6,13 @@ set -e
 # running an init script.
 
 function die() {
-    echo >&2 "$@"
+    local STEP="$1"
+    shift
+    local ERROR_MESSAGE="$1"
+    shift
+
+    echo >&2 "$ERROR_MESSAGE"
+    .openshift-ci/slack/notify.sh "$STEP" "$ERROR_MESSAGE"
     exit 1
 }
 
@@ -14,7 +20,7 @@ copyAndRunInitScript() {
     local GCP_VM_NAME="$1"
     shift
 
-    [ -z "$GCP_VM_NAME" ] && die "error: missing parameter GCP_VM_NAME"
+    [ -z "$GCP_VM_NAME" ] && die "Bootstrap" "error: missing parameter GCP_VM_NAME"
 
     success=false
     for _ in {1..3}; do
@@ -28,7 +34,7 @@ copyAndRunInitScript() {
     done
 
     if [[ "$success" != "true" ]]; then
-        die "Failed to copy the init script after 3 retries"
+        die "Bootstrap" "Failed to copy the init script after 3 retries"
     fi
 
     success=false
@@ -43,7 +49,7 @@ copyAndRunInitScript() {
     done
 
     if [[ "$success" != "true" ]]; then
-        die "Failed to run the init script after 3 retries"
+        die "Bootstrap" "Failed to run the init script after 3 retries"
     fi
 
     return 0
@@ -66,7 +72,7 @@ main() {
 
     if ! command -v gcloud &> /dev/null
     then
-        die "gcloud is not found, stop..."
+        die "Bootstrap" "gcloud is not found, stop..."
     fi
 
     echo "Copying and executing init script..."
