@@ -50,4 +50,4 @@ main() {
     deleteGCPVM "$GCP_VM_NAME"
 }
 
-main "kernel-packer-osci"
+main "kernel-packer-osci-${PROW_JOB_ID}"
