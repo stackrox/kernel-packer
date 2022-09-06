@@ -269,6 +269,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
+0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0da44486150e5952bbbbfd2cb7424f6a47366f572785c10adc31e2dc69a09c6f:
   type: redhat
   packages:
@@ -2270,6 +2274,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-headers.tgz
+4ab969585b132e1736a69c888c6146fc84b2f1692a1fbdc17a2e80db93242770:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.0-flatcar_developer_container.bin.bz2
 4fb12689714a9881c48d70ef60c7800ec63e9b1a7b842fecf27225d68e8f49ad:
   type: ubuntu
   packages:
@@ -7980,6 +7988,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.139-1.el7.elrepo.x86_64.rpm
+192ef62ee066d7d547aeb4cf05a1c098be58f887cd3a7249aa8cb5ce0caaf377:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.7-200.fc36-x86_64-kernel-devel-5.19.7-200.fc36.x86_64.rpm
 204cc3624c75b0562bf65c125c553736115682b649ad2d4637862517cb661ef2:
   type: ubuntu
   packages:
@@ -10156,6 +10168,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.166-1.el7.elrepo.x86_64.rpm
+7102ca2a9a7ee25bbb7bfd3f6e7a6d7a775363e015caf4c5564f151b9d78b2a4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.7-100.fc35-x86_64-kernel-devel-5.19.7-100.fc35.x86_64.rpm
 7103e8dc3601754fb33c13a725321ca74ddedce2c96b7fa450193aa996fafb2c:
   type: ubuntu
   packages:
@@ -11746,10 +11762,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.146-1.el7.elrepo.x86_64.rpm
-1342319d9bdd041d65ce645f3a0182b7a879302c00384826a9940392623cb938:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3139.1.1-flatcar_developer_container.bin.bz2
 1363108f1dd57de4387b43db3fe2345cafe85864fb0a4d3c01c42b8f24e180a5:
   type: redhat
   packages:
@@ -14996,10 +15008,6 @@ c6f07e700e6723d4efe6e848fc6f87eafdbbc8d6b10af4415be59b548b8ab909:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.13.0-kernel-src.tar.gz
-c6f9c610ff649bf7ce1f3c2e7ed72f53c9d029ace5aa2d116981bb5fedaba5b3:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-5.18.4-100.fc35-x86_64-kernel-devel-5.18.4-100.fc35.x86_64.rpm
 c6e73c8ee8b48c8444f157f92691c181928c56535d216e49f0b377948bd7a343:
   type: ubuntu
   packages:
@@ -19190,6 +19198,10 @@ facea65bc624cf402b81262e487d5f708b341cf9a98d515836011cae9085dfcf:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.6.3.el7.x86_64.rpm
+fae17fc0b495ed9d386df3b1dd2e810e332c7806a3158cf6ccbb19bdb2a1cdb6:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.7-300.fc37-x86_64-kernel-devel-5.19.7-300.fc37.x86_64.rpm
 faebbf5487587da51e2a34238bfe86d1e24a21152dc3f67f483322666df7737b:
   type: cos
   packages:
