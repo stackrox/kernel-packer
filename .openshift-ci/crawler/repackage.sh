@@ -10,7 +10,13 @@ source .openshift-ci/crawler/setup-staging.sh
 mkdir -p .build-data/cache
 
 echo "Prepare cache, ${KERNEL_BUNDLE_BUCKET}/cache.yml..."
-gsutil cp "${KERNEL_BUNDLE_BUCKET}/cache.yml" .build-data/cache/cache.yml || true
+IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
+for bucket in "${bucket_names[@]}"
+do
+    if [ ! -f .build-data/cache/cache.yml ]; then
+        gsutil cp "${bucket}/cache.yml" .build-data/cache/cache.yml || true
+    fi
+done
 touch .build-data/cache/cache.yml
 
 echo "Cache content..."

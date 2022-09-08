@@ -24,4 +24,4 @@ for bucket_name in "${bucket_names[@]}"; do
     sed 's|^.*bundle-||' | sed 's|\.tgz$||' | sort || true
 done
 
-gsutil cp .build-data/cache/cache.yml "${KERNEL_BUNDLE_BUCKET}/cache.yml"
+gsutil cp .build-data/cache/cache.yml "${bucket_names[0]}/cache.yml"
