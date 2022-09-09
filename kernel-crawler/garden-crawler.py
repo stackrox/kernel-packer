@@ -111,7 +111,7 @@ def get_kernel_versions(component_descriptors: list) -> list:
             for resource in component['component']['resources']
             for label in resource['labels']
             if label['name'] == metadata_label
-            for pkg in label['value']['debianPackages']
+            for pkg in label['value'].get('debianPackages', [])
             if 'linux-image' in pkg
         ]
 
