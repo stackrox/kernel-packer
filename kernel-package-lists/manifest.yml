@@ -531,6 +531,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1006_4.15.0-1006.6_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1006-gcp_4.15.0-1006.6_amd64.deb
+1b5e828ed1b2b59f9afdd2c485c2918307b20f5373757adbadc1dd8c60fe92ff:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.141-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.141-garden-amd64_5.10.141-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.141-garden-common_5.10.141-0gardenlinux1_all.deb
 1c5dabd524cd28867b94ea9e5a16fc251470276b4175cef030773f3c523709a4:
   type: ubuntu
   packages:
@@ -964,6 +970,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1041.9-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1041.9-kernel-headers.tgz
+2f3f644fcf410e2f74028749293029f6b1b2ffc06f89ad90b6c25992c854b59b:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2643.1.0-flatcar_developer_container.bin.bz2
 2c3e2844d3528b0a04d859bd1002d57713cf0b972dbef59c93072675c2398292:
   type: ubuntu
   packages:
@@ -5285,6 +5295,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-headers.tgz
+22e60d16f32f3ba410351e4a02d183a1e8a0c31e2090fbc5d3be8072886ca3b0:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.1-flatcar_developer_container.bin.bz2
 22d94d3ff346c1cb54ee68337c6dcbc09b2663e2f09f518e7d6ec030dfe9ebd5:
   type: ubuntu
   packages:
@@ -5440,10 +5454,6 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.12.2.el7.x86_64.rpm
-27c170dee6ae1863ac35044def35318259544d038bb6b4d5a1cc63ef6387b43c:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.1-flatcar_developer_container.bin.bz2
 27b76073ba9346f92da233a37b8a621944a2058ee8ecda411f5886a6a2bebbfb:
   type: ubuntu
   packages:
@@ -5575,6 +5585,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-headers-5.15.0-1020-aws_5.15.0-1020.24-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-aws-5.15-headers-5.15.0-1020_5.15.0-1020.24-20.04.1_all.deb
+31c558ba16762acc2c83db942d341bb5e860aa37934cdce1fcbab8fdabb895c8:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.4-flatcar_developer_container.bin.bz2
 31ea5736f3d535b2955907410615b3ef76881f6c54dc93aabf131698159b73d2:
   type: ubuntu
   packages:
@@ -6202,11 +6216,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.19-300.fc34-x86_64-kernel-devel-5.11.19-300.fc34.x86_64.rpm
-50a9c4ce539348cc7f85820ee7a9235f5cc9b8d8fc3f0678bbb3bd0e357dbfa6:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.140-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-16-amd64_5.10.127-2_amd64.deb
 50d39fc1975389303f1f2a3dca612d9117870a174de64ce9547cd3716f75dcf5:
   type: redhat
   packages:
@@ -9291,6 +9300,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.11-100.fc34-x86_64-kernel-devel-5.16.11-100.fc34.x86_64.rpm
+909b4051c900b1f1b978ac46ddbd868fa89989780f5e5505c096ad1a41077ce1:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.8-200.fc36-x86_64-kernel-devel-5.19.8-200.fc36.x86_64.rpm
 909fb18503f1c966e3c4d376b0562497326ba8144a64d14c4f92c23ea77a8af9:
   type: ubuntu
   packages:
@@ -9879,10 +9892,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1026_5.3.0-1026.28-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1026-gke_5.3.0-1026.28-18.04.1_amd64.deb
-4507ee5a2c802f8fdad5590b5b92e148feecffa94d24fae57a0968077a3f8110:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.5.0-flatcar_developer_container.bin.bz2
 4519affb139bca9dbe6bdd7b5f8a7af54b57dab43cfbd93bcd8a744e81a8c65b:
   type: ubuntu
   packages:
@@ -9973,6 +9982,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1046-azure_4.15.0-1046.50_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1046_4.15.0-1046.50_all.deb
+5500b217ee3e5a314c1d43914c3270a0d4c47402d9e5dde8724cdeb0eeae3732:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.8-300.fc37-x86_64-kernel-devel-5.19.8-300.fc37.x86_64.rpm
 5508fde78d65523b24e956d3571f4a5243114a938ff8eb31f72ec80e3e5e1f84:
   type: suse
   packages:
@@ -10443,11 +10456,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.15-300.fc34-x86_64-kernel-devel-5.12.15-300.fc34.x86_64.rpm
-8954fd158e17a61e9a993cc42c76fedd1ae5d47e69131fed0b79d3962916d838:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.140-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-16-cloud-amd64_5.10.127-2_amd64.deb
 8965e10d6dd634c329255d97f0b03a6502debab47e411b270e22b359c27904f9:
   type: suse
   packages:
@@ -14835,6 +14843,10 @@ bf49060e2cc699ba3fcfd64b6a6b2d663d4b41ec900669458b5895f6c084047c:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.201-1.el7.elrepo.x86_64.rpm
+bfa3ba89a61a10f8507b86ad87e9fe972fc2966c8677812b197f84e21ad8e606:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.8-100.fc35-x86_64-kernel-devel-5.19.8-100.fc35.x86_64.rpm
 bfba174968566cb73dcc224deaa31502d29dabed03d768863cf4773853fde784:
   type: cos
   packages:
@@ -14990,6 +15002,11 @@ c4baae31ed640e11fcd6e2cde578686ee9fda65b39f1dc12caf98024b43f8458:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2135.6.0-coreos_developer_container.bin.bz2
+c4df5c8ff0d38af49b8c669e04865c12f81f7d5ae319c6b6ec34f9a82d70b334:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.19.0-1005-azure_5.19.0-1005.5_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.19.0-1005_5.19.0-1005.5_all.deb
 c04ae86ecacb5637c1d1c6c58baf97c3947ae795f2fd9fdc31ad488ea2f86423:
   type: debian
   packages:
@@ -17721,6 +17738,12 @@ e96ca5c95787d5f02a9463c0f1f830aadeceef27267bbfd9be634a8faabd55a6:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.41.1.el7.x86_64.rpm
+e99be584c46b7b0323ef3558624d14388cf994abdb351b9291f419cb315b4f85:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.141-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.141-garden-cloud-amd64_5.10.141-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.141-garden-common_5.10.141-0gardenlinux1_all.deb
 e112aeec9cc04e9ee132ea1b8a301d6851212481df43c6dc98164688a1987bf8:
   type: redhat
   packages:
@@ -17987,6 +18010,10 @@ e721252768b5e5f17f03f9ff8c1bf01a186aea6246acbeeed7153928074304e9:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1045-fips_4.15.0-1045.52_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1045_4.15.0-1045.52_all.deb
+e859762084f3cc3cbe8d67e912c4ded72db634977f5e7cf06ffe6e8f9db82ae0:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.12.0-flatcar_developer_container.bin.bz2
 e0926909249d062e0e69981c164fb225e0036e1f3869627fe66c0949b56088fb:
   type: ubuntu
   packages:
