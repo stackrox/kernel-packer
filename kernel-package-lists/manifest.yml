@@ -348,10 +348,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.40.2.el8_4.x86_64.rpm
-0cd01c04227fc6eb80a03c39dda63602375dc1f0079296bc6a9c861be34819f7:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.1-flatcar_developer_container.bin.bz2
 0ad95b4e04bf952ac14fad605d201f937b82e005494f477fe97e93761720124f:
   type: ubuntu
   packages:
@@ -746,10 +742,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1209.7-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1209.7-kernel-headers.tgz
-1a9990536881ada24dc8db99e568d8ce16820252308a6d14c26757ef82d5e36f:
-  type: redhat
-  packages:
-  - https---api.access.redhat.com-management-v1-packages-c3cc77ba5b299f67e497b06b90a31acc262e79fecc0b22f02a2c26971cc50e07-download
 1c0271935623021a9ecf58ca41752a217563237f4c1b71247768f0bc1831a41f:
   type: cos
   packages:
@@ -2160,6 +2152,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.150-1.el7.elrepo.x86_64.rpm
+4b435bc8772ec5a45c3665f45a33de54a411f54bba5c2f63c0a9321f2a940e40:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-b7dd61cffbd62d7fa778bf8ec2df12cbe4849ca80ab71e31acf518da3f9d3c89-kernel-devel-4.14.291-218.527.amzn2.x86_64.rpm
 4b805e6db701c7ad7116b3ecac8be47dd30ec290b9d9dbec9d4e1548f0557702:
   type: redhat
   packages:
@@ -4958,10 +4954,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1110-azure_4.15.0-1110.122_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1110_4.15.0-1110.122_all.deb
-09ef04dd1ae230e5ff5d6a5b29a4e01dc79478cb98a0a11ca414b1319d86183a:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2023.4.0-flatcar_developer_container.bin.bz2
 10f0ce0720fe91446064a755f3e41718de68b405c740f89b82b3aa18e98c436f:
   type: redhat
   packages:
