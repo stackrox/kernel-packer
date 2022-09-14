@@ -7,5 +7,7 @@ source .openshift-ci/crawler/env.sh
 # Assume we need to run in staging mode unconditionally for testing purposes.
 source .openshift-ci/crawler/setup-staging.sh
 
-echo "Collector commit..."
-make robo-collector-commit
+if [[ "$BRANCH" =~ ^(master|main)$ ]]; then
+    echo "Collector commit..."
+    make robo-collector-commit
+fi;
