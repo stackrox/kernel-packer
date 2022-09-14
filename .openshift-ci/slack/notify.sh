@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+# Notify only on the main branch
+if [[ -z "$BRANCH" ]]; then
+    export BRANCH="$(echo "$JOB_SPEC" | jq -r '.extra_refs[0].base_ref')"
+fi
+
+if [[ ! "$BRANCH" =~ ^(master|main)$ ]]; then
+    exit 0;
+fi
+
 source .openshift-ci/env.sh
 
 WEBHOOK_URL=$SLACK_WEBHOOK_ONCALL
