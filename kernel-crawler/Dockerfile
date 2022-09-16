@@ -5,9 +5,10 @@ COPY main.go /go/src/main.go
 RUN CGO_ENABLED=0 go build -o /go/bin/rhel-crawler /go/src/main.go
 
 ARG p7zip="v17.03"
-RUN wget "https://github.com/jinfeihan57/p7zip/archive/${p7zip}.tar.gz" \
- && mkdir p7zip && tar xzf "${p7zip}.tar.gz" -C p7zip --strip-components=1 \
- && cd p7zip && make -j 4 all3 && make install
+RUN wget "https://github.com/jinfeihan57/p7zip/releases/download/${p7zip}/linux-p7zip.zip" \
+ && mkdir p7zip && unzip "linux-p7zip.zip" -d p7zip \
+ && cp p7zip/{7z,7za,7zr} /usr/local/bin/ \
+ && cp p7zip/{7zCon.sfx,7z.so} /usr/local/share/
 
 FROM python:3.7-slim
 
