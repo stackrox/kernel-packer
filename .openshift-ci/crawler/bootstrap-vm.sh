@@ -59,7 +59,7 @@ main() {
     local GCP_VM_NAME="$1"
     shift
 
-    export BRANCH="$(echo "$JOB_SPEC" | jq -r '.extra_refs[0].base_ref')"
+    export BRANCH="$(get_branch)"
     export SHARED_DIR=/tmp/
 
     # Branch point to the currently tested project branch, build id is a unique
