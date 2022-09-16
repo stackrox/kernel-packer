@@ -22,6 +22,6 @@ echo "Artifacts..."
 rm -rf .build-data/downloads
 rm -rf .build-data/packages
 
-if [[ "$BRANCH" =~ ^(master|main)$ ]]; then
+if ! is_in_PR_context; then
     make robo-crawl-commit
-fi;
+fi
