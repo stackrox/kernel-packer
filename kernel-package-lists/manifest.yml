@@ -357,6 +357,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.40.2.el8_4.x86_64.rpm
+0cd01c04227fc6eb80a03c39dda63602375dc1f0079296bc6a9c861be34819f7:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.1-flatcar_developer_container.bin.bz2
 0ad95b4e04bf952ac14fad605d201f937b82e005494f477fe97e93761720124f:
   type: ubuntu
   packages:
@@ -4620,6 +4624,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9f388164ea775e7a6c36c8628bb9a66a47d9fe27c99e732a210f357e1213dda7-kernel-devel-4.14.77-86.82.amzn2.x86_64.rpm
+9c222fdb45522b7285e5e7957ef2e38beaf317667b0d76d00aa960247c42cd28:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.0-flatcar_developer_container.bin.bz2
 9d287faa1356323929f9a55c004db7a42cd372eb6e2c064a119ac77e5d2cbd1f:
   type: ubuntu
   packages:
@@ -6156,6 +6164,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1083_4.15.0-1083.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1083-gcp_4.15.0-1083.94_amd64.deb
+47a20f6ca20ae19efed2b1650b4ba4d624cdec701d782f1f6046f5a74f751b9a:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
 47f95e49161e337bab8ae59d1f16fc85ad58a558d67e763617b03d7d37ea7093:
   type: redhat
   packages:
@@ -13112,10 +13124,6 @@ a781c8a2285e46362074aea67e5e4e61bafb1096e751563301405a67e064fae3:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1026_4.15.0-1026.27-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1026-gcp_4.15.0-1026.27-16.04.1_amd64.deb
-a781a9c217151db8216fb0ef1e465d8691dde94d0ef1b13299897f36b2090525:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2247.6.0-flatcar_developer_container.bin.bz2
 a835d0c9af4005454de988c237ae493418ee4b3f248203e7130965fe7a745355:
   type: ubuntu
   packages:
