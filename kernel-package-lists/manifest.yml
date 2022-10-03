@@ -755,6 +755,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1209.7-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1209.7-kernel-headers.tgz
+1e0337993347f6fef4f5bd66f750f8ca1eedda5d851215623ae2ec251e93fe6c:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1151-azure_4.15.0-1151.166-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1151_4.15.0-1151.166-16.04.1_all.deb
 1c0271935623021a9ecf58ca41752a217563237f4c1b71247768f0bc1831a41f:
   type: cos
   packages:
@@ -6172,10 +6177,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1083_4.15.0-1083.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1083-gcp_4.15.0-1083.94_amd64.deb
-47a20f6ca20ae19efed2b1650b4ba4d624cdec701d782f1f6046f5a74f751b9a:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.1-flatcar_developer_container.bin.bz2
 47f95e49161e337bab8ae59d1f16fc85ad58a558d67e763617b03d7d37ea7093:
   type: redhat
   packages:
@@ -7029,6 +7030,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.5.1.el8_1.x86_64.rpm
+71eabaf75f7a6c7cd98cf2e6d6c0ba54a8565dcc4ac1f4055aefd1f7c1ab6fcb:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1084_5.4.0-1084.90_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1084-gke_5.4.0-1084.90_amd64.deb
 71ab05ae8340bd64455dfe9313b07e8cb06af6e5e5e14ba473156dbe86a17ccf:
   type: ubuntu
   packages:
@@ -10010,6 +10016,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1026_5.3.0-1026.28-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1026-gke_5.3.0-1026.28-18.04.1_amd64.deb
+4507ee5a2c802f8fdad5590b5b92e148feecffa94d24fae57a0968077a3f8110:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.5.0-flatcar_developer_container.bin.bz2
 4519affb139bca9dbe6bdd7b5f8a7af54b57dab43cfbd93bcd8a744e81a8c65b:
   type: ubuntu
   packages:
@@ -11482,6 +11492,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1016-aws_4.4.0-1016.25_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1016_4.4.0-1016.25_all.deb
+99048fa77042251990c1af072243913414853dc42d732099b0c1bdc4f55444ec:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-gcp-fips-headers-4.15.0-2045_4.15.0-2045.50_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-headers-4.15.0-2045-gcp-fips_4.15.0-2045.50_amd64.deb
 99605e9b9f2beda82f1f54d545e2f17ea683b3c0a5882816d397d5b9dfb1cc26:
   type: coreos
   packages:
@@ -14987,6 +15002,10 @@ be12184b8b0d004f4d909ba777d397190cd11bed446d227bbd1ea72ca65fcd19:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1032-azure_4.15.0-1032.33-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1032_4.15.0-1032.33-16.04.1_all.deb
+be3631239d295d1a43ea70d8903825a6bcb883536143ee79a19f9f8871981f4a:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2632.1.0-flatcar_developer_container.bin.bz2
 beafa1bb712e1bbfb107fa14df9364d9f6c16ea5955a07f5d47df7a5f4e2f1cb:
   type: redhat
   packages:
@@ -17060,10 +17079,6 @@ da57e7b74417984c8d7fe31716cf26261717cf812a8617ad28a3da31194c9220:
   type: redhat
   packages:
   - http---vault.centos.org-7.8.2003-updates-x86_64-Packages-kernel-devel-3.10.0-1127.19.1.el7.x86_64.rpm
-da79f6f3dd5a66161516dba7d7d81680fbea9066161e1cf5443b611aaee2bfca:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.8.0-flatcar_developer_container.bin.bz2
 da0163cedfb65f723bcbdc8889bdb2e4f706cc624078209b976a9fd9d579ba2c:
   type: redhat
   packages:
