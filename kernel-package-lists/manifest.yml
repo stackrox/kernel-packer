@@ -3272,6 +3272,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1064-azure_5.4.0-1064.67_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1064_5.4.0-1064.67_all.deb
+6c4276558138cc49cdbcda05f44de5c17f136d55fd598f4790cf13043105aa54:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.103.51-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.103.51-kernel-headers.tgz
 6ba4ce6ed181fdbaa65a497a11ea7ae2bde4de6a64bd57dc0bc5b870e64e3572:
   type: garden
   packages:
@@ -4556,6 +4561,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.470.16-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.470.16-kernel-headers.tgz
+9d8e5ce0ebb97fee2ff3d9ba977207c757ad5849d009d6823b6f4a2907836879:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.227.41-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.227.41-kernel-headers.tgz
 9c8b6c9391cd610338809ab5c4f3fce5c0cd594e61be8fdbc293f2ff58f569de:
   type: cos
   packages:
@@ -9022,10 +9032,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53-generic_4.4.0-53.74_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53_4.4.0-53.74_all.deb
-657e47a5a57124a0fc46ccb5c8b5834e7fa48e56d53f54e9e342540c09d83184:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.2-flatcar_developer_container.bin.bz2
 660a0764b101c3bdf2db3cd4c4a336cdf05205316cf557cc789ef7e69f49934b:
   type: ubuntu
   packages:
@@ -19175,11 +19181,6 @@ f50d96b336d976ad15858b99fbffd78db63f89577ac9a00c451f1e2f9e938483:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.88-1.el7.elrepo.x86_64.rpm
-f52d6d992d76b850adf6eb7d360ee9c00bae869bb009aa89a2ea1709de82d92c:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-15-generic_5.19.0-15.15_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-15_5.19.0-15.15_all.deb
 f53bc30d89ca253ec874b9c458dbf929c3546e1666cd883d83dcbddb3317937b:
   type: ubuntu
   packages:
