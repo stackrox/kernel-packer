@@ -120,10 +120,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69-generic_4.15.0-69.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69_4.15.0-69.78_all.deb
-0e23f898b0340790eab712e6b7a22730cde0392c52c56bf5b6326a0f925e4c45:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2135.4.0-flatcar_developer_container.bin.bz2
 0e27c2964869a4d58bcf67d0ce057baefe30338b26173dc1f0daaf722e91a9f4:
   type: redhat
   packages:
@@ -357,10 +353,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.40.2.el8_4.x86_64.rpm
-0cd01c04227fc6eb80a03c39dda63602375dc1f0079296bc6a9c861be34819f7:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.1-flatcar_developer_container.bin.bz2
 0ad95b4e04bf952ac14fad605d201f937b82e005494f477fe97e93761720124f:
   type: ubuntu
   packages:
@@ -2460,6 +2452,11 @@
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.136-1_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-12-amd64_5.10.103-1_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-12-common_5.10.103-1_all.deb
+4cfad495642d882dd12c1fc65e8a57030df1262a5841e10b9bd6bacfa2f38da2:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1062-fips_5.4.0-1062.70_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1062_5.4.0-1062.70_all.deb
 4afd433f708104456f7a1c3863b4fffc1bf1c9bbb9f9275c75d2a79f331f7bf6:
   type: ubuntu
   packages:
@@ -10771,6 +10768,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1041-aws_5.4.0-1041.43_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1041_5.4.0-1041.43_all.deb
+9776f9814907d0529bb228d6f73d0b7601d05cc678943ceb13dc77670c783afa:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-194-generic_4.15.0-194.205-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-194_4.15.0-194.205-16.04.1_all.deb
 9776ea771788534d349969f5d4558871badac067755abdc80ef6726a16a3c633:
   type: ubuntu
   packages:
@@ -11492,6 +11494,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-45-generic_5.4.0-45.49_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-45_5.4.0-45.49_all.deb
+88706e579502008a489a5997a3174d8f17a6eadf65f877f95376a02beed451e8:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1099-fips_4.15.0-1099.110_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1099_4.15.0-1099.110_all.deb
 89065bb09623754195e2d79c7bde7e448efc0edc02c9d31322a54f3f4f6b22e6:
   type: ubuntu
   packages:
