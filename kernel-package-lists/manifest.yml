@@ -278,6 +278,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1009-aws_4.15.0-1009.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1009_4.15.0-1009.9_all.deb
+0ca84c1ce4eba1a373c12c43829f04e85b7c70d11f94b319052f2212d394f16f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.4.0-flatcar_developer_container.bin.bz2
 0da44486150e5952bbbbfd2cb7424f6a47366f572785c10adc31e2dc69a09c6f:
   type: redhat
   packages:
@@ -2192,6 +2196,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-300.fc37-x86_64-kernel-devel-5.19.15-300.fc37.x86_64.rpm
+4e82c8056323495fbb60362bab525e6f4062b53c1a3daf042f8b823f277ad927:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.9.0-flatcar_developer_container.bin.bz2
 4b87e8cb924bdff1bd2bca47aa80c16264c645052f28569dc6bf37adfc652196:
   type: ubuntu
   packages:
@@ -5396,10 +5404,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-headers.tgz
-22e60d16f32f3ba410351e4a02d183a1e8a0c31e2090fbc5d3be8072886ca3b0:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.1-flatcar_developer_container.bin.bz2
 22d94d3ff346c1cb54ee68337c6dcbc09b2663e2f09f518e7d6ec030dfe9ebd5:
   type: ubuntu
   packages:
@@ -8093,6 +8097,10 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.3.2011-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-240.1.1.el8_3.x86_64.rpm
+154c7df55c2fe92ee3f9b7973ed6d0def22d0774f16fd09e219b65501c5c4741:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-100.fc35-x86_64-kernel-devel-5.19.15-100.fc35.x86_64.rpm
 154c37fdf98793927f0059f353366a286ce3e33c4cd6d81cd82a84a39e73fb06:
   type: ubuntu
   packages:
@@ -10290,6 +10298,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1031-gke_4.4.0-1031.31_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1031_4.4.0-1031.31_all.deb
+5939c9b330fa90f3ef160a3b08c37cb7c3a86ceaf772baca6764dafb871b7ac8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-200.fc36-x86_64-kernel-devel-5.19.15-200.fc36.x86_64.rpm
 5973c24be77bcfed25a7615ba0f4a587447655c71f96f93c582b08619b22f06f:
   type: ubuntu
   packages:
@@ -16615,10 +16627,6 @@ d9e0f376a38191577cc4eca6d2fc614c3d3a518790b62508c7a0e880e61c57da:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2022-aws-fips_4.15.0-2022.22_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2022_4.15.0-2022.22_all.deb
-d9e0c80152ff9b4656397ac316043c2d51cb9b157e60c12b29d59fcf55efdc09:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.2-flatcar_developer_container.bin.bz2
 d9d4d53bbc7cb1a64bfe04fbcda0d80dfb8ab4b2164b3f2d99051a7fcd141fd4:
   type: ubuntu
   packages:
