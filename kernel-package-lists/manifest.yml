@@ -744,12 +744,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-61236e7b9a07d600f27ebddba9bb498b5d38b61ae5aaa644d8a79b2a370e6a02-kernel-devel-4.14.109-99.92.amzn2.x86_64.rpm
-1c6116689fd334e4aa3945d043b62a37e4f46815600c38245d8d4ff455539c06:
-  type: garden
-  packages:
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.103-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.103-garden-amd64_5.10.103-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.103-garden-common_5.10.103-0gardenlinux1_all.deb
 1b278529801d1d7156b33c8e5897bc56d8aa2162bb9ab0b42ba7a08c1fca18ed:
   type: cos
   packages:
@@ -5095,10 +5089,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1110-azure_4.15.0-1110.122_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1110_4.15.0-1110.122_all.deb
-09ef04dd1ae230e5ff5d6a5b29a4e01dc79478cb98a0a11ca414b1319d86183a:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2023.4.0-flatcar_developer_container.bin.bz2
 10f0ce0720fe91446064a755f3e41718de68b405c740f89b82b3aa18e98c436f:
   type: redhat
   packages:
@@ -9325,12 +9315,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.2-300.fc34-x86_64-kernel-devel-5.11.2-300.fc34.x86_64.rpm
-765bca3bb5f9e0bd64d335b845bc124d535cf238d7f30847d74e6fe82f5416b8:
-  type: garden
-  packages:
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.103-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.103-garden-cloud-amd64_5.10.103-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.103-garden-common_5.10.103-0gardenlinux1_all.deb
 771f6570a21f66e80fd520e376512cb9c55e473ae3b2845d3a8c38f07b4da489:
   type: ubuntu
   packages:
@@ -13312,12 +13296,6 @@ a835d0c9af4005454de988c237ae493418ee4b3f248203e7130965fe7a745355:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1019-azure_4.15.0-1019.19_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1019_4.15.0-1019.19_all.deb
-a888df07ef4fd67e07af59f28a9a58e416c37ec9e277911096d613cafacfa7b0:
-  type: garden
-  packages:
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.100-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.100-garden-amd64_5.10.100-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.100-garden-common_5.10.100-0gardenlinux1_all.deb
 a0972a47f4067daa3b0a50d6e317b8e1da497b89d3c8383443c6e9dd4f0c41fa:
   type: cos
   packages:
@@ -14815,12 +14793,6 @@ b1114371e55634a65ad7888c787df4e3e30d2762e8b3ff5b66d370f171feac45:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.81.0-kernel-src.tar.gz
-b4715535be734009d1757782029087d5b052de85a7cc4b0145d29d208d1e7f0e:
-  type: garden
-  packages:
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.100-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.100-garden-cloud-amd64_5.10.100-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.100-garden-common_5.10.100-0gardenlinux1_all.deb
 b05368238acd995f522a90ed2d4b7496f3cca324e6b7f723fe1835ccc56d0774:
   type: ubuntu
   packages:
@@ -18320,6 +18292,10 @@ e8776d0495a86e7e52f2ccd1dc7eb2397a325f7a2afdcf3e15efa45fb88c82fa:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-0c74fb60a95b408b9faff8886a853e7cb6f517b0faf2c408e5eec8ff84b3020a-download
+e15106ca84b7368f4e64921494812219f2fed7abec1804c438799ac5b3de6515:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.5.0-flatcar_developer_container.bin.bz2
 e15836ebd333f85658050de10714683f7e62926143af07d14e09f0668a9252b2:
   type: ubuntu
   packages:
