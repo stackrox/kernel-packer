@@ -941,6 +941,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.50-1.el7.elrepo.x86_64.rpm
+01dea9960581379597dfd8ca1cf4b8aafd48af128192176058aa3366a8371147:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.19.0-1008-azure_5.19.0-1008.8_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.19.0-1008_5.19.0-1008.8_all.deb
 01eec8f244096a7e816313d22a8a16fcbd9600eb814203d663157a6d3328b0ea:
   type: ubuntu
   packages:
@@ -2743,10 +2748,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.13-200.fc36-x86_64-kernel-devel-5.19.13-200.fc36.x86_64.rpm
-5a6433b433cbad54ade8ac0345650a40281803d35e9f30cea62371def758c6d4:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3139.1.0-flatcar_developer_container.bin.bz2
 5b9713d3a0d93782731d802bcdbdd9876f01c84f7273b9d2158495e4157dc3db:
   type: ubuntu
   packages:
@@ -3194,6 +3195,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-75-generic_4.4.0-75.96_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-75_4.4.0-75.96_all.deb
+6b231f8ccb38197cc1c2e3b0818a12b829b76a5d6678cd9b84ead1070f400f77:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.19.0-1009-aws_5.19.0-1009.9_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.19.0-1009_5.19.0-1009.9_all.deb
 6b247e961bd603305c5c6ab0082899923a2cbdd4677d9586b8c843c1d4792bd8:
   type: redhat
   packages:
@@ -4251,6 +4257,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12607.60.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12607.60.0-kernel-headers.tgz
+8f3760faca16911056e60082e107666d801fac50fdf5cae7093f7bbdb6c30e7f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.19.0-1008_5.19.0-1008.8_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.19.0-1008-gcp_5.19.0-1008.8_amd64.deb
 8a04292b0816eeffac1ed48edf29cde9e4ae7eff5830e001ab27f0f8f56d357b:
   type: cos
   packages:
@@ -5028,6 +5039,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1052-fips_4.15.0-1052.60_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1052_4.15.0-1052.60_all.deb
+9afc018a18a494887c6504c1f3b819da4d1b1e4d89b92e8559b51d1e35f9af4a:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-101.fc35-x86_64-kernel-devel-5.19.15-101.fc35.x86_64.rpm
 9dfd3ca49959e192619c8b1092c2f9c7f02660d1787194ffd1c1c6d73d4d9f14:
   type: ubuntu
   packages:
@@ -7624,6 +7639,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-10895.273.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-10895.273.0-kernel-headers.tgz
+88de9c38cf2eebbf7565b6d3c26c1b38a898ce24ee3a202f3dc7ba79ec2d34da:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-201.fc36-x86_64-kernel-devel-5.19.15-201.fc36.x86_64.rpm
 89f0da5e0d4c40a0730f33ab8c201c2deb52fda7fd86212fe69fd88890b906ce:
   type: cos
   packages:
@@ -8379,6 +8398,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1127.19.1.el7.x86_64.rpm
+0287f4af446a0de72d47a8fa4a24acfc2470fe3064f68edcbeaa6e2c68d7bb4e:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-301.fc37-x86_64-kernel-devel-5.19.15-301.fc37.x86_64.rpm
 295c0dcbfe531355ef49a479638b7bcc9f23f136308e9b7b772d8870f5bc4b91:
   type: redhat
   packages:
@@ -11718,10 +11741,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d59c3695e9b79c253a02ee63051880df267700db4180ff05f97b28b095085791-kernel-devel-4.14.133-113.105.amzn2.x86_64.rpm
-308077b773b44875a31a8e94b3e492f969b81df4c05b79190a56c1e10bf9a444:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.0-flatcar_developer_container.bin.bz2
 333216abdef7ac68ed8542a8892b6ecdbf0f045a633f643f2024c4bd7d49a735:
   type: ubuntu
   packages:
@@ -17219,6 +17238,10 @@ da57e7b74417984c8d7fe31716cf26261717cf812a8617ad28a3da31194c9220:
   type: redhat
   packages:
   - http---vault.centos.org-7.8.2003-updates-x86_64-Packages-kernel-devel-3.10.0-1127.19.1.el7.x86_64.rpm
+da79f6f3dd5a66161516dba7d7d81680fbea9066161e1cf5443b611aaee2bfca:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.8.0-flatcar_developer_container.bin.bz2
 da0163cedfb65f723bcbdc8889bdb2e4f706cc624078209b976a9fd9d579ba2c:
   type: redhat
   packages:
