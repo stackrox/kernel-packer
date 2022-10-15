@@ -2748,6 +2748,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.13-200.fc36-x86_64-kernel-devel-5.19.13-200.fc36.x86_64.rpm
+5a6433b433cbad54ade8ac0345650a40281803d35e9f30cea62371def758c6d4:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3139.1.0-flatcar_developer_container.bin.bz2
 5b9713d3a0d93782731d802bcdbdd9876f01c84f7273b9d2158495e4157dc3db:
   type: ubuntu
   packages:
@@ -5424,10 +5428,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-headers.tgz
-22e60d16f32f3ba410351e4a02d183a1e8a0c31e2090fbc5d3be8072886ca3b0:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.1-flatcar_developer_container.bin.bz2
 22d94d3ff346c1cb54ee68337c6dcbc09b2663e2f09f518e7d6ec030dfe9ebd5:
   type: ubuntu
   packages:
@@ -9096,10 +9096,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53-generic_4.4.0-53.74_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53_4.4.0-53.74_all.deb
-657e47a5a57124a0fc46ccb5c8b5834e7fa48e56d53f54e9e342540c09d83184:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.2-flatcar_developer_container.bin.bz2
 660a0764b101c3bdf2db3cd4c4a336cdf05205316cf557cc789ef7e69f49934b:
   type: ubuntu
   packages:
@@ -9714,6 +9710,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1049-azure_5.4.0-1049.51_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1049_5.4.0-1049.51_all.deb
+1307bcbc152ed9e41617ed73e66153b973a44212f340dca6de75ddb1bb83ab08:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.3-flatcar_developer_container.bin.bz2
 1319efda0aa02911f6310af19e54e2f0505370ac630c6374294465972b0d60f7:
   type: redhat
   packages:
@@ -9920,6 +9920,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.15.0-1008_5.15.0-1008.12_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.15.0-1008-gcp_5.15.0-1008.12_amd64.deb
+3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -13841,10 +13845,6 @@ ad59f1809db4046cb00a5dd7d48a0d16cd7163ebee65dfa11cb676e06503666f:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.46.1.el8_2.x86_64.rpm
-ad66b538362ca531befb24c8d11c64ef5fc23ca53f05eba319f1cd5a4dee883a:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.2-flatcar_developer_container.bin.bz2
 ad88f2a221faf0413ba2128b779fe7b1d1aee7cfccf8c0e1ea7ba229a32a136e:
   type: redhat
   packages:
