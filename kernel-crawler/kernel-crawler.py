@@ -67,17 +67,6 @@ docker_desktop_excludes = [
     "45519",
     "48029",
 ]
-minikube_excludes = [
-    "kubernetes/minikube/archive/v0.35.0.tar.gz",
-    "kubernetes/minikube/archive/v0.34.1.tar.gz",
-    "kubernetes/minikube/archive/v0.34.0.tar.gz",
-    "kubernetes/minikube/archive/v0.33.1.tar.gz",
-    "kubernetes/minikube/archive/v0.33.0.tar.gz",
-    "kubernetes/minikube/archive/v0.32.0.tar.gz",
-    "kubernetes/minikube/archive/v0.31.0.tar.gz",
-    "kubernetes/minikube/archive/v0.30.0.tar.gz",
-    "kubernetes/minikube/archive/v0.29.0.tar.gz",
-]
 garden_excludes = [
     "5.4.0",
     "dbgsym",
@@ -301,17 +290,6 @@ repos = {
                 "\d+\.\d+\.\d+/kernel-src.tar.gz$",
                 "\d+\.\d+\.\d+/kernel-headers\.t(ar\.)?gz$",
             ]
-        },
-    ],
-
-    "Minikube": [
-        {
-            "root": "https://github.com/kubernetes/minikube/releases",
-            "download_root": "https://github.com",
-            "discovery_pattern" : "",
-            "subdirs": [""],
-            "page_pattern" : "/html/body//a[regex:test(@href, '^/kubernetes/minikube/archive/refs/tags/v[0-9]+.[0-9]+.[0-9]+.tar.gz')]/@href",
-            "exclude_patterns": minikube_excludes,
         },
     ],
 
