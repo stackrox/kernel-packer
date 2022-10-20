@@ -70,15 +70,20 @@ def get_defconfig(repo, minikube_version):
 
 
 def print_config_files(kernel_data):
+    base_url = 'https://raw.githubusercontent.com/kubernetes/minikube'
     for kd in kernel_data:
-        print(f'https://raw.githubusercontent.com/kubernetes/minikube/{kd["version"]}/{kd["config"]}')
-        print(f'https://raw.githubusercontent.com/kubernetes/minikube/{kd["version"]}/{kd["minikube"]}')
+        print(f'{base_url}/{kd["version"]}/{kd["config"]}?kernel={kd["kernel"]}')
 
 
 def print_kernel_packages(kernel_data):
+    urls = set()
+    base_url = 'https://cdn.kernel.org/pub/linux/kernel'
     for kd in kernel_data:
         version = semver.VersionInfo.parse(kd['kernel'])
-        print(f'https://cdn.kernel.org/pub/linux/kernel/v{version.major}.x/linux-{kd["kernel"]}.tar.xz')
+        urls.add(f'{base_url}/v{version.major}.x/linux-{kd["kernel"]}.tar.xz')
+
+    for url in urls:
+        print(url)
 
 
 def main():
