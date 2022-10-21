@@ -76,4 +76,4 @@ source .openshift-ci/env.sh
 source .openshift-ci/google-cloud-sdk/install.sh
 source .openshift-ci/google-cloud-sdk/init.sh
 
-main "kernel-packer-osci" "${GCP_SSH_KEY_USER}" $COMMAND
+main "kernel-packer-osci-${PROW_JOB_ID}" "${GCP_SSH_KEY_USER}" $COMMAND

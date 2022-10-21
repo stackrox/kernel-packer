@@ -116,6 +116,6 @@ main() {
 }
 
 main \
-    "kernel-packer-osci" \
+    "kernel-packer-osci-${PROW_JOB_ID}" \
     "ubuntu-os-cloud" \
     "ubuntu-2004-lts" \
