@@ -574,6 +574,8 @@ repackage_minikube() {
     }
     local kernel_version="${BASH_REMATCH[2]}-minikube-v${BASH_REMATCH[1]}"
 
+    log "Kernel version is ${kernel_version}"
+
     local linux_src="$(mktemp -d)"
     (
         tar --strip 1 -C "${linux_src}" -xf "${kernel_headers}"
@@ -581,9 +583,9 @@ repackage_minikube() {
 
         cp "${config}" .config
 
-        make KCONFIG_CONFIG=.config oldconfig
-        make KCONFIG_CONFIG=.config prepare
-        make KCONFIG_CONFIG=.config modules_prepare
+        yes "" | make KCONFIG_CONFIG=.config oldconfig > /dev/null
+        yes "" | make KCONFIG_CONFIG=.config prepare > /dev/null
+        yes "" | make KCONFIG_CONFIG=.config modules_prepare > /dev/null
 
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'minikube' "$kernel_version" '.')"
