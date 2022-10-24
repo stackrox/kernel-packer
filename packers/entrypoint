@@ -576,7 +576,7 @@ repackage_minikube() {
 
     local linux_src="$(mktemp -d)"
     (
-        tar --strip 1 -C "${linux_src}" -xzf "${kernel_headers}"
+        tar --strip 1 -C "${linux_src}" -xf "${kernel_headers}"
         cd "${linux_src}"
 
         cp "${config}" .config
