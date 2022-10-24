@@ -572,7 +572,7 @@ repackage_minikube() {
         log "Failed to match minikube version ${config}"
         return 1
     }
-    local kernel_version="${BASH_REMATCH[2]}-v${BASH_REMATCH[1]}"
+    local kernel_version="${BASH_REMATCH[2]}-minikube-v${BASH_REMATCH[1]}"
 
     local linux_src="$(mktemp -d)"
     (
