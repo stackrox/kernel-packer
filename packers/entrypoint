@@ -558,60 +558,41 @@ repackage_ubuntu() {
 
 # Repackages a minikube kernel into a bundle tarball.
 repackage_minikube() {
-    if [[ $# -ne 3 ]]; then
+    if [[ $# -ne 4 ]]; then
         log "invalid number of arguments"
         return 1
     fi
 
     local checksum="$1"
     local output_dir="$2"
-    local input_package_1="$3"
+    local config="$3"
+    local kernel_headers="$4"
 
-    local minikube="$(mktemp -d)"
-    local buildroot="${minikube}/out/buildroot"
+    [[ "$config" =~ -v([[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+).*kernel-([[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+) ]] || {
+        log "Failed to match minikube version ${config}"
+        return 1
+    }
+    local kernel_version="${BASH_REMATCH[2]}-v${BASH_REMATCH[1]}"
+
+    local linux_src="$(mktemp -d)"
     (
-        tar --strip 1 -C "${minikube}" -xzf "${input_package_1}"
-        cd "${minikube}"
-
-        # extract buildroot
-	sed -i 's|^minikube_iso:.*|minikube_iso:|' Makefile # Make it so that auto-pause is not built. This means we do not need to worry about the go version.
-        sed -i '/$(MAKE) -C $(BUILD_DIR)\/buildroot/d' Makefile # Make it so that the minikube iso is not actually built
-	sed -i '/rootfs.iso9660/d' Makefile # Since we are not creating the iso, don't move the iso
-        make minikube_iso
-
-        # extract kernel
-        cd "${buildroot}"
-	export FORCE_UNSAFE_CONFIGURE=1
-	make linux
-
-        local linux_src=$(find "${buildroot}/output/build" -maxdepth 1 -name 'linux-[0-9]*' | head -n1)
-        local kernel_version="$(echo "$linux_src" | sed -n 's/^.*\/linux-\([0-9]\+\.[0-9]\+\.[0-9]\+\)$/\1/p')"
-        if [ ! -n "$kernel_version" ]; then
-            kernel_version="$(echo "$linux_src" | sed 's/^.*\/linux-\([0-9]\+\.[0-9]\+\)$/\1/').0"
-        fi
-
-        if [[ -z "$kernel_version" ]]; then
-            log "invalid kernel version"
-            return 1
-        fi
-
-	local kernel_version_minikube="${kernel_version}-minikube"
-
-        log "Kernel version is $kernel_version_minikube"
-
-        ## prepare kernel
+        tar --strip 1 -C "${linux_src}" -xzf "${kernel_headers}"
         cd "${linux_src}"
-        make olddefconfig
-        make modules_prepare
+
+        cp "${config}" .config
+
+        make KCONFIG_CONFIG=.config oldconfig
+        make KCONFIG_CONFIG=.config prepare
+        make KCONFIG_CONFIG=.config modules_prepare
 
         # Generate bundle meta files
-        meta_dir="$(bundle_meta "$checksum" 'minikube' "$kernel_version_minikube" '.')"
+        meta_dir="$(bundle_meta "$checksum" 'minikube' "$kernel_version" '.')"
 
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
             --directory "$meta_dir" . \
             --directory "${linux_src}" . \
-        | pigz -9 -c > "${output_dir}/bundle-${kernel_version_minikube}.tgz"
+        | pigz -9 -c > "${output_dir}/bundle-${kernel_version}.tgz"
 
     )
 }
