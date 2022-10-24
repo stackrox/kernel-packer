@@ -69,9 +69,6 @@ func DockerCommand(checksum string, distroName string, outputDir string, package
 	// Add the Docker image name, distro name, and output directory alias
 	args = append(args, "repackage:latest", checksum, distroName, "/output")
 
-	// Add the docker socket so we can use other images as repackagers
-	args = append(args, "-v", "/var/run/docker.sock", "/var/run/docker.sock")
-
 	// Add a series of package names, same as the volume aliases.
 	for _, pkg := range packages {
 		args = append(args, fmt.Sprintf("/input/%s", filepath.Base(pkg)))
