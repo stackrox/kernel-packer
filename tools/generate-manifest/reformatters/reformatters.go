@@ -426,7 +426,7 @@ func reformatSuse(packages []string) ([][]string, error) {
 
 var (
 	minikubeVersionRe       = regexp.MustCompile(`\/v\d+\.\d+\.\d+\/`)
-	minikubeKernelVersionRe = regexp.MustCompile(`(?:(?:kernel=)|(?:linux-))(\d+\.\d+\.\d+)`)
+	minikubeKernelVersionRe = regexp.MustCompile(`(?:kernel=)((\d+)\.\d+\.\d+)`)
 )
 
 // reformatMinikube consumes a list of packages and configuration files
@@ -437,30 +437,25 @@ var (
 // [foo/v.1.24.0/something?kernel=4.19.202, foo/v.1.25.0/something?kernel=4.19.202, bar/v4.x/linux-4.19.202.tar.xz] ->
 // [[foo/v.1.24.0/something?kernel=4.19.202, bar/v4.x/linux-4.19.202.tar.xz], [foo/v.1.25.0/something?kernel=4.19.202, bar/v4.x/linux-4.19.202.tar.xz]]
 func reformatMinikube(packages []string) ([][]string, error) {
-	versions := make(map[string]string)
-	kernels := make(map[string]string)
+	versions := make([][]string, 0, len(packages))
 
 	for _, pkg := range packages {
 		kernelVersion := minikubeKernelVersionRe.FindStringSubmatch(pkg)
-		if len(kernelVersion) != 2 {
-			return nil, fmt.Errorf("kernel regex failed to match %s - length: %d", pkg, len(kernelVersion))
+		if len(kernelVersion) != 3 {
+			return nil, nil
 		}
 
 		minikubeVersion := minikubeVersionRe.FindStringSubmatch(pkg)
-		if minikubeVersion != nil {
-			versions[kernelVersion[1]] = pkg
-		} else {
-			kernels[kernelVersion[1]] = pkg
+		if minikubeVersion == nil {
+			return nil, fmt.Errorf("Failed to match minikube package: %s", pkg)
 		}
+
+		manifest := make([]string, 0, 2)
+		manifest = append(manifest, pkg)
+		manifest = append(manifest, fmt.Sprintf("https://cdn.kernel.org/pub/linux/kernel/v%s.x/linux-%s.tar.xz", kernelVersion[2], kernelVersion[1]))
+
+		versions = append(versions, manifest)
 	}
 
-	manifests := make([][]string, 0, len(versions))
-	for kernel, pkg := range versions {
-		pair := make([]string, 0, 1)
-		pair = append(pair, pkg)
-		pair = append(pair, kernels[kernel])
-		manifests = append(manifests, pair)
-	}
-
-	return manifests, nil
+	return versions, nil
 }
