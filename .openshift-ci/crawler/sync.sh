@@ -7,6 +7,9 @@ source .openshift-ci/crawler/env.sh
 # Assume we need to run in staging mode unconditionally for testing purposes.
 source .openshift-ci/crawler/setup-staging.sh
 
+# shellcheck source=SCRIPTDIR=scripts/lib.sh
+source .openshift-ci/scripts/lib.sh
+
 echo "Sync..."
 make sync
 git --no-pager diff kernel-package-lists/
