@@ -583,9 +583,11 @@ repackage_minikube() {
 
         cp "${config}" .config
 
-        yes "" | make KCONFIG_CONFIG=.config oldconfig > /dev/null
-        yes "" | make KCONFIG_CONFIG=.config prepare > /dev/null
-        yes "" | make KCONFIG_CONFIG=.config modules_prepare > /dev/null
+        make olddefconfig > /dev/null
+        make modules_prepare > /dev/null
+
+        # Delete all *.c files, excluding scripts directory
+        find "${linux_src}" ! \( -type d \) -not -path "${linux_src}/scripts/*" -name "*.c" -delete
 
         # Generate bundle meta files
         meta_dir="$(bundle_meta "$checksum" 'minikube' "$kernel_version" '.')"
