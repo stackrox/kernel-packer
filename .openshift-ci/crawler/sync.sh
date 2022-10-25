@@ -25,6 +25,6 @@ echo "Artifacts..."
 rm -rf .build-data/downloads
 rm -rf .build-data/packages
 
-if ! is_in_PR_context; then
-    make robo-crawl-commit
-fi
+#if ! is_in_PR_context; then
+#    make robo-crawl-commit
+#fi
