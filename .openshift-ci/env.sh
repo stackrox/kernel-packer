@@ -10,5 +10,5 @@ echo "Load environment variables..."
 export BASH_ENV=/tmp/bash_env
 
 # shellcheck source=SCRIPTDIR=scripts/lib.sh
-source "scripts/lib.sh"
+source ".openshift-ci/scripts/lib.sh"
 import_creds
