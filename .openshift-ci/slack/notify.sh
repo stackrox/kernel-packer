@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+# shellcheck source=SCRIPTDIR=scripts/lib.sh
+source ".openshift-ci/scripts/lib.sh"
+
 # Notify only on the main branch
 if is_in_PR_context; then
     echo "Not notifying on PRs"
