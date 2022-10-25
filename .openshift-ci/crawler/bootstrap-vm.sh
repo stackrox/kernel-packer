@@ -5,6 +5,9 @@ set -e
 # This script bootstraps a freshly created GCP VM by copying into it and
 # running an init script.
 
+# shellcheck source=SCRIPTDIR=scripts/lib.sh
+source ".openshift-ci/scripts/lib.sh"
+
 function die() {
     local STEP="$1"
     shift
