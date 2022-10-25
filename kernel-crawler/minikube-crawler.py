@@ -7,6 +7,7 @@
 import tempfile
 import sys
 import os
+import pathlib
 import re
 import semver
 import pygit2
@@ -47,11 +48,8 @@ def get_kernel_config_file_name(version):
 
 
 def search_files(directory, file_name):
-    for dirpath, dirnames, files in os.walk(directory, followlinks=True):
-        for name in files:
-            if name == file_name:
-                return os.path.join(dirpath, name)
-    return None
+    files = pathlib.Path(directory).rglob(file_name)
+    return next(files, None)
 
 
 def get_kernel_release(repo, version):
@@ -61,12 +59,14 @@ def get_kernel_release(repo, version):
     for line in open(full_path):
         if re.search(r'^BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE=', line):
             tokens = line.strip().split('=')
-            return full_path[len(repo.workdir):], tokens[1].strip('"')
+            relative_path = os.path.relpath(full_path, repo.workdir)
+            return relative_path, tokens[1].strip('"')
 
 
 def get_defconfig(repo, minikube_version):
     file_name = get_kernel_config_file_name(minikube_version)
-    return search_files(repo.workdir, file_name)[len(repo.workdir):]
+    full_path = search_files(repo.workdir, file_name)
+    return os.path.relpath(full_path, repo.workdir)
 
 
 def print_config_files(kernel_data):
