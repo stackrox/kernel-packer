@@ -85,7 +85,7 @@ main() {
 
     success=false
     for _ in {1..3}; do
-        if gcloud compute scp /tmp/ci-data/dump.sh "$GCP_VM_NAME:/tmp/ci-data/dump.sh"; then
+        if gcloud compute scp --recurse /tmp/ci-data "$GCP_VM_NAME:/tmp/ci-data"; then
             success=true
             break
         else
