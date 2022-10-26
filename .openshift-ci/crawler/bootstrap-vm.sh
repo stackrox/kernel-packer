@@ -21,12 +21,10 @@ function die() {
 
 function with_retry() {
     for _ in {1..3}; do
-        if $@; then
-            return 0
-        else
+        "$@" && return 0 || {
             echo "Retrying in 5s ..."
             sleep 5
-        fi
+        }
     done
 
     return 1
