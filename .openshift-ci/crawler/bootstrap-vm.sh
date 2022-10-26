@@ -42,7 +42,7 @@ copyAndRunInitScript() {
         die "Bootstrap" "Failed to copy the init script after 3 retries"
     fi
 
-    if ! with_retry "gcloud compute ssh '$GCP_VM_NAME' --command 'bash /tmp/init.sh'"; then
+    if ! with_retry 'gcloud compute ssh "$GCP_VM_NAME" --command "bash /tmp/init.sh"'; then
         die "Bootstrap" "Failed to run the init script after 3 retries"
     fi
 
