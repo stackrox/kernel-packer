@@ -72,9 +72,7 @@ main() {
     echo "Copying and executing init script..."
     copyAndRunInitScript "$GCP_VM_NAME"
 
-    echo "Dumping CI data and uploading..."
-    ./openshift-ci/scripts/dump-pr-data.sh
-
+    echo "Uploading PR data..."
     if ! with_retry "gcloud compute scp /tmp/ci-data/dump.sh '$GCP_VM_NAME:/tmp/ci-data/dump.sh'"; then
         die "Bootstrap" "Failed to upload ci-data"
     fi
