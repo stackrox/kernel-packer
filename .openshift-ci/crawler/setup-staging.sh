@@ -4,8 +4,8 @@
 KERNEL_PACKAGE_BUCKET="gs://stackrox-kernel-packages-staging/copy"
 KERNEL_BUNDLE_BUCKET="gs://collector-kernel-bundles-public"
 
-KERNEL_PACKAGE_STAGING_BUCKET="gs://stackrox-kernel-packages-staging/"
-KERNEL_BUNDLE_STAGING_BUCKET="gs://stackrox-kernel-bundles-staging/"
+KERNEL_PACKAGE_STAGING_BUCKET="gs://stackrox-kernel-packages-staging"
+KERNEL_BUNDLE_STAGING_BUCKET="gs://stackrox-kernel-bundles-staging"
 
 if [[ "$BRANCH" =~ ^(master|main)$ ]]; then
 
