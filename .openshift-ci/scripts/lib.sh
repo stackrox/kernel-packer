@@ -234,7 +234,7 @@ registry_rw_login() {
     esac
 }
 
-if [[ "${CI_DATA:-}" == "" ]]; then
+if [[ "${CI_DATA:-}" == "" && -f /tmp/ci-data.sh ]]; then
     export CI_DATA="available"
 
     # shellcheck source=/dev/null
