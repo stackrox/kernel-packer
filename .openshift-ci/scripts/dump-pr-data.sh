@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -exo pipefail
 
-mkdir /tmp/ci-data/
-touch /tmp/ci-data/dump.sh
+touch /tmp/ci-data.sh
 
 if [[ -n "${REPO_OWNER}" ]]; then
     echo "export REPO_OWNER='${REPO_OWNER}'" >> /tmp/ci-data/dump.sh

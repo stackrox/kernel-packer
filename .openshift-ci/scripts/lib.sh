@@ -238,5 +238,5 @@ if [[ "${CI_DATA:-}" == "" ]]; then
     export CI_DATA="available"
 
     # shellcheck source=/dev/null
-    source /tmp/ci-data/dump.sh
+    source /tmp/ci-data.sh
 fi
