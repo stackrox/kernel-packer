@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eo pipefail
+set -exo pipefail
 
 mkdir /tmp/ci-data/
 touch /tmp/ci-data/dump.sh
