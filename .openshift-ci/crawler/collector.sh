@@ -12,6 +12,8 @@ source .openshift-ci/crawler/setup-staging.sh
 
 if ! is_in_PR_context; then
     echo "Not in PR context"
+else
+    echo "In PR context"
 fi;
 
 #if ! is_in_PR_context; then

@@ -27,6 +27,8 @@ rm -rf .build-data/packages
 
 if ! is_in_PR_context; then
     echo "Is not in PR context"
+else
+    echo "Is in PR context"
 fi
 
 #if ! is_in_PR_context; then
