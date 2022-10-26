@@ -19,39 +19,30 @@ function die() {
     exit 1
 }
 
+function with_retry() {
+    for _ in {1..3}; do
+        if $@; then
+            return 0
+        else
+            echo "Retrying in 5s ..."
+            sleep 5
+        fi
+    done
+
+    return 1
+}
+
 copyAndRunInitScript() {
     local GCP_VM_NAME="$1"
     shift
 
     [ -z "$GCP_VM_NAME" ] && die "Bootstrap" "error: missing parameter GCP_VM_NAME"
 
-    success=false
-    for _ in {1..3}; do
-        if gcloud compute scp /tmp/init.sh "$GCP_VM_NAME:/tmp/init.sh"; then
-            success=true
-            break
-        else
-            echo "Retrying in 5s ..."
-            sleep 5
-        fi
-    done
-
-    if [[ "$success" != "true" ]]; then
+    if ! with_retry "gcloud compute scp /tmp/init.sh $GCP_VM_NAME:/tmp/init.sh"; then
         die "Bootstrap" "Failed to copy the init script after 3 retries"
     fi
 
-    success=false
-    for _ in {1..3}; do
-        if gcloud compute ssh "$GCP_VM_NAME" --command "bash /tmp/init.sh"; then
-            success=true
-            break
-        else
-            echo "Retrying in 5s ..."
-            sleep 5
-        fi
-    done
-
-    if [[ "$success" != "true" ]]; then
+    if ! with_retry "gcloud compute ssh '$GCP_VM_NAME' --command 'bash /tmp/init.sh'"; then
         die "Bootstrap" "Failed to run the init script after 3 retries"
     fi
 
@@ -80,6 +71,13 @@ main() {
 
     echo "Copying and executing init script..."
     copyAndRunInitScript "$GCP_VM_NAME"
+
+    echo "Dumping CI data and uploading..."
+    ./openshift-ci/scripts/dump-pr-data.sh
+
+    if ! with_retry "gcloud compute scp /tmp/ci-data/dump.sh '$GCP_VM_NAME:/tmp/ci-data/dump.sh'"; then
+        die "Bootstrap" "Failed to upload ci-data"
+    fi
 }
 
 main "kernel-packer-osci-${PROW_JOB_ID}"
