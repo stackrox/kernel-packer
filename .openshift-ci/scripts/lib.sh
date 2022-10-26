@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# A library of CI related reusable bash functions.
-# Keep in sync with stackrox/collector/.openshift-ci/scripts/lib.sh
+# A library of CI related reusable bash functions
+
+SECRET_MOUNT_BASE=/tmp/secret
 
 die() {
     echo >&2 "$@"
@@ -144,17 +145,20 @@ get_pr_details() {
 
 import_creds() {
     shopt -s nullglob
-    for cred in /tmp/secret/**/[A-Z]*; do
+    for cred in "${SECRET_MOUNT_BASE}"/**/[A-Z]*; do
         export "$(basename "$cred")"="$(cat "$cred")"
     done
 }
 
+# Ensures that the given secret exists in the environment.
+# As a side effect, if the secret does not currently exist,
+# all secrets are imported (via import_creds) and then checked again.
 ensure_secret_exists() {
     local secret_name="$1"
 
-    if [[ -z "${secret_name}" ]]; then
+    if [[ -z "${!secret_name}" ]]; then
         import_creds
-        if [[ -z "${secret_name}" ]]; then
+        if [[ -z "${!secret_name}" ]]; then
             die "No such secret called ${secret_name}"
         fi
     fi
@@ -170,7 +174,7 @@ copy_secret_to_file() {
 
     ensure_secret_exists "$secret_name"
 
-    echo "${secret_name}" > "${destination}"
+    echo "${!secret_name}" > "${destination}"
     chmod "${permissions}" "${destination}"
 }
 
@@ -178,20 +182,20 @@ get_secret_content() {
     local secret_name="$1"
 
     ensure_secret_exists "$secret_name"
-    echo "${secret_name}"
+    echo "${!secret_name}"
 }
 
 get_secret_file() {
     local secret_name="$1"
 
-    for cred in /tmp/secrets/**/[A-Z]*; do
-        if [[ "$cred" == "${secret_name}$" ]]; then
+    for cred in "${SECRET_MOUNT_BASE}"/**/[A-Z]*; do
+        if [[ "$(basename "$cred")" == "${secret_name}" ]]; then
             echo "${cred}"
             return
         fi
     done
 
-    die "No such secret called $secret_name}"
+    die "No such secret called $secret_name"
 }
 
 registry_rw_login() {
@@ -229,3 +233,10 @@ registry_rw_login() {
             ;;
     esac
 }
+
+if [[ "${CI_DATA:-}" == "" ]]; then
+    export CI_DATA="available"
+
+    # shellcheck source=/dev/null
+    source /tmp/ci-data/dump.sh
+fi
