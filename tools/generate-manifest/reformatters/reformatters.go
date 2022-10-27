@@ -24,6 +24,7 @@ var (
 		"single":       reformatSingle,
 		"debian":       reformatDebian,
 		"cos":          reformatCOS,
+		"minikube":     reformatMinikube,
 	}
 
 	supportedUbuntuBackports = []string{"16.04", "20.04"}
@@ -421,4 +422,42 @@ func reformatSuse(packages []string) ([][]string, error) {
 	}
 
 	return manifests, nil
+}
+
+var (
+	minikubeVersionRe       = regexp.MustCompile(`\/v\d+\.\d+\.\d+\/`)
+	minikubeKernelVersionRe = regexp.MustCompile(`(?:kernel=)((\d+)\.\d+\.\d+)`)
+)
+
+// reformatMinikube consumes a list of configuration files and will return
+// groups of kernel headers with the configuration to be used for a given
+// minikube version. The reasone the kernel URL is recreated here is that
+// the groups we receive are grouped by URL, so we ignore the cdn.kernel ones
+// and recreate them when going through the configuration files.
+//
+// For example:
+// [foo/v.1.24.0/something?kernel=4.19.202, foo/v.1.25.0/something?kernel=4.19.202], [bar/v4.x/linux-4.19.202.tar.xz] ->
+// [[foo/v.1.24.0/something?kernel=4.19.202, bar/v4.x/linux-4.19.202.tar.xz], [foo/v.1.25.0/something?kernel=4.19.202, bar/v4.x/linux-4.19.202.tar.xz]]
+func reformatMinikube(packages []string) ([][]string, error) {
+	versions := make([][]string, 0, len(packages))
+
+	for _, pkg := range packages {
+		kernelVersion := minikubeKernelVersionRe.FindStringSubmatch(pkg)
+		if len(kernelVersion) != 3 {
+			return nil, nil
+		}
+
+		minikubeVersion := minikubeVersionRe.FindStringSubmatch(pkg)
+		if minikubeVersion == nil {
+			return nil, fmt.Errorf("Failed to match minikube package: %s", pkg)
+		}
+
+		manifest := make([]string, 0, 2)
+		manifest = append(manifest, pkg)
+		manifest = append(manifest, fmt.Sprintf("https://cdn.kernel.org/pub/linux/kernel/v%s.x/linux-%s.tar.xz", kernelVersion[2], kernelVersion[1]))
+
+		versions = append(versions, manifest)
+	}
+
+	return versions, nil
 }

@@ -18,11 +18,11 @@ RUN apt-get update \
     git \
  && rm -rf /var/lib/apt
 
-RUN pip install --no-cache-dir \
-    lxml==4.2.4 urllib3==1.26.3 \
-    requests==2.27.1 pyyaml==6.0
+COPY requirements.txt /tmp/
+RUN pip install -r /tmp/requirements.txt && rm -f /tmp/requirements.txt
 
 COPY ["garden-crawler.py", "/"]
+COPY ["minikube-crawler.py", "/"]
 COPY ["kernel-crawler.py", "/"]
 COPY ["repo-crawler.py", "/"]
 COPY ["kope.io.asc", "/"]
