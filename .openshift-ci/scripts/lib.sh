@@ -87,9 +87,9 @@ get_branch() {
     elif [[ -n "${CLONEREFS_OPTIONS:-}" ]]; then
         # periodics - CLONEREFS_OPTIONS exists in binary_build_commands and images.
         local base_ref
-        base_ref="$(jq -r '.refs[] | select(.repo=="collector") | .base_ref' <<< "${CLONEREFS_OPTIONS}")" || die "invalid CLONEREFS_OPTIONS json"
+        base_ref="$(jq -r '.refs[] | select(.repo=="kernel-packer") | .base_ref' <<< "${CLONEREFS_OPTIONS}")" || die "invalid CLONEREFS_OPTIONS json"
         if [[ "$base_ref" == "null" ]]; then
-            die "expect: base_ref in CLONEREFS_OPTIONS.refs[collector]"
+            die "expect: base_ref in CLONEREFS_OPTIONS.refs[kernel-packer]"
         fi
         echo "${base_ref}"
     elif [[ -n "${PULL_BASE_REF:-}" ]]; then
