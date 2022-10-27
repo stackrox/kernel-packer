@@ -11,12 +11,6 @@ source .openshift-ci/scripts/lib.sh
 source .openshift-ci/crawler/setup-staging.sh
 
 if ! is_in_PR_context; then
-    echo "Not in PR context"
-else
-    echo "In PR context"
+    echo "Collector commit..."
+    make robo-collector-commit
 fi;
-
-#if ! is_in_PR_context; then
-#    echo "Collector commit..."
-#    make robo-collector-commit
-#fi;

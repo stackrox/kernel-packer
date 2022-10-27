@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
 
 # This script bootstraps a freshly created GCP VM by copying into it and
 # running an init script.

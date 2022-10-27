@@ -26,11 +26,5 @@ rm -rf .build-data/downloads
 rm -rf .build-data/packages
 
 if ! is_in_PR_context; then
-    echo "Is not in PR context"
-else
-    echo "Is in PR context"
+    make robo-crawl-commit
 fi
-
-#if ! is_in_PR_context; then
-#    make robo-crawl-commit
-#fi
