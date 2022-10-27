@@ -56,8 +56,8 @@ createGCPVM() {
             --image-family "$GCP_IMAGE_FAMILY" \
             --image-project "$GCP_IMAGE_PROJECT" \
             --scopes="storage-rw,cloud-platform"\
-            --machine-type n2-standard-16 \
-            --labels="stackrox-kernel-crawler-osci=true,stackrox-osci-job=${BUILD_ID}" \
+            --machine-type e2-standard-4 \
+            --labels="stackrox-kernel-crawler-osci=true,stackrox-osci-job=${BUILD_ID},stackrox-ci=true" \
             --boot-disk-size=300GB \
             "$GCP_VM_NAME"; then
             success=true

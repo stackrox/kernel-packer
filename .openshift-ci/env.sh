@@ -9,7 +9,6 @@ echo "Load environment variables..."
 
 export BASH_ENV=/tmp/bash_env
 
-shopt -s nullglob
-for cred in /tmp/secret/**/[A-Z]*; do
-    export "$(basename "$cred")"="$(cat "$cred")"
-done
+# shellcheck source=SCRIPTDIR=scripts/lib.sh
+source ".openshift-ci/scripts/lib.sh"
+import_creds

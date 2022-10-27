@@ -5,6 +5,9 @@ set -e
 # This script bootstraps a freshly created GCP VM by copying into it and
 # running an init script.
 
+# shellcheck source=SCRIPTDIR=scripts/lib.sh
+source ".openshift-ci/scripts/lib.sh"
+
 function die() {
     local STEP="$1"
     shift
@@ -59,7 +62,7 @@ main() {
     local GCP_VM_NAME="$1"
     shift
 
-    export BRANCH="$(echo "$JOB_SPEC" | jq -r '.extra_refs[0].base_ref')"
+    export BRANCH="$(get_branch)"
     export SHARED_DIR=/tmp/
 
     # Branch point to the currently tested project branch, build id is a unique
@@ -77,6 +80,23 @@ main() {
 
     echo "Copying and executing init script..."
     copyAndRunInitScript "$GCP_VM_NAME"
+
+    echo "Uploading PR data..."
+
+    success=false
+    for _ in {1..3}; do
+        if gcloud compute scp /tmp/ci-data.sh "$GCP_VM_NAME:/tmp/ci-data.sh"; then
+            success=true
+            break
+        else
+            echo "Retrying in 5s ..."
+            sleep 5
+        fi
+    done
+
+    if [[ "$success" != "true" ]]; then
+        die "Bootstrap" "Failed to upload ci-data"
+    fi
 }
 
 main "kernel-packer-osci-${PROW_JOB_ID}"
