@@ -429,12 +429,14 @@ var (
 	minikubeKernelVersionRe = regexp.MustCompile(`(?:kernel=)((\d+)\.\d+\.\d+)`)
 )
 
-// reformatMinikube consumes a list of packages and configuration files
-// and will return groups of kernel headers with the configuration to be used
-// for a given minikube version
+// reformatMinikube consumes a list of configuration files and will return
+// groups of kernel headers with the configuration to be used for a given
+// minikube version. The reasone the kernel URL is recreated here is that
+// the groups we receive are grouped by URL, so we ignore the cdn.kernel ones
+// and recreate them when going through the configuration files.
 //
 // For example:
-// [foo/v.1.24.0/something?kernel=4.19.202, foo/v.1.25.0/something?kernel=4.19.202, bar/v4.x/linux-4.19.202.tar.xz] ->
+// [foo/v.1.24.0/something?kernel=4.19.202, foo/v.1.25.0/something?kernel=4.19.202], [bar/v4.x/linux-4.19.202.tar.xz] ->
 // [[foo/v.1.24.0/something?kernel=4.19.202, bar/v4.x/linux-4.19.202.tar.xz], [foo/v.1.25.0/something?kernel=4.19.202, bar/v4.x/linux-4.19.202.tar.xz]]
 func reformatMinikube(packages []string) ([][]string, error) {
 	versions := make([][]string, 0, len(packages))
