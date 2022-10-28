@@ -2389,10 +2389,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12739.29.0-kernel-headers.tgz
-4ab969585b132e1736a69c888c6146fc84b2f1692a1fbdc17a2e80db93242770:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2345.3.0-flatcar_developer_container.bin.bz2
 4fb12689714a9881c48d70ef60c7800ec63e9b1a7b842fecf27225d68e8f49ad:
   type: ubuntu
   packages:
@@ -4115,6 +4111,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-10895.123.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-10895.123.0-kernel-headers.tgz
+8b5f59e71d740ecd72a7a84a9cce6ba14daffedcb64914a30a015718f6a58917:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-gke-5.15-headers-5.15.0-1020_5.15.0-1020.25-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-headers-5.15.0-1020-gke_5.15.0-1020.25-20.04.1_amd64.deb
 8d5d66a061fc7f7d34a01da6a1ef78fd582b7eba56dd7e406d48bd378d51aef7:
   type: suse
   packages:
@@ -8512,6 +8513,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2061-aws-fips_4.15.0-2061.63_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2061_4.15.0-2061.63_all.deb
+280ee31fec1e32441b5699f8cc759797c5aa6d361129c9d5779444b665191809:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.0-flatcar_developer_container.bin.bz2
 282e7cd60a3e487ea627daeb750b217be2bb486ecf72f96533dfa974c591feda:
   type: coreos
   packages:
