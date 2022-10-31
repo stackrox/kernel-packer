@@ -6061,10 +6061,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.4-300.fc36-x86_64-kernel-devel-5.17.4-300.fc36.x86_64.rpm
-37b0c75da1a7ddd8a2b5e294feb2552d0a12f55dcc0276ad943ceda44398bbe2:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2765.1.0-flatcar_developer_container.bin.bz2
 37c4c3207731885762ed484ab28f68ff42df7ea8016f204af4d6266b75682a51:
   type: redhat
   packages:
@@ -6127,10 +6123,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.7-300.fc35-x86_64-kernel-devel-5.14.7-300.fc35.x86_64.rpm
-38d191ac429e0ccbca3549a11823b063952940c35242407745b22a1868388ef8:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.0-flatcar_developer_container.bin.bz2
 38f455a14fe22c68059ef0ef4802955e058132dfa9f3043f173421c206e07b17:
   type: redhat
   packages:
@@ -18621,10 +18613,6 @@ e9098fd9dda7c4a02b54a5d9b2379cd7f5afd607f83317b62cf26f2770a71608:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.220-1.el7.elrepo.x86_64.rpm
-e15106ca84b7368f4e64921494812219f2fed7abec1804c438799ac5b3de6515:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.5.0-flatcar_developer_container.bin.bz2
 e15836ebd333f85658050de10714683f7e62926143af07d14e09f0668a9252b2:
   type: ubuntu
   packages:
@@ -19378,6 +19366,11 @@ f6ecf90af194dfd05136cb72e96052521fe0e4cdfd9c1c49c204ae5be64aab60:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10173.0.0-kernel-src.tar.gz
+f6fed104542ee019c204cf38af8df813c3df4392278d800e28c5343d5edec71d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-gcp-5.15-headers-5.15.0-1022_5.15.0-1022.29-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-headers-5.15.0-1022-gcp_5.15.0-1022.29-20.04.1_amd64.deb
 f6af7793abe985b84869134cc4dc2b76d03c09451f87fe994c4a26f159eae5f9:
   type: ubuntu
   packages:
