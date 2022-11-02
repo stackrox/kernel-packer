@@ -347,6 +347,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-84-generic_5.4.0-84.94_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-84_5.4.0-84.94_all.deb
+0cc664ea580c5dadd282436af97f4a39ddb30636147148e8c3f55d43fa87cab9:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3277.1.0-flatcar_developer_container.bin.bz2
 0cc0836f1e2c1ac05e9ece1eb54cd63e4acae2960eb0c0fa92fc03f87c3ceae7:
   type: redhat
   packages:
@@ -4695,12 +4699,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.470.16-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.470.16-kernel-headers.tgz
-9d8a1e042381a18fac1ea8f8edad607bc36c68f47538a9f18d29f5f63f2d6d9a:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-amd64_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-common_6.0.6-2_all.deb
 9d8e5ce0ebb97fee2ff3d9ba977207c757ad5849d009d6823b6f4a2907836879:
   type: cos
   packages:
@@ -5554,10 +5552,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-headers.tgz
-22e60d16f32f3ba410351e4a02d183a1e8a0c31e2090fbc5d3be8072886ca3b0:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.1-flatcar_developer_container.bin.bz2
 22d94d3ff346c1cb54ee68337c6dcbc09b2663e2f09f518e7d6ec030dfe9ebd5:
   type: ubuntu
   packages:
@@ -6740,6 +6734,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-17162.0.3-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17162.0.3-kernel-headers.tgz
+56d6d00ef1c8cc9ef9c3ebf58ec68282826b399ea53d7c3282ccbba456828fb1:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2605.2.0-flatcar_developer_container.bin.bz2
 56b31cdcbf82f1cbf2ef269b063c8ed16001597a2b8c9a8886506791a992fcae:
   type: coreos
   packages:
@@ -13566,6 +13564,10 @@ a781c8a2285e46362074aea67e5e4e61bafb1096e751563301405a67e064fae3:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1026_4.15.0-1026.27-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1026-gcp_4.15.0-1026.27-16.04.1_amd64.deb
+a781a9c217151db8216fb0ef1e465d8691dde94d0ef1b13299897f36b2090525:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2247.6.0-flatcar_developer_container.bin.bz2
 a835d0c9af4005454de988c237ae493418ee4b3f248203e7130965fe7a745355:
   type: ubuntu
   packages:
@@ -14112,10 +14114,6 @@ ad59f1809db4046cb00a5dd7d48a0d16cd7163ebee65dfa11cb676e06503666f:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.46.1.el8_2.x86_64.rpm
-ad66b538362ca531befb24c8d11c64ef5fc23ca53f05eba319f1cd5a4dee883a:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.2-flatcar_developer_container.bin.bz2
 ad88f2a221faf0413ba2128b779fe7b1d1aee7cfccf8c0e1ea7ba229a32a136e:
   type: redhat
   packages:
@@ -15805,12 +15803,6 @@ c18d6110e4e151c82a00d741b9213052aa5de1b9834d8657987ef288dba2d993:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2081-aws-fips_4.15.0-2081.87_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2081_4.15.0-2081.87_all.deb
-c20a6d45dab28e86731bba35c11235f484192e44dda7099d74df01b94e2f26a5:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-cloud-amd64_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-common_6.0.6-2_all.deb
 c21a221bf7a35bb306bb2cf4e8c72c88d52a67b7816aa2677a9d41bad2972677:
   type: suse
   packages:
@@ -17896,6 +17888,10 @@ de7994ac308b01346f8a2cdfa7c5a47031c1b0b9bfa4c42a15e9446910e71086:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1024-gke_4.4.0-1024.24_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1024_4.4.0-1024.24_all.deb
+de9567f9a584ce9607ba55fa167df0116b1d1337b7cb15b6f24ede8f0a725563:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.4.0-flatcar_developer_container.bin.bz2
 de532750b238705ad548ef118173bd87c402ba54b4f2036f3cf5a8dd5a78e122:
   type: ubuntu
   packages:
