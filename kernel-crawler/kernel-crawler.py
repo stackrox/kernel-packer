@@ -602,6 +602,16 @@ repos = {
             "subdirs":  [""],
             "page_pattern" : "/html/body//a[regex:test(@href, '^kernel-devel-[0-9].*\.rpm$')]/@href",
          },
+         {
+            "root" : "https://kojipkgs.fedoraproject.org/packages/kernel/",
+            "discovery_pattern": "/html/body//a[regex:test(@href, '^[6-9]\.[0-9]+\..*/$')]/@href",
+            "subdir_patterns": [
+                "/html/body//a[regex:test(@href, '^[0-9]+\.fc[0-9]+/$')]/@href",
+                "/html/body//a[regex:test(@href, '^x86_64/$')]/@href",
+            ],
+            "subdirs":  [""],
+            "page_pattern" : "/html/body//a[regex:test(@href, '^kernel-devel-[0-9].*\.rpm$')]/@href",
+         }
     ],
     "Garden-Linux" : [
         {
