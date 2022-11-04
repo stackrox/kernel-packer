@@ -8050,6 +8050,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-b2c1602107f89204389b9a26760dcbacaaa44dcb0bed996718b9d663d70962c9-download
+94d0e38a7b80e831e3355699c1f43c2188a6380691fcc8045ba162c4dd1798e7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-197-generic_4.15.0-197.208_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-197_4.15.0-197.208_all.deb
 94e2a4470b3b0f16b44f19eeec91bbd4ead89ff4d30df68ee5963f2d37793db0:
   type: ubuntu
   packages:
@@ -9347,6 +9352,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53-generic_4.4.0-53.74_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-53_4.4.0-53.74_all.deb
+657e47a5a57124a0fc46ccb5c8b5834e7fa48e56d53f54e9e342540c09d83184:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.2-flatcar_developer_container.bin.bz2
 660a0764b101c3bdf2db3cd4c4a336cdf05205316cf557cc789ef7e69f49934b:
   type: ubuntu
   packages:
