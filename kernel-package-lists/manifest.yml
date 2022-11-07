@@ -126,10 +126,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69-generic_4.15.0-69.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69_4.15.0-69.78_all.deb
-0e23f898b0340790eab712e6b7a22730cde0392c52c56bf5b6326a0f925e4c45:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2135.4.0-flatcar_developer_container.bin.bz2
 0e27c2964869a4d58bcf67d0ce057baefe30338b26173dc1f0daaf722e91a9f4:
   type: redhat
   packages:
@@ -1419,6 +1415,12 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.208-1.el7.elrepo.x86_64.rpm
+2fbe739f7e46506d63724fa3fce7ac156a02264f1f919624c09e8d1ed0c7edaf:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.7-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-amd64_6.0.6-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-common_6.0.6-2_all.deb
 2bbf3cde0f9bb6e1fb1260fd5b5e1a6671ee4b2355703ba90273be78189c0a5b:
   type: ubuntu
   packages:
@@ -4715,12 +4717,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.470.16-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.470.16-kernel-headers.tgz
-9d8a1e042381a18fac1ea8f8edad607bc36c68f47538a9f18d29f5f63f2d6d9a:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-amd64_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-common_6.0.6-2_all.deb
 9d8e5ce0ebb97fee2ff3d9ba977207c757ad5849d009d6823b6f4a2907836879:
   type: cos
   packages:
@@ -8262,6 +8258,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-693.2.1.el7.x86_64.rpm
+101ffdd037d151569cc7d95d1e558c384d8fc3b4e79a56d8de3216eb4ff6e14e:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2303.3.1-flatcar_developer_container.bin.bz2
 104ba2c9c7dfe170ebbff363aeb095129cdf03e9cef8adc1e8498ff71743061c:
   type: redhat
   packages:
@@ -13454,6 +13454,12 @@ a25a1b53c2444824a682def0f5e6797232fabcbd23ac7324185b72cf4c789552:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.1-flatcar_developer_container.bin.bz2
+a25d5d1dbd0f9a5868ede71100cd589fc09a9f0db4dce266ce712ddd863782b3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.7-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-cloud-amd64_6.0.6-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-common_6.0.6-2_all.deb
 a29b3af39619d0396f0d0d224817fa4d6b2b398ec46f9106653d9679cc1d41e7:
   type: redhat
   packages:
@@ -15916,12 +15922,6 @@ c18d6110e4e151c82a00d741b9213052aa5de1b9834d8657987ef288dba2d993:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2081-aws-fips_4.15.0-2081.87_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2081_4.15.0-2081.87_all.deb
-c20a6d45dab28e86731bba35c11235f484192e44dda7099d74df01b94e2f26a5:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-cloud-amd64_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-common_6.0.6-2_all.deb
 c21a221bf7a35bb306bb2cf4e8c72c88d52a67b7816aa2677a9d41bad2972677:
   type: suse
   packages:
@@ -20119,10 +20119,6 @@ fa7c05198c9aa55fc051e7c10b354f3ccb1aef114316dc8dc2729c352dceed55:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.5-100.fc33-x86_64-kernel-devel-5.13.5-100.fc33.x86_64.rpm
-fa8071ad81776b8f5fb8a46d32df7eec15a72976d37931559a1dd7f2904dd389:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2023.5.0-flatcar_developer_container.bin.bz2
 fa081978ecf2706def4b75914bd23d6772f67e16fa4b765c42b8733109254447:
   type: suse
   packages:
