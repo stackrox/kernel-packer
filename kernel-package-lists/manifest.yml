@@ -4,6 +4,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.8-linux-gcp-5.8-headers-5.8.0-1036_5.8.0-1036.38-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.8-linux-headers-5.8.0-1036-gcp_5.8.0-1036.38-20.04.1_amd64.deb
+0e0a7a65adf696351b732756ea1fdddba3ef668504933a4a6bb0cc6899b8e5b6:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.80.1.el7.x86_64.rpm
 0d0dd3df460d023df7f3708825e247f65012cde348eebb319d11c2b77d953164:
   type: cos
   packages:
@@ -199,6 +203,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-bf8060e0b066eeb4be444d2246363ae501e98772c453295ed51eb5d07e9709c9-kernel-devel-4.14.121-109.96.amzn2.x86_64.rpm
+0e805c8a765281ce1dc108e1c9273846f925e6cc780296ea5bb32649df006b01:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3402.1.0-flatcar_developer_container.bin.bz2
 0b861a48caf517fccd3371d1df17b5cf6e47b4902f3f942b9e533f4ce627fbf8:
   type: redhat
   packages:
@@ -231,6 +239,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-65-generic_4.15.0-65.74_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-65_4.15.0-65.74_all.deb
+0d8757bd5842931dda381b4bcbe55b29c876ed8a5e313a486f36b332272f66f9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-54-generic_5.15.0-54.60_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-54_5.15.0-54.60_all.deb
 0b9181d599cc1cb94d936855b7855c56501e25891e82e7d114463fc278f28980:
   type: redhat
   packages:
@@ -863,12 +876,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.186-1.el7.elrepo.x86_64.rpm
-1fd4b14f3b170828922f8dbbd535f12a22c2d4bc0166a96a1c8d150c39726e8b:
-  type: garden
-  packages:
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-kbuild-5.10_5.10.38-1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-8-amd64_5.10.38-1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.38-1_all.deb
 1ed8c3d340d01094ca8e3f1a12f5572ff532471596672194d94ce0ff0e8e3f10:
   type: redhat
   packages:
@@ -1424,12 +1431,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.208-1.el7.elrepo.x86_64.rpm
-2fbe739f7e46506d63724fa3fce7ac156a02264f1f919624c09e8d1ed0c7edaf:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-amd64_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-common_6.0.6-2_all.deb
 2bbf3cde0f9bb6e1fb1260fd5b5e1a6671ee4b2355703ba90273be78189c0a5b:
   type: ubuntu
   packages:
@@ -1969,12 +1970,6 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.69-1.el7.elrepo.x86_64.rpm
-3bdcc1afbf8adc1f48808df36048196b2e22c46500a7dcb5e20645026dfdf4ea:
-  type: garden
-  packages:
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-kbuild-5.10_5.10.83-1gardenlinux1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-9-cloud-amd64_5.10.83-1gardenlinux1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-9-common_5.10.83-1gardenlinux1_all.deb
 3bdd3555991496db5406ce98ba19429c18ac5760a83bf6fd82ee60c3b1dd0acf:
   type: ubuntu
   packages:
@@ -2977,12 +2972,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.103.49-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.103.49-kernel-headers.tgz
-5dce0e0e3b5c00418d7821585e2648d242178f1285f7bd1dddc0021699a0560b:
-  type: garden
-  packages:
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-kbuild-5.10_5.10.26-1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-6-amd64_5.10.26-1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-6-common_5.10.26-1_all.deb
 5bcf6341e346fb162402a28eaae454c08eb9e71a37105760cc2930203c47cf5d:
   type: ubuntu
   packages:
@@ -3959,6 +3948,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1008-azure_5.15.0-1008.9-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1008_5.15.0-1008.9-20.04.1_all.deb
+7ac3c4190ed406de6dd9ad6b8e57fadaf11224099b33d513a2b856d873caec88:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.0.8-200.fc36-x86_64-kernel-devel-6.0.8-200.fc36.x86_64.rpm
 7ec8db4cc14df2797c48aa1862114c635de34ad096d8c7b9936c234c53a034d5:
   type: redhat
   packages:
@@ -4646,6 +4639,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2012-azure-fips_4.15.0-2012.14_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2012_4.15.0-2012.14_all.deb
+8eff7c6147b9e10a868ccbc8313c1337ffe44bed31ce02d24f4d9e56dac29ae3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.8-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-4-cloud-amd64_6.0.8-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-4-common_6.0.8-1_all.deb
 8dff56bc9745463ded173e43195557bcbf531506812cf527493c5d60bff04821:
   type: ubuntu
   packages:
@@ -7865,6 +7864,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1041.14-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1041.14-kernel-headers.tgz
+87fc661b8e371c0924de7cb2815caa9a42dde41b617803e812c48dd504847b8d:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.224-1.el7.elrepo.x86_64.rpm
 88f1196de2053cf101ac15fea7876899bcbb234311aa5e2f4f4058aa688c59cf:
   type: cos
   packages:
@@ -8971,6 +8974,11 @@
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.149-2_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-15-cloud-amd64_5.10.120-1_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-15-common_5.10.120-1_all.deb
+458ba8c75347336a82c14d6b39bab07287f05d721637288209ccfd6e8b9b389a:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.766.13-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.766.13-kernel-headers.tgz
 460b9dc526bebb3e722bc4ba3239816a3db05393422960d7761ca076ce4e43ee:
   type: redhat
   packages:
@@ -9899,6 +9907,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-150.14.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.14.2.x86_64.rpm
+932d29c7587bd551b0593e193868bfc2527b44e61b87447906c77af2a1452367:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-197-generic_4.15.0-197.208-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-197_4.15.0-197.208-16.04.1_all.deb
 942d236c8acd650a0817a354bfb106639d3659cdb953646e226f2f3a269ed3a3:
   type: ubuntu
   packages:
@@ -10251,12 +10264,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.210-1.el7.elrepo.x86_64.rpm
-3495c2996e1d7910bfe7f9b8752901b0d4eed76c132741bac8ff326f6619a964:
-  type: garden
-  packages:
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-kbuild-5.10_5.10.38-1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-8-cloud-amd64_5.10.38-1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-8-common_5.10.38-1_all.deb
 3551cbdc4a4526e41d4dfb71e17e981f3a5bd305f06262b71740abb25b63d69e:
   type: redhat
   packages:
@@ -10543,10 +10550,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.4.2.el8_0.x86_64.rpm
-5432fa2bdea46d80ff82a13d2e9be3e86cd2b10cc8669786bb32ebfe9000d8ec:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.0-flatcar_developer_container.bin.bz2
 5468c617df15dc9da19589fb19a713454be49b79fef80123b9d5ab4f91490051:
   type: ubuntu
   packages:
@@ -10679,6 +10682,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-4c9bb7e4d425559a12975c7b2040f66b05cd4d4da42c783c64e47bee92506255-kernel-devel-4.14.203-156.332.amzn2.x86_64.rpm
+6227ee37dfe6a8cc9ce482ad2ee1c86e9d0b2cf0566b05b1f4c73f67e05c9819:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17295.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17295.0.0-kernel-headers.tgz
 6295dfd5847e347ba86805b5bfd8a8eaf83ad601126d9a652dab290485b8826b:
   type: ubuntu
   packages:
@@ -11420,6 +11428,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1007-aws_4.4.0-1007.16_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1007_4.4.0-1007.16_all.deb
+30896adaddf7fe3979274c5d4345ed6b0dc137f51e245f57918741f2c992aacd:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1065-fips_5.4.0-1065.74_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1065_5.4.0-1065.74_all.deb
 32082bed864be43ae075f7dfaf5e9d99ceb83e24fe534da080512c361109bac6:
   type: ubuntu
   packages:
@@ -12364,6 +12377,12 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-1ee54ede3dcf3eb3a02cf51adc6752d24033728c75180feb123d85460f970ed5-kernel-devel-4.14.128-112.105.amzn2.x86_64.rpm
+0876885fcb50bccac2afdbf8b408c656117d6d0d90487eac8675223eaf93d527:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.8-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-4-amd64_6.0.8-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-4-common_6.0.8-1_all.deb
 881064b971b4fd0bb7e42b9fdf239005ad199027f8aab14456f6365844fd9a87:
   type: cos
   packages:
@@ -13073,6 +13092,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.0.0-1021_5.0.0-1021.21-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.0.0-1021-gcp_5.0.0-1021.21-18.04.1_amd64.deb
+34671997372ff6d4bb45a4d9f750ada6a9e4dcd47a56bbf31abf2793626b6a60:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-635c3af49a948c3844fc8b638ef25898aeeb863ea647a417e6e8a4f2d58fc231-kernel-devel-4.14.296-222.539.amzn2.x86_64.rpm
 54600390407f52a67ca70115277c36f0a8fcdb99b0dcb16672126297b3e73d25:
   type: cos
   packages:
@@ -13174,6 +13197,11 @@ a0dba37440bdf7eb904d223240730a524d8763684486e5907e52875e4db776cb:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.13-linux-headers-5.13.0-1017-aws_5.13.0-1017.19-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.13-linux-aws-5.13-headers-5.13.0-1017_5.13.0-1017.19-20.04.1_all.deb
+a0bef10e95c54978fc32d14423359487d3366272d516b3f75c1295671cbe1dd8:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2082-aws-fips_4.15.0-2082.88_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2082_4.15.0-2082.88_all.deb
 a0bf5a3b1c30b5e53a54b72e8b2a3808a41a98e76bf5f1a3d04be8297ee5ff75:
   type: cos
   packages:
@@ -13477,12 +13505,6 @@ a25a1b53c2444824a682def0f5e6797232fabcbd23ac7324185b72cf4c789552:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.1-flatcar_developer_container.bin.bz2
-a25d5d1dbd0f9a5868ede71100cd589fc09a9f0db4dce266ce712ddd863782b3:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-cloud-amd64_6.0.6-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-2-common_6.0.6-2_all.deb
 a29b3af39619d0396f0d0d224817fa4d6b2b398ec46f9106653d9679cc1d41e7:
   type: redhat
   packages:
@@ -13954,6 +13976,10 @@ aa6e5ac840998b4655c5f8b0aebb53ca6fc4e0190b11b4d041b80d26c1ab1eb6:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1017_4.15.0-1017.18-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1017-gcp_4.15.0-1017.18-16.04.1_amd64.deb
+aa6fd758241fa354acd4ac826c3f623cb6a82793ca16e9f8c5a0129e84c9ad8c:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-5e13adb390335c482c3b15ff8b52bea729f2e7d8e08444f974a930ac523eb783-kernel-devel-5.4.219-126.410.amzn2.x86_64.rpm
 aa9cadb9738dacead420a99ee0ce8f0c37c8d4e71b02a53ac2db667854b5d112:
   type: ubuntu
   packages:
@@ -14329,12 +14355,6 @@ ae24c923e0e7faaf7d246ce033ad7c8b8eb65e6c7f1870b6823c22b4e20b7d33:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.20-200.fc35-x86_64-kernel-devel-5.16.20-200.fc35.x86_64.rpm
-ae35ac127ed7164c766b960e8c69be40cf8c93e274c8fa027f9124d710686087:
-  type: garden
-  packages:
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-kbuild-5.10_5.10.83-1gardenlinux1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-9-amd64_5.10.83-1gardenlinux1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-9-common_5.10.83-1gardenlinux1_all.deb
 ae67afcd4a2a9e0791c99dfc43fe230a17f47ae7643495d14f50aa12b005395d:
   type: ubuntu
   packages:
@@ -14359,6 +14379,11 @@ aeb82a2d820216d88322274a65d15cbc47770225825cf835c381d76249afc265:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm
+aedafc013ab71239ff010ef8c36e3dcf31af92f26b8140704b7f782817bea98d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1087_5.4.0-1087.94_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1087-gke_5.4.0-1087.94_amd64.deb
 aeddc0cbb0e6089f86fb15802fe30d541cafea02c26f93a8ad2ac0eefa443fce:
   type: minikube
   packages:
@@ -14478,6 +14503,11 @@ b0ebced533170957a495665744b43fb747623bb6d168aab2d1cf74655bb43f0b:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.58.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.58.1.x86_64.rpm
+b0ec29fb735f1455031031f5c8f2c6e5efce6cda980c7096126a4a40124b2860:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.295.14-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.295.14-kernel-headers.tgz
 b0ccb17fbf218e565fb82be22b53f175f6767f5026b8df1f11b66b6401864df6:
   type: redhat
   packages:
@@ -14555,6 +14585,10 @@ b2a93107e5f39777a4ff7c98a15cb12d6f3b4ffb12d1720ec6cccb663157ae80:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1125-azure_4.15.0-1125.138-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1125_4.15.0-1125.138-16.04.1_all.deb
+b2da942b601ea0a999bb77516f6cb4dedb9313de54b24aa0f865bd90e295446e:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.0.8-100.fc35-x86_64-kernel-devel-6.0.8-100.fc35.x86_64.rpm
 b2eb9131bdaec27acd56b55ffc16e416691e3cafbdfc1c64c3b100a80e1a0959:
   type: ubuntu
   packages:
@@ -14574,6 +14608,11 @@ b02f0647a60b9fba5519c98f9c57485be94c8166f79e0f3cfde605bc754ed397:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-headers-5.3.0-1034-aws_5.3.0-1034.36_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.3-linux-aws-5.3-headers-5.3.0-1034_5.3.0-1034.36_all.deb
+b02ef7864f4bf93bcbe44afb70f71bf0a6e062f054ed7f389ffca916a880348a:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1100-fips_4.15.0-1100.111_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1100_4.15.0-1100.111_all.deb
 b3a3f7cff360bc29a333780b016e0873f3c6505bacf3c3c62fef4879fb6dc963:
   type: ubuntu
   packages:
@@ -14775,6 +14814,11 @@ b9d4b61a1b54aa3cd8abaea32bedd9abbcf6bb2747add3658a18ecfc0983344a:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-5ec8d4123319e1b267386533a2c585271d18d9d141c25f9dce5f4b6bed222b1a-download
+b9ab640ac3927e1563447553538c970964d3fdbceede50e5a6ea4f72bf0bc900:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.189.12-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.189.12-kernel-headers.tgz
 b9cbf99d3dbc21503d206ccc800b1e10b6ff2bcd59af3379ee5a4d3691de966d:
   type: redhat
   packages:
@@ -15903,6 +15947,10 @@ c8e3f4fae84c5f274ddd39970574484b9f9802a629a0d3ac5f5ba7a5fb4594d0:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10873.0.0-kernel-src.tar.gz
+c8d6071ec4f8f46ed3f9f12f0a1adf4c1e747f452661050791a8403ce367aff7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.0.8-300.fc37-x86_64-kernel-devel-6.0.8-300.fc37.x86_64.rpm
 c8ba981149f413e508fc3063462c9044984e446f1e1d2834c3f62c2abd9f6ff6:
   type: ubuntu
   packages:
@@ -17363,6 +17411,11 @@ d78c6638104ab99c8d54f7669e22719a03e1fc933b01dfef1c5c17aa2412422c:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-gcp-fips-headers-4.15.0-2025_4.15.0-2025.27_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-headers-4.15.0-2025-gcp-fips_4.15.0-2025.27_amd64.deb
+d79e295170b844ed78d4c904573c640ba910cb2a2c97f860b0a542478dc0669b:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.40.34-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.40.34-kernel-headers.tgz
 d82b24709d1387dab604bd3922b230a3fd46ecb8701da820eff6f1638fbddb3a:
   type: redhat
   packages:
@@ -19172,12 +19225,6 @@ ed02cf34f357ff327f736ea0b4d73b571b73b50579396dea799581240f880396:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.18.9-100.fc35-x86_64-kernel-devel-5.18.9-100.fc35.x86_64.rpm
-ed3db95250ff5c4a91b1fc7cb18fc10e03c3d2426c0af6afe4bbdec20c393c0a:
-  type: garden
-  packages:
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-kbuild-5.10_5.10.26-1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-6-cloud-amd64_5.10.26-1_amd64.deb
-  - http---45.86.152.1-gardenlinux-pool-main-l-linux-linux-headers-5.10.0-6-common_5.10.26-1_all.deb
 ed04e8f772b6c2065d2eae7ccb09037daa2a60c1d3f37be4744f88d2a912576a:
   type: suse
   packages:
