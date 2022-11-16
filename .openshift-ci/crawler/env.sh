@@ -13,6 +13,12 @@ gcloud secrets versions access latest \
 echo >> $BASH_ENV
 
 gcloud secrets versions access latest \
+    --secret="collector-kernel-crawler-suse-credentials" \
+    | sed -e 's/^/export /' >> $BASH_ENV
+
+echo >> $BASH_ENV
+
+gcloud secrets versions access latest \
     --secret="collector-kernel-crawler-ubuntu-credentials" \
     | sed -e 's/^/export /' >> $BASH_ENV
 
