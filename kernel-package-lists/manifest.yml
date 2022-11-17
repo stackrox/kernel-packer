@@ -2306,6 +2306,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-2440a50a3c88180ac239a5d53a633e437ce45de8a56e45bff61c2c7dcd4ae7b1-download
+4a3718d2d33f14cda38509cf304013bfb39ed235ff4cab21fcd205a6c6005238:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.2-flatcar_developer_container.bin.bz2
 4b5591e4a11e7d6b028bedf33dde57ed3889396158de225952637b65b02911cc:
   type: cos
   packages:
@@ -4931,6 +4935,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1062.4.1.el7.x86_64.rpm
+9c03638ade5fac97096f3ccd2d8df4245847aee3868b765ddbd2c5ab2f1c947a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.15.0-1023_5.15.0-1023.30_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.15.0-1023-gcp_5.15.0-1023.30_amd64.deb
 9f03716a365dc56d4963eeaa300b05d2bf83406867aa1ef4e87f465680aa038c:
   type: ubuntu
   packages:
@@ -6976,6 +6985,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-193-generic_4.4.0-193.224_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-193_4.4.0-193.224_all.deb
+060e76bd9e9a0d01b1f8ddd65424a3de074ee89c063b741c8073443f0fd0f0a5:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.77-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.77-gardenlinux-cloud-amd64_5.15.77-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.77-gardenlinux-common_5.15.77-0gardenlinux1_all.deb
 61c1e93eba5f1ebe74e132d69f09b10f4c2cf923152d1f2f1545f1fac2504e77:
   type: redhat
   packages:
@@ -13248,6 +13263,10 @@
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.0-flatcar_developer_container.bin.bz2
+302537260014044cacfdd498e73c08104b0c5f09e956f60b635f03793112e228:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-3374.2.0-flatcar_developer_container.bin.bz2
 54601226050578882e1478b8da7e93eb478cc350ebb9f9d4477e722027a8e10e:
   type: suse
   packages:
@@ -13563,6 +13582,12 @@ a11df5093e4119566049db2bb7de134fee7e2aa9a73ec41bc8c99763ddced5de:
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.58-1.el7.elrepo.x86_64.rpm
+a12f1f8c66089912d63c227bc4353da0ddf1307ff90ed3c1ca30b508297d6cfb:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.77-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.77-gardenlinux-amd64_5.15.77-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.77-gardenlinux-common_5.15.77-0gardenlinux1_all.deb
 a12cef642be8c1f94270459c9364125b5b3d038a76aa7b2cf8f1a5594873b2e8:
   type: redhat
   packages:
@@ -15034,6 +15059,11 @@ b79cea3f684952bd832c8d5bc80a4fe06ead53a71dcc1e76b1dc88e1ffc82d7a:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-afcce9722d7797b3bad6982cdddcdc16e088c2aa3609843780f765c3d7fffed8-kernel-devel-4.14.231-173.360.amzn2.x86_64.rpm
+b79dea5b92bb229cc981984324ce747276d4d8d5c0fda7db1fead7ee651be061:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-150300.59.101.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-150300.59.101.1.x86_64.rpm
 b80e49639a134149f24d302d573c020f9e4395b6c9f0f3d58fdce3b8789d2542:
   type: ubuntu
   packages:
@@ -17593,11 +17623,6 @@ d371f2b0baff829ae2cd286d6a31a314ff4ff28ac447c1ce48f92d9db318724c:
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.55-1.el7.elrepo.x86_64.rpm
-d444b1afa12d32f69f8dc7c7fbd353e7ceb48718c9c2b0ab12cc4e965946b696:
-  type: ubuntu
-  packages:
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1138-azure_4.15.0-1138.151-16.04.1_amd64.deb
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1138_4.15.0-1138.151-16.04.1_all.deb
 d465e9af943256a51e600628e2a362a45388da031bfe829ae48a87ab30a96b3b:
   type: cos
   packages:
@@ -18130,6 +18155,11 @@ dddbbf0d247183e9b32794b1b31c1725c521676d4ac8f2f4632dccec55d48d6d:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-ae757f139e69f930fe9f703974265e913367cc2c798b69d5dd5cf062992c80e4-kernel-devel-4.9.75-1.56.amzn2.x86_64.rpm
+ddf9dae9db5e64d9bb8bddd279c47f6194c7e0782e4c3fe790a986b2d48a4859:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1138_4.15.0-1138.154-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1138-gcp_4.15.0-1138.154-16.04.1_amd64.deb
 de0bdfde27e761f4d352cf24011931ae61509016a7d540ee951676d6dc2d77f7:
   type: redhat
   packages:
@@ -19701,6 +19731,11 @@ f6f6388029331d118c41c1b50b9ce9bf4efed32d41a430c9348825807f60d041:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2513.2.0-flatcar_developer_container.bin.bz2
+f6ba9acb714e1600ff289d36adf84f87e34929f78d7e68aefde35e0cb737c519:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.15.0-1024-azure_5.15.0-1024.30_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.15.0-1024_5.15.0-1024.30_all.deb
 f6ecf90af194dfd05136cb72e96052521fe0e4cdfd9c1c49c204ae5be64aab60:
   type: cos
   packages:
