@@ -2758,11 +2758,6 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.64-1.el7.elrepo.x86_64.rpm
-5f64d23f14fe22da40b562c6e4363a35ac8bb87e9d6b389845e71b80a176f078:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc3-1-exp1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-amd64_6.1-rc3-1-exp1_amd64.deb
 5a066eb1ab491c3341116ea97d6405639c9ce10d2de68db3bedd625e2134d4ad:
   type: cos
   packages:
@@ -8435,10 +8430,6 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.3.2011-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-240.1.1.el8_3.x86_64.rpm
-154c7df55c2fe92ee3f9b7973ed6d0def22d0774f16fd09e219b65501c5c4741:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-100.fc35-x86_64-kernel-devel-5.19.15-100.fc35.x86_64.rpm
 154c37fdf98793927f0059f353366a286ce3e33c4cd6d81cd82a84a39e73fb06:
   type: ubuntu
   packages:
@@ -13822,11 +13813,6 @@ a781a9c217151db8216fb0ef1e465d8691dde94d0ef1b13299897f36b2090525:
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2247.6.0-flatcar_developer_container.bin.bz2
-a811a7f95d6e03ece56140e35fc55d074a066abaa205cc79dcbaa1a9a1075351:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc3-1-exp1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-cloud-amd64_6.1-rc3-1-exp1_amd64.deb
 a835d0c9af4005454de988c237ae493418ee4b3f248203e7130965fe7a745355:
   type: ubuntu
   packages:
@@ -13926,6 +13912,11 @@ a8827c0f23a6658152410ae8339b0948bba954e4b6bf85d401c0df9935a86366:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-e66cb7ecd7a9809e009c2731233a5da58bc480068a3f9aba765fbe2e34d4f84e-download
+a11131e2311c6cb0566bf832c83714bd1b7ba7e2ab0cad13f38ff305212a71e8:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1024-azure_5.15.0-1024.30-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1024_5.15.0-1024.30-20.04.1_all.deb
 a14817adf0abcb8f46a80d9e7518a27afcbf413db73807c2d289f834b6da1d56:
   type: redhat
   packages:
