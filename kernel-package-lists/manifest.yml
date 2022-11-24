@@ -4409,11 +4409,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.1190.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.1190.0-kernel-headers.tgz
-8a952d33ad3761e5f1bb943a0ce1dfc8ff65bf78643a3f5807044f1b1fa8abce:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc5-1-exp1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-amd64_6.1-rc5-1-exp1_amd64.deb
 8d02962b3c75d59a31889c374ac504e5cdbb02d8c00ca86daf06734f50be6446:
   type: ubuntu
   packages:
@@ -10332,11 +10327,6 @@
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
-3414f3b5afefe3fe6e07906eb8f953badcab0a93b88aa751851259e4067ab037:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc5-1-exp1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-cloud-amd64_6.1-rc5-1-exp1_amd64.deb
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -13484,10 +13474,6 @@ a6b49240705302b3bab0a547746a6b56f507ec4d8ff2939eeca6b654144661f4:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-c181d3fc4dbd30a5d92eb506a0f220c015013b2a0ec515ccaa25463164cc55a5-kernel-devel-4.14.173-137.228.amzn2.x86_64.rpm
-a6ebfacdf700700367a374c81d8050358053ef04a74989e6f04b9d12089b6c6f:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2801.1.0-flatcar_developer_container.bin.bz2
 a6ede753042b4e25ddc4977fca1397303dcb9aa5292b71779b11aa1b1b6be3b4:
   type: cos
   packages:
