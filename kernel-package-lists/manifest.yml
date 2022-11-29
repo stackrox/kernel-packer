@@ -2264,6 +2264,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-300.fc37-x86_64-kernel-devel-5.19.15-300.fc37.x86_64.rpm
+4e82c8056323495fbb60362bab525e6f4062b53c1a3daf042f8b823f277ad927:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.9.0-flatcar_developer_container.bin.bz2
 4b87e8cb924bdff1bd2bca47aa80c16264c645052f28569dc6bf37adfc652196:
   type: ubuntu
   packages:
@@ -10123,10 +10127,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1049-azure_5.4.0-1049.51_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1049_5.4.0-1049.51_all.deb
-1307bcbc152ed9e41617ed73e66153b973a44212f340dca6de75ddb1bb83ab08:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.3-flatcar_developer_container.bin.bz2
 1319efda0aa02911f6310af19e54e2f0505370ac630c6374294465972b0d60f7:
   type: redhat
   packages:
@@ -10827,6 +10827,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1048-fips_4.15.0-1048.55_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1048_4.15.0-1048.55_all.deb
+6748f7f32ca213376da67974f4f54b6eb36ec4ef30881c14cd0d3aed968f6a03:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.6.0-flatcar_developer_container.bin.bz2
 6786fb54ff0e2f6ecf508971593b81e9baea209f31bb71c00d86291f9f47b7f8:
   type: ubuntu
   packages:
