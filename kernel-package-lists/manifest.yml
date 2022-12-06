@@ -6366,6 +6366,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-f2da8b747c245a2027ddbf72735c6c8ffd7ee2bafa114c179ddfbb96d3cdb92d-download
+40d864d81b99734e59ac8abac86acd93661f25042de0a8434f4a27e8fd7afb6a:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17317.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17317.0.0-kernel-headers.tgz
 40b999dc3fc9e1b9507967eab84621d0dd1e5489a4f917e772584405803f329a:
   type: redhat
   packages:
@@ -6906,10 +6911,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-17162.0.3-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17162.0.3-kernel-headers.tgz
-56d6d00ef1c8cc9ef9c3ebf58ec68282826b399ea53d7c3282ccbba456828fb1:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2605.2.0-flatcar_developer_container.bin.bz2
 56b22dd4e10b83bb9ca94cfba7198c68ffa0d4c326dcf66a6f6330ce10ab75e9:
   type: redhat
   packages:
@@ -10452,6 +10453,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.15.0-1008_5.15.0-1008.12_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.15.0-1008-gcp_5.15.0-1008.12_amd64.deb
+3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -11404,6 +11409,12 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.4.1708-updates-x86_64-Packages-kernel-devel-3.10.0-693.5.2.el7.x86_64.rpm
+9914b59e609110299158b47fd2e6e157eb2cdd0a98e4c258217149c2f285c5ae:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.10-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-amd64_6.0.10-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-common_6.0.10-2_all.deb
 9921c765cd88cdb09cd24003f1377d8eeae1870128be720ccb84b2708864f30c:
   type: redhat
   packages:
@@ -17465,6 +17476,10 @@ d9e0f376a38191577cc4eca6d2fc614c3d3a518790b62508c7a0e880e61c57da:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2022-aws-fips_4.15.0-2022.22_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2022_4.15.0-2022.22_all.deb
+d9e0c80152ff9b4656397ac316043c2d51cb9b157e60c12b29d59fcf55efdc09:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.2-flatcar_developer_container.bin.bz2
 d9d4d53bbc7cb1a64bfe04fbcda0d80dfb8ab4b2164b3f2d99051a7fcd141fd4:
   type: ubuntu
   packages:
@@ -19550,6 +19565,11 @@ ed23d90c8098c16ca55d9450ab7a98b30be99d1f50523695ba4c35fc1636d8d5:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.192-1.el7.elrepo.x86_64.rpm
+ed71cfffd00edf5c5572d0ee1236f49e4af8f81de85f15006f34df55cec7c585:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.40.38-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.40.38-kernel-headers.tgz
 ed89cb1bf679faceb9d793f64d6a60bdd96d6212ab1b9ce3b28a36fe2b65331a:
   type: cos
   packages:
