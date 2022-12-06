@@ -1427,6 +1427,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1032-aws_5.4.0-1032.33_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1032_5.4.0-1032.33_all.deb
+2ab8392ba9e22d7b8a7cc872491b6e97f4be6b9a0957add6964c997064f5d510:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.0-flatcar_developer_container.bin.bz2
 2cb75013935404b750c700bf318417379c5e6442f44c2f08f55aea4e2f399ea5:
   type: ubuntu
   packages:
@@ -1884,6 +1888,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1033_4.15.0-1033.35_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1033-gcp_4.15.0-1033.35_amd64.deb
+3f2064368c2501aebbc1b5642249c22009dc030ebb1a0a49734c259a021c81e7:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-amd64_6.0.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-common_6.0.10-1_all.deb
 3b2913557d1af9372ff3873d221d8fa558d59bc2adedea2c54f12d2a28ff9bbe:
   type: ubuntu
   packages:
@@ -9788,6 +9798,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1032-fips_4.4.0-1032.37_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1032_4.4.0-1032.37_all.deb
+758ee435596e785e10b791fbb5030814a6448fce548413456f2cf9e3f3e4b589:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.2-flatcar_developer_container.bin.bz2
 760f17883e41f3a7a117adad75e7eebb3177013bd436ae64632c9218ed99c32b:
   type: ubuntu
   packages:
@@ -13910,6 +13924,12 @@ a306b1a793584ec40229147bdcfbda01b652f55b6106ca36fb7e7c8e027d6b86:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.5.1.el8_1.x86_64.rpm
+a306a61468771bd1bacdef1f0573727e4f304b87ae78c733be482c0731108a11:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-cloud-amd64_6.0.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-common_6.0.10-1_all.deb
 a377b8fa577a4d71cfae6cf073dd6564547e80c22d0c58567872f1374f82c51a:
   type: redhat
   packages:
