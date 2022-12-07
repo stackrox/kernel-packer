@@ -1072,6 +1072,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-91-generic_4.4.0-91.114_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-91_4.4.0-91.114_all.deb
+2b4f3d8598a3d0631863846d7edabd768d4f0ce0e3a297624dbdb5389ee80590:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.10-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-cloud-amd64_6.0.10-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-common_6.0.10-2_all.deb
 2b4f5e23e9864a24b8a4ed2a1732cd766cf37fa9051bf40dc2f481b109ee268d:
   type: redhat
   packages:
@@ -6039,6 +6045,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-headers-5.15.0-1020-aws_5.15.0-1020.24-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-aws-5.15-headers-5.15.0-1020_5.15.0-1020.24-20.04.1_all.deb
+31c558ba16762acc2c83db942d341bb5e860aa37934cdce1fcbab8fdabb895c8:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.4-flatcar_developer_container.bin.bz2
 31ea5736f3d535b2955907410615b3ef76881f6c54dc93aabf131698159b73d2:
   type: ubuntu
   packages:
@@ -8446,10 +8456,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-693.2.1.el7.x86_64.rpm
-101ffdd037d151569cc7d95d1e558c384d8fc3b4e79a56d8de3216eb4ff6e14e:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2303.3.1-flatcar_developer_container.bin.bz2
 104ba2c9c7dfe170ebbff363aeb095129cdf03e9cef8adc1e8498ff71743061c:
   type: redhat
   packages:
@@ -11438,6 +11444,12 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.4.1708-updates-x86_64-Packages-kernel-devel-3.10.0-693.5.2.el7.x86_64.rpm
+9914b59e609110299158b47fd2e6e157eb2cdd0a98e4c258217149c2f285c5ae:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.10-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-amd64_6.0.10-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-common_6.0.10-2_all.deb
 9921c765cd88cdb09cd24003f1377d8eeae1870128be720ccb84b2708864f30c:
   type: redhat
   packages:
