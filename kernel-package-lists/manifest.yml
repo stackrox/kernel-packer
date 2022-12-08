@@ -3958,6 +3958,10 @@
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.149-2_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-16-cloud-amd64_5.10.127-2_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-16-common_5.10.127-2_all.deb
+7a73591b7fc85443c2b126a41123a3f6cf25dc0346edc442ac91eecf406b424f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3277.1.2-flatcar_developer_container.bin.bz2
 7d996172a57270f2fbb4124f77a9ebc16074bd6949439dc83b926daa31fd96bd:
   type: redhat
   packages:
@@ -9678,10 +9682,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1019-aws_4.4.0-1019.19_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1019_4.4.0-1019.19_all.deb
-699c5ca27b1bb767f6b217bfb04a3ab9c9d40cfae2c6c09abc05f444522ebe92:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3346.1.0-flatcar_developer_container.bin.bz2
 702c281e5d38b77d0fd9fab845356ac624216e4e5ae8e6be807d8196d117d58f:
   type: suse
   packages:
@@ -15162,6 +15162,10 @@ b39ad6c3c0b68398839c936910508b2926122bf866fa717d384ef0776d528b32:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.59.0-kernel-src.tar.gz
+b42cca6eccc57a0c072fde8861b0f0e1788c6d232a4688b76780b0051fdb9a9b:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2905.2.2-flatcar_developer_container.bin.bz2
 b43d173ac6682aa8ca5d5715aaa18f33f5b68791e9fe85d4a34f6be890854c36:
   type: ubuntu
   packages:
@@ -18829,11 +18833,6 @@ e9e1ca9ace5a20463ffc3e3ce759eb99c36738b239f7fcdb363cdd8a14e6468c:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.66.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.66.1.x86_64.rpm
-e9a41bca85c242b80419368dfacf8f3e53b19e7cb5fb6c07de3dad59c48cba27:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1144-aws_4.15.0-1144.156_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1144_4.15.0-1144.156_all.deb
 e9a93403b587abc3af3c4696b53737cb4d1628b023cc3668e851fb16b6b56c8e:
   type: cos
   packages:
@@ -20675,11 +20674,6 @@ fb154484477606fa17112fcf71d74fe035bf2fdde5b36cca1814ccd141efc42d:
   packages:
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.179-k8s-linux-headers-4.4.179-k8s_4.4.179-20190513_amd64.deb
-fbaccf397d76f38da7dea1d30496d34ece6e6a82a41f2e8106a9ef187747d35b:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1090-aws_5.4.0-1090.98_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1090_5.4.0-1090.98_all.deb
 fbd8c4fcbe184a4f99489a7db5b9c79a91e39cbb6fdcc14461d6d83747d5978e:
   type: cos
   packages:
