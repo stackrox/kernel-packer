@@ -2298,10 +2298,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-300.fc37-x86_64-kernel-devel-5.19.15-300.fc37.x86_64.rpm
-4e82c8056323495fbb60362bab525e6f4062b53c1a3daf042f8b823f277ad927:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.9.0-flatcar_developer_container.bin.bz2
 4b87e8cb924bdff1bd2bca47aa80c16264c645052f28569dc6bf37adfc652196:
   type: ubuntu
   packages:
@@ -4144,10 +4140,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.245-1.el7.elrepo.x86_64.rpm
-7cf14df48e2f0ba58786a2859d0c37b02942a0d0e4ecd1521c0f015b00bc7cac:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.4.0-flatcar_developer_container.bin.bz2
 7af45a4b89dcc72e5ac617b524f5a73b1384c789e64fef2f1d48b13c605b9849:
   type: ubuntu
   packages:
@@ -6409,10 +6401,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.86.2.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.86.2.x86_64.rpm
-40bf58a1216f9eef002344177e1c70de3ce7e884c566de8d0146fe7fc547f879:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.5-flatcar_developer_container.bin.bz2
 41f5b783bb01ca97208bc6f87dd146ed3830cb9535df896327eee2619b235d4c:
   type: ubuntu
   packages:
@@ -7483,6 +7471,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1062.4.2.el7.x86_64.rpm
+070f24c08ae6afc1c80550cd97e166269811ce8d32bf5ede304877fe9652b1fa:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-amd64_6.0.10-1_amd64.deb
 070f156d63f30fe30f8da1071c98c3aea4532d25faf6e9dd40d72702e2e03cd3:
   type: suse
   packages:
@@ -8811,6 +8804,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2061-aws-fips_4.15.0-2061.63_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2061_4.15.0-2061.63_all.deb
+280ee31fec1e32441b5699f8cc759797c5aa6d361129c9d5779444b665191809:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.0-flatcar_developer_container.bin.bz2
 280bf8a56a788326570cd5ba4de0d567a5dfaeb9450c01916c327d974f8a4a14:
   type: redhat
   packages:
@@ -15256,6 +15253,11 @@ b81e5d71cf242ff38e46929493ae40d30d9e080ae9fb5f4986b65ce75479fa6e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-4.4.0-1013-gke_4.4.0-1013.13_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-4.4.0-1013_4.4.0-1013.13_all.deb
+b81f5abc3178b225cadbf9db4b7b3cf89109d910d9ce504a8b5deb4d4f937dc6:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.10-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-cloud-amd64_6.0.10-1_amd64.deb
 b81aba47f37cc548020d2acd9746f5f696061984a2500cc6f0325ff4bc5be5f9:
   type: ubuntu
   packages:
