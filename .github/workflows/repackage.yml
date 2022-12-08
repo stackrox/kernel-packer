@@ -1,0 +1,41 @@
+name: Repackage
+
+
+on:
+  workflow_call:
+
+jobs:
+  repackage:
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Authenticate with GCP
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_COLLECTOR_SVC_ACCT }}'
+
+      - name: Setup GCP
+        uses: 'google-github-actions/setup-gcloud@v1'
+
+      - name: prepare cache
+        run: |
+          IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
+          for bucket in "${bucket_names[@]}"
+          do
+              if [ ! -f .build-data/cache/cache.yml ]; then
+                  gsutil cp "${bucket}/cache.yml" .build-data/cache/cache.yml || true
+              fi
+          done
+          touch .build-data/cache/cache.yml
+      
+      - name: List Files
+        run: make list-files
+
+      - name: Download packages
+        run: make download-packages packers
+
+      - name: Repackage
+        run: make repackage
+
+      - name: Upload bundles
+        run: make upload-bundles

@@ -1,0 +1,42 @@
+name: Crawler
+
+on:
+  #schedule:
+  #  - cron: '15 */8 * * *'
+  pull_request:
+
+jobs:
+  crawl:
+    env:
+      BUILD_ID: ${{ github.run_id }}
+      KERNEL_PACKAGE_BUCKET: "gs://stackrox-kernel-packages-staging/copy"
+      KERNEL_BUNDLE_BUCKET: "gs://collector-kernel-bundles-public"
+      KERNEL_PACKAGE_STAGING_BUCKET: "gs://stackrox-kernel-packages-staging"
+      KERNEL_BUNDLE_STAGING_BUCKET: "gs://stackrox-kernel-bundles-staging"
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set appropriate buckets
+        run: |
+          if [[ "${{ github.ref }}" =~ (master|main)$ ]]; then
+            echo "Using production buckets"
+          else
+            echo "Using staging buckets"
+            echo "KERNEL_PACKAGE_BUCKET=${KERNEL_PACKAGE_STAGING_BUCKET},${KERNEL_PACKAGE_BUCKET}" | tee -a "$GITHUB_ENV"
+            echo "KERNEL_BUNDLE_BUCKET=${KERNEL_BUNDLE_STAGING_BUCKET},${KERNEL_BUNDLE_BUCKET}" | tee -a "$GITHUB_ENV"
+          fi
+      - name: Run crawl
+        run: |
+          if ! make -j -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+              touch /tmp/crawl-failed
+          fi
+
+          if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
+              echo >&2 "'make crawl' failed. See the output of the 'Crawl package repositories' step in the crawl job for further details."
+              exit 1
+          fi
+
+          ./scripts/restore-removed
+        
+
+
