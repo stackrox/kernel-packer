@@ -7,6 +7,7 @@ on:
 
 jobs:
   crawl:
+    runs-on: ubuntu-latest
     env:
       BUILD_ID: ${{ github.run_id }}
       KERNEL_PACKAGE_BUCKET: "gs://stackrox-kernel-packages-staging/copy"
