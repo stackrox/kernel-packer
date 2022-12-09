@@ -45,7 +45,7 @@ crawl-debian: build-crawl-container
 crawl-amazon: build-crawl-container
 	# Amazon doesn't actually publish a GPG signature for the package manifest, so
 	# we don't actually supply that argument here.
-	./scripts/run-crawler.py --entrypoint python3 --tool --print yum \
+	./scripts/run-crawler.py --entrypoint python3 --tool repo-crawler.py --print yum \
 		http://amazonlinux.us-west-2.amazonaws.com/2/core/latest/x86_64/mirror.list \
 		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon.txt
 	./scripts/run-crawler.py --entrypoint python3 --tool repo-crawler.py --print yum \
@@ -262,8 +262,8 @@ crawl-ubuntu-standard: build-crawl-container
 .PHONY: crawl-minikube
 crawl-minikube: build-crawl-container
 	./scripts/run-crawler.py
-		--entrypoint python3 kernel-crawler \
-		minikube-crawler.py > $(CRAWLED_PACKAGE_DIR)/minikube.txt
+		--entrypoint python3 \
+		--tool minikube-crawler.py > $(CRAWLED_PACKAGE_DIR)/minikube.txt
 
 .PHONY: crawl
 crawl: build-crawl-container crawl-suse crawl-rhel
