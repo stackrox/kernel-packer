@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/env.yml
+      - uses: ./.github/actions/env
 
       - name: Authenticate with GCP
         uses: 'google-github-actions/auth@v1'
