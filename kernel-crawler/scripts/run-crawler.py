@@ -47,11 +47,11 @@ if __name__ == "__main__":
     parser.add_argument(
         "--env",
         "-e",
-        nargs="+",
+        action="append",
         help="The name of any environment vars to pass to the crawler",
     )
     parser.add_argument(
-        "--volume", "-v", nargs="+",
+        "--volume", "-v", nargs="*",
         help="Additional volumes to mount in the container"
     )
 
