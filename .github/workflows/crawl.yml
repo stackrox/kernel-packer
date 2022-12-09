@@ -14,7 +14,7 @@ jobs:
 
       - name: Run crawl
         run: |
-          if ! make -j -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+          if ! make -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
               touch /tmp/crawl-failed
           fi
 
