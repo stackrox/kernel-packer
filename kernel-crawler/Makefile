@@ -261,7 +261,7 @@ crawl-ubuntu-standard: build-crawl-container
 
 .PHONY: crawl-minikube
 crawl-minikube: build-crawl-container
-	./scripts/run-crawler.py
+	./scripts/run-crawler.py \
 		--entrypoint python3 \
 		--tool minikube-crawler.py > $(CRAWLED_PACKAGE_DIR)/minikube.txt
 
