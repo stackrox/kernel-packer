@@ -22,7 +22,6 @@ from lxml.etree import ParserError
 import traceback
 import re
 import os.path
-import logging
 
 http = urllib3.PoolManager()
 
@@ -616,36 +615,6 @@ repos = {
     ]
 }
 
-g_logger = logging.getLogger()
-
-def init_logging():
-    # These two handlers mean that everything is logged to file
-    # but only errors are logged to stderr (leaving stdout generally empty)
-    # 
-    # primarily this is to simplify the output without losing context, to
-    # make error discovery and diagnosis a lot easier.
-    formatter = logging.Formatter('%(asctime)s [%(levelname)-5.5s] %(message)s')
-
-    err_handler = logging.StreamHandler(sys.stderr)
-    err_handler.setLevel(logging.WARN)
-    err_handler.setFormatter(formatter)
-
-    all_handler = logging.FileHandler('kernel-crawl.log')
-    all_handler.setLevel(logging.DEBUG)
-    all_handler.setFormatter(formatter)
-
-    g_logger.addHandler(err_handler)
-    g_logger.addHandler(all_handler)
-
-
-def info(*msg):
-    g_logger.info(*msg)
-
-
-def error(*msg):
-    g_logger.error(*msg)
-
-
 def compare_exceptions(a, b):
     return isinstance(a, b.__class__) and a.args == b.args
 
@@ -694,11 +663,11 @@ def crawl(distro):
 
     kernel_urls = []
     for repo in repos[distro]:
-        info("Considering repo " + repo["root"] + "\n")
+        sys.stderr.write("Considering repo " + repo["root"] + "\n")
 
         http_request_headers=repo.get("http_request_headers", {})
         if "type" in repo and repo["type"] == "s3":
-            info("Crawling S3 bucket\n")
+            sys.stderr.write("Crawling S3 bucket\n")
             kernel_urls += crawl_s3(repo)
             continue
 
@@ -710,18 +679,18 @@ def crawl(distro):
             if "subdir_patterns" in repo:
                 versions = expand_versions_by_subdir_patterns(repo, versions)
             for version in sorted(set(versions)):
-                info("Considering version "+version+"\n")
+                sys.stderr.write("Considering version "+version+"\n")
                 for subdir in sorted(set(repo["subdirs"])):
                     try:
-                        info("Considering version " + version + " subdir " + subdir + "\n")
+                        sys.stderr.write("Considering version " + version + " subdir " + subdir + "\n")
                         source = repo["root"] + version + subdir
                         download_root = source if "download_root" not in repo else repo["download_root"]
                         page = http.request('GET', source, timeout=30.0, headers=http_request_headers).data
                         rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
                         if len(rpms) == 0:
-                            warn("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
+                            sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
                         for rpm in sorted(set(rpms)):
-                            warn("Considering package " + rpm + "\n")
+                            sys.stderr.write("Considering package " + rpm + "\n")
                             if "exclude_patterns" in repo and any(check_pattern(x,rpm) for x in repo["exclude_patterns"]):
                                 continue
                             if "include_patterns" in repo and not any(check_pattern(x,rpm) for x in repo["include_patterns"]):
@@ -729,33 +698,33 @@ def crawl(distro):
                             else:
                                 base_url = urljoin(rpm, urlparse(rpm).path)
                                 raw_url = "{}{}".format(download_root, url_unquote(base_url))
-                                info("Adding package " + raw_url + "\n")
+                                sys.stderr.write("Adding package " + raw_url + "\n")
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
 
                     except urllib3.exceptions.HTTPError as e:
                         # Network exceptions are generally ignored
-                        warn("WARN: Error for source: {}: {}\n".format(source, e))
+                        sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
 
                     except Exception as e:
                         # All the other exceptions are subject to compare with
                         # exceptions allowed per repo.
-                        error("WARN: Error for source: {}: {}\n".format(source, e))
+                        sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
                         comparison = [
                             compare_exceptions(e, ignored)
                             for ignored in repo.get("exceptions", [])
                         ]
 
                         if any(comparison):
-                            error("Error is ignored, continue\n")
+                            sys.stderr.write("Error is ignored, continue\n")
                         else:
                             raise e
 
         except urllib3.exceptions.ConnectTimeoutError as e:
-            error("WARN: Error for source: {}: {}\n".format(source, e))
+            sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
 
         except Exception as e:
-            error("ERROR: "+str(type(e))+str(e)+"\n")
+            sys.stderr.write("ERROR: "+str(type(e))+str(e)+"\n")
             traceback.print_exc()
             sys.exit(1)
 
@@ -810,7 +779,7 @@ def descend_path(root, path, patterns):
     pattern = copy.pop(0)
     patterns = copy
 
-    info("Getting subdirs under " + path + " using pattern " + pattern + "\n")
+    sys.stderr.write("Getting subdirs under " + path + " using pattern " + pattern + "\n")
     page = http.request('GET', root + path).data
     subdirs = html.fromstring(page).xpath(pattern, namespaces=XPATH_NAMESPACES)
     if len(subdirs) == 0:
@@ -846,8 +815,6 @@ if __name__ == "__main__":
         "mode", choices=["crawled", "removed"],
         help="Do you want to print the newly crawled files, or update the 'uncrawled' file?")
     parser_output_from_json.set_defaults(func=handle_output_from_json)
-
-    init_logging()
 
     args = parser.parse_args()
     args.func(args)
