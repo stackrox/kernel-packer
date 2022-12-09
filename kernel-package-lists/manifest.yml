@@ -1049,10 +1049,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1041.9-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1041.9-kernel-headers.tgz
-2f3f644fcf410e2f74028749293029f6b1b2ffc06f89ad90b6c25992c854b59b:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2643.1.0-flatcar_developer_container.bin.bz2
 2c3e2844d3528b0a04d859bd1002d57713cf0b972dbef59c93072675c2398292:
   type: ubuntu
   packages:
@@ -3456,12 +3452,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.766.3-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.766.3-kernel-headers.tgz
-6aa3ded106ea2df811b0588cf7c5f41e3791a593275bd3993bc0d5f072932f67:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc7-1-exp1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-amd64_6.1-rc7-1-exp1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-common_6.1-rc7-1-exp1_all.deb
 6aa4c88cf7239ca0d322c88755f4d5bf73a13ac2f4c3626e9d64566a08946279:
   type: redhat
   packages:
@@ -10591,10 +10581,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.103.25-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.103.25-kernel-headers.tgz
-3881d2a33867c9d4b5dd942b0f35c442295c45277d2436955b63fdf56615be49:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3227.1.1-flatcar_developer_container.bin.bz2
 3884ec3634300f00831c8956e10c1596bbe5ba92c7e0bf628eeb179118f30eee:
   type: ubuntu
   packages:
@@ -11559,6 +11545,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-headers-5.3.0-1007-azure_5.3.0-1007.8-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-azure-5.3-headers-5.3.0-1007_5.3.0-1007.8-18.04.1_all.deb
+15578eca01a1cbf1df3d7704b43723806035cc71fb4df5d443367fa2744f39fd:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.12-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-6-amd64_6.0.12-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-6-common_6.0.12-1_all.deb
 15584ae84be88680e3c7436449d30bf9de56cdcf93c6b9924bc18e28e1d6c4e0:
   type: redhat
   packages:
@@ -16456,6 +16448,12 @@ c71f61450955bb0fc0574ea0d4b357fde405628fc97cf54e49940870a89bf460:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.28.1.el8_2.x86_64.rpm
+c74dacc8b4afce94534b8cc3494e4788d2cdadad6e46dc5452a8aa0bdb6a02ea:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.12-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-6-cloud-amd64_6.0.12-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-6-common_6.0.12-1_all.deb
 c75c8adf56f7b6040ffbbdaf689d5457d18a856aefe0ee8133981bd4dd6ad2cd:
   type: suse
   packages:
@@ -19407,6 +19405,10 @@ ea97b459f0f4d8175bba7eeb5ad97980877bd57f44f4bd0ecf36a0002f91bf3a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1023-azure_4.15.0-1023.24-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1023_4.15.0-1023.24-16.04.1_all.deb
+ea7116eb464cc570e961e5b2e1c71d4186b134899caf079eb5089daf7b1c0943:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.6-flatcar_developer_container.bin.bz2
 ea0016590a557ce563894b7afae7acbf5da5366e7b9d42ec371b7b091171cb1e:
   type: ubuntu
   packages:
