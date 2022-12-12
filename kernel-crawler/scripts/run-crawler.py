@@ -8,7 +8,8 @@ def logs_dir():
     return os.environ.get("CRAWLER_LOGS_DIR", os.getcwd())
 
 
-def run_crawler_container(*args, entrypoint=None, tool=None, env=None):
+def run_crawler_container(
+        *args, entrypoint=None, tool=None, env=None, volumes=None):
     command = [
         "docker",
         "run",
@@ -54,12 +55,17 @@ if __name__ == "__main__":
         help="The name of any environment vars to pass to the crawler",
     )
     parser.add_argument(
-        "--volume", "-v", nargs="*",
+        "--volume", "-v",
+        action="append",
         help="Additional volumes to mount in the container"
     )
 
     args, unknown = parser.parse_known_args()
 
     run_crawler_container(
-        *unknown, entrypoint=args.entrypoint, tool=args.tool, env=args.env
+        *unknown,
+        entrypoint=args.entrypoint,
+        tool=args.tool,
+        env=args.env,
+        volumes=args.volume
     )
