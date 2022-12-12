@@ -10,9 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/env
+      - uses: google-github-actions/auth@v1
         with:
-          gcp-auth: ${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
+
+      - uses: google-github-actions/setup-gcloud@v1
+
+      - uses: ./.github/actions/env
 
       #
       # Each step of the crawl/repackage process is a composite

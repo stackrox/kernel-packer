@@ -2,10 +2,6 @@ name: Set bucket environment variables
 description: | 
   Sets common environment variables and gets GCP secrets for use
   during other stages.
-inputs:
-  gcp-auth:
-    description: The JSON GCP credentials to authenticate with.
-    required: true
 runs:
   using: composite
   steps:
@@ -28,10 +24,6 @@ runs:
         KERNEL_BUNDLE_BUCKET: "gs://collector-kernel-bundles-public"
         KERNEL_PACKAGE_STAGING_BUCKET: "gs://stackrox-kernel-packages-staging"
         KERNEL_BUNDLE_STAGING_BUCKET: "gs://stackrox-kernel-bundles-staging"
-
-    - uses: google-github-actions/auth@v1
-      with:
-        credentials_json: '${{ inputs.gcp-auth }}'
 
     - uses: google-github-actions/get-secretmanager-secrets@v1
       id: get-secrets
