@@ -148,6 +148,8 @@ crawl-rhel: build-crawl-container
 		rhel-login:latest \
 	| tar -C $(BUILD_DATA_DIR)/rhel-certs -xf -
 
+	ls -alh $(BUILD_DATA_DIR)/rhel-certs
+
 	# Crawl for RHEL 7 kernel-devel packages.
 	./scripts/run-crawler.py \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \

@@ -32,6 +32,9 @@ def run_crawler_container(*args, entrypoint=None, tool=None, env=None):
     if tool:
         command.append(tool)
 
+    import sys
+    sys.stderr.write(" ".join(command) + "\n")
+
     command.extend(args)
     os.execvp(command[0], command)
 
