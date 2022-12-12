@@ -2,6 +2,8 @@ name: Kernel Packer
 
 on:
   pull_request:
+  schedule:
+    - cron: '15 */8 * * *'
 
 jobs:
   all:
@@ -18,16 +20,13 @@ jobs:
       # to maintain repository state between each step
       #
       - uses: ./.github/actions/crawl
+      - uses: ./.github/actions/sync
+      - uses: ./.github/actions/cache
+      - uses: ./.github/actions/repackage
 
-      - run:
-          git status
-        #- uses: ./.github/actions/sync
-        #- uses: ./.github/actions/repackage
-        #- uses: ./.github/actions/cache
-
-        #- name: Commit to Collector Repo
-        #  if: ${{ github.event_name != pull_request }}
-        #  run: |
-        #    make robo-collector-commit
+      - name: Commit to Collector Repo
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          make robo-collector-commit
 
 

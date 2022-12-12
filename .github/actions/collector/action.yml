@@ -1,8 +1,0 @@
-name: Collector
-description: Runs the kernel-packer collector step
-runs:
-  using: composite
-  steps:
-    - run: make robo-collector-commit
-      if: ${{ github.event_name != pull_request }}
-    
