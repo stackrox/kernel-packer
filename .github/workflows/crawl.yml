@@ -16,6 +16,10 @@ jobs:
           gcp-auth: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
 
       - name: Run crawl
+        env:
+          REDHAT_USERNAME: ${{ secrets.REDHAT_USERNAME }}
+          REDHAT_PASSWORD: ${{ secrets.REDHAT_PASSWORD }}
+          RHSM_OFFLINE_TOKEN: ${{ secrets.RHSM_OFFLINE_TOKEN }}
         run: |
           if ! make -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
               touch /tmp/crawl-failed
@@ -27,5 +31,12 @@ jobs:
           fi
 
           ./scripts/restore-removed
+
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: kernel-crawler-log
+          path: kernel-crawler/kernel-crawler.log
 
 
