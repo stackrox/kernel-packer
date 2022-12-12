@@ -26,7 +26,7 @@ runs:
         BUILD_ID: "${{ github.run_id }}"
         KERNEL_PACKAGE_BUCKET: "gs://stackrox-kernel-packages-staging/copy"
         KERNEL_BUNDLE_BUCKET: "gs://collector-kernel-bundles-public"
-        KERNEL_PACKAGE_STAGING_BUCKET: ":gs://stackrox-kernel-packages-staging"
+        KERNEL_PACKAGE_STAGING_BUCKET: "gs://stackrox-kernel-packages-staging"
         KERNEL_BUNDLE_STAGING_BUCKET: "gs://stackrox-kernel-bundles-staging"
 
     - uses: google-github-actions/auth@v1

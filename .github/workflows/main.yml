@@ -19,10 +19,17 @@ jobs:
       # action because we need to run everything in a single job
       # to maintain repository state between each step
       #
-      - uses: ./.github/actions/crawl
-      - uses: ./.github/actions/sync
-      - uses: ./.github/actions/cache
-      - uses: ./.github/actions/repackage
+      - name: Crawl
+        uses: ./.github/actions/crawl
+
+      - name: Sync
+        uses: ./.github/actions/sync
+
+      - name: Cache
+        uses: ./.github/actions/cache
+
+      - name: Repackage
+        uses: ./.github/actions/repackage
 
       - name: Commit to Collector Repo
         if: ${{ github.event_name != 'pull_request' }}
