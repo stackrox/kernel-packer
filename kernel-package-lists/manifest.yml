@@ -1855,6 +1855,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-headers-5.15.0-1019-aws_5.15.0-1019.23-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-aws-5.15-headers-5.15.0-1019_5.15.0-1019.23-20.04.1_all.deb
+3a05067c9a0510e4ac9dfd5792d23d8872d90a2a85db3992bc82a76a355b74f4:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.295.22-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.295.22-kernel-headers.tgz
 3d5654e5337b1cd78345f059f8e4603699f3e61b5ded924cc25534922c456cdb:
   type: ubuntu
   packages:
@@ -2347,6 +2352,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.0.69-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.0.69-kernel-headers.tgz
+4b1574a0dda362f3219dd477fef8038aca5d49a2e68656297d14e153920aa722:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17328.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17328.0.0-kernel-headers.tgz
 4d1733d0962f128d092677d17291f8db471c16b69589341a0ec9df9470463882:
   type: redhat
   packages:
@@ -4557,6 +4567,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-edge-linux-gcp-headers-4.18.0-1007_4.18.0-1007.8-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-edge-linux-headers-4.18.0-1007-gcp_4.18.0-1007.8-18.04.1_amd64.deb
+8bb95af5a9f27857cc49321cdf0adfd14e76ee1924c8bd0ce0552dcd6c215145:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.766.19-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.766.19-kernel-headers.tgz
 8eb346b29ff7af625ee66e00f4370cca0016c46f84c3301fe8883c1945113dd6:
   type: ubuntu
   packages:
@@ -4945,6 +4960,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9f388164ea775e7a6c36c8628bb9a66a47d9fe27c99e732a210f357e1213dda7-kernel-devel-4.14.77-86.82.amzn2.x86_64.rpm
+9c222fdb45522b7285e5e7957ef2e38beaf317667b0d76d00aa960247c42cd28:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.0-flatcar_developer_container.bin.bz2
 9d287faa1356323929f9a55c004db7a42cd372eb6e2c064a119ac77e5d2cbd1f:
   type: ubuntu
   packages:
@@ -9654,10 +9673,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1019-aws_4.4.0-1019.19_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1019_4.4.0-1019.19_all.deb
-699c5ca27b1bb767f6b217bfb04a3ab9c9d40cfae2c6c09abc05f444522ebe92:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3346.1.0-flatcar_developer_container.bin.bz2
 702c281e5d38b77d0fd9fab845356ac624216e4e5ae8e6be807d8196d117d58f:
   type: suse
   packages:
@@ -10270,6 +10285,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-3e3ada720f7b508d32208bee1d71655550be13d0e0bda55875312a58fb7074be-download
+1329dbfd3f7524794c46b9246c9bf3615222230fc98d4b89dd73c7b7db4b553f:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.40.42-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.40.42-kernel-headers.tgz
 1350ad438c45c9b7fb5318ff64ddb0e22a0256c3e153613d40e57f8e9a2f53aa:
   type: ubuntu
   packages:
@@ -14319,10 +14339,6 @@ aa739078b948832aad5ef9b58001529c247956127b059f44b1a07812c364ab18:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1051_5.4.0-1051.54_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1051-gke_5.4.0-1051.54_amd64.deb
-aaa9b57d1e3e88da6e74839e434c7c52f1f8750b2224a343e2da9898ce42c0a9:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3277.1.1-flatcar_developer_container.bin.bz2
 aaa8845616fc92136a17d272eda75e0b8225dc02da7933c13ce5f826bf2b513a:
   type: redhat
   packages:
@@ -18145,6 +18161,11 @@ da18fe0c956089c0513ae84ddfedeaea750f65c362504393ca7464339ea308bf:
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.75-29.el7.x86_64.rpm
+da55f151a794ee6fe9557301b77a36339c66a35030589ef08f3faa0e933906f1:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.189.20-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.189.20-kernel-headers.tgz
 da57e7b74417984c8d7fe31716cf26261717cf812a8617ad28a3da31194c9220:
   type: redhat
   packages:
