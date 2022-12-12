@@ -14,7 +14,7 @@ jobs:
       - name: Authenticate with GCP
         uses: 'google-github-actions/auth@v1'
         with:
-          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_COLLECTOR_SVC_ACCT }}'
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
 
       - name: Setup GCP
         uses: 'google-github-actions/setup-gcloud@v1'

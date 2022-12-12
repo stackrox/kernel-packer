@@ -1,0 +1,24 @@
+name: Import GCP credentials
+description: Imports crawling credentials from GCP
+runs:
+  using: composite
+  permissions:
+    contents: read
+    id-token: write
+  steps:
+    - uses: google-github-actions/auth@v2
+      with:
+        credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
+
+    - uses: google-github-actions/get-secretmanager-secrets@v2
+      id: get-secrets
+      with:
+        secrets: |
+          rhel:stackrox-ci/collector-kernel-crawler-rhel-credentials
+          suse:stackrox-ci/collector-kernel-crawler-suse-credentials
+          ubuntu:stackrox-ci/collector-kernel-crawler-ubuntu-credentials
+
+    - run: |
+        echo "${{ steps.get-secrets.outputs.rhel }}" >> $GITHUB_ENV
+        echo "${{ steps.get-secrets.outputs.suse }}" >> $GITHUB_ENV
+        echo "${{ steps.get-secrets.outputs.ubuntu }}" >> $GITHUB_ENV

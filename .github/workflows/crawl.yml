@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/env
+      - uses: ./.github/actions/gcp-creds
 
       - name: Run crawl
         run: |
@@ -24,6 +25,5 @@ jobs:
           fi
 
           ./scripts/restore-removed
-        
 
 
