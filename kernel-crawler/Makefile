@@ -30,12 +30,12 @@ crawl-centos: build-crawl-container
 crawl-kops: build-crawl-container
 	# The kbuild tools are required for each major version of the kernel for Debian.
 	echo 'http://http.us.debian.org/debian/pool/main/l/linux-tools/linux-kbuild-4.4_4.4-4~bpo8+1_amd64.deb' > $(CRAWLED_PACKAGE_DIR)/kops.txt
-	./scripts/run-crawler.py --entrypoint python3 --tool repo-crawler.py \
+	./scripts/run-crawler.py --entrypoint python3 repo-crawler.py \
 		--print apt http://dist.kope.io/apt jessie main --match-prefix=Package=linux-headers-4 | sort >> $(CRAWLED_PACKAGE_DIR)/kops.txt
 
 .PHONY: crawl-gardenlinux
 crawl-gardenlinux: build-crawl-container
-	./scripts/run-crawler.py --entrypoint python3 --tool garden-crawler.py > $(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
+	./scripts/run-crawler.py --entrypoint python3 garden-crawler.py > $(CRAWLED_PACKAGE_DIR)/gardenlinux.txt
 
 .PHONY: crawl-debian
 crawl-debian: build-crawl-container
@@ -45,10 +45,10 @@ crawl-debian: build-crawl-container
 crawl-amazon: build-crawl-container
 	# Amazon doesn't actually publish a GPG signature for the package manifest, so
 	# we don't actually supply that argument here.
-	./scripts/run-crawler.py --entrypoint python3 --tool repo-crawler.py --print yum \
+	./scripts/run-crawler.py --entrypoint python3 repo-crawler.py --print yum \
 		http://amazonlinux.us-west-2.amazonaws.com/2/core/latest/x86_64/mirror.list \
 		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon.txt
-	./scripts/run-crawler.py --entrypoint python3 --tool repo-crawler.py --print yum \
+	./scripts/run-crawler.py --entrypoint python3 repo-crawler.py --print yum \
 		http://amazonlinux.us-west-2.amazonaws.com/2/extras/kernel-5.4/latest/x86_64/mirror.list \
 		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon-extras.txt
 
@@ -265,7 +265,7 @@ crawl-ubuntu-standard: build-crawl-container
 crawl-minikube: build-crawl-container
 	./scripts/run-crawler.py \
 		--entrypoint python3 \
-		--tool minikube-crawler.py > $(CRAWLED_PACKAGE_DIR)/minikube.txt
+		minikube-crawler.py > $(CRAWLED_PACKAGE_DIR)/minikube.txt
 
 .PHONY: crawl
 crawl: build-crawl-container crawl-suse crawl-rhel

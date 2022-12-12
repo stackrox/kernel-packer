@@ -9,7 +9,7 @@ def logs_dir():
 
 
 def run_crawler_container(
-        *args, entrypoint=None, tool=None, env=None, volumes=None):
+        *args, entrypoint=None, env=None, volumes=None):
     command = [
         "docker",
         "run",
@@ -28,15 +28,17 @@ def run_crawler_container(
         for e in env:
             command.extend(["-e", e])
 
+    if volumes:
+        for v in volumes:
+            command.extend(["-v", v])
+
     command.append("kernel-crawler")
 
-    if tool:
-        command.append(tool)
+    command.extend(args)
 
     import sys
     sys.stderr.write(" ".join(command) + "\n")
 
-    command.extend(args)
     os.execvp(command[0], command)
 
 
@@ -46,8 +48,6 @@ if __name__ == "__main__":
     )
 
     parser.add_argument("--entrypoint", help="The entrypoint to the container")
-    parser.add_argument("--tool",
-                        help="A different tool to run instead of the default")
     parser.add_argument(
         "--env",
         "-e",
@@ -62,10 +62,11 @@ if __name__ == "__main__":
 
     args, unknown = parser.parse_known_args()
 
+    print(args.volume)
+
     run_crawler_container(
         *unknown,
         entrypoint=args.entrypoint,
-        tool=args.tool,
         env=args.env,
         volumes=args.volume
     )
