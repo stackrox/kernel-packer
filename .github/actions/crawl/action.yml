@@ -1,0 +1,26 @@
+name: Kernel packer crawl
+description: Runs the crawl step for kernel-packer
+runs:
+  using: composite
+  steps:
+    - name: Run crawl
+      run: |
+        if ! make -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+            touch /tmp/crawl-failed
+        fi
+
+        if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
+            echo >&2 "'make crawl' failed. See the output of the 'Crawl package repositories' step in the crawl job for further details."
+            exit 1
+        fi
+
+        ./scripts/restore-removed
+      shell: bash
+
+    - name: Upload log
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: kernel-crawler-log
+        path: kernel-crawler/kernel-crawler.log
+

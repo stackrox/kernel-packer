@@ -1,0 +1,32 @@
+name: Repackage
+description: Runs the kernel-packer repackage step
+runs:
+  using: composite
+  steps:
+    - name: prepare cache
+      run: |
+        IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
+        for bucket in "${bucket_names[@]}"
+        do
+            if [ ! -f .build-data/cache/cache.yml ]; then
+                gsutil cp "${bucket}/cache.yml" .build-data/cache/cache.yml || true
+            fi
+        done
+        touch .build-data/cache/cache.yml
+      shell: bash
+    
+    - name: List Files
+      run: make list-files
+      shell: bash
+
+    - name: Download packages
+      run: make download-packages packers
+      shell: bash
+
+    - name: Repackage
+      run: make repackage
+      shell: bash
+
+    - name: Upload bundles
+      run: make upload-bundles
+      shell: bash

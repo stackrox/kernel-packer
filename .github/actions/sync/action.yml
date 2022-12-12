@@ -1,0 +1,29 @@
+name: Sync
+description: Runs the kernel-packer sync step
+runs:
+  using: composite
+  steps:
+    - name: Sync
+      run: |
+        make sync
+        git --no-pager diff kernel-package-lists
+      shell: bash
+
+    - name: Manifest
+      run: |
+        make manifest
+        cat kernel-package-lists/manifest.yml
+        git --no-pager diff kernel-package-lists/manifest.yml
+      shell: bash
+
+    - name: Artifacts
+      run: |
+        rm -rf .build-data/downloads
+        rm -rf .build-data/packages
+      shell: bash
+
+    - name: Crawl commit
+      if: ${{ github.event_name != 'pull_request' }}
+      run: make robo-crawl-commit
+      shell: bash
+

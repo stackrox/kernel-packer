@@ -1,8 +1,11 @@
-
 name: Set bucket environment variables
 description: | 
-  Sets KERNEL_PACKAGE_BUCKET and KERNEL_BUNDLE_BUCKET based on
-  the branch.
+  Sets common environment variables and gets GCP secrets for use
+  during other stages.
+inputs:
+  gcp-auth:
+    description: The JSON GCP credentials to authenticate with.
+    required: true
 runs:
   using: composite
   steps:
@@ -26,3 +29,20 @@ runs:
         KERNEL_PACKAGE_STAGING_BUCKET: ":gs://stackrox-kernel-packages-staging"
         KERNEL_BUNDLE_STAGING_BUCKET: "gs://stackrox-kernel-bundles-staging"
 
+    - uses: google-github-actions/auth@v1
+      with:
+        credentials_json: '${{ inputs.gcp-auth }}'
+
+    - uses: google-github-actions/get-secretmanager-secrets@v1
+      id: get-secrets
+      with:
+        secrets: |
+          rhel:stackrox-ci/collector-kernel-crawler-rhel-credentials
+          ubuntu:stackrox-ci/collector-kernel-crawler-ubuntu-credentials
+
+      #suse:stackrox-ci/collector-kernel-crawler-suse-credentials
+    - run: |
+        echo "${{ steps.get-secrets.outputs.rhel }}" >> $GITHUB_ENV
+        echo "${{ steps.get-secrets.outputs.suse }}" >> $GITHUB_ENV
+        echo "${{ steps.get-secrets.outputs.ubuntu }}" >> $GITHUB_ENV
+      shell: bash

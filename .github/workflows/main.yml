@@ -1,0 +1,33 @@
+name: Kernel Packer
+
+on:
+  pull_request:
+
+jobs:
+  all:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/env
+        with:
+          gcp-auth: ${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}
+
+      #
+      # Each step of the crawl/repackage process is a composite
+      # action because we need to run everything in a single job
+      # to maintain repository state between each step
+      #
+      - uses: ./.github/actions/crawl
+
+      - run:
+          git status
+        #- uses: ./.github/actions/sync
+        #- uses: ./.github/actions/repackage
+        #- uses: ./.github/actions/cache
+
+        #- name: Commit to Collector Repo
+        #  if: ${{ github.event_name != pull_request }}
+        #  run: |
+        #    make robo-collector-commit
+
+
