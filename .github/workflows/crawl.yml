@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/env
       - uses: ./.github/actions/gcp-creds
+        with:
+          gcp-auth: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
 
       - name: Run crawl
         run: |

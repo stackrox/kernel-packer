@@ -1,16 +1,17 @@
 name: Import GCP credentials
 description: Imports crawling credentials from GCP
+inputs:
+  gcp-auth:
+    description: The JSON credentials to use to auth with GCP
+    required: true
 runs:
   using: composite
-  permissions:
-    contents: read
-    id-token: write
   steps:
-    - uses: google-github-actions/auth@v2
+    - uses: google-github-actions/auth@v1
       with:
-        credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
+        credentials_json: '${{ inputs.gcp-auth }}'
 
-    - uses: google-github-actions/get-secretmanager-secrets@v2
+    - uses: google-github-actions/get-secretmanager-secrets@v1
       id: get-secrets
       with:
         secrets: |
@@ -22,3 +23,4 @@ runs:
         echo "${{ steps.get-secrets.outputs.rhel }}" >> $GITHUB_ENV
         echo "${{ steps.get-secrets.outputs.suse }}" >> $GITHUB_ENV
         echo "${{ steps.get-secrets.outputs.ubuntu }}" >> $GITHUB_ENV
+      shell: bash
