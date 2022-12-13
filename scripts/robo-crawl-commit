@@ -20,7 +20,7 @@ main() {
     # it first. Redirect to devnull so this doesn't print the value of the
     # token on failure.
     echo "Add target..."
-    git remote add pushtarget https://roxbot:$GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
+    git remote add pushtarget https://roxbot:$ROBOT_ROX_GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
 
     # Create a commit with any modified files, and push it to GitHub.
     echo "Commit changes..."
