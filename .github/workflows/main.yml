@@ -23,11 +23,11 @@ jobs:
       # action because we need to run everything in a single job
       # to maintain repository state between each step
       #
-      #- name: Crawl
-      #  uses: ./.github/actions/crawl
+      - name: Crawl
+        uses: ./.github/actions/crawl
 
-      #- name: Sync
-      #  uses: ./.github/actions/sync
+      - name: Sync
+        uses: ./.github/actions/sync
 
       - name: Repackage
         uses: ./.github/actions/repackage
