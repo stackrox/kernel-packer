@@ -2361,6 +2361,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-2440a50a3c88180ac239a5d53a633e437ce45de8a56e45bff61c2c7dcd4ae7b1-download
+4a3718d2d33f14cda38509cf304013bfb39ed235ff4cab21fcd205a6c6005238:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.2-flatcar_developer_container.bin.bz2
 4b5591e4a11e7d6b028bedf33dde57ed3889396158de225952637b65b02911cc:
   type: cos
   packages:
@@ -2883,10 +2887,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.13-200.fc36-x86_64-kernel-devel-5.19.13-200.fc36.x86_64.rpm
-5a6433b433cbad54ade8ac0345650a40281803d35e9f30cea62371def758c6d4:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3139.1.0-flatcar_developer_container.bin.bz2
 5b9713d3a0d93782731d802bcdbdd9876f01c84f7273b9d2158495e4157dc3db:
   type: ubuntu
   packages:
@@ -6311,10 +6311,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.7-300.fc35-x86_64-kernel-devel-5.14.7-300.fc35.x86_64.rpm
-38d191ac429e0ccbca3549a11823b063952940c35242407745b22a1868388ef8:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.0-flatcar_developer_container.bin.bz2
 38f455a14fe22c68059ef0ef4802955e058132dfa9f3043f173421c206e07b17:
   type: redhat
   packages:
@@ -12997,6 +12993,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12371.89.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12371.89.0-kernel-headers.tgz
+8440398d5ad07a49306155652bfe48a84b3c3a887671038da5123bd82e123af4:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.5.0-flatcar_developer_container.bin.bz2
 8597476a117d48962d41a84c3d9c8fd6f956fb2cc5735d43c28682943d6b8116:
   type: ubuntu
   packages:
@@ -15031,6 +15031,10 @@ b5c2bc10e10e33836b8e325fdf9fe18205b9e2cdc9cd07b99522b77819c747bc:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1014-aws_5.15.0-1014.18_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1014_5.15.0-1014.18_all.deb
+b5c4c8f2323b911adcfc2ffae924137e521228838039a90fba1b61befa3e0af2:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2905.2.3-flatcar_developer_container.bin.bz2
 b5b5cbe27756e0c491de305c3ba11096fe116b4e1d338d7842cd245c1784850e:
   type: redhat
   packages:
