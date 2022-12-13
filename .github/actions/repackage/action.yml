@@ -5,12 +5,12 @@ runs:
   steps:
     - name: prepare cache
       run: |
-        if [ ! -f .build-data/cache/cache.yml ]; then
-          IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
-          for bucket in "${bucket_names[@]}"; do
+        IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
+        for bucket in "${bucket_names[@]}"; do
+          if [ ! -f .build-data/cache/cache.yml ]; then
             gsutil cp "${bucket}/cache.yml" .build-data/cache/cache.yml || true
-          done
-        fi
+          fi
+        done
         touch .build-data/cache/cache.yml
       shell: bash
     
