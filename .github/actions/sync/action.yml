@@ -9,17 +9,35 @@ runs:
         git --no-pager diff kernel-package-lists
       shell: bash
 
+    - name: Archive sanity checks
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: sync-sanity-checks
+        if-no-files-found: ignore
+        path: |
+          all-crawled-packages.log
+          all-bucket-files.log
+
     - name: Manifest
       run: |
         make manifest
-        cat kernel-package-lists/manifest.yml
         git --no-pager diff kernel-package-lists/manifest.yml
       shell: bash
 
-    - name: Artifacts
+    - name: Archive manifest
+      uses: actions/upload-artifact@v3
+      with:
+        name: manifest
+        if-no-files-found: error
+        path: |
+          kernel-package-lists/manifest.yml
+
+    - name: Clean up artifacts
       run: |
         rm -rf .build-data/downloads
         rm -rf .build-data/packages
+        rm -f all-bucket-files.log all-crawled-packages.log
       shell: bash
 
     - name: Crawl commit

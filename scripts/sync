@@ -26,13 +26,13 @@ main() {
 
     info 'Generating a list of crawled urls.'
     all_crawled_packages="$(./scripts/crawled-inventory "$package_list_dir")"
-    echo "$all_crawled_packages"
-    echo
+    echo "$all_crawled_packages" > all-crawled-packages.log
+    echo "Found $(wc -l all-crawled-packages.log) crawled packages"
 
     info 'Generating a list of bucket files.'
     all_bucket_files="$(./scripts/package-inventory "$bucket_name_list")"
-    echo "$all_bucket_files"
-    echo
+    echo "$all_bucket_files" > all-bucket-files.log
+    echo "Found $(wc -l all-bucket-files.log) bucket files"
 
     info 'Downloading missing files from origin source.'
     while read -r url; do
@@ -50,7 +50,7 @@ main() {
     echo
 
     info 'Sanity checking downloaded files.'
-    find "${download_dir}" -size 0 -delete -print
+    echo "Downloaded $(find "${download_dir}" -size 0 -delete -print | wc -l) files"
     echo
 
     info "Uploading files to ${bucket_names[0]}/"
@@ -68,7 +68,7 @@ contains() {
 
 get_rhsm_api_access_token() {
     token_url=https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token
-    curl $token_url -d grant_type=refresh_token -d client_id=rhsm-api -d refresh_token=$RHSM_OFFLINE_TOKEN | jq -r '.access_token'
+    curl $token_url -d grant_type=refresh_token -d client_id=rhsm-api -d refresh_token="$RHSM_OFFLINE_TOKEN" | jq -r '.access_token'
 }
 
 download_using_rhsm_api() {
@@ -77,7 +77,7 @@ download_using_rhsm_api() {
 
 	token="$(get_rhsm_api_access_token)"
 	url_info="$(curl -H "Authorization: Bearer $token" "$url" -H "accept: application/json")"
-	temp_url="$(echo $url_info | jq -r .body.href)"
+	temp_url="$(echo "$url_info" | jq -r .body.href)"
 	curl -H "Authorization: Bearer $token" "$temp_url" --output "$file" || rm -f "$file"
 }
 
