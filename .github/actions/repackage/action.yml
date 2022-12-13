@@ -8,7 +8,7 @@ runs:
         if [ ! -f .build-data/cache/cache.yml ]; then
           IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
           for bucket in "${bucket_names[@]}"; do
-              gsutil cp "${bucket}/cache.yml" .build-data/cache/cache.yml || true
+            gsutil cp "${bucket}/cache.yml" .build-data/cache/cache.yml || true
           done
         fi
         touch .build-data/cache/cache.yml
