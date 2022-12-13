@@ -39,6 +39,8 @@ main() {
         # Simplify url into the naming scheme used in the bucket.
         filename="$(simplify "$url")"
 
+        echo "$filename"
+
         # Check if this specific file exists in the bucket listing.
         if ! echo "$all_bucket_files" | contains_exact "$filename"; then
             echo "Downloading $url"
