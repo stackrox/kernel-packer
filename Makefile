@@ -85,7 +85,7 @@ list-files:
 	@go run ./tools/repackage-kernels/main.go \
 		-manifest $(MANIFEST_FILE) \
 		-cache-dir $(BUILD_DATA_DIR)/cache \
-		-action files | $(BUILD_DATA_DIR)/packages.txt
+		-action files > $(BUILD_DATA_DIR)/packages.txt
 
 .PHONY: download-packages
 download-packages:
