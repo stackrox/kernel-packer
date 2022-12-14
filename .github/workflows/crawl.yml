@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: kernel-crawler-log
-          path: 
+          path: kernel-crawler/kernel-crawler.log
 
       - name: Sync
         run: |
