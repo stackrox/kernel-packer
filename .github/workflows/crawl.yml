@@ -1,0 +1,69 @@
+name: Crawl
+
+on: workflow_call
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
+      - uses: google-github-actions/setup-gcloud@v1
+
+      - uses: ./.github/actions/env
+
+      - name: Run crawl
+        run: |
+          if ! make -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+              touch /tmp/crawl-failed
+          fi
+
+          if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
+              echo >&2 "'make crawl' failed. See the output of the 'Crawl package repositories' step in the crawl job for further details."
+              exit 1
+          fi
+
+          ./scripts/restore-removed
+
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: kernel-crawler-log
+          path: 
+
+      - name: Sync
+        run: |
+          make sync
+          git --no-pager diff kernel-package-lists
+
+      - name: Manifest
+        run: |
+          make manifest
+          git --no-pager diff kernel-package-lists/manifest.yml
+
+      - name: Clean up artifacts
+        run: |
+          rm -rf .build-data/downloads
+          rm -rf .build-data/packages
+          rm -f all-bucket-files.log all-crawled-packages.log
+
+      - name: Crawl commit
+        if: ${{ github.event_name != 'pull_request' }}
+        run: make robo-crawl-commit
+
+      - name: Archive log files
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: kernel-packer-crawl
+          if-no-files-found: ignore
+          path: |
+            all-crawled-packages.log
+            all-bucket-files.log
+            kernel-package-lists/manifest.yml
+            kernel-crawler/kernel-crawler.log
+
+
