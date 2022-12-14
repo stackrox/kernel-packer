@@ -2221,6 +2221,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.18.0-1019-azure_4.18.0-1019.19-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.18.0-1019_4.18.0-1019.19-18.04.1_all.deb
+4c6c8229c8a88f03bf0254ed6ff0a3f1746c65f377509d45c92d465f71805473:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.0.13-300.fc37-x86_64-kernel-devel-6.0.13-300.fc37.x86_64.rpm
 4a6ce1d6b419838403815c0bbd179ee42a522ea283a78972e50cbe520d476b37:
   type: cos
   packages:
@@ -6323,6 +6327,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.7-300.fc35-x86_64-kernel-devel-5.14.7-300.fc35.x86_64.rpm
+38d191ac429e0ccbca3549a11823b063952940c35242407745b22a1868388ef8:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2079.3.0-flatcar_developer_container.bin.bz2
 38f455a14fe22c68059ef0ef4802955e058132dfa9f3043f173421c206e07b17:
   type: redhat
   packages:
@@ -9321,10 +9329,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2039-aws-fips_4.15.0-2039.41_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2039_4.15.0-2039.41_all.deb
-525e7099c7103f0282f2335ff6d9d8be45d44e0a162a38170dc6f3b6e8812fa8:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.0-flatcar_developer_container.bin.bz2
 525aeb881b9a6bacc7dda7d9f12c87cd4a7d04315fe2641cb1dbbfbbcd90451e:
   type: cos
   packages:
@@ -13971,6 +13975,10 @@ a195a9650455df4ff047a208328befa50810a37c20f93a60620dc067bf6a9077:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.151-1.el7.elrepo.x86_64.rpm
+a251ef93dd6b5a8db820b2e6004ec3eabde0ba8c76086bce7fd03ce837000897:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.0.13-200.fc36-x86_64-kernel-devel-6.0.13-200.fc36.x86_64.rpm
 a254bbab45a85f13ddd5b0e49624145858bbadd7986bab274f5f7790a6017484:
   type: redhat
   packages:
@@ -14337,6 +14345,10 @@ aa9cadb9738dacead420a99ee0ce8f0c37c8d4e71b02a53ac2db667854b5d112:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1038-fips_4.15.0-1038.43_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1038_4.15.0-1038.43_all.deb
+aa035fcbefb725419e78ae53fb8b137f2b85281e9504da7084a47a4019a45fbd:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2135.6.0-flatcar_developer_container.bin.bz2
 aa86b611fb8ad0c3d34734a0526845020daea5feb86c80cdce961882eebd5a42:
   type: ubuntu
   packages:
