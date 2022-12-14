@@ -12,5 +12,6 @@ jobs:
 
   repackage:
     uses: ./.github/workflows/repackage.yml
+    needs: crawl
     secrets: inherit
 

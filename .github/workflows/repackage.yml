@@ -5,6 +5,8 @@ on: workflow_call
 jobs:
   split-tasks:
     runs-on: ubuntu-latest
+    env:
+      BUILD_DATA_DIR: ./build-data
     outputs:
       parallel-jobs-number: ${{ steps.split-packages.outputs.parallel-jobs-number }}
       parallel-jobs: ${{ steps.split-packages.outputs.parallel-jobs }}
@@ -12,13 +14,14 @@ jobs:
     steps:
       - name: Prepare Cache
         run: |
+          mkdir -p "${BUILD_DATA_DIR}/cache"
           IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
           for bucket in "${bucket_names[@]}"; do
-            if [ ! -f .build-data/cache/cache.yml ]; then
-              gsutil cp "${bucket}/cache.yml" .build-data/cache/cache.yml || true
+            if [ ! -f "${BUILD_DATA_DIR}/cache/cache.yml" ]; then
+              gsutil cp "${bucket}/cache.yml" "${BUILD_DATA_DIR}/cache/cache.yml" || true
             fi
           done
-          touch .build-data/cache/cache.yml
+          touch "${BUILD_DATA_DIR}/cache/cache.yml"
 
       - name: List packages
         run: make list-files
