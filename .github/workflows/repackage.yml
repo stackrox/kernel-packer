@@ -46,6 +46,7 @@ jobs:
         run: |
           import math
           import os
+          import json
 
           def chunks(data, chunk_size):
             c = []
