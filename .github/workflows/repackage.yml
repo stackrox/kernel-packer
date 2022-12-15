@@ -140,7 +140,7 @@ jobs:
 
           with open(os.environ['BUILD_DATA_DIR'] +'/packages.txt', 'w') as output:
             for package in packages["${{ matrix.packer }}"]:
-              output.write(package)
+              output.write(package + "\n")
         shell: python
 
       - name: Repackage
@@ -151,7 +151,7 @@ jobs:
           # with huge amounts of package downloads
           split -l 100 --numeric-suffixes "${BUILD_DATA_DIR}/packages.txt" "${BUILD_DATA_DIR}/chunk"
           
-          for chunk in .build-data/chunk*; do
+          for chunk in "${BUILD_DATA_DIR}"/chunk*; do
             ./scripts/download-packages "${BUILD_DATA_DIR}" "${KERNEL_PACKAGE_BUCKET}" "${chunk}"
             
             go run ./tools/repackage-kernels/main.go \
