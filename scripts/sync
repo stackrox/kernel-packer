@@ -46,13 +46,16 @@ main() {
             # This file didn't exist in the bucket listing, so download it.
             download "$url" "${download_dir}/${filename}"
 
-            # Now upload and delete to minimise file system use
-            gsutil -m cp "${download_dir}/${filename}" "${bucket_names[0]%/}/"
+            # Don't bother trying to upload if the download failed
+            if [[ -f "${download_dir}/${filename}" ]]; then
+                # Now upload and delete to minimise file system use
+                gsutil -m cp "${download_dir}/${filename}" "${bucket_names[0]%/}/"
 
-            # This is maaybe a cheap trick to keep a record of
-            # the downloaded file without incurring the file system
-            # hit
-            echo > "${download_dir}/${filename}"
+                # This is maaybe a cheap trick to keep a record of
+                # the downloaded file without incurring the file system
+                # hit
+                echo > "${download_dir}/${filename}"
+            fi
         fi
     done <<< "$all_crawled_packages"
     echo
