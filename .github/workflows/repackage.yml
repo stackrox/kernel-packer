@@ -55,7 +55,7 @@ jobs:
 
           packages = []
           with open('.build-data/packages.txt') as pkg:
-            packages = pkg.readlines()
+            packages = list(map(str.strip, pkg.readlines()))
 
           parallel_jobs = math.ceil(len(packages) / 500)
           if parallel_jobs > 32:
