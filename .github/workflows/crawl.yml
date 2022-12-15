@@ -63,7 +63,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: kernel-packer-crawl
+          name: kernel-crawler-logs
           if-no-files-found: ignore
           path: |
             all-crawled-packages.log

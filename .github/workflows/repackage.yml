@@ -34,6 +34,8 @@ jobs:
       - name: Restore manifest
         uses: actions/download-artifact@v3
         with:
+          # this is archived by the crawl workflow
+          # see .github/workflows/crawl.yml for details
           name: kernel-crawler-manifest
 
       - name: List packages
@@ -78,7 +80,7 @@ jobs:
       - name: Archive package list
         uses: actions/upload-artifact@v3
         with:
-          name: package-list
+          name: kernel-repackage-list
           path: |
             .build-data/packages.txt
 

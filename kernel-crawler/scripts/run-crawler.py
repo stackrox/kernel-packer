@@ -5,7 +5,7 @@ import os
 
 #
 # This is a helper script to add common options to the crawler container
-# for the many invocations in the make file. In particular it supports 
+# for the many invocations in the make file. In particular it supports
 # a log directory. For retrieving the log file (instead of the container
 # using stderr for logging)
 #
