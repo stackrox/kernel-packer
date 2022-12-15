@@ -88,6 +88,7 @@ jobs:
     needs: split-tasks
     if: ${{ needs.split-tasks.outputs.parallel-jobs-number > 0 }}
     strategy:
+      fail-fast: false
       matrix:
         packer: ${{ fromJSON(needs.split-tasks.outputs.parallel-array) }}
     env:

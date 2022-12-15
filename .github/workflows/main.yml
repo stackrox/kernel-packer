@@ -6,12 +6,12 @@ on:
     - cron: '15 */8 * * *'
 
 jobs:
-  #  crawl:
-  #    uses: ./.github/workflows/crawl.yml
-  #    secrets: inherit
-  #
+  crawl:
+    uses: ./.github/workflows/crawl.yml
+    secrets: inherit
+
   repackage:
     uses: ./.github/workflows/repackage.yml
-      #needs: crawl
+    needs: crawl
     secrets: inherit
 
