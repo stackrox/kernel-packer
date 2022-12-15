@@ -3,6 +3,12 @@
 import argparse
 import os
 
+#
+# This is a helper script to add common options to the crawler container
+# for the many invocations in the make file. In particular it supports 
+# a log directory. For retrieving the log file (instead of the container
+# using stderr for logging)
+#
 
 def logs_dir():
     return os.environ.get("CRAWLER_LOGS_DIR", os.getcwd())
@@ -11,14 +17,9 @@ def logs_dir():
 def run_crawler_container(
         *args, entrypoint=None, env=None, volumes=None):
     command = [
-        "docker",
-        "run",
-        "--rm",
-        "-i",
-        "-v",
-        f"{logs_dir()}:/logs",
-        "-e",
-        "CRAWLER_LOGS_DIR=/logs",
+        "docker", "run", "--rm", "-i",
+        "-v", f"{logs_dir()}:/logs",
+        "-e", "CRAWLER_LOGS_DIR=/logs",
     ]
 
     if entrypoint:
@@ -33,11 +34,7 @@ def run_crawler_container(
             command.extend(["-v", v])
 
     command.append("kernel-crawler")
-
     command.extend(args)
-
-    import sys
-    sys.stderr.write(" ".join(command) + "\n")
 
     os.execvp(command[0], command)
 
