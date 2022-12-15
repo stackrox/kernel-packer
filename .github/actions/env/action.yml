@@ -31,7 +31,7 @@ runs:
         secrets: |
           rhel:stackrox-ci/collector-kernel-crawler-rhel-credentials
           ubuntu:stackrox-ci/collector-kernel-crawler-ubuntu-credentials
-          suse:stackrox-ci/collector-kernel-crawler-suse-credentials
+    #suse:stackrox-ci/collector-kernel-crawler-suse-credentials
     - run: |
         import os
 
