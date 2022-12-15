@@ -46,13 +46,19 @@ jobs:
 
       - name: Clean up artifacts
         run: |
-          rm -rf .build-data/downloads
-          rm -rf .build-data/packages
-          rm -f all-bucket-files.log all-crawled-packages.log
+          rm -rf build-data/downloads
+          rm -rf build-data/packages
 
       - name: Crawl commit
         if: ${{ github.event_name != 'pull_request' }}
         run: make robo-crawl-commit
+
+      - name: Archive the manifest
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: kernel-crawler-manifest
+          path: kernel-package-lists/manifest.yml
 
       - name: Archive log files
         if: always()

@@ -6,7 +6,7 @@ jobs:
   split-tasks:
     runs-on: ubuntu-latest
     env:
-      BUILD_DATA_DIR: ./build-data
+      BUILD_DATA_DIR: .build-data
     outputs:
       parallel-jobs-number: ${{ steps.split-packages.outputs.parallel-jobs-number }}
       parallel-array: ${{ steps.split-packages.outputs.parallel-array }}
@@ -30,6 +30,11 @@ jobs:
             fi
           done
           touch "${BUILD_DATA_DIR}/cache/cache.yml"
+
+      - name: Restore manifest
+        uses: actions/download-artifact@v3
+        with:
+          name: kernel-crawler-manifest
 
       - name: List packages
         run: make list-files
@@ -91,7 +96,7 @@ jobs:
         packer: ${{ fromJSON(needs.split-tasks.outputs.parallel-array) }}
     env:
       MANIFEST_FILE: ./kernel-package-lists/manifest.yml
-      BUILD_DATA_DIR: ./build-data
+      BUILD_DATA_DIR: .build-data
     steps:
       - uses: actions/checkout@v3
       - uses: google-github-actions/auth@v1
@@ -131,11 +136,6 @@ jobs:
 
           with open('jobs.json') as jobs:
             packages = json.load(jobs)
-
-          try:
-            os.mkdir('.build-data')
-          except OSError:
-            pass
 
           with open(os.environ['BUILD_DATA_DIR'] +'/packages.txt', 'w') as output:
             for package in packages["${{ matrix.packer }}"]:
