@@ -62,6 +62,8 @@ jobs:
           if parallel_jobs > 32:
             parallel_jobs = 32
 
+          parallel_jobs = 1
+
           jobs = chunks(packages, parallel_jobs)
           parallel = list(range(parallel_jobs))
 
@@ -116,7 +118,9 @@ jobs:
           import os
           import json
 
-          packages = json.loads("${{ needs.split-tasks.outputs.parallel-jobs }}")
+          jobs = "${{ needs.split-tasks.outputs.parallel-jobs }}"
+          print(jobs)
+          packages = json.loads(jobs)
 
           try:
             os.mkdir('.build-data')
