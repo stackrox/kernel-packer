@@ -27,13 +27,6 @@ jobs:
 
           ./scripts/restore-removed
 
-      - name: Upload log
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: kernel-crawler-log
-          path: kernel-crawler/kernel-crawler.log
-
       - name: Sync
         run: |
           make sync
@@ -53,6 +46,12 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         run: make robo-crawl-commit
 
+      #
+      # The manifest is used in subsequent workflows, so archive it here
+      # so it can be restored if needed. Since we only commit the manifest
+      # changes outside of PRs, we need to resort to this archiving so the
+      # process is the same between master and PR builds.
+      #
       - name: Archive the manifest
         if: always()
         uses: actions/upload-artifact@v3

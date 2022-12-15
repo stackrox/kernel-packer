@@ -31,8 +31,7 @@ runs:
         secrets: |
           rhel:stackrox-ci/collector-kernel-crawler-rhel-credentials
           ubuntu:stackrox-ci/collector-kernel-crawler-ubuntu-credentials
-
-      #suse:stackrox-ci/collector-kernel-crawler-suse-credentials
+          suse:stackrox-ci/collector-kernel-crawler-suse-credentials
     - run: |
         import os
 
@@ -43,6 +42,13 @@ runs:
 
         masks = []
 
+        # google-github-actions/get-secretmanager-secrets will mask
+        # each line of a given secret, to prevent it appearing in logs,
+        # but if we use these lines to create environment variables as we do
+        # below, the value is not masked and may appear in logs. 
+        #
+        # To fix this, we explicitly tell GHA to mask the values of each
+        # of the secrets
         for line in filter(None, (rhel + ubuntu + suse).splitlines()):
           _, value = line.split('=', 1)
           print(f'::add-mask::{value}')

@@ -39,12 +39,6 @@ jobs:
       - name: List packages
         run: make list-files
 
-      - name: Archive package list
-        uses: actions/upload-artifact@v3
-        with:
-          name: package-list
-          path: .build-data/packages.txt
-
       - name: Split package file
         id: split-packages
         run: |
@@ -80,11 +74,21 @@ jobs:
 
         shell: python
 
-      - name: Archive jobs
+      # This is primarily for sanity checking
+      - name: Archive package list
+        uses: actions/upload-artifact@v3
+        with:
+          name: package-list
+          path: |
+            .build-data/packages.txt
+
+      - name: Archive Jobs and Cache
         uses: actions/upload-artifact@v3
         with:
           name: package-jobs
-          path: jobs.json
+          path: |
+            .build-data/cache/cache.yml
+            jobs.json
 
   repackage:
     runs-on: ubuntu-latest
@@ -110,21 +114,14 @@ jobs:
       - name: Build packers
         run: make packers
 
-      - name: Refresh manifest
-        run: make manifest
+      - name: Restore manifest
+        uses: actions/download-artifact@v3
+        with:
+          # this is archived by the crawl workflow
+          # see .github/workflows/crawl.yml for details
+          name: kernel-crawler-manifest
 
-      - name: Download Cache
-        run: |
-          mkdir -p "${BUILD_DATA_DIR}/cache"
-          IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
-          for bucket in "${bucket_names[@]}"; do
-            if [ ! -f "${BUILD_DATA_DIR}/cache/cache.yml" ]; then
-              gsutil cp "${bucket}/cache.yml" "${BUILD_DATA_DIR}/cache/cache.yml" || true
-            fi
-          done
-          touch "${BUILD_DATA_DIR}/cache/cache.yml"
-
-      - name: Download jobs
+      - name: Download Jobs and Cache
         uses: actions/download-artifact@v3
         with:
           name: package-jobs
@@ -150,6 +147,10 @@ jobs:
           # with huge amounts of package downloads
           split -l 100 --numeric-suffixes "${BUILD_DATA_DIR}/packages.txt" "${BUILD_DATA_DIR}/chunk"
           
+          #
+          # Download each chunk of 100 packages, repackage them, upload to
+          # the bucket, and then clean up to keep disk usage low
+          #
           for chunk in "${BUILD_DATA_DIR}"/chunk*; do
             ./scripts/download-packages "${BUILD_DATA_DIR}" "${KERNEL_PACKAGE_BUCKET}" "${chunk}"
             
