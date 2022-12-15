@@ -9,7 +9,6 @@ jobs:
       BUILD_DATA_DIR: ./build-data
     outputs:
       parallel-jobs-number: ${{ steps.split-packages.outputs.parallel-jobs-number }}
-      parallel-jobs: ${{ steps.split-packages.outputs.parallel-jobs }}
       parallel-array: ${{ steps.split-packages.outputs.parallel-array }}
     steps:
       - uses: actions/checkout@v3
@@ -72,9 +71,17 @@ jobs:
           with open(os.environ['GITHUB_OUTPUT'], 'w') as output:
             output.write(f'parallel-jobs-number={parallel_jobs}\n')
             output.write(f'parallel-array={json.dumps(parallel)}\n')
-            output.write(f'parallel-jobs={json.dumps(combined)}\n')
+
+          with open('jobs.json', 'w') as j:
+            j.write(json.dumps(combined))
 
         shell: python
+
+      - name: Archive jobs
+        uses: actions/upload-artifact@v3
+        with:
+          name: package-jobs
+          path: jobs.json
 
   repackage:
     runs-on: ubuntu-latest
@@ -113,14 +120,18 @@ jobs:
           done
           touch "${BUILD_DATA_DIR}/cache/cache.yml"
 
+      - name: Download jobs
+        uses: actions/download-artifact@v3
+        with:
+          name: package-jobs
+
       - name: Write package file
         run: |
           import os
           import json
 
-          jobs = "${{ needs.split-tasks.outputs.parallel-jobs }}"
-          print(jobs)
-          packages = json.loads(jobs)
+          with open('jobs.json') as jobs:
+            packages = json.load(jobs)
 
           try:
             os.mkdir('.build-data')
