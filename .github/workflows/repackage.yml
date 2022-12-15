@@ -138,7 +138,7 @@ jobs:
           except OSError:
             pass
 
-          with open('.build-data/packages.txt', 'w') as output:
+          with open(os.environ['BUILD_DATA_DIR'] +'/packages.txt', 'w') as output:
             for package in packages["${{ matrix.packer }}"]:
               output.write(package)
         shell: python
