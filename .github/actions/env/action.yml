@@ -34,7 +34,22 @@ runs:
 
       #suse:stackrox-ci/collector-kernel-crawler-suse-credentials
     - run: |
-        echo "${{ steps.get-secrets.outputs.rhel }}" >> $GITHUB_ENV
-        echo "${{ steps.get-secrets.outputs.suse }}" >> $GITHUB_ENV
-        echo "${{ steps.get-secrets.outputs.ubuntu }}" >> $GITHUB_ENV
-      shell: bash
+        import os
+
+        # mutli-line strings because possibility of multi-line secrets
+        rhel = """${{ steps.get-secrets.outputs.rhel }}\n"""
+        ubuntu = """${{ steps.get-secrets.outputs.suse }}\n"""
+        suse = """${{ steps.get-secrets.outputs.ubuntu }}\n"""
+
+        masks = []
+
+        for line in filter(None, (rhel + ubuntu + suse).splitlines()):
+          _, value = line.split('=', 1)
+          print(f'::add-mask::{value}')
+
+        with open(os.environ['GITHUB_ENV'], 'w') as env:
+          env.write(rhel)
+          env.write(ubuntu)
+          env.write(suse)
+
+      shell: python
