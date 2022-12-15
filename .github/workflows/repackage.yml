@@ -114,7 +114,9 @@ jobs:
       - name: Write package file
         run: |
           import os
-          packages = ${{ fromJSON(needs.split-tasks.outputs.parallel-jobs) }}
+          import json
+
+          packages = json.loads("${{ needs.split-tasks.outputs.parallel-jobs }}")
 
           try:
             os.mkdir('.build-data')
