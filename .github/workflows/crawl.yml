@@ -15,6 +15,16 @@ jobs:
       - uses: ./.github/actions/env
 
       - name: Run crawl
+        env:
+          REDHAT_USERNAME: ${{ secrets.REDHAT_USERNAME }}
+          REDHAT_PASSWORD: ${{ secrets.REDHAT_PASSWORD }}
+          RHSM_OFFLINE_TOKEN: ${{ secrets.RHSM_OFFLINE_TOKEN }}
+          REDHAT_SUBSCRIPTION_ORG_ID: ${{ secrets.REDHAT_SUBSCRIPTION_ORG_ID }}
+          REDHAT_SUBSCRIPTION_ACTIVATION_KEY: ${{ secrets.REDHAT_SUBSCRIPTION_ACTIVATION_KEY }}
+          SUSE_MIRRORING_USERNAME: ${{ secrets.SUSE_MIRRORING_USERNAME }}
+          SUSE_MIRRORING_PASSWORD: ${{ secrets.SUSE_MIRRORING_PASSWORD }}
+          UBUNTU_ESM_SUBSCRIPTION_TOKEN: ${{ secrets.UBUNTU_ESM_SUBSCRIPTION_TOKEN }}
+          UBUNTU_FIPS_SUBSCRIPTION_TOKEN: ${{ secrets.UBUNTU_FIPS_SUBSCRIPTION_TOKEN }}
         run: |
           if ! make -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
               touch /tmp/crawl-failed
@@ -31,6 +41,8 @@ jobs:
         run: |
           make sync
           git --no-pager diff kernel-package-lists
+        env:
+          RHSM_OFFLINE_TOKEN: ${{ secrets.RHSM_OFFLINE_TOKEN }}
 
       - name: Manifest
         run: |
@@ -45,6 +57,8 @@ jobs:
       - name: Crawl commit
         if: ${{ github.event_name != 'pull_request' }}
         run: make robo-crawl-commit
+        env:
+          ROBOT_ROX_GITHUB_TOKEN: ${{ secrets.ROBOT_ROX_GITHUB_TOKEN }}
 
       #
       # The manifest is used in subsequent workflows, so archive it here

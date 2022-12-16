@@ -181,3 +181,5 @@ jobs:
       - name: Commit to Collector Repo
         if: ${{ github.event_name != 'pull_request' }}
         run: make robo-collector-commit
+        env:
+          ROX_ROBOT_GITHUB_TOKEN: ${{ secrets.ROX_ROBOT_GITHUB_TOKEN }}
