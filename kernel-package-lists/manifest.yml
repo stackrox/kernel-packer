@@ -2401,6 +2401,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1078-fips_4.15.0-1078.87_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1078_4.15.0-1078.87_all.deb
+4c686154fa775daeefd262baedc3b1be538f7f5d29649fa856cd2d687baa5a88:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.1-flatcar_developer_container.bin.bz2
 4c763746ac40dbb660b59a9d851170126a473048dc41fdda8864638a6b0e7389:
   type: ubuntu
   packages:
@@ -6694,12 +6698,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm
-49f6590b5facf7b825f2d593469ed46ffdd586d26c009ae9eeb2a45a83db9259:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.158-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-20-amd64_5.10.158-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-20-common_5.10.158-2_all.deb
 49f632335f3d0959163523461c97625440e277ae2c50bebc8fa02e116ae0c215:
   type: ubuntu
   packages:
@@ -10163,6 +10161,11 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-197-generic_4.15.0-197.208-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-197_4.15.0-197.208-16.04.1_all.deb
+937c9eec1454d7c929a68130ea92f08d49bf39444f59deabfe8675dc40950fbd:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-28-generic_5.19.0-28.29_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-28_5.19.0-28.29_all.deb
 942d236c8acd650a0817a354bfb106639d3659cdb953646e226f2f3a269ed3a3:
   type: ubuntu
   packages:
@@ -13200,6 +13203,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-headers-5.3.0-1031-azure_5.3.0-1031.32-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-azure-5.3-headers-5.3.0-1031_5.3.0-1031.32-18.04.1_all.deb
+083277066c3ebb74d35b163d7adf208388d2268bf8454c1d6a4fa882f557b146:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc8-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-cloud-amd64_6.1-rc8-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-common_6.1-rc8-1-exp1_all.deb
 92819657cf6952a0f553b6b5ffe457b746b2eb2f5a32ec234fa6a316d332fc1c:
   type: redhat
   packages:
