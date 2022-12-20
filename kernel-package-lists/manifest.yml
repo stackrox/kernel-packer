@@ -37,6 +37,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.90-1.el7.elrepo.x86_64.rpm
+0e3a557417344dcfde6fe228c009ca06474d1aa5973d040d0e076601d06df86a:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-noarch-kernel-devel-5.14.21-150400.24.38.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-x86_64-kernel-default-devel-5.14.21-150400.24.38.1.x86_64.rpm
 0f3dfad2fea87fee03685ce1f437c45a36a81fe65ec9cc52a9ef6406690949a6:
   type: redhat
   packages:
@@ -19363,10 +19368,6 @@ e9098fd9dda7c4a02b54a5d9b2379cd7f5afd607f83317b62cf26f2770a71608:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.220-1.el7.elrepo.x86_64.rpm
-e15106ca84b7368f4e64921494812219f2fed7abec1804c438799ac5b3de6515:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.5.0-flatcar_developer_container.bin.bz2
 e15411e6189d3b9ce1a90c72665f152ac0b4bd85a40a466f5ef06c54eb115a65:
   type: ubuntu
   packages:
