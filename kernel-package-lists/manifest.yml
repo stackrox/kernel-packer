@@ -858,10 +858,6 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-3033.2.3-flatcar_developer_container.bin.bz2
-1eacf4fdacfd90f9fc71b831fa15893b05b17419b0b7b9becbfaa1c8f8a1cb2c:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2605.7.0-flatcar_developer_container.bin.bz2
 1fafc8746cba8726bccafe39e5be1a10ec83c866cbbcad39bbd4d20093aed9c4:
   type: redhat
   packages:
@@ -17273,6 +17269,12 @@ ce931ed19dc4e8504ac51eae2686bd50175bc24587c699b88c19df3ee78d6e17:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1010-fips_4.4.0-1010.13_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1010_4.4.0-1010.13_all.deb
+ce566982fd611546474a4ff6385d7482409b589aafb8e3220ee2fea7e6e51d5d:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc8-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-amd64_6.1-rc8-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-common_6.1-rc8-1-exp1_all.deb
 ce9227666bc247337586c49954db31108b8f94dc99b0999c074983ee3aac6cf7:
   type: redhat
   packages:
@@ -19368,6 +19370,10 @@ e9098fd9dda7c4a02b54a5d9b2379cd7f5afd607f83317b62cf26f2770a71608:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.220-1.el7.elrepo.x86_64.rpm
+e15106ca84b7368f4e64921494812219f2fed7abec1804c438799ac5b3de6515:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.5.0-flatcar_developer_container.bin.bz2
 e15411e6189d3b9ce1a90c72665f152ac0b4bd85a40a466f5ef06c54eb115a65:
   type: ubuntu
   packages:
