@@ -4302,10 +4302,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12371.1105.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12371.1105.0-kernel-headers.tgz
-8b6e912a1ada7410518ecebfca2541db62809f638280611ba25862cef0f9b5a2:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.3-flatcar_developer_container.bin.bz2
 8b7ca1b92b43618562907d6128c3db67db5dea9c6dd84a2817d054ac3b98744a:
   type: ubuntu
   packages:
@@ -7085,12 +7081,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-1a80f759d301a2b55ac8c0339697732811854c7eabdc02d14fe3e8f4c59933a4-download
-59ce3358fd26a4e6e55bb02995524cd4059b146195c39934001a5780cd1c66cb:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.12-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-amd64_6.0.10-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-common_6.0.10-2_all.deb
 059a630dea04277dc0bd4d129a6b43a1f89c94a6060b9399791b92eed224ff7f:
   type: cos
   packages:
@@ -9761,10 +9751,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1098-azure_5.4.0-1098.104_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1098_5.4.0-1098.104_all.deb
-717ff91447936f481565bd8732dfe5429927303dab5b6b92de96cb63d37346ec:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2905.2.5-flatcar_developer_container.bin.bz2
 718b16e809ba34f028c72f1e2c47ed35249ec22819d30f9e9dc0edbbe8b76409:
   type: cos
   packages:
@@ -13235,6 +13221,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-headers-5.3.0-1031-azure_5.3.0-1031.32-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-azure-5.3-headers-5.3.0-1031_5.3.0-1031.32-18.04.1_all.deb
+083277066c3ebb74d35b163d7adf208388d2268bf8454c1d6a4fa882f557b146:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc8-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-cloud-amd64_6.1-rc8-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-common_6.1-rc8-1-exp1_all.deb
 92819657cf6952a0f553b6b5ffe457b746b2eb2f5a32ec234fa6a316d332fc1c:
   type: redhat
   packages:
@@ -16103,12 +16095,6 @@ bfba174968566cb73dcc224deaa31502d29dabed03d768863cf4773853fde784:
   packages:
   - https---storage.googleapis.com-cos-tools-12499.59.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12499.59.0-kernel-headers.tgz
-bfefcf8a4a4831a5f9de79e2737ae182543cd6ef501c384119552ce249236b66:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.0_6.0.12-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-cloud-amd64_6.0.10-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.0.0-5-common_6.0.10-2_all.deb
 bffc3cee052154681085ef2a0d93cfbca6dccaba01026864c510da229b54143d:
   type: ubuntu
   packages:
@@ -17280,6 +17266,12 @@ ce931ed19dc4e8504ac51eae2686bd50175bc24587c699b88c19df3ee78d6e17:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1010-fips_4.4.0-1010.13_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1010_4.4.0-1010.13_all.deb
+ce566982fd611546474a4ff6385d7482409b589aafb8e3220ee2fea7e6e51d5d:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc8-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-amd64_6.1-rc8-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-common_6.1-rc8-1-exp1_all.deb
 ce9227666bc247337586c49954db31108b8f94dc99b0999c074983ee3aac6cf7:
   type: redhat
   packages:
