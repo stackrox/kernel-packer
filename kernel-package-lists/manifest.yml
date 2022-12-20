@@ -1035,6 +1035,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1092_4.15.0-1092.105_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1092-gcp_4.15.0-1092.105_amd64.deb
+2c1c3d2e783ed62da6f2d895356a7e9a257f912bd5845f11326d5de16fb50eda:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.228-1.el7.elrepo.x86_64.rpm
 2c1dc9cbf8a7ca9bc3110f163e06beadc00d18382d0858d175c6f68ea3826f35:
   type: cos
   packages:
@@ -17276,12 +17280,6 @@ ce931ed19dc4e8504ac51eae2686bd50175bc24587c699b88c19df3ee78d6e17:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1010-fips_4.4.0-1010.13_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1010_4.4.0-1010.13_all.deb
-ce566982fd611546474a4ff6385d7482409b589aafb8e3220ee2fea7e6e51d5d:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1-rc8-1-exp1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-amd64_6.1-rc8-1-exp1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-common_6.1-rc8-1-exp1_all.deb
 ce9227666bc247337586c49954db31108b8f94dc99b0999c074983ee3aac6cf7:
   type: redhat
   packages:
