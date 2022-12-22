@@ -8735,6 +8735,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1127.el7.x86_64.rpm
+226ed0466772f1f3a2e5baaaf8b2b488ad8226f82d52eb4d791a40451e1d4c8e:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.109-0gardenlinux2_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.109-garden-cloud-amd64_5.10.109-0gardenlinux2_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.109-garden-common_5.10.109-0gardenlinux2_all.deb
 229a7512e2858a0a0fcba52f7425dbed373b4c6f8cb292efc53b8edd16e4d4ed:
   type: ubuntu
   packages:
@@ -9559,6 +9565,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.29.21-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.29.21-kernel-headers.tgz
+622ef113727efd31b677b41c86919a98af1bb78e21fa592ee43a7cb83d1ffdad:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.109-0gardenlinux2_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.109-garden-amd64_5.10.109-0gardenlinux2_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.109-garden-common_5.10.109-0gardenlinux2_all.deb
 0627bab5d96a6a4cfdb5e83ac4cd0a2570364bc1b28044090e71a7074bc03af3:
   type: ubuntu
   packages:
@@ -10626,10 +10638,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.103.25-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.103.25-kernel-headers.tgz
-3881d2a33867c9d4b5dd942b0f35c442295c45277d2436955b63fdf56615be49:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3227.1.1-flatcar_developer_container.bin.bz2
 3884ec3634300f00831c8956e10c1596bbe5ba92c7e0bf628eeb179118f30eee:
   type: ubuntu
   packages:
