@@ -1073,6 +1073,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1041.9-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1041.9-kernel-headers.tgz
+2f3f644fcf410e2f74028749293029f6b1b2ffc06f89ad90b6c25992c854b59b:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2643.1.0-flatcar_developer_container.bin.bz2
 2c3e2844d3528b0a04d859bd1002d57713cf0b972dbef59c93072675c2398292:
   type: ubuntu
   packages:
@@ -5914,10 +5918,6 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.12.2.el7.x86_64.rpm
-27c170dee6ae1863ac35044def35318259544d038bb6b4d5a1cc63ef6387b43c:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.1-flatcar_developer_container.bin.bz2
 27b76073ba9346f92da233a37b8a621944a2058ee8ecda411f5886a6a2bebbfb:
   type: ubuntu
   packages:
@@ -10338,10 +10338,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1049-azure_5.4.0-1049.51_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1049_5.4.0-1049.51_all.deb
-1307bcbc152ed9e41617ed73e66153b973a44212f340dca6de75ddb1bb83ab08:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.3-flatcar_developer_container.bin.bz2
 1319efda0aa02911f6310af19e54e2f0505370ac630c6374294465972b0d60f7:
   type: redhat
   packages:
@@ -17954,6 +17950,10 @@ d092e20b1bc316749b825e28e73e75af6e5b3ae8faa0d90508d8487ed4fdeca1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-gcp-5.15-headers-5.15.0-1012_5.15.0-1012.17-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-headers-5.15.0-1012-gcp_5.15.0-1012.17-20.04.1_amd64.deb
+d93b74cb6243d0df3a8527a030bd16e72cbe819cbcd0d46678e549a47a49920f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3185.1.0-flatcar_developer_container.bin.bz2
 d094cdb033603a7ae57a881d8c9ce114c6e74c2092fc3b61e00221517878256c:
   type: ubuntu
   packages:
