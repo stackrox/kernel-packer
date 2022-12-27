@@ -8605,11 +8605,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1093-fips_4.15.0-1093.104_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1093_4.15.0-1093.104_all.deb
-157c63366daab66db8857e7dfefa7b0e5e2736ed3ca72252a977a2c3060f8b07:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.1-1-exp2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-cloud-amd64_6.1.1-1-exp2_amd64.deb
 158e6c1554161550000ac2e20f17a1fc4339ddb419bfef7ce5139fbe3fabc12d:
   type: suse
   packages:
@@ -16162,6 +16157,10 @@ c1a8bcbe82f8b9f58ff558c4ce7116f0afa7cb6226f0ae9d0e76b2029064f549:
   packages:
   - https---storage.googleapis.com-cos-tools-16623.227.6-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.227.6-kernel-headers.tgz
+c1b574c87affb51f788fe739b25e2eff4c89ba8d4bb569357ee34f3adca77ffb:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.11.0-flatcar_developer_container.bin.bz2
 c1c13598192e4c1cab1fb33b4d68ff59828ef7921eacefdd1c03e42c0fd8ed53:
   type: coreos
   packages:
@@ -17971,11 +17970,6 @@ d096c9dec6d9ed2e2e827983bd5812f63255fba12668841e80467df54b6fca1c:
   packages:
   - https---storage.googleapis.com-cos-tools-12163.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12163.0.0-kernel-headers.tgz
-d108f1d1754091346b0a1bc0e01fdbfde51f64d73a24984afa56ed34c1457a88:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.1-1-exp2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-amd64_6.1.1-1-exp2_amd64.deb
 d178dfb6d98551c4142740d62f2b985865410adf87cf48c24d903fd5840169e5:
   type: redhat
   packages:
