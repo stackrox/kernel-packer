@@ -1924,6 +1924,12 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.96-1.el7.elrepo.x86_64.rpm
+3f969664826f44c882e7c61c5b45d87557049bc7b34fe3a197bc082f291fe312:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.1-1-exp2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-amd64_6.1.1-1-exp2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-0-common_6.1.1-1-exp2_all.deb
 3d02279251993305d85deb5688a33dee0eb99f22a72f2cff1d6a0929849061f2:
   type: redhat
   packages:
@@ -3993,10 +3999,6 @@
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.149-2_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-16-cloud-amd64_5.10.127-2_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-16-common_5.10.127-2_all.deb
-7a73591b7fc85443c2b126a41123a3f6cf25dc0346edc442ac91eecf406b424f:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3277.1.2-flatcar_developer_container.bin.bz2
 7d996172a57270f2fbb4124f77a9ebc16074bd6949439dc83b926daa31fd96bd:
   type: redhat
   packages:
