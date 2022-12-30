@@ -5,7 +5,7 @@ COPY main.go /go/src/main.go
 RUN CGO_ENABLED=0 go build -o /go/bin/rhel-crawler /go/src/main.go
 
 ARG p7zip="v17.03"
-RUN wget "https://github.com/jinfeihan57/p7zip/archive/${p7zip}.tar.gz" \
+RUN wget "https://github.com/p7zip-project/p7zip/archive/refs/tags/${p7zip}.tar.gz" \
  && mkdir p7zip && tar xzf "${p7zip}.tar.gz" -C p7zip --strip-components=1 \
  && cd p7zip && make -j 4 all3 && make install
 
