@@ -2,6 +2,8 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+ROBOT_ROX_GITHUB_TOKEN="${ROBOT_ROX_GITHUB_TOKEN:-$GITHUB_TOKEN}"
+
 main() {
     local kernel_bundle_bucket="$1"
     local collector_repo_dir="$(mktemp -d)"

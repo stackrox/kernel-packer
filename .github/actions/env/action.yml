@@ -5,22 +5,23 @@ description: |
 runs:
   using: composite
   steps:
-    - run: |
-        if [[ "${{ github.ref }}" =~ (master|main)$ ]]; then
-          echo "Using production buckets"
-        else
-          echo "Using staging buckets"
-          KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET},${KERNEL_PACKAGE_BUCKET}"
-          KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET},${KERNEL_BUNDLE_BUCKET}"
-        fi
-
-        echo "KERNEL_PACKAGE_BUCKET=${KERNEL_PACKAGE_BUCKET}" | tee -a "$GITHUB_ENV"
-        echo "KERNEL_BUNDLE_BUCKET=${KERNEL_BUNDLE_BUCKET}" | tee -a "$GITHUB_ENV"
-        echo "BUILD_ID=${BUILD_ID}" | tee -a "$GITHUB_ENV"
-      shell: bash
-      env:
+    - env:
         BUILD_ID: "${{ github.run_id }}"
         KERNEL_PACKAGE_BUCKET: "gs://stackrox-kernel-packages-staging/copy"
         KERNEL_BUNDLE_BUCKET: "gs://collector-kernel-bundles-public"
         KERNEL_PACKAGE_STAGING_BUCKET: "gs://stackrox-kernel-packages-staging"
         KERNEL_BUNDLE_STAGING_BUCKET: "gs://stackrox-kernel-bundles-staging"
+      run: |
+        # TODO: uncomment if statement when transitioning to GHA only
+        #if [[ "${{ github.ref }}" =~ (master|main)$ ]]; then
+        #  echo "Using production buckets"
+        #else
+          echo "Using staging buckets"
+          KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET},${KERNEL_PACKAGE_BUCKET}"
+          KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET},${KERNEL_BUNDLE_BUCKET}"
+        #fi
+
+        echo "KERNEL_PACKAGE_BUCKET=${KERNEL_PACKAGE_BUCKET}" | tee -a "$GITHUB_ENV"
+        echo "KERNEL_BUNDLE_BUCKET=${KERNEL_BUNDLE_BUCKET}" | tee -a "$GITHUB_ENV"
+        echo "BUILD_ID=${BUILD_ID}" | tee -a "$GITHUB_ENV"
+      shell: bash

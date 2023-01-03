@@ -3,7 +3,7 @@ name: Kernel Packer
 on:
   pull_request:
   schedule:
-    - cron: '15 */8 * * *'
+    - cron: '15 */2 * * *'
 
 jobs:
   crawl:

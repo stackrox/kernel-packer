@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -eu
 
+ROBOT_ROX_GITHUB_TOKEN="${ROBOT_ROX_GITHUB_TOKEN:-$GITHUB_TOKEN}"
+
 main() {
     CRAWLED_PACKAGE_DIR="${1:-kernel-package-lists}"
     BRANCH=$(git rev-parse --abbrev-ref HEAD)

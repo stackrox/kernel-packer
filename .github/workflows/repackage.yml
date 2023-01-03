@@ -48,12 +48,6 @@ jobs:
           import os
           import json
 
-          def chunks(data, chunk_size):
-            c = []
-            for i in range(chunk_size):
-              c.append(data[i::chunk_size])
-            return c
-
           packages = []
           with open('.build-data/packages.txt') as pkg:
             packages = list(map(str.strip, pkg.readlines()))
@@ -62,12 +56,13 @@ jobs:
           if parallel_jobs > 32:
             parallel_jobs = 32
 
-          jobs = chunks(packages, parallel_jobs)
+          # split the packages into chunks
+          jobs = [packages[i::parallel_jobs] for i in range(parallel_jobs)]
           parallel = list(range(parallel_jobs))
 
           combined = {id: jobs[id] for id in range(parallel_jobs)}
 
-          with open(os.environ['GITHUB_OUTPUT'], 'w') as output:
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
             output.write(f'parallel-jobs-number={parallel_jobs}\n')
             output.write(f'parallel-array={json.dumps(parallel)}\n')
 
@@ -136,7 +131,7 @@ jobs:
           with open('jobs.json') as jobs:
             packages = json.load(jobs)
 
-          with open(os.environ['BUILD_DATA_DIR'] +'/packages.txt', 'w') as output:
+          with open(os.environ['BUILD_DATA_DIR'] + '/packages.txt', 'w') as output:
             for package in packages["${{ matrix.packer }}"]:
               output.write(package + "\n")
         shell: python
@@ -156,12 +151,7 @@ jobs:
           for chunk in "${BUILD_DATA_DIR}"/chunk*; do
             ./scripts/download-packages "${BUILD_DATA_DIR}" "${KERNEL_PACKAGE_BUCKET}" "${chunk}"
             
-            go run ./tools/repackage-kernels/main.go \
-                -manifest "${MANIFEST_FILE}" \
-                -cache-dir "${BUILD_DATA_DIR}/cache" \
-                -pkg-dir "${BUILD_DATA_DIR}/packages" \
-                -bundle-dir "${BUILD_DATA_DIR}/bundles" \
-                -action build
+            make repackage
 
             ./scripts/upload-bundles "${BUILD_DATA_DIR}" "$KERNEL_BUNDLE_BUCKET"
 

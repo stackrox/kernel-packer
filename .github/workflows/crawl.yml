@@ -5,6 +5,10 @@ on: workflow_call
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    env:
+      # this is used in a number of steps, and is set here to avoid
+      # duplication.
+      RHSM_OFFLINE_TOKEN: ${{ secrets.RHSM_OFFLINE_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       - uses: google-github-actions/auth@v1
@@ -18,7 +22,6 @@ jobs:
         env:
           REDHAT_USERNAME: ${{ secrets.REDHAT_USERNAME }}
           REDHAT_PASSWORD: ${{ secrets.REDHAT_PASSWORD }}
-          RHSM_OFFLINE_TOKEN: ${{ secrets.RHSM_OFFLINE_TOKEN }}
           REDHAT_SUBSCRIPTION_ORG_ID: ${{ secrets.REDHAT_SUBSCRIPTION_ORG_ID }}
           REDHAT_SUBSCRIPTION_ACTIVATION_KEY: ${{ secrets.REDHAT_SUBSCRIPTION_ACTIVATION_KEY }}
           SUSE_MIRRORING_USERNAME: ${{ secrets.SUSE_MIRRORING_USERNAME }}
@@ -57,11 +60,9 @@ jobs:
       - name: Crawl commit
         if: ${{ github.event_name != 'pull_request' }}
         run: make robo-crawl-commit
-        env:
-          ROBOT_ROX_GITHUB_TOKEN: ${{ secrets.ROBOT_ROX_GITHUB_TOKEN }}
 
       #
-      # The manifest is used in subsequent workflows, so archive it here
+      # The manifest is used in subsequent workflows. Archive it here
       # so it can be restored if needed. Since we only commit the manifest
       # changes outside of PRs, we need to resort to this archiving so the
       # process is the same between master and PR builds.
