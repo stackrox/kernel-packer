@@ -218,6 +218,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-bf8060e0b066eeb4be444d2246363ae501e98772c453295ed51eb5d07e9709c9-kernel-devel-4.14.121-109.96.amzn2.x86_64.rpm
+0e805c8a765281ce1dc108e1c9273846f925e6cc780296ea5bb32649df006b01:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3402.1.0-flatcar_developer_container.bin.bz2
 0b861a48caf517fccd3371d1df17b5cf6e47b4902f3f942b9e533f4ce627fbf8:
   type: redhat
   packages:
@@ -6805,10 +6809,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-123.4.4.el7.x86_64.rpm
-51d90cb355570b48aed6078aabfae3bed3e586df10f88a053da9c4d85a223b60:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2705.1.0-flatcar_developer_container.bin.bz2
 51b413403dcbde363b022e4f66a54959fbec0c86524ac2a0c433a95f8122a7ac:
   type: redhat
   packages:
