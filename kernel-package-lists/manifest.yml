@@ -218,10 +218,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-bf8060e0b066eeb4be444d2246363ae501e98772c453295ed51eb5d07e9709c9-kernel-devel-4.14.121-109.96.amzn2.x86_64.rpm
-0e805c8a765281ce1dc108e1c9273846f925e6cc780296ea5bb32649df006b01:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3402.1.0-flatcar_developer_container.bin.bz2
 0b861a48caf517fccd3371d1df17b5cf6e47b4902f3f942b9e533f4ce627fbf8:
   type: redhat
   packages:
@@ -13773,6 +13769,10 @@ a6b49240705302b3bab0a547746a6b56f507ec4d8ff2939eeca6b654144661f4:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-c181d3fc4dbd30a5d92eb506a0f220c015013b2a0ec515ccaa25463164cc55a5-kernel-devel-4.14.173-137.228.amzn2.x86_64.rpm
+a6ebfacdf700700367a374c81d8050358053ef04a74989e6f04b9d12089b6c6f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2801.1.0-flatcar_developer_container.bin.bz2
 a6ede753042b4e25ddc4977fca1397303dcb9aa5292b71779b11aa1b1b6be3b4:
   type: cos
   packages:
@@ -15271,6 +15271,11 @@ b11b861ec20ad7acae3bbdb2dd36960ad96652e285b027f96c5f0bc2ff1d4a6b:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.223-1.el7.elrepo.x86_64.rpm
+b17af7f5c17875dc745017a2088596d41b536489256b1de4ced0c930ae8f7be9:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2066-azure-fips_4.15.0-2066.72_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2066_4.15.0-2066.72_all.deb
 b18f75a063d5959c533b67854f2a2063ee1e75c6a08255d908a0c169b5b9fa83:
   type: cos
   packages:
