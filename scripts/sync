@@ -40,7 +40,7 @@ main() {
         filename="$(simplify "$url")"
 
         # Check if this specific file exists in the bucket listing.
-        if ! echo "$all_bucket_files" 2>/dev/null | contains_exact "$filename"; then
+        if ! echo "$all_bucket_files" | contains_exact "$filename"; then
             echo "Downloading $url and uploading to bucket"
 
             # This file didn't exist in the bucket listing, so download it.

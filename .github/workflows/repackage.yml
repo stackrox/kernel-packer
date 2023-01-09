@@ -57,17 +57,15 @@ jobs:
             parallel_jobs = 32
 
           # split the packages into chunks
-          jobs = [packages[i::parallel_jobs] for i in range(parallel_jobs)]
+          jobs = {i: packages[i::parallel_jobs] for i in range(parallel_jobs)}
           parallel = list(range(parallel_jobs))
-
-          combined = {id: jobs[id] for id in range(parallel_jobs)}
 
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
             output.write(f'parallel-jobs-number={parallel_jobs}\n')
             output.write(f'parallel-array={json.dumps(parallel)}\n')
 
           with open('jobs.json', 'w') as j:
-            j.write(json.dumps(combined))
+            j.write(json.dumps(jobs))
 
         shell: python
 

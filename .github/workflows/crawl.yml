@@ -87,7 +87,7 @@ jobs:
             kernel-crawler/kernel-crawler.log
 
       - name: Slack notification
-        if: failure() && github.event_name == 'push'
+        if: failure() && github.event_name == 'schedule'
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_ONCALL }}
