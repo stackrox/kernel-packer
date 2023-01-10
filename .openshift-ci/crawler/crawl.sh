@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+echo "Crawl"
+
 source .openshift-ci/env.sh
 source .openshift-ci/crawler/env.sh
 
