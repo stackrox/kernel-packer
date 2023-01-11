@@ -166,11 +166,12 @@ jobs:
           IFS=',' read -r -a bucket_names <<< "${KERNEL_BUNDLE_BUCKET}"
           gsutil cp .build-data/cache/cache.yml "${bucket_names[0]}/cache.yml"
 
-      - name: Commit to Collector Repo
-        if: ${{ github.event_name != 'pull_request' }}
-        run: make robo-collector-commit
-        env:
-          ROBOT_ROX_GITHUB_TOKEN: ${{ secrets.ROBOT_ROX_GITHUB_TOKEN }}
+          # TODO: reenable once OSCI is disabled
+          #- name: Commit to Collector Repo
+          #  if: ${{ github.event_name != 'pull_request' }}
+          #  run: make robo-collector-commit
+          #  env:
+          #    ROBOT_ROX_GITHUB_TOKEN: ${{ secrets.ROBOT_ROX_GITHUB_TOKEN }}
   notify:
     runs-on: ubuntu-latest
     needs:
