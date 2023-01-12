@@ -1,0 +1,104 @@
+name: Crawl
+
+on: workflow_call
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    env:
+      # this is used in a number of steps, and is set here to avoid
+      # duplication.
+      RHSM_OFFLINE_TOKEN: ${{ secrets.RHSM_OFFLINE_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
+      - uses: google-github-actions/setup-gcloud@v1
+
+      - uses: ./.github/actions/env
+
+      - name: Run crawl
+        env:
+          REDHAT_USERNAME: ${{ secrets.REDHAT_USERNAME }}
+          REDHAT_PASSWORD: ${{ secrets.REDHAT_PASSWORD }}
+          REDHAT_SUBSCRIPTION_ORG_ID: ${{ secrets.REDHAT_SUBSCRIPTION_ORG_ID }}
+          REDHAT_SUBSCRIPTION_ACTIVATION_KEY: ${{ secrets.REDHAT_SUBSCRIPTION_ACTIVATION_KEY }}
+          SUSE_MIRRORING_USERNAME: ${{ secrets.SUSE_MIRRORING_USERNAME }}
+          SUSE_MIRRORING_PASSWORD: ${{ secrets.SUSE_MIRRORING_PASSWORD }}
+          UBUNTU_ESM_SUBSCRIPTION_TOKEN: ${{ secrets.UBUNTU_ESM_SUBSCRIPTION_TOKEN }}
+          UBUNTU_FIPS_SUBSCRIPTION_TOKEN: ${{ secrets.UBUNTU_FIPS_SUBSCRIPTION_TOKEN }}
+        run: |
+          if ! make -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
+              touch /tmp/crawl-failed
+          fi
+
+          if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
+              echo >&2 "'make crawl' failed."
+              exit 1
+          fi
+
+          ./scripts/restore-removed
+
+      - name: Sync
+        run: |
+          make sync
+          git --no-pager diff kernel-package-lists
+        env:
+          RHSM_OFFLINE_TOKEN: ${{ secrets.RHSM_OFFLINE_TOKEN }}
+
+      - name: Manifest
+        run: |
+          make manifest
+          git --no-pager diff kernel-package-lists/manifest.yml
+
+      - name: Clean up artifacts
+        run: |
+          rm -rf build-data/downloads
+          rm -rf build-data/packages
+
+          # TODO: reenable once OSCI is turned off
+          #- name: Crawl commit
+          #  if: ${{ github.event_name != 'pull_request' }}
+          #  run: make robo-crawl-commit
+
+      #
+      # The manifest is used in subsequent workflows. Archive it here
+      # so it can be restored if needed. Since we only commit the manifest
+      # changes outside of PRs, we need to resort to this archiving so the
+      # process is the same between master and PR builds.
+      #
+      - name: Archive the manifest
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: kernel-crawler-manifest
+          path: kernel-package-lists/manifest.yml
+          retention-days: 1
+
+      - name: Archive log files
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: kernel-crawler-logs
+          if-no-files-found: ignore
+          retention-days: 3
+          path: |
+            all-crawled-packages.log
+            all-bucket-files.log
+            kernel-package-lists/manifest.yml
+            kernel-crawler/kernel-crawler.log
+
+      - name: Slack notification
+        if: failure() && github.event_name == 'schedule'
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_ONCALL }}
+          SLACK_CHANNEL: oncall
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_LINK_NAMES: true
+          SLACK_TITLE: Kernel Crawling Failed
+          MSG_MINIMAL: actions url,commit
+          SLACK_MESSAGE: |
+            @collector-team
+

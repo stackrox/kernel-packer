@@ -1,0 +1,17 @@
+name: Kernel Packer
+
+on:
+  pull_request:
+  schedule:
+    - cron: '15 */2 * * *'
+
+jobs:
+  crawl:
+    uses: ./.github/workflows/crawl.yml
+    secrets: inherit
+
+  repackage:
+    uses: ./.github/workflows/repackage.yml
+    needs: crawl
+    secrets: inherit
+

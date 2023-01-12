@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if command -v pre-commit > /dev/null; then
+    pre-commit run
+else
+    echo "Install pre-commit to run configured pre-commit actions"
+    echo "https://pre-commit.com"
+    exit 1
+fi

@@ -6,7 +6,7 @@ main() {
     # Example: "./kernel-package-lists"
     package_list_dir="$1"
 
-    find "$package_list_dir" -name '*.txt' -exec cat '{}' + | sort | uniq
+    find "$package_list_dir" -name '*.txt' -exec cat '{}' + | grep -v '^#' | grep -v '^$' | sort | uniq
 }
 
 main "$@"

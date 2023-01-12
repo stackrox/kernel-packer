@@ -22,6 +22,7 @@ from lxml.etree import ParserError
 import traceback
 import re
 import os.path
+import logging
 
 http = urllib3.PoolManager()
 
@@ -615,6 +616,29 @@ repos = {
     ]
 }
 
+g_err_handler = logging.StreamHandler(stream=sys.stderr)
+g_err_handler.setLevel(logging.WARN)
+
+g_file_handler = logging.FileHandler(f'{os.environ.get("CRAWLER_LOGS_DIR", "/tmp")}/kernel-crawler.log')
+g_file_handler.setLevel(logging.INFO)
+
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s [%(levelname)5.5s] %(message)s', 
+                    handlers=[g_err_handler, g_file_handler])
+
+
+def info(*msg):
+    return logging.info(*msg)
+
+
+def err(*msg):
+    return logging.error(*msg)
+
+
+def warn(*msg):
+    return logging.warning(*msg)
+
+
 def compare_exceptions(a, b):
     return isinstance(a, b.__class__) and a.args == b.args
 
@@ -663,11 +687,11 @@ def crawl(distro):
 
     kernel_urls = []
     for repo in repos[distro]:
-        sys.stderr.write("Considering repo " + repo["root"] + "\n")
+        info("Considering repo " + repo["root"])
 
         http_request_headers=repo.get("http_request_headers", {})
         if "type" in repo and repo["type"] == "s3":
-            sys.stderr.write("Crawling S3 bucket\n")
+            info("Crawling S3 bucket\n")
             kernel_urls += crawl_s3(repo)
             continue
 
@@ -679,18 +703,18 @@ def crawl(distro):
             if "subdir_patterns" in repo:
                 versions = expand_versions_by_subdir_patterns(repo, versions)
             for version in sorted(set(versions)):
-                sys.stderr.write("Considering version "+version+"\n")
+                info("Considering version "+version)
                 for subdir in sorted(set(repo["subdirs"])):
                     try:
-                        sys.stderr.write("Considering version " + version + " subdir " + subdir + "\n")
+                        info("Considering version " + version + " subdir " + subdir)
                         source = repo["root"] + version + subdir
                         download_root = source if "download_root" not in repo else repo["download_root"]
                         page = http.request('GET', source, timeout=30.0, headers=http_request_headers).data
                         rpms = html.fromstring(page).xpath(repo["page_pattern"], namespaces=XPATH_NAMESPACES)
                         if len(rpms) == 0:
-                            sys.stderr.write("WARN: Zero packages returned for version " + version + " subdir " + subdir + "\n")
+                            warn("WARN: Zero packages returned for version " + version + " subdir " + subdir)
                         for rpm in sorted(set(rpms)):
-                            sys.stderr.write("Considering package " + rpm + "\n")
+                            info("Considering package " + rpm)
                             if "exclude_patterns" in repo and any(check_pattern(x,rpm) for x in repo["exclude_patterns"]):
                                 continue
                             if "include_patterns" in repo and not any(check_pattern(x,rpm) for x in repo["include_patterns"]):
@@ -698,33 +722,33 @@ def crawl(distro):
                             else:
                                 base_url = urljoin(rpm, urlparse(rpm).path)
                                 raw_url = "{}{}".format(download_root, url_unquote(base_url))
-                                sys.stderr.write("Adding package " + raw_url + "\n")
+                                info("Adding package " + raw_url)
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
 
                     except urllib3.exceptions.HTTPError as e:
                         # Network exceptions are generally ignored
-                        sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
+                        warn("WARN: Error for source: {}: {}".format(source, e))
 
                     except Exception as e:
                         # All the other exceptions are subject to compare with
                         # exceptions allowed per repo.
-                        sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
+                        warn("WARN: Error for source: {}: {}".format(source, e))
                         comparison = [
                             compare_exceptions(e, ignored)
                             for ignored in repo.get("exceptions", [])
                         ]
 
                         if any(comparison):
-                            sys.stderr.write("Error is ignored, continue\n")
+                            warn("Error is ignored, continue")
                         else:
                             raise e
 
         except urllib3.exceptions.ConnectTimeoutError as e:
-            sys.stderr.write("WARN: Error for source: {}: {}\n".format(source, e))
+            warn("WARN: Error for source: {}: {}".format(source, e))
 
         except Exception as e:
-            sys.stderr.write("ERROR: "+str(type(e))+str(e)+"\n")
+            err("ERROR: "+str(type(e))+str(e))
             traceback.print_exc()
             sys.exit(1)
 
@@ -779,7 +803,7 @@ def descend_path(root, path, patterns):
     pattern = copy.pop(0)
     patterns = copy
 
-    sys.stderr.write("Getting subdirs under " + path + " using pattern " + pattern + "\n")
+    info("Getting subdirs under " + path + " using pattern " + pattern + "\n")
     page = http.request('GET', root + path).data
     subdirs = html.fromstring(page).xpath(pattern, namespaces=XPATH_NAMESPACES)
     if len(subdirs) == 0:

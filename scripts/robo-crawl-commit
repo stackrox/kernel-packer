@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -eu
 
+ROBOT_ROX_GITHUB_TOKEN="${ROBOT_ROX_GITHUB_TOKEN:-$GITHUB_TOKEN}"
+
 main() {
     CRAWLED_PACKAGE_DIR="${1:-kernel-package-lists}"
     BRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -20,7 +22,7 @@ main() {
     # it first. Redirect to devnull so this doesn't print the value of the
     # token on failure.
     echo "Add target..."
-    git remote add pushtarget https://roxbot:$GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
+    git remote add pushtarget https://roxbot:$ROBOT_ROX_GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
 
     # Create a commit with any modified files, and push it to GitHub.
     echo "Commit changes..."

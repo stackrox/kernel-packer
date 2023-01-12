@@ -1,0 +1,26 @@
+name: Set bucket environment variables
+description: | 
+  Sets common environment variables and gets GCP secrets for use
+  during other stages.
+runs:
+  using: composite
+  steps:
+    - env:
+        BUILD_ID: "${{ github.run_id }}"
+        KERNEL_PACKAGE_BUCKET: "gs://stackrox-kernel-packages-staging/copy"
+        KERNEL_BUNDLE_BUCKET: "gs://collector-kernel-bundles-public"
+        KERNEL_PACKAGE_STAGING_BUCKET: "gs://stackrox-kernel-packages-staging"
+        KERNEL_BUNDLE_STAGING_BUCKET: "gs://stackrox-kernel-bundles-staging"
+      run: |
+
+        # TODO: uncomment if statement when transitioning away from OSCI
+        #if [[ "${{ github.event_name }}" != "schedule" ]]; then
+          echo "Using staging buckets"
+          KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET},${KERNEL_PACKAGE_BUCKET}"
+          KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET},${KERNEL_BUNDLE_BUCKET}"
+        #fi
+
+        echo "KERNEL_PACKAGE_BUCKET=${KERNEL_PACKAGE_BUCKET}" | tee -a "$GITHUB_ENV"
+        echo "KERNEL_BUNDLE_BUCKET=${KERNEL_BUNDLE_BUCKET}" | tee -a "$GITHUB_ENV"
+        echo "BUILD_ID=${BUILD_ID}" | tee -a "$GITHUB_ENV"
+      shell: bash
