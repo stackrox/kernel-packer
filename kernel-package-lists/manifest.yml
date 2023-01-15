@@ -298,10 +298,6 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.172-1.el7.elrepo.x86_64.rpm
-0a70939120bd6f447e2a4dc2b2383ad13940d0d75d7ea1512eaa8a85a59967d1:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-3227.2.3-flatcar_developer_container.bin.bz2
 0c354487777f5961ed2beecaa168806484dd1f2e9f36f4c97b35c14fd0be3ea2:
   type: suse
   packages:
@@ -399,10 +395,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.40.2.el8_4.x86_64.rpm
-0cd01c04227fc6eb80a03c39dda63602375dc1f0079296bc6a9c861be34819f7:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.1-flatcar_developer_container.bin.bz2
 0ad95b4e04bf952ac14fad605d201f937b82e005494f477fe97e93761720124f:
   type: ubuntu
   packages:
@@ -10401,6 +10393,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1026_5.3.0-1026.28-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1026-gke_5.3.0-1026.28-18.04.1_amd64.deb
+4507ee5a2c802f8fdad5590b5b92e148feecffa94d24fae57a0968077a3f8110:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.5.0-flatcar_developer_container.bin.bz2
 4519affb139bca9dbe6bdd7b5f8a7af54b57dab43cfbd93bcd8a744e81a8c65b:
   type: ubuntu
   packages:
@@ -11030,6 +11026,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.213-1.el7.elrepo.x86_64.rpm
+9415bb908d4b7ea6edde23e85473134f421f1655a7fb5ca81e18705522aef2e0:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3185.1.1-flatcar_developer_container.bin.bz2
 9416b37505043de40bef6bd88773c3be10f8e56d76c94d1b3fa9aecda8da858c:
   type: ubuntu
   packages:
