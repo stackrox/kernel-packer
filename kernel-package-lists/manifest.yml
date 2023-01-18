@@ -7590,6 +7590,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.8.1.el8_1.x86_64.rpm
+70e26d0bbcc96138755a7c505c0dfe568056cf63018855119756e2453100261f:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.7-100.fc36-x86_64-kernel-devel-6.1.7-100.fc36.x86_64.rpm
 70f57edffed2069c1dd51f6aa98c2694ae2cfd8ad318cd678d03049810f79555:
   type: cos
   packages:
@@ -10119,10 +10123,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-27-generic_5.19.0-27.28_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-27_5.19.0-27.28_all.deb
-845a72a3103ccbd38b131e1714b714364e18efdccfe4b5eb09dc9ca5a303dd84:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-3033.2.2-flatcar_developer_container.bin.bz2
 845d3661f00ba1389e67a2e976f6a9342e8fd58c10bc4ae5ec373e0022056611:
   type: ubuntu
   packages:
@@ -11488,6 +11488,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.604.17-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.604.17-kernel-headers.tgz
+8634e17dca50e5806e52f520e4a5f84ad664dd4d5a840c556841c08c58fdd377:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2087-aws-fips_4.15.0-2087.93_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2087_4.15.0-2087.93_all.deb
 8683c976e8076cb53b961291e388e359758de043d0870a17fe17a46c166577e8:
   type: cos
   packages:
@@ -15944,6 +15949,11 @@ b454607f00c25c6d25c1eb52878babe6553793918bdfabc542a8ea5f63f01398:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1056-fips_4.15.0-1056.64_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1056_4.15.0-1056.64_all.deb
+b496008ed2cd45f02a9b4ceca7deaa18ee91db2da42a76ea81db73e067d8027b:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1070-fips_5.4.0-1070.79_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1070_5.4.0-1070.79_all.deb
 b498136cd91b37ceaf8efa8e77e9ee0f3b9257491eeaf7f442e355f182a35edb:
   type: redhat
   packages:
