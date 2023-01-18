@@ -218,10 +218,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-bf8060e0b066eeb4be444d2246363ae501e98772c453295ed51eb5d07e9709c9-kernel-devel-4.14.121-109.96.amzn2.x86_64.rpm
-0e805c8a765281ce1dc108e1c9273846f925e6cc780296ea5bb32649df006b01:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3402.1.0-flatcar_developer_container.bin.bz2
 0b861a48caf517fccd3371d1df17b5cf6e47b4902f3f942b9e533f4ce627fbf8:
   type: redhat
   packages:
@@ -9833,6 +9829,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-headers-4.4.0-1019-aws_4.4.0-1019.19_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-aws-linux-aws-headers-4.4.0-1019_4.4.0-1019.19_all.deb
+699c5ca27b1bb767f6b217bfb04a3ab9c9d40cfae2c6c09abc05f444522ebe92:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3346.1.0-flatcar_developer_container.bin.bz2
 702c281e5d38b77d0fd9fab845356ac624216e4e5ae8e6be807d8196d117d58f:
   type: suse
   packages:
@@ -13729,10 +13729,6 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1298.6.0-coreos_developer_container.bin.bz2
-99812299689334c5aec5dc2447adbc940685cbd07965028931b562a44742f783:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.0-flatcar_developer_container.bin.bz2
 302537260014044cacfdd498e73c08104b0c5f09e956f60b635f03793112e228:
   type: coreos
   packages:
@@ -17950,10 +17946,6 @@ d9e0f376a38191577cc4eca6d2fc614c3d3a518790b62508c7a0e880e61c57da:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2022-aws-fips_4.15.0-2022.22_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2022_4.15.0-2022.22_all.deb
-d9e0c80152ff9b4656397ac316043c2d51cb9b157e60c12b29d59fcf55efdc09:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.2-flatcar_developer_container.bin.bz2
 d9d4d53bbc7cb1a64bfe04fbcda0d80dfb8ab4b2164b3f2d99051a7fcd141fd4:
   type: ubuntu
   packages:
