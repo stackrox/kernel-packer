@@ -140,6 +140,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69-generic_4.15.0-69.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69_4.15.0-69.78_all.deb
+0e23f898b0340790eab712e6b7a22730cde0392c52c56bf5b6326a0f925e4c45:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2135.4.0-flatcar_developer_container.bin.bz2
 0e27c2964869a4d58bcf67d0ce057baefe30338b26173dc1f0daaf722e91a9f4:
   type: redhat
   packages:
@@ -214,10 +218,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-bf8060e0b066eeb4be444d2246363ae501e98772c453295ed51eb5d07e9709c9-kernel-devel-4.14.121-109.96.amzn2.x86_64.rpm
-0e805c8a765281ce1dc108e1c9273846f925e6cc780296ea5bb32649df006b01:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3402.1.0-flatcar_developer_container.bin.bz2
 0b861a48caf517fccd3371d1df17b5cf6e47b4902f3f942b9e533f4ce627fbf8:
   type: redhat
   packages:
@@ -4026,10 +4026,6 @@
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.149-2_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-16-cloud-amd64_5.10.127-2_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-16-common_5.10.127-2_all.deb
-7a73591b7fc85443c2b126a41123a3f6cf25dc0346edc442ac91eecf406b424f:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3277.1.2-flatcar_developer_container.bin.bz2
 7d996172a57270f2fbb4124f77a9ebc16074bd6949439dc83b926daa31fd96bd:
   type: redhat
   packages:
@@ -10701,6 +10697,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.15.0-1008_5.15.0-1008.12_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.15.0-1008-gcp_5.15.0-1008.12_amd64.deb
+3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -18264,6 +18264,10 @@ d93a4f9730936283b15eb5bfed252835a6353141e654edeb2c2b18810b9beb0d:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1143_4.15.0-1143.159-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1143-gcp_4.15.0-1143.159-16.04.1_amd64.deb
+d93b74cb6243d0df3a8527a030bd16e72cbe819cbcd0d46678e549a47a49920f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3185.1.0-flatcar_developer_container.bin.bz2
 d094cdb033603a7ae57a881d8c9ce114c6e74c2092fc3b61e00221517878256c:
   type: ubuntu
   packages:
