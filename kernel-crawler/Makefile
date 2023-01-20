@@ -104,7 +104,7 @@ crawl-ubuntu-azure-fips: build-crawl-container
 
 .PHONY: crawl-oracle-uek
 crawl-oracle-uek: build-crawl-container
-	./scripts/run-crawler.py crawl Oracle-UEK5 > $(CRAWLED_PACKAGE_DIR)/oracle-uek.txt
+	./scripts/run-crawler.py crawl Oracle-UEK > $(CRAWLED_PACKAGE_DIR)/oracle-uek.txt
 
 .PHONY: crawl-flatcar
 crawl-flatcar: build-crawl-container

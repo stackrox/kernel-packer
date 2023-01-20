@@ -584,13 +584,19 @@ repos = {
         },
     ],
 
-    "Oracle-UEK5": [
-    	{
-    		"root": "http://yum.oracle.com/repo/OracleLinux/OL7/developer_UEKR5/x86_64/",
-    		"discovery_pattern": "",
-    		"page_pattern": "/html/body//a[regex:test(@href, '^getPackage/kernel-uek-devel-[0-9].*\.x86_64\.rpm$')]/@href",
-    		"subdirs": [""],
-    	},
+    "Oracle-UEK": [
+        {
+            "root": "http://yum.oracle.com/repo/OracleLinux/OL7/developer_UEKR5/x86_64/",
+            "discovery_pattern": "",
+            "page_pattern": "/html/body//a[regex:test(@href, '^getPackage/kernel-uek-devel-[0-9].*\.x86_64\.rpm$')]/@href",
+            "subdirs": [""],
+        },
+        {
+            "root": "http://yum.oracle.com/repo/OracleLinux/OL7/UEKR6/x86_64/",
+            "discovery_pattern": "",
+            "page_pattern": "/html/body//a[regex:test(@href, '^getPackage/kernel-uek-devel-[0-9].*\.x86_64\.rpm$')]/@href",
+            "subdirs": [""],
+        },
     ],
     "Fedora-CoreOS" : [
         {
