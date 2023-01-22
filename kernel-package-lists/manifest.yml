@@ -423,6 +423,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.40.2.el8_4.x86_64.rpm
+0cd01c04227fc6eb80a03c39dda63602375dc1f0079296bc6a9c861be34819f7:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.1-flatcar_developer_container.bin.bz2
 0ad95b4e04bf952ac14fad605d201f937b82e005494f477fe97e93761720124f:
   type: ubuntu
   packages:
@@ -13755,10 +13759,6 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1298.6.0-coreos_developer_container.bin.bz2
-99812299689334c5aec5dc2447adbc940685cbd07965028931b562a44742f783:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.0-flatcar_developer_container.bin.bz2
 302537260014044cacfdd498e73c08104b0c5f09e956f60b635f03793112e228:
   type: coreos
   packages:
@@ -15226,10 +15226,6 @@ b1f62495c2fe9759d31d04184f9c3c38b921d8f63fcb8585da77bc095035a4c2:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.43.2.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.43.2.x86_64.rpm
-b1db3d78bc054de54b4f5289cbcb1f09c22a0965961dc56f7d088561c0ad0c25:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2605.3.0-flatcar_developer_container.bin.bz2
 b1fceff506ed73fcf52d71b87f532b073f185c498fb869723605ac2338bb600b:
   type: redhat
   packages:
@@ -18276,10 +18272,6 @@ d93a4f9730936283b15eb5bfed252835a6353141e654edeb2c2b18810b9beb0d:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1143_4.15.0-1143.159-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1143-gcp_4.15.0-1143.159-16.04.1_amd64.deb
-d93b74cb6243d0df3a8527a030bd16e72cbe819cbcd0d46678e549a47a49920f:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3185.1.0-flatcar_developer_container.bin.bz2
 d094cdb033603a7ae57a881d8c9ce114c6e74c2092fc3b61e00221517878256c:
   type: ubuntu
   packages:
