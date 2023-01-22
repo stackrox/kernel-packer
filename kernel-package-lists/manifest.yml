@@ -2441,10 +2441,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1078-fips_4.15.0-1078.87_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1078_4.15.0-1078.87_all.deb
-4c686154fa775daeefd262baedc3b1be538f7f5d29649fa856cd2d687baa5a88:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.1-flatcar_developer_container.bin.bz2
 4c763746ac40dbb660b59a9d851170126a473048dc41fdda8864638a6b0e7389:
   type: ubuntu
   packages:
@@ -10796,6 +10792,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.103.25-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.103.25-kernel-headers.tgz
+3881d2a33867c9d4b5dd942b0f35c442295c45277d2436955b63fdf56615be49:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3227.1.1-flatcar_developer_container.bin.bz2
 3884ec3634300f00831c8956e10c1596bbe5ba92c7e0bf628eeb179118f30eee:
   type: ubuntu
   packages:
@@ -10914,6 +10914,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1026_5.3.0-1026.28-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1026-gke_5.3.0-1026.28-18.04.1_amd64.deb
+4507ee5a2c802f8fdad5590b5b92e148feecffa94d24fae57a0968077a3f8110:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2512.5.0-flatcar_developer_container.bin.bz2
 4519affb139bca9dbe6bdd7b5f8a7af54b57dab43cfbd93bcd8a744e81a8c65b:
   type: ubuntu
   packages:
@@ -13961,6 +13965,10 @@ a6b49240705302b3bab0a547746a6b56f507ec4d8ff2939eeca6b654144661f4:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-c181d3fc4dbd30a5d92eb506a0f220c015013b2a0ec515ccaa25463164cc55a5-kernel-devel-4.14.173-137.228.amzn2.x86_64.rpm
+a6ebfacdf700700367a374c81d8050358053ef04a74989e6f04b9d12089b6c6f:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2801.1.0-flatcar_developer_container.bin.bz2
 a6ede753042b4e25ddc4977fca1397303dcb9aa5292b71779b11aa1b1b6be3b4:
   type: cos
   packages:
