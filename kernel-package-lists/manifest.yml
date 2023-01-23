@@ -938,6 +938,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-135-generic_4.4.0-135.161_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-135_4.4.0-135.161_all.deb
+1be1aeec71dc23a0652d0e7c5db4bcda379d211f7236199325991a3a0646c8e9:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-85c5567db97e73a9a37ce27222eb73b97a91a6ba845aaa686434acceb5c53f5d-kernel-devel-5.4.228-131.415.amzn2.x86_64.rpm
 1be8a7c1b84c092ba8ef3e59760c7b7228aa9d17da823e07642ba4c0284bf4e7:
   type: ubuntu
   packages:
@@ -5983,10 +5987,6 @@
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.162-1_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-21-cloud-amd64_5.10.162-1_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-21-common_5.10.162-1_all.deb
-27c170dee6ae1863ac35044def35318259544d038bb6b4d5a1cc63ef6387b43c:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2512.2.1-flatcar_developer_container.bin.bz2
 27b76073ba9346f92da233a37b8a621944a2058ee8ecda411f5886a6a2bebbfb:
   type: ubuntu
   packages:
@@ -8014,6 +8014,11 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2247.5.0-flatcar_developer_container.bin.bz2
+83b8bd57d9b492522bc70f43f29b736f174b09380daf5bde4313bfef3210a715:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.235.5-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.235.5-kernel-headers.tgz
 83b12e1b2d58ef101119e4097853de643dc2db896cde719fb18adae5063dd3bc:
   type: ubuntu
   packages:
@@ -11160,6 +11165,11 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10783.0.0-kernel-src.tar.gz
+6070d078a858cb2fabb728bf7e0acf819ceb2887a56f2e8e7ec195f5e3be2bc1:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.341.4-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.341.4-kernel-headers.tgz
 6088b289264913cef62cd10682057dd34caff3c8777fd98a03d438c26b184820:
   type: redhat
   packages:
@@ -16140,6 +16150,11 @@ bb78b0656df9b24e37ea2a740ca91f37ed8842907697be7514e3f4f775707e57:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-75316597a3e194db8a2d080cf6351f6d3fbe3ace64ea57a624095e3fffb37de3-download
+bb888d9a9eef86d23ef6642955770abe9f0f7544c717d0f93319b5ff6ebcc4a8:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16108.798.3-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16108.798.3-kernel-headers.tgz
 bb3411c0ef8afca5e1fbf1ff9031b930d43967077a52e9bd420c60ec55a1a981:
   type: ubuntu
   packages:
@@ -16482,6 +16497,10 @@ c1a8bcbe82f8b9f58ff558c4ce7116f0afa7cb6226f0ae9d0e76b2029064f549:
   packages:
   - https---storage.googleapis.com-cos-tools-16623.227.6-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.227.6-kernel-headers.tgz
+c1b574c87affb51f788fe739b25e2eff4c89ba8d4bb569357ee34f3adca77ffb:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.11.0-flatcar_developer_container.bin.bz2
 c1c13598192e4c1cab1fb33b4d68ff59828ef7921eacefdd1c03e42c0fd8ed53:
   type: coreos
   packages:
