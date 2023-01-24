@@ -1760,6 +1760,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.207-1.el7.elrepo.x86_64.rpm
+3e9e0a1d19f9849ef8f018eabd596a7b7ec1f7cc8dba283148a0ae816542f4dd:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-60-generic_5.15.0-60.66_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-60_5.15.0-60.66_all.deb
 3b9e534ed1f4daaf6ee63df95db2c481bda558ecb2b0f69fdf3fd584b2bec3e3:
   type: ubuntu
   packages:
@@ -2451,10 +2456,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1078-fips_4.15.0-1078.87_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1078_4.15.0-1078.87_all.deb
-4c686154fa775daeefd262baedc3b1be538f7f5d29649fa856cd2d687baa5a88:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2191.4.1-flatcar_developer_container.bin.bz2
 4c763746ac40dbb660b59a9d851170126a473048dc41fdda8864638a6b0e7389:
   type: ubuntu
   packages:
@@ -5486,6 +5487,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.5.1.el7.x86_64.rpm
+11f9e8c172951d82b080067e46bfc4c85ada9ce0d5d44aa4c47c746fa9778863:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-139-generic_5.4.0-139.156_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-139_5.4.0-139.156_all.deb
 11b9bf144477baa846f244d806ddead1d84ecb94162538dd2c675611ade089bd:
   type: debian
   packages:
@@ -5495,6 +5501,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.128-1.el7.elrepo.x86_64.rpm
+11c38e5ffda17fe2fdecf1bdcc7b64c5f736fdc9373e228d822f1d4dc280a65b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-204-generic_4.15.0-204.215_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-204_4.15.0-204.215_all.deb
 11c62dacdff478a1613ace6fc4a5921cd01fe48d6ff715021e101e9ea0fcfc04:
   type: suse
   packages:
@@ -10221,6 +10232,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.18-200.fc35-x86_64-kernel-devel-5.15.18-200.fc35.x86_64.rpm
+873b6dc27e5403af9a7f1d8d3dd142fe4cfc14cbfb268f1c98d40f850707d2d6:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-31-generic_5.19.0-31.32_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-31_5.19.0-31.32_all.deb
 880e3e912fa353292048b039a09b6b88cd93edb3976d330411c295b1367e1e9b:
   type: redhat
   packages:
@@ -14443,10 +14459,6 @@ a3196fcb372a263bdf9e551ea13bb50e0599c4619620969b334099e69df8e04f:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-174-generic_4.4.0-174.204_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-174_4.4.0-174.204_all.deb
-a3925a4451c58d95d35cf808c4dff9599b88d98aaa669e22962f077964457d03:
-  type: redhat
-  packages:
-  - https---api.access.redhat.com-management-v1-packages-b18dff1669f0cf5bbb49437654305f3e03a3f4835552ab3c0c49800863895c0b-download
 a3993c31b95f5cb52fb33d84b9997a4497ced89a9973d25ca9a3b9f911d998e3:
   type: redhat
   packages:
@@ -19883,6 +19895,10 @@ e721252768b5e5f17f03f9ff8c1bf01a186aea6246acbeeed7153928074304e9:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1045-fips_4.15.0-1045.52_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1045_4.15.0-1045.52_all.deb
+e859762084f3cc3cbe8d67e912c4ded72db634977f5e7cf06ffe6e8f9db82ae0:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2605.12.0-flatcar_developer_container.bin.bz2
 e0926909249d062e0e69981c164fb225e0036e1f3869627fe66c0949b56088fb:
   type: ubuntu
   packages:
