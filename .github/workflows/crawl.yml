@@ -55,7 +55,7 @@ jobs:
           rm -rf build-data/packages
 
       - name: Crawl commit
-        if: github.event_name != 'pull_request'
+        #if: github.event_name != 'pull_request'
         run: make robo-crawl-commit
         env:
           ROBOT_ROX_GITHUB_TOKEN: ${{ secrets.ROBOT_ROX_GITHUB_TOKEN }}

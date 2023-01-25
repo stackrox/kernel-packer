@@ -82,9 +82,7 @@ info() {
 push_collector() {
     collector_repo_dir="$1"
 
-    # Redirect to devnull so this doesn't print the value of the token on
-    # failure.
-    git -C "$collector_repo_dir" push origin &> /dev/null
+    git -C "$collector_repo_dir" push origin
 }
 
 main "$@"
