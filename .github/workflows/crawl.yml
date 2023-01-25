@@ -33,6 +33,8 @@ jobs:
         run: git checkout "$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
         if: github.head_ref != ''
 
+      # this is to ensure that committing and pushing new kernels/packages
+      # works later in the pipeline
       - name: Reattach HEAD (Master)
         run: git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
         if: github.head_ref == ''
