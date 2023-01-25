@@ -134,6 +134,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69-generic_4.15.0-69.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-69_4.15.0-69.78_all.deb
+0e23f898b0340790eab712e6b7a22730cde0392c52c56bf5b6326a0f925e4c45:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2135.4.0-flatcar_developer_container.bin.bz2
 0e27c2964869a4d58bcf67d0ce057baefe30338b26173dc1f0daaf722e91a9f4:
   type: redhat
   packages:
@@ -12211,10 +12215,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.8-100.fc31-x86_64-kernel-devel-5.8.8-100.fc31.x86_64.rpm
-50472b4eb6f3642e336857ed8f688a31af1f8529916263a52414de763cfcd92a:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3374.1.0-flatcar_developer_container.bin.bz2
 051199fbb0dcc7adc1b708753079a16604e2878604affcabe71b5bcd9e9918bd:
   type: ubuntu
   packages:
