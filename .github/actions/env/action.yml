@@ -13,12 +13,11 @@ runs:
         KERNEL_BUNDLE_STAGING_BUCKET: "gs://stackrox-kernel-bundles-staging"
       run: |
 
-        # TODO: uncomment if statement when transitioning away from OSCI
-        #if [[ "${{ github.event_name }}" != "schedule" ]]; then
+        if [[ "${{ github.event_name }}" != "schedule" ]]; then
           echo "Using staging buckets"
           KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET},${KERNEL_PACKAGE_BUCKET}"
           KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET},${KERNEL_BUNDLE_BUCKET}"
-        #fi
+        fi
 
         echo "KERNEL_PACKAGE_BUCKET=${KERNEL_PACKAGE_BUCKET}" | tee -a "$GITHUB_ENV"
         echo "KERNEL_BUNDLE_BUCKET=${KERNEL_BUNDLE_BUCKET}" | tee -a "$GITHUB_ENV"
