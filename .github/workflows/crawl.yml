@@ -54,10 +54,11 @@ jobs:
           rm -rf build-data/downloads
           rm -rf build-data/packages
 
-          # TODO: reenable once OSCI is turned off
-          #- name: Crawl commit
-          #  if: ${{ github.event_name != 'pull_request' }}
-          #  run: make robo-crawl-commit
+      - name: Crawl commit
+        if: github.event_name != 'pull_request'
+        run: make robo-crawl-commit
+        env:
+          ROBOT_ROX_GITHUB_TOKEN: ${{ secrets.ROBOT_ROX_GITHUB_TOKEN }}
 
       #
       # The manifest is used in subsequent workflows. Archive it here
