@@ -29,8 +29,10 @@ main() {
     git add "$CRAWLED_PACKAGE_DIR"
     git -c "user.name=roxbot" -c "user.email=roxbot@stackrox.com" commit --message "🤖 Updated crawled packages"
 
+    # redirect to devnull so this doesn't print the value of the token on failure.
+    # temporary test branch
     echo "Push changes..."
-    git push pushtarget $BRANCH
+    git push pushtarget $BRANCH &> /dev/null
     echo "Crawled packages have been pushed."
 }
 
