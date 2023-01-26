@@ -40,9 +40,7 @@ jobs:
           path: kernel-package-lists
 
       - name: List packages
-        run: |
-          ls -alh kernel-package-lists
-          make list-files
+        run: make list-files
 
       - name: Split package file
         id: split-packages
