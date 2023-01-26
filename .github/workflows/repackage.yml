@@ -37,6 +37,7 @@ jobs:
           # this is archived by the crawl workflow
           # see .github/workflows/crawl.yml for details
           name: kernel-crawler-manifest
+          path: kernel-package-lists
 
       - name: List packages
         run: make list-files
