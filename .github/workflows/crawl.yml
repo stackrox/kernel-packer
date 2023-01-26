@@ -19,12 +19,25 @@ jobs:
       UBUNTU_FIPS_SUBSCRIPTION_TOKEN: ${{ secrets.UBUNTU_FIPS_SUBSCRIPTION_TOKEN }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
       - uses: google-github-actions/auth@v1
         with:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
       - uses: google-github-actions/setup-gcloud@v1
 
       - uses: ./.github/actions/env
+
+      - name: Reattach HEAD (PR)
+        run: git checkout "$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+        if: github.head_ref != ''
+
+      # this is to ensure that committing and pushing new kernels/packages
+      # works later in the pipeline
+      - name: Reattach HEAD (Master)
+        run: git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+        if: github.head_ref == ''
 
       - name: Run crawl
         run: |
