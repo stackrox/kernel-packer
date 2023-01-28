@@ -1374,6 +1374,11 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.8.2003-updates-x86_64-Packages-kernel-devel-3.10.0-1127.19.1.el7.x86_64.rpm
+2e68375bee9dfb4e174212acb6665077d37806807dc6c519e0a93651b0d17401:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1094_5.4.0-1094.101_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1094-gke_5.4.0-1094.101_amd64.deb
 2b78407d24802b00faf7bcef3fb2d3780bd5d9dc4888a5f3dbcc82513d5ec908:
   type: ubuntu
   packages:
@@ -3674,6 +3679,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11021.29.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11021.29.0-kernel-headers.tgz
+6dda4aa70d4393d5225b886bfbdd823f951758fb44de651270c52d05113ee4c2:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-gcp-5.15-headers-5.15.0-1029_5.15.0-1029.36-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-headers-5.15.0-1029-gcp_5.15.0-1029.36-20.04.1_amd64.deb
 6adc9be76879b015522414e9359c53d31858a0e897876c5cb56634044556c4ec:
   type: suse
   packages:
@@ -13524,6 +13534,11 @@
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.127-32.el7.x86_64.rpm
+53882640a1d3a0e483fe32b7d8b84dd7c13d08c89f0a31d5dc2901d40bebf590:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-gke-5.15-headers-5.15.0-1027_5.15.0-1027.32-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-headers-5.15.0-1027-gke_5.15.0-1027.32-20.04.1_amd64.deb
 54705118faec47f6494d03e370b0fe15d771d1828e3bb7b2701bfaaba7e72bae:
   type: redhat
   packages:
