@@ -17,7 +17,7 @@ jobs:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
 
       - uses: google-github-actions/setup-gcloud@v1
-      
+
       - uses: ./.github/actions/env
 
       - name: Prepare Cache
@@ -38,6 +38,18 @@ jobs:
           # see .github/workflows/crawl.yml for details
           name: kernel-crawler-manifest
           path: kernel-package-lists
+
+      - name: "[DEBUG]: verify maniest diff"
+        run: |
+          ls -lah
+          echo =====
+          ls -lah kernel-package-lists
+          echo =====
+          git status
+          echo =====
+          git --no-pager diff
+          echo =====
+          cat kernel-package-lists/manifest.yml
 
       - name: List packages
         run: make list-files
@@ -142,14 +154,14 @@ jobs:
           # split into 100 line chunks, to avoid overloading the node
           # with huge amounts of package downloads
           split -l 100 --numeric-suffixes "${BUILD_DATA_DIR}/packages.txt" "${BUILD_DATA_DIR}/chunk"
-          
+
           #
           # Download each chunk of 100 packages, repackage them, upload to
           # the bucket, and then clean up to keep disk usage low
           #
           for chunk in "${BUILD_DATA_DIR}"/chunk*; do
             ./scripts/download-packages "${BUILD_DATA_DIR}" "${KERNEL_PACKAGE_BUCKET}" "${chunk}"
-            
+
             make repackage
 
             ./scripts/upload-bundles "${BUILD_DATA_DIR}" "$KERNEL_BUNDLE_BUCKET"
