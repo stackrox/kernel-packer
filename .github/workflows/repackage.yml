@@ -90,13 +90,17 @@ jobs:
           path: |
             .build-data/packages.txt
 
-      - name: Archive Jobs and Cache
+      - name: Archive Jobs
         uses: actions/upload-artifact@v3
         with:
           name: package-jobs
-          path: |
-            .build-data/cache/cache.yml
-            jobs.json
+          path: jobs.json
+
+      - name: Archive Cache
+        uses: actions/upload-artifact
+        with:
+          name: package-cache
+          path: .build-data/cache/cache.yml
 
   repackage:
     runs-on: ubuntu-latest
@@ -129,10 +133,21 @@ jobs:
           # see .github/workflows/crawl.yml for details
           name: kernel-crawler-manifest
 
-      - name: Download Jobs and Cache
+      - name: Download Jobs
         uses: actions/download-artifact@v3
         with:
           name: package-jobs
+
+      - name: Download Jobs
+        uses: actions/download-artifact@v3
+        with:
+          name: package-cache
+          path: .build-data/cache/
+
+      - name: "[DEBUG] verify cache"
+        run: |
+          ls -lah .build-data/cache
+          cat .build-data/cache/cache.yml
 
       - name: Write package file
         run: |
