@@ -3420,6 +3420,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1087-aws_4.4.0-1087.98_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1087_4.4.0-1087.98_all.deb
+6a73e299cf6b547fbaeeb9fb660a81572ea0adb894db51566556a0144d643eb8:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-3227.2.1-flatcar_developer_container.bin.bz2
 6c89ac6011ecd0689ed02ef8da737e11d2c2a9c16cc7f4082548adbe56b9e4ad:
   type: ubuntu
   packages:
@@ -13291,6 +13295,12 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2023.4.0-coreos_developer_container.bin.bz2
+6317223fccefec5fdc6b003d19744f17e9c8fe15546b5334d7b7c000a2f40acf:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.81-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.81-gardenlinux-amd64_5.15.81-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.81-gardenlinux-common_5.15.81-0gardenlinux1_all.deb
 6356363bc6d769be6f90d6d845d6d3049fa520c4e0b3a64e658791f1fdeb6a65:
   type: redhat
   packages:
@@ -19224,6 +19234,12 @@ df63c7cbc144cfb89ddc9e9c9e4144ec47ea17d123c80c4cc3ff5655d0885518:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-de7a58dd6e65179dbe1388b44d53137a936288814cca8b2b3e0f94d94d4b4250-download
+df072b09ded92afcd04c78d61f2e8b5e656735f9f7fb7ae206ab96acb73f98ee:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.81-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.81-gardenlinux-cloud-amd64_5.15.81-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.81-gardenlinux-common_5.15.81-0gardenlinux1_all.deb
 df88ca2f6bcc1781e67d99112802a886ef0f3a9647888d1dcb8d4cac112d6afe:
   type: ubuntu
   packages:
