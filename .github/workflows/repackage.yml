@@ -97,7 +97,7 @@ jobs:
           path: jobs.json
 
       - name: Archive Cache
-        uses: actions/upload-artifact
+        uses: actions/upload-artifact@v3
         with:
           name: package-cache
           path: .build-data/cache/cache.yml

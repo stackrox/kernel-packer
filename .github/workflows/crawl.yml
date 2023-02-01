@@ -30,7 +30,9 @@ jobs:
       - uses: ./.github/actions/env
 
       - name: Reattach HEAD (PR)
-        run: git checkout "$(echo ${{ github.head_ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
+        run: git checkout "$(echo "$HEAD_REF" | sed -E 's|refs/[a-zA-Z]+/||')"
+        env:
+          HEAD_REF: "${{ github.head_ref }}"
         if: github.head_ref != ''
 
       # this is to ensure that committing and pushing new kernels/packages
