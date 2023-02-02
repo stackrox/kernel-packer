@@ -5,7 +5,6 @@
 # https://github.com/falcosecurity/kernel-crawler/blob/e2bbe6455ef26941e3f53f9f6481e7a610746484/kernel_crawler/minikube.py
 
 import tempfile
-import sys
 import os
 import pathlib
 import re
@@ -27,9 +26,10 @@ def filter_versions(version):
 
 
 def get_versions(repo):
-    re_tags = re.compile('^refs/tags/v(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P<patch>0|[1-9]\d*)$')
+    re_tags = re.compile(r'^refs/tags/v(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P<patch>0|[1-9]\d*)$')
 
-    all_versions = [os.path.basename(v).strip('v') for v in repo.references if re_tags.match(v)]
+    all_versions = [os.path.basename(v).strip('v')
+                    for v in repo.references if re_tags.match(v)]
     filtered_versions = list(filter(filter_versions, all_versions))
 
     return filtered_versions
@@ -72,7 +72,8 @@ def get_defconfig(repo, minikube_version):
 def print_config_files(kernel_data):
     base_url = 'https://raw.githubusercontent.com/kubernetes/minikube'
     for kd in kernel_data:
-        print(f'{base_url}/{kd["version"]}/{kd["config"]}?kernel={kd["kernel"]}')
+        print(
+            f'{base_url}/{kd["version"]}/{kd["config"]}?kernel={kd["kernel"]}')
 
 
 def print_kernel_packages(kernel_data):
@@ -82,7 +83,7 @@ def print_kernel_packages(kernel_data):
         version = semver.VersionInfo.parse(kd['kernel'])
         urls.add(f'{base_url}/v{version.major}.x/linux-{kd["kernel"]}.tar.xz')
 
-    for url in urls:
+    for url in sorted(urls):
         print(url)
 
 
