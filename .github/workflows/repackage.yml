@@ -39,18 +39,6 @@ jobs:
           name: kernel-crawler-manifest
           path: kernel-package-lists
 
-      - name: "[DEBUG]: verify maniest diff"
-        run: |
-          ls -lah
-          echo =====
-          ls -lah kernel-package-lists
-          echo =====
-          git status
-          echo =====
-          git --no-pager diff
-          echo =====
-          cat kernel-package-lists/manifest.yml
-
       - name: List packages
         run: make list-files
 
@@ -143,11 +131,6 @@ jobs:
         with:
           name: package-cache
           path: .build-data/cache/
-
-      - name: "[DEBUG] verify cache"
-        run: |
-          ls -lah .build-data/cache
-          cat .build-data/cache/cache.yml
 
       - name: Write package file
         run: |
