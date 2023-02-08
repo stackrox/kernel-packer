@@ -71,6 +71,7 @@ class Crawler:
                 "rhel-7-server-rhui-beta-rpms",
                 "rhocp-4.3-for-rhel-8-x86_64-rpms",
                 "rhocp-4.5-for-rhel-8-x86_64-rpms",
+                "rhocp-4.12-for-rhel-8-x86_64-rpms",
                 "rhel-server-ost-6-3-rpms",
                 "rhel-7-server-e4s-rpms",
                 "rhel-8-for-x86_64-baseos-rpms",
