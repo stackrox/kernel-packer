@@ -120,6 +120,7 @@ jobs:
           # this is archived by the crawl workflow
           # see .github/workflows/crawl.yml for details
           name: kernel-crawler-manifest
+          path: kernel-package-lists
 
       - name: Download Jobs
         uses: actions/download-artifact@v3
