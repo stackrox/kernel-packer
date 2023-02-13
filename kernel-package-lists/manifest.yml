@@ -584,6 +584,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-150300.59.43.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-150300.59.43.1.x86_64.rpm
+1a2cf89fdbe6f17d25caa7bade769b15f035a769f6fe0d9dcc8fe47573a357e1:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1031-aws_5.15.0-1031.35_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1031_5.15.0-1031.35_all.deb
 1f3f7b8cd56dbfc79befc999a11dd3596c73efaa8707a4f132c0103e6536632d:
   type: ubuntu
   packages:
@@ -14123,6 +14128,11 @@ a3c2633ad0a88f9a53e95086ea8b68150af079bba3f42dc603c248de803e7553:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.8-200.fc35-x86_64-kernel-devel-5.15.8-200.fc35.x86_64.rpm
+a3b43434bde62684540fffcbafdee38a91b09f929b60a70df5713e19c0263f4f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.19.0-1021-azure_5.19.0-1021.22_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.19.0-1021_5.19.0-1021.22_all.deb
 a3aa5e2286bb89565602b9c6559cfaeb6e565d8a97c0a1ede1fbc89aa98632cf:
   type: ubuntu
   packages:
@@ -21947,6 +21957,11 @@ ffcb82aba983fd8fef9e7a118f88c844907cd8809ee75eb18f9e85311e31e196:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1152-azure_4.15.0-1152.167_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1152_4.15.0-1152.167_all.deb
+ffef7470b69b4956a6d9ed961af7aa9074e80728c2f56979c4d509331ac2f669:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-headers-5.15.0-1031-aws_5.15.0-1031.35-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-aws-5.15-headers-5.15.0-1031_5.15.0-1031.35-20.04.1_all.deb
 fff1ac2edb946fe1c3c962b29121eaea5ebb992be7db31ba58c4b4814f9845b0:
   type: redhat
   packages:
