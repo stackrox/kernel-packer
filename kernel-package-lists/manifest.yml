@@ -13118,6 +13118,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.1185.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.1185.0-kernel-headers.tgz
+759930aec19d74dfeb74f386265e7b903f7ff932e2259502dd38ebddc466d79e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1151-aws_4.15.0-1151.164_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1151_4.15.0-1151.164_all.deb
 763391a30630311e7781e847e378e15dcb645fe8618b586463da7dd0c39b2ee2:
   type: cos
   packages:
@@ -21093,6 +21098,11 @@ f08f00f6f912144f846190c78356f27cc74614230fed3bd8eb78b3b12b0b86fe:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.21.3.el7.x86_64.rpm
+f9e5deefb06d53647719ab8b3e3d585232ead45d1dd25442688e478b82dd4e62:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1101_5.4.0-1101.110_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1101-gcp_5.4.0-1101.110_amd64.deb
 f9c82f8851a7d5d8a08a31eef371a36f4dd812d4c59d9dc758b05760b623f377:
   type: coreos
   packages:
