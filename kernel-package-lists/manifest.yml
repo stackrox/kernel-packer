@@ -3209,6 +3209,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.103.49-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.103.49-kernel-headers.tgz
+5fcca5a91458efd053aa35e993cc28497efe5f7246b90868eb5ab7b6740b3193:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.94-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.94-gardenlinux-amd64_5.15.94-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.94-gardenlinux-common_5.15.94-0gardenlinux1_all.deb
 5bcf6341e346fb162402a28eaae454c08eb9e71a37105760cc2930203c47cf5d:
   type: ubuntu
   packages:
@@ -20562,6 +20568,12 @@ eca1c0e1eeb222c2899672ad69b0a6f8cb07f620e03782eb86b4857d8730b4e1:
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.21.2.el7.x86_64.rpm
+ecaa01979fca236294698492cda0e308fd97627c548105eba4b52caf801dc40c:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.94-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.94-gardenlinux-cloud-amd64_5.15.94-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.94-gardenlinux-common_5.15.94-0gardenlinux1_all.deb
 ecd5851744db2576bcf0eee2070eba8d98c907ec0647717bf298e6a76bd27f2a:
   type: redhat
   packages:
