@@ -4434,6 +4434,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-8caf088935e538f7c59ac19cefd96118de86c72e4dc479845c286a551fc07eff-kernel-devel-4.14.123-111.109.amzn2.x86_64.rpm
+8a2f265ad67c1db8b66549ec00be6df3469d1fa769e0ffa9837bdd661abbe133:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1095_5.4.0-1095.102_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1095-gke_5.4.0-1095.102_amd64.deb
 8c2d85163f55f14f7f9235df0f103b3a4198625dd9ab571b96ad3784a4806ffe:
   type: cos
   packages:
@@ -10434,10 +10439,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.219-1.el7.elrepo.x86_64.rpm
-856ebf7fbb313fa10824545ebde4c37d75490c4372d03c01e4138ef516722d6a:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.17-100.fc35-x86_64-kernel-devel-5.19.17-100.fc35.x86_64.rpm
 858e0cec0f22dfcac8b2552344ac02814ae3e2bced9014caa7ceda526e0e56a4:
   type: redhat
   packages:
@@ -12144,6 +12145,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-headers-5.11.0-1021-aws_5.11.0-1021.22-20.04.2_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-aws-5.11-headers-5.11.0-1021_5.11.0-1021.22-20.04.2_all.deb
+20190d25219799a9494adcf71717a7a1d4bc64381dc24ecfd8fd9ff2381bd3b2:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1146_4.15.0-1146.162_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1146-gcp_4.15.0-1146.162_amd64.deb
 20300d9f7334fcfdc060f448be5ea463911c37866887bfcd5ec4ff9b31392ad1:
   type: redhat
   packages:
@@ -18169,10 +18175,6 @@ cfbd8d30f9ea8323478eb2f6061fe79e38d9decd913859b10c9dab74d3d40047:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.11.1.el8_0.x86_64.rpm
-cfcd0526a22171e33c8fd08fd7d848a93323faaa7a75733c8fa5df0bb3135bfd:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.3-200.fc37-x86_64-kernel-devel-6.1.3-200.fc37.x86_64.rpm
 cfd61b6ae4cdf3908189793815982a4eb677454477b592366bf03bb7e811410c:
   type: redhat
   packages:
