@@ -631,6 +631,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1006_4.15.0-1006.6_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1006-gcp_4.15.0-1006.6_amd64.deb
+1b5e828ed1b2b59f9afdd2c485c2918307b20f5373757adbadc1dd8c60fe92ff:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.141-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.141-garden-amd64_5.10.141-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.141-garden-common_5.10.141-0gardenlinux1_all.deb
 1c5dabd524cd28867b94ea9e5a16fc251470276b4175cef030773f3c523709a4:
   type: ubuntu
   packages:
@@ -19908,6 +19914,12 @@ e97f27e55591f4687a887cc3dc2e544a8406435ad422ab8a7a8388c083612d8e:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.13-300.fc37-x86_64-kernel-devel-5.19.13-300.fc37.x86_64.rpm
+e99be584c46b7b0323ef3558624d14388cf994abdb351b9291f419cb315b4f85:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.141-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.141-garden-cloud-amd64_5.10.141-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.141-garden-common_5.10.141-0gardenlinux1_all.deb
 e112aeec9cc04e9ee132ea1b8a301d6851212481df43c6dc98164688a1987bf8:
   type: redhat
   packages:
