@@ -193,8 +193,8 @@ jobs:
       - name: Notify Oncall
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_ONCALL }}
-          SLACK_CHANNEL: oncall
+          SLACK_WEBHOOK: ${{ secrets.SLACK_COLLECTOR_ONCALL_WEBHOOK }}
+          SLACK_CHANNEL: team-acs-collector-oncall
           SLACK_COLOR: failure
           SLACK_LINK_NAMES: true
           SLACK_TITLE: Kernel Repackaging Failed
