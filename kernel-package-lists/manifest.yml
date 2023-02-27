@@ -14642,6 +14642,12 @@ a835d0c9af4005454de988c237ae493418ee4b3f248203e7130965fe7a745355:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1019-azure_4.15.0-1019.19_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1019_4.15.0-1019.19_all.deb
+a888df07ef4fd67e07af59f28a9a58e416c37ec9e277911096d613cafacfa7b0:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.100-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.100-garden-amd64_5.10.100-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.100-garden-common_5.10.100-0gardenlinux1_all.deb
 a0972a47f4067daa3b0a50d6e317b8e1da497b89d3c8383443c6e9dd4f0c41fa:
   type: cos
   packages:
@@ -16305,6 +16311,12 @@ b1114371e55634a65ad7888c787df4e3e30d2762e8b3ff5b66d370f171feac45:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.81.0-kernel-src.tar.gz
+b4715535be734009d1757782029087d5b052de85a7cc4b0145d29d208d1e7f0e:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.100-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.100-garden-cloud-amd64_5.10.100-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.100-garden-common_5.10.100-0gardenlinux1_all.deb
 b05368238acd995f522a90ed2d4b7496f3cca324e6b7f723fe1835ccc56d0774:
   type: ubuntu
   packages:
