@@ -10,6 +10,12 @@
   file: amazon-extras.txt
   reformat: single
 
+- name: amazon-5.10
+  description: Amazon Linux 2 kernels (5.10)
+  type: redhat
+  file: amazon-5.10.txt
+  reformat: single
+
 - name: centos
   description: CentOS kernels
   type: redhat
