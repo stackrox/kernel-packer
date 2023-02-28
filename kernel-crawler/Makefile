@@ -51,6 +51,9 @@ crawl-amazon: build-crawl-container
 	./scripts/run-crawler.py --entrypoint python3 repo-crawler.py --print yum \
 		http://amazonlinux.us-west-2.amazonaws.com/2/extras/kernel-5.4/latest/x86_64/mirror.list \
 		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon-extras.txt
+	./scripts/run-crawler.py --entrypoint python3 repo-crawler.py --print yum \
+		http://amazonlinux.us-west-2.amazonaws.com/2/extras/kernel-5.10/latest/x86_64/mirror.list \
+		--match-exact=name=kernel-devel | sort > $(CRAWLED_PACKAGE_DIR)/amazon-5.10.txt
 
 .PHONY: crawl-ubuntu-hwe
 crawl-ubuntu-hwe: build-crawl-container
