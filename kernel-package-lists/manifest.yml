@@ -9848,6 +9848,11 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-3033.2.1-flatcar_developer_container.bin.bz2
+550a1567cb542042b8bc0932c736f0248e20ae72bbecd9dd28ff4c53891f9f50:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1073-fips_5.4.0-1073.82_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1073_5.4.0-1073.82_all.deb
 554a1eeeba1d2146c8b179f8565a10172c617e4759be4be6b04d31b16192bf30:
   type: redhat
   packages:
@@ -18295,6 +18300,11 @@ d4fc60a759f950dfe3302f2b1526edc25841f343e7e78982f4fb7277f888b595:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-22b4acc343812414930f21b92e1555448381d2a22b144eafe709904ec63c3a4a-kernel-devel-5.4.219-126.411.amzn2.x86_64.rpm
+d4fe7bfd66ebd1617e62a84eb80e72125d97a2ab897b60e785b017be8caad343:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2090-aws-fips_4.15.0-2090.96_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2090_4.15.0-2090.96_all.deb
 d4cff6cabd53fc0baf179602506990362722d18f6b5b267cf932a6dcbe0c7c23:
   type: suse
   packages:
