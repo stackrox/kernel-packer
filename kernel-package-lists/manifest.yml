@@ -6261,6 +6261,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.68.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.68.1.x86_64.rpm
+29ade4d9ba0c657069d9091e39125aeecaca47bd09bc35d5f898bc8838af6694:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1102_5.4.0-1102.111_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1102-gcp_5.4.0-1102.111_amd64.deb
 29be787b7c1cac1ee1e9db9e9b82646b1fc9733b9d9f1b8b7b2a245e0267acad:
   type: ubuntu
   packages:
@@ -12109,6 +12114,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1032-aws_4.15.0-1032.34_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1032_4.15.0-1032.34_all.deb
+14325c2ee8b00588bbf1fc781403ec8ab73b34b15910ed7f9c24c941e4840461:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.15-100.fc36-x86_64-kernel-devel-6.1.15-100.fc36.x86_64.rpm
 14638fc27a1463be8e0ac2d1eb00731c401b6dae5644e0cbaeecc0a8f11e3714:
   type: cos
   packages:
@@ -21161,6 +21170,10 @@ f7ba7f4a204474549d8e14504af7d3f146e19f1b09b2077a508e8ed11aed7b96:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-69c3a636a695020b14c18df75bba16706da81f3a98b9476c039069d9170171d1-download
+f7adbf9bd16a2e8ea6b4e140e51d6e88232b4807a80ca8f71250f60c3e68a250:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.15-200.fc37-x86_64-kernel-devel-6.1.15-200.fc37.x86_64.rpm
 f07aee945a58799d2e9ccf16842db685a4caa8153ca564aa4ae2a5119048c0b2:
   type: ubuntu
   packages:
