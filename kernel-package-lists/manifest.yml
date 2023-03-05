@@ -3641,6 +3641,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.766.3-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.766.3-kernel-headers.tgz
+6ba4ce6ed181fdbaa65a497a11ea7ae2bde4de6a64bd57dc0bc5b870e64e3572:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.123-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.123-garden-amd64_5.10.123-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.123-garden-common_5.10.123-0gardenlinux1_all.deb
 6ca24b568a8a38223c60de6036256fa82429b19d14d8d6861398ea50f5c77064:
   type: ubuntu
   packages:
@@ -5688,6 +5694,12 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.137-1.el7.elrepo.x86_64.rpm
+13c25f6540d20fd15cfa8a74e0e1da251276bf7a762177863a4bdc80fff9c9f5:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.114-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.114-garden-amd64_5.10.114-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.114-garden-common_5.10.114-0gardenlinux1_all.deb
 13b78ed10b7dd9300ecef8494057f06e3739f560356658750ebbe08ec11800c6:
   type: ubuntu
   packages:
@@ -13942,6 +13954,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1055-fips_4.15.0-1055.63_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1055_4.15.0-1055.63_all.deb
+835570689d8cc5da1dba9f7a32906db8519f6713dfc6cd359854f11ceaabc120:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.123-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.123-garden-cloud-amd64_5.10.123-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.123-garden-common_5.10.123-0gardenlinux1_all.deb
 838952473ad18ccb11721ffee00fdb0aefc96d3995fa466364bdbbec1a44e85a:
   type: ubuntu
   packages:
@@ -17787,6 +17805,12 @@ cac3fb96fd53101a872dc07f435878e31fecb8fbee1f04d6178a7a68e44f5fa4:
   packages:
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.102-k8s-linux-headers-4.4.102-k8s_4.4.102-20171126_amd64.deb
+cace851f30b18cb43f28587fc48c2a9bb1f1f86fc9d3d20231868a5b98367b50:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.114-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.114-garden-cloud-amd64_5.10.114-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.114-garden-common_5.10.114-0gardenlinux1_all.deb
 cb5be28e15d3312acaf9928c85cc1180dfa3f8b6c7f916abab59ed098fdfa3ca:
   type: ubuntu
   packages:
