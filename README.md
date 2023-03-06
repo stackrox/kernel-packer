@@ -93,17 +93,9 @@ To test modifications to kernel bundle builder for a subset of kernel packages, 
 containing only the subset and execute `MANIFEST_FILE={path to manifest.yml} make bundles`
 
 ### PR Automation
-- The crawl job will be skipped unless the label `crawl` is applied to a PR on GitHub. If this label is applied, newly 
-downloaded kernel header packages are uploaded to a GCP staging bucket 
-`stackrox-kernel-packages-staging/{BRANCH_NAME}/{CIRCLE_SHA}`.
-- On PR builds, the repackage/combine steps will use this staging bucket to build bundles and upload any newly created 
-bundles to a GCP bucket `stackrox-kernel-bundles-staging/{BRANCH_NAME}/{CIRCLE_SHA}`.
-This bucket can then be used in a collector PR (see usage of `KERNEL_BUNDLES_STAGING_BUCKET` in 
-`stackrox/collector/.circleci/config.yml`.
+- The `crawl` job will not commit the new kernel versions.
+- The `repackage` job will not commit the new kernel header packages. Those will be available as task artefacts.
 
-
-[circleci-badge]:      https://circleci.com/gh/stackrox/kernel-packer.svg?&style=shield&circle-token=f65a92f3c16297b0433428aa9284803d1b649e72
-[circleci-link]:       https://circleci.com/gh/stackrox/kernel-packer/tree/master
 [gcs-bundles-badge]:   https://img.shields.io/badge/gcs-kernel%20bundles-blue.svg?style=flat&logo=google
 [gcs-bundles-link]:    https://console.cloud.google.com/storage/browser/stackrox-kernel-bundles?project=stackrox-collector
 [gcs-packages-badge]:  https://img.shields.io/badge/gcs-kernel%20packages-blue.svg?style=flat&logo=google
