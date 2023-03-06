@@ -1,4 +1,4 @@
-[![CircleCI][circleci-badge]][circleci-link]
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/stackrox/kernel-packer/main.yml?style=for-the-badge)
 [![GCS Packages][gcs-packages-badge]][gcs-packages-link]
 [![GCS Bundles][gcs-bundles-badge]][gcs-bundles-link]
 
@@ -45,7 +45,7 @@ organized in a semi-standardized fashion, and can be programmatically scraped in
 packages. Crawling is performed by the [`kernel-crawler`](kernel-crawler), and produces files inside of 
 [`kernel-package-lists`](kernel-package-lists).
 
-Crawling can be done by running `make crawl`. This is [done automatically](circleci/config.yml#L166), and shouldn't have
+Crawling can be done by running `make crawl`. This is [done automatically](.github/workflows/main.yml), and shouldn't have
 to be run manually.
 
 ### Manifest
