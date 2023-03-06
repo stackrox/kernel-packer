@@ -6640,6 +6640,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.7-300.fc35-x86_64-kernel-devel-5.14.7-300.fc35.x86_64.rpm
+38d65bee67d7256d60ad588f7f6e49160fba5a6883f89451c4f4db9e7818cf1c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1152-aws_4.15.0-1152.165_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1152_4.15.0-1152.165_all.deb
 38d191ac429e0ccbca3549a11823b063952940c35242407745b22a1868388ef8:
   type: coreos
   packages:
@@ -7288,6 +7293,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1052_4.15.0-1052.56_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1052-gcp_4.15.0-1052.56_amd64.deb
+55d822379b46cf5ff7fc0dd0217ea3d15691457e049efcab85bd93932fac54db:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.19.0-1021-aws_5.19.0-1021.22_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.19.0-1021_5.19.0-1021.22_all.deb
 55dac3186481c4f26758f52301bc507e684638d42bcf29d43df19b4984874a18:
   type: cos
   packages:
@@ -12820,6 +12830,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1020-azure_5.15.0-1020.25-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1020_5.15.0-1020.25-20.04.1_all.deb
+89365eaf123873ef3ae10ef4c3ac09dbbffb0673f1d6839cc061132b35788978:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.19.0-1022-azure_5.19.0-1022.23_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.19.0-1022_5.19.0-1022.23_all.deb
 089642a89c91e0d83134f9eb35f05e3266974829d3b544d8a93d9f846e3d6831:
   type: ubuntu
   packages:
