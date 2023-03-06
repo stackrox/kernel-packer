@@ -8020,6 +8020,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1062_5.4.0-1062.65_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1062-gke_5.4.0-1062.65_amd64.deb
+75a03a1242676ce5f2e71c307a536db1f372daa62cc5a0266036c4fbf911923c:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.96-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.96-gardenlinux-cloud-amd64_5.15.96-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.96-gardenlinux-common_5.15.96-0gardenlinux1_all.deb
 75f32af1a53f58d705f1247277335bb30745f55a6d26e16c9418b851020f8d8f:
   type: suse
   packages:
@@ -19796,6 +19802,12 @@ e4bbeea28ed284237c281777a038000548664e41e9df85f1970e1ebcc6e57dcf:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-b758203fbb94e399503b48578912149a4861dfba69bc2be1bbbe5e3fe754b185-download
+e4cd006cb9bad30faa80258215703dfca9af621051a6525ebebe0dce7d53ef4d:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.96-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.96-gardenlinux-amd64_5.15.96-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.96-gardenlinux-common_5.15.96-0gardenlinux1_all.deb
 e4af70deab0747d83ed28c1e6dddf9506476c729a3bb71fc7af304ad1d5a7efe:
   type: redhat
   packages:
