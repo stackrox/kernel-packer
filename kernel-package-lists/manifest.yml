@@ -13481,6 +13481,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.29.1.el8_2.x86_64.rpm
+3204402d0d3cf8e64074373a6d90503572477682628d6738ae987378dd2ab415:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.15-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-6-cloud-amd64_6.1.15-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-6-common_6.1.15-1_all.deb
 3244358dec16d20d2c9675e29826d282928e94543bc662162a434a59bc3a4e1a:
   type: ubuntu
   packages:
@@ -18353,6 +18359,12 @@ d03fea8e0f57b230b8d451099d25c24ff6df8649a8de6757267da89fb791600b:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.76-1.el7.elrepo.x86_64.rpm
+d4b6dc01f256859410c973b07a9ac94919a3280f6c42c6775a53cb172bf01df3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.15-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-6-amd64_6.1.15-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-6-common_6.1.15-1_all.deb
 d4d323d748d5bc5e5f39b85308939406a2b16dc0178cdd4fdf040e978308f0db:
   type: ubuntu
   packages:
