@@ -3902,6 +3902,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1073_4.15.0-1073.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1073-gke_4.15.0-1073.78_amd64.deb
+7a0ba1673d4a768422879d61bb81e26dd0e35437ba943d6a83ff101911ebce69:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.2.3-300.fc37-x86_64-kernel-devel-6.2.3-300.fc37.x86_64.rpm
 7a1dbca2c3a68b1056fbdcb31e0d9538f10514daa4ed6cf27b5ab523a7e713e3:
   type: redhat
   packages:
@@ -8540,6 +8544,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1028-fips_5.4.0-1028.32_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1028_5.4.0-1028.32_all.deb
+89e7e1be000355477e7afdb4820c038f3c21155c8c15dbab93ef5d18c61a1184:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.15.0-1029_5.15.0-1029.34_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.15.0-1029-gke_5.15.0-1029.34_amd64.deb
 89b80b3f1b8c7cc8ed50f2c41980fb8fbfe010ba81ed8786e361395c69cac30a:
   type: ubuntu
   packages:
