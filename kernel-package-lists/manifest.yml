@@ -73,12 +73,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-862.11.6.el7.x86_64.rpm
-0d5d2ac7eb2a6d60204ab67a17d5687aa6778f295ac2fed17e996999042c2da0:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.12-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-5-amd64_6.1.12-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-5-common_6.1.12-1_all.deb
 0f5e4e5daebd6982369279d5dc1dbe2e54a20ceb708d5d18b2b4c27d567d7c15:
   type: suse
   packages:
@@ -12667,6 +12661,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-headers-5.11.0-1019-aws_5.11.0-1019.20-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-aws-5.11-headers-5.11.0-1019_5.11.0-1019.20-20.04.1_all.deb
+54407c747e3af1bab4d5495fd88ef295181af476736824abb683e1d130ed9fd4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.2.6-200.fc37-x86_64-kernel-devel-6.2.6-200.fc37.x86_64.rpm
 56978f33077cf3392b754bd0653606772152fcb006a205e78d16ab315d4c522b:
   type: redhat
   packages:
@@ -17755,12 +17753,6 @@ c66859f46abb4b412cfa19e7c559474af236a85456c188754339ef7b016f489a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1078-azure_5.4.0-1078.81_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1078_5.4.0-1078.81_all.deb
-c74112a231efdd15d6db604bc3a08bac6fc6c5d951be1644644c3a46478e25f0:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.12-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-5-cloud-amd64_6.1.12-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-5-common_6.1.12-1_all.deb
 c74226bb4629503eafbb7c5775c86105572412eed23bc4428e5a92482b47b9d0:
   type: redhat
   packages:
@@ -19435,6 +19427,10 @@ dc9c661db0f4da533a96d1c8165eb781eaa6a14f4700f2900c3771f723e30cdd:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.135.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.135.1.x86_64.rpm
+dc13aa57b9fc73b1159e47f60ee74f685c99ec397d7b4c82f33ab1ad4b9af09c:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.2.6-300.fc38-x86_64-kernel-devel-6.2.6-300.fc38.x86_64.rpm
 dc33cee6648ca66c6228cf9bf0656ccf58ee9185bb93f17e9bd6bffa5b26796a:
   type: ubuntu
   packages:
