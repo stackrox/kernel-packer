@@ -40,6 +40,7 @@ jobs:
         if: github.head_ref == ''
 
       - name: Run crawl
+        if: contains(github.event.pull_request.labels.*.name, 'crawl') || github.event_name == 'schedule'
         run: |
           if ! make -k crawl 2> >(tee /tmp/make-crawl-stderr >&2) ; then
               touch /tmp/crawl-failed

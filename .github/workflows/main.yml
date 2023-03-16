@@ -7,17 +7,11 @@ on:
 
 jobs:
   crawl:
-    if: contains(github.event.pull_request.labels.*.name, 'crawl')
     uses: ./.github/workflows/crawl.yml
     secrets: inherit
 
   repackage:
     uses: ./.github/workflows/repackage.yml
     needs: crawl
-    # Ensure that this will run even when the crawl step is skipped above.
-    # But still check for failures or cancellations
-    if: always() &&
-      !contains(needs.crawl.result, 'failure') &&
-      !contains(needs.crawl.result, 'cancelled')
     secrets: inherit
 
