@@ -2717,6 +2717,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.63.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.63.1.x86_64.rpm
+4ae472b9430e6acf7d5cebc2abd0d2dac0caec28eb36ae9f198de44f33d85b96:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.341.29-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.341.29-kernel-headers.tgz
 4ce567db964e873e664f33b364b2dd9bc4452aba213542e441eee06300805c41:
   type: redhat
   packages:
@@ -17985,6 +17990,11 @@ cace851f30b18cb43f28587fc48c2a9bb1f1f86fc9d3d20231868a5b98367b50:
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.114-0gardenlinux1_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.114-garden-cloud-amd64_5.10.114-0gardenlinux1_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.114-garden-common_5.10.114-0gardenlinux1_all.deb
+cb2c7b60686db9472759c65f1662e2c92a053de295e81adcaccf991370a660f0:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17523.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17523.0.0-kernel-headers.tgz
 cb5be28e15d3312acaf9928c85cc1180dfa3f8b6c7f916abab59ed098fdfa3ca:
   type: ubuntu
   packages:
