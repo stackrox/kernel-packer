@@ -188,7 +188,7 @@ jobs:
     needs:
       - split-tasks
       - repackage
-    if: always() && contains(join(needs.*.result, ','), 'failure') && github.event_name == 'push'
+    if: always() && contains(join(needs.*.result, ','), 'failure') && github.event_name == 'schedule'
     steps:
       - name: Notify Oncall
         uses: rtCamp/action-slack-notify@v2
