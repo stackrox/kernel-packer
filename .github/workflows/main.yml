@@ -7,6 +7,7 @@ on:
 
 jobs:
   crawl:
+    if: contains(github.event.pull_request.labels.*.name, 'crawl')
     uses: ./.github/workflows/crawl.yml
     secrets: inherit
 
