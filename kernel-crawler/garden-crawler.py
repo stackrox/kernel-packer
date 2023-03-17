@@ -17,7 +17,7 @@ import re
 import sys
 
 image_version_re = re.compile(
-    r'^linux-image-(((\d\.\d+)\.\d+-garden)(?:-cloud)?-amd64) (\d\.\d+\.\d+-\d+gardenlinux\d+)$')
+    r'^linux-image-((\d\.\d+)\.\d+-garden(?:linux)?)-cloud-amd64 (\d\.\d+\.\d+-\d+gardenlinux\d+)$')
 
 
 def get_releases() -> list:
@@ -121,13 +121,11 @@ def get_kernel_versions(component_descriptors: list) -> list:
             if image is None:
                 continue
 
-            release = image[3]
+            release = image[2]
             debian_kernel = image[1]
-            short_debian_kernel = image[2]
-            garden_kernel = image[4]
+            garden_kernel = image[3]
 
-            kernel_version = (release, debian_kernel,
-                            short_debian_kernel, garden_kernel)
+            kernel_version = (release, debian_kernel, garden_kernel)
             if kernel_version not in kernel_versions:
                 kernel_versions.append(kernel_version)
 
@@ -143,20 +141,24 @@ def print_package_urls(kernel_versions: list):
 
     urls = []
     for kv in kernel_versions:
-        release, debian_kernel, short_debian_kernel, garden_kernel = kv
+        release, debian_kernel, garden_kernel = kv
 
-        url_all = f'{base_url}/linux-{release}/linux-headers-{short_debian_kernel}-common_{garden_kernel}_all.deb'
-        url_amd64 = f'{base_url}/linux-{release}/linux-headers-{debian_kernel}_{garden_kernel}_amd64.deb'
+        url_all = f'{base_url}/linux-{release}/linux-headers-{debian_kernel}-common_{garden_kernel}_all.deb'
+        url_amd64 = f'{base_url}/linux-{release}/linux-headers-{debian_kernel}-amd64_{garden_kernel}_amd64.deb'
+        url_cloud = f'{base_url}/linux-{release}/linux-headers-{debian_kernel}-cloud-amd64_{garden_kernel}_amd64.deb'
         url_kbuild = f'{base_url}/linux-{release}/linux-kbuild-{release}_{garden_kernel}_amd64.deb'
 
         if url_all not in urls:
             urls.append(url_all)
 
-        if url_amd64 not in urls:
-            urls.append(url_amd64)
+        if url_cloud not in urls:
+            urls.append(url_cloud)
 
         if url_kbuild not in urls:
             urls.append(url_kbuild)
+
+        if url_amd64 not in urls:
+            urls.append(url_amd64)
 
     print('\n'.join(urls))
 
