@@ -6446,6 +6446,11 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.4-flatcar_developer_container.bin.bz2
+31a9390c49adfadca80c19591e8055d369ec106a52765a59b76864a66ae06f6b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1002-azure_6.2.0-1002.2_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1002_6.2.0-1002.2_all.deb
 31ea5736f3d535b2955907410615b3ef76881f6c54dc93aabf131698159b73d2:
   type: ubuntu
   packages:
@@ -15252,6 +15257,11 @@ a6347910572a8036a3dfb77e9df928a41ccc62e3c1b373ccc764822beff8708d:
   packages:
   - https---storage.googleapis.com-cos-tools-16623.227.10-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.227.10-kernel-headers.tgz
+a15417892046b8417acfa1595a25b2a10d44ad3276507adf0ee3b5046be9c208:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.2.0-1004_6.2.0-1004.4_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.2.0-1004-gcp_6.2.0-1004.4_amd64.deb
 a55611191365e7035ff4afc3a8c613786a42f1e4e31aed44e86d9a47ebcfc306:
   type: redhat
   packages:
@@ -20278,6 +20288,11 @@ e47f5cdbdaf82038143fdb90bb36bdd11e2e9886d2cd8bdba234fcb2c225f6e7:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-86d8b6286527aa8a8fc764f333dc6bfa751c6aafb978337a5f601471d6de276a-kernel-devel-5.10.29-27.126.amzn2.x86_64.rpm
+e48b843d5c8daf77cdf9d3f2a276e47abdce9eeae89a5edd4b699220eed9a3c1:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.2.0-1002-aws_6.2.0-1002.2_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.2.0-1002_6.2.0-1002.2_all.deb
 e52f94cb5c9e1e9f5b59938f8dc7f8049ef00ae600ffb36497bf34528dbd23e6:
   type: redhat
   packages:
