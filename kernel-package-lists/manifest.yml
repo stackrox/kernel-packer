@@ -1664,6 +1664,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1026-aws_4.4.0-1026.35_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1026_4.4.0-1026.35_all.deb
+2de98a4a301a95438c234cef42fbae6f61177c79f71b7dfe48bb412b69e08f24:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-42955ad90ee6e49d35405588887d006f2f1d56270393c2b7fe3f39d83abb8419-kernel-devel-5.10.173-154.642.amzn2.x86_64.rpm
 2fe00326dedb80223f3659cdaaf176157467c8f8bae29193d100c622b7d6f411:
   type: ubuntu
   packages:
@@ -7730,6 +7734,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.13-100.fc32-x86_64-kernel-devel-5.10.13-100.fc32.x86_64.rpm
+64d832618b9a1ce1dd4aabd1d6eab57937c70b523b2a9e2363b2c329f1300688:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d503c64fcf6933da619df2655d1d72d46c21e60619955d2a0d73fede7e623122-kernel-devel-4.14.309-231.529.amzn2.x86_64.rpm
 64cb5cd226c3ca827412455b8401d35a60c35cd31afe303643a9b48ac116e031:
   type: ubuntu
   packages:
@@ -15541,6 +15549,11 @@ acc8ff6e63c149bc9c0797d992e8d369e84b34b5496145144f3515dc7daf7c50:
   packages:
   - https---storage.googleapis.com-cos-tools-17353.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17353.0.0-kernel-headers.tgz
+acca06453b31a4376474ee7e762a86436112a68ace853eda0220298fc476140c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1096_5.4.0-1096.103_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1096-gke_5.4.0-1096.103_amd64.deb
 acd6214219484661841d41b5af78eeebad7de2a1623390dc50608af1927fd7ac:
   type: garden
   packages:
@@ -21252,6 +21265,10 @@ f0dfd02a9bd65eb736b965bb816503d1abb15a63e901da5f5c8ded5b8659e250:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-365.el8.x86_64.rpm
+f1b8b9bcc5f6ddb75d86bd605476ce7f726d0ce02cc19f294bd451ff8bf7be24:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-8cb33943794efdff1178a8c611a779714e1d13297e82d7d49317bc2c59ad67cb-kernel-devel-5.4.235-144.344.amzn2.x86_64.rpm
 f1d68f4e66fbcadf439fcdb2354acc388380d30eca12d923ec704e6a88aa30ea:
   type: redhat
   packages:
