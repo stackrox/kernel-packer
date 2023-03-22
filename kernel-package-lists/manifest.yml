@@ -8191,6 +8191,12 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.96.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.96.1.x86_64.rpm
+76e619abbb0d26ad11ce6eb709c9e93e9171814cda06433bb4f9ad65f1b95cad:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.103-0gardenlinux2_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.103-gardenlinux-amd64_5.15.103-0gardenlinux2_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.103-gardenlinux-common_5.15.103-0gardenlinux2_all.deb
 76b4480bfe8affcbccde1995aa64476211001c69ecea74466aa40c517984ea05:
   type: coreos
   packages:
@@ -16618,6 +16624,12 @@ b7863b802c49161a22432a06a18eaa223826338a8c2f455f086006df8c8fc0b1:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-ca19e72b4e6b43af5c589209d1c44211800e1fd556633a0359f8e50c6b9dfacc-kernel-devel-5.10.109-104.500.amzn2.x86_64.rpm
+b8972ad04c6903786dc05921530df3c2aa174d6f508c3453a87e4d242d5315f6:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.103-0gardenlinux2_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.103-gardenlinux-cloud-amd64_5.15.103-0gardenlinux2_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.103-gardenlinux-common_5.15.103-0gardenlinux2_all.deb
 b9452a828f612e72d6919c65a4168ecea4d082069a9b0bf636e7902c5e3cc869:
   type: redhat
   packages:
