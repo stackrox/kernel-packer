@@ -6694,6 +6694,11 @@
   packages:
   - http---http.us.debian.org-debian-pool-main-l-linux-tools-linux-kbuild-4.4_4.4-4-bpo8-1_amd64.deb
   - http---dist.kope.io-apt-pool-main-l-linux-4.4.111-k8s-linux-headers-4.4.111-k8s_4.4.111-20180114_amd64.deb
+35bec0969210e1806c5ee4b2ba27995f1e52e9cd9171a9a6ec3334eed008adf3:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-40-generic_5.19.0-40.41_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-40_5.19.0-40.41_all.deb
 36c61a8c5e24870591fbaa319c0ea17bb8df2c90cfd87d7ad4f0682f7e5df981:
   type: ubuntu
   packages:
@@ -11604,6 +11609,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-122-generic_4.15.0-122.124_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-122_4.15.0-122.124_all.deb
+5222aeefa274fc868cc8fe28124408877721b760b77453dfad8b0fc74b6ab596:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-147-generic_5.4.0-147.164_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-147_5.4.0-147.164_all.deb
 5253a43c4d534da29d472d256b8fd351b445239e8a65ea2e8bbd1cc397c279bf:
   type: cos
   packages:
@@ -13314,6 +13324,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-6b551a1cec4350ced1183aca1769c137e341bc75368adc56b5c34c658f027eee-download
+348753e92ceb24514f8673d210a5f78b270aeeeff4b166edb49106f6029efb5d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.19-linux-gcp-5.19-headers-5.19.0-1020_5.19.0-1020.22-22.04.2_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.19-linux-headers-5.19.0-1020-gcp_5.19.0-1020.22-22.04.2_amd64.deb
 353546ae70bcd32c5f7ffc38efaa9d894af55e6dea5d2d075d24c5fe3fbbafa1:
   type: redhat
   packages:
@@ -17267,11 +17282,6 @@ bfba174968566cb73dcc224deaa31502d29dabed03d768863cf4773853fde784:
   packages:
   - https---storage.googleapis.com-cos-tools-12499.59.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12499.59.0-kernel-headers.tgz
-bfc288aeda5551d56073aebd073e04072f6ab97f02869028cd14192d6f212517:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-5.19-linux-gcp-5.19-headers-5.19.0-1020_5.19.0-1020.22-22.04.2_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-5.19-linux-headers-5.19.0-1020-gcp_5.19.0-1020.22-22.04.2_amd64.deb
 bffc3cee052154681085ef2a0d93cfbca6dccaba01026864c510da229b54143d:
   type: ubuntu
   packages:
