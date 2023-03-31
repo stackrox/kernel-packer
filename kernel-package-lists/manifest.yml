@@ -6121,10 +6121,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12239.39.0-kernel-headers.tgz
-22e60d16f32f3ba410351e4a02d183a1e8a0c31e2090fbc5d3be8072886ca3b0:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.1-flatcar_developer_container.bin.bz2
 22d94d3ff346c1cb54ee68337c6dcbc09b2663e2f09f518e7d6ec030dfe9ebd5:
   type: ubuntu
   packages:
@@ -18701,6 +18697,11 @@ d0a9c48ca146ec21647d71dd702e542eb33916ee65ab2fffc07adbfd71fe4bc9:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1122_4.15.0-1122.136-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1122-gcp_4.15.0-1122.136-16.04.1_amd64.deb
+d0d065bc54a020e5395a453453cea24cb354a6ce987039b1bdccb13d21ed2667:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1036-azure_5.15.0-1036.43-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1036_5.15.0-1036.43-20.04.1_all.deb
 d0b0043099f22b1b7b1086c0e922026474b6572181e30187c11378de0aa91f0d:
   type: redhat
   packages:
