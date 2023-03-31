@@ -6704,6 +6704,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-40-generic_5.19.0-40.41_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.19.0-40_5.19.0-40.41_all.deb
+035d7ca111941ceb9870888f548d778a381031c37293d90cee4ae5e2fb441b05:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.15.0-1032_5.15.0-1032.40_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.15.0-1032-gcp_5.15.0-1032.40_amd64.deb
 36c61a8c5e24870591fbaa319c0ea17bb8df2c90cfd87d7ad4f0682f7e5df981:
   type: ubuntu
   packages:
@@ -9633,6 +9638,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.132-1.el7.elrepo.x86_64.rpm
+327fff36bed5c4af1bd3d14df91ddc88473f357e7fbed3536ef764df78924378:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1154-aws_4.15.0-1154.167_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1154_4.15.0-1154.167_all.deb
 328b921540020318bb28b29cf77bbecc6ae916a408aacee1e5025cde9a4d3046:
   type: ubuntu
   packages:
@@ -20605,6 +20615,10 @@ e87f4fe3cb5549a7e43ad41c95bf74fd18dc7d02ee7eb1e74005097d6334315e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1141-aws_4.15.0-1141.152_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1141_4.15.0-1141.152_all.deb
+e87bf4c1882c27a3e89c6a273c4e65c078b5e37049f083e84feacac8f8e8b610:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-481.el8.x86_64.rpm
 e90c31f24e409d9eedd6fcf51fbcb107aa6596432f79cbb5c36125a2ed56fbbe:
   type: cos
   packages:
