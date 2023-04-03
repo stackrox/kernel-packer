@@ -17872,6 +17872,11 @@ c346c42f9cc9060cb7ba68645c0e971e3e8d30f48d20c6aac8d09cbae433b8dc:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.74.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.74.1.x86_64.rpm
+c433ce57a0f27f4d98f326ca5819e45fd19e74f489419242a4014e460488ddcd:
+  type: minikube
+  packages:
+  - https---raw.githubusercontent.com-kubernetes-minikube-v1.30.0-deploy-iso-minikube-iso-board-minikube-x86_64-linux_x86_64_defconfig-kernel-5.10.57
+  - https---cdn.kernel.org-pub-linux-kernel-v5.x-linux-5.10.57.tar.xz
 c455de5277997c1ccaeee1760dadbd7ce6182f60d3452e37ae501e585a612f35:
   type: cos
   packages:
