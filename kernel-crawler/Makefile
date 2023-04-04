@@ -252,6 +252,15 @@ crawl-rhel: build-crawl-container
 			-key /rhel-certs/rhel-key.pem \
 		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.5.txt
 
+	# Crawl for Red Hat 9.2 Beta
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+			-base-url https://download.devel.redhat.com/rhel-9/composes/RHEL-9/RHEL-9.2.0-20230324.16/compose/AppStream/x86_64/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel92-beta.txt
+
 .PHONY: crawl-fedora-coreos
 crawl-fedora-coreos: build-crawl-container
 	./scripts/run-crawler.py crawl Fedora-CoreOS > $(CRAWLED_PACKAGE_DIR)/fedora-coreos.txt

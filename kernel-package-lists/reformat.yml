@@ -238,6 +238,12 @@
   file: rhel8-rhocp4.5.txt
   reformat: single
 
+- name: rhel92
+  description: RHEL 9.2 Beta
+  type: redhat
+  file: rhel92-beta.txt
+  reformat: single
+
 - name: rhel
   description: RHEL
   type: redhat
