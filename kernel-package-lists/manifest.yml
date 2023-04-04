@@ -7738,12 +7738,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11229.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11229.0.0-kernel-headers.tgz
-62e316218a02e631d6fe286dff1190b6e6e57a5fffefb89a8a5195b492aa6dd2:
-  type: garden
-  packages:
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.101-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.101-gardenlinux-amd64_5.15.101-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.101-gardenlinux-common_5.15.101-0gardenlinux1_all.deb
 62ab2ff770bca1a2b04b0946c1806200b3227e1618330426293643d666a65216:
   type: ubuntu
   packages:
@@ -8280,6 +8274,10 @@
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.103-0gardenlinux2_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.103-gardenlinux-amd64_5.15.103-0gardenlinux2_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.103-gardenlinux-common_5.15.103-0gardenlinux2_all.deb
+76b4480bfe8affcbccde1995aa64476211001c69ecea74466aa40c517984ea05:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.0-flatcar_developer_container.bin.bz2
 76dd689668e9fd810507fde2a43c2bc229e104e2db0b538c64feae54cf0206ba:
   type: redhat
   packages:
@@ -12509,6 +12507,11 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1235.12.0-coreos_developer_container.bin.bz2
+17493d7a78be9806730c620eebcd577d0342ece33901796f3bd028f93f4fed69:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.127.53-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.127.53-kernel-headers.tgz
 18397ece349afd7c417a299bf8f07f55477180fd9c01489e7cf6fa3133daea5d:
   type: ubuntu
   packages:
@@ -14276,6 +14279,11 @@
   - https---snapshot.debian.org-archive-debian-20200214T033026Z-pool-main-l-linux-linux-kbuild-5.4_5.4.19-1_amd64.deb
   - https---snapshot.debian.org-archive-debian-20200214T033026Z-pool-main-l-linux-linux-headers-5.4.0-4-cloud-amd64_5.4.19-1_amd64.deb
   - https---snapshot.debian.org-archive-debian-20200214T033026Z-pool-main-l-linux-linux-headers-5.4.0-4-common_5.4.19-1_all.deb
+0467626313e6611be1e0e815a6dadffbf53e6cc997253a578cfdc65957b6f989:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17549.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17549.0.0-kernel-headers.tgz
 573184586d8f85377e784da9ec005a1e9382a8e44fa7b3bf36be5dbbdfcaa4fd:
   type: debian
   packages:
@@ -22161,12 +22169,6 @@ f6460a913fad00f2981d5788abf03d74fc8c3dfdc992cee07a3295479386ff63:
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2303.3.0-flatcar_developer_container.bin.bz2
-f7296bfbd3448e8f7f92a656628e90c6dc66d6fc37f544b657b6213ea7272f4e:
-  type: garden
-  packages:
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.101-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.101-gardenlinux-cloud-amd64_5.15.101-0gardenlinux1_amd64.deb
-  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.101-gardenlinux-common_5.15.101-0gardenlinux1_all.deb
 f7695fbdb3469e9e998dced58b5172943c0269ac898029621c42517d7fe555e8:
   type: ubuntu
   packages:
