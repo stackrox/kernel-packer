@@ -1959,6 +1959,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.10.1.el7.x86_64.rpm
+3a95ec2ed23663166b33ff41432983871b61b60a920e751edac41448aedf81d0:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.2.0-1003-aws_6.2.0-1003.3_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.2.0-1003_6.2.0-1003.3_all.deb
 3a96dfd529b50523b0e955ec2dfbdc795a20c2f7992da7f9087cd6f8cded5e7a:
   type: cos
   packages:
@@ -2241,6 +2246,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16623.0.5-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.0.5-kernel-headers.tgz
+3bf37e9e98124ca34c114a282cef6d62224d1f6770a8dbdbab9a777b0d632649:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-20-generic_6.2.0-20.20_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-20_6.2.0-20.20_all.deb
 3ff319b5140c05508e9ec59e07b20ca95f5654f52de4d260334480560e17c084:
   type: redhat
   packages:
@@ -4549,6 +4559,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16511.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16511.0.0-kernel-headers.tgz
+8b2bf4db52a077990663d2a127d44c12462afaaaad173fd3b733246766f64a19:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-690a31ceea9deba0f3ab3a6e88b5275d3b93121f17ead8fae60a75094d088033-kernel-devel-5.10.176-157.645.amzn2.x86_64.rpm
 8f3e0f2bd8b5870fcdc8d0e6c08fc9f82937b20d18e8441f67cbf49bb6198733:
   type: redhat
   packages:
@@ -5553,6 +5567,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.146-1.el7.elrepo.x86_64.rpm
+9ad8dd790957928e989df137340b94a0e4beb99293f951d0056dbfb76e56faef:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1003-azure_6.2.0-1003.3_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1003_6.2.0-1003.3_all.deb
 9ad9bed627495c6106b608337fd89f4731fa381fa79d54d859fa77a9d3d094f7:
   type: redhat
   packages:
@@ -11501,12 +11520,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1131-azure_4.15.0-1131.144_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1131_4.15.0-1131.144_all.deb
-3870f056b19e7b20db430d15a5df3b04d1f288cb5cb585626baec86e5ed47023:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.20-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-7-cloud-amd64_6.1.20-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-7-common_6.1.20-1_all.deb
 3876d95359dcfe4baf06953c804fe4147dff4849a6c0dd7674c3a3ef39e38b41:
   type: cos
   packages:
@@ -16542,6 +16555,11 @@ b27b583a7a2cf6f07a6c8e396cba8c8fec77ddb5d9a15917763db07431234532:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.13.0-1011-azure_4.13.0-1011.14_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.13.0-1011_4.13.0-1011.14_all.deb
+b31d1b2d5bd332e40f2ac1893af8184e004d45f34d4d10959afbf5e6937ff9d7:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.20-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-7-amd64_6.1.20-1_amd64.deb
 b32a3de1717cf1f243e508c58f686cdbbd5a536da27bd6663973627315ce64dd:
   type: redhat
   packages:
@@ -21369,6 +21387,11 @@ ed562e84f890b64119e865e9da16b3c6407ce34ce1ed700e5b3ce96d8555850c:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.10-300.fc33-x86_64-kernel-devel-5.8.10-300.fc33.x86_64.rpm
+ed764e970ebc4d81a5402a00558dfe692d6f23fd0c1a330b178cc8db6ca42988:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.2.0-1005_6.2.0-1005.5_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.2.0-1005-gcp_6.2.0-1005.5_amd64.deb
 ed894c41c602746463240eecfbae51618aad583d4733157db53e16c5211c6478:
   type: redhat
   packages:
@@ -22843,6 +22866,11 @@ ffcb82aba983fd8fef9e7a118f88c844907cd8809ee75eb18f9e85311e31e196:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1152-azure_4.15.0-1152.167_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1152_4.15.0-1152.167_all.deb
+ffe332ac91a57cd883dffaedb8d50002a2507a3e7c7c99cdef20960fa9b434e0:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.20-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-7-cloud-amd64_6.1.20-1_amd64.deb
 ffef7470b69b4956a6d9ed961af7aa9074e80728c2f56979c4d509331ac2f669:
   type: ubuntu
   packages:
