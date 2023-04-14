@@ -20419,6 +20419,12 @@ e4af70deab0747d83ed28c1e6dddf9506476c729a3bb71fc7af304ad1d5a7efe:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.10-100.fc36-x86_64-kernel-devel-6.1.10-100.fc36.x86_64.rpm
+e5f6e326352ffc1893d0556fce2cfd25422b542f7a18c482ba0768c98783e09b:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.20-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-7-cloud-amd64_6.1.20-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-7-common_6.1.20-2_all.deb
 e5a492b1fa70a71c73f07deec5597bc83766af3f609db958decde50a05aa1f84:
   type: ubuntu
   packages:
