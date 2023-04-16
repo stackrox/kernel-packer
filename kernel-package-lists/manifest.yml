@@ -1452,6 +1452,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.139.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.139.1.x86_64.rpm
+2b9755dc823ae27a4202ef21d7728d21fc5780c174f7e51ca387764192a56a77:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-21-generic_6.2.0-21.21_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-21_6.2.0-21.21_all.deb
 2a30568b03e434413747b21e3f6fc74b2ebd68c17034a75502423cd3eb839e3a:
   type: redhat
   packages:
@@ -1647,6 +1652,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-9df0d6197050f5ced3c244dd86016065e7d3fc4d912756be9e65b2f1f0ee5db8-download
+2ed7efa42a4461a38d7fd2fe3783383270cf02fc3d53700dd4a5dd447a38e0dd:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1004-azure_6.2.0-1004.4_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1004_6.2.0-1004.4_all.deb
 2fd10afc1d15851ccbe52d67bc0aab132f323ebbd6a9daea36292c9a24615788:
   type: coreos
   packages:
@@ -5042,6 +5052,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1366.21-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1366.21-kernel-headers.tgz
+8cd0856a5b77a4f2fd84f8d90e2689843227a8af6b7fe15f6fcfd6821a59fcd1:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.2.0-1004-aws_6.2.0-1004.4_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.2.0-1004_6.2.0-1004.4_all.deb
 8dd9406ccb8d4914b4a4e5b344f8da91ea494c555ca09d541a3a32a40a131006:
   type: redhat
   packages:
@@ -6362,6 +6377,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1065-fips_4.4.0-1065.71_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1065_4.4.0-1065.71_all.deb
+27bb36c4fc9596efc9a4886339ee50d91d487ad6958ce171fd486b2bf14acbb8:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.20-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-7-amd64_6.1.20-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-7-common_6.1.20-1_all.deb
 27fd4e4bce940f2a5c5d9a00f636e553818a92e4e815a1594a3213e1c6f05b6d:
   type: ubuntu
   packages:
@@ -13821,6 +13842,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1141_4.15.0-1141.157_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1141-gcp_4.15.0-1141.157_amd64.deb
+962644ed9bf2e156b00c2ce0304eccba658f085057c25e5df9a0444245876ae1:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.2.0-1006_6.2.0-1006.6_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.2.0-1006-gcp_6.2.0-1006.6_amd64.deb
 0965385dddf29f529340b4e8f2220881b94557948872a498b99ca15fea1630d4:
   type: cos
   packages:
