@@ -3999,10 +3999,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1073_4.15.0-1073.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1073-gke_4.15.0-1073.78_amd64.deb
-7a0ba1673d4a768422879d61bb81e26dd0e35437ba943d6a83ff101911ebce69:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-6.2.3-300.fc37-x86_64-kernel-devel-6.2.3-300.fc37.x86_64.rpm
 7a1dbca2c3a68b1056fbdcb31e0d9538f10514daa4ed6cf27b5ab523a7e713e3:
   type: redhat
   packages:
@@ -16906,6 +16902,11 @@ b986e8a4e3ac18f4d7e6f314546df183f35e5c8ddf680b6ec967c4a872e3da47:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1084_5.4.0-1084.92_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1084-gcp_5.4.0-1084.92_amd64.deb
+b994edd175854ac79b719a6a9fb4a98377b2f78c0af0acde26cb73addda4c270:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-209-generic_4.15.0-209.220-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-209_4.15.0-209.220-16.04.1_all.deb
 b1275fffaa8e4d5e34ddefd6ff84bf208e16c595bd4aa41f7eca3455b99fb09c:
   type: cos
   packages:
@@ -17891,6 +17892,11 @@ c21a221bf7a35bb306bb2cf4e8c72c88d52a67b7816aa2677a9d41bad2972677:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.124.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.124.1.x86_64.rpm
+c21f9936dec8c5c8c54d7af8f0744f47e9b1a3ba27c4fd74e24f206906d94135:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1148_4.15.0-1148.164-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1148-gcp_4.15.0-1148.164-16.04.1_amd64.deb
 c22db3f5a147f9f0a24ba022854219774a33bbf60a8fbb93007d61f3b91ce252:
   type: ubuntu
   packages:
@@ -22503,10 +22509,6 @@ f2793941e9ca2a711b27bb0312a0f9d160d415fddb445b22de9474bb30620516:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2247.6.0-coreos_developer_container.bin.bz2
-f3534211d5bdb2738e1fba214210d44a64a31daf4a8dae8111a32e9001cb69df:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-6.2.2-300.fc37-x86_64-kernel-devel-6.2.2-300.fc37.x86_64.rpm
 f5541023dcb5e023be50126369a90a2641734fd3c73e04d5e1c0134281210eee:
   type: redhat
   packages:
