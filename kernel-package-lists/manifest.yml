@@ -1545,6 +1545,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.7-200.fc33-x86_64-kernel-devel-5.12.7-200.fc33.x86_64.rpm
+2ca9c5f14c3bf115a4783724cb721cb327fc8b5d629bcf658ad84dbb00b13c77:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-486.el8.x86_64.rpm
 2eab44b80592a95d1a29d89eb84161293f667b648d71719a5f7996bc8800cbdb:
   type: ubuntu
   packages:
@@ -13262,6 +13266,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.0.3-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.0.3-kernel-headers.tgz
+82225e8ead941c5af6164ed6344391eb3cbef34f171130ac78f40804cf813ae2:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2072-azure-fips_4.15.0-2072.78_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2072_4.15.0-2072.78_all.deb
 82927d9f332e9c382031ca794216927ddb2981177eb177ac9c64875e44ae9ffe:
   type: ubuntu
   packages:
@@ -22654,6 +22663,11 @@ fb2c3114901279f3580c3c167155be7d3a839151c68e0a1086ac2b6c15cf1216:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1094_4.15.0-1094.107-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1094-gcp_4.15.0-1094.107-16.04.1_amd64.deb
+fb04d5dc1f43736d96a8ee0ccfab71b39e03f244c8aec64bbb2b1cf878003325:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1163-azure_4.15.0-1163.178-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1163_4.15.0-1163.178-16.04.1_all.deb
 fb5dcb0e9d911a13b4d3312c8988800c01a94aa4992372dd51f1ba6bac371f96:
   type: cos
   packages:
