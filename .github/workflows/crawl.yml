@@ -96,12 +96,12 @@ jobs:
             kernel-package-lists/manifest.yml
             kernel-crawler/kernel-crawler.log
 
-      - name: Archieve error files
+      - name: Archive error files
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: kernel-crawler-errors
-          retention-days: 1
+          retention-days: 7
           path: |
             /tmp/crawl-failed
             /tmp/make-crawl-stderr
