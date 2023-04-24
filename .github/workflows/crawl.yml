@@ -39,6 +39,10 @@ jobs:
         run: git checkout "$(echo ${{ github.ref }} | sed -E 's|refs/[a-zA-Z]+/||')"
         if: github.head_ref == ''
 
+      - name: Ensure errors artifact is uploaded
+        if: github.event_name == 'pull_request'
+        run: touch /tmp/.dummy
+
       - name: Run crawl
         if: contains(github.event.pull_request.labels.*.name, 'crawl') || github.event_name == 'schedule'
         run: |
@@ -103,6 +107,7 @@ jobs:
           name: kernel-crawler-errors
           retention-days: 7
           path: |
+            /tmp/.dummy
             /tmp/crawl-failed
             /tmp/make-crawl-stderr
 
