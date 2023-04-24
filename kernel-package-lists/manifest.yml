@@ -659,12 +659,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1012-azure_4.15.0-1012.12_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1012_4.15.0-1012.12_all.deb
-1b5de7a6a4be58a96634bef1bb6d071eb7cccb1e0f414fd8b1bb53edac747fd1:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.178-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-22-cloud-amd64_5.10.178-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-22-common_5.10.178-3_all.deb
 1f5ae19658ba851857b56ef1aceb52b4fd5166bf984a9854e610d9187e86d1a4:
   type: redhat
   packages:
@@ -19802,6 +19796,10 @@ d661911a63e3eade35d6702e083144968f53b1eaef1d07e74cedfaaf88145d77:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1049-aws_4.4.0-1049.58_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1049_4.4.0-1049.58_all.deb
+d707149e2d3580f82e884a375226f32ba16474055578a381bcc57ed45da4de75:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.3.0-63.fc39-x86_64-kernel-devel-6.3.0-63.fc39.x86_64.rpm
 d728687f7c18766b8daf0969f5a9b86746a967609b7633a3a5534c77cbf5f2cc:
   type: ubuntu
   packages:
