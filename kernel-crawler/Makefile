@@ -153,15 +153,6 @@ crawl-rhel: build-crawl-container
 
 	ls -alh $(BUILD_DATA_DIR)/rhel-certs
 
-	# Crawl for RHEL 7 kernel-devel packages.
-	./scripts/run-crawler.py \
-		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
-		--entrypoint /usr/bin/rhel-crawler \
-		-base-url https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/os \
-		-cert /rhel-certs/rhel-cert.pem \
-		-key /rhel-certs/rhel-key.pem \
-		> $(CRAWLED_PACKAGE_DIR)/rhel7.txt
-
 	# Crawl for RHEL 8 kernel-devel packages.
 	./scripts/run-crawler.py \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
