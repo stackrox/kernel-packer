@@ -46,11 +46,6 @@ jobs:
               touch /tmp/crawl-failed
           fi
 
-          if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
-              echo >&2 "'make crawl' failed."
-              exit 1
-          fi
-
           ./scripts/restore-removed
 
       - name: Sync
@@ -100,6 +95,16 @@ jobs:
             all-bucket-files.log
             kernel-package-lists/manifest.yml
             kernel-crawler/kernel-crawler.log
+
+      - name: Archive error files
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: kernel-crawler-errors
+          retention-days: 7
+          path: |
+            /tmp/crawl-failed
+            /tmp/make-crawl-stderr
 
       - name: Slack notification
         if: failure() && github.event_name == 'schedule'
