@@ -27,7 +27,7 @@ jobs:
 
     - name: Check errors
       run: |
-        if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
+        if [[ -f /tmp/crawl-failed ]] || grep -Eq '\*\*\* \[[:[:space:]a-zA-Z0-9-]+\] Error' /tmp/make-crawl-stderr ; then
             echo >&2 "'make crawl' failed."
             exit 1
         fi
