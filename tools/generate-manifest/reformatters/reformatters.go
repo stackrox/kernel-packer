@@ -2,6 +2,7 @@ package reformatters
 
 import (
 	"fmt"
+	"log"
 	"net/url"
 	"path"
 	"regexp"
@@ -226,7 +227,9 @@ func reformatDebian(packages []string) ([][]string, error) {
 		}
 
 		if len(kbuildCandidates) == 0 {
-			return nil, errors.Errorf("failed to find kbuild package for kernel version %s: candidates are %+v", version, kbuildsByKernelVersion)
+			log.Printf("failed to find kbuild package for kernel version %s: "+
+				"candidates are %+v", version, kbuildsByKernelVersion)
+			continue
 		}
 
 		sort.Slice(kbuildCandidates, func(i, j int) bool {
