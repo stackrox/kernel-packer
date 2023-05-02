@@ -258,12 +258,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.133-1.el7.elrepo.x86_64.rpm
-0b0867b24e4691df8f062ae032dad5a8601297a4f0487e7d745a278b49880166:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.269-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-23-amd64_4.19.269-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-23-common_4.19.269-1_all.deb
 0c877e8baf12d07b1364c4cb8403d8201e2653156f2989c7e0fa1839ce848081:
   type: ubuntu
   packages:
@@ -4088,12 +4082,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1063_5.4.0-1063.66_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1063-gke_5.4.0-1063.66_amd64.deb
-7a3ecb6e53228fa1747d09812cd1a41c7545f7715e7f8f90c01113396803de60:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.269-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-23-cloud-amd64_4.19.269-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-23-common_4.19.269-1_all.deb
 7a4b993cabb19037c2fe2a1bbc217438fe638822bd483510dc9086750f42f389:
   type: ubuntu
   packages:
@@ -5094,6 +5082,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-31-generic_4.4.0-31.50_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-31_4.4.0-31.50_all.deb
+8ac2616eebcb34d535691a872255a7896524cc24724d732508cbc478cd2bf489:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.282-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-23-amd64_4.19.269-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-23-common_4.19.269-1_all.deb
 8bc9019865117a14a0b1ff4fff3b6447527c373dca715e6526dc06ab830998d7:
   type: redhat
   packages:
@@ -19490,6 +19484,12 @@ d9e572ca378fadc8f4f5ce2560d86ca7ecc7920a6e4300c98f4f14f4cf4ab839:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1064-fips_4.4.0-1064.70_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1064_4.4.0-1064.70_all.deb
+d9ea0fa8c864e42215df2c95994c8f8aa5ca6197816d2bac87571d1a027ba9a7:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.282-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-23-cloud-amd64_4.19.269-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-23-common_4.19.269-1_all.deb
 d9dae2aea9accd44b927e0149dbfb06c7f77bbd8d90753f74f1683660b2acc3d:
   type: redhat
   packages:
