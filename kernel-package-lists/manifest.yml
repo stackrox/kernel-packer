@@ -420,6 +420,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.145-1.el7.elrepo.x86_64.rpm
+0dc1a2ee1cf3a785787139d84bf42b4cac669533e29509ee303df551b23a14b3:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2094-aws-fips_4.15.0-2094.100_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2094_4.15.0-2094.100_all.deb
 0fc5d8055cfcd708e2ae729aa0aab2938045ebe1d1774629320a2266ce744395:
   type: ubuntu
   packages:
@@ -18259,6 +18264,11 @@ c95e2769072fc8709e096db4682250f989e8e544470ba4d8d0c9c2af2dc90db1:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-039a8da138f69988dbb36e457c1da322e1f73c58a9318f737350f494aa0397df-download
+c95cf23b4a7b954507d2b6816ca0040612aa38f34c4be75b2b690b0b91dfb0f7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1155-aws_4.15.0-1155.168_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1155_4.15.0-1155.168_all.deb
 c139a6dc7246fcfd4f471445340d81f1e0dc3c88974d048949978ebcedb50f54:
   type: redhat
   packages:
