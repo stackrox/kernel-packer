@@ -1,5 +1,5 @@
 name: Set bucket environment variables
-description: | 
+description: |
   Sets common environment variables and gets GCP secrets for use
   during other stages.
 runs:
@@ -15,8 +15,8 @@ runs:
 
         if [[ "${{ github.event_name }}" != "schedule" ]]; then
           echo "Using staging buckets"
-          KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET},${KERNEL_PACKAGE_BUCKET}"
-          KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET},${KERNEL_BUNDLE_BUCKET}"
+          KERNEL_PACKAGE_BUCKET="${KERNEL_PACKAGE_STAGING_BUCKET}/${{ github.head_ref }},${KERNEL_PACKAGE_BUCKET}"
+          KERNEL_BUNDLE_BUCKET="${KERNEL_BUNDLE_STAGING_BUCKET}/${{ github.head_ref }},${KERNEL_BUNDLE_BUCKET}"
         fi
 
         echo "KERNEL_PACKAGE_BUCKET=${KERNEL_PACKAGE_BUCKET}" | tee -a "$GITHUB_ENV"
