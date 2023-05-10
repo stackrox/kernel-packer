@@ -15,8 +15,7 @@ import argparse
 import json
 import sys
 import urllib3
-from urllib3.util import parse_url as url_unquote
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, unquote
 from lxml import html
 from lxml.etree import ParserError
 import traceback
@@ -723,7 +722,7 @@ def crawl(distro):
                             if "include_patterns" in repo and not any(check_pattern(x,rpm) for x in repo["include_patterns"]):
                                 continue
                             else:
-                                raw_url = "{}{}".format(download_root, url_unquote(rpm))
+                                raw_url = "{}{}".format(download_root, unquote(rpm))
                                 info("Adding package " + raw_url)
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
