@@ -82,6 +82,8 @@ class Crawler:
                 "rhel-8-for-x86_64-baseos-eus-rpms",
                 "rhel-8-for-x86_64-rt-rpms",
                 "rhel-9-for-x86_64-appstream-rpms",
+                "rhel-9-for-x86_64-appstream-eus-rpms",
+                "rhocp-4.13-for-rhel-9-x86_64-rpms",
         ]
 
         self.already_crawled_packages = self.get_already_crawled_packages(rhel_package_lists)
