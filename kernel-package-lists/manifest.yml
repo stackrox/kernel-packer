@@ -2993,6 +2993,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1031-fips_4.4.0-1031.36_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1031_4.4.0-1031.36_all.deb
+5b7b4b8a3f79d49b2e31afa5169ddd04f2850ace43235079ac0e84f8824dc73e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1099_5.4.0-1099.106_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1099-gke_5.4.0-1099.106_amd64.deb
 5f7b7006023f7dd0d37d91174d7bda60e0a6bf06ac11d624974578268793b659:
   type: ubuntu
   packages:
@@ -3791,6 +3796,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.19-100.fc33-x86_64-kernel-devel-5.13.19-100.fc33.x86_64.rpm
+6eb8390bf0f8d373552bb6c5835222f450f44a8f491f665d69b0b1dcd4fe203c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1150_4.15.0-1150.166_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1150-gcp_4.15.0-1150.166_amd64.deb
 6fbc7bd1e0f3732d8e35f0e2ddfd274685046abd2283d27c18c0f73edb031efa:
   type: suse
   packages:
@@ -15566,6 +15576,10 @@ abf54468825d499e9a3408b97d3077383e36e3cc2769d54447bab5b16fac2852:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-240.el8.x86_64.rpm
+ac1c80be170212da3f432a4f6800dc0eb5a08e3c2f98eda53dd532d75e99652c:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-490.el8.x86_64.rpm
 ac01bf3ac97e9acee24607a08b80417f2ea36c2926ed549f053960f0ea922cb2:
   type: redhat
   packages:
@@ -17165,6 +17179,11 @@ bdc63268c91422b43c8c22f4c01609d3661f95ed34a149bc39e20a11bfca6a53:
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1260.26-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1260.26-kernel-headers.tgz
+bdd7adf1ea75874df96cd10bccc06abafa9e4213ee9bff387925e55635ccc064:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.159.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.159.1.x86_64.rpm
 bde1a94d56c486516707b25be6e6ce5b40332a193fb7dc3bedd957a8ca598054:
   type: ubuntu
   packages:
