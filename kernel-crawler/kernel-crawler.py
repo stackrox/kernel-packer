@@ -591,9 +591,7 @@ repos = {
             "page_pattern": "/html/body//a[regex:test(@href, '^getPackage/kernel-uek-devel-[0-9].*\.x86_64\.rpm$')]/@href",
             "subdirs": [
                 "OL7/developer_UEKR5/x86_64/",
-                "OL8/UEKR6/x86_64/",
-                "OL8/UEKR7/x86_64/",
-                "OL9/UEKR7/x86_64/",
+                "OL7/UEKR6/x86_64/",
             ],
         },
     ],
@@ -725,8 +723,7 @@ def crawl(distro):
                             if "include_patterns" in repo and not any(check_pattern(x,rpm) for x in repo["include_patterns"]):
                                 continue
                             else:
-                                base_url = urljoin(rpm, urlparse(rpm).path)
-                                raw_url = "{}{}".format(download_root, url_unquote(base_url))
+                                raw_url = "{}{}".format(download_root, url_unquote(rpm))
                                 info("Adding package " + raw_url)
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
