@@ -584,13 +584,18 @@ repos = {
         },
     ],
 
-    "Oracle-UEK5": [
-    	{
-    		"root": "http://yum.oracle.com/repo/OracleLinux/OL7/developer_UEKR5/x86_64/",
-    		"discovery_pattern": "",
-    		"page_pattern": "/html/body//a[regex:test(@href, '^getPackage/kernel-uek-devel-[0-9].*\.x86_64\.rpm$')]/@href",
-    		"subdirs": [""],
-    	},
+    "Oracle-UEK": [
+        {
+            "root": "http://yum.oracle.com/repo/OracleLinux/",
+            "discovery_pattern": "",
+            "page_pattern": "/html/body//a[regex:test(@href, '^getPackage/kernel-uek-devel-[0-9].*\.x86_64\.rpm$')]/@href",
+            "subdirs": [
+                "OL7/developer_UEKR5/x86_64/",
+                "OL8/UEKR6/x86_64/",
+                "OL8/UEKR7/x86_64/",
+                "OL9/UEKR7/x86_64/",
+            ],
+        },
     ],
     "Fedora-CoreOS" : [
         {
@@ -623,7 +628,7 @@ g_file_handler = logging.FileHandler(f'{os.environ.get("CRAWLER_LOGS_DIR", "/tmp
 g_file_handler.setLevel(logging.INFO)
 
 logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s [%(levelname)5.5s] %(message)s', 
+                    format='%(asctime)s [%(levelname)5.5s] %(message)s',
                     handlers=[g_err_handler, g_file_handler])
 
 
