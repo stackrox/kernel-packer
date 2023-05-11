@@ -13545,6 +13545,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.1185.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.1185.0-kernel-headers.tgz
+749833bb83e9452ba3751bd2f2de10a3fbb9685224ab2d2779768bf8bec4bcc8:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.110-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.110-gardenlinux-amd64_5.15.110-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.110-gardenlinux-common_5.15.110-0gardenlinux1_all.deb
 759930aec19d74dfeb74f386265e7b903f7ff932e2259502dd38ebddc466d79e:
   type: ubuntu
   packages:
@@ -21395,6 +21401,12 @@ eed83b1a95fb7384bbd31b7152f83fdc1b3dfcc65230e3cbee5d659f0c806992:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1041_4.15.0-1041.43_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1041-gke_4.15.0-1041.43_amd64.deb
+eefe04d2225dc33602914b10f3e66746f569b2f04bcae00372bf2768b29fe70d:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.110-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.110-gardenlinux-cloud-amd64_5.15.110-0gardenlinux1_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.110-gardenlinux-common_5.15.110-0gardenlinux1_all.deb
 ef0da1faa3f177cda238bebf86cd51340caed2f78124d3ce2fd07f74793a2946:
   type: coreos
   packages:
