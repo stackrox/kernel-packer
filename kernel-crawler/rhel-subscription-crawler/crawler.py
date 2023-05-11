@@ -246,7 +246,7 @@ class Crawler:
                 endpoint += '?filter=latest'
 
             for packages in self.paginate_request(endpoint, session):
-                repo_urls = self.filter_kernel_headers(packages)
+                repo_urls = self.filter_kernel_headers(packages, repo)
                 urls |= repo_urls
 
                 # Crawling all repos is expensive so save the ones that actually have packages we are
@@ -259,7 +259,7 @@ class Crawler:
 
         return urls
 
-    def filter_kernel_headers(self, packages):
+    def filter_kernel_headers(self, packages, repo):
         urls = set()
         for pkg in packages:
             pkg_name = pkg['name']
@@ -284,7 +284,7 @@ class Crawler:
 
             urls.add(url)
 
-            logger.debug(kernel)
+            logger.info(f' {repo} {kernel}')
 
 
         return urls
