@@ -28,12 +28,9 @@ runs:
 
     - shell: bash
       id: formatted-comment
-      env:
-        KERNEL_PACKAGE_BUCKETS: ${{ inputs.package-bucket }}
-        KERNEL_BUNDLE_BUCKETS: ${{ inputs.bundle-bucket }}
       run: |
-        IFS=',' read -ra KERNEL_PACKAGE_BUCKETS <<< "${{ inputs.package-bucket }}"
-        IFS=',' read -ra KERNEL_BUNDLE_BUCKETS <<< "${{ inputs.bundle-bucket }}"
+        IFS=',' read -ra KERNEL_PACKAGE_BUCKETS <<< "${{ inputs.package-buckets }}"
+        IFS=',' read -ra KERNEL_BUNDLE_BUCKETS <<< "${{ inputs.bundle-buckets }}"
         export PACKAGE_COUNT="$(gsutil ls "${KERNEL_PACKAGE_BUCKETS[0]}" | wc -l | xargs)"
         export BUNDLE_COUNT="$(gsutil ls "${KERNEL_BUNDLE_BUCKETS[0]}" | wc -l | xargs)"
         export LAST_UPDATED="$(date)"
