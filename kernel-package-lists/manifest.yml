@@ -938,6 +938,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-df22fa2234694f8e73ba96f8b0091d1295302373dd65b9a25d772bfa60fa709a-download
+1eac20cd2113c032f0286072f51c17acf991c886610c18cea40385a8a824ecf7:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1165-azure_4.15.0-1165.180_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1165_4.15.0-1165.180_all.deb
 1aac4750c721c9885e96358eb01c187d6efa5f75a63b674b7c0a92bbcf1776f0:
   type: coreos
   packages:
@@ -11695,6 +11700,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1209.3-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1209.3-kernel-headers.tgz
+5723add4945346e5a2711ca5d22db91bef4f644e723c2cec3345f437bc53e4bc:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-gke-5.15-headers-5.15.0-1033_5.15.0-1033.38-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-headers-5.15.0-1033-gke_5.15.0-1033.38-20.04.1_amd64.deb
 5737cb7c16e1bbad1d253a70b0bbd533fada02c9f7b2e9e3d76a484e0a2c945c:
   type: ubuntu
   packages:
