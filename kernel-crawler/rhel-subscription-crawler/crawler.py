@@ -66,24 +66,18 @@ class Crawler:
         ]
 
         self.repos = [
-                "rhocp-4.7-for-rhel-8-x86_64-rpms",
-                "rhel-7-server-aus-rpms",
-                "rhel-7-server-rhui-beta-rpms",
-                "rhocp-4.3-for-rhel-8-x86_64-rpms",
-                "rhocp-4.5-for-rhel-8-x86_64-rpms",
-                "rhocp-4.12-for-rhel-8-x86_64-rpms",
-                "rhel-server-ost-6-3-rpms",
                 "rhel-7-server-e4s-rpms",
-                "rhel-8-for-x86_64-baseos-rpms",
-                "rhel-7-server-rpms",
-                "rhel-7-server-eus-rpms",
                 "rhel-8-for-x86_64-baseos-e4s-rpms",
-                "rhel-8-for-x86_64-rt-tus-rpms",
-                "rhel-8-for-x86_64-baseos-eus-rpms",
+                "rhel-8-for-x86_64-appstream-e4s-rpms",
                 "rhel-8-for-x86_64-rt-rpms",
-                "rhel-9-for-x86_64-appstream-rpms",
+                "rhel-8-for-x86_64-rt-tus-rpms",
+                "rhel-9-for-x86_64-baseos-eus-rpms",
                 "rhel-9-for-x86_64-appstream-eus-rpms",
+                "rhel-9-for-x86_64-rt-rpms",
+                "rhocp-4.7-for-rhel-8-x86_64-rpms",
+                "rhocp-4.12-for-rhel-8-x86_64-rpms",
                 "rhocp-4.13-for-rhel-9-x86_64-rpms",
+                "rhocp-4.14-for-rhel-9-x86_64-rpms",
         ]
 
         self.already_crawled_packages = self.get_already_crawled_packages(rhel_package_lists)
