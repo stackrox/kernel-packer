@@ -2,9 +2,6 @@ name: Kernel Packer
 
 on:
   pull_request:
-    branches:
-    - master
-    - mauro/**
   schedule:
     - cron: '15 */2 * * *'
 
