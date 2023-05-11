@@ -19,7 +19,7 @@ jobs:
     secrets: inherit
 
   comment-on-pr:
-    uses: ./.github/workflows/comment-on-pr.yml
+    uses: ./.github/workflows/pr-comment.yml
     if: github.event_name == 'pull_request'
     needs: repackage
     secrets: inherit
