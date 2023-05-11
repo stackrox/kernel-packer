@@ -13,8 +13,8 @@ jobs:
       - uses: ./.github/actions/crawl-comment
         id: comment
         with:
-          package-bucket: ${{ env.KERNEL_PACKAGE_STAGING_BUCKET }}
-          bundle-bucket: ${{ env.KERNEL_BUNDLE_STAGING_BUCKET }}
+          package-buckets: ${{ env.KERNEL_PACKAGE_STAGING_BUCKET }}
+          bundle-buckets: ${{ env.KERNEL_BUNDLE_STAGING_BUCKET }}
           credentials: ${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}
 
       - name: Comment on PR

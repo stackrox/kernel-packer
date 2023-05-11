@@ -3,10 +3,10 @@ description: |
   Format a GitHub comment to be added to a PR, stating number of
   packages and bundles, alongside the buckets used for staging.
 inputs:
-  package-bucket:
+  package-buckets:
     description: Staging bucket for packages
     required: true
-  bundle-bucket:
+  bundle-buckets:
     description: Staging bucket for bundles
     required: true
   credentials:
@@ -29,11 +29,13 @@ runs:
     - shell: bash
       id: formatted-comment
       env:
-        KERNEL_PACKAGE_STAGING_BUCKET: ${{ inputs.package-bucket }}
-        KERNEL_BUNDLE_STAGING_BUCKET: ${{ inputs.bundle-bucket }}
+        KERNEL_PACKAGE_BUCKETS: ${{ inputs.package-bucket }}
+        KERNEL_BUNDLE_BUCKETS: ${{ inputs.bundle-bucket }}
       run: |
-        export PACKAGE_COUNT="$(gsutil ls "${KERNEL_PACKAGE_STAGING_BUCKET}" | wc -l | xargs)"
-        export BUNDLE_COUNT="$(gsutil ls "${KERNEL_BUNDLE_STAGING_BUCKET}" | wc -l | xargs)"
+        IFS=',' read -ra KERNEL_PACKAGE_BUCKETS <<< "${{ inputs.package-bucket }}"
+        IFS=',' read -ra KERNEL_BUNDLE_BUCKETS <<< "${{ inputs.bundle-bucket }}"
+        export PACKAGE_COUNT="$(gsutil ls "${KERNEL_PACKAGE_BUCKETS[0]}" | wc -l | xargs)"
+        export BUNDLE_COUNT="$(gsutil ls "${KERNEL_BUNDLE_BUCKETS[0]}" | wc -l | xargs)"
         export LAST_UPDATED="$(date)"
 
         formatted_comment="$(mktemp)"
