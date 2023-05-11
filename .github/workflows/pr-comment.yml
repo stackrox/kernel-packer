@@ -1,0 +1,25 @@
+name: Repackage Bundles
+
+on: workflow_call
+
+jobs:
+  comment-on-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ./.github/actions/env
+
+      - uses: ./.github/actions/crawl-comment
+        id: comment
+        with:
+          package-bucket: ${{ env.KERNEL_PACKAGE_STAGING_BUCKET }}
+          bundle-bucket: ${{ env.KERNEL_BUNDLE_STAGING_BUCKET }}
+          credentials: ${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}
+
+      - name: Comment on PR
+        uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            ${{ steps.comment.outputs.comment }}
+          message-id: crawl-results
+
