@@ -3,13 +3,11 @@ name: Repackage Bundles
 on: workflow_call
 
 jobs:
-  split-tasks:
+  repackage:
     runs-on: ubuntu-latest
     env:
+      MANIFEST_FILE: ./kernel-package-lists/manifest.yml
       BUILD_DATA_DIR: .build-data
-    outputs:
-      parallel-jobs-number: ${{ steps.split-packages.outputs.parallel-jobs-number }}
-      parallel-array: ${{ steps.split-packages.outputs.parallel-array }}
     steps:
       - uses: actions/checkout@v3
       - uses: google-github-actions/auth@v1
@@ -42,133 +40,22 @@ jobs:
       - name: List packages
         run: make list-files
 
-      - name: Split package file
-        id: split-packages
-        run: |
-          import math
-          import os
-          import json
-
-          packages = []
-          with open('.build-data/packages.txt') as pkg:
-            packages = list(map(str.strip, pkg.readlines()))
-
-          parallel_jobs = math.ceil(len(packages) / 500)
-          if parallel_jobs > 32:
-            parallel_jobs = 32
-
-          # split the packages into chunks
-          jobs = {i: packages[i::parallel_jobs] for i in range(parallel_jobs)}
-          parallel = list(range(parallel_jobs))
-
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
-            output.write(f'parallel-jobs-number={parallel_jobs}\n')
-            output.write(f'parallel-array={json.dumps(parallel)}\n')
-
-          with open('jobs.json', 'w') as j:
-            j.write(json.dumps(jobs))
-
-        shell: python
-
-      # This is primarily for sanity checking
-      - name: Archive package list
-        uses: actions/upload-artifact@v3
-        with:
-          name: kernel-repackage-list
-          path: |
-            .build-data/packages.txt
-
-      - name: Archive Jobs
-        uses: actions/upload-artifact@v3
-        with:
-          name: package-jobs
-          path: jobs.json
-
-      - name: Archive Cache
-        uses: actions/upload-artifact@v3
-        with:
-          name: package-cache
-          path: .build-data/cache/cache.yml
-
-  repackage:
-    runs-on: ubuntu-latest
-    needs: split-tasks
-    if: ${{ needs.split-tasks.outputs.parallel-jobs-number > 0 }}
-    strategy:
-      fail-fast: false
-      matrix:
-        packer: ${{ fromJSON(needs.split-tasks.outputs.parallel-array) }}
-    env:
-      MANIFEST_FILE: ./kernel-package-lists/manifest.yml
-      BUILD_DATA_DIR: .build-data
-    steps:
-      - uses: actions/checkout@v3
-      - uses: google-github-actions/auth@v1
-        with:
-          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
-
-      - uses: google-github-actions/setup-gcloud@v1
-
-      - uses: ./.github/actions/env
-
       - name: Build packers
         run: make packers
-
-      - name: Restore manifest
-        uses: actions/download-artifact@v3
-        with:
-          # this is archived by the crawl workflow
-          # see .github/workflows/crawl.yml for details
-          name: kernel-crawler-manifest
-          path: kernel-package-lists
-
-      - name: Download Jobs
-        uses: actions/download-artifact@v3
-        with:
-          name: package-jobs
-
-      - name: Download Cache
-        uses: actions/download-artifact@v3
-        with:
-          name: package-cache
-          path: .build-data/cache/
-
-      - name: Write package file
-        run: |
-          import os
-          import json
-
-          with open('jobs.json') as jobs:
-            packages = json.load(jobs)
-
-          with open(os.environ['BUILD_DATA_DIR'] + '/packages.txt', 'w') as output:
-            for package in packages["${{ matrix.packer }}"]:
-              output.write(package + "\n")
-        shell: python
 
       - name: Repackage
         run: |
           mkdir -p "${BUILD_DATA_DIR}/packages"
 
-          # split into 100 line chunks, to avoid overloading the node
-          # with huge amounts of package downloads
-          split -l 100 --numeric-suffixes "${BUILD_DATA_DIR}/packages.txt" "${BUILD_DATA_DIR}/chunk"
+          ./scripts/download-packages "${BUILD_DATA_DIR}" "${KERNEL_PACKAGE_BUCKET}"
 
-          #
-          # Download each chunk of 100 packages, repackage them, upload to
-          # the bucket, and then clean up to keep disk usage low
-          #
-          for chunk in "${BUILD_DATA_DIR}"/chunk*; do
-            ./scripts/download-packages "${BUILD_DATA_DIR}" "${KERNEL_PACKAGE_BUCKET}" "${chunk}"
+          make repackage
 
-            make repackage
+          ./scripts/upload-bundles "${BUILD_DATA_DIR}" "$KERNEL_BUNDLE_BUCKET"
 
-            ./scripts/upload-bundles "${BUILD_DATA_DIR}" "$KERNEL_BUNDLE_BUCKET"
-
-            # clean up repackaged bundles and packages
-            rm -rf "${BUILD_DATA_DIR}/packages/*"
-            rm -rf "${BUILD_DATA_DIR}/bundles/*"
-          done
+          # clean up repackaged bundles and packages
+          rm -rf "${BUILD_DATA_DIR}/packages/*"
+          rm -rf "${BUILD_DATA_DIR}/bundles/*"
 
       - name: Cache
         run: make combine-cache clean-cache
@@ -183,10 +70,10 @@ jobs:
         run: make robo-collector-commit
         env:
           ROBOT_ROX_GITHUB_TOKEN: ${{ secrets.ROBOT_ROX_GITHUB_TOKEN }}
+
   notify:
     runs-on: ubuntu-latest
     needs:
-      - split-tasks
       - repackage
     if: always() && contains(join(needs.*.result, ','), 'failure') && github.event_name == 'schedule'
     steps:
