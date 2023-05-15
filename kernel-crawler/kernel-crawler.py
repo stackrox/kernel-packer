@@ -15,8 +15,7 @@ import argparse
 import json
 import sys
 import urllib3
-from urllib3.util import parse_url as url_unquote
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, unquote
 from lxml import html
 from lxml.etree import ParserError
 import traceback
@@ -584,13 +583,16 @@ repos = {
         },
     ],
 
-    "Oracle-UEK5": [
-    	{
-    		"root": "http://yum.oracle.com/repo/OracleLinux/OL7/developer_UEKR5/x86_64/",
-    		"discovery_pattern": "",
-    		"page_pattern": "/html/body//a[regex:test(@href, '^getPackage/kernel-uek-devel-[0-9].*\.x86_64\.rpm$')]/@href",
-    		"subdirs": [""],
-    	},
+    "Oracle-UEK": [
+        {
+            "root": "http://yum.oracle.com/repo/OracleLinux/",
+            "discovery_pattern": "",
+            "page_pattern": "/html/body//a[regex:test(@href, '^getPackage/kernel-uek-devel-[0-9].*\.x86_64\.rpm$')]/@href",
+            "subdirs": [
+                "OL7/developer_UEKR5/x86_64/",
+                "OL7/UEKR6/x86_64/",
+            ],
+        },
     ],
     "Fedora-CoreOS" : [
         {
@@ -623,7 +625,7 @@ g_file_handler = logging.FileHandler(f'{os.environ.get("CRAWLER_LOGS_DIR", "/tmp
 g_file_handler.setLevel(logging.INFO)
 
 logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s [%(levelname)5.5s] %(message)s', 
+                    format='%(asctime)s [%(levelname)5.5s] %(message)s',
                     handlers=[g_err_handler, g_file_handler])
 
 
@@ -720,8 +722,7 @@ def crawl(distro):
                             if "include_patterns" in repo and not any(check_pattern(x,rpm) for x in repo["include_patterns"]):
                                 continue
                             else:
-                                base_url = urljoin(rpm, urlparse(rpm).path)
-                                raw_url = "{}{}".format(download_root, url_unquote(base_url))
+                                raw_url = "{}{}".format(download_root, unquote(rpm))
                                 info("Adding package " + raw_url)
                                 prefix, suffix = raw_url.split('://', maxsplit=1)
                                 kernel_urls.append('://'.join((prefix, os.path.normpath(suffix))))
