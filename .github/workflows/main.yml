@@ -21,8 +21,13 @@ jobs:
   comment-on-pr:
     uses: ./.github/workflows/pr-comment.yml
     if: github.event_name == 'pull_request'
-    needs: repackage
+    needs:
+    - crawl
+    - repackage
     secrets: inherit
+    with:
+      uploaded-packages: ${{ needs.crawl.outputs.uploaded-packages }}
+      uploaded-bundles: ${{ needs.repackage.outputs.uploaded-bundles }}
 
   check-errors:
     needs: crawl

@@ -1,6 +1,11 @@
 name: Repackage Bundles
 
-on: workflow_call
+on:
+  workflow_call:
+    outputs:
+      uploaded-bundles:
+        description: Number of bundles uploaded to GCP.
+        value: ${{ jobs.repackage.outputs.uploaded-bundles }}
 
 jobs:
   repackage:
@@ -8,6 +13,9 @@ jobs:
     env:
       MANIFEST_FILE: ./kernel-package-lists/manifest.yml
       BUILD_DATA_DIR: .build-data
+    outputs:
+      uploaded-bundles: ${{ steps.uploaded-bundles.outputs.uploaded-bundles }}
+
     steps:
       - uses: actions/checkout@v3
       - uses: google-github-actions/auth@v1
@@ -56,6 +64,12 @@ jobs:
           # clean up repackaged bundles and packages
           rm -rf "${BUILD_DATA_DIR}/packages/*"
           rm -rf "${BUILD_DATA_DIR}/bundles/*"
+
+      - name: Uploaded bundles
+        id: uploaded-bundles
+        run: |
+          IFS=',' read -r -a bucket_names <<< "$KERNEL_BUNDLE_BUCKET"
+          echo "uploaded-bundles=$(gsutil ls "${bucket_names[0]}" | wc -l | xargs)" >> "${GITHUB_OUTPUT}"
 
       - name: Cache
         run: make combine-cache clean-cache

@@ -1,6 +1,11 @@
 name: Crawl
 
-on: workflow_call
+on:
+  workflow_call:
+    outputs:
+      uploaded-packages:
+        description: Number of packages uploaded to GCP.
+        value: ${{ jobs.crawl.outputs.uploaded-packages }}
 
 jobs:
   crawl:
@@ -17,6 +22,9 @@ jobs:
       SUSE_MIRRORING_PASSWORD: ${{ secrets.SUSE_MIRRORING_PASSWORD }}
       UBUNTU_ESM_SUBSCRIPTION_TOKEN: ${{ secrets.UBUNTU_ESM_SUBSCRIPTION_TOKEN }}
       UBUNTU_FIPS_SUBSCRIPTION_TOKEN: ${{ secrets.UBUNTU_FIPS_SUBSCRIPTION_TOKEN }}
+    outputs:
+      uploaded-packages: ${{ steps.uploaded-packages.outputs.uploaded-packages }}
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -56,6 +64,12 @@ jobs:
         run: |
           make sync
           git --no-pager diff kernel-package-lists
+
+      - name: Uploaded packages
+        id: uploaded-packages
+        run: |
+          IFS=',' read -r -a bucket_names <<< "$KERNEL_PACKAGE_BUCKET"
+          echo "uploaded-packages=$(gsutil ls "${bucket_names[0]}" | wc -l | xargs)" >> "${GITHUB_OUTPUT}"
 
       - name: Manifest
         run: |
