@@ -8,19 +8,30 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/env
-
-      - uses: ./.github/actions/crawl-comment
-        id: comment
+      - uses: google-github-actions/auth@v1
         with:
-          package-buckets: ${{ env.KERNEL_PACKAGE_BUCKET }}
-          bundle-buckets: ${{ env.KERNEL_BUNDLE_BUCKET }}
-          credentials: ${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}
+          credentials_json: '${{ inputs.credentials }}'
+      - uses: google-github-actions/setup-gcloud@v1
+
+      - uses : ./.github/actions/env
+
+      - shell: bash
+        id: formatted-comment
+        run: |
+          IFS=',' read -ra KERNEL_PACKAGE_BUCKETS <<< "${KERNEL_PACKAGE_BUCKET}"
+          IFS=',' read -ra KERNEL_BUNDLE_BUCKETS <<< "${KERNEL_BUNDLE_BUCKET}"
+          export PACKAGE_COUNT="$(gsutil ls "${KERNEL_PACKAGE_BUCKETS[0]}" | wc -l | xargs)"
+          export BUNDLE_COUNT="$(gsutil ls "${KERNEL_BUNDLE_BUCKETS[0]}" | wc -l | xargs)"
+          export LAST_UPDATED="$(date)"
+
+          formatted_comment="$(mktemp)"
+
+          envsubst < ${{ github.action_path }}/comment.md > "${formatted_comment}"
+          echo "comment-file=${formatted_comment}" >> "${GITHUB_OUTPUT}"
 
       - name: Comment on PR
         uses: mshick/add-pr-comment@v2
         with:
-          message: |
-            ${{ steps.comment.outputs.comment }}
+          message-path: ${{ steps.formatted-comment.outputs.comment-file }}
           message-id: crawl-results
 
