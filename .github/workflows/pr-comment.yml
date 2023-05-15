@@ -33,7 +33,7 @@ jobs:
 
           formatted_comment="$(mktemp)"
 
-          envsubst < ${{ github.action_path }}/comment.md > "${formatted_comment}"
+          envsubst < ${{ github.workspace }}/.github/workflows/comment.md > "${formatted_comment}"
           echo "comment-file=${formatted_comment}" >> "${GITHUB_OUTPUT}"
 
       - name: Comment on PR
