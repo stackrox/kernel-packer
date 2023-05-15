@@ -34,7 +34,14 @@ jobs:
           PACKAGE_COUNT: ${{ inputs.uploaded-packages }}
           BUNDLE_COUNT: ${{ inputs.uploaded-bundles }}
         run: |
+          IFS=',' read -r -a package_buckets <<< "$KERNEL_PACKAGE_BUCKET"
+          IFS=',' read -r -a bundle_buckets <<< "$KERNEL_BUNDLE_BUCKET"
+
+          export KERNEL_PACKAGES_STAGING_BUCKET
+          export KERNEL_BUNDLES_STAGING_BUCKET
           export LAST_UPDATED
+          KERNEL_PACKAGES_STAGING_BUCKET="${package_buckets[0]}"
+          KERNEL_BUNDLES_STAGING_BUCKET="${bundle_buckets[0]}"
           LAST_UPDATED="$(date)"
 
           formatted_comment="$(mktemp)"
