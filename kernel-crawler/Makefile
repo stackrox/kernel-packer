@@ -162,7 +162,7 @@ crawl-rhel-internal: build-crawl-container build-rhel-certs
 		-base-url https://ocp-artifacts.hosts.prod.psi.rdu2.redhat.com/pub/RHOCP/plashets/4.13/stream/el9/latest/x86_64/os/ \
 		-cert /rhel-certs/rhel-cert.pem \
 		-key /rhel-certs/rhel-key.pem \
-		> $(CRAWLED_PACKAGE_DIR)/rhel-rhocp4.13.txt
+		> $(CRAWLED_PACKAGE_DIR)/rhel9-rhocp4.13.txt
 
 	# Crawl RHOCP 4.14
 	./scripts/run-crawler.py \
@@ -171,7 +171,7 @@ crawl-rhel-internal: build-crawl-container build-rhel-certs
 		-base-url https://ocp-artifacts.hosts.prod.psi.rdu2.redhat.com/pub/RHOCP/plashets/4.14/stream/el9/latest/x86_64/os/ \
 		-cert /rhel-certs/rhel-cert.pem \
 		-key /rhel-certs/rhel-key.pem \
-		> $(CRAWLED_PACKAGE_DIR)/rhel-rhocp4.14.txt
+		> $(CRAWLED_PACKAGE_DIR)/rhel9-rhocp4.14.txt
 
 .PHONY: crawl-rhel
 crawl-rhel: build-crawl-container build-rhel-certs

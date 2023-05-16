@@ -23,8 +23,8 @@ crawl:
 sync-internal-with-crawl:
 	make -C kernel-crawler crawl-rhel-internal
 	@mkdir -p $(BUILD_DATA_DIR)/downloads
-	@./scripts/sync $(CRAWLED_PACKAGE_DIR)/rhel-rhocp4.13.txt $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
-	@./scripts/sync $(CRAWLED_PACKAGE_DIR)/rhel-rhocp4.14.txt $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
+	@./scripts/sync $(CRAWLED_PACKAGE_DIR)/rhel9-rhocp4.13.txt $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
+	@./scripts/sync $(CRAWLED_PACKAGE_DIR)/rhel9-rhocp4.14.txt $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
 
 .PHONY: manifest
 manifest: package-inventory
