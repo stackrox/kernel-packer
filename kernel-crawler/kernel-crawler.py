@@ -591,6 +591,7 @@ repos = {
             "subdirs": [
                 "OL7/developer_UEKR5/x86_64/",
                 "OL7/UEKR6/x86_64/",
+                "OL8/UEKR7/x86_64/",
             ],
         },
     ],
