@@ -16,6 +16,16 @@ crawl-all: crawl sync manifest
 crawl:
 	make -C kernel-crawler crawl
 
+# Crawl internal rhel repos and then sync the packages
+#   Environment variables needed: REDHAT_USERNAME, REDHAT_PASSWORD, KERNEL_PACKAGE_BUCKET
+#   GCP write access needed to upload files to $KERNEL_PACKAGE_BUCKET
+.PHONY: sync-internal-with-crawl
+sync-internal-with-crawl:
+	make -C kernel-crawler crawl-rhel-internal
+	@mkdir -p $(BUILD_DATA_DIR)/downloads
+	@./scripts/sync $(CRAWLED_PACKAGE_DIR)/rhel-rhocp4.13.txt $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
+	@./scripts/sync $(CRAWLED_PACKAGE_DIR)/rhel-rhocp4.14.txt $(KERNEL_PACKAGE_BUCKET) $(BUILD_DATA_DIR)/downloads
+
 .PHONY: manifest
 manifest: package-inventory
 	@go run ./tools/generate-manifest/main.go \

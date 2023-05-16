@@ -250,6 +250,18 @@
   file: rhel-uncrawled.txt
   reformat: single
 
+- name: rhel-rhocp4.13
+  description: RHEL RHOCP 4.13
+  type: redhat
+  file: rhel-rhocp4.13.txt
+  reformat: single
+
+- name: rhel-rhocp4.14
+  description: RHEL RHOCP 4.14
+  type: redhat
+  file: rhel-rhocp4.14.txt
+  reformat: single
+
 - name: suse
   description: SUSE
   type: suse

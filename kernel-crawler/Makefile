@@ -140,8 +140,8 @@ crawl-rhsm: build-rhsm-crawler
 	docker run -e RHSM_OFFLINE_TOKEN --rm -i -v $(CRAWLED_PACKAGE_DIR):/kernel-package-lists:ro rhsm-crawler:latest > $(CRAWLED_PACKAGE_DIR)/rhel.txt
 	@sed -i 's/[@\^\r]//g' $(CRAWLED_PACKAGE_DIR)/rhel.txt
 
-.PHONY: crawl-rhel
-crawl-rhel: build-crawl-container
+.PHONY: build-rhel-certs
+build-rhel-certs: build-crawl-container
 	# Trade a username & password for a certificate keypair that allows up to
 	# authenticate with the RHEL package repos.
 	@mkdir -p $(BUILD_DATA_DIR)/rhel-certs
@@ -153,6 +153,28 @@ crawl-rhel: build-crawl-container
 
 	ls -alh $(BUILD_DATA_DIR)/rhel-certs
 
+.PHONY: crawl-rhel-internal
+crawl-rhel-internal: build-crawl-container build-rhel-certs
+	# Crawl RHOCP 4.13
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		-base-url https://ocp-artifacts.hosts.prod.psi.rdu2.redhat.com/pub/RHOCP/plashets/4.13/stream/el9/latest/x86_64/os/ \
+		-cert /rhel-certs/rhel-cert.pem \
+		-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel-rhocp4.13.txt
+
+	# Crawl RHOCP 4.14
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+		-base-url https://ocp-artifacts.hosts.prod.psi.rdu2.redhat.com/pub/RHOCP/plashets/4.14/stream/el9/latest/x86_64/os/ \
+		-cert /rhel-certs/rhel-cert.pem \
+		-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel-rhocp4.14.txt
+
+.PHONY: crawl-rhel
+crawl-rhel: build-crawl-container build-rhel-certs
 	# Crawl for RHEL 7 kernel-devel packages.
 	./scripts/run-crawler.py \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
