@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '15 */2 * * *'
 
+permissions:
+  pull-requests: write
+
 jobs:
   crawl:
     uses: ./.github/workflows/crawl.yml
@@ -14,6 +17,17 @@ jobs:
     uses: ./.github/workflows/repackage.yml
     needs: crawl
     secrets: inherit
+
+  comment-on-pr:
+    uses: ./.github/workflows/pr-comment.yml
+    if: github.event_name == 'pull_request'
+    needs:
+    - crawl
+    - repackage
+    secrets: inherit
+    with:
+      uploaded-packages: ${{ needs.crawl.outputs.uploaded-packages }}
+      uploaded-bundles: ${{ needs.repackage.outputs.uploaded-bundles }}
 
   check-errors:
     needs: crawl

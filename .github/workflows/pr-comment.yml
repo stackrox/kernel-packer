@@ -1,0 +1,57 @@
+name: Repackage Bundles
+
+on:
+  workflow_call:
+    inputs:
+      uploaded-bundles:
+        description: Number of bundles uploaded to GCP.
+        type: string
+        required: true
+      uploaded-packages:
+        description: Number of packages uploaded to GCP.
+        type: string
+        required: true
+
+
+
+jobs:
+  comment-on-pr:
+    runs-on: ubuntu-latest
+    if: inputs.uploaded-bundles != 0 || inputs.uploaded-packages != 0
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS_KERNEL_CACHE }}'
+      - uses: google-github-actions/setup-gcloud@v1
+
+      - uses : ./.github/actions/env
+
+      - shell: bash
+        id: formatted-comment
+        env:
+          PACKAGE_COUNT: ${{ inputs.uploaded-packages }}
+          BUNDLE_COUNT: ${{ inputs.uploaded-bundles }}
+        run: |
+          IFS=',' read -r -a package_buckets <<< "$KERNEL_PACKAGE_BUCKET"
+          IFS=',' read -r -a bundle_buckets <<< "$KERNEL_BUNDLE_BUCKET"
+
+          export KERNEL_PACKAGES_STAGING_BUCKET
+          export KERNEL_BUNDLES_STAGING_BUCKET
+          export LAST_UPDATED
+          KERNEL_PACKAGES_STAGING_BUCKET="${package_buckets[0]}"
+          KERNEL_BUNDLES_STAGING_BUCKET="${bundle_buckets[0]}"
+          LAST_UPDATED="$(date)"
+
+          formatted_comment="$(mktemp)"
+
+          envsubst < ${{ github.workspace }}/.github/workflows/comment.md > "${formatted_comment}"
+          echo "comment-file=${formatted_comment}" >> "${GITHUB_OUTPUT}"
+
+      - name: Comment on PR
+        uses: mshick/add-pr-comment@v2
+        with:
+          message-path: ${{ steps.formatted-comment.outputs.comment-file }}
+          message-id: crawl-results
+
