@@ -71,6 +71,8 @@ class Crawler:
                 "rhel-8-for-x86_64-appstream-e4s-rpms",
                 "rhel-8-for-x86_64-rt-rpms",
                 "rhel-8-for-x86_64-rt-tus-rpms",
+                "rhel-9-for-x86_64-baseos-rpms",
+                "rhel-9-for-x86_64-appstream-rpms",
                 "rhel-9-for-x86_64-baseos-eus-rpms",
                 "rhel-9-for-x86_64-appstream-eus-rpms",
                 "rhel-9-for-x86_64-rt-rpms",
