@@ -10330,6 +10330,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.235.30-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.235.30-kernel-headers.tgz
+459fad3a03cb5a56ef614c5f5db3eb10d7242f227479df8e7700fa00e8544876:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-151-generic_5.4.0-151.168_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-151_5.4.0-151.168_all.deb
 460b9dc526bebb3e722bc4ba3239816a3db05393422960d7761ca076ce4e43ee:
   type: redhat
   packages:
@@ -13278,6 +13283,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1033-fips_4.4.0-1033.38_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1033_4.4.0-1033.38_all.deb
+42922ebf93bc2b576c33113b1f01368df0fe8c6c68372f1325c1f9c9b52824f4:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1077-fips_5.4.0-1077.86_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1077_5.4.0-1077.86_all.deb
 43055e2e05076a867b583feb4228374e6a0c313a9c52e7f938056997298d88c0:
   type: ubuntu
   packages:
@@ -18512,11 +18522,6 @@ c13aa83e4b690239d2c635b851a721205207e850acf4d7daffca78604b18e93d:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.18.17-100.fc35-x86_64-kernel-devel-5.18.17-100.fc35.x86_64.rpm
-c16e2c3353e8aae4c4c661c54186b613406fab0d913eb35a852deecbe6cd890b:
-  type: ubuntu
-  packages:
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1150-azure_4.15.0-1150.165-16.04.1_amd64.deb
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1150_4.15.0-1150.165-16.04.1_all.deb
 c016b5d6f340585cc9eed3756f6a5d60256fee6c62988cff533d69e0975e5d41:
   type: ubuntu
   packages:
@@ -19337,6 +19342,11 @@ cd3c01d0d23bd5585c51fdb977984e90f160613087a88ec022a8d94704028fad:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.56.1.el7.x86_64.rpm
+cd3be6a7426b1d784297283af742bd32971e09d2fcb11a80131aba3b76743417:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-211-generic_4.15.0-211.222-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-211_4.15.0-211.222-16.04.1_all.deb
 cd6fc812fc075628334c39010de92e2d22ef2c8783db7f74de23785460f6c16a:
   type: redhat
   packages:
@@ -19799,6 +19809,11 @@ d6cab2d7f34a101cd3ffddd100dd762e919327e622ef3fda63e2500c08552f7c:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-72-generic_5.4.0-72.80_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-72_5.4.0-72.80_all.deb
+d6fc7f1e37001c8100b7d61ab3f07aaefc5e06b7c6640ee6010544af015171bb:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1150_4.15.0-1150.166-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1150-gcp_4.15.0-1150.166-16.04.1_amd64.deb
 d7c4b144706c4367ba74d069a5d175355057d3a201558be132271a73c7536b18:
   type: ubuntu
   packages:
