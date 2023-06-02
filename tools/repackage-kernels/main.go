@@ -233,7 +233,8 @@ func build(builder manifest.Builder, id string, pkgDir string, bundleDir string)
 	}
 
 	// Construct the command line to execute.
-	var cmd, args, err = command.DockerCommand(id, builder.Kind, outputDir, packages)
+	var cmd, args, err = command.DockerCommand(builder.Image, id, builder.Kind,
+		outputDir, packages)
 	if err != nil {
 		return errors.Wrap(err, "failed to construct docker command")
 	}
