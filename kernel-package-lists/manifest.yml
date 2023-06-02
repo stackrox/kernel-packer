@@ -11337,6 +11337,12 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-8c90c323c68d211e21f0e2846f52a8a3aea0f269d48016ce304cb7713ca3e546-download
+833dedcd2446ac184bf4dac22a1c5739b2640453adbdf0d6f7c6952aef19474c:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.114-0gardenlinux3_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.114-gardenlinux-amd64_5.15.114-0gardenlinux3_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.114-gardenlinux-common_5.15.114-0gardenlinux3_all.deb
 837fb0bf1c54002f5b0ecf4f5506d9c1fa65f5d0e53ba5064d5fbe1d6f5ce127:
   type: ubuntu
   packages:
@@ -21148,6 +21154,12 @@ ddf9dae9db5e64d9bb8bddd279c47f6194c7e0782e4c3fe790a986b2d48a4859:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1138_4.15.0-1138.154-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1138-gcp_4.15.0-1138.154-16.04.1_amd64.deb
+ddf46e8d52ed4a1ad35c8f37d609746210c84a98ab14e66e697bcfadbf90c956:
+  type: garden
+  packages:
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.114-0gardenlinux3_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.114-gardenlinux-cloud-amd64_5.15.114-0gardenlinux3_amd64.deb
+  - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.114-gardenlinux-common_5.15.114-0gardenlinux3_all.deb
 de0bdfde27e761f4d352cf24011931ae61509016a7d540ee951676d6dc2d77f7:
   type: redhat
   packages:
