@@ -43,7 +43,7 @@ ubuntu_excludes = [
     "5.10.0-13.14",  # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
     "5.15.0-1001.3", # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
     "6.2.0-23", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
-    "6.3.0-4", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
+    "6.3.0", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
 ]
 ubuntu_backport_supported = [
     "16.04",
