@@ -42,6 +42,9 @@ centos_excludes = [
 ubuntu_excludes = [
     "5.10.0-13.14",  # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
     "5.15.0-1001.3", # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
+    "5.15.0-1035", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
+    "5.19.0-1026", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
+    "5.19.0-1028", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
     "6.2.0-23", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
     "6.3.0", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
 ]
