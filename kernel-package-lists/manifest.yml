@@ -1016,6 +1016,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.8-100.fc32-x86_64-kernel-devel-5.9.8-100.fc32.x86_64.rpm
+1ebdedf517f3f4e63fa9066516f37562bdeffea0fe761fa75cb33598ed7a70c1:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.3.0-6-generic_6.3.0-6.6_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.3.0-6_6.3.0-6.6_all.deb
 1cc27e35ab02572c1f2cd468842a0dac76641837e6f27cd6ded1eb8af137abe8:
   type: ubuntu
   packages:
@@ -18434,6 +18439,11 @@ bfba174968566cb73dcc224deaa31502d29dabed03d768863cf4773853fde784:
   packages:
   - https---storage.googleapis.com-cos-tools-12499.59.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12499.59.0-kernel-headers.tgz
+bfea33eb6aef8ff924f0031f0bf26610d09beb84886c03b0b67beba0531e89f2:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.19.0-1026_5.19.0-1026.28_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.19.0-1026-gcp_5.19.0-1026.28_amd64.deb
 bffae1b8ab5f7dc7d28e6703c30b6ed17f63520ba4e6cde54c42dc527259a577:
   type: oracle
   packages:
