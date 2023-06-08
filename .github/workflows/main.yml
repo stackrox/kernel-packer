@@ -2,6 +2,7 @@ name: Kernel Packer
 
 on:
   pull_request:
+    types: [opened, reopened, labeled, unlabeled]
   schedule:
     - cron: '15 */2 * * *'
 
