@@ -16121,6 +16121,11 @@ a3481e8ae388d0505daef47ff9b3ed25a2689cb559faa7b212c0391b8e4d9d1f:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.2.13-100.fc36-x86_64-kernel-devel-6.2.13-100.fc36.x86_64.rpm
+a3846b2d8cbb1c544a392f9f02a95c61a13825f2e21eba1cbfc9e2b5ed808c40:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-152-generic_5.4.0-152.169_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-152_5.4.0-152.169_all.deb
 a3993c31b95f5cb52fb33d84b9997a4497ced89a9973d25ca9a3b9f911d998e3:
   type: redhat
   packages:
@@ -19011,6 +19016,10 @@ c781cd61be6fb4142ca764203706ad8fd9d69b16ac3e44799fde7165a6f6a1f2:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2102.201.3.el7uek.x86_64.rpm
+c790a9c4d5cdac809fdf2ab335ee5e036ed8129b48563301e22f796d5b97d3f0:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3417.1.0-flatcar_developer_container.bin.bz2
 c943e28d4808c44b6e87c1942ef097395452b4757e50971522ffde2578536aa9:
   type: redhat
   packages:
