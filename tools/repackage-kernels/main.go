@@ -252,7 +252,7 @@ func saveCacheFragment(builder manifest.Builder, id string, bundle string, cache
 	)
 
 	// A cache fragment contains a single entry.
-	mf.AddBuilder(manifest.Builder{builder.Kind, builder.Packages, bundle, nodeIndex})
+	mf.AddBuilder(manifest.Builder{builder.Kind, builder.Packages, bundle, nodeIndex, ""})
 
 	err := manifest.Save(mf, filename)
 	return errors.Wrap(err, "failed to save cache fragment")
