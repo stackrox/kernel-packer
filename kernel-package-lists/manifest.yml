@@ -3299,6 +3299,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.0.3.el8_1.x86_64.rpm
+5b788f706030eb7b48bebee4cbeb8878aae243ce1bde4ffe7d339bc6cf195c13:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.402.27-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.402.27-kernel-headers.tgz
 5e812e7e1b918ca26a5878e37ddd096e0fffa3314ec4b3e977956c0269be5b2d:
   type: redhat
   packages:
@@ -16953,6 +16958,10 @@ afaf2dbd3e5803359a3b2754a33bd87d5219ebfa4b713691a88bb28f580c433a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1102-azure_4.15.0-1102.113_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1102_4.15.0-1102.113_all.deb
+afbf3e9eee497ce5f1e5e2c9a06fa4f3267348ccfd04f3851f85f5b7d78598ed:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-acbd4e5d95a403f130ec6b9b6fc6aaf5c6a27d8e580515cbf47af564375dd448-kernel-devel-5.4.242-159.350.amzn2.x86_64.rpm
 afc5304933d7563ba0963b341c9f98d4fc4636b0f535a259f206e469e14f4af4:
   type: cos
   packages:
@@ -17621,6 +17630,10 @@ b377f34d2311dc3dfcb22a1b0dc830ebaea6f4be282ed6e390f062c0fc6baeb4:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-51-generic_4.4.0-51.72_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-51_4.4.0-51.72_all.deb
+b0403adf40837f124cbeef76491d6ad3b2fe4933d22baacd7df4e8cc016070f2:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d8dbc8cf2c36ff9eaee2d915bbaf9a6e6ff8af150816d2a09c82430a16c34d28-kernel-devel-5.10.179-171.711.amzn2.x86_64.rpm
 b450ba4887156618be684e22ea997afe6dd73768b1fa834265d9582b552104f5:
   type: ubuntu
   packages:
