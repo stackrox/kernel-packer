@@ -550,6 +550,7 @@ repackage_ubuntu() {
         # Compress only part of the file hierarchy into a tarball.
         tar --create --dereference --hard-dereference --file - \
             --exclude ./scripts/dtc \
+            --exclude ./rust \
             --directory "$meta_dir" . \
             --directory "${tmp_dir}/usr/src/linux-headers-${kernel_version}" . \
         | pigz -9 -c > "${output_dir}/bundle-${bundle_kernel_version}.tgz"
