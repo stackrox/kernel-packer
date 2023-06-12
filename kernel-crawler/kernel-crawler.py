@@ -46,6 +46,7 @@ ubuntu_excludes = [
     "5.19.0-1026", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
     "5.19.0-1028", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
     "6.2.0-23", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
+    "6.2.0-1005", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
     "6.3.0", # excluding this kernel temporarily due to dkpg compatibility issues, ROX-17277.
 ]
 ubuntu_backport_supported = [
