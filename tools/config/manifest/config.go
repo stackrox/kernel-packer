@@ -5,10 +5,12 @@ import (
 	"fmt"
 	"io/ioutil"
 	"path/filepath"
+	"regexp"
 	"sort"
 
 	"github.com/fatih/color"
 	"github.com/pkg/errors"
+	"github.com/stackrox/kernel-packer/tools/generate-manifest/reformatters"
 	"gopkg.in/yaml.v2"
 )
 
@@ -22,14 +24,58 @@ type Builder struct {
 	Packages  []string `yaml:"packages"`
 	Bundle    string   `yaml:"bundle,omitempty"`
 	NodeIndex int      `yaml:"nodeIndex,omitempty"`
+	Image     string   `yaml:"image,omitempty"`
 }
+
+type ImageThreshold struct {
+	KernelVersion string
+	ImageName     string
+}
+
+var (
+	numericVersionRegex = regexp.MustCompile(`(\d\.\d+\.\d+)`)
+
+	kindImageMapping = map[string][]ImageThreshold{
+		"ubuntu": []ImageThreshold{
+			ImageThreshold{
+				KernelVersion: "6.2.0",
+				ImageName:     "repackage-bookworm",
+			},
+		},
+	}
+)
 
 // Adds a Builder with the given kind and packages to the Manifest under an
 // id derived by checksumming the given set of packages.
 func (m Manifest) Add(kind string, packages []string) {
 	var id = checksumStrings(packages)
+
+	// An empty image tag will be omitted
+	image := ""
+	parts := []string{}
+
+	// Take the version from the first package, under the assumption that all
+	// the items should have the same kernel version
+	if len(packages) > 0 {
+		parts = numericVersionRegex.FindStringSubmatch(packages[0])
+	}
+
+	// Verify corresponding image mappings
+	if len(parts) > 1 {
+		mapping, exists := kindImageMapping[kind]
+
+		if exists {
+			for _, versionToImage := range mapping {
+				if !reformatters.VersionLess(parts[1], versionToImage.KernelVersion) {
+					image = versionToImage.ImageName
+				}
+			}
+		}
+	}
+
 	m[id] = Builder{
 		Kind:     kind,
+		Image:    image,
 		Packages: packages,
 	}
 }

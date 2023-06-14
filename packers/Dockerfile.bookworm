@@ -1,0 +1,40 @@
+FROM debian:bookworm
+
+RUN apt-get update \
+ && apt-get upgrade -y \
+ && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
+      binutils \
+      make \
+      gcc \
+      gcc-12-plugin-dev \
+      libelf-dev \
+      libc6-dev \
+      bc \
+      coreutils \
+      dpkg \
+      lbzip2 \
+      multipath-tools \
+      pigz \
+      tar \
+      ca-certificates \
+      golang \
+      rsync \
+      libssl-dev \
+      git \
+      libtool \
+      build-essential \
+      wget \
+      python3 \
+      unzip \
+      bison \
+      flex \
+      zstd \
+      curl \
+      jq   \
+ ;
+
+COPY includes /etc/includes
+
+COPY entrypoint /usr/bin/entrypoint
+
+ENTRYPOINT ["/usr/bin/entrypoint"]

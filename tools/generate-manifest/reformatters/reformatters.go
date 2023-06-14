@@ -143,7 +143,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 
 	for _, pkgInfos := range kbuildsByKernelVersion {
 		sort.Slice(pkgInfos, func(i, j int) bool {
-			return versionLess(pkgInfos[j].packageVersion, pkgInfos[i].packageVersion)
+			return VersionLess(pkgInfos[j].packageVersion, pkgInfos[i].packageVersion)
 		})
 	}
 
@@ -171,7 +171,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 
 	for _, pkgInfos := range headersByKernelVersion {
 		sort.Slice(pkgInfos, func(i, j int) bool {
-			return versionLess(pkgInfos[j].packageVersion, pkgInfos[i].packageVersion)
+			return VersionLess(pkgInfos[j].packageVersion, pkgInfos[i].packageVersion)
 		})
 	}
 
@@ -233,7 +233,7 @@ func reformatDebian(packages []string) ([][]string, error) {
 		}
 
 		sort.Slice(kbuildCandidates, func(i, j int) bool {
-			return versionLess(kbuildCandidates[j].packageVersion, kbuildCandidates[i].packageVersion)
+			return VersionLess(kbuildCandidates[j].packageVersion, kbuildCandidates[i].packageVersion)
 		})
 
 		commonHeaderPkg := ""

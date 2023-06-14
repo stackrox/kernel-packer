@@ -233,7 +233,8 @@ func build(builder manifest.Builder, id string, pkgDir string, bundleDir string)
 	}
 
 	// Construct the command line to execute.
-	var cmd, args, err = command.DockerCommand(id, builder.Kind, outputDir, packages)
+	var cmd, args, err = command.DockerCommand(builder.Image, id, builder.Kind,
+		outputDir, packages)
 	if err != nil {
 		return errors.Wrap(err, "failed to construct docker command")
 	}
@@ -251,7 +252,7 @@ func saveCacheFragment(builder manifest.Builder, id string, bundle string, cache
 	)
 
 	// A cache fragment contains a single entry.
-	mf.AddBuilder(manifest.Builder{builder.Kind, builder.Packages, bundle, nodeIndex})
+	mf.AddBuilder(manifest.Builder{builder.Kind, builder.Packages, bundle, nodeIndex, ""})
 
 	err := manifest.Save(mf, filename)
 	return errors.Wrap(err, "failed to save cache fragment")

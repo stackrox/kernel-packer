@@ -10,7 +10,7 @@ var (
 	numericVersionRegex = regexp.MustCompile(`^\d+(?:\.\d+)*`)
 )
 
-func versionLess(versionA, versionB string) bool {
+func VersionLess(versionA, versionB string) bool {
 	numericA := numericVersionRegex.FindString(versionA)
 	numericB := numericVersionRegex.FindString(versionB)
 
