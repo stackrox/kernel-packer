@@ -1292,6 +1292,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-91-generic_4.4.0-91.114_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-91_4.4.0-91.114_all.deb
+2c3dd7c16d8a8ba60c6d517f52d7e24e2b1635f6e084f126f493e20527631160:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.2.0-1007_6.2.0-1007.7_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.2.0-1007-gcp_6.2.0-1007.7_amd64.deb
+  image: repackage-bookworm
 2b4f5e23e9864a24b8a4ed2a1732cd766cf37fa9051bf40dc2f481b109ee268d:
   type: redhat
   packages:
