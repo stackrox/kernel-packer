@@ -9356,6 +9356,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.15-200.fc33-x86_64-kernel-devel-5.11.15-200.fc33.x86_64.rpm
+89cd69ddec4b9956a6fef73f931f4664185bf9030fa04b78dd46918a0e87b275:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.3.9-200.fc38-x86_64-kernel-devel-6.3.9-200.fc38.x86_64.rpm
 89be0a36d6810f3c46afc2679247d440a2ca8c8b93e2f283be6b7b6326ba1a63:
   type: cos
   packages:
@@ -15832,6 +15836,12 @@ a9e38096cbf0a5db5cf8927e61c6a3373d376d41969891b025f3f84fea9b0704:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1967.3.0-coreos_developer_container.bin.bz2
+a9a64456cede16010966f756868a0cd2be68614549bb6441c2e4f417533ad218:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.4_6.4-rc7-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.4.0-0-amd64_6.4-rc7-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.4.0-0-common_6.4-rc7-1-exp1_all.deb
 a9c086920cb8f21c59fac706e04a65fc7fb9c0db13ed03074ebea9afc40f13f8:
   type: redhat
   packages:
@@ -16920,6 +16930,10 @@ ade941c671de276d6849dd820825e8b99dab4cd32116da17e751a324eea2fd74:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.5-os-Packages-k-kernel-devel-4.18.0-193.12.1.el8_2.x86_64.rpm
+adf0ff406638cc385288a3d85e53b5686a9fef19d853001eddd108074a6c1333:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.3.9-100.fc37-x86_64-kernel-devel-6.3.9-100.fc37.x86_64.rpm
 adf2c28480deeff3470c62be33cbfe6459b4d69c1b01d03903af5fb857f648c1:
   type: ubuntu
   packages:
@@ -21751,6 +21765,12 @@ e3f56512e57a210b6c38999cbe8d5d54142b2a579c5111ed611fc52baac3b3d3:
   packages:
   - https---storage.googleapis.com-cos-tools-16623.341.40-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.341.40-kernel-headers.tgz
+e3fb72e48598c2508cd22d37e2eedbd90eabdca30a27b9e94b6a479b7ee78687:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.4_6.4-rc7-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.4.0-0-cloud-amd64_6.4-rc7-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.4.0-0-common_6.4-rc7-1-exp1_all.deb
 e3bd5e8e44b2659d5f4ab7856e972173065d5bb9a4f3137c2fec392ccfbf28a6:
   type: cos
   packages:
