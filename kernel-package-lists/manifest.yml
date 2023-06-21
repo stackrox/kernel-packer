@@ -21725,6 +21725,12 @@ e3f56512e57a210b6c38999cbe8d5d54142b2a579c5111ed611fc52baac3b3d3:
   packages:
   - https---storage.googleapis.com-cos-tools-16623.341.40-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.341.40-kernel-headers.tgz
+e3fb72e48598c2508cd22d37e2eedbd90eabdca30a27b9e94b6a479b7ee78687:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.4_6.4-rc7-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.4.0-0-cloud-amd64_6.4-rc7-1-exp1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.4.0-0-common_6.4-rc7-1-exp1_all.deb
 e3bd5e8e44b2659d5f4ab7856e972173065d5bb9a4f3137c2fec392ccfbf28a6:
   type: cos
   packages:
