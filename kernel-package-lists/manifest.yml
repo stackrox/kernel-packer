@@ -1556,12 +1556,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.139.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.139.1.x86_64.rpm
-2b9755dc823ae27a4202ef21d7728d21fc5780c174f7e51ca387764192a56a77:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-21-generic_6.2.0-21.21_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-21_6.2.0-21.21_all.deb
-  image: repackage-bookworm
 2a30568b03e434413747b21e3f6fc74b2ebd68c17034a75502423cd3eb839e3a:
   type: redhat
   packages:
@@ -21978,6 +21972,11 @@ e058f21b8904163e1706ca0c855eaa6d614d7558e67598a748c41bc66d2f3d84:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-a40cba4111b8536d4da21ac71115db9f9f402969c25db5c8b2ac33a641dc2da5-download
+e59f6cbdef7c9cb3b533637201d3c27a1498e50d1b043f92bb80a4da6f5c4e84:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-213-generic_4.15.0-213.224_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-213_4.15.0-213.224_all.deb
 e62b7e6163aebeaaea450144843f0a4031171a8c006689556fc20626f1ef71e7:
   type: coreos
   packages:
