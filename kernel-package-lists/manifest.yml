@@ -20244,10 +20244,6 @@ d7dbcd6eb64a0045ce1ed07211c4a44b7ae5d7638d33eb8d74d82c4cf8054e55:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2136.307.3.4.el7uek.x86_64.rpm
-d7ec31d47ec25382fae27c191bd60be4a994d554e040f86c76171193873a6c6b:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-3374.2.2-flatcar_developer_container.bin.bz2
 d7edc9ca1e32d51342c892407186b80f25784da575e3bf48caf850a33eeee347:
   type: cos
   packages:
@@ -23898,6 +23894,10 @@ f919203a016d5e9e54e1af337d924559b03a9931cca9769a1cb05172c4a58f2c:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-22c5779860b2bb6f372c0ae6aad690f49675b5c77969d0a6da4e969c7ac89b54-download
+f2590488da13bf7b627f664b2cb370588b3db1eb168a998e297e6371711d44c4:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.4.0-59.fc39-x86_64-kernel-devel-6.4.0-59.fc39.x86_64.rpm
 f2793941e9ca2a711b27bb0312a0f9d160d415fddb445b22de9474bb30620516:
   type: coreos
   packages:
