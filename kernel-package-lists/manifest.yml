@@ -2497,6 +2497,10 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1114_4.15.0-1114.128-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1114-gcp_4.15.0-1114.128-16.04.1_amd64.deb
+03dc57545acf8cfcaf55897d98bf2520d37968e7c7758e898a0d7f2e71a15ea0:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-63f8860c7b7747cfe19efeddff23e10a4d4a87a972490316690a1f96a39232ae-download
 03ed890c83613542613c3b8ebc418439648bd247a6b89acfd115a67a27bf31c7:
   type: ubuntu
   packages:
@@ -10154,10 +10158,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2061-aws-fips_4.15.0-2061.63_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2061_4.15.0-2061.63_all.deb
-280ee31fec1e32441b5699f8cc759797c5aa6d361129c9d5779444b665191809:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2983.1.0-flatcar_developer_container.bin.bz2
 280bf8a56a788326570cd5ba4de0d567a5dfaeb9450c01916c327d974f8a4a14:
   type: redhat
   packages:
@@ -11121,10 +11121,6 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-497.el8.x86_64.rpm
-697d35cb8cdb536390a4c722f70620eeee922d2d116bfda1aa7c2e0032b0f22f:
-  type: redhat
-  packages:
-  - https---api.access.redhat.com-management-v1-packages-4b8601411e809cde83654f899096a08a17c1ef9106cd231bb58760663de75606-download
 698e8b2049272aca1c9be00a8602f3dd8a3ecb6184efa376fbec095cc2706f2c:
   type: cos
   packages:
@@ -18167,6 +18163,10 @@ ba1807400fbc5bba14ab62001a31eb60186da733450b4c7c695dadbab7696f61:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1072-fips_4.15.0-1072.81_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1072_4.15.0-1072.81_all.deb
+baa9d1abc2193f1233c777c689226c9b9fd2a42b953f5bbdde4057cf6890d942:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-477.15.1.el8_8.x86_64.rpm
 bab58523ab6b4cebcd72d79aabd1c628bc10d92bd06eae21d0fc8274386ec7a3:
   type: cos
   packages:
