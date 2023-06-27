@@ -3139,6 +3139,10 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.el7uek.x86_64.rpm
+5c5b46f6fa7e796204d7b9ba5799ad4399769f7c013f34d9c37026c3f4360be3:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-499.el8.x86_64.rpm
 5a5b174c55809ac4887372ba6dca057454a8b34900d2efe3403076b41fd32c73:
   type: oracle
   packages:
@@ -23002,6 +23006,11 @@ efb9187399934f7ada77d180ad4ab8fee379268db9277f84ba97f84023c32256:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.el8.x86_64.rpm
+efbbc017afbc033ab69aea3b2c7c1f441660cadd9dc1da439d3eb3f23f084f09:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.402.36-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.402.36-kernel-headers.tgz
 efcb6ec80bf0e29562c33d7b3d7192385316af1b457308783ba4e39da83fa920:
   type: redhat
   packages:
@@ -23028,6 +23037,10 @@ effa6e589c9d24ade05d3c9df04724f4b5e13aab38aca8ea8fcfc4eeaf7f7692:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.13-linux-headers-5.13.0-1013-azure_5.13.0-1013.15-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.13-linux-azure-5.13-headers-5.13.0-1013_5.13.0-1013.15-20.04.1_all.deb
+f0f4e75a04effd5412ac66d5830e256099a3a10bc5f4c2ae5b11aad3b9f087b1:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-d28822e6b600617678f887ea9a7a08726918156aa7de1ec659f836d19071378f-kernel-devel-4.14.318-240.529.amzn2.x86_64.rpm
 f0f84de5d2b2e2f00ae6f07da7efb3ab3b45616650c4367883b2d8761b263b3c:
   type: ubuntu
   packages:
