@@ -3417,6 +3417,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1039_5.3.0-1039.42_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1039-gke_5.3.0-1039.42_amd64.deb
+5a849844060a86e6fd73d658ce212b070a968db19a1db9f8fb7ba2467cd4d675:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-gke-5.15-headers-5.15.0-1037_5.15.0-1037.42-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-headers-5.15.0-1037-gke_5.15.0-1037.42-20.04.1_amd64.deb
 5d8673092248b0995dbc4fd9488ab4ccce11926a96cab236b543041a538fef1a:
   type: ubuntu
   packages:
@@ -3643,6 +3648,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1046-fips_5.4.0-1046.52_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1046_5.4.0-1046.52_all.deb
+05d3c144c1a4fd231d43f808c1f2ed6727422fd347a7ed0d75e6da802f44afe3:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.15.0-1037_5.15.0-1037.42_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.15.0-1037-gke_5.15.0-1037.42_amd64.deb
 05f3aa51651f20fab195f22331c58c3054bd30fa64de2e9fd2c7ee285037991b:
   type: cos
   packages:
@@ -9867,6 +9877,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1073-aws_4.4.0-1073.83_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1073_4.4.0-1073.83_all.deb
+142e425635140f39df2635f7569a9aeb5b1b9724b64623a7746573841b19bf09:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-29b284843ea49851c831e50b840c175b20baf92fc508ef46890322e0d470fefc-kernel-devel-5.10.184-175.731.amzn2.x86_64.rpm
 142ea7fc96458e3fa60e662dc37a8a9be2558c4bb0332536a8b2aae80ff0d81e:
   type: ubuntu
   packages:
@@ -14067,6 +14081,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.8-200.fc33-x86_64-kernel-devel-5.9.8-200.fc33.x86_64.rpm
+93463bcf9a008eff2174d65ebdc4aea5b338b9da11578192e64c1ce8c1df5538:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-c2e28c88a6649d9333baac438151a85575e08083c2b185f7ba2bd9b5470e11f5-kernel-devel-5.4.247-162.350.amzn2.x86_64.rpm
 94225b4903fd35bea2333d3a44bcefec90dc9c4c07c50601096a2be1f8f78fee:
   type: redhat
   packages:
