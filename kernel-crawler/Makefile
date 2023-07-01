@@ -265,7 +265,7 @@ crawl-rhel: build-crawl-container build-rhel-certs
 			-key /rhel-certs/rhel-key.pem \
 		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.4.txt
 
-	## Crawl for Red Hat OpenShift Container Platform 4.5 for RHEL 8 x86_64 (rhocp-4.5-for-rhel-8-x86_64-rpms)
+	# Crawl for Red Hat OpenShift Container Platform 4.5 for RHEL 8 x86_64 (rhocp-4.5-for-rhel-8-x86_64-rpms)
 	./scripts/run-crawler.py \
 		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
 		--entrypoint /usr/bin/rhel-crawler \
@@ -273,6 +273,69 @@ crawl-rhel: build-crawl-container build-rhel-certs
 			-cert /rhel-certs/rhel-cert.pem \
 			-key /rhel-certs/rhel-key.pem \
 		> $(CRAWLED_PACKAGE_DIR)/rhel8-rhocp4.5.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.6 for RHEL 8 x86_64 (rhocp-4.6-for-rhel-8-x86_64-rpms)
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.6/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rocp4.6.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.7 for RHEL 8 x86_64 (rhocp-4.7-for-rhel-8-x86_64-rpms)
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.7/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rocp4.7.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.8 for RHEL 8 x86_64 (rhocp-4.8-for-rhel-8-x86_64-rpms)
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.8/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rocp4.8.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.9 for RHEL 8 x86_64 (rhocp-4.9-for-rhel-8-x86_64-rpms)
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.9/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rocp4.9.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.10 for RHEL 8 x86_64 (rhocp-4.10-for-rhel-8-x86_64-rpms)
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.10/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rocp4.10.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.11 for RHEL 8 x86_64 (rhocp-4.11-for-rhel-8-x86_64-rpms)
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.11/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rocp4.11.txt
+
+	# Crawl for Red Hat OpenShift Container Platform 4.12 for RHEL 8 x86_64 (rhocp-4.12-for-rhel-8-x86_64-rpms)
+	./scripts/run-crawler.py \
+		-v "$(BUILD_DATA_DIR)/rhel-certs:/rhel-certs:ro" \
+		--entrypoint /usr/bin/rhel-crawler \
+			-base-url https://cdn.redhat.com/content/dist/layered/rhel8/x86_64/rhocp/4.12/os \
+			-cert /rhel-certs/rhel-cert.pem \
+			-key /rhel-certs/rhel-key.pem \
+		> $(CRAWLED_PACKAGE_DIR)/rhel8-rocp4.12.txt
 
 .PHONY: crawl-fedora-coreos
 crawl-fedora-coreos: build-crawl-container
