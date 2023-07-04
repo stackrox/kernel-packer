@@ -7960,6 +7960,12 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.34.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.34.1.x86_64.rpm
+53de51bc28f4f92d87b38971a051afc2ad7de0e72c5ceb271d4719a41aea3c60:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.2.0-1007-aws_6.2.0-1007.7_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.2.0-1007_6.2.0-1007.7_all.deb
+  image: repackage-bookworm
 54c2b4e7065bc391ba910415c92a8681a23a0ca136c221e4121ad92f9b458b87:
   type: redhat
   packages:
@@ -15026,6 +15032,12 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.229-1.el7.elrepo.x86_64.rpm
+7403259cb97c131e37cbea564c9b7b8eb97632d7c24df359ae59a15cced2295f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.2.0-1009_6.2.0-1009.9_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.2.0-1009-gcp_6.2.0-1009.9_amd64.deb
+  image: repackage-bookworm
 7528145d6b304c3ee7a1228af4d7a7034a2acaf878956bfc7cde9a118788ac37:
   type: redhat
   packages:
@@ -21017,6 +21029,12 @@ d673ae161b91f5e30696d77eac892957c8d91bae3ff0ad0935cd3269223b0809:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-headers-5.11.0-1028-aws_5.11.0-1028.31-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.11-linux-aws-5.11-headers-5.11.0-1028_5.11.0-1028.31-20.04.1_all.deb
+d683ff07de4ed7ef73261550769c294edeeca70db746eaab14cd2b98f418e226:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1007-azure_6.2.0-1007.7_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1007_6.2.0-1007.7_all.deb
+  image: repackage-bookworm
 d717ba2ab1d7066d35c51c3b895bc819945b342e5bc31d93424558bb2787c53b:
   type: redhat
   packages:
