@@ -4122,6 +4122,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.1-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.56.1.el8_1.x86_64.rpm
+6acc1a0ce884a8a9698e891bcdee93de05b72d659e501d4e93a47ce6d62c66f7:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.37-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.37-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-10-common_6.1.37-1_all.deb
 6dcc29b4517ab009ff40fdff3c4f2c1c0b5f2da2c41f4ef0947fbd40696835ac:
   type: redhat
   packages:
@@ -13811,6 +13817,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.8.8-100.fc31-x86_64-kernel-devel-5.8.8-100.fc31.x86_64.rpm
+49892bba13800afcb0eb5f8d91b7208355dcb76bb54af14b8b7d7abefd63cd47:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-500.el8.x86_64.rpm
 50472b4eb6f3642e336857ed8f688a31af1f8529916263a52414de763cfcd92a:
   type: coreos
   packages:
@@ -17189,6 +17199,12 @@ aeb82a2d820216d88322274a65d15cbc47770225825cf835c381d76249afc265:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm
+aeb37366dea2c2936d097fd8ff4c8f5bdb97fc5145d0bb80db71aefb806a902f:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.37-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.37-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-10-common_6.1.37-1_all.deb
 aedafc013ab71239ff010ef8c36e3dcf31af92f26b8140704b7f782817bea98d:
   type: ubuntu
   packages:
