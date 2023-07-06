@@ -1526,6 +1526,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-71aeb93ee1f2a632d957561cc088fcfbed53712f07c26003896d7b6261afcb4b-kernel-devel-4.14.241-184.433.amzn2.x86_64.rpm
+2c916e6615a8d4d0973ef32fcc1d4985e560513b87533f80a254f2100cd217f6:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-3510.2.4-flatcar_developer_container.bin.bz2
 2b978b834dfd5a146d31eeacbb584cb817e350000c6e43b17688ca29afd2c61f:
   type: ubuntu
   packages:
@@ -22908,6 +22912,10 @@ eabe15ed32f7465428fcb3a312fdf8e971d44531076ecfcb5c3e770da5beab30:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-46-generic_4.15.0-46.49_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-46_4.15.0-46.49_all.deb
+eac224cbdedaf402e73464a0ab235851002be4715f75422fa22361de85ffd8c9:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3602.1.2-flatcar_developer_container.bin.bz2
 eacbdfb969e9acd009ba7876b950590bd7b1670a6a72f828ce93a27c3a96d7ba:
   type: minikube
   packages:
