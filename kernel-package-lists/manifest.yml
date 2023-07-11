@@ -3878,10 +3878,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1087-aws_4.4.0-1087.98_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1087_4.4.0-1087.98_all.deb
-6a73e299cf6b547fbaeeb9fb660a81572ea0adb894db51566556a0144d643eb8:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-3227.2.1-flatcar_developer_container.bin.bz2
 6d74b1e38d4ae73f782fa76142ec42796a38217a5d6e82fa3dbd19e82d26401c:
   type: redhat
   packages:
@@ -22383,6 +22379,10 @@ e55ee1a8843a5b25914cbed80fb3d88eb1ac7e3518aa58a73d4c3ee4168477ed:
   packages:
   - https---storage.googleapis.com-cos-tools-15053.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-15053.0.0-kernel-headers.tgz
+e56e879975f9d1bfe4a434b43d430b36d036b02ae90ffd603fad9b4f447cb2f5:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.4.3-200.fc38-x86_64-kernel-devel-6.4.3-200.fc38.x86_64.rpm
 e57a99e1a2bfa32a39f3ee3be39f0629d64dbf45b82be8ccceff3a0d1636bb41:
   type: ubuntu
   packages:
