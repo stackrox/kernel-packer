@@ -16326,12 +16326,6 @@ a93d0791c9ebfa5014b992aa182f3d86daa72d899d12f2b532613e217f63bbac:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.12-100.fc36-x86_64-kernel-devel-6.1.12-100.fc36.x86_64.rpm
-a93fb2c1b0e2d0ced478c0570f9b74c25d084cf34b945b287152b5b5db7c663c:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-amd64_5.10.179-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-1_all.deb
 a95aa071a4aaf7e0b8125ea81ca5a3724349f26f3d356e9464425dcc980baac5:
   type: coreos
   packages:
@@ -18401,6 +18395,12 @@ b605383d47f2611f0ed2398945ccbc1d534360028fb9832c43eb7ab7459ccfbe:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-372.9.1.el8.x86_64.rpm
+b788055ced61722d62d873e99512b1d60066b5a3db75392d67f248d0f2d17f03:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-1_all.deb
 b893652ffb1b847647b7448fbac9c7626d243fb4ac7514b0f9f0d18feab06c90:
   type: cos
   packages:
