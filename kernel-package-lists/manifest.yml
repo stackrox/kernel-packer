@@ -6305,6 +6305,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2136.308.9.el7uek.x86_64.rpm
+10a33bbea467c83c3cb8c24b4c832a1696aa1bb1ccc7280d5c6ffe2d2d46fd7c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.15.0-1039_5.15.0-1039.47_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.15.0-1039-gcp_5.15.0-1039.47_amd64.deb
 10d32917151365d666dae2c71078d3cd481c23e6a3e1eee48a992c537df78c1b:
   type: redhat
   packages:
