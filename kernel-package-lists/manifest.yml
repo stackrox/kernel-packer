@@ -16326,6 +16326,12 @@ a93d0791c9ebfa5014b992aa182f3d86daa72d899d12f2b532613e217f63bbac:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.12-100.fc36-x86_64-kernel-devel-6.1.12-100.fc36.x86_64.rpm
+a93fb2c1b0e2d0ced478c0570f9b74c25d084cf34b945b287152b5b5db7c663c:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-amd64_5.10.179-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-1_all.deb
 a95aa071a4aaf7e0b8125ea81ca5a3724349f26f3d356e9464425dcc980baac5:
   type: coreos
   packages:
@@ -16784,10 +16790,6 @@ aa09e415d7c664e8223934f94d4cb207ab5f741b47de327f9b18cfcbdaf76c5c:
   packages:
   - https---storage.googleapis.com-cos-tools-17162.210.40-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17162.210.40-kernel-headers.tgz
-aa035fcbefb725419e78ae53fb8b137f2b85281e9504da7084a47a4019a45fbd:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-2135.6.0-flatcar_developer_container.bin.bz2
 aa86b611fb8ad0c3d34734a0526845020daea5feb86c80cdce961882eebd5a42:
   type: ubuntu
   packages:
