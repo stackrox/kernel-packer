@@ -12140,6 +12140,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.4-201.fc35-x86_64-kernel-devel-5.15.4-201.fc35.x86_64.rpm
+1492cf52bec10455a495fad657042410d494bca8c60e3240ca7536ff0b134f0f:
+  type: minikube
+  packages:
+  - https---raw.githubusercontent.com-kubernetes-minikube-v1.31.0-deploy-iso-minikube-iso-board-minikube-x86_64-linux_x86_64_defconfig-kernel-5.10.57
+  - https---cdn.kernel.org-pub-linux-kernel-v5.x-linux-5.10.57.tar.xz
 01538f1a5d34e6f6a05ec15c4861308e54621406b511392a4e7dd7744dda31af:
   type: suse
   packages:
