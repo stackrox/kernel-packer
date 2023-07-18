@@ -1192,6 +1192,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-179-generic_4.4.0-179.209_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-179_4.4.0-179.209_all.deb
+01f033e53f63f541dd4f1a71b29c18a34d8e67bd8d572ceec57cacde220bd1b8:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-amd64_5.10.179-2_amd64.deb
 01c74f8847ccf8331905e317f2877b47b4cc52e223a005baa5004bca47861d50:
   type: oracle
   packages:
@@ -7125,6 +7130,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.5-os-Packages-k-kernel-rt-devel-4.18.0-193.12.1.rt13.63.el8_2.x86_64.rpm
+32c5f91f3fd17404c4402d21aaf3eab70c7daa50843f95b91bebebd2aca1f1e6:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-2_amd64.deb
 32e6ba6a042a1ce93bea2e090890ce72778e5d088b7b7e6241086edd59fd6f7d:
   type: oracle
   packages:
@@ -18395,12 +18405,6 @@ b605383d47f2611f0ed2398945ccbc1d534360028fb9832c43eb7ab7459ccfbe:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-372.9.1.el8.x86_64.rpm
-b788055ced61722d62d873e99512b1d60066b5a3db75392d67f248d0f2d17f03:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-1_all.deb
 b893652ffb1b847647b7448fbac9c7626d243fb4ac7514b0f9f0d18feab06c90:
   type: cos
   packages:
