@@ -3657,6 +3657,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-f8c26994c97054d642b13997c31708a8e56e2c453f52a97135608b05c98438d9-download
+5fda38281e5504fc52cfd4986a7eeaf56d7eee5b51c1e0f012b96cde4878ed2b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1041-aws_5.15.0-1041.46_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1041_5.15.0-1041.46_all.deb
 5ddd5286e54ac98e56d2a4e21b10fba3a0ad25957a8ba0f77973ad428ad157b0:
   type: redhat
   packages:
@@ -14402,6 +14407,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8.2-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.0.3.el8_1.x86_64.rpm
+144951a657d54aec0eb82b0f5ccf796c7b7e88c54295722b60d87cb13ae83eed:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1009-azure_6.2.0-1009.9_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1009_6.2.0-1009.9_all.deb
+  image: repackage-bookworm
 152513d11375669b15847d79d131fedc491ab073ab4edbcd3e0c4f724fd10d01:
   type: cos
   packages:
