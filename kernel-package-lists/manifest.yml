@@ -691,6 +691,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1043-fips_5.4.0-1043.49_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1043_5.4.0-1043.49_all.deb
+1a4c34cd8ccb501f2cede50395ee8af84674ccfa9bd19e6522084a68785d36a8:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.12-os-Packages-k-kernel-rt-devel-4.18.0-372.64.1.rt7.222.el8_6.x86_64.rpm
 1e4c65340610d99b5e73ccf2db5c89bb0d207e82a7fc68884268a98216383e82:
   type: ubuntu
   packages:
@@ -3413,6 +3417,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1111-azure_5.4.0-1111.117_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1111_5.4.0-1111.117_all.deb
+5a5518a695f445a5ac5228aabfcec516901243e11576d3684bb5f9137f6cbebc:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.11-os-Packages-k-kernel-devel-4.18.0-372.64.1.el8_6.x86_64.rpm
 5b6235e2a2c20887d019aa97f734d8506a291abd88926d507bab1111f9b5b653:
   type: redhat
   packages:
@@ -4193,10 +4201,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-158-generic_4.15.0-158.166_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-158_4.15.0-158.166_all.deb
-6dd8df30dd4ff0ecfde2ae59b899c03cc990710c7ea9cf93f654fe869125db7d:
-  type: redhat
-  packages:
-  - https---api.access.redhat.com-management-v1-packages-833f491c35ee131298799d19b480a017bada93d06ce1780ea07b9e5ad5f064af-download
 6cd9650a759530aae9d5804deeaa940321749e328ad55c0bbf5962a0e1049d97:
   type: cos
   packages:
@@ -9032,10 +9036,6 @@
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.103-0gardenlinux2_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.103-gardenlinux-amd64_5.15.103-0gardenlinux2_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.103-gardenlinux-common_5.15.103-0gardenlinux2_all.deb
-76b4480bfe8affcbccde1995aa64476211001c69ecea74466aa40c517984ea05:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3033.1.0-flatcar_developer_container.bin.bz2
 76dd689668e9fd810507fde2a43c2bc229e104e2db0b538c64feae54cf0206ba:
   type: redhat
   packages:
@@ -13709,6 +13709,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1019_5.4.0-1019.19_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1019-gcp_5.4.0-1019.19_amd64.deb
+29774a91ee6785bb7aa1b05e007f5a8d1fe87c9c5eec1e0fedac6f3796743369:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.12-os-Packages-k-kernel-devel-4.18.0-372.64.1.el8_6.x86_64.rpm
 29905e5dd9fb33ef8a0f9d1541e723c9eeff5b4561d404571ddf380ae04742ac:
   type: redhat
   packages:
@@ -16361,6 +16365,12 @@ a93d0791c9ebfa5014b992aa182f3d86daa72d899d12f2b532613e217f63bbac:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.12-100.fc36-x86_64-kernel-devel-6.1.12-100.fc36.x86_64.rpm
+a93fb2c1b0e2d0ced478c0570f9b74c25d084cf34b945b287152b5b5db7c663c:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-amd64_5.10.179-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-1_all.deb
 a95aa071a4aaf7e0b8125ea81ca5a3724349f26f3d356e9464425dcc980baac5:
   type: coreos
   packages:
@@ -23263,6 +23273,10 @@ ecc0df9f0834aa8435d0c4df1ea3621da3c4b30ff1d015a1b60bd2dbd757632e:
   packages:
   - https---storage.googleapis.com-cos-tools-16919.235.46-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.235.46-kernel-headers.tgz
+ecc39a4ccd7c9b0acec756a22a4bb8874d6f745ae876e86399dd38f2e009b3b9:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.11-os-Packages-k-kernel-rt-devel-4.18.0-372.64.1.rt7.222.el8_6.x86_64.rpm
 ecd5851744db2576bcf0eee2070eba8d98c907ec0647717bf298e6a76bd27f2a:
   type: redhat
   packages:
