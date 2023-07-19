@@ -3104,6 +3104,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.12-100.fc34-x86_64-kernel-devel-5.15.12-100.fc34.x86_64.rpm
+04ff29cd8c43c76fb6cff2475cd83a152f7f4d991170ce5c5005f8b3af45988e:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.402.45-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.402.45-kernel-headers.tgz
 04ffd15b85a51811e53489deb7ebfc9710256f0a5f9b3b7ef9ecb835a5b8620d:
   type: ubuntu
   packages:
@@ -16563,6 +16568,11 @@ a3196fcb372a263bdf9e551ea13bb50e0599c4619620969b334099e69df8e04f:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-174-generic_4.4.0-174.204_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-174_4.4.0-174.204_all.deb
+a3468d06caec7e9fbd1a312acfe6d721f238f989d44e323c9e73f52b7f544621:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.353.1-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.353.1-kernel-headers.tgz
 a3481e8ae388d0505daef47ff9b3ed25a2689cb559faa7b212c0391b8e4d9d1f:
   type: redhat
   packages:
@@ -22308,6 +22318,10 @@ e7d3ce1f44f62551a14b1e1190601e6736a9c860ec6efd96cc4de386da575b22:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1120_4.15.0-1120.134-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1120-gcp_4.15.0-1120.134-16.04.1_amd64.deb
+e7c9e9ef174a6af3ca99162b8c5a73056d4f425366e7ca7c4a770fa229584bdf:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-0a9c5d9a71aff2d84791540d6fc18586302367651522546607be3132a0d2b8b2-kernel-devel-5.4.249-163.359.amzn2.x86_64.rpm
 e7e9b405c7365a1969c9c4c072aab0e427e882280852e7441648a9780d433882:
   type: cos
   packages:
@@ -24208,6 +24222,10 @@ f201e89e37726b6e9d955de483f670afcc4ea9c76325980fb8e8f8496c8111b3:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1054-fips_5.4.0-1054.61_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1054_5.4.0-1054.61_all.deb
+f227f2a3cf9fececea08e2c348fa208b141787f6b113b0ea195951f6e6bc151d:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-0de38a4d0de12f2dfb8ea129ac584fea83919acefa4d9b2c4856b25ac1124d10-kernel-devel-5.10.184-175.749.amzn2.x86_64.rpm
 f237c53ee309ce3e31a1cf346f4363abfb17211315e8548cf2906aea2dcf58fc:
   type: cos
   packages:
