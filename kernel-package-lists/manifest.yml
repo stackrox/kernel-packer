@@ -11536,6 +11536,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.13-linux-headers-5.13.0-1025-azure_5.13.0-1025.29-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.13-linux-azure-5.13-headers-5.13.0-1025_5.13.0-1025.29-20.04.1_all.deb
+756fc6330bb66fe393fb3035ea49bf92b11d11e3cfef52c44c2d9ad10326d11b:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-251f069162b0321a91c4d09275cb5cea6bd563e99491d1841ddbd7a293305a88-download
 758a5642569fa6b9505e5aea20c84504780f1c2a256e1fbd41d6e5a7cc1d847e:
   type: ubuntu
   packages:
@@ -14089,6 +14093,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.13-300.fc36-x86_64-kernel-devel-5.17.13-300.fc36.x86_64.rpm
+65031dc76324e6f102c046cd3737bb1cd5ba97f2957ed3a54fc21122bd9ff83f:
+  type: minikube
+  packages:
+  - https---raw.githubusercontent.com-kubernetes-minikube-v1.31.1-deploy-iso-minikube-iso-board-minikube-x86_64-linux_x86_64_defconfig-kernel-5.10.57
+  - https---cdn.kernel.org-pub-linux-kernel-v5.x-linux-5.10.57.tar.xz
 65677c5722eb6e4092af8f5441ecdda90317ecdb4d9c7c1d2c987fa064596174:
   type: ubuntu
   packages:
@@ -15527,6 +15536,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.246-1.el7.elrepo.x86_64.rpm
+361745849e322acf8fdff89f465afefed1fff30cfe992197665855a36e03d274:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-1d08aef56072703a7038142a3c8288e5825432e869652f12d251e2671d121758-download
 384284783b785665d04f6ce8bd62a31e8974fdfd3c95fdca8f33bc64674e8c76:
   type: garden
   packages:
