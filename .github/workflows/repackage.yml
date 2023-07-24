@@ -61,6 +61,16 @@ jobs:
 
           ./scripts/upload-bundles "${BUILD_DATA_DIR}" "$KERNEL_BUNDLE_BUCKET"
 
+      - name: Check BTF support
+        run: |
+          gsutil cp "$KERNEL_BUNDLE_BUCKET/btf-support.json" .
+
+          ./scripts/btf-support.py --output btf-support.json "${BUILD_DATA_DIR}/bundles"
+
+          gsutil cp btf-support.json "$KERNEL_BUNDLE_BUCKET/btf-support.json"
+
+      - name: Cleanup
+        run: |
           # clean up repackaged bundles and packages
           rm -rf "${BUILD_DATA_DIR}/packages/*"
           rm -rf "${BUILD_DATA_DIR}/bundles/*"
