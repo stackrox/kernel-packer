@@ -65,6 +65,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-66ed90931c6a668b3ae3fa4e5bce7c1b05e33fd1f403f83845816ba5bc184402-download
+0b4a5a4bec5cf4864c928b8066be3fe76d599c6fa8f5be1e443d000154203ec9:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2077-azure-fips_4.15.0-2077.83_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2077_4.15.0-2077.83_all.deb
 0a4c5a14b7b57db5e0d91da8f88aa90ebd019f168124268c5e4e1cf62a427f5c:
   type: redhat
   packages:
@@ -152,6 +157,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.604.22-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.604.22-kernel-headers.tgz
+0c09d2f17f1d49bf77d0c231679429130d53335d6df1e96dbd70a3e5dfa7d7e7:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1153_4.15.0-1153.170-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1153-gcp_4.15.0-1153.170-16.04.1_amd64.deb
 0e15e52ddba195510c716bb7c1f58adecb419556092306e2676540b57ee8f2d2:
   type: ubuntu
   packages:
@@ -5936,6 +5946,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1078_4.15.0-1078.88-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1078-gcp_4.15.0-1078.88-16.04.1_amd64.deb
+9c5398c4a81dd003f10045b8ef689931d01591a38e8fa0b7b003654bc065c132:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1168-azure_4.15.0-1168.183-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1168_4.15.0-1168.183-16.04.1_all.deb
 9e5649bde5e2cf49c013e74393c6b5e2abbed0f0bfaf274438f90b64cb682b54:
   type: redhat
   packages:
@@ -6959,11 +6974,6 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1065-fips_4.4.0-1065.71_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1065_4.4.0-1065.71_all.deb
-27fd4e4bce940f2a5c5d9a00f636e553818a92e4e815a1594a3213e1c6f05b6d:
-  type: ubuntu
-  packages:
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1153-azure_4.15.0-1153.168-16.04.1_amd64.deb
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1153_4.15.0-1153.168-16.04.1_all.deb
 27cdade6048ee1f5f1bdbba0fb2a882499fa091fad4745f205a977cf1501d4c2:
   type: redhat
   packages:
@@ -12167,6 +12177,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-17162.40.42-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17162.40.42-kernel-headers.tgz
+1348f230d8b79b94a08f7ce344fbf9a616729aec431829469b4cfb8ad5f2fa38:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1114-fips_4.15.0-1114.125_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1114_4.15.0-1114.125_all.deb
 1350ad438c45c9b7fb5318ff64ddb0e22a0256c3e153613d40e57f8e9a2f53aa:
   type: ubuntu
   packages:
@@ -15006,6 +15021,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-24-generic_4.4.0-24.43_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-24_4.4.0-24.43_all.deb
+981917ad6eb9c5c153a2c5ef574326c0c85c12cd5c029d489d7582dbc0b8bf95:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2098-aws-fips_4.15.0-2098.104_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2098_4.15.0-2098.104_all.deb
 985622ae2690e0d5fc52cd1f500848a493e730c3bd03f312723c69c4743678b4:
   type: cos
   packages:
@@ -15394,6 +15414,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-80.7.2.el8_0.x86_64.rpm
+17824188e81efd8780652956b689ea8876071c1d92891535a1e2a1a05b3261a8:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1081-fips_5.4.0-1081.90_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1081_5.4.0-1081.90_all.deb
 18809826c9bab1179950f979cb58d1fe08bef2847e79d50ddfa6780ca172358a:
   type: ubuntu
   packages:
@@ -15546,6 +15571,12 @@
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.34-28.el7.x86_64.rpm
+094720591ea509b419d781ed0c1bd4363e550fee87c872620dcc474532604825:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.2.0-1009-aws_6.2.0-1009.9_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.2.0-1009_6.2.0-1009.9_all.deb
+  image: repackage-bookworm
 95569493d2dc59863d381f7c51b9b6fdc0f1c3ac22db3c6a1a0d3ea02cc2e209:
   type: redhat
   packages:
@@ -19085,6 +19116,11 @@ c0e1198d09f157d99847fef87a0dfc51724f0381c56ec3e9a9acff135d3b228b:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2136.320.7.el7uek.x86_64.rpm
+c0d2997c3bc148ec5023911c9da253885b2dd38f348bbe5370383716c4ac3c74:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-214-generic_4.15.0-214.225-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-214_4.15.0-214.225-16.04.1_all.deb
 c0ac3420cde5353c0824bee9b679140a05b8dc21b01154904bbade193b6b7249:
   type: redhat
   packages:
@@ -24213,6 +24249,11 @@ f27e0c7e4b1dba2a3bf2b9b92438685aada55ce60399db4cada928557b456a30:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1353.7.0-coreos_developer_container.bin.bz2
+f27e82cd5372e624d21a3b687d780477fb2210b655dd34b14673cef75b540fcb:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1091-fips_4.4.0-1091.98_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1091_4.4.0-1091.98_all.deb
 f28b1911dc333e0dbb2bc6a67473c6f48810403ef74d146f185395089ec50070:
   type: redhat
   packages:
@@ -25147,6 +25188,11 @@ ff01b1c75717d1c96206d95ce531eba68cb5c640ceb5329baae5d9d7ae149a66:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10550.0.0-kernel-src.tar.gz
+ff7e089bb278956db06a2c0f4292f62d4e21503e329066968d108d0e150e1acb:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-gcp-fips-headers-4.15.0-2061_4.15.0-2061.66_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-headers-4.15.0-2061-gcp-fips_4.15.0-2061.66_amd64.deb
 ff9de4614fb180e7abf300239cc53a9f89ab0829e2bf6dbece674a0019295b33:
   type: cos
   packages:
