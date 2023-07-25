@@ -65,7 +65,7 @@ jobs:
         run: |
           gsutil cp "$KERNEL_BUNDLE_BUCKET/kernel-features.json" .
 
-          ./scripts/kernel-features.py --output btf-support.json "${BUILD_DATA_DIR}/bundles"
+          ./scripts/kernel-features.py --output kernel-features.json "${BUILD_DATA_DIR}/bundles"
 
           gsutil cp kernel-features.json "$KERNEL_BUNDLE_BUCKET"
 
