@@ -23,6 +23,10 @@ class Bundle:
         self.btf = False
 
     def find_features(self):
+        """
+        Searches the bundle for all known features, first searching the config,
+        and then in the wider bundle.
+        """
         search_options = []
         with tarfile.open(self.path) as tar:
             try:
@@ -52,12 +56,20 @@ class Bundle:
         return g_btf_info_config in config.read()
 
     def _search_bundle_for_features(self, tar, config_options=()):
+        """
+        Given a list of configuration options, this searches through all files
+        in the bundle. This covers the case where the config does not exist
+        (e.g. all the garden linux bundles)
+
+        This is considered a worst case scenario, so the performance hit is
+        rare.
+        """
         config_options = list(config_options)
 
         if not config_options:
             return {}
 
-        results = {}
+        results = {opt: False for opt in config_options}
         for item in tar.getnames():
             content = tar.extractfile(item)
             if not content:
@@ -67,6 +79,7 @@ class Bundle:
             for option in list(config_options):
                 if option in content:
                     results[option] = True
+                    # we've found it, so remove it from future searches.
                     config_options.remove(option)
 
             if not config_options:
@@ -76,7 +89,7 @@ class Bundle:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Checks for BTF support in a given kernel bundle')
+    parser = argparse.ArgumentParser(description='Finds kernel features in a given kernel bundle')
     parser.add_argument('bundle_dir', help='path to a directory containing the bundles')
     parser.add_argument('--output', help='path to the output json file')
 
