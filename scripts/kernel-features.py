@@ -109,10 +109,6 @@ def main():
 
         content.extend(kernels)
 
-        # de-dup by converting to a tuple (which is hashable) and using
-        # the set data structure to remove the duplicates.
-        content = [dict(t) for t in {tuple(d.items()) for d in content}]
-
         with open(args.output, 'w') as output:
             json.dump(content, output, indent=4)
     else:
