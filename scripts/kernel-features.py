@@ -33,10 +33,7 @@ class Bundle:
                 config = tar.extractfile('./.config')
                 config = config.read()
 
-                if self._has_btf_support(config):
-                    self.btf = True
-                else:
-                    search_options.append(g_btf_info_config)
+                self.btf = g_btf_info_config in config
             except KeyError:
                 search_options = g_all_search_options
 
@@ -51,9 +48,6 @@ class Bundle:
             'version': self.version,
             'btf': self.btf
         }
-
-    def _has_btf_support(self, config):
-        return g_btf_info_config in config.read()
 
     def _search_bundle_for_features(self, tar, config_options=()):
         """
