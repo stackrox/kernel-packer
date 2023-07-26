@@ -63,11 +63,12 @@ jobs:
 
       - name: Check BTF support
         run: |
-          gsutil cp "$KERNEL_BUNDLE_BUCKET/kernel-features.json" .
+          tempdir="$(mktemp -d)"
+          gsutil cp "$KERNEL_BUNDLE_BUCKET/kernel-features.json" "$tempdir/"
 
-          ./scripts/kernel-features.py --output kernel-features.json "${BUILD_DATA_DIR}/bundles"
+          ./scripts/kernel-features.py --output "$tempdir/kernel-features.json" "${BUILD_DATA_DIR}/bundles"
 
-          gsutil cp kernel-features.json "$KERNEL_BUNDLE_BUCKET"
+          gsutil cp "$tempdir/kernel-features.json" "$KERNEL_BUNDLE_BUCKET"
 
       - name: Cleanup
         run: |

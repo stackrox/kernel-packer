@@ -27,7 +27,6 @@ class Bundle:
         Searches the bundle for all known features, first searching the config,
         and then in the wider bundle.
         """
-        search_options = []
         with tarfile.open(self.path) as tar:
             try:
                 config = tar.extractfile('./.config')
@@ -35,21 +34,19 @@ class Bundle:
 
                 self.btf = g_btf_info_config in config
             except KeyError:
-                search_options = g_all_search_options
-
-            if search_options:
-                found = self._search_bundle_for_features(tar, search_options)
+                found = self._search_bundle_for_features(tar, g_all_search_options)
                 self.btf = found.get(g_btf_info_config, False)
 
         return self.to_dict()
 
     def to_dict(self):
         return {
-            'version': self.version,
-            'btf': self.btf
+            self.version: {
+                'btf': self.btf
+            }
         }
 
-    def _search_bundle_for_features(self, tar, config_options=()):
+    def _search_bundle_for_features(self, tar, config_options):
         """
         Given a list of configuration options, this searches through all files
         in the bundle. This covers the case where the config does not exist
@@ -58,11 +55,6 @@ class Bundle:
         This is considered a worst case scenario, so the performance hit is
         rare.
         """
-        config_options = list(config_options)
-
-        if not config_options:
-            return {}
-
         results = {opt: False for opt in config_options}
         for item in tar.getnames():
             content = tar.extractfile(item)
