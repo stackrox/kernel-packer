@@ -62,13 +62,15 @@ jobs:
           ./scripts/upload-bundles "${BUILD_DATA_DIR}" "$KERNEL_BUNDLE_BUCKET"
 
       - name: Check BTF support
+        env:
+          KERNEL_FEATURES_BUCKET: gs://stackrox-collector
         run: |
           tempdir="$(mktemp -d)"
-          gsutil cp "$KERNEL_BUNDLE_BUCKET/kernel-features.json" "$tempdir/"
+          gsutil cp "$KERNEL_FEATURES_BUCKET/kernel-features.json" "$tempdir/"
 
           ./scripts/kernel-features.py --output "$tempdir/kernel-features.json" "${BUILD_DATA_DIR}/bundles"
 
-          gsutil cp "$tempdir/kernel-features.json" "$KERNEL_BUNDLE_BUCKET"
+          gsutil cp "$tempdir/kernel-features.json" "$KERNEL_FEATURES_BUCKET"
 
       - name: Cleanup
         run: |
