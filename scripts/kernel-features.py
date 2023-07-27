@@ -99,7 +99,7 @@ def main():
         except FileNotFoundError:
             content = []
 
-        content.extend(kernels)
+        content.update(kernels)
 
         with open(args.output, 'w') as output:
             json.dump(content, output, indent=4)
