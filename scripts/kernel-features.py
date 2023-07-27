@@ -78,6 +78,7 @@ def main():
     parser = argparse.ArgumentParser(description='Finds kernel features in a given kernel bundle')
     parser.add_argument('bundle_dir', help='path to a directory containing the bundles')
     parser.add_argument('--output', help='path to the output json file')
+    parser.add_argument('--tee', help='Whether to also write output to stdout', action='store_true'))
 
     args = parser.parse_args()
 
@@ -103,7 +104,8 @@ def main():
 
         with open(args.output, 'w') as output:
             json.dump(content, output, indent=4)
-    else:
+
+    if not args.output or args.tee:
         json.dump(kernels, sys.stdout, indent=4)
 
 
