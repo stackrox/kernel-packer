@@ -82,7 +82,7 @@ def main():
 
     args = parser.parse_args()
 
-    kernels = []
+    kernels = {}
 
     for fn in os.listdir(args.bundle_dir):
         _, ext = os.path.splitext(fn)
@@ -91,7 +91,7 @@ def main():
             continue
 
         bundle = Bundle(os.path.join(args.bundle_dir, fn))
-        kernels.append(bundle.find_features())
+        kernels.update(bundle.find_features())
 
     if args.output:
         try:
