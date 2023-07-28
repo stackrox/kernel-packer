@@ -5343,6 +5343,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1070-fips_4.15.0-1070.79_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1070_4.15.0-1070.79_all.deb
+8e8277665f9f5e33176b6da8da3f21c3c2c6bccb22536d397bc3eacb9421a7c2:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.289-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-24-amd64_4.19.282-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-24-common_4.19.282-1_all.deb
 8d9352857faca54a8b6aafbb20a9bde12a6c75229d151667f16ca63656a4178d:
   type: cos
   packages:
@@ -6419,6 +6425,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-17162.40.20-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17162.40.20-kernel-headers.tgz
+12e97a9da7bae05a7c025455c7b8f6ac1473455e70a61b85f1a2f1358b262c8f:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.289-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-24-cloud-amd64_4.19.282-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-24-common_4.19.282-1_all.deb
 12a401ec56635b29b80a12314bd05c1d51a362a62997ca7148fd3178a4c2061b:
   type: ubuntu
   packages:
@@ -7422,12 +7434,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.14-100.fc33-x86_64-kernel-devel-5.13.14-100.fc33.x86_64.rpm
-38e2c70ef719ed4d2f548ffb4b8c3a10c2c0596e8748b225a17a6e6e39b35926:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.282-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-24-cloud-amd64_4.19.282-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-24-common_4.19.282-1_all.deb
 38f6eaa286508b075554cf00df365dc32ec6527454cc301a53e487d16c249270:
   type: redhat
   packages:
@@ -7700,12 +7706,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1031-azure_5.4.0-1031.32_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1031_5.4.0-1031.32_all.deb
-44c1707124d222b3dd995356c31fd2ff3dd4e095992330e0bc5065f6fce1bd3a:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.282-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-24-amd64_4.19.282-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-24-common_4.19.282-1_all.deb
 44cb03268a06df4842e2eb0700d8fb9c067151e31f92d739804e0ba57372b632:
   type: redhat
   packages:
