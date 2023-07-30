@@ -3333,6 +3333,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1072-aws_5.4.0-1072.77_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1072_5.4.0-1072.77_all.deb
+5a9c16ed3396ca9c050aa62e85dcdcecac950ad50867cf9118612737230410ec:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-3_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-3_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-3_all.deb
 5a9c29d4c0db2a46244f29c9d4b6a9d3009a10236963c599b8dee3603d2d53d0:
   type: redhat
   packages:
@@ -4785,12 +4791,6 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.41-1.el7.elrepo.x86_64.rpm
-7aaf5a2114efdb9e10c85a93c0d92781631137babb482c50444ce752da61a1fc:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.3_6.3.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.3.0-1-cloud-amd64_6.3.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.3.0-1-common_6.3.7-1_all.deb
 7aaf5696724cc0f558f4c245cc04788a2bb72fe716600b889f8e65c06e9b6348:
   type: ubuntu
   packages:
@@ -10539,12 +10539,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12105.24.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12105.24.0-kernel-headers.tgz
-299d90417c00c6aa5eb68f4b02aba2576c258e3879bbe3fbe0bfa469b944f3b4:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.3_6.3.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.3.0-1-amd64_6.3.7-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.3.0-1-common_6.3.7-1_all.deb
 302fddfcee7dbf739195273d114e3c235f5264cdbbed156622a546af7b536a92:
   type: ubuntu
   packages:
