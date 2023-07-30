@@ -3215,6 +3215,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2013.el7uek.x86_64.rpm
+5f3e22c4fd7d949142d41c3f692e152f0f9651c9d51d5ece0e9b751a400abca7:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-3_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-amd64_5.10.179-3_amd64.deb
 5c3ee600fdd3d8df089f55fc1e2c91926ed7d605388353534b0f3af89d26b3f4:
   type: redhat
   packages:
@@ -20033,6 +20038,11 @@ c54959601c0eb0e5b2e8a92c7a1f928d51e67b90338cd7bac698ebaf3ca9ce9e:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-noarch-kernel-devel-4.4.180-94.144.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP3-LTSS-x86_64-update-x86_64-kernel-default-devel-4.4.180-94.144.1.x86_64.rpm
+c254893784d742e19d08a9840c30d1f01d5fa2c42aab4950e6d68bad8d6f8bf2:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-3_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-3_amd64.deb
 c260577882d32a35391eaf151f4fc4b653351dd329fc79039541c874102d9038:
   type: cos
   packages:
