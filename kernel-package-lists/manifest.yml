@@ -15103,6 +15103,12 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10032.40.0-kernel-src.tar.gz
+2333740b95f7b1e2b3ada779f9707658bdff96e3a010aa843b27111c1650ace6:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-2_all.deb
 2369808aca439b2f24bc7b5169f8b518b06ad87fe17a8fcd0817fb67c9ef27d0:
   type: ubuntu
   packages:
@@ -17354,12 +17360,6 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
-adb81ba2505225729f841d33cf49335205a47e767e0bc6e827e05720b7f7dfe3:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 adbf002cc22213bf41f3df956babc07cadc28236c288e82008298c2b7f396d01:
   type: ubuntu
   packages:
@@ -18087,11 +18087,6 @@ b28b228e4e153c81e09a1a8eaf5bcbc9f2f531c9af4d68c92b2c27eb24ad92cd:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.2.0-1006-aws_6.2.0-1006.6_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.2.0-1006_6.2.0-1006.6_all.deb
   image: repackage-bookworm
-b29a5294d23015da49e6e316957fffa907d5c5ebee9c258dd918833ef5ea57ad:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.179-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-3_amd64.deb
 b30c5facfcab29bf64f7e7c90f13a6e0bc55ba57cb7d18fcc8389e85c217dd27:
   type: oracle
   packages:
@@ -20890,11 +20885,6 @@ d6bceb251faf499b49ccaea9be832e630057cb2841f4fa14b61a4a7270d205b9:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-597a052336e93026aadd8a3be7cc06904a3e6535cba65b869c84b56cc40dea83-download
-d06ef5c7570b3a300427d037941f11eda4ba67e339ce967d93749710dff2521f:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.179-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-23-amd64_5.10.179-3_amd64.deb
 d7c4b144706c4367ba74d069a5d175355057d3a201558be132271a73c7536b18:
   type: ubuntu
   packages:
