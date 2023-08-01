@@ -13674,6 +13674,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-124-generic_4.15.0-124.127_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-124_4.15.0-124.127_all.deb
+19477e5331bf578c74903ad619afe670e8132f38169be4ec7e255cf137c5dd79:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-d63f970e446a73ee647d4774812f468f77fb5de01852962409ba4a28c919ce59-download
 19531a2409344459c66ab1ca66cdb315507540b93035b337b5b82079432919be:
   type: ubuntu
   packages:
@@ -17116,6 +17120,12 @@ ab08659099ef01ecaa083e37f4d265a07b80a38bf156eeebdf85e0bc9d6575ca:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.240-1.el7.elrepo.x86_64.rpm
+aba03a48948f93d09b5ef3bdaa29ef3279caa43cdb385aa101e39fa0ef09f2fd:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 abbdb200361348d4b6b5dac1a21f67c5925ae4bfe99288d0da165636f46dfdb8:
   type: redhat
   packages:
@@ -18279,6 +18289,10 @@ b98fab6691aadb0c48a497a0bdb643f397257b5af32dcf6d8ba3e432d806eccd:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1035-aws_5.15.0-1035.39_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1035_5.15.0-1035.39_all.deb
+b273eb42d7c6d148ee6df94a22e1ec4c411bd97263e411519c47260f8da7f128:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-7c9c4f592325eb3da4563ad45be1d5cc4ce31463d721401a1edb5a840748c22d-download
 b324ef6bf9feb45eca580b4dd3a0b1fb7783a6ef698ef77e4f4ee35e1d841b02:
   type: ubuntu
   packages:
@@ -21356,12 +21370,6 @@ d289e1007bba80e55c5920722273f24310ca92bebe30a541025e3a955250c4f4:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-4421829a971058d8b64ce3571ab8828da405fd2fa6ee618642afa72caba86a0a-kernel-devel-5.4.190-107.353.amzn2.x86_64.rpm
-d333b51ae7385da774a2a02c5e67237c1c3674bbf68893523f8e597749805c48:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.179-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-3_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-3_all.deb
 d367f9656e3a7f08502f1a0ff746b0242ef5234a346656026248808c827a35af:
   type: suse
   packages:
