@@ -12572,12 +12572,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16623.402.43-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.402.43-kernel-headers.tgz
-3961cc9864c811dd2a7fed3986cb85f5943bafb0a2d8a20a9fc22558cb2dca50:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 3979cf993fd699c9b1be0dac6fc16d7ee016a5eb5f0df5122d4950b62249c8c3:
   type: ubuntu
   packages:
@@ -15646,6 +15640,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-1d08aef56072703a7038142a3c8288e5825432e869652f12d251e2671d121758-download
+381488780a8007b8bfb52238b4150bd85bb7f9ea4b1e1f17204a98d1a876bdd1:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.279.1-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.279.1-kernel-headers.tgz
 384284783b785665d04f6ce8bd62a31e8974fdfd3c95fdca8f33bc64674e8c76:
   type: garden
   packages:
@@ -21370,6 +21369,12 @@ d289e1007bba80e55c5920722273f24310ca92bebe30a541025e3a955250c4f4:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-4421829a971058d8b64ce3571ab8828da405fd2fa6ee618642afa72caba86a0a-kernel-devel-5.4.190-107.353.amzn2.x86_64.rpm
+d333b51ae7385da774a2a02c5e67237c1c3674bbf68893523f8e597749805c48:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.179-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-3_all.deb
 d367f9656e3a7f08502f1a0ff746b0242ef5234a346656026248808c827a35af:
   type: suse
   packages:
@@ -22661,12 +22666,6 @@ e17cd03362680512226adf44adc41a4b2c2dcd4cd98db8746d4dabc3bfd837ff:
   packages:
   - https---storage.googleapis.com-cos-tools-16623.102.4-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.102.4-kernel-headers.tgz
-e18e67979a9954ab631e94e548e9466f6be744d1276a1ee95e801c70d0980bab:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.179-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-23-cloud-amd64_5.10.179-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-23-common_5.10.179-2_all.deb
 e28b0ea948c8b3431653a373928ce4bb9bd6da75397d84f5522733af419f5b48:
   type: redhat
   packages:
@@ -23149,6 +23148,11 @@ e63549a0f902292f425b7cac590525bce5279aefe9f59fa3f2b0ee77f7e768ef:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.232-1.el7.elrepo.x86_64.rpm
+e64431b513aac1c9bf81c7580d74c0b8a6e3b6716ac03f3a347aefa27c6fa57f:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17788.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17788.0.0-kernel-headers.tgz
 e73472d182e1e6bbe217968afeba7576f1ee6900f0e02a358c21c8017f14ab86:
   type: redhat
   packages:
@@ -24641,6 +24645,11 @@ f7771d415f2e3da261397432e542e40a79c9e45858b6660885a008f0b329c064:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.8-linux-headers-5.8.0-1041-azure_5.8.0-1041.44-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.8-linux-azure-5.8-headers-5.8.0-1041_5.8.0-1041.44-20.04.1_all.deb
+f9393bc99b58063d6796226056cf0d8dd78813f092054c6ccab24a8ab141fd4c:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.156.5-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.156.5-kernel-headers.tgz
 f9433f506084b3263476dd39a79d2ce840f845469ab7a4a1f5c9f4b61b5a716d:
   type: ubuntu
   packages:
