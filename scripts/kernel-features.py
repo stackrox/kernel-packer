@@ -5,6 +5,7 @@ import os
 import tarfile
 import json
 import sys
+import re
 
 
 g_btf_info_config = b'CONFIG_DEBUG_INFO_BTF=y'
@@ -12,6 +13,7 @@ g_all_search_options = [
     g_btf_info_config
 ]
 
+g_kernel_version_regex = r'(\d+)\.(\d+)\.(\d+)'
 
 class Bundle:
     def __init__(self, path):
@@ -21,6 +23,7 @@ class Bundle:
         self.version = bundle[len('bundle-'):]
 
         self.btf = False
+        self.bpf_ringbuf_map = False
 
     def find_features(self):
         """
@@ -37,14 +40,40 @@ class Bundle:
                 found = self._search_bundle_for_features(tar, g_all_search_options)
                 self.btf = found.get(g_btf_info_config, False)
 
+        self.bpf_ringbuf_map = self._kernel_supports_ring_buf()
+
         return self.to_dict()
 
     def to_dict(self):
         return {
             self.version: {
-                'btf': self.btf
+                'btf': self.btf,
+                'bpf_ringbuf_map': self.bpf_ringbuf_map
             }
         }
+
+    def _kernel_supports_ring_buf(self):
+        """
+        Based on the kernel version, this identifies whether or not the kernel
+        has the ringbuf BPF map type. Specifically, this is when the kernel
+        is >= 5.8 or it's a RHEL 8 or 9 kernel newer than 4.18.
+        """
+        match = re.search(g_kernel_version_regex, self.version)
+
+        if not match:
+            return False
+
+        kernel, minor, patch = match.groups()
+        version = (int(kernel), int(minor), int(patch))
+
+        if version >= (5, 8, 0):
+            return True
+
+        if version >= (4, 18, 0):
+            return "el8" in self.version or "el9" in self.version
+
+        return False
+
 
     def _search_bundle_for_features(self, tar, config_options):
         """
