@@ -65,11 +65,11 @@ jobs:
         run: |
           tempdir="$(mktemp -d)"
           IFS=',' read -r -a bucket <<< "${KERNEL_BUNDLE_BUCKET}"
-          gsutil cp "${bucket[@]}/kernel-features.json" "$tempdir/" || echo '{}' > "$tempdir/kernel-features.json"
+          gsutil cp "${bucket[0]}/kernel-features.json" "$tempdir/" || echo '{}' > "$tempdir/kernel-features.json"
 
           ./scripts/kernel-features.py --tee --output "$tempdir/kernel-features.json" "${BUILD_DATA_DIR}/bundles"
 
-          gsutil cp "$tempdir/kernel-features.json" "${bucket[@]}"
+          gsutil cp "$tempdir/kernel-features.json" "${bucket[0]}/kernel-features.json"
 
       - name: Cleanup
         run: |
