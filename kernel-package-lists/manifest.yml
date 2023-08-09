@@ -5932,6 +5932,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.3.12-100.fc37-x86_64-kernel-devel-6.3.12-100.fc37.x86_64.rpm
+9d682b70a1984bc606c918871329ae1a2b8a21389fa40f18f8b127852ca9a9aa:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3602.1.4-flatcar_developer_container.bin.bz2
 9f980f547f0cab9fd4a47de7113b14bbcd9bd2784aa15ba2f6c44f68df3cc7cb:
   type: ubuntu
   packages:
@@ -9965,6 +9969,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1034_4.15.0-1034.36-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1034-gcp_4.15.0-1034.36-16.04.1_amd64.deb
+097d069e7cfe5be2da5a6c10e190d9096c1cb5f0c54eb4a8a852560d2791cb38:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-1_amd64.deb
 98d1eb757e8c77723b8a714d6ffddeeda47184cf06d12eb81fc744383e722ac5:
   type: redhat
   packages:
@@ -20990,10 +20999,6 @@ d7dbcd6eb64a0045ce1ed07211c4a44b7ae5d7638d33eb8d74d82c4cf8054e55:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2136.307.3.4.el7uek.x86_64.rpm
-d7ec31d47ec25382fae27c191bd60be4a994d554e040f86c76171193873a6c6b:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-3374.2.2-flatcar_developer_container.bin.bz2
 d7edc9ca1e32d51342c892407186b80f25784da575e3bf48caf850a33eeee347:
   type: cos
   packages:
@@ -21721,6 +21726,10 @@ d657512630dd1175830e6f667bfcc77c1305fe4402378ea824156de31a85858c:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.5.0.el7uek.x86_64.rpm
+d3367890987b7d7a85fc3db87b14b5be7eed4f951720532aee6086dace82b1e9:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-3510.2.6-flatcar_developer_container.bin.bz2
 d5175204876d346502685f8624930f942fc500e13678b4fc85f174108401c046:
   type: redhat
   packages:
@@ -24651,6 +24660,11 @@ f1991f06e43a8d36ea20cf1f53e32b24bdbefcb69502c57f84e6f2398a48b71d:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1159-azure_4.15.0-1159.174_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1159_4.15.0-1159.174_all.deb
+f2347c7bfb8578b95551d3f4e443a320e16c2ca8258f725e87cf34d065c5f4c2:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
 f2482bccfa76d8be0c1e650b8977254e2859efdcd75d65773e3907a289381ff5:
   type: cos
   packages:
