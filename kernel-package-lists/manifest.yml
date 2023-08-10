@@ -19493,6 +19493,11 @@ c8e3f4fae84c5f274ddd39970574484b9f9802a629a0d3ac5f5ba7a5fb4594d0:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10873.0.0-kernel-src.tar.gz
+c8b6ddac2668ca1339b3b73051fe51a5a43b0988cf7ac5eba809bca7bf94a666:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.289-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-25-cloud-amd64_4.19.289-2_amd64.deb
 c8d6071ec4f8f46ed3f9f12f0a1adf4c1e747f452661050791a8403ce367aff7:
   type: redhat
   packages:
@@ -23761,6 +23766,11 @@ eed83b1a95fb7384bbd31b7152f83fdc1b3dfcc65230e3cbee5d659f0c806992:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1041_4.15.0-1041.43_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1041-gke_4.15.0-1041.43_amd64.deb
+eedb96b6f4ac64e7317134a3cce6d1e9a7e189845cb40b35d2ffbe1780cdb2b8:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.289-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-25-amd64_4.19.289-2_amd64.deb
 eefe04d2225dc33602914b10f3e66746f569b2f04bcae00372bf2768b29fe70d:
   type: garden
   packages:
