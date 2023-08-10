@@ -15489,6 +15489,12 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.0.14.el7uek.x86_64.rpm
+025865370fee3781aa8c04e61be66de23ca5d45838d326e4060629b99aeba3da:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.289-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-25-cloud-amd64_4.19.289-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-25-common_4.19.289-2_all.deb
 27180435c1ab2c860de1875651cb8b5a341b64e30ebc02d481f6f50293dfd9ce:
   type: ubuntu
   packages:
