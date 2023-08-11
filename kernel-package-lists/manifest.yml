@@ -9308,12 +9308,6 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1911.4.0-coreos_developer_container.bin.bz2
-81c180466958f78b4a0333169ecdfe9e4efab6a2345ea2347aaa91007af270b8:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.38-3_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-cloud-amd64_6.1.38-3_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-3_all.deb
 82d15c46bcf4663cc500726a0a43debf9206e3ae0cf0e4d3c64b8fc148d6752a:
   type: redhat
   packages:
@@ -17186,6 +17180,12 @@ abbfc68e5882addbcbe530ec135e6f85571b7900c547b34eb9e3ade9b40ffc97:
   packages:
   - https---storage.googleapis.com-cos-tools-12871.59.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.59.0-kernel-headers.tgz
+abd1af316e49910da9b371cf43e7fd3a27d30771f13e752097e7365ad6bb58c4:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.38-4_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-cloud-amd64_6.1.38-4_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-4_all.deb
 abde74076a7708f48fbaf6d8ec790ebf91126decdcad32e3b0e49fe680a404d1:
   type: ubuntu
   packages:
@@ -19484,12 +19484,6 @@ c7d930f7a0f31990fe4b0308a2225a0549634214e5afafd7df0e100ef706b771:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.233-1.el7.elrepo.x86_64.rpm
-c7bc380ba00240beb6602282095aafcc94ddba25ae51936a4ea47e9851eedfdd:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.38-3_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-amd64_6.1.38-3_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-3_all.deb
 c7ad0cec031f287956f5e5a1b38233f8e5a1dcc70229ad19d4c5d8c6339cb5be:
   type: redhat
   packages:
@@ -22728,6 +22722,12 @@ e8c4bcc3ff0a727e132dc49b1d1eed0ed30f6ce1b94cd7f8ae12811a3fc4925a:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-229.14.1.el7.x86_64.rpm
+e8e8b7b9e71f9560f0513f3eaee25a09c19771e706568f07ba4acb070953114e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 e8f90fd29dece32ce7a3438ceb5d26f762f4725f3ea3b694a168f396ced8710a:
   type: redhat
   packages:
