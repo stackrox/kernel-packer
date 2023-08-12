@@ -5619,6 +5619,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1057-fips_4.15.0-1057.65_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1057_4.15.0-1057.65_all.deb
+9a57f736f33c171f4ef662fef5530dcc40f0166c18b9c660d5b0d6af63a62e37:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.38-4_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-cloud-amd64_6.1.38-4_amd64.deb
 9f62dd0de0a750ef7b51f141e38db4ad899f5bf73e85d92d0b420be3ebb971a0:
   type: redhat
   packages:
@@ -5949,6 +5954,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.13-200.fc37-x86_64-kernel-devel-6.1.13-200.fc37.x86_64.rpm
+9bd787e4ce71c84f9f184be43c6a69cea8444af5a10e3c959300146b9521a893:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.38-4_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-amd64_6.1.38-4_amd64.deb
 9dd4931e18c5d96f583905fccce9530c7c94d8fa69e3a95652eadd66c01ee0f8:
   type: ubuntu
   packages:
@@ -12079,6 +12089,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16623.402.43-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.402.43-kernel-headers.tgz
+3961cc9864c811dd2a7fed3986cb85f5943bafb0a2d8a20a9fc22558cb2dca50:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 3979cf993fd699c9b1be0dac6fc16d7ee016a5eb5f0df5122d4950b62249c8c3:
   type: ubuntu
   packages:
