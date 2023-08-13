@@ -4055,6 +4055,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-153-generic_4.15.0-153.160_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-153_4.15.0-153.160_all.deb
+6dc8df03a71d2d24225dc229eb28ef2745b121c5963f9ba0538304f07491f52c:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-11-amd64_6.1.38-3_amd64.deb
 6dc9ccde5768736b7f170a8a75d6efea25d8deeddb02db8c290c0579f07ec49e:
   type: coreos
   packages:
@@ -4794,11 +4799,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.171-1.el7.elrepo.x86_64.rpm
-7bf0920f1ee1a14449927917156c4ca6d5ec3313cdf729d6bb26bc4fd305dedf:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.179-5_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-24-cloud-amd64_5.10.179-5_amd64.deb
 7efea354a0b768baa28ec08c6c29adb6def5f1c38cfe3620669330719c5ff6f0:
   type: ubuntu
   packages:
@@ -17760,11 +17760,6 @@ b03420fd6e8b117810530b17ef7ab409f6ed96dd680b987b431fb1eb8593a917:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2016.el7uek.x86_64.rpm
-b3638aa8c4a1d45327ce566e012d73d0bf9c148a8b007a5a97f2a299e879aa91:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.179-5_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-24-amd64_5.10.179-5_amd64.deb
 b4107b3bbcae945ba927b464287d40b92b529688691731cffeac30ccffece8d5:
   type: oracle
   packages:
@@ -17917,6 +17912,11 @@ b1114371e55634a65ad7888c787df4e3e30d2762e8b3ff5b66d370f171feac45:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10452.81.0-kernel-src.tar.gz
+b1504272b91221aeb8d2c4f3aea788cc96727ea5dad41cb551ecfa8e40cce027:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-3_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-11-cloud-amd64_6.1.38-3_amd64.deb
 b2215875f6edf6b72a5841e5ec6dcc2771aff92228a82bb3e117e96b6fd10b11:
   type: ubuntu
   packages:
