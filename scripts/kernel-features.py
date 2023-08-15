@@ -74,7 +74,6 @@ class Bundle:
 
         return False
 
-
     def _search_bundle_for_features(self, tar, config_options):
         """
         Given a list of configuration options, this searches through all files
@@ -107,7 +106,7 @@ def main():
     parser = argparse.ArgumentParser(description='Finds kernel features in a given kernel bundle')
     parser.add_argument('bundle_dir', help='path to a directory containing the bundles')
     parser.add_argument('--output', help='path to the output json file')
-    parser.add_argument('--tee', help='Whether to also write output to stdout', action='store_true')
+    parser.add_argument('--tee', help='whether to also write output to stdout', action='store_true')
 
     args = parser.parse_args()
 
@@ -132,10 +131,10 @@ def main():
         content.update(kernels)
 
         with open(args.output, 'w') as output:
-            json.dump(content, output, indent=4)
+            json.dump(content, output)
 
     if not args.output or args.tee:
-        json.dump(kernels, sys.stdout, indent=4)
+        json.dump(kernels, sys.stdout)
 
 
 if __name__ == '__main__':
