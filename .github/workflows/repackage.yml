@@ -61,6 +61,18 @@ jobs:
 
           ./scripts/upload-bundles "${BUILD_DATA_DIR}" "$KERNEL_BUNDLE_BUCKET"
 
+      - name: Check BTF support
+        run: |
+          tempdir="$(mktemp -d)"
+          IFS=',' read -r -a bucket <<< "${KERNEL_BUNDLE_BUCKET}"
+          gsutil cp "${bucket[0]}/kernel-features.json" "$tempdir/" || echo '{}' > "$tempdir/kernel-features.json"
+
+          ./scripts/kernel-features.py --tee --output "$tempdir/kernel-features.json" "${BUILD_DATA_DIR}/bundles"
+
+          gsutil cp "$tempdir/kernel-features.json" "${bucket[0]}/kernel-features.json"
+
+      - name: Cleanup
+        run: |
           # clean up repackaged bundles and packages
           rm -rf "${BUILD_DATA_DIR}/packages/*"
           rm -rf "${BUILD_DATA_DIR}/bundles/*"
