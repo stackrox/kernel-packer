@@ -3534,6 +3534,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.122-1.el7.elrepo.x86_64.rpm
+5d842173b0823855b230e4af57c1d8ac6c8bc337b08b47d359fdf078abfcb238:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.279.14-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.279.14-kernel-headers.tgz
 5b3292301d34ddb14cf836bc5df11ed9264977f33078c50f9293bc31c52f2dc2:
   type: coreos
   packages:
@@ -14558,6 +14563,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1016-aws_4.4.0-1016.25_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1016_4.4.0-1016.25_all.deb
+97913ffe67ec77f523456be283d07fbd542d884a38f578d3a03be0bfffd9a0de:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.353.15-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.353.15-kernel-headers.tgz
 98663cf1f48818d5cde765e42da454da28d7aab8097eb3a000948e879ab51ab5:
   type: redhat
   packages:
@@ -17494,6 +17504,12 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
+adb81ba2505225729f841d33cf49335205a47e767e0bc6e827e05720b7f7dfe3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 adbf002cc22213bf41f3df956babc07cadc28236c288e82008298c2b7f396d01:
   type: ubuntu
   packages:
@@ -21314,6 +21330,11 @@ d46adb7a4522ffe9033190f80b7de3a4e4479e876998d7bbb3c95f40c9a18c87:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1042-azure_5.15.0-1042.49-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1042_5.15.0-1042.49-20.04.1_all.deb
+d47d1e6360ee6c54564bc3a97d646ffa3e16fcbbd57f238cfe54f62251c3c293:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.461.8-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.461.8-kernel-headers.tgz
 d47f7233a4b862c3e6afca3989618b479e913b275225794c2377433ee0d1a69d:
   type: ubuntu
   packages:
