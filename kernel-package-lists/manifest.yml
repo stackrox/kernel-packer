@@ -5613,6 +5613,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1035-aws_5.4.0-1035.37_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1035_5.4.0-1035.37_all.deb
+8beb3ae0a5b688806b4cfc681dfe73ce2e6fae79c66b3edc21124c37663947ac:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.12-os-Packages-k-kernel-devel-4.18.0-372.69.1.el8_6.x86_64.rpm
 8eec2c8f3361740c904f901b9206dbd8a1e8e7699c7f4c89c9fe487cc9c3ed3e:
   type: cos
   packages:
@@ -7953,6 +7957,12 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.4.2105-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.12.1.el8_4.x86_64.rpm
+49ac10085b6c49d1f2b6c3ae99d93f863aa3d8996ac7a27262200654db680bdc:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 49ecd81c6270402e435a75e3de4f444436f49b11f4738ff7b1ece6fdc268c486:
   type: redhat
   packages:
@@ -17482,12 +17492,6 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
-adb81ba2505225729f841d33cf49335205a47e767e0bc6e827e05720b7f7dfe3:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 adbf002cc22213bf41f3df956babc07cadc28236c288e82008298c2b7f396d01:
   type: ubuntu
   packages:
@@ -18453,6 +18457,11 @@ b575f4e6d98334f4c7ac5a7fe2203b2b63418a312f05c942cf314eadb4a681b0:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.179-1.el7.elrepo.x86_64.rpm
+b602f7501edf844c26061f9086b3d801f9feb16cef4545c0f1f5ebed288e2bf3:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-162-generic_5.4.0-162.179_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-162_5.4.0-162.179_all.deb
 b617c79a633bf9d9c88c5dbf42c76506b706e0755deb4b3a969a805fe8e9ad15:
   type: ubuntu
   packages:
@@ -22029,6 +22038,10 @@ dbf0d02cef11c13dcb99d3b5bc580d2c922e7951ba32c451da8b9f1aa558d668:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.191-1.el7.elrepo.x86_64.rpm
+dbf97cd5b8930190ac7523859d35b228705020acd2976c6ffb027bb11afcc65a:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.12-os-Packages-k-kernel-rt-devel-4.18.0-372.69.1.rt7.227.el8_6.x86_64.rpm
 dbfa9d23d7f76385de63c89698344badf4eeea49346a898d74da45d5d737f2a6:
   type: ubuntu
   packages:
@@ -22762,12 +22775,6 @@ e8c4bcc3ff0a727e132dc49b1d1eed0ed30f6ce1b94cd7f8ae12811a3fc4925a:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-229.14.1.el7.x86_64.rpm
-e8e8b7b9e71f9560f0513f3eaee25a09c19771e706568f07ba4acb070953114e:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 e8f90fd29dece32ce7a3438ceb5d26f762f4725f3ea3b694a168f396ced8710a:
   type: redhat
   packages:
