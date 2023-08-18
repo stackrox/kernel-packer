@@ -250,6 +250,12 @@ crawl-cos: build-crawl-container
 crawl-ubuntu-standard: build-crawl-container
 	./scripts/run-crawler.py crawl Ubuntu > $(CRAWLED_PACKAGE_DIR)/ubuntu-standard.txt
 
+.PHONY: crawl-minikube
+crawl-minikube: build-crawl-container
+	./scripts/run-crawler.py \
+		--entrypoint python3 \
+		minikube-crawler.py > $(CRAWLED_PACKAGE_DIR)/minikube.txt
+
 .PHONY: crawl
 crawl: build-crawl-container crawl-suse crawl-rhel
 crawl: crawl-centos crawl-kops crawl-amazon crawl-debian
