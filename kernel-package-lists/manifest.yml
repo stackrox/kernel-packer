@@ -688,6 +688,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1043-fips_5.4.0-1043.49_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1043_5.4.0-1043.49_all.deb
+1f4d8be612ba5235aaf6379db3a3978a256f3311a034afa9f04b9f27ea888458:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.191-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-24-cloud-amd64_5.10.179-5_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-24-common_5.10.179-5_all.deb
 1a4c34cd8ccb501f2cede50395ee8af84674ccfa9bd19e6522084a68785d36a8:
   type: redhat
   packages:
@@ -7662,12 +7668,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-a5406f469d132370936fa1d4b2c20f3bfd5792152633c68acfb3e50e3bd0db08-download
-41ff21360302f58b6c331bff5c95f5b37deb572ef06a1ad63966ed05c6b477f0:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-5_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-24-amd64_5.10.179-5_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-24-common_5.10.179-5_all.deb
 041af0c2adef292716f4cf3fa073ab262233cfe6cba39d88b638a419dc9c6a33:
   type: redhat
   packages:
@@ -7967,6 +7967,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.6-300.fc37-x86_64-kernel-devel-5.19.6-300.fc37.x86_64.rpm
+49ee184b4af87fb6d5f67c7c1709815240b5229e24ed468818265fa3c64cdb0d:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.353.23-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.353.23-kernel-headers.tgz
 049e3304ddd59853b889b98263828d5ee675c97971e05a6740cc9d1870b7e3d9:
   type: redhat
   packages:
@@ -9779,6 +9784,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-479f3b2a3424c7c671ab090268f8a5cc614a1d4b888f01d581fecc5a14dccd61-download
+91b822d272c8bd6e2ecbd0147541fb9d5d7e64a20f823165e466c7688bb6e064:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.156.23-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.156.23-kernel-headers.tgz
 91e906ae1fb9276d21a4a05607bda7a0a20f691205eca8bdcfc7d721641cebcf:
   type: redhat
   packages:
@@ -14169,6 +14179,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-38-generic_4.15.0-38.41_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-38_4.15.0-38.41_all.deb
+53435f3a61162e5dd9f7c20297a744a320fda76556a9408794f3328df4b80a0a:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.279.24-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.279.24-kernel-headers.tgz
 54337dcb0020935dec9514a6c47bea886a648b15c5f1fbd6efa909e60bfb5a63:
   type: ubuntu
   packages:
@@ -16371,6 +16386,12 @@ a7ba90ee2909099852f95d5bb70a3cd7e4881e9e6ccd448a838d7296351ae3ba:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.5.1804-updates-x86_64-Packages-kernel-devel-3.10.0-862.11.6.el7.x86_64.rpm
+a7ac1e3f860e04cddc691250a8189ecc3a7304e4d6534894902e83a940eed038:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.191-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-24-amd64_5.10.179-5_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-24-common_5.10.179-5_all.deb
 a7ed26519aa8b4654c8d900a86e58041b17d5f3fe8603fa1ba4f9e814eb8a7ee:
   type: redhat
   packages:
@@ -21180,12 +21201,6 @@ d9e572ca378fadc8f4f5ce2560d86ca7ecc7920a6e4300c98f4f14f4cf4ab839:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1064-fips_4.4.0-1064.70_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1064_4.4.0-1064.70_all.deb
-d9d901fcadbe29c32c2fe183abf21f27d779fa5e4ee4df4e3f0c4521d8aefd7c:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.179-5_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-24-cloud-amd64_5.10.179-5_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-24-common_5.10.179-5_all.deb
 d9dae2aea9accd44b927e0149dbfb06c7f77bbd8d90753f74f1683660b2acc3d:
   type: redhat
   packages:
@@ -23431,6 +23446,11 @@ ea6aa85de498fc9796b1e9c6f9b2abb7660098ddc50dc549157aa1343d0a9b2b:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1052-fips_4.4.0-1052.58_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1052_4.4.0-1052.58_all.deb
+ea08e7ce5c274fe92c836b1ee447f7dad4bbc4b947bca31751623ffec89e42b7:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16623.461.15-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16623.461.15-kernel-headers.tgz
 ea47d330fad3536ad8c46aa6894b3ee0d8218e45b10eb6f93da1422d0e71edd7:
   type: redhat
   packages:
