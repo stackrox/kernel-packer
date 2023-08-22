@@ -15000,6 +15000,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.1185.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.1185.0-kernel-headers.tgz
+749632ded38ed7e1c693212d5c5c35b893311e43270f7029d1975151ef7ce409:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-eac3ae8b35675025cf70f4d747278fc78ae586372dd2adde50bfb97ac750775b-kernel-devel-5.4.253-167.359.amzn2.x86_64.rpm
 749833bb83e9452ba3751bd2f2de10a3fbb9685224ab2d2779768bf8bec4bcc8:
   type: garden
   packages:
@@ -17679,6 +17683,10 @@ af0ac44e3724c4a7c65f501a882e5f6c56d8b0f82b345cb995023502cfe037f9:
   packages:
   - https---storage.googleapis.com-cos-tools-16919.235.1-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.235.1-kernel-headers.tgz
+af2f26ce8cbd5e55c8cb31e50a3144e1e36148e282674576b4a043646167d97e:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-831c60e3dc8d09ab29bb1f9485d1bba77180a6d2462c47fe6aeb39d248128fa3-kernel-devel-4.14.322-244.536.amzn2.x86_64.rpm
 af2acaf2f0b4ee06ee785df77986eaf124e62bb6a4af6082e04cefdfe3b100a3:
   type: cos
   packages:
@@ -22806,6 +22814,12 @@ e8c4bcc3ff0a727e132dc49b1d1eed0ed30f6ce1b94cd7f8ae12811a3fc4925a:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-229.14.1.el7.x86_64.rpm
+e8e8b7b9e71f9560f0513f3eaee25a09c19771e706568f07ba4acb070953114e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 e8f90fd29dece32ce7a3438ceb5d26f762f4725f3ea3b694a168f396ced8710a:
   type: redhat
   packages:
