@@ -36,7 +36,7 @@ class Crawler:
         ]
 
         self.repo_include_patterns = [
-            re.compile(r'^rhel-[6-9].*$'),
+            re.compile(r'^rhel-[7-9].*$'),
             re.compile(r'^rhel-server.*$'),
             re.compile(r'^rhocp-4.*$'),
             re.compile(r'^.*-rt-.*$')
