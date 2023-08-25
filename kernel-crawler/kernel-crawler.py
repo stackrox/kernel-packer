@@ -287,9 +287,8 @@ repos = {
             "type": "s3",
             "root": "https://storage.googleapis.com/cos-tools",
             "patterns": [
-                # Only include kernels that are part of LTS releases https://cloud.google.com/container-optimized-os/docs/release-notes
-                "(16108|16623|16919|17162|17412)\.\d+\.\d+/kernel-src.tar.gz$",
-                "(16108|16623|16919|17162|17412)\.\d+\.\d+/kernel-headers\.t(ar\.)?gz$",
+                "\d+\.\d+\.\d+/kernel-src.tar.gz$",
+                "\d+\.\d+\.\d+/kernel-headers\.t(ar\.)?gz$",
             ]
         },
     ],
