@@ -100,3 +100,4 @@ containing only the subset and execute `MANIFEST_FILE={path to manifest.yml} mak
 [gcs-bundles-link]:    https://console.cloud.google.com/storage/browser/stackrox-kernel-bundles?project=stackrox-collector
 [gcs-packages-badge]:  https://img.shields.io/badge/gcs-kernel%20packages-blue.svg?style=flat&logo=google
 [gcs-packages-link]:   https://console.cloud.google.com/storage/browser/stackrox-kernel-packages?project=stackrox-collector
+
