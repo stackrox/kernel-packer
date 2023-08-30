@@ -15791,6 +15791,10 @@
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.191-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-25-amd64_5.10.191-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-25-common_5.10.191-1_all.deb
+4798631860bef52737e098a33ef3cf23dabf7760c9bac0b02fc8732e5934c1bf:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-13be0af3f1c035ad573492fedcecb8b0a4819bfbaffd192194b5e2437c2e4b40-download
 4801248847f6498a0fe2525edef1e6143f1d11017999966d896c10d197b86f8b:
   type: ubuntu
   packages:
@@ -17389,6 +17393,10 @@ addeed92f6dfd023710ebce397a7228de9118b037b25990f69dc760214935bd7:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-176-generic_4.15.0-176.185-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-176_4.15.0-176.185-16.04.1_all.deb
+adef341c596a52d1cb1baa7fe02649b3ce65460ab3a0807f1544fdea7054aa01:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-3b300df67882d159100cfba35f50f65b688563030e66804a241d4bbe32b6b717-download
 adf0ff406638cc385288a3d85e53b5686a9fef19d853001eddd108074a6c1333:
   type: redhat
   packages:
@@ -20284,6 +20292,11 @@ cc9c27a5cc719ff428111ad5f169c430ada4d593c511a288d2ff1b52db5d492e:
   packages:
   - https---storage.googleapis.com-cos-tools-15119.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-15119.0.0-kernel-headers.tgz
+cc14aab7af70bd5656b4af6f8dfda56b6e975dee9783cfd283db7c37e852ccdf:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-gcp-5.15-headers-5.15.0-1041_5.15.0-1041.49-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.15-linux-headers-5.15.0-1041-gcp_5.15.0-1041.49-20.04.1_amd64.deb
 cc34ae5066dbf57475f735bd01205763b826e3339f9dc33297ef0925a4d4e612:
   type: redhat
   packages:
@@ -20356,6 +20369,12 @@ ccc7d645c28e5d5f90c948442dd8e4348072a3cd71c8e11f2dde66df7f62c694:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-327.10.1.el7.x86_64.rpm
+ccc42ab128c3161717120edc0c9e670db86dcd3161d668b6eeebafce6f6a53e4:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.2.0-1013_6.2.0-1013.13_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.2.0-1013-gcp_6.2.0-1013.13_amd64.deb
+  image: repackage-bookworm
 ccde31b6dfd819de320fc556c5e40dac4422f58ea0bec4cb3eb5d659cb739719:
   type: suse
   packages:
@@ -22998,6 +23017,10 @@ e977d0468a471fe031aa4b07bbe7aadf84844cc4be911e94522d4c9725a04aa6:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-headers-5.0.0-1024-aws_5.0.0-1024.27-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-aws-headers-5.0.0-1024_5.0.0-1024.27-18.04.1_all.deb
+e1037e3a1239bfa559b45e145394d062bf87600baea8fa9572ce42c53834249d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.4.13-200.fc38-x86_64-kernel-devel-6.4.13-200.fc38.x86_64.rpm
 e2285a018b955ca6ec56e410eec2268b5ed04510ee9ba9ac4eebac8f10872504:
   type: cos
   packages:
@@ -24012,6 +24035,10 @@ f6b24bc9fb78d9c2fa620f2f7f99f97706af03e2ddf48727dbb2e32f11d37ffe:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-73-generic_5.15.0-73.80_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-73_5.15.0-73.80_all.deb
+f6f6388029331d118c41c1b50b9ce9bf4efed32d41a430c9348825807f60d041:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-2513.2.0-flatcar_developer_container.bin.bz2
 f6bc63584ac52b2320e53c280b1793eb74be01ad578338d947194f2872d99e1b:
   type: ubuntu
   packages:
@@ -24929,6 +24956,10 @@ fbf183b3e8455f9fd8cec4cabda36fd9f57ac6cd57443814af8b0d058fffe2e2:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.5.2111-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-348.el8.x86_64.rpm
+fc0dfe081bc046b37698b87fe928368caebdfbdbedd78ff1be9d2c66c9f18db0:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.4.13-100.fc37-x86_64-kernel-devel-6.4.13-100.fc37.x86_64.rpm
 fc4a4bef266742cfb041888ea69988c6323c5598b5ce64d2dd748a794d19bd21:
   type: redhat
   packages:
