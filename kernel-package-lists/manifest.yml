@@ -1404,6 +1404,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1933.el7uek.x86_64.rpm
+2b8e513451b83538eb21bd190bd458d8b44b12446d78b04ed4377cd3059c926b:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
 2c8d883649c09249c16e8d0f6bca5d20fa2f2f4d229e03f61755ae00bca925ff:
   type: debian
   packages:
@@ -9094,6 +9099,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2136.318.7.1.el7uek.x86_64.rpm
+76f0e61a2a2c153653edc8afda5fc338c3e8168ef35f5fcba1c5b176669e1222:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1046-azure_5.15.0-1046.53-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1046_5.15.0-1046.53-20.04.1_all.deb
 76a1b8a0c30fb325a570c0b27dfce46ff929031ecaedbcd1e69a66c7a8b5e0ad:
   type: ubuntu
   packages:
@@ -11421,6 +11431,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.164-1.el7.elrepo.x86_64.rpm
+675f478ed4e0b05a33051e98a81a8586eb3d7cddeb1c4848593b76835339a612:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-2_amd64.deb
 675b494a91756613ac54966c160176cfca0a7543a22b4b68cb2bb188575019e6:
   type: ubuntu
   packages:
@@ -20226,6 +20241,11 @@ cb210555f11ab17f5e6cba8a05111cd993932b1f14cda1258ef9aeac38811913:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-117-generic_5.4.0-117.132_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-117_5.4.0-117.132_all.deb
+cb1189442ecd7ecff98b0dbd6d3eba373244777f071a3fb99b71328df234fd07:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1109-aws_5.4.0-1109.118_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1109_5.4.0-1109.118_all.deb
 cbc13f85734c8aacfa1d0f4d64945609a04e5b56d730edbd1fd3ef15239f6fbe:
   type: cos
   packages:
@@ -23997,10 +24017,6 @@ f6b24bc9fb78d9c2fa620f2f7f99f97706af03e2ddf48727dbb2e32f11d37ffe:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-73-generic_5.15.0-73.80_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-73_5.15.0-73.80_all.deb
-f6f6388029331d118c41c1b50b9ce9bf4efed32d41a430c9348825807f60d041:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2513.2.0-flatcar_developer_container.bin.bz2
 f6bc63584ac52b2320e53c280b1793eb74be01ad578338d947194f2872d99e1b:
   type: ubuntu
   packages:
