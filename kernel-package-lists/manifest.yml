@@ -5340,6 +5340,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9d5b8276f60a1fd4bbfb2c0a7140fe3d8d85fb16aa547bef1a453f91bc721244-kernel-devel-5.4.186-102.354.amzn2.x86_64.rpm
+8a0518fdfe52058ba693f89d3c67e2d05ba384d6c60bb091f49b8128e37fc93b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.4.14-200.fc38-x86_64-kernel-devel-6.4.14-200.fc38.x86_64.rpm
 8b591c2da1b260728d9ad0c9d5f43ac2e36f884924e2dc469f0f9c5e7c3e0647:
   type: ubuntu
   packages:
@@ -14233,6 +14237,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-11316.115.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11316.115.0-kernel-headers.tgz
+71497abba94245f1c6f59176515bbb6c52176cd6414db7b74d673d8f377865e8:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.4.14-100.fc37-x86_64-kernel-devel-6.4.14-100.fc37.x86_64.rpm
 71880e4aff0e0cadcbe0575e18472b26553cb6a1f3bcadd2ca14ec94a99c96bc:
   type: cos
   packages:
@@ -17397,6 +17405,12 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
+adb81ba2505225729f841d33cf49335205a47e767e0bc6e827e05720b7f7dfe3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 adbf002cc22213bf41f3df956babc07cadc28236c288e82008298c2b7f396d01:
   type: ubuntu
   packages:
@@ -21819,6 +21833,10 @@ dabd4d58440124bcd497e4f9ead5afe8043b858185ba8d273e3cbdc41747b845:
   packages:
   - https---storage.googleapis.com-cos-tools-11316.56.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-11316.56.0-kernel-headers.tgz
+dad03f8bbffe31d75e21503badc96b34c0a1cce6cdee089b9135bd32b127697b:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.5.1-300.fc39-x86_64-kernel-devel-6.5.1-300.fc39.x86_64.rpm
 dad4a80f4bc527ee2d8bccc9d2a72f98dba2b6fce2e1093cb1a916448e3dcfc5:
   type: redhat
   packages:
