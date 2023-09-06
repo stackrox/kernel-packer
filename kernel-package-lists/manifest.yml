@@ -3720,6 +3720,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-121-generic_4.15.0-121.123_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-121_4.15.0-121.123_all.deb
+5fcb5230c89d304153fbcd60eda0a55675bd777be390cb90dff087a0647347c4:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-50374ed586540311404c03a1d4527e8a11cadced8a521a0cf89b72e25d6da587-kernel-devel-5.4.254-169.358.amzn2.x86_64.rpm
 5ecc504d03a84205ec051b67a0e3bb8477921935e6887fbe25888d31c4e3fd58:
   type: cos
   packages:
@@ -15087,6 +15091,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1015_4.15.0-1015.15_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1015-gcp_4.15.0-1015.15_amd64.deb
+0908209cc90bbb988bc8f6fc16d210c5ca6fa39df3477181200af6b1d14470a4:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-b6dc54af14a9fd774469d577995a7027f4c3b46401bab8c980122a97bbbeca47-kernel-devel-5.10.192-182.736.amzn2.x86_64.rpm
 910926c2ef00747319ade511a31e2eab008039c55b19f26e49934158fa58e1ac:
   type: cos
   packages:
@@ -22776,12 +22784,6 @@ e8c4bcc3ff0a727e132dc49b1d1eed0ed30f6ce1b94cd7f8ae12811a3fc4925a:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-229.14.1.el7.x86_64.rpm
-e8e8b7b9e71f9560f0513f3eaee25a09c19771e706568f07ba4acb070953114e:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 e8f90fd29dece32ce7a3438ceb5d26f762f4725f3ea3b694a168f396ced8710a:
   type: redhat
   packages:
