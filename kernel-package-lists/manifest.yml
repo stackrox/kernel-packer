@@ -2191,6 +2191,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.10.1.el7.x86_64.rpm
+3a092b0a0eaeacf0cf5f5f97a0c637be4fd87205478890279f966051e67c0e68:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.279.34-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.279.34-kernel-headers.tgz
 3a95ec2ed23663166b33ff41432983871b61b60a920e751edac41448aedf81d0:
   type: ubuntu
   packages:
@@ -5648,6 +5653,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-150.75.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Product-SLES-15-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-150.75.1.x86_64.rpm
+8bda03235ca2baacf85cfe413baa31f218f7ddc1087f2b3943af66861c564336:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.0.31-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.0.31-kernel-headers.tgz
 8ddaadcfe58598b4c55e80c6b4c98b11e09429ac340f3615c043da03ebab5a06:
   type: ubuntu
   packages:
@@ -8010,6 +8020,12 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.4.2105-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.12.1.el8_4.x86_64.rpm
+49ac10085b6c49d1f2b6c3ae99d93f863aa3d8996ac7a27262200654db680bdc:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 49ecd81c6270402e435a75e3de4f444436f49b11f4738ff7b1ece6fdc268c486:
   type: redhat
   packages:
@@ -8993,6 +9009,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.5.1.el8_1.x86_64.rpm
+71c9345389c9f99d8d52262fc347bcb8a458bf148973269b29851c562ca6beee:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.353.31-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.353.31-kernel-headers.tgz
 71eabaf75f7a6c7cd98cf2e6d6c0ba54a8565dcc4ac1f4055aefd1f7c1ab6fcb:
   type: ubuntu
   packages:
@@ -23316,6 +23337,11 @@ e24834d4dbd2b2849d5ad50e4ea565421fe73b6bc105bfd856cba78c7cf46f43:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.245-1.el7.elrepo.x86_64.rpm
+e30222be181321f85e1597bfa40234ae44f4142ba59981c0300051da259c4e50:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.156.34-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.156.34-kernel-headers.tgz
 e43733bd80c81f61057ae9c87f4dbe80b0fc28b578bee77338f9da506254688e:
   type: cos
   packages:
