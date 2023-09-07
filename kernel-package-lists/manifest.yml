@@ -8010,12 +8010,6 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.4.2105-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.12.1.el8_4.x86_64.rpm
-49ac10085b6c49d1f2b6c3ae99d93f863aa3d8996ac7a27262200654db680bdc:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 49ecd81c6270402e435a75e3de4f444436f49b11f4738ff7b1ece6fdc268c486:
   type: redhat
   packages:
@@ -8759,6 +8753,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1056-aws_5.4.0-1056.59_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1056_5.4.0-1056.59_all.deb
+66bd43c8312af4a48b0ea53ce8775fb33b368fb56fe2a6025a41b58be2215f35:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.5.2-300.fc38-x86_64-kernel-devel-6.5.2-300.fc38.x86_64.rpm
 66ad67bde9a1e9f132116586f75a5e1ad51e3e1690b69e3a5caeaf37656ca45e:
   type: cos
   packages:
@@ -16692,6 +16690,11 @@ a195a9650455df4ff047a208328befa50810a37c20f93a60620dc067bf6a9077:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.151-1.el7.elrepo.x86_64.rpm
+a218d9176bd658efb8fdb7cb056b6a37fd78d7ca53356066d03b1bc2e1c2e736:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17872.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17872.0.0-kernel-headers.tgz
 a251ef93dd6b5a8db820b2e6004ec3eabde0ba8c76086bce7fd03ce837000897:
   type: redhat
   packages:
