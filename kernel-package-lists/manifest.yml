@@ -17504,12 +17504,6 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
-adb81ba2505225729f841d33cf49335205a47e767e0bc6e827e05720b7f7dfe3:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 adbf002cc22213bf41f3df956babc07cadc28236c288e82008298c2b7f396d01:
   type: ubuntu
   packages:
@@ -19957,6 +19951,10 @@ c733a3c2306d6e88d847339557d81a4c438021cd398adb706f08e5309065a37a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-gke-5.15-headers-5.15.0-1015_5.15.0-1015.18-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-5.15-linux-headers-5.15.0-1015-gke_5.15.0-1015.18-20.04.1_amd64.deb
+c764c472da6ae823338b1fbbbba6cb08b842d223197bef8aff4761954ec0e5aa:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.4.15-100.fc37-x86_64-kernel-devel-6.4.15-100.fc37.x86_64.rpm
 c0768ab37c0784d9685113b6efd82a88814663b8e84d9feac9905d9a51acec09:
   type: ubuntu
   packages:
@@ -22738,6 +22736,10 @@ e7d3ce1f44f62551a14b1e1190601e6736a9c860ec6efd96cc4de386da575b22:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1120_4.15.0-1120.134-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1120-gcp_4.15.0-1120.134-16.04.1_amd64.deb
+e7d7ba74cebf89214a130d7e0eff77bc68cb67a8fcc8020397dcb3cdf2f0fb91:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.4.15-200.fc38-x86_64-kernel-devel-6.4.15-200.fc38.x86_64.rpm
 e7c9e9ef174a6af3ca99162b8c5a73056d4f425366e7ca7c4a770fa229584bdf:
   type: redhat
   packages:
