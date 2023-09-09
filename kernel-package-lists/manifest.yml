@@ -3521,6 +3521,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1111-azure_5.4.0-1111.117_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1111_5.4.0-1111.117_all.deb
+5e5322a6d274693ff22e1f033c55bda06d5f30b310a0cd8ca39f6098c84f310c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.2.0-1013-aws_6.2.0-1013.13_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.2.0-1013_6.2.0-1013.13_all.deb
+  image: repackage-bookworm
 5a5518a695f445a5ac5228aabfcec516901243e11576d3684bb5f9137f6cbebc:
   type: redhat
   packages:
