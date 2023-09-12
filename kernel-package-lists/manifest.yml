@@ -10173,6 +10173,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1034_4.15.0-1034.36-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1034-gcp_4.15.0-1034.36-16.04.1_amd64.deb
+097d069e7cfe5be2da5a6c10e190d9096c1cb5f0c54eb4a8a852560d2791cb38:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-1_amd64.deb
 98d1eb757e8c77723b8a714d6ffddeeda47184cf06d12eb81fc744383e722ac5:
   type: redhat
   packages:
@@ -15270,6 +15275,10 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.146-1.el7.elrepo.x86_64.rpm
+1342319d9bdd041d65ce645f3a0182b7a879302c00384826a9940392623cb938:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3139.1.1-flatcar_developer_container.bin.bz2
 1363108f1dd57de4387b43db3fe2345cafe85864fb0a4d3c01c42b8f24e180a5:
   type: redhat
   packages:
@@ -17572,6 +17581,11 @@ ad7140de956180aac41b4a595178633dc02547319d159f3c090e70ffc0f9f7ed:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1069-fips_5.4.0-1069.78_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1069_5.4.0-1069.78_all.deb
+ad73481b8da30f54882e975d1e2744e0bb3e917f3e7c5cabe664ab3746e10fc6:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1117-azure_5.4.0-1117.124_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1117_5.4.0-1117.124_all.deb
 ad227285eb51b00851eab6e78734f8ab24ac43843090c7bd15d3f59664bf22b8:
   type: oracle
   packages:
@@ -17591,12 +17605,6 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
-adb81ba2505225729f841d33cf49335205a47e767e0bc6e827e05720b7f7dfe3:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 adbf002cc22213bf41f3df956babc07cadc28236c288e82008298c2b7f396d01:
   type: ubuntu
   packages:
@@ -24883,6 +24891,11 @@ f1991f06e43a8d36ea20cf1f53e32b24bdbefcb69502c57f84e6f2398a48b71d:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1159-azure_4.15.0-1159.174_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1159_4.15.0-1159.174_all.deb
+f2347c7bfb8578b95551d3f4e443a320e16c2ca8258f725e87cf34d065c5f4c2:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
 f2482bccfa76d8be0c1e650b8977254e2859efdcd75d65773e3907a289381ff5:
   type: cos
   packages:
