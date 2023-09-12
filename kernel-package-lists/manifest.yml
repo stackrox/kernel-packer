@@ -987,6 +987,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.71.1.el7.x86_64.rpm
+1e129247bc9363bc0fef5629a70bd902b7190fb4fa879a2e04e9555a1b6bde60:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.52-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-cloud-amd64_6.1.38-4_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-4_all.deb
 1a518020dce8bfa5837d063c992819369794ac6819d484fea97faf5a787b1fb6:
   type: ubuntu
   packages:
@@ -6053,6 +6059,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-gcp-5.3-headers-5.3.0-1010_5.3.0-1010.11-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.3-linux-headers-5.3.0-1010-gcp_5.3.0-1010.11-18.04.1_amd64.deb
+9b0553e357a5c3740a6bcb7ced2d4991d03f6754444c355da395c6e7150733db:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-a7d724e057dd0c8dda796428f85be30af87d449bb2fd93430acbd61b1b3a6876-download
 9b0605a59a4833523a6ee6b65c5952110e628aa6608849590f2444d24734adbb:
   type: redhat
   packages:
@@ -7667,6 +7677,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1060-fips_4.15.0-1060.68_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1060_4.15.0-1060.68_all.deb
+0039a2cd3d882fb058371571a42d99961452c34f2530851cf8edbfdec626e001:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1013-azure_6.2.0-1013.13_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1013_6.2.0-1013.13_all.deb
+  image: repackage-bookworm
 0039b1830e88cd71f4a4a77d876f965c1bcf546694d875abf0304af20af096ee:
   type: redhat
   packages:
@@ -9462,12 +9478,6 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1911.4.0-coreos_developer_container.bin.bz2
-82b6a84796aab003de6dbd6263210c51a1d2d6182a00ee06bddf42053d693d05:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.38-4_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-amd64_6.1.38-4_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-4_all.deb
 82d15c46bcf4663cc500726a0a43debf9206e3ae0cf0e4d3c64b8fc148d6752a:
   type: redhat
   packages:
@@ -10153,6 +10163,12 @@
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-2247.7.0-coreos_developer_container.bin.bz2
+97c9f3080b7b4246a9056ca8b0b29f03f6061b4b8b846517b23ea1d32a666283:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.52-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-amd64_6.1.38-4_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-4_all.deb
 97d48aa1d0ac3efafe3af654010b5ac8bfa4659005189739c805ae1113f9b733:
   type: cos
   packages:
@@ -17355,12 +17371,6 @@ abbfc68e5882addbcbe530ec135e6f85571b7900c547b34eb9e3ade9b40ffc97:
   packages:
   - https---storage.googleapis.com-cos-tools-12871.59.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.59.0-kernel-headers.tgz
-abd1af316e49910da9b371cf43e7fd3a27d30771f13e752097e7365ad6bb58c4:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.38-4_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-cloud-amd64_6.1.38-4_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-4_all.deb
 abde74076a7708f48fbaf6d8ec790ebf91126decdcad32e3b0e49fe680a404d1:
   type: ubuntu
   packages:
@@ -23333,6 +23343,10 @@ e2398f07a19af26d4ecd045183917ef02b26aeffe48cba5be38a137138aa5b44:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-a853590121aeb01673488b6bb90fd69f1791f4feaf7f809b06d2d28bc38149b3-download
+e2867c54e23219956163bb8df2bfd7c856d4a5d2a1a0632b4aadc90232ad512b:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-a1c7f35c4016b437866fa9a42a7dbcbf9305e883a4c9cd316c88971844985d94-download
 e3003d863834143a5ec76b366830372ebe306e8f1917553c643da656cf054a13:
   type: redhat
   packages:
