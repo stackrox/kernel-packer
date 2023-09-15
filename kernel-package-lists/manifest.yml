@@ -401,6 +401,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1029_4.15.0-1029.31-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1029-gcp_4.15.0-1029.31-16.04.1_amd64.deb
+0aae215778fac40e3444d6c97d5eb720caa393264d22d0a6419cb9b070986d27:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-511.el8.x86_64.rpm
 0bb13ddf6faa54af0ad9bbb56aa580d06eb458948d1927ba4353495a2dea5792:
   type: redhat
   packages:
@@ -809,6 +813,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-687600964053ccbffe65725c73390235706305f12196465ca93c4eb7ad5082d4-download
+1f43f40b0b043397d4efb6805119420930941d243fcbbc7e290cc787d7b65a7e:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-508.el8.x86_64.rpm
 1d55fcb4438a9f563c3eb8b6a864a7d7093a6558f1f6d9fb22ca7d3eaeb92885:
   type: ubuntu
   packages:
@@ -7932,6 +7940,10 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.507.5.el7uek.x86_64.rpm
+47e88d74bdb6af21fddadb98db40b34da6d5971a6513c54b96e1d1963458794c:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-512.el8.x86_64.rpm
 47f95e49161e337bab8ae59d1f16fc85ad58a558d67e763617b03d7d37ea7093:
   type: redhat
   packages:
@@ -10291,6 +10303,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.102-1.el7.elrepo.x86_64.rpm
+132e74592d8b218893711138568f20485527d9e759e629e3ddbd4cf82c10d1ee:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.95.1.el7.x86_64.rpm
 136cd4788f8436c7b2fc8a062cc1971025d8c49898415a80d2d09ee1eb8584eb:
   type: redhat
   packages:
@@ -15447,6 +15463,10 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-5d3f081d2088c9b8593fcbfa0363208dcb7ba91dce73fb2f3d01d0135610e576-download
+06700971ef4399af3ac63c1006c8b92157e5d9a233a822d07fa5b31d7c902b07:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-509.el8.x86_64.rpm
 6975664a958e5126b9d02d395ef178b29f23c431ae733e85055013b891bb610a:
   type: ubuntu
   packages:
@@ -17097,6 +17117,10 @@ a333884283cae6550614ca933972ca199146294dfd9185ad87678122739f71bc:
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-2942.1.1-flatcar_developer_container.bin.bz2
+a807726135ab1eab6db8255ac268cbb6815d2a6a4cbe588655bdc188ecf43b40:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-513.el8.x86_64.rpm
 a925527684e1caaf045786128292ba93f3f1180f6d4f59e9caeb520fe5e9df6b:
   type: ubuntu
   packages:
@@ -24559,6 +24583,12 @@ f33f6cd7d23ed024e8b13c4daff59179506853eeafb5c664fb83b2cfba5a6da3:
   type: redhat
   packages:
   - http---vault.centos.org-7.7.1908-updates-x86_64-Packages-kernel-devel-3.10.0-1062.4.2.el7.x86_64.rpm
+f35fefffc94af9d052758c904a39cd27d6a49dd158948c5610000a5826af8e7a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1014-azure_6.2.0-1014.14_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1014_6.2.0-1014.14_all.deb
+  image: repackage-bookworm
 f37cdca5bb3b271c48ea82972965752a260017902534a2fb87ac7b281dac59be:
   type: ubuntu
   packages:
