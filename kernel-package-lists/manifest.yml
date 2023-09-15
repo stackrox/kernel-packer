@@ -485,6 +485,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-305.40.2.el8_4.x86_64.rpm
+0cd01c04227fc6eb80a03c39dda63602375dc1f0079296bc6a9c861be34819f7:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.1-flatcar_developer_container.bin.bz2
 0dd6dcec9d0f79d1ce9b6af99b225f8b74bca9dae90b126023603f5afd325c2f:
   type: oracle
   packages:
@@ -1824,12 +1828,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-9df0d6197050f5ced3c244dd86016065e7d3fc4d912756be9e65b2f1f0ee5db8-download
-2ed7efa42a4461a38d7fd2fe3783383270cf02fc3d53700dd4a5dd447a38e0dd:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1004-azure_6.2.0-1004.4_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1004_6.2.0-1004.4_all.deb
-  image: repackage-bookworm
 2fd10afc1d15851ccbe52d67bc0aab132f323ebbd6a9daea36292c9a24615788:
   type: coreos
   packages:
@@ -15195,12 +15193,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1141_4.15.0-1141.157_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1141-gcp_4.15.0-1141.157_amd64.deb
-962644ed9bf2e156b00c2ce0304eccba658f085057c25e5df9a0444245876ae1:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.2.0-1006_6.2.0-1006.6_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.2.0-1006-gcp_6.2.0-1006.6_amd64.deb
-  image: repackage-bookworm
 0965385dddf29f529340b4e8f2220881b94557948872a498b99ca15fea1630d4:
   type: cos
   packages:
@@ -15930,12 +15922,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-b2000c181dc6c2e6fbfb4bbe324ca19f35c3d14f45b29b3cb83171d48e76e7cf-kernel-devel-5.10.177-158.645.amzn2.x86_64.rpm
-920911131de4904b74b44bb681a3c3071447741f8a2a4ca9e50f3762a6e03aaa:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.3.0-7-generic_6.3.0-7.7_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.3.0-7_6.3.0-7.7_all.deb
-  image: repackage-bookworm
 965943875dd46b9c78637a08eb8efaf0408cf18fb816b4c86ee06aaf629cd5e0:
   type: redhat
   packages:
