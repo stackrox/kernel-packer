@@ -17581,6 +17581,12 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
+adb81ba2505225729f841d33cf49335205a47e767e0bc6e827e05720b7f7dfe3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 adbf002cc22213bf41f3df956babc07cadc28236c288e82008298c2b7f396d01:
   type: ubuntu
   packages:
@@ -22804,6 +22810,10 @@ e6f790e4e2d83c254031367047f04cb76ba4abca74e879e6bfe4bb189b3e8de7:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-5d8a33e80ce0c09968b8b929e0c13cb3bc98cfeffa62ba24ba7be1ea08b9defa-download
+e6a816a9ed098d8b00597b646fae280bc2c73e0521215a36d2f1ed6976bd72b3:
+  type: oracle
+  packages:
+  - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2136.323.8.1.el7uek.x86_64.rpm
 e6f1102b409d78e1d25068267fc1cfea20f2e524ab07141379b8521f53201826:
   type: redhat
   packages:
@@ -22898,6 +22908,12 @@ e8c4bcc3ff0a727e132dc49b1d1eed0ed30f6ce1b94cd7f8ae12811a3fc4925a:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-229.14.1.el7.x86_64.rpm
+e8e8b7b9e71f9560f0513f3eaee25a09c19771e706568f07ba4acb070953114e:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 e8f90fd29dece32ce7a3438ceb5d26f762f4725f3ea3b694a168f396ced8710a:
   type: redhat
   packages:
