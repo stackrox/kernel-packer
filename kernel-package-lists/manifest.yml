@@ -1428,6 +1428,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1933.el7uek.x86_64.rpm
+2b8e513451b83538eb21bd190bd458d8b44b12446d78b04ed4377cd3059c926b:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
 2c8d883649c09249c16e8d0f6bca5d20fa2f2f4d229e03f61755ae00bca925ff:
   type: debian
   packages:
@@ -11602,6 +11607,11 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.164-1.el7.elrepo.x86_64.rpm
+675f478ed4e0b05a33051e98a81a8586eb3d7cddeb1c4848593b76835339a612:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-2_amd64.deb
 675b494a91756613ac54966c160176cfca0a7543a22b4b68cb2bb188575019e6:
   type: ubuntu
   packages:
@@ -24459,12 +24469,6 @@ f08f00f6f912144f846190c78356f27cc74614230fed3bd8eb78b3b12b0b86fe:
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.21.3.el7.x86_64.rpm
-f9b5d97db03d27401caa4bd68b7bc87beaa557d2d11c4862b36b924b16804a87:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 f9e5deefb06d53647719ab8b3e3d585232ead45d1dd25442688e478b82dd4e62:
   type: ubuntu
   packages:
