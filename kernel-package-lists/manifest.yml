@@ -21600,6 +21600,11 @@ d64deca6c6cb66e1699f68065e3b8f2b2efae9dcec9608e0bb6aab485cf0edca:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.230-1.el7.elrepo.x86_64.rpm
+d65b86b45130c3d0124c667769557e50bf92cdecd4d175f598a677ee33fae48c:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.353.46-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.353.46-kernel-headers.tgz
 d65ceed3e6ee566b3ba414627fcb18c1353b516816b0ad5991a5bdac30f705b6:
   type: cos
   packages:
@@ -24389,6 +24394,11 @@ f5d40d6b3de5a674afdd7a276960f3eec71acbb78c69a6be1833a23288057f80:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2136.304.4.1.el7uek.x86_64.rpm
+f5b60f895bd1398fb408dbeefcab403f727d104bf9fe7fd69ebc8f1fa853ddfd:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.156.57-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.156.57-kernel-headers.tgz
 f5c87a78ce04537e3191742422c72d02a0942a573f358e2bdf822f34c090ba0e:
   type: cos
   packages:
@@ -24556,6 +24566,12 @@ f08aed1389b32a14fcc4932f29b8dbb047bbb49a4aeefa5c0097a39a0236ed46:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1047-azure_5.15.0-1047.54-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1047_5.15.0-1047.54-20.04.1_all.deb
+f9b5d97db03d27401caa4bd68b7bc87beaa557d2d11c4862b36b924b16804a87:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 f9e5deefb06d53647719ab8b3e3d585232ead45d1dd25442688e478b82dd4e62:
   type: ubuntu
   packages:
