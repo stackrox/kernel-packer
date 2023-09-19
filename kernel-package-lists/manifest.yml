@@ -38,6 +38,11 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1129-azure_4.15.0-1129.142-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1129_4.15.0-1129.142-16.04.1_all.deb
+0d2a8b79202c07478d92aa42ddefac08e88e0faa6f381400d17dbe553910e813:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-noarch-kernel-devel-5.14.21-150400.24.84.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-x86_64-kernel-default-devel-5.14.21-150400.24.84.1.x86_64.rpm
 0a2cfd31319434fc31b1f1027dfe82d770cf3612d549c1eb797e93bc2a8d4d0a:
   type: ubuntu
   packages:
@@ -17662,6 +17667,12 @@ ada8bb51252c9cc58331302174e755222bc6f6f6ca0181b157a300964fe215c3:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10718.6.0-kernel-src.tar.gz
+adb81ba2505225729f841d33cf49335205a47e767e0bc6e827e05720b7f7dfe3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-1_all.deb
 adbf002cc22213bf41f3df956babc07cadc28236c288e82008298c2b7f396d01:
   type: ubuntu
   packages:
