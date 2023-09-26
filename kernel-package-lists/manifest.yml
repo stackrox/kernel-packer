@@ -13049,6 +13049,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-36709bc1af006d547d723e6dc99905667c7e7f1b11f249ea87c923807b0a44e2-kernel-devel-4.9.81-44.57.amzn2.x86_64.rpm
+4583c68507e3d75ce8ea1e9d0145efbaccf19b5148f8e27517fa44b6565cac86:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.0.45-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.0.45-kernel-headers.tgz
 4629f24785cc0aaf225bff3d690c8f7d81f82dcaf3a4cf6e636689a22741a669:
   type: ubuntu
   packages:
@@ -13388,6 +13393,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-0844e38596c726627626976c8da4e90762952707ebee43a4fd161882c145ce55-download
+6823d2223594705bb836396e9fab5407b2d53a01edb3cfc57c4efc6608b761e8:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17927.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17927.0.0-kernel-headers.tgz
 6828b3d901c5293695a1c27c17fffbb3105ea006d20bd7aca1b37e955fad9bcb:
   type: redhat
   packages:
@@ -25232,6 +25242,11 @@ f7296bfbd3448e8f7f92a656628e90c6dc66d6fc37f544b657b6213ea7272f4e:
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-kbuild-5.15_5.15.101-0gardenlinux1_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.101-gardenlinux-cloud-amd64_5.15.101-0gardenlinux1_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.15-linux-headers-5.15.101-gardenlinux-common_5.15.101-0gardenlinux1_all.deb
+f7667a4363e32392ef6b24526319d728402249589afa54712e66b0cdc3487f3d:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.156.63-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.156.63-kernel-headers.tgz
 f7695fbdb3469e9e998dced58b5172943c0269ac898029621c42517d7fe555e8:
   type: ubuntu
   packages:
