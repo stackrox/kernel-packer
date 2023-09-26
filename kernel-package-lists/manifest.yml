@@ -10257,6 +10257,12 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8.3.2011-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-240.el8.x86_64.rpm
+98e41b03b84fedb22d88c5d759b1dab18d153c8d5903ab227f7082f862de15ba:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1005_6.5.0-1005.5_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1005-gcp_6.5.0-1005.5_amd64.deb
+  image: repackage-bookworm
 98e50ce7c868f63a1ed171734dd81c046893180360a8de047ea130f99e4ad8a1:
   type: cos
   packages:
@@ -10290,6 +10296,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1095_4.15.0-1095.108-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1095-gcp_4.15.0-1095.108-16.04.1_amd64.deb
+98cf4a6078333b3e24db2533529b91f8831de0ea475a593c097688ae06789956:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.5.0-1005-azure_6.5.0-1005.5_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.5.0-1005_6.5.0-1005.5_all.deb
+  image: repackage-bookworm
 99f2a2c30ab3d9c14f77bb76a3d8619943c4bce76322fe6f470d031796ebf3e5:
   type: coreos
   packages:
@@ -24846,6 +24858,12 @@ f64f5c1aa7e325e60836d5ffa93b7d5e3bf21f39ab74aaaf072e7dc74dffac38:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1060_5.4.0-1060.64_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1060-gcp_5.4.0-1060.64_amd64.deb
+f64c9b2a329a8b754938302fb841ceb3ed230b92300db7c29dd2cc79f6e7ee48:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.5.0-1006-aws_6.5.0-1006.6_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.5.0-1006_6.5.0-1006.6_all.deb
+  image: repackage-bookworm
 f66f6436db746203679112acf18f8f0ea9141131b27471d0f26ca0c9c7415000:
   type: ubuntu
   packages:
