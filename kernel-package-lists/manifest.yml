@@ -3090,6 +3090,11 @@
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-3510.1.0-flatcar_developer_container.bin.bz2
+4bcddd65ed66fdd05913c4ac0c7d00d2fc3fa5cf66b7529a6a4d9766be7abf03:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-noarch-kernel-devel-5.14.21-150500.55.28.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-x86_64-kernel-default-devel-5.14.21-150500.55.28.1.x86_64.rpm
 4bd3d6b0a4138fd194f2e7ad2a9833d113b3f9723460e0425b678805353ddadb:
   type: ubuntu
   packages:
@@ -12231,6 +12236,11 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.41.1.el7.x86_64.rpm
+866b499994d7881ab703552fcf342e51e6687eefe64b08cfd126a0ae5e135461:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-noarch-kernel-devel-5.14.21-150400.24.88.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-x86_64-kernel-default-devel-5.14.21-150400.24.88.1.x86_64.rpm
 869c674559e307954951f5f374dd9adc36e8591c77e0e76f30040b320e3134f0:
   type: redhat
   packages:
