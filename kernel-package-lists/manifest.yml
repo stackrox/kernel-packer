@@ -9447,6 +9447,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1088-fips_4.4.0-1088.95_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1088_4.4.0-1088.95_all.deb
+77aeef02397b40240d72b003eca7021aabe569d1146333db55be01ed34fd64fe:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.55-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
 77cf6e14da8ee8255b951b71c187d6910f4a2efb61f9d16c3b124b0ad2a5f41a:
   type: redhat
   packages:
@@ -10340,11 +10345,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1034_4.15.0-1034.36-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1034-gcp_4.15.0-1034.36-16.04.1_amd64.deb
-097d069e7cfe5be2da5a6c10e190d9096c1cb5f0c54eb4a8a852560d2791cb38:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-1_amd64.deb
 98d1eb757e8c77723b8a714d6ffddeeda47184cf06d12eb81fc744383e722ac5:
   type: redhat
   packages:
@@ -10363,6 +10363,11 @@
   packages:
   - https---raw.githubusercontent.com-kubernetes-minikube-v1.26.0-deploy-iso-minikube-iso-board-minikube-x86_64-linux_x86_64_defconfig-kernel-5.10.57
   - https---cdn.kernel.org-pub-linux-kernel-v5.x-linux-5.10.57.tar.xz
+98f579589e222c263a3a94dc0022a5a2720b462a0903fc17f02b8a46bd6bbb01:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.55-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-2_amd64.deb
 98bae64eb94b2194f4b637f13a2ca8b6ce7cdf0a01ad40f4f621e50caa348e25:
   type: ubuntu
   packages:
@@ -11835,6 +11840,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.353.50-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.353.50-kernel-headers.tgz
+0677a111a931d26ff4af84714ca3e2b283d21fe8c4e3011f3c13859809c8f147:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17935.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17935.0.0-kernel-headers.tgz
 678f47ae4cda3a91ca12dba4e56851548be5e04f783db3a191bd92df1c5c43eb:
   type: cos
   packages:
@@ -25315,11 +25325,6 @@ f1991f06e43a8d36ea20cf1f53e32b24bdbefcb69502c57f84e6f2398a48b71d:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1159-azure_4.15.0-1159.174_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1159_4.15.0-1159.174_all.deb
-f2347c7bfb8578b95551d3f4e443a320e16c2ca8258f725e87cf34d065c5f4c2:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.38-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-1_amd64.deb
 f2482bccfa76d8be0c1e650b8977254e2859efdcd75d65773e3907a289381ff5:
   type: cos
   packages:
