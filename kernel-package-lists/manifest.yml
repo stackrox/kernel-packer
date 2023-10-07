@@ -2511,6 +2511,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1052_5.4.0-1052.55_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1052-gke_5.4.0-1052.55_amd64.deb
+3bdf25b2a96c378b1ff705dd5b86ae94716953882bb33b32ab8288697ff7300d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-9-generic_6.5.0-9.9_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-9_6.5.0-9.9_all.deb
+  image: repackage-bookworm
 3fe0f1084688ea7f5504d332f61975db01d9ba3a86db71c32f0df0fb072ba7cd:
   type: ubuntu
   packages:
@@ -6067,6 +6073,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2085-aws-fips_4.15.0-2085.91_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2085_4.15.0-2085.91_all.deb
+9e89e479e3513957698989b10e3f3c3e0d6c2cd000db7d9b8afa656c992215be:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.5.0-1007-azure_6.5.0-1007.7_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.5.0-1007_6.5.0-1007.7_all.deb
+  image: repackage-bookworm
 9b89ece89ae545a4cff7882a30efacf6d437b071cb2e4fc104a436fa21007b1c:
   type: redhat
   packages:
@@ -14553,6 +14565,12 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-147.5.1.el8_1.x86_64.rpm
+57637da76bc3ff04449c8b1009a1ec7fbab5a26edef98da63ab5d3fcda8d8486:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.5.0-1008-aws_6.5.0-1008.8_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.5.0-1008_6.5.0-1008.8_all.deb
+  image: repackage-bookworm
 58040fdf97f084e87862f19cee4a9a2f6cd87ef5f42208ea5ed9db08bc1413a9:
   type: ubuntu
   packages:
@@ -23458,6 +23476,12 @@ e47bfc890bade7c0ff6beb72e3f7007531768e1b4ac62053818ec01bd16f029c:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.521.1.el7uek.x86_64.rpm
+e50f75fda35e29f10df9350c06f87a639390eba8b28c3a057ad02e4b5c58eb11:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1007_6.5.0-1007.7_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1007-gcp_6.5.0-1007.7_amd64.deb
+  image: repackage-bookworm
 e52f94cb5c9e1e9f5b59938f8dc7f8049ef00ae600ffb36497bf34528dbd23e6:
   type: redhat
   packages:
