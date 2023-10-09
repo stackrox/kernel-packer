@@ -3852,6 +3852,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1105_5.4.0-1105.114_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1105-gcp_5.4.0-1105.114_amd64.deb
+5bd124ac36c1fdfe25bfbb72cfc092e909d1947621d58557ae1b38bd66df6139:
+  type: oracle
+  packages:
+  - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.531.1.el7uek.x86_64.rpm
 5dd842a9adcab3e2991375eb55fdf4c80697e9e19bbf26e6fdb86e7c5dee9e73:
   type: redhat
   packages:
@@ -10185,6 +10189,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-08182959330e4ca9b2998853887e5e9aded3e33f4bab0b4446aad82aaedddcca-kernel-devel-4.14.252-195.481.amzn2.x86_64.rpm
+93c6cf997b876e174c1d700c0a80e81a13e13d2f2438891f577924fb91a3274a:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-516.el8.x86_64.rpm
 93c17178966eef6f67882c32d7710fb24c02da4cf257273ec6cc0f1c46518d3a:
   type: redhat
   packages:
@@ -14368,12 +14376,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.534.27-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.534.27-kernel-headers.tgz
-39112c2329af29fa49fe160e691fae90ecacee19660959f297eebc0a7a872a7a:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.197-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-20-amd64_5.10.158-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-20-common_5.10.158-2_all.deb
 39344f935160523ad4c2df8360d005f9989b89fdc68908b280ef606c0498619c:
   type: debian
   packages:
@@ -17285,12 +17287,6 @@ a4516bb24818b4627b5ddc99235000624ebb2bbd58f6305698a9053830dd1c81:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2025.405.2.el7uek.x86_64.rpm
-a5881c21e3f297562fe961f67e164e3c51a1b7ed1d784df4a38e11977b9bc3bf:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.197-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-20-cloud-amd64_5.10.158-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-20-common_5.10.158-2_all.deb
 a6052a0d6f6e98a74e022c5a28eebabfe377a08e00773e99500877cff4855daf:
   type: ubuntu
   packages:
