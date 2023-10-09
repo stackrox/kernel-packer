@@ -1372,6 +1372,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-91-generic_4.4.0-91.114_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-91_4.4.0-91.114_all.deb
+2e3fc491a9cff45c86a95e9a15beca862bd695e81478983ca5ecbf84da938337:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1049-aws_5.15.0-1049.54_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1049_5.15.0-1049.54_all.deb
 2c3dd7c16d8a8ba60c6d517f52d7e24e2b1635f6e084f126f493e20527631160:
   type: ubuntu
   packages:
@@ -7429,6 +7434,12 @@
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.81-1.el7.elrepo.x86_64.rpm
+31edbfd19644cf01c04cd05deba38f13cc669f8060c19aece806e7fb861230d4:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1016-azure_6.2.0-1016.16_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1016_6.2.0-1016.16_all.deb
+  image: repackage-bookworm
 31dfa9c46c304a8a5255f7c2b581589d84827d91f98860d8a89422f5702b3c79:
   type: redhat
   packages:
