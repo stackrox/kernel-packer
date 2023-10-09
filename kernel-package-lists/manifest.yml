@@ -115,6 +115,11 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-7.8.2003-updates-x86_64-Packages-kernel-devel-3.10.0-1127.18.2.el7.x86_64.rpm
+0d6d0c1d68da025aa4c3465855171c06ddda63a01e8f81b797acf39fa6f043b9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-headers-5.15.0-1049-aws_5.15.0-1049.54-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-aws-5.15-headers-5.15.0-1049_5.15.0-1049.54-20.04.1_all.deb
 0f6a4deca3d62c813385d9d21cfb506ec30c9ff359715a89887ca9dfce7f0ab1:
   type: ubuntu
   packages:
