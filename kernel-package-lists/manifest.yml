@@ -8749,6 +8749,10 @@
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.55-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-2_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
+61cf0acec30e846f63353f754a92177c462397666dfc24fd45ee21244435acb4:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-83b22d7102f4f962432f9d9a26fbafc8cb0188bd0e38ec34158d5b452bffb822-download
 61af25dbb793bd73fcd7a27c373141daa3e6bd09bc9e19744c7223cfbda6e99e:
   type: ubuntu
   packages:
@@ -11546,10 +11550,6 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.175-1.el7.elrepo.x86_64.rpm
-547f66909831632ecb0b400fdb2fe99c64b3040496b4f648f4f0eb7acae6bd3d:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-3033.2.1-flatcar_developer_container.bin.bz2
 550a1567cb542042b8bc0932c736f0248e20ae72bbecd9dd28ff4c53891f9f50:
   type: ubuntu
   packages:
@@ -23876,6 +23876,11 @@ e2051173a657138b15dbb981f7ba304d399f507df81f386989ed1bc5a1a19326:
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.10-1.el7.elrepo.x86_64.rpm
+e5889891f2583e91f93ce4cbdfec08869c81c98cd781480391d3ca5920fca008:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.179.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.179.1.x86_64.rpm
 e7340935f69faa601de85d43c57c4419b117e303e36cf74b65f6e81149f7aaf0:
   type: ubuntu
   packages:
