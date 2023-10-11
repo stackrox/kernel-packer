@@ -1984,6 +1984,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-headers-5.15.0-1045-aws_5.15.0-1045.50-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-aws-5.15-headers-5.15.0-1045_5.15.0-1045.50-20.04.1_all.deb
+02c77914d93e1a552ae7476fd17d49a614d647ec50fb2bcf1c4c4fb1ca9bb193:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17965.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17965.0.0-kernel-headers.tgz
 02bcc068a41bf78238adf3ea1391fc75aae6e0221432c3459b202dae7095d321:
   type: ubuntu
   packages:
@@ -19462,6 +19467,11 @@ bce71d452e87421f015e7de2c7276397dc7c2c27f178808af833844f4b170911:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-9b9845e7b3159602db31ebd90cc8e2a22cd9b6c22ff20eb83c725a8fd6ddd56a-download
+bceaca8cb447687810fb5123b2f3b0c7773a68a6e4efdccecdf849e37df3cb3b:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.0.51-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.0.51-kernel-headers.tgz
 bcf8b0d556a13b385f002b82080c1cae59390be22708660571aff257eb6113b1:
   type: suse
   packages:
