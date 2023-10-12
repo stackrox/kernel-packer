@@ -22706,6 +22706,12 @@ dd22659e2e8377b2349f4ca5c7ce532772eb7e2a068093c855dff33b19240192:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1038-fips_5.4.0-1038.44_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1038_5.4.0-1038.44_all.deb
+dd129675ed3b744f570e1213edc9dbe9f3553b19b9808124ccb92ea87c904b5d:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.2.0-1018_6.2.0-1018.20_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.2.0-1018-gcp_6.2.0-1018.20_amd64.deb
+  image: repackage-bookworm
 dd401008d9cdb4162ea651a5f94c64190b53d6c43b2fc6cc99a1d254e0f8ef78:
   type: ubuntu
   packages:
