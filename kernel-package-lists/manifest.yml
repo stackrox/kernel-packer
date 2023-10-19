@@ -16550,6 +16550,11 @@ a1b515a5406c4d24bc2fd2c887eced5f3e54082aaef4c7c43542f50dd98cfb60:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-noarch-kernel-devel-4.12.14-95.111.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP4-LTSS-x86_64-update-x86_64-kernel-default-devel-4.12.14-95.111.1.x86_64.rpm
+a1b00747a1f41ef1301eabceaabfe52a1b6bc259ceb53073696df9f798f73fde:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.15.0-1045_5.15.0-1045.50_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.15.0-1045-gke_5.15.0-1045.50_amd64.deb
 a1b493790d83894cc46c5cb7638765150db56a917785fa6a1acec692cda797dd:
   type: ubuntu
   packages:
@@ -19049,6 +19054,11 @@ b4107b3bbcae945ba927b464287d40b92b529688691731cffeac30ccffece8d5:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2011.4.6.el7uek.x86_64.rpm
+b4272da55177657a9449f309527b3b9cf4ef0aad8afe218b927ef92275c95909:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.226.15-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.226.15-kernel-headers.tgz
 b5038a8f676e77fa92ebe5a0d605d09e8ded18cf5abc80f9b99cb161a625c7e1:
   type: ubuntu
   packages:
