@@ -1585,6 +1585,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-263f38801af518399235b2206301fc5c1510bacce54b6bb1987bdae14384e4e8-download
+2e329e1f691143412858fb29972c6c38e80df9eb23a42e17d180e934278ac496:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1171-azure_4.15.0-1171.186-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1171_4.15.0-1171.186-16.04.1_all.deb
 2b337d8ccf0dc0950814cfcf21a5fa637326e178b3fc97545e47cc392cde3826:
   type: redhat
   packages:
@@ -1857,6 +1862,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1093_4.15.0-1093.106_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1093-gcp_4.15.0-1093.106_amd64.deb
+2cc2708ab4f3488c5bf69302072d162fa7fd5da414e918a174ec8add2b2b5a0f:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1156_4.15.0-1156.173-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1156-gcp_4.15.0-1156.173-16.04.1_amd64.deb
 2bca1de587f5871fb1053db4279b6c1850d6f4add0378f1fa774f7e17f61a27c:
   type: ubuntu
   packages:
@@ -11071,6 +11081,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2069-aws-fips_4.15.0-2069.72_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2069_4.15.0-2069.72_all.deb
+335a4039af5c19f632b5577da72dfaeb77d103aaf72ebdb52e4d01b214a3f47f:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-219-generic_4.15.0-219.230-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-219_4.15.0-219.230-16.04.1_all.deb
 336b35704865a14099c982c4d99da980a0a2de690f652fec02a127c1333f0055:
   type: coreos
   packages:
