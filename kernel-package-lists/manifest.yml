@@ -6925,6 +6925,12 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-201-generic_4.15.0-201.212-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-201_4.15.0-201.212-16.04.1_all.deb
+16f131d8ad1fbf8f3991dbc90a16ebe79d517e8130bf312f0ad3c98bbf12f8c2:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1008_6.5.0-1008.8_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1008-gcp_6.5.0-1008.8_amd64.deb
+  image: repackage-bookworm
 16c5191b9a492a2f69262b05700175a6e6af7a66ae080ef092d0607f6bd74589:
   type: redhat
   packages:
@@ -25138,10 +25144,6 @@ f20e2c927407fa21a1f962689535610006b006c04b629bff54ba5d256d151e1a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-167-generic_4.15.0-167.175_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-167_4.15.0-167.175_all.deb
-f22e33621a3a5b28df5483b44a0f28f5f556f479719322de34be8db14ca2d857:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-6.5.2-301.fc38-x86_64-kernel-devel-6.5.2-301.fc38.x86_64.rpm
 f23ef6f34e67197fd053c649de7f3aa6f861ac4fdd76a1886319a2f723fe63f6:
   type: redhat
   packages:
