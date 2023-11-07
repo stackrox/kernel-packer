@@ -2856,6 +2856,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-headers-4.15.0-1096-aws_4.15.0-1096.103-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-aws-headers-4.15.0-1096_4.15.0-1096.103-16.04.1_all.deb
+4e9bad37723786669669c006c9505ff5ccd87b2a7c3a967cddfba028b55199b8:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18041.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18041.0.0-kernel-headers.tgz
 4b13f2f4130c70ae8828d7f792bc67c8903b3dbd5722495065914d62a9f5d2e2:
   type: redhat
   packages:
@@ -6511,6 +6516,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.5.0-57.fc39-x86_64-kernel-devel-6.5.0-57.fc39.x86_64.rpm
+9cdeb8291b3815b02125acd5c4d46fa5a8d57f493cb75b995a9138a054b4c769:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.66.19-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.66.19-kernel-headers.tgz
 9bdedbc7d29e5b5c168f385b274c5b8953cdc5a3d7ea7a8caa3744a014762b45:
   type: redhat
   packages:
@@ -10331,6 +10341,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-b2c1602107f89204389b9a26760dcbacaaa44dcb0bed996718b9d663d70962c9-download
+93fc0b93d9046c7504a194d8e795aea85fd629f867c9fbd6aa8eafe2d50d76be:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.226.28-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.226.28-kernel-headers.tgz
 94d0e38a7b80e831e3355699c1f43c2188a6380691fcc8045ba162c4dd1798e7:
   type: ubuntu
   packages:
