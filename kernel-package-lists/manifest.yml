@@ -13149,10 +13149,6 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.3.1611-updates-x86_64-Packages-kernel-devel-3.10.0-514.2.2.el7.x86_64.rpm
-3412f915ba4cb9a75ea7b4753c05d5968dbe106ce41f73549e96fc80d67471ee:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2823.1.1-flatcar_developer_container.bin.bz2
 3450dae36054b9fb5401217a610135985795047e9dc2a8ee50b280bacade5785:
   type: cos
   packages:
@@ -25099,6 +25095,12 @@ f4cce6bdca3a95dd7fd83328fc7283736c26bcb0b623649f3389571c81592fc5:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1085-fips_4.4.0-1085.92_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1085_4.4.0-1085.92_all.deb
+f4ed8fadb5984cf9938ec408baa382f3979a9c16c2af709ebe3d26cd442e7503:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-39-generic_6.2.0-39.40_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-39_6.2.0-39.40_all.deb
+  image: repackage-bookworm
 f4ad129e95e0607d343934cda608ee8c55249a76a1f604f7c54a6651ca31fa04:
   type: ubuntu
   packages:
