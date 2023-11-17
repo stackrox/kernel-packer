@@ -15146,6 +15146,12 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.16-200.fc34-x86_64-kernel-devel-5.13.16-200.fc34.x86_64.rpm
+91939e953393d6eb1fe36dc9a518414e46f00a3afafc8ce70c75a8bd0d3d3cfb:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.2.0-1017-aws_6.2.0-1017.17_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.2.0-1017_6.2.0-1017.17_all.deb
+  image: repackage-bookworm
 92198bb6bf7ce1924a444564a738ac47d73d7d4f0bd0545ec3f73bf4737d2585:
   type: redhat
   packages:
