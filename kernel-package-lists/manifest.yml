@@ -20903,6 +20903,12 @@ c52082c20e6f9eabdb825c4335c40b3b9c0ea44474d9f18f697738e6a05a9218:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-headers-5.0.0-1025-aws_5.0.0-1025.28_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-aws-headers-5.0.0-1025_5.0.0-1025.28_all.deb
+c53219bc1bd9e84652a7416e1ceba0c1eb42c75ce0aa02178fa684e146ec51f0:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.2.0-1020_6.2.0-1020.22_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.2.0-1020-gcp_6.2.0-1020.22_amd64.deb
+  image: repackage-bookworm
 c53699f953463a3e4f84b776566c3e2d8941288ecbf585442ae78cc7f8c1f756:
   type: ubuntu
   packages:
