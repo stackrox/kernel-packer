@@ -481,6 +481,12 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-ae579b73fa16364fb6507796f71aa27b12f1be1920b0279db5b72b873959b81b-kernel-devel-4.14.311-233.529.amzn2.x86_64.rpm
+0dbc32516c59ac02da2665799264b66652bd1773f6086c4502c1b5dd8ab5bc54:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1010_6.5.0-1010.10_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1010-gcp_6.5.0-1010.10_amd64.deb
+  image: repackage-bookworm
 0abd424f3d954f86c102d416d180feed3268b409891e7ce2a282e00eb5fe7632:
   type: cos
   packages:
