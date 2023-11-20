@@ -17867,6 +17867,12 @@ aa4641b1bb16d0beb9866a71572692a6e1324a21fca41a5e7ab9d7a6afeed2cc:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-noarch-kernel-devel-5.14.21-150400.24.92.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-x86_64-kernel-default-devel-5.14.21-150400.24.92.1.x86_64.rpm
+aa8431ae4c56fe60d035e8eea3b3a41958d34f5d4a6050fd4cc8ab77108103fe:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.5.0-1011-aws_6.5.0-1011.11_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.5.0-1011_6.5.0-1011.11_all.deb
+  image: repackage-bookworm
 aa49196e52ba548523c21ea07cd003c472d948385df5fd81ee2e96ac158fc5ee:
   type: ubuntu
   packages:
