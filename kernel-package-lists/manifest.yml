@@ -4306,6 +4306,12 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-0300ec6eed1ee003874b448b4951cdb5e330c32e980fe440d6b6c1888fe5dc59-download
+6a90dee71de5f6dcd3d96d9e8e02e223977462426dda8a11a001e5cc7de01ce5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1018-azure_6.2.0-1018.18_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1018_6.2.0-1018.18_all.deb
+  image: repackage-bookworm
 6d91af826ca4d0a477d18dc6899e52fce72337ac64169837a962e183561cb068:
   type: ubuntu
   packages:
@@ -17063,6 +17069,12 @@ a4afe4351e27055f9026b47d0e68a506ce5e98a247a89764ac1fa681769dadf4:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel8-8.4-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-193.14.3.el8_2.x86_64.rpm
+a5b2eac35d3187b042bb6c8839b56f83b3388f251f506818efead3d0a978076c:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.5.0-1010-azure_6.5.0-1010.10_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.5.0-1010_6.5.0-1010.10_all.deb
+  image: repackage-bookworm
 a5e3e118801c577720fb82b92b13c6eda50ac12e0fc96a5a7cdf159a00f6e487:
   type: redhat
   packages:
