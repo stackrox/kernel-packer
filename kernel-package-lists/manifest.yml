@@ -3811,6 +3811,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1039_5.3.0-1039.42_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1039-gke_5.3.0-1039.42_amd64.deb
+5e503343769ff346cfaa75a0a36a0bc1f17cc2d625905533a642015f66fffda4:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2102-aws-fips_4.15.0-2102.108_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2102_4.15.0-2102.108_all.deb
 5a849844060a86e6fd73d658ce212b070a968db19a1db9f8fb7ba2467cd4d675:
   type: ubuntu
   packages:
@@ -7098,6 +7103,10 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-5b83122c69371660360bbc72809f909613315e9efe8b4fc1de8b7ca09502502e-kernel-devel-5.4.162-86.275.amzn2.x86_64.rpm
+19d6aa595592468eccab0ab8f2db864292a001aee722c858659fce7ed236933d:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.5.12-200.fc38-x86_64-kernel-devel-6.5.12-200.fc38.x86_64.rpm
 19b9fb961ad55f66ab38c86a03ac8ff6b84d0d74eefe04d041dbb082466155f6:
   type: ubuntu
   packages:
@@ -9705,6 +9714,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-514.26.2.el7.x86_64.rpm
+78b98d0ff3229f82af24013f33d045bdbcd6354f77a82063be91b438c17bb5ca:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1118-fips_4.15.0-1118.129_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1118_4.15.0-1118.129_all.deb
 78a0165fd6ef37e41526416b91417a4fd5bd81c529a7346c8b351108987912f6:
   type: ubuntu
   packages:
@@ -12803,6 +12817,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.19-linux-gcp-5.19-headers-5.19.0-1026_5.19.0-1026.28-22.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.19-linux-headers-5.19.0-1026-gcp_5.19.0-1026.28-22.04.1_amd64.deb
+997b974299f78227ca4e85dab82356b71ac6360b1f6e77def8687f0bb17b3eba:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.5.12-300.fc39-x86_64-kernel-devel-6.5.12-300.fc39.x86_64.rpm
 997bb6d9d5f20c4b42e5d54487382ed2415fc5f41430d83142fd5d39695be053:
   type: redhat
   packages:
@@ -16669,6 +16687,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.0.0-1021_5.0.0-1021.21-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.0.0-1021-gcp_5.0.0-1021.21-18.04.1_amd64.deb
+26623355538e1bcda92b85afe2903a741afe4918cc9e9f599f2fe083bb5aabcd:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1089-fips_5.4.0-1089.98_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1089_5.4.0-1089.98_all.deb
 28099420253b763641f7b5e17147287dc3c1cf29272c17b65138e5c7415e16b1:
   type: redhat
   packages:
@@ -19019,6 +19042,10 @@ b32eabf21c62fa298aa444bc5cb13039b443369fdb12210178a62e9008fe907c:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.183.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.183.1.x86_64.rpm
+b33d9f5dadd83ac887c20c105be595e85877708d0d148ac20891393ca99d33a7:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.5.12-100.fc37-x86_64-kernel-devel-6.5.12-100.fc37.x86_64.rpm
 b35cbdea8bc74f4369378567d0dffe1a180759e6d8973bad586e7b73b1c3af4a:
   type: suse
   packages:
