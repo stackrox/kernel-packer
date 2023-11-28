@@ -16918,6 +16918,10 @@ a0e1ca49a7bc8f0ba7e227c340a82832e12d3759db27c674f214bf642b273cb0:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-111-generic_4.15.0-111.112_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-111_4.15.0-111.112_all.deb
+a0f1fc03111664d1ad98f6e4c8c423ef45f0d43a35b4b4912c223759c83d4c08:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-bc190dc91ad8cc725d45052123fbd18e668ab8da4fd2b16d8c0d36ea21d4bd54-download
 a0b45fae98820f8fc1ecb1b894f505654cfe8cf825685b430bccffef5068b453:
   type: ubuntu
   packages:
@@ -22838,6 +22842,12 @@ d72951f5b6b8741432abfb7f778259ec45e2a91c3f61a34a16f4a4dc9dd30e85:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.130.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.130.1.x86_64.rpm
+d76592fbbb3c8023dc6b7aadb8d6b2ba41f89f792a65da62cb3135cb863c5eef:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.6.0-13-generic_6.6.0-13.13_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.6.0-13_6.6.0-13.13_all.deb
+  image: repackage-bookworm
 d97084e472a1763211037edb58d17b609b34ad4a0cc2da089b20d55bb5909d0e:
   type: ubuntu
   packages:
@@ -26744,6 +26754,10 @@ ffcb82aba983fd8fef9e7a118f88c844907cd8809ee75eb18f9e85311e31e196:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1152-azure_4.15.0-1152.167_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1152_4.15.0-1152.167_all.deb
+ffd3ad1e1a42440057c07f1a51f6cd5732464a93eda0f0fd58195730b49912f2:
+  type: oracle
+  packages:
+  - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2136.325.5.1.el7uek.x86_64.rpm
 ffef7470b69b4956a6d9ed961af7aa9074e80728c2f56979c4d509331ac2f669:
   type: ubuntu
   packages:
