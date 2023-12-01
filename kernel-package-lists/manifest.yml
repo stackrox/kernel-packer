@@ -9031,12 +9031,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.20.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.20.1.x86_64.rpm
-61ad3763022b86dbd4983481c1e8edb149a23e31940156039f5581f32de4ea43:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.55-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 61cf0acec30e846f63353f754a92177c462397666dfc24fd45ee21244435acb4:
   type: redhat
   packages:
@@ -11950,6 +11944,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1046-fips_4.4.0-1046.51_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1046_4.4.0-1046.51_all.deb
+576f1ea8c6cbf42f1e25361f4571625d10230c983574d74d0c82499493273623:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.64-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-amd64_6.1.38-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 576fefb4fa66cc3599328e9f45ed499f17e7dcb5e47219f7556b2e9ecdffb69a:
   type: ubuntu
   packages:
@@ -12711,12 +12711,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-17162.210.60-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17162.210.60-kernel-headers.tgz
-890c8f101edf6b7c52380295c605507806078965f898c660325657d5c3be1429:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.55-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 890da15491cc80c2e9dc900ef998319202b05c1d4e1509b82806dc4780e5b8d2:
   type: ubuntu
   packages:
@@ -18876,6 +18870,12 @@ b01ec49f20cb5a48983a255109d351cf6088c897ce99f086eb7195d713fa8565:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1017_5.0.0-1017.17-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1017-gke_5.0.0-1017.17-18.04.1_amd64.deb
+b2f5a8a493b4f71210efc7a9d7e8f4f4928422140f3fa89420b8fb1b89376429:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.64-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-14-amd64_6.1.64-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-14-common_6.1.64-1_all.deb
 b2d4789b0b7ae87a7d0bacdd4a71b4512c05e3fc037dc2ca722b07341316a041:
   type: redhat
   packages:
@@ -21674,6 +21674,12 @@ cd6fc812fc075628334c39010de92e2d22ef2c8783db7f74de23785460f6c16a:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.17-201.fc34-x86_64-kernel-devel-5.14.17-201.fc34.x86_64.rpm
+cd64f6c7359cc2a68f1ad9f805990e63f1f5806c4e1c0605e8ad83b985823f11:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.64-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-cloud-amd64_6.1.38-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-10-common_6.1.38-2_all.deb
 cd91c350f5466ae89bca67e1b1b0466e63e7eca1a9607c39263a8ee31dc7176e:
   type: redhat
   packages:
@@ -22850,6 +22856,12 @@ d3035f29b42dc844ba9f3a146ff10b419a171cd563c7a219a7a65229080ef5bc:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1902.304.5.el7uek.x86_64.rpm
+d3295dbb014c45eaa2c3bee675a6ac2d0e1faffaf26e8fbe0e802db98690dfd7:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.64-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-14-cloud-amd64_6.1.64-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-14-common_6.1.64-1_all.deb
 d3532c8855647e573b6388a16716a7eb0cfc3908d89ed437ae929f609402b451:
   type: redhat
   packages:
