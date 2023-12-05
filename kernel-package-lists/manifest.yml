@@ -4684,6 +4684,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1034-fips_4.15.0-1034.39_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1034_4.15.0-1034.39_all.deb
+6aee9f9b72dcb34e7be0005af31db51088af93e95cfb233c1ebd824925e986f3:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1009_6.5.0-1009.9_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1009-gcp_6.5.0-1009.9_amd64.deb
+  image: repackage-bookworm
 6df2b40f1e8e4fad7c18be230ee31ffee041f37c72ad48b8f02fe49565b654a6:
   type: redhat
   packages:
