@@ -928,6 +928,10 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-693.21.1.el7.x86_64.rpm
+1f255a8f63958d503fd7392db3f504ea21f9de562ce880d3b725fee0422bca52:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-e4e1004fa97bfe0f7c6d33f12c2d1d9562ca56cd8c19dd6beb9035b675d79c75-kernel-devel-4.14.330-250.540.amzn2.x86_64.rpm
 1c408a2bb0d5bf408057a9d1f026c933582a1b0bffee5aff69df7f260356d5af:
   type: ubuntu
   packages:
@@ -15037,6 +15041,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1067_5.4.0-1067.71_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1067-gcp_5.4.0-1067.71_amd64.deb
+60988cbc1ef93dd2cd2f3e9d684b5c02ddfba60a708f819e6cd5fe67f0718363:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18080.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18080.0.0-kernel-headers.tgz
 61054a7254b38a17ac694b7fc366d44960ab808ada2fdac7ed8e36d31620d934:
   type: redhat
   packages:
