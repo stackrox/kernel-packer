@@ -887,6 +887,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.117.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.117.0-kernel-headers.tgz
+1f80f2d842271ded17879ac783d0f448ed8d4f9901871a3bbc5a7cc6f8e25ce4:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.6.0-1001_6.6.0-1001.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.6.0-1001-gcp_6.6.0-1001.1_amd64.deb
+  image: repackage-bookworm
 1f81c150e3bf881fbe88bf916d344a78e64308e38c053398690e68bb16687141:
   type: ubuntu
   packages:
@@ -14377,6 +14383,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-89-generic_4.4.0-89.112_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.4.0-89_4.4.0-89.112_all.deb
+9553b1211d04df590e9139acb89676c1cc9ffbf25aefeec7194a4ce29555b653:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.6.0-1001-azure_6.6.0-1001.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.6.0-1001_6.6.0-1001.1_all.deb
+  image: repackage-bookworm
 9554f0d14cba291d7c5548bf797aa606b1f4f549be204f2364810ff56b037388:
   type: redhat
   packages:
