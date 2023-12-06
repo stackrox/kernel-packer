@@ -4058,6 +4058,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-17412.226.35-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17412.226.35-kernel-headers.tgz
+5aec37d80b6c4102c79682f20b6efd0194641bcc165c41bbd22c094030cd9a87:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.6.0-1001-aws_6.6.0-1001.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.6.0-1001_6.6.0-1001.1_all.deb
+  image: repackage-bookworm
 5eed2571557a795dce569e98a2d6f01363ce4ecfc66fc08fcb4d4bcb0a67e5b9:
   type: redhat
   packages:
