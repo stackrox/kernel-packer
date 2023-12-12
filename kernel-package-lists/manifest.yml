@@ -21914,6 +21914,11 @@ cf3c12248fa205be2a2d8b3c114b06f399fb7f05a0a1535c069a511bedc5efd6:
   packages:
   - https---storage.googleapis.com-cos-tools-17162.0.19-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17162.0.19-kernel-headers.tgz
+cf4a44d325a8351fbeae85303ceb17146866bf504e9726d4ba1f6f90ad3ca564:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-noarch-kernel-devel-5.14.21-150500.55.39.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-x86_64-kernel-default-devel-5.14.21-150500.55.39.1.x86_64.rpm
 cf4c029398bf85cd8e682b959256c2c591eac39cf122eeb6966440553e982f72:
   type: ubuntu
   packages:
@@ -24370,6 +24375,10 @@ e92eaadfb6f0d1cbf99c1c6c866c290473fdb18e38fc4bbb544fbc92d5e5c5b1:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.111-1.el7.elrepo.x86_64.rpm
+e092be440f5957314b4571f809ed32a94272a50ab3f8056553f56431abc22eb5:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3446.1.1-flatcar_developer_container.bin.bz2
 e96ca5c95787d5f02a9463c0f1f830aadeceef27267bbfd9be634a8faabd55a6:
   type: redhat
   packages:
