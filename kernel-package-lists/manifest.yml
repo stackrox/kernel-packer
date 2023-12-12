@@ -5037,6 +5037,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.40.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.40.1.x86_64.rpm
+7a341bb8ea574a5cbf8e229620493d90e2b60955c9e460889c19a9062c74f3ed:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.66.33-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.66.33-kernel-headers.tgz
 7d365e74da7bb651ff63d5cc5285af8ab94aede67ffe9ac3d7122d6c8ba4a2d1:
   type: redhat
   packages:
@@ -7486,6 +7491,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.7.1908-os-x86_64-Packages-kernel-devel-3.10.0-1062.el7.x86_64.rpm
+25e27d262161b7597ff3ecbd95b9707245935bccb52a9609c42588be8484900d:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18091.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18091.0.0-kernel-headers.tgz
 25c587d51f22fa5987dd746865b836d7d95bcfc2530c1c73d8d0fa4160fbfeb9:
   type: debian
   packages:
@@ -24789,6 +24799,10 @@ ea02881bd7ce59db858e65d939e33ad707d7e7fb49f13fb4a39549ae5de5bf19:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-9f68a6078b1b837092cb2755a8f37da0e63fb3b4f3d6b24cf8d56dd19a3eef67-kernel-devel-5.4.228-132.418.amzn2.x86_64.rpm
+ea7116eb464cc570e961e5b2e1c71d4186b134899caf079eb5089daf7b1c0943:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-2765.2.6-flatcar_developer_container.bin.bz2
 ea0016590a557ce563894b7afae7acbf5da5366e7b9d42ec371b7b091171cb1e:
   type: ubuntu
   packages:
