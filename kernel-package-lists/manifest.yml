@@ -12139,6 +12139,10 @@
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.109-0gardenlinux2_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.109-garden-amd64_5.10.109-0gardenlinux2_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.109-garden-common_5.10.109-0gardenlinux2_all.deb
+623ec0b791bb46e64483758e2b9c44bec921d2bf05e566dd214b4818118ed26b:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-3602.2.3-flatcar_developer_container.bin.bz2
 625d7c91b90ae352cb825c5182b58b0f27a14f95212cdd0819c0c994204c019b:
   type: ubuntu
   packages:
@@ -15383,10 +15387,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1023_4.15.0-1023.24_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1023-gcp_4.15.0-1023.24_amd64.deb
-88225babe6a59176b50a336e92299a906281373e31eba856a56ff78f1080a732:
-  type: coreos
-  packages:
-  - https---stable.release.flatcar-linux.net-amd64-usr-3602.2.2-flatcar_developer_container.bin.bz2
 88490e596085e57363f751cb608b215e9cca1c3ea33db7fc4d22df06cd81e038:
   type: ubuntu
   packages:
@@ -17336,6 +17336,10 @@ a6d17a7a6d27804fb397929fccc0e8e4709b986eee50860b2967799ee45fd315:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.112-1.el7.elrepo.x86_64.rpm
+a6a075c7b544a7238efd7baaf54d806c0c8ab4280af6325f9eff311462f1ff8b:
+  type: coreos
+  packages:
+  - https---beta.release.flatcar-linux.net-amd64-usr-3760.1.1-flatcar_developer_container.bin.bz2
 a6c759ab985a69885bef85088973e3da1ac04aa3e6bf5aa51e83236e590e6745:
   type: ubuntu
   packages:
