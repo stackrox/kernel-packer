@@ -1028,6 +1028,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1092-aws_4.4.0-1092.103_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1092_4.4.0-1092.103_all.deb
+1c6978c280aa8fb6ece32b7c42e747d59e9520edc7be63f27b49bb71a67a5957:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.6.7-100.fc38-x86_64-kernel-devel-6.6.7-100.fc38.x86_64.rpm
 1d7821a397d5eea2eda472556928f800e652df5b2ca40d59e05d0469ba4014f8:
   type: ubuntu
   packages:
@@ -13128,6 +13132,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.12.17-200.fc33-x86_64-kernel-devel-5.12.17-200.fc33.x86_64.rpm
+1389bfaade309a5e142a7e9a8b83c4fac26d5c622322cf27476e6dbf2e0daed7:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-noarch-kernel-devel-5.14.21-150400.24.100.2.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP4-x86_64-update-x86_64-kernel-default-devel-5.14.21-150400.24.100.2.x86_64.rpm
 1390ac797fe5497416f43a9f6badc31cd47dac366f03d7fd3a02f6de0cea4f57:
   type: ubuntu
   packages:
@@ -21242,6 +21251,10 @@ c5880c415bda9f8499e842b1797b6568bcc2b92bae586c2452d192d9aed7b0a7:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-edge-linux-headers-4.18.0-1006-azure_4.18.0-1006.6-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-edge-linux-azure-headers-4.18.0-1006_4.18.0-1006.6-18.04.1_all.deb
+c6541ae6cddc1c3928be2b3923358f591f4e73eb0891aa84e85e08c0d68cf17e:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.6.7-200.fc39-x86_64-kernel-devel-6.6.7-200.fc39.x86_64.rpm
 c6785e342e1db1328dc01526a782eee4a2c21511a38dd56efc29bc081c546b54:
   type: ubuntu
   packages:
