@@ -1629,6 +1629,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1060-azure_4.15.0-1060.65_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1060_4.15.0-1060.65_all.deb
+2a61ae8fec9c34b34267a9769d1692f1c83fa06ec2fff3350c3299aa990849d4:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.66.43-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.66.43-kernel-headers.tgz
 2c66bb3cf3dcdcd1f5453ee509e034ed6b3639bd56735ac135ffd998b035f0f1:
   type: ubuntu
   packages:
@@ -8630,6 +8635,11 @@
   type: redhat
   packages:
   - https---buildlogs.centos.org-centos-7-virt-x86_64-xen-kernel-devel-4.9.70-29.el7.x86_64.rpm
+50eca921ab77b7fdee7db5e8df05ccf8d3714d69999840b071bed7d3078243d3:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18106.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18106.0.0-kernel-headers.tgz
 50ad8f2676b98f8d2d90ab987ae03e5791fbb0aa02899ed70a4b90fd55f07112:
   type: cos
   packages:
