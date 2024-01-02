@@ -302,6 +302,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1102-aws_4.15.0-1102.109_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1102_4.15.0-1102.109_all.deb
+0d3456d30639a09d489c64b0d3d5ad922447c9d6683aff98e024556e50639c10:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.205-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-cloud-amd64_5.10.205-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-common_5.10.205-1_all.deb
 0d4265a40144a07f380864e9eb26d40bfca09a16adb730cae5ee80af59be16c4:
   type: redhat
   packages:
@@ -557,6 +563,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16108.659.15-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16108.659.15-kernel-headers.tgz
+0ae749d05ef079af7163bcd2563a7ae4086d95a6ec8843af1d16518b7371cdea:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18125.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18125.0.0-kernel-headers.tgz
 0ae957796f4f2eb09e93b14a5542939194fe862328ed81b0a3034764014eb649:
   type: cos
   packages:
@@ -8547,6 +8558,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-59.34.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-59.34.1.x86_64.rpm
+53fd5d60e31f85c723da2aadab5d11c59709e618aac47907e21e2db41709bd42:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.66.54-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.66.54-kernel-headers.tgz
 53de51bc28f4f92d87b38971a051afc2ad7de0e72c5ceb271d4719a41aea3c60:
   type: ubuntu
   packages:
@@ -10322,6 +10338,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2027-aws-fips_4.15.0-2027.27_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2027_4.15.0-2027.27_all.deb
+94dd43ad75dedd885baf2cfe506c8fb3199d0f0b9724a9c03301ce6553ab30ba:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.226.62-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.226.62-kernel-headers.tgz
 94bf8ebc6131b8b2c7115c07d96ce1fb4b012fa31be7afd7f36df2df578d4e3d:
   type: ubuntu
   packages:
@@ -16511,6 +16532,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-635c3af49a948c3844fc8b638ef25898aeeb863ea647a417e6e8a4f2d58fc231-kernel-devel-4.14.296-222.539.amzn2.x86_64.rpm
+42348060556d2739ad954c0f0aa5e915b0957bca458f45066af0e2c6647530d4:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.336.43-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.336.43-kernel-headers.tgz
 54600390407f52a67ca70115277c36f0a8fcdb99b0dcb16672126297b3e73d25:
   type: cos
   packages:
