@@ -302,6 +302,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1102-aws_4.15.0-1102.109_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1102_4.15.0-1102.109_all.deb
+0d3456d30639a09d489c64b0d3d5ad922447c9d6683aff98e024556e50639c10:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.205-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-cloud-amd64_5.10.205-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-common_5.10.205-1_all.deb
 0d4265a40144a07f380864e9eb26d40bfca09a16adb730cae5ee80af59be16c4:
   type: redhat
   packages:
@@ -2733,11 +2739,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.3-300.fc35-x86_64-kernel-devel-5.14.3-300.fc35.x86_64.rpm
-003dd334727c364413424d68331fff3dfa26a9e6868c46bee25f692ea233c86a:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.205-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-cloud-amd64_5.10.205-1_amd64.deb
 4d0d230066cc428c9b49c30d211bf9f66a11cdcf7aa89ce5852320b99ea30273:
   type: redhat
   packages:
@@ -7002,11 +7003,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-957.10.1.el7.x86_64.rpm
-16db8b07f6e8ebd65755fb552e249d9dc88a2d4cacb985252b4786a7cb98d8ab:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.205-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-amd64_5.10.205-1_amd64.deb
 16fdf47b6d76265b47e02b5828668e23ec78747338d6e95180c0707f1ae08029:
   type: cos
   packages:
