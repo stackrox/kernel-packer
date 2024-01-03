@@ -2733,11 +2733,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.14.3-300.fc35-x86_64-kernel-devel-5.14.3-300.fc35.x86_64.rpm
-003dd334727c364413424d68331fff3dfa26a9e6868c46bee25f692ea233c86a:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.205-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-cloud-amd64_5.10.205-1_amd64.deb
 4d0d230066cc428c9b49c30d211bf9f66a11cdcf7aa89ce5852320b99ea30273:
   type: redhat
   packages:
@@ -6478,6 +6473,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-headers-5.3.0-1028-azure_5.3.0-1028.29-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.3-linux-azure-5.3-headers-5.3.0-1028_5.3.0-1028.29-18.04.1_all.deb
+9ac96f183513aefba2fc8d2cb1c65c76bfdf28ca09efe8637ce2988a1c82f774:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-e91ae0696e6f1f2a9560ca19533d1311a98555405e83540ae33e5a5add0e7d81-download
 9ac281e223a704d7e497ead562dbbb1d190d86065c9f99e2e89c88b3d374d472:
   type: redhat
   packages:
@@ -7002,11 +7001,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-957.10.1.el7.x86_64.rpm
-16db8b07f6e8ebd65755fb552e249d9dc88a2d4cacb985252b4786a7cb98d8ab:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.205-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-amd64_5.10.205-1_amd64.deb
 16fdf47b6d76265b47e02b5828668e23ec78747338d6e95180c0707f1ae08029:
   type: cos
   packages:
@@ -10713,6 +10707,12 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-noarch-kernel-devel-4.12.14-25.16.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-x86_64-update-x86_64-kernel-default-devel-4.12.14-25.16.1.x86_64.rpm
+158eab4d1cf2b88de24dc45c5f82e9829e7568e52b4452f7a70595447148aecf:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.205-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-amd64_5.10.205-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-common_5.10.205-1_all.deb
 159ad2a191ac737e50a55c873e575974f92ec10f016f61e14d8f5a41f0b6e513:
   type: redhat
   packages:
@@ -19266,6 +19266,10 @@ b4272da55177657a9449f309527b3b9cf4ef0aad8afe218b927ef92275c95909:
   packages:
   - https---storage.googleapis.com-cos-tools-17412.226.15-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17412.226.15-kernel-headers.tgz
+b4742d0a944597ba9cc185c05e4c0aa00e33feabbbbaad0e3a19a28313ebafa8:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-9a4203cd8cf9f4bcd7edb6e741b49e33f6e902c5bd82ad0fb14c6ea34485a63a-download
 b5038a8f676e77fa92ebe5a0d605d09e8ded18cf5abc80f9b99cb161a625c7e1:
   type: ubuntu
   packages:
