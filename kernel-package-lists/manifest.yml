@@ -2970,6 +2970,12 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-2440a50a3c88180ac239a5d53a633e437ce45de8a56e45bff61c2c7dcd4ae7b1-download
+4e3372d1e22259c85286bbc1c857ee2d2d71b976cb33c2da5fcbe0ca48f1138b:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.69-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-amd64_6.1.52-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-common_6.1.52-1_all.deb
 4a3718d2d33f14cda38509cf304013bfb39ed235ff4cab21fcd205a6c6005238:
   type: coreos
   packages:
@@ -9409,6 +9415,12 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2045-azure-fips_4.15.0-2045.49_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2045_4.15.0-2045.49_all.deb
+73a7a4763e69a03028281f71f10d67a59d7ed6946f25bfcb83d315481403d1d3:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.69-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-cloud-amd64_6.1.52-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-common_6.1.52-1_all.deb
 73d9c910f24082e367028729c4c08f96a40180f368aa3761ac28e736cee00303:
   type: redhat
   packages:
@@ -10072,12 +10084,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.19.15-201.fc36-x86_64-kernel-devel-5.19.15-201.fc36.x86_64.rpm
-89b0a49f01d9543c05d645c3b90b729c81cd9587c66b1b25f95b7558d3b84afb:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.52-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-amd64_6.1.52-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-common_6.1.52-1_all.deb
 89f0da5e0d4c40a0730f33ab8c201c2deb52fda7fd86212fe69fd88890b906ce:
   type: cos
   packages:
@@ -11260,12 +11266,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-10895.93.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-10895.93.0-kernel-headers.tgz
-389b0525a2a0de9171288348c62a5b71f649446c81dce2e752483e56cec1eeaf:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.52-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-cloud-amd64_6.1.52-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-common_6.1.52-1_all.deb
 390cae1fee575f5df22e71c58a58163dce5f11d645eb9b604adf744894dbb9de:
   type: cos
   packages:
