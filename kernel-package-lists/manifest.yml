@@ -3393,6 +3393,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.11-linux-gcp-5.11-headers-5.11.0-1018_5.11.0-1018.20-20.04.2_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-5.11-linux-headers-5.11.0-1018-gcp_5.11.0-1018.20-20.04.2_amd64.deb
+5e2a5880faddb6785569567a23ab019b95156575bd38e9df67bdd69d4adb81cf:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.12-os-Packages-k-kernel-rt-devel-4.18.0-372.85.1.rt7.245.el8_6.x86_64.rpm
 5d2aa21cb00f84f07b2946247dde96dbb7a69e2ec9eddccdbdf1c85f2f18c866:
   type: redhat
   packages:
@@ -14357,6 +14361,12 @@
   packages:
   - https---storage.googleapis.com-cos-tools-13310.1498.4-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-13310.1498.4-kernel-headers.tgz
+28997cd2ee714cb6a17861236734d188de052b1f09a82779f3e60a198f9f7d38:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.205-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-amd64_5.10.205-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-common_5.10.205-2_all.deb
 29437e27c01154e00d7189a0d83665448e8e37beb1e6acd946f5be5fe36f6d0a:
   type: ubuntu
   packages:
@@ -18930,6 +18940,12 @@ b60e46e2707b338a2b58e9f7525159ca5ae85fcd266506f1e66e5e6327b3ca32:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-b4bf198a149a3e471b02844be93458096410a247f105631658b4fcb768f829c1-download
+b61d1e86e98285cdd779902d0a6f6befbe2daa2b2a44c10dc37f4d0d965dce9a:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-5.10_5.10.205-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-cloud-amd64_5.10.205-2_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-5.10.0-27-common_5.10.205-2_all.deb
 b61c6220f0847db9044ab35b44cd2e4c66cd1013afd7c0a83b6afd48a794c661:
   type: ubuntu
   packages:
@@ -26208,6 +26224,10 @@ fe7f90eba9a0a38acbda63ff8e74094e5df5e7b9d0e4f42863343b2878fb2f0a:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-23969edb79340d2fb136b0398ed155630b9ab9757a6b06623784f92db62f6f60-download
+fe07eaf9e9576c21f92debbd52e1e950e65a78b23f02b73c0723510ba0de6466:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.12-os-Packages-k-kernel-devel-4.18.0-372.85.1.el8_6.x86_64.rpm
 fe29c87d696d96c3e40f74d608e846b730faec290498b0052dbfe69f9d9faf73:
   type: ubuntu
   packages:
