@@ -14370,6 +14370,10 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2051-aws-fips_4.15.0-2051.53_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2051_4.15.0-2051.53_all.deb
+25233f7e95bbed57b16d2d25b784ba0c8312f762b6ad67e10fde293804be0423:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-071c043e253e3b5ad4ff27f994a3f4c07257c8257fb153bd00ce1cc941bfd9f0-kernel-devel-5.4.265-176.364.amzn2.x86_64.rpm
 25573dc653f2032951cd3390ed345f1927d9784ec23d65940cf48efa4230ce48:
   type: redhat
   packages:
@@ -19521,6 +19525,12 @@ b234275932b06e7a56439ad1748b27d5e8964dd76aeb6f329825aadb3d70098d:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.7-100.fc34-x86_64-kernel-devel-5.16.7-100.fc34.x86_64.rpm
+b004725144089d592244467e8e61e05528f03a15e4bbdb67e677bb1b89622d8f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-16-generic_6.5.0-16.16_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-16_6.5.0-16.16_all.deb
+  image: repackage-bookworm
 b4065501681803b65cddf032c56543c4a3e8dd7066d0d897fa6a64decbda930e:
   type: redhat
   packages:
@@ -25697,6 +25707,10 @@ f3397a2e8c86d1de4a2159aea59ecf46202ee825dc382de8012088cb18bd327e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1081_4.15.0-1081.92_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gcp-4.15-linux-headers-4.15.0-1081-gcp_4.15.0-1081.92_amd64.deb
+f03924e97b4d2f1883836df55c1c92f8ebde68b301f78e9c5a4c7f2d695e1090:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-e018900711c26f5ea168567ccef62359dbc4ab561ef56862347b4f5a11b3cc44-kernel-devel-5.10.205-195.804.amzn2.x86_64.rpm
 f4211eeba42e3c34fb4d2c66df15dce9b02be33eef6ae8a354bc1f58864d6fd8:
   type: cos
   packages:
