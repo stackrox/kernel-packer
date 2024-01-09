@@ -2242,6 +2242,12 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.26.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.26.1.x86_64.rpm
+3c69d572729e343cd58d930d5f725f1f46acfca98afd5638c5151901226420c6:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.304-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-cloud-amd64_4.19.304-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-common_4.19.304-1_all.deb
 3a74c33405104e4a5d45d6d565fb4697100e6ebc38f9af5f794759f6e8759c8e:
   type: cos
   packages:
@@ -3976,6 +3982,12 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-cf29421019fe4b72832bda3da1e8bc30ac682712dbc9a90268ac821b17e4cac0-kernel-devel-5.10.178-162.673.amzn2.x86_64.rpm
+5ce83e71e73446d1391b95d0f465f2cf12b18e3703641abcf059cd86244ae3cd:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.304-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-amd64_4.19.304-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-common_4.19.304-1_all.deb
 5be778ad9fec8bfef484c28f7833e4ddeaee2e8c9bc21a645617ab2f976e6e7b:
   type: redhat
   packages:
