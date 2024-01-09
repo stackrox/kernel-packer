@@ -8973,6 +8973,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-gke-5.0-headers-5.0.0-1027_5.0.0-1027.28-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.0-linux-headers-5.0.0-1027-gke_5.0.0-1027.28-18.04.1_amd64.deb
+62ab84f2406eaff1e87e7dcc0c22e1a507f0554123a2d69fe96a0981e3dbf6fa:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-41-generic_6.2.0-41.42_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-41_6.2.0-41.42_all.deb
+  image: repackage-bookworm
 62bc6172dc39bcd8f52eaccca6cfde402530c4dca37c3d8780ae04def0cd2995:
   type: redhat
   packages:
