@@ -6846,10 +6846,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-17412.1.28-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17412.1.28-kernel-headers.tgz
-12b16f0f1a14e42c69bb396d66a12faf7fa4cfeb802336fc061321d7b7845939:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-6.6.5-100.fc38-x86_64-kernel-devel-6.6.5-100.fc38.x86_64.rpm
 12a71fb657853793456efdfc49c9537666375413d03bba654c66c4dacbb6f547:
   type: cos
   packages:
@@ -7122,11 +7118,6 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-5b83122c69371660360bbc72809f909613315e9efe8b4fc1de8b7ca09502502e-kernel-devel-5.4.162-86.275.amzn2.x86_64.rpm
-19f5a23d9d98b59b4a40aa157009b302b87a9edfdf14345914c4334437d2e34a:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.205-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-27-cloud-amd64_5.10.205-2_amd64.deb
 19d6aa595592468eccab0ab8f2db864292a001aee722c858659fce7ed236933d:
   type: redhat
   packages:
@@ -14975,10 +14966,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.15.7-200.fc35-x86_64-kernel-devel-5.15.7-200.fc35.x86_64.rpm
-80510cedb7e5e4b717d0de331293760d2c73728339eb5710005169f087219b0c:
-  type: redhat
-  packages:
-  - https---kojipkgs.fedoraproject.org-packages-kernel-6.6.5-200.fc39-x86_64-kernel-devel-6.6.5-200.fc39.x86_64.rpm
 81466ab111e3d11ef4466a4239992370c1d1993a14519b378f023c7408f458e9:
   type: redhat
   packages:
@@ -24826,11 +24813,6 @@ ef1d3f455495314bfc245511566d8eb3161049804259f80d1129127b21e59902:
   packages:
   - https---storage.googleapis.com-cos-tools-10895.71.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-10895.71.0-kernel-headers.tgz
-ef02a869d2a01a530a457c50be7023ecea81a4520f49af539552d9757a56d804:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.205-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-27-amd64_5.10.205-2_amd64.deb
 ef02f914806d858ad54103c8bd88169e0cbd37156de6bf5c77aeeecf918091ee:
   type: redhat
   packages:
@@ -26352,6 +26334,12 @@ fdf75070211c192b27ada2cc94ffca25fe477158a9b7324dc973eb523d212f78:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-headers-5.0.0-1022-aws_5.0.0-1022.25-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-aws-headers-5.0.0-1022_5.0.0-1022.25-18.04.1_all.deb
+fe6b1e16a2007dddd92230c8e746e65a27b17cd35a2125e0c475f53796479435:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.205-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-27-amd64_5.10.205-2_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-27-common_5.10.205-2_all.deb
 fe7f90eba9a0a38acbda63ff8e74094e5df5e7b9d0e4f42863343b2878fb2f0a:
   type: redhat
   packages:
