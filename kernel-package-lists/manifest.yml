@@ -11220,6 +11220,11 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-219-generic_4.15.0-219.230-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-219_4.15.0-219.230-16.04.1_all.deb
+336c361a7c29b503cb74370648d5f7f56ceee806868039dd5f6be41bb33f5d5a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1122_5.4.0-1122.131_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1122-gcp_5.4.0-1122.131_amd64.deb
 336b35704865a14099c982c4d99da980a0a2de690f652fec02a127c1333f0055:
   type: coreos
   packages:
@@ -11486,6 +11491,11 @@
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.75-1.el7.elrepo.x86_64.rpm
+468cd5f8e074c8655e8148f22f14ad592ceb97e54ee7773410057a0ac50ff884:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.205-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-27-cloud-amd64_5.10.205-1_amd64.deb
 473faa762e6d6ba99b3e37362a5237588dbc9802eeec548b32b3822b84a7aae0:
   type: redhat
   packages:
@@ -25894,6 +25904,11 @@ f0361644ee1c7de7b6fdbd0c9a3cd9a36211e472a42ce3117c50751f7c5eeddb:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.7-200.fc37-x86_64-kernel-devel-6.1.7-200.fc37.x86_64.rpm
+f371806a6de4f06e54cc02cc444d41d6b456580acb09abc88521dab8de585fe1:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.205-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-27-amd64_5.10.205-1_amd64.deb
 f721598ffbc51e56331e2ad622181a327b4e65244bab17504e8a89769d0c4e01:
   type: oracle
   packages:
@@ -26352,12 +26367,6 @@ fdf75070211c192b27ada2cc94ffca25fe477158a9b7324dc973eb523d212f78:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-headers-5.0.0-1022-aws_5.0.0-1022.25-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.0-linux-aws-headers-5.0.0-1022_5.0.0-1022.25-18.04.1_all.deb
-fe6b1e16a2007dddd92230c8e746e65a27b17cd35a2125e0c475f53796479435:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-5.10_5.10.205-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-27-amd64_5.10.205-2_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-5.10.0-27-common_5.10.205-2_all.deb
 fe7f90eba9a0a38acbda63ff8e74094e5df5e7b9d0e4f42863343b2878fb2f0a:
   type: redhat
   packages:
