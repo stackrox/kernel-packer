@@ -1490,6 +1490,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1043-aws_5.4.0-1043.45_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1043_5.4.0-1043.45_all.deb
+2b9dcb373bd460f5a71391e05714d909064dd7156332d5ea138727c65324373a:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.108.1.el7.x86_64.rpm
 2c9edb1dcdc25b848244a8977368d81d23d25dd7037b49b1085107c97113f083:
   type: cos
   packages:
@@ -8298,6 +8302,11 @@
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2605.10.0-flatcar_developer_container.bin.bz2
+46b739164d77c9333354a0f6f4514f866a4b5e3388b5240f402100a6ea6c52a0:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-headers-5.15.0-1053-aws_5.15.0-1053.58-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-aws-5.15-headers-5.15.0-1053_5.15.0-1053.58-20.04.1_all.deb
 46abcbfea9b4a5154640e78bd5b343b802f67d0d15da8abcdc94c4464b6d32f9:
   type: ubuntu
   packages:
@@ -10481,6 +10490,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.244-1.el7.elrepo.x86_64.rpm
+095bf14108cc8a8d96d45a2dae3f12a76c4aaccc8103e6601c26f224962e45b1:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1053-aws_5.15.0-1053.58_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1053_5.15.0-1053.58_all.deb
 96e6ba938186524f2ea880b5d2bcc24d8b647c99e05093a64897f05a0150d9e4:
   type: ubuntu
   packages:
@@ -24210,6 +24224,11 @@ e4781b16677b90b1d58c40beda8103d0249e152f8fe2871134e905c19155021e:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10367.0.0-kernel-src.tar.gz
+e6289a0481e31ecb3b49d6a34e30d3e8970115b052d520dd1e12d3a29b8a3ca9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.15.0-1050_5.15.0-1050.55_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.15.0-1050-gke_5.15.0-1050.55_amd64.deb
 e7665ae08ca0505da14522149c0db8049d9a5e46f8f1989f1e1df45d2e5466f5:
   type: cos
   packages:
