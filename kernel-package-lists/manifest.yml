@@ -7681,6 +7681,11 @@
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-kbuild-5.10_5.10.93-0gardenlinux1_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.0-garden-amd64_5.10.93-0gardenlinux1_amd64.deb
   - http---repo.gardenlinux.io-gardenlinux-pool-main-l-linux-5.10-linux-headers-5.10.0-garden-common_5.10.93-0gardenlinux1_all.deb
+030ada2db6c0ba6182614d21316792b745f56ab799a45824641378ad6260f72b:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-221-generic_4.15.0-221.232-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-221_4.15.0-221.232-16.04.1_all.deb
 31f25d79c5b59fb04699a1cc8330e42ecae386637dbdf128f58fbac614e8a3b1:
   type: ubuntu
   packages:
@@ -10933,6 +10938,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1115-aws_5.4.0-1115.125_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1115_5.4.0-1115.125_all.deb
+190f1060b8a0dc81c2d0b5531584bc6002f0ae42d0b69d9b64dc85f3be66bff0:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1158_4.15.0-1158.175-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1158-gcp_4.15.0-1158.175-16.04.1_amd64.deb
 0191fe0a8a19c475ac2090933fa288ec74a7363c44ed056a0c8f70bd404b9ceb:
   type: redhat
   packages:
@@ -17656,6 +17666,12 @@ a01876a48c0ef3a2dabf7dc2c433153b8aab7de91527d0d10ad1a9e95b7efbc9:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.13-linux-headers-5.13.0-1023-aws_5.13.0-1023.25-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.13-linux-aws-5.13-headers-5.13.0-1023_5.13.0-1023.25-20.04.1_all.deb
+a2069e98021b874f7e5b4767a00b018dd697faa5382fdc86b838569ff56965ce:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1011_6.5.0-1011.11_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1011-gcp_6.5.0-1011.11_amd64.deb
+  image: repackage-bookworm
 a2392e5f4a6a6bbe51d2605cc74a40ee95a7bcbd4eba9e0265046f41b6207b67:
   type: redhat
   packages:
