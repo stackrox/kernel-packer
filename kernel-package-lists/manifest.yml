@@ -4637,6 +4637,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.99.1.el7.x86_64.rpm
+6fd3e1488208cbd9cbf9a7dd1cd6a2b24b84f3c81fa1cd1115134d495f81e79e:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-16919.450.6-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-16919.450.6-kernel-headers.tgz
 6ad5d98db84e27dd09123de6f1710f675e1e90a93480809855bab57b394cf872:
   type: ubuntu
   packages:
@@ -8150,6 +8155,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.15.0-1090-aws_4.15.0-1090.95_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.15.0-1090_4.15.0-1090.95_all.deb
+40e83de6f498222bf1d5738c0876a078a4b226d96403f56c52cf6ab605d3b352:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.294.10-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.294.10-kernel-headers.tgz
 40b319ac8595ac1e556079c9477a371b9a5699931e7d48f94fa8a5f1c342fb95:
   type: redhat
   packages:
@@ -11003,6 +11013,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1068-fips_4.4.0-1068.74_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1068_4.4.0-1068.74_all.deb
+209c55e80bfb75e68e4f7aff72d1f951034f177d8de5e73ea758e7af1780f998:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.386.11-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.386.11-kernel-headers.tgz
 210d9e459c9b240fe322f4a6a67c8ac6b32e02e5224056bf0b0bf51dfe8bbeb2:
   type: redhat
   packages:
