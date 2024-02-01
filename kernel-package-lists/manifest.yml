@@ -11321,6 +11321,12 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.258-1.el7.elrepo.x86_64.rpm
+315c858aaa255fe257c72a18498515cd433940c6481bad4c1dc149f8c38d9795:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.69-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-18-amd64_6.1.76-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-18-common_6.1.76-1_all.deb
 323c5c1583cb80a5de1fdf2de9465525e11e61e779dd91ea680558e2e557caa3:
   type: cos
   packages:
@@ -17693,6 +17699,12 @@ a714f11f2662bbd8f13a7f7d894a331983a3e5d8a04421c692cc2438d0e3ac59:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1051-azure_5.15.0-1051.59-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1051_5.15.0-1051.59-20.04.1_all.deb
+a739da188cbcc8c05fdd0bd7f497e3cf1764ff32018b23d43a86b65f3b4a5a49:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.69-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-18-cloud-amd64_6.1.76-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-18-common_6.1.76-1_all.deb
 a745fbf3ee7b60445548e146bca70037526e5c098298325a54fb3e35201b129f:
   type: redhat
   packages:
