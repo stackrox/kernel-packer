@@ -2752,12 +2752,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-002fe150e2053a9806d7370b66846ec38d7c155d03b2816f6419bac38b9fcfb2-download
-03ddd0669c0baac83bcfa00f526d9926cbec3d17e963d41ee86699ce51c4e133:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.69-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-17-amd64_6.1.69-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-17-common_6.1.69-1_all.deb
 03cde90e8e924529045a1ae3be59d2cc06c59886c26c3cb6f249983b37dc4fb9:
   type: redhat
   packages:
@@ -11725,12 +11719,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.10.14-200.fc33-x86_64-kernel-devel-5.10.14-200.fc33.x86_64.rpm
-499a726858f2ee8b8f1cf2d67ac09a51a35ad16c11ffd2f1c17c5770d5b2cb45:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.69-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-17-cloud-amd64_6.1.69-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-17-common_6.1.69-1_all.deb
 499abb27e5d3a8ccc50a9c21a88e17b1668ff34ce270098b526d759bb55987f7:
   type: redhat
   packages:
@@ -17062,6 +17050,12 @@ a2e2e9952ce8d5e9f7f6b7adc3d5de8a32488d7e9006a47d311ee03e36072637:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1036-azure_4.15.0-1036.38_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1036_4.15.0-1036.38_all.deb
+a2a2c7346201bf2ce2280cba378df64f270cebe56f1e80148ef51fac2421f0a0:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.76-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-17-cloud-amd64_6.1.69-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-17-common_6.1.69-1_all.deb
 a2b3b666e16daf31949d339d10458f26801a1a9731223f41c5cbdf074c43cd11:
   type: coreos
   packages:
@@ -26505,6 +26499,12 @@ fbdb02a086c754d9c13631465951022bdbd68b5547df73adeacfaae6b96f881d:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.3.4-101.fc37-x86_64-kernel-devel-6.3.4-101.fc37.x86_64.rpm
+fbef0136c98edd7fcb923ffb2f7add0ba0352f5eec3513b127fc9749e4a950e3:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.76-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-17-amd64_6.1.69-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-17-common_6.1.69-1_all.deb
 fbf20a07e180c85eb7fd1c4aa1c073407ad26a3321f92c4185711deeae9e493a:
   type: redhat
   packages:
