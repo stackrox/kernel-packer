@@ -3916,6 +3916,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-headers-4.15.0-2036-azure-fips_4.15.0-2036.40_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-azure-fips-linux-azure-fips-headers-4.15.0-2036_4.15.0-2036.40_all.deb
+5cb305c7de4b4ae9f7dcd37374d463dbab088acaead948ccd04cff9715678613:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.15.0-1056-azure_5.15.0-1056.64_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.15.0-1056_5.15.0-1056.64_all.deb
 5ab748c92b20c0663eee42e0238ac11a7c9a7330dedf0e563d2aa65be8d122f4:
   type: redhat
   packages:
@@ -16048,6 +16053,10 @@
   packages:
   - https---storage.googleapis.com-cos-tools-12871.1218.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12871.1218.0-kernel-headers.tgz
+1633651ac0ed149b908a890e774f87777ba08a1340bf9fc5bc784ac5cacc50ca:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-126d23792a221530995e4e36fe3009eaa281ee4fe8a0a6e36a55805a24524d13-download
 1801158c536b099b55d7af28f8f55aa444f9952634845099277a40e1f5457be9:
   type: redhat
   packages:
@@ -16494,6 +16503,10 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.518.0.el7uek.x86_64.rpm
+40851988d3201000975cce618d6936b93bf219f078d8914cd2bfa8c8b5e6513f:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-c6423c81a114608480dcc389d44ec1ccfd48d45e4afd8d192c93feee79bec118-download
 40988274b1d3708ff05b1edee63be7af416ebae924f4b5d80e5f0507d78fd66d:
   type: cos
   packages:
