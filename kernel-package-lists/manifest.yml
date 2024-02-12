@@ -4825,6 +4825,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-gke-4.15-headers-4.15.0-1073_4.15.0-1073.78_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-4.15-linux-headers-4.15.0-1073-gke_4.15.0-1073.78_amd64.deb
+7e0a525be6307d716c26988b09f90186676364b15c43fedab6de2d69b6020cb5:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.147.9-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.147.9-kernel-headers.tgz
 7b0a49481b0eb4957ebf01e589850c2c8e2120d66e5730b94ecd563b33e4e536:
   type: redhat
   packages:
@@ -12869,6 +12874,11 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1118_4.15.0-1118.132-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1118-gcp_4.15.0-1118.132-16.04.1_amd64.deb
+950f1d91401bfb5f09b8b7e51d29c4a967ca8e7c39c771fad477d26084789dd4:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.386.22-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.386.22-kernel-headers.tgz
 951cae09daf9d252e4da3f2b04e52e794cef016c4dbe79649ea6f8cac7b03e34:
   type: ubuntu
   packages:
@@ -14272,6 +14282,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-1915.el7uek.x86_64.rpm
+9166cbf9b08201a5192cc148fc8e56fddbda6d129732d12a36465dac95be7795:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.294.23-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.294.23-kernel-headers.tgz
 09265b9d1448ad1e204022bab770d6ec9983814300d32f88d30637b04e5646ac:
   type: redhat
   packages:
