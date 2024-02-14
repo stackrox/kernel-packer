@@ -19439,6 +19439,12 @@ b86fc15cade40bc817c0b40c62652825b481df978b13ff9c415a5a9cca4a3f0e:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-200-generic_4.15.0-200.211_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-200_4.15.0-200.211_all.deb
+b87ffdbc26626224943498d1b8e62acdb6347ec83959fc8b22491424be30df61:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.8.0-1002_6.8.0-1002.2_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.8.0-1002-gcp_6.8.0-1002.2_amd64.deb
+  image: repackage-bookworm
 b89eb0a69f4b70c75dd9c9bcc5d6d0c498c8fe545bdc40025ae767139e7eb906:
   type: ubuntu
   packages:
@@ -25147,6 +25153,12 @@ eda16faa4d5cb534fab565f11feb4205739d718c764386905f78e33e79b277cd:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-eaed862985a57fab9f0a629508301e2f840f6fd6ffc373948964f9c5056f8f38-kernel-devel-5.10.192-183.736.amzn2.x86_64.rpm
+eda33d7c107433ce6f782303c5effef2879cea168914696863d9ead100abe64e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.8.0-1001-aws_6.8.0-1001.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.8.0-1001_6.8.0-1001.1_all.deb
+  image: repackage-bookworm
 eda7431687fa7116d4a9e322bfe574fc69e122dc8b061aac5b237aecbc31d93e:
   type: redhat
   packages:
