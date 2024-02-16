@@ -22837,6 +22837,12 @@ d371f2b0baff829ae2cd286d6a31a314ff4ff28ac447c1ce48f92d9db318724c:
   type: redhat
   packages:
   - http---mirror.rc.usf.edu-compute_lock-elrepo-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.55-1.el7.elrepo.x86_64.rpm
+d420fc43a5255f98f4125a24f9ded02732fc59a28c47f564090b934f8d2df732:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-11-generic_6.8.0-11.11_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-11_6.8.0-11.11_all.deb
+  image: repackage-bookworm
 d465e9af943256a51e600628e2a362a45388da031bfe829ae48a87ab30a96b3b:
   type: cos
   packages:
@@ -26569,6 +26575,12 @@ fb00b3013fc399564286762892c0901f9953076a45a4d6171e9e701ed58ff0b8:
   type: redhat
   packages:
   - https---access.cdn.redhat.com-content-origin-rpms-kernel-devel-3.10.0-862.37.1.el7-fd431d51-kernel-devel-3.10.0-862.37.1.el7.x86_64.rpm
+fb1a3d4df2f0967e57a14297496c18c619b207f287db5f5a1e54fc08340742e2:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.8.0-1001-azure_6.8.0-1001.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.8.0-1001_6.8.0-1001.1_all.deb
+  image: repackage-bookworm
 fb04d5dc1f43736d96a8ee0ccfab71b39e03f244c8aec64bbb2b1cf878003325:
   type: ubuntu
   packages:
