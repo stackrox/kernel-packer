@@ -7622,6 +7622,11 @@
   type: redhat
   packages:
   - http---vault.centos.org-7.6.1810-updates-x86_64-Packages-kernel-devel-3.10.0-957.12.2.el7.x86_64.rpm
+27c2f797b421010c0fe88ae9cdf47918bc9e31fa82add9d577dbdd1babf4b70c:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-5.4.0-1093-fips_5.4.0-1093.103_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-5.4.0-1093_5.4.0-1093.103_all.deb
 27f7ea99e5ca9922332e8f5fd4b847d3bc058c4d89ab097ba22184d6dcfc0cb4:
   type: redhat
   packages:
@@ -16903,6 +16908,11 @@
   type: redhat
   packages:
   - https---ocp-artifacts.hosts.prod.psi.rdu2.redhat.com-pub-RHOCP-plashets-4.13-stream-el9-latest-x86_64-os-Packages-kernel-rt-5.14.0-284.16.1.rt14.301.el9_2__x86_64__fd431d51-kernel-rt-devel-5.14.0-284.16.1.rt14.301.el9_2.x86_64.rpm
+6182655113fc6fa7e78e9a953180532aa3027af2cec603e024999fa6a51a69f1:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1174-azure_4.15.0-1174.189-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1174_4.15.0-1174.189-16.04.1_all.deb
 6784336103af48c46d91bc8b9b38229c7d528fa5488c050bbd3baa6257aaeff3:
   type: redhat
   packages:
@@ -17280,6 +17290,11 @@ a5b2eac35d3187b042bb6c8839b56f83b3388f251f506818efead3d0a978076c:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.5.0-1010-azure_6.5.0-1010.10_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.5.0-1010_6.5.0-1010.10_all.deb
   image: repackage-bookworm
+a5a3d8302a9aba9a737a8aed9cebb6903d7b3521488d73a142b1976110b205ff:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1120-fips_4.15.0-1120.131_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1120_4.15.0-1120.131_all.deb
 a5e3e118801c577720fb82b92b13c6eda50ac12e0fc96a5a7cdf159a00f6e487:
   type: redhat
   packages:
@@ -22718,6 +22733,11 @@ d67c16787bb15ab07cc71c7887966835c9d286ebfc50f01381e6efdc57a6c87a:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2036.103.3.1.el7uek.x86_64.rpm
+d68f639f3181832d7941e9e648909c031f3464c4413a7ba214e97a46b719cf5e:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-222-generic_4.15.0-222.233-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-222_4.15.0-222.233-16.04.1_all.deb
 d70ad02e665e2401660b8f8e7fb44a8e4251ebb3227cc07d61c6f4205f7266ed:
   type: ubuntu
   packages:
