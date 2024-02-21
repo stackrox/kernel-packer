@@ -9077,11 +9077,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-17162.40.16-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17162.40.16-kernel-headers.tgz
-60c9f3eb4d75e792c789ee885a83b2d01d0bb1d4e42081950ec54223b1a2f237:
-  type: ubuntu
-  packages:
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1159-azure_4.15.0-1159.174-16.04.1_amd64.deb
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1159_4.15.0-1159.174-16.04.1_all.deb
 60d50a1101122156734ed1c7d20e406f3d047f9d0e46d0a662b1e4418ba899c5:
   type: oracle
   packages:
@@ -15405,6 +15400,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-5c0c3052d7988383a2118472573d1c8196caf590d70d6bb2e0c41ea6a85b861b-download
+93130bf51ecbbbfb01bacd5ddecd1081bdcdda35dd0c565679c2317735c7b385:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1159_4.15.0-1159.176-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1159-gcp_4.15.0-1159.176-16.04.1_amd64.deb
 93225cf6863b5843886c86b11cc7dce4dbf1225e973c541d957dd525e0602d60:
   type: ubuntu
   packages:
@@ -24065,6 +24065,11 @@ e3f56512e57a210b6c38999cbe8d5d54142b2a579c5111ed611fc52baac3b3d3:
   packages:
   - https---storage.googleapis.com-cos-tools-16623.341.40-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16623.341.40-kernel-headers.tgz
+e3fb6e252b0b62875b87972013fa4b4ea306bdab199f4861fb467b74fd1c574f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1123_5.4.0-1123.132_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1123-gcp_5.4.0-1123.132_amd64.deb
 e3bd5e8e44b2659d5f4ab7856e972173065d5bb9a4f3137c2fec392ccfbf28a6:
   type: cos
   packages:
