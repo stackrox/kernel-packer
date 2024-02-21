@@ -2260,6 +2260,11 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.520.0.el7uek.x86_64.rpm
+3f60fa14a6b3ddbee17215c218be008373ce96d26b7798556eae34d803b41046:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2104-aws-fips_4.15.0-2104.110_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2104_4.15.0-2104.110_all.deb
 3b64a82d93d9c0d3be6a2c59529cf97424976b89c6df493d33f4ab69431a6fb8:
   type: redhat
   packages:
@@ -20382,6 +20387,11 @@ be9deb3acc0301acf11f32e3963f02bd8079e9bf768f098ee3e2d8a0bd8cd9f5:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1069-aws_4.4.0-1069.79_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1069_4.4.0-1069.79_all.deb
+be25d54f42cfccc1b4bb34010f70feb155e8a1f61680402ff5ae704b18362c9a:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-gcp-fips-headers-4.15.0-2067_4.15.0-2067.72_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-headers-4.15.0-2067-gcp-fips_4.15.0-2067.72_amd64.deb
 be74ee91a933273d5821dd3f0e91c361032c5ad2c21f80733a6f20a57b7cdd3b:
   type: ubuntu
   packages:
