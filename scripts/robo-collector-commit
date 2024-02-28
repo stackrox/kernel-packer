@@ -3,6 +3,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 ROBOT_ROX_GITHUB_TOKEN="${ROBOT_ROX_GITHUB_TOKEN:-$GITHUB_TOKEN}"
+COLLECTOR_REPO_BRANCH="${COLLECTOR_REPO_BRANCH:-drivers}"
 
 main() {
     local kernel_bundle_bucket="$1"
@@ -34,6 +35,7 @@ clone_collector() {
     # Redirect to devnull so this doesn't print the value of the token on
     # failure.
     git clone\
+        -b "${COLLECTOR_REPO_BRANCH}" \
         https://roxbot:$ROBOT_ROX_GITHUB_TOKEN@github.com/stackrox/collector.git\
         "$collector_repo_dir"\
         --depth 1  &> /dev/null
