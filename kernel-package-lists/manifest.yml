@@ -21895,10 +21895,6 @@ cd3be6a7426b1d784297283af742bd32971e09d2fcb11a80131aba3b76743417:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-211-generic_4.15.0-211.222-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-211_4.15.0-211.222-16.04.1_all.deb
-cd5ac23c5a84c782d6517ec8fc72f41b04e156d7ae50d9ab8978635a89045a3e:
-  type: redhat
-  packages:
-  - https---api.access.redhat.com-management-v1-packages-a5fb91cf2b13898f0dbd8bc6116263ecd0aa0a0aba6c5505a28ca099fc85bde5-download
 cd6fc812fc075628334c39010de92e2d22ef2c8783db7f74de23785460f6c16a:
   type: redhat
   packages:
@@ -25741,6 +25737,10 @@ f2efa0d42ca0f1bb4bd05529eef3186dd21a6bea00bf20051001bb1b44545c7f:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-6.2-linux-headers-6.2.0-1019-azure_6.2.0-1019.19-22.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-6.2-linux-azure-6.2-headers-6.2.0-1019_6.2.0-1019.19-22.04.1_all.deb
   image: repackage-bookworm
+f3b8b2c473017d0b69fa38b7aaabedb2417a3c72d7ce00c72074ec133fe6d003:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.12-os-Packages-k-kernel-rt-devel-4.18.0-372.93.1.rt7.253.el8_6.x86_64.rpm
 f3f500bbced5a743e6e4bb6859d1baab03176a279458edcea05847d870d75587:
   type: redhat
   packages:
