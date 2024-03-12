@@ -6530,6 +6530,10 @@
   type: coreos
   packages:
   - https---beta.release.flatcar-linux.net-amd64-usr-3066.1.0-flatcar_developer_container.bin.bz2
+9e253d5243d9e9543ff5d26438b32b7d06cb079967c7e2efcf30816b2bd8cb72:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-1160.114.2.el7.x86_64.rpm
 9d287faa1356323929f9a55c004db7a42cd372eb6e2c064a119ac77e5d2cbd1f:
   type: ubuntu
   packages:
@@ -13642,6 +13646,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.144.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.144.1.x86_64.rpm
+4159a9b6669e4dbbaf49e28e4dd60b2f1e86abca95c298e5c51bcddbc8850062:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.147.33-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.147.33-kernel-headers.tgz
 4165c962e8ee54ea7a0e07f326d4ef09aca4ec6f0fc6f9cb8ba0f24fb28f599e:
   type: redhat
   packages:
