@@ -163,6 +163,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel-server-7-7Server-x86_64-os-Packages-k-kernel-devel-3.10.0-123.9.2.el7.x86_64.rpm
+0c9ddf67383f5c13a8b88166ac0e182b8169e7aefcb41b05a173732c5c656277:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.15.0-1054_5.15.0-1054.59_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.15.0-1054-gke_5.15.0-1054.59_amd64.deb
 0f9bffec72e2a608ad32dcf575956078d8f2a31ab60c790e13e880baf61ea5cf:
   type: cos
   packages:
