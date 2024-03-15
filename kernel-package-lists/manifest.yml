@@ -10745,6 +10745,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-headers-4.15.0-1099-aws_4.15.0-1099.106-16.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-hwe-linux-aws-headers-4.15.0-1099_4.15.0-1099.106-16.04.1_all.deb
+95cbed3f9c0570c9c1704ede1a34f6ad8482dd10885ef2b7ee9b6c0e65b39d12:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.15.0-1055_5.15.0-1055.63_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.15.0-1055-gcp_5.15.0-1055.63_amd64.deb
 95cd292859dbb551b8bb1ebba56f3909dc7415e171c2dc647226f9c55ad842ca:
   type: ubuntu
   packages:
@@ -14768,6 +14773,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-124-generic_4.15.0-124.127_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-124_4.15.0-124.127_all.deb
+19464e584a6bbb20774e3262b59d131bf6d9df09fe7fdbbb3eb832d3c15e3775:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-19-generic_6.8.0-19.19_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-19_6.8.0-19.19_all.deb
+  image: repackage-bookworm
 19477e5331bf578c74903ad619afe670e8132f38169be4ec7e255cf137c5dd79:
   type: redhat
   packages:
