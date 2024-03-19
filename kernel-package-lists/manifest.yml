@@ -445,6 +445,12 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-511.el8.x86_64.rpm
+0fb8aac1c0986ec161c6a747d72c75bc67f8ae2a874f9c0f5690dc60190a311b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-20-generic_6.8.0-20.20_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-20_6.8.0-20.20_all.deb
+  image: repackage-bookworm
 0bb13ddf6faa54af0ad9bbb56aa580d06eb458948d1927ba4353495a2dea5792:
   type: redhat
   packages:
@@ -18972,6 +18978,11 @@ ae309c1e26a1b8832cece0b0cef7ce9048e60ad3d7c3b35e1dd8c2c7bd63bd46:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.519.0.el7uek.x86_64.rpm
+ae3096d2d8f72d5b418df9843d2a5119af281120f2deb928483af6acc10811ea:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1121-aws_5.4.0-1121.131_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1121_5.4.0-1121.131_all.deb
 ae160623e5633def5b8d10609a8608ab72e7a14641aae79dc8794b1f160f8136:
   type: cos
   packages:
@@ -23967,6 +23978,11 @@ ddcb42443bdc0539c89ee50979a705769ad1197e3450006c685dbb7684b74f6a:
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-rhel8-8-x86_64-baseos-os-Packages-k-kernel-devel-4.18.0-513.11.1.el8_9.x86_64.rpm
+ddd5723dc09c9addb119b222758fdd387cb781e9ed8b28394dbfb103ca883872:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.147.38-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.147.38-kernel-headers.tgz
 dddbbf0d247183e9b32794b1b31c1725c521676d4ac8f2f4632dccec55d48d6d:
   type: redhat
   packages:
@@ -24854,6 +24870,11 @@ e86aa8afd69fbf46cc9d821be48bcb613415950bdd2139c8d3a881da1e20ef66:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-a2c0ba54566bf959dff722a155b030452178e89ea15fdb529478b1dc1cd98791-kernel-devel-4.14.232-176.381.amzn2.x86_64.rpm
+e86bb5135d2ccb8f72a1669366df5e3b236c1bb789fa069ae04aabbeb47e7d9a:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18244.1.19-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18244.1.19-kernel-headers.tgz
 e87f4fe3cb5549a7e43ad41c95bf74fd18dc7d02ee7eb1e74005097d6334315e:
   type: ubuntu
   packages:
