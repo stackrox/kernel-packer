@@ -19978,6 +19978,11 @@ b806dd17894ca84481a09f29bf06040c548a450d7ca125c2574d3644913f852a:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-noarch-kernel-devel-5.3.18-24.15.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP2-x86_64-update-x86_64-kernel-default-devel-5.3.18-24.15.1.x86_64.rpm
+b946c8ba85ae35ec52a9b251eb7b9c6d59bd627c6931d781e2d5d381e63b9253:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-headers-5.15.0-1056-aws_5.15.0-1056.61-20.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-5.15-linux-aws-5.15-headers-5.15.0-1056_5.15.0-1056.61-20.04.1_all.deb
 b966b32e54a9df1f5c22d3dd5d9aadc571abf9f1abf31af602aff73111e081b8:
   type: cos
   packages:
@@ -21034,6 +21039,11 @@ c5dea342c99bc5cd673ece15ec2e4fdbfbd25deb8b866aa2c453b82fdfbfd04c:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.4.10-100.fc37-x86_64-kernel-devel-6.4.10-100.fc37.x86_64.rpm
+c5df18608c2beb2d844f5cfb6a4362e25049611104a68aea1e5811f4ff3a089b:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1056-aws_5.15.0-1056.61_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1056_5.15.0-1056.61_all.deb
 c05c883d774eebadf75e240f0ed0971d1b6673211ea52b3cd0cd6e5fa7484a99:
   type: redhat
   packages:
@@ -24063,6 +24073,11 @@ de9567f9a584ce9607ba55fa167df0116b1d1337b7cb15b6f24ede8f0a725563:
   type: coreos
   packages:
   - https---stable.release.flatcar-linux.net-amd64-usr-2079.4.0-flatcar_developer_container.bin.bz2
+de221785b9720430257dc63bb5050565a99077947160e6428579df157c60c176:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18304.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18304.0.0-kernel-headers.tgz
 de532750b238705ad548ef118173bd87c402ba54b4f2036f3cf5a8dd5a78e122:
   type: ubuntu
   packages:
