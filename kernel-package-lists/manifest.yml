@@ -4624,6 +4624,11 @@
   packages:
   - https---storage.googleapis.com-cos-tools-16919.103.51-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-16919.103.51-kernel-headers.tgz
+6e57545216353b6bbd11cdf2dc44c288ac5c82fd5711aafdd4c3fa56958b8d9b:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1160_4.15.0-1160.177-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1160-gcp_4.15.0-1160.177-16.04.1_amd64.deb
 6f82733153773a7fd7e9f7c4552c5d5f3240f326958d95db0749035d809d110d:
   type: cos
   packages:
@@ -5065,6 +5070,10 @@
   type: redhat
   packages:
   - https---mirrors.kernel.org-centos-8-stream-BaseOS-x86_64-os-Packages-kernel-devel-4.18.0-305.7.1.el8_4.x86_64.rpm
+7e30b5a0209331db573e19fe51817867934a9ae38adea3f0fb4a930df0aa95e0:
+  type: coreos
+  packages:
+  - https---stable.release.flatcar-linux.net-amd64-usr-3510.2.3-flatcar_developer_container.bin.bz2
 7c30e58849dc83f504b16f841d00ce3e8837306c7632940d0661cf1b15bdde68:
   type: redhat
   packages:
