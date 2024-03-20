@@ -13681,6 +13681,11 @@
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.2.0-1008-azure_6.2.0-1008.8_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.2.0-1008_6.2.0-1008.8_all.deb
   image: repackage-bookworm
+3805f4c0f06119d666218d55a882075eecc62884a30af560e906432d22d5dd8b:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.386.47-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.386.47-kernel-headers.tgz
 3849ff5498e63cd8b58a71f82653d4a19227e01067fbc73fda1350914753ac15:
   type: ubuntu
   packages:
@@ -20401,6 +20406,10 @@ bb7c5a9c080d65619a7842a6c2977829b36a2bb78e99205c0c48a0992cc7ee3a:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1038-aws_5.15.0-1038.43_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1038_5.15.0-1038.43_all.deb
+bb9eb9c57cf3aeff334a83d5697d4be109d02a79657a698e6fa49b8ba86052ce:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.12-os-Packages-k-kernel-devel-4.18.0-372.96.1.el8_6.x86_64.rpm
 bb78b0656df9b24e37ea2a740ca91f37ed8842907697be7514e3f4f775707e57:
   type: redhat
   packages:
@@ -22585,6 +22594,10 @@ d03fea8e0f57b230b8d451099d25c24ff6df8649a8de6757267da89fb791600b:
   type: redhat
   packages:
   - http---ftp.utexas.edu-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-4.4.76-1.el7.elrepo.x86_64.rpm
+d4b5fb06e491b6389a39bcff60a4fb2e955bd652ed1aa24ebee12ac615e9d944:
+  type: redhat
+  packages:
+  - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.12-os-Packages-k-kernel-rt-devel-4.18.0-372.96.1.rt7.256.el8_6.x86_64.rpm
 d4e085bbcb9c1d68ae4688ac08705d1901b353b9cc43325e565c4166d2b2fc98:
   type: oracle
   packages:
@@ -26938,10 +26951,6 @@ f0361644ee1c7de7b6fdbd0c9a3cd9a36211e472a42ce3117c50751f7c5eeddb:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.1.7-200.fc37-x86_64-kernel-devel-6.1.7-200.fc37.x86_64.rpm
-f680017e93de5054612736fcaabb10a7cb259a9f741527066aeec9418d91c370:
-  type: redhat
-  packages:
-  - https---api.access.redhat.com-management-v1-packages-85418d91a7c54f68a79b031caff61f36fd22aee0f7a6f483b6c8ac61fdc213d2-download
 f721598ffbc51e56331e2ad622181a327b4e65244bab17504e8a89769d0c4e01:
   type: oracle
   packages:
