@@ -7608,11 +7608,6 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-eus-rhel-server-7-7.6-x86_64-os-Packages-k-kernel-devel-3.10.0-957.10.1.el7.x86_64.rpm
-23a8293e3e8ad0f55bab9fd371c1dc46146525a0e998442b587e97481eb0d310:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1125-azure_5.4.0-1125.132_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1125_5.4.0-1125.132_all.deb
 23f1705546a8be6d9b0c38f16b605fe83ab141a66169267b654d5b3119b09648:
   type: cos
   packages:
@@ -16269,6 +16264,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1133-azure_4.15.0-1133.146_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1133_4.15.0-1133.146_all.deb
+819476b8ad5a6527acc217abb59d88bde219f344910c39f7fea0cb0314504d53:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.5.0-1018-azure_6.5.0-1018.19_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.5.0-1018_6.5.0-1018.19_all.deb
+  image: repackage-bookworm
 825224ac9d5a5478b5a6abb23ab9701688621aa11593f5b554f4cbcb13a2ded3:
   type: cos
   packages:
