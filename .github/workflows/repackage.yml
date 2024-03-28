@@ -96,6 +96,7 @@ jobs:
         run: make robo-collector-commit
         env:
           ROBOT_ROX_GITHUB_TOKEN: ${{ secrets.ROBOT_ROX_GITHUB_TOKEN }}
+          COLLECTOR_REPO_BRANCH: giles/new-drivers-branch
 
   notify:
     runs-on: ubuntu-latest
