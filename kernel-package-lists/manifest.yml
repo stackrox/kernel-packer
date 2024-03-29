@@ -829,6 +829,12 @@
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-9901.45.0-kernel-src.tar.gz
+1e6a083896cda411b6f33413464cf87c3471275bca87bcdefa89dd9702e5ce41:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.82-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-15-amd64_6.1.66-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-15-common_6.1.66-1_all.deb
 1a6c01362235d5ded47188b2cac17cff7ea4e263c4c424f520b9a2a8de4f0545:
   type: ubuntu
   packages:
@@ -4621,6 +4627,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1044_5.3.0-1044.47_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1044-gke_5.3.0-1044.47_amd64.deb
+6f700556f47920a84f5507854b0a1e0f3a7ca00a3316f8542d9ea3dac4462430:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.82-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-19-cloud-amd64_6.1.82-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-19-common_6.1.82-1_all.deb
 6b887421cc6d3a4e75e3035eed573463d29906fdf03fe1602837f07750426fde:
   type: redhat
   packages:
@@ -6258,12 +6270,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-headers-5.15.0-1031-azure_5.15.0-1031.38-20.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-5.15-linux-azure-5.15-headers-5.15.0-1031_5.15.0-1031.38-20.04.1_all.deb
-8cf5d6bcd147cc5651bf15d4d5f75130d31b5d2c410fc96c63003acbfc8c7e21:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.76-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-15-amd64_6.1.66-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-15-common_6.1.66-1_all.deb
 8af2658ca7fefbe1444fbb2f0cde2baab4621d1128027c97f5fd41410af196f3:
   type: ubuntu
   packages:
@@ -13016,12 +13022,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-headers-4.15.0-1124-azure_4.15.0-1124.137_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-4.15-linux-azure-4.15-headers-4.15.0-1124_4.15.0-1124.137_all.deb
-884f67d0edd27c9a470e0bea489dbb3b7d93966e271937ee504a3e7af90091fe:
-  type: debian
-  packages:
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.76-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-15-cloud-amd64_6.1.66-1_amd64.deb
-  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-15-common_6.1.66-1_all.deb
 889b9608bfe29a4cc8bf0789064d3a82508fb1dd30d1b24c6de7e059bef5132b:
   type: cos
   packages:
@@ -16677,6 +16677,12 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-7c2378dc73a2b8e20f9da894867b06750501618e3c4287364c64d5d6df8fba30-kernel-devel-4.14.248-189.473.amzn2.x86_64.rpm
+5942113a4e503f6cde30ef8f9bb373fe0b070083c54737aee8cefe2fed9a029f:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.82-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-19-amd64_6.1.82-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-19-common_6.1.82-1_all.deb
 6070382ffb7e0b5fa80cf9c34f3a0a4f2a285b00711138c0e0aa769cc9c7394e:
   type: coreos
   packages:
@@ -27303,6 +27309,12 @@ fb7720c72847268a6caee0d4f886c64759b3e7144c23b7d8313b39dcbdfdc813:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-d6a7c5703b59711fdbc0bb5f83e9f0dcc86c63ab647bb7eb14edbdb8049a430d-download
+fb8354fc2232faca11c018b6787f4f986cf58f9ca0c15fe56ca6723bfcf5c20b:
+  type: debian
+  packages:
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.82-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-15-cloud-amd64_6.1.66-1_amd64.deb
+  - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-15-common_6.1.66-1_all.deb
 fb31871f5140dcb523faeaf3cb822106e147fac80247078c224f3458d6c55f5b:
   type: redhat
   packages:
