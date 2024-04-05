@@ -293,7 +293,7 @@ repos = {
             "patterns": [
                 "\d+\.\d+\.\d+/kernel-src.tar.gz$",
                 "\d+\.\d+\.\d+/kernel-headers\.t(ar\.)?gz$",
-            ]
+            ],
             "exclude_patterns": cos_excludes,
         },
     ],
