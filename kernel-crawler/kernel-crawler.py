@@ -682,6 +682,8 @@ def crawl_s3(repo):
             for pattern in repo['patterns']:
                 if re.search(pattern, key):
                     result = "{}/{}".format(repo['root'], key)
+                    if "exclude_patterns" in repo and any(check_pattern(x,result) for x in repo["exclude_patterns"]):
+                        continue
                     results.append(result)
     results.sort()
     return results
