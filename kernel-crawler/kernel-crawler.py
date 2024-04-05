@@ -72,6 +72,9 @@ garden_excludes = [
     "5.4.0",
     "dbgsym",
 ]
+cos_excludes = [
+    "18342.0.0",
+]
 repos = {
     "CentOS" : [
         {
@@ -291,6 +294,7 @@ repos = {
                 "\d+\.\d+\.\d+/kernel-src.tar.gz$",
                 "\d+\.\d+\.\d+/kernel-headers\.t(ar\.)?gz$",
             ]
+            "exclude_patterns": cos_excludes,
         },
     ],
 
