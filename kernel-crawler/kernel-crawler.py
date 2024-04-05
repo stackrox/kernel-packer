@@ -42,6 +42,7 @@ centos_excludes = [
 ubuntu_excludes = [
     "5.10.0-13.14",  # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
     "5.15.0-1001.3", # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
+    "6.8.0-20.20",   # excluding this kernel because only the `all` pkg is available, the `amd64` pkg is missing.
 ]
 ubuntu_backport_supported = [
     "16.04",
@@ -70,6 +71,9 @@ docker_desktop_excludes = [
 garden_excludes = [
     "5.4.0",
     "dbgsym",
+]
+cos_excludes = [
+    "18342.0.0",
 ]
 repos = {
     "CentOS" : [
@@ -289,7 +293,8 @@ repos = {
             "patterns": [
                 "\d+\.\d+\.\d+/kernel-src.tar.gz$",
                 "\d+\.\d+\.\d+/kernel-headers\.t(ar\.)?gz$",
-            ]
+            ],
+            "exclude_patterns": cos_excludes,
         },
     ],
 
@@ -677,6 +682,8 @@ def crawl_s3(repo):
             for pattern in repo['patterns']:
                 if re.search(pattern, key):
                     result = "{}/{}".format(repo['root'], key)
+                    if "exclude_patterns" in repo and any(check_pattern(x,result) for x in repo["exclude_patterns"]):
+                        continue
                     results.append(result)
     results.sort()
     return results
