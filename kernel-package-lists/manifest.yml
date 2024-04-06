@@ -1167,10 +1167,6 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-d34cbfc2ed065d94d2a83a0bda80d1437fd2b3f5e1765c2240c7d5f3404282c4-download
-1fb163a2739cd7501920d89c10af2508aac00103c0349ef04a5af919e69382ce:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-3850.1.0-flatcar_developer_container.bin.bz2
 1cb473130a5067c0a6710bbd4a58342000861eca5b5f71ccbfb727f81ce71c25:
   type: ubuntu
   packages:
@@ -11959,6 +11955,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-86-generic_5.15.0-86.96_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-86_5.15.0-86.96_all.deb
+0450a8517721b5c2c4e9da34749a57d7f5abed266a75e24209c1464538fc9626:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-22-generic_6.8.0-22.22_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-22_6.8.0-22.22_all.deb
+  image: repackage-bookworm
 455a2c54b8af8ca8e98e586886f8770b8bd6ab88feab5ef978b4c0e322af8543:
   type: ubuntu
   packages:
