@@ -1355,6 +1355,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.0.7-301.fc37-x86_64-kernel-devel-6.0.7-301.fc37.x86_64.rpm
+2e0e1d003012c24fcaf47aefb417780ab66e8f1a6117eca07e058f60f84f98aa:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-0668a2935158826a8c5992df51927c9ce2eb4fb51affa9b23832c9091f96c2f6-download
 2a0b1ea936bcedf4b1bf71b7206a3db8db33d155e445caaa40aa4c63ca6302eb:
   type: ubuntu
   packages:
@@ -4958,12 +4962,6 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1098_5.4.0-1098.105_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1098-gke_5.4.0-1098.105_amd64.deb
-7c4cdfc705d878b01e42829036d76e906a6a032b35fc6af2be32383ca15f7901:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.8.0-1004-azure_6.8.0-1004.4_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.8.0-1004_6.8.0-1004.4_all.deb
-  image: repackage-bookworm
 7c5e02c8ea90fa50a4df0593c31b1419713386a929e257222f64d7396e2e9aeb:
   type: redhat
   packages:
