@@ -1460,6 +1460,11 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1145-azure_4.15.0-1145.160-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1145_4.15.0-1145.160-16.04.1_all.deb
+2c4ff7dd952ecd7784b6e625f488386bbe411888f435b89ab00fef7665f71b7d:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.386.64-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.386.64-kernel-headers.tgz
 2f5f2c46a28021aaf290eab7a4997de6c01de90ec1438954e805aff331e2488c:
   type: ubuntu
   packages:
@@ -17299,6 +17304,10 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.14-200.fc34-x86_64-kernel-devel-5.13.14-200.fc34.x86_64.rpm
+619372055c18daad0391084692706975d813b96f7cc87ef6b599a0d89717d0a2:
+  type: redhat
+  packages:
+  - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.274-1.el7.elrepo.x86_64.rpm
 627774669f791590d04659619b1bfcb030c5a2619d4db075ccea7ba756140239:
   type: cos
   packages:
