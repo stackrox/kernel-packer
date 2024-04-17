@@ -24432,6 +24432,12 @@ de5a3a517f3bda6ee3654c9dc93d29eab0bbc64ce8d51675cc7ae4486eb705ac:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.11.19-100.fc32-x86_64-kernel-devel-5.11.19-100.fc32.x86_64.rpm
+de5b43b90aa8cd336fcf07b5dca5c5ee99bc4a3e8e0d56516c6e326da8b96f80:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-34-generic_6.5.0-34.34_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-34_6.5.0-34.34_all.deb
+  image: repackage-bookworm
 de6e9f4dbcbc68455c376b007b1970a94b178f05d3438ad4b0ee84f1a463bff1:
   type: cos
   packages:
