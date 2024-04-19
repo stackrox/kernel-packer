@@ -20668,6 +20668,11 @@ b893652ffb1b847647b7448fbac9c7626d243fb4ac7514b0f9f0d18feab06c90:
   packages:
   - https---storage.googleapis.com-cos-tools-17162.127.33-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-17162.127.33-kernel-headers.tgz
+b0907805f93d69ab4c5fdd181a0fc2f7644c5478767b1277c3da74b99541fdde:
+  type: minikube
+  packages:
+  - https---raw.githubusercontent.com-kubernetes-minikube-v1.33.0-deploy-iso-minikube-iso-board-minikube-x86_64-linux_x86_64_defconfig-kernel-5.10.207
+  - https---cdn.kernel.org-pub-linux-kernel-v5.x-linux-5.10.207.tar.xz
 b927209c1bcef8f25e06347c90b489f310ac8d455ae73a7d460d5bf5ac3f5cc1:
   type: redhat
   packages:
