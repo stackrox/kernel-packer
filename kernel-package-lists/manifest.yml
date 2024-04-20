@@ -18106,6 +18106,12 @@ a9a3bc7945e0df970811d2f48aafcf3089d24e227a82d8acefddf0c11c7e65b2:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-UEKR6-x86_64-getPackage-kernel-uek-devel-5.4.17-2136.326.6.1.el7uek.x86_64.rpm
+a9b6c87203d42fa6a48d8837506cb6708374b853b2ecd3960e883e578c395ee2:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.8.0-1007-azure_6.8.0-1007.7_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.8.0-1007_6.8.0-1007.7_all.deb
+  image: repackage-bookworm
 a9c9d316474b540a0033fef6f439898599d37cfc12697b9e766306adbb9869e6:
   type: cos
   packages:
