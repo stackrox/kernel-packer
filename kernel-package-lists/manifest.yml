@@ -5470,6 +5470,12 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.13.4-200.fc34-x86_64-kernel-devel-5.13.4-200.fc34.x86_64.rpm
+7cb4190d04ec135f656d452d35616c598b001acfab2614643daa7203d1d287d4:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1019_6.5.0-1019.19_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1019-gcp_6.5.0-1019.19_amd64.deb
+  image: repackage-bookworm
 7bbe784f810582874339616a0ab9e950a81bf5cb6b967e2e6d188e4aaa04dfd1:
   type: ubuntu
   packages:
