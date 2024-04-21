@@ -14197,6 +14197,12 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-36709bc1af006d547d723e6dc99905667c7e7f1b11f249ea87c923807b0a44e2-kernel-devel-4.9.81-44.57.amzn2.x86_64.rpm
+4581b3b16561391cd3c92b9cd41b31d42a78676ee08475b6830f8988cfd4a634:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-gke-headers-6.8.0-1003_6.8.0-1003.5_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-linux-headers-6.8.0-1003-gke_6.8.0-1003.5_amd64.deb
+  image: repackage-bookworm
 4583c68507e3d75ce8ea1e9d0145efbaccf19b5148f8e27517fa44b6565cac86:
   type: cos
   packages:
