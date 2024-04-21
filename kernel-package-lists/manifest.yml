@@ -7752,6 +7752,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1078_5.4.0-1078.84_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1078-gke_5.4.0-1078.84_amd64.deb
+24b66edd4a4f85fbade0e27a9948ddf4f8af3c748d0b6602aa7073589cb9d47a:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-31-generic_6.8.0-31.31_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-31_6.8.0-31.31_all.deb
+  image: repackage-bookworm
 24c428fb19338d91315e78b92228f48af92a96e82da12d58d015c6d8242c4cb4:
   type: redhat
   packages:
@@ -18996,6 +19002,12 @@ ab69f61f6193d6c3e3db9b4657618c96074502148c6dc23cab541dbf77b74d8b:
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-175-generic_4.15.0-175.184-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-175_4.15.0-175.184-16.04.1_all.deb
+ab97c0580baebf119ae2df032e305fa842326cc580fb05cea4d92563a85a50a3:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-6.8.0-1008-aws_6.8.0-1008.8_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-6.8.0-1008_6.8.0-1008.8_all.deb
+  image: repackage-bookworm
 ab98ccd35df22134c169f82a9d98709654ea073adc8062b6e732d9524f01b10d:
   type: suse
   packages:
