@@ -3533,6 +3533,11 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.2.8-200.fc37-x86_64-kernel-devel-6.2.8-200.fc37.x86_64.rpm
+5c0a42fa2c383c7af401ff141d1ab812a3fa8d65853115436a38386cc62e1825:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.218.14-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.218.14-kernel-headers.tgz
 5d0dc5477ba9d912df66dabf0aa745d628aaab05f0079ffe56f5c0b12a5611c8:
   type: redhat
   packages:
@@ -7771,6 +7776,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1078_5.4.0-1078.84_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1078-gke_5.4.0-1078.84_amd64.deb
+24d7f608420bbf5bf25d2020739d22c57766a5688fcf20a365436c13c1409c79:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-a78cda9d1461800a35ef68a5452f92b2c15370ede08aa1de458f2f6d3617eaae-kernel-devel-5.4.274-187.369.amzn2.x86_64.rpm
 24b66edd4a4f85fbade0e27a9948ddf4f8af3c748d0b6602aa7073589cb9d47a:
   type: ubuntu
   packages:
@@ -19931,6 +19940,10 @@ b4be88ccf05554f4cf57afcee85078fe29c33f9d45f251704f778674480d64a9:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.6.9-100.fc38-x86_64-kernel-devel-6.6.9-100.fc38.x86_64.rpm
+b4af3ef988baf452eeeaf92bdfafcf9a8cf6d33ee4e956ca3cbf736427c2f52f:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-fc6afc3c516d80813ddd8203f729f0b06fb955955aea3f5a1ddb4687d2ce9cc1-kernel-devel-5.10.215-203.850.amzn2.x86_64.rpm
 b4ef5be6333eb6579803f42ab7d34ba6d0ca4c93fb41309e573d4d1af8a3102a:
   type: ubuntu
   packages:
