@@ -12486,6 +12486,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-0389abb805f0c83173dde432e30527bbbdddd4aa4e3e6b406e43a3ed6f201185-kernel-devel-4.14.51-66.38.amzn2.x86_64.rpm
+671f90c12a4884af245e84acf44fd3d65f07e3263cc3a3d97d20cd398826a4dd:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-noarch-kernel-devel-5.14.21-150500.55.59.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-x86_64-kernel-default-devel-5.14.21-150500.55.59.1.x86_64.rpm
 672dda92ebd72e342a6077bd7aa25b89f8fcc5fbb19c548ea7790ed41cc1e502:
   type: cos
   packages:
@@ -24843,6 +24848,10 @@ e08a79a1c6f74453452b3ab7bb23a08023d5586533441aaffd19ec3af3c989a1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1103_4.15.0-1103.116_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1103-gcp_4.15.0-1103.116_amd64.deb
+e9e6f5f87f56a3b1f041d222fdda18e7c130c3af1a7180d53b00e4576eeb9102:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-eb459e564108304f049f58fc8b3548f251abb17ea156c4f4ae604ddc63051d32-download
 e9a51ae22e7c029d0b010eea4e63d903fcdd339b58661d61f76980d8122e15cd:
   type: ubuntu
   packages:
