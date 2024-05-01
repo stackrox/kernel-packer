@@ -2001,6 +2001,11 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-noarch-kernel-devel-5.14.21-150500.55.49.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-x86_64-kernel-default-devel-5.14.21-150500.55.49.1.x86_64.rpm
+2fdc896da43a86c948e0598e9fc01f3754038b388596869b5a9c9a1edc5c0096:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.370.14-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.370.14-kernel-headers.tgz
 2cdd4cbaa5cce7b037d632c90985b50aaac3e5e927ccb8f0974321c44cdf90bf:
   type: redhat
   packages:
@@ -6657,6 +6662,10 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.162-1.el7.elrepo.x86_64.rpm
+9d90a5d3ea1cfaff03ba6ebeeaa5ecea1923af0afc72a7140bda472e9282d4d5:
+  type: redhat
+  packages:
+  - http---amazonlinux.us-west-2.amazonaws.com-blobstore-79a224b2a045ffdfdda646dc013fecd0476b060482cc2528daf942b47ea30d31-kernel-devel-4.14.343-259.562.amzn2.x86_64.rpm
 9d92bdce32d897ab5a0239184ce61f7aa002854e28d7073b5e0ded36c938bdb9:
   type: ubuntu
   packages:
@@ -8834,6 +8843,10 @@
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.507.5.el7uek.x86_64.rpm
+47f78e68fe49bb9cd47b44b64f9bed3199a8904b133a8b397e748e23d379130c:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.118.1.el7.x86_64.rpm
 47e88d74bdb6af21fddadb98db40b34da6d5971a6513c54b96e1d1963458794c:
   type: redhat
   packages:
@@ -13311,6 +13324,10 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-gke-5.3-headers-5.3.0-1030_5.3.0-1030.32-18.04.1_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-universe-l-linux-gke-5.3-linux-headers-5.3.0-1030-gke_5.3.0-1030.32-18.04.1_amd64.deb
+0891e90ae23fde12f488825090457b517c9e69598e8f3324e13715443082ebd0:
+  type: redhat
+  packages:
+  - https---api.access.redhat.com-management-v1-packages-336f9dc45186081bd1567c0d89c3a381d6bf1b066333d2e1ab164d3819cc3d3a-download
 893c5db0c5b7591e70a2f37f12cf65d77479fa672655c5f3a642b624e505193d:
   type: suse
   packages:
