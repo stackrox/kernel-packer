@@ -86,8 +86,8 @@ jobs:
         run: make robo-crawl-commit
         env:
           RHACS_BOT_GITHUB_TOKEN: ${{ secrets.RHACS_BOT_GITHUB_TOKEN }}
-          RHACS_BOT_GITHUB_EMAIL: ${{ secrets.RHACS_BOT_GITHUB_EMAIL }}
-          RHACS_BOT_GITHUB_USERNAME: ${{ secrets.RHACS_BOT_GITHUB_USERNAME }}
+          RHACS_BOT_GITHUB_EMAIL: ${{ vars.RHACS_BOT_GITHUB_EMAIL }}
+          RHACS_BOT_GITHUB_USERNAME: ${{ vars.RHACS_BOT_GITHUB_USERNAME }}
 
       #
       # The manifest is used in subsequent workflows. Archive it here
