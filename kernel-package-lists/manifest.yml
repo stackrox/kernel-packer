@@ -666,6 +666,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1115_4.15.0-1115.129_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1115-gcp_4.15.0-1115.129_amd64.deb
+00f1b0f92930ef6711f16f479f4bf1c2b02dbfa08aed0fb3671b9784a05b1599:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-amd64_6.1.38-4_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-4_all.deb
 00a256c0638e3305ec77f3e0c7874c76ccad2d538bfd5e9366563f2de5f13b7b:
   type: ubuntu
   packages:
@@ -2682,6 +2688,12 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.9.10-100.fc32-x86_64-kernel-devel-5.9.10-100.fc32.x86_64.rpm
+3adad3bd8d592278762edfe34ce536c5fed5d540c50c8f0c105e06902342ae6c:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-cloud-amd64_6.1.52-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-common_6.1.52-1_all.deb
 3edb4969f2480c7e3c50ca822747dbe05be4a72c1afd0d6f550e218dc37367fb:
   type: redhat
   packages:
@@ -6472,6 +6484,12 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.9-100.fc34-x86_64-kernel-devel-5.16.9-100.fc34.x86_64.rpm
+9b3f00a0b80424b6b0e51c1f310880873de7ec84524a4b6cc2801383a20b7e9b:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-cloud-amd64_6.1.38-4_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-4_all.deb
 9a3e98e8113c36a42ba2e4b37aa5df1f0f7fc24418bfba17d4dd688edbd3a0f9:
   type: cos
   packages:
@@ -9570,6 +9588,12 @@
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-41-generic_6.2.0-41.42_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.2.0-41_6.2.0-41.42_all.deb
   image: repackage-bookworm
+62bc32cb52c5936feaf2ff1013d270744544197a6937dc01d00d627d9ca0e3dc:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-17-cloud-amd64_6.1.69-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-17-common_6.1.69-1_all.deb
 62bc6172dc39bcd8f52eaccca6cfde402530c4dca37c3d8780ae04def0cd2995:
   type: redhat
   packages:
@@ -11803,12 +11827,6 @@
   - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.85-1_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-20-cloud-amd64_6.1.85-1_amd64.deb
   - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-20-common_6.1.85-1_all.deb
-291fb6dad045a86f9ebfd06a0de049326e76ba74172c0425aeafbbfffe0d8764:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.85-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-17-cloud-amd64_6.1.69-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-17-common_6.1.69-1_all.deb
 295c0dcbfe531355ef49a479638b7bcc9f23f136308e9b7b772d8870f5bc4b91:
   type: redhat
   packages:
@@ -11991,12 +12009,6 @@
   packages:
   - https---storage.googleapis.com-cos-tools-18244.1.31-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-18244.1.31-kernel-headers.tgz
-372a1d4a475ccdb376c498dabc1ee96a355b64adb20cafe3b7ca019c9ee74105:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.85-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-amd64_6.1.38-4_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-4_all.deb
 373eee481226cf5650d8283e2d88bb83e8432c48a5814d15ac1f3af1b0133cdf:
   type: redhat
   packages:
@@ -12890,6 +12902,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-4.4.0-1055-aws_4.4.0-1055.64_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-4.4.0-1055_4.4.0-1055.64_all.deb
+714ee8137316294b7903cfb921a9de20cd7e3ba5a2e3366ef0f0d006fee42ea2:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-17-amd64_6.1.69-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-17-common_6.1.69-1_all.deb
 715fe9adba0beb785e131db7f56e57187624d63203bf344cdecf8182e394419e:
   type: oracle
   packages:
@@ -13836,6 +13854,12 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-638f93851a3abac549d7c33c515803a2f729b965dd3268e128c144de4ede50bd-download
+2310d9bf7db83e8ce0066ae65e2cab3dabd0fd91f24e7aa7c8afe308441993a4:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-amd64_6.1.52-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-common_6.1.52-1_all.deb
 2335ebaea9b7e98f4ecbfeff2777f0b64274c0cbf28ac8e0561888d00c57e1ba:
   type: ubuntu
   packages:
@@ -19691,12 +19715,6 @@ afbf3e9eee497ce5f1e5e2c9a06fa4f3267348ccfd04f3851f85f5b7d78598ed:
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-acbd4e5d95a403f130ec6b9b6fc6aaf5c6a27d8e580515cbf47af564375dd448-kernel-devel-5.4.242-159.350.amzn2.x86_64.rpm
-afc2cfda435547eae12e37ff0f470521dcc4986131b833a545bd1d6c6065c126:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.85-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-amd64_6.1.52-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-common_6.1.52-1_all.deb
 afc5304933d7563ba0963b341c9f98d4fc4636b0f535a259f206e469e14f4af4:
   type: cos
   packages:
@@ -21386,12 +21404,6 @@ bfa73f69f4ec447e68cbc14698a8afc4ff856935170d272b4e8e451fed20be17:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.8.6-200.fc39-x86_64-kernel-devel-6.8.6-200.fc39.x86_64.rpm
-bfb0d2c2847032f78f78761ae805ee6d565d80211b3e3b750c138bc5a67d1fd3:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.85-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-cloud-amd64_6.1.52-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-12-common_6.1.52-1_all.deb
 bfba174968566cb73dcc224deaa31502d29dabed03d768863cf4773853fde784:
   type: cos
   packages:
@@ -24125,12 +24137,6 @@ d19103ebe18ec5c4fb3728aacd8d2a51903d4d63a7b55aecfbff4918927b31ff:
   type: cos
   packages:
   - https---storage.googleapis.com-cos-tools-10323.83.0-kernel-src.tar.gz
-d19879caa3fcca022e28c58419cd8a42c60da5abd17bc62cd44560635fb7d4f5:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.85-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-cloud-amd64_6.1.38-4_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-11-common_6.1.38-4_all.deb
 d24798dd360e3e95f56d620e7577042b52c5a9d6165b688ded6a0f64a1daa9be:
   type: ubuntu
   packages:
@@ -24163,6 +24169,12 @@ d72951f5b6b8741432abfb7f778259ec45e2a91c3f61a34a16f4a4dc9dd30e85:
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-noarch-kernel-devel-4.12.14-122.130.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-SERVER-12-SP5-x86_64-update-x86_64-kernel-default-devel-4.12.14-122.130.1.x86_64.rpm
+d73825c501d1613f91dd447b341a8eff694a8c08639218fcdc2d2035f87182ae:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-21-amd64_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-21-common_6.1.90-1_all.deb
 d97084e472a1763211037edb58d17b609b34ad4a0cc2da089b20d55bb5909d0e:
   type: ubuntu
   packages:
@@ -26521,6 +26533,12 @@ ee89dc8edfa14bc41d92bedf360997936a4c7281de9385e480b6a42b404982e6:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1012_6.5.0-1012.12_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1012-gcp_6.5.0-1012.12_amd64.deb
   image: repackage-bookworm
+ee654fba7b8326b230e696ada2318bd84154fdbf6e0bfa345d62889834615ccb:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-21-cloud-amd64_6.1.90-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-21-common_6.1.90-1_all.deb
 ee778c94c3ff88a4913a3559656fc092213105afa4e321082b670eaad173fd22:
   type: redhat
   packages:
@@ -27586,12 +27604,6 @@ f6068a23f0f579724fc5f985966c42c875c2fd6cab1fc48ea21e14517951b6ea:
   packages:
   - https---storage.googleapis.com-cos-tools-12105.52.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-12105.52.0-kernel-headers.tgz
-f6251f9de342a6424ce00ec204a6ed1573c7bb4ae1aaf83d54c05089e86ea55d:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-6.1_6.1.85-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-17-amd64_6.1.69-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-6.1.0-17-common_6.1.69-1_all.deb
 f6270a1a033e8c59f28da7a6745a600cb572688bb1f6ddd0758ba29f03bfb03f:
   type: oracle
   packages:
