@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-ROBOT_ROX_GITHUB_TOKEN="${ROBOT_ROX_GITHUB_TOKEN:-$GITHUB_TOKEN}"
+RHACS_BOT_GITHUB_TOKEN="${RHACS_BOT_GITHUB_TOKEN:-$GITHUB_TOKEN}"
 
 main() {
     CRAWLED_PACKAGE_DIR="${1:-kernel-package-lists}"
@@ -22,17 +22,17 @@ main() {
     # it first. Redirect to devnull so this doesn't print the value of the
     # token on failure.
     echo "Add target..."
-    git remote add pushtarget https://roxbot:$ROBOT_ROX_GITHUB_TOKEN@github.com/stackrox/kernel-packer &> /dev/null
+    git remote add pushtarget "https://$RHACS_BOT_GITHUB_USERNAME:$RHACS_BOT_GITHUB_TOKEN@github.com/stackrox/kernel-packer" &> /dev/null
 
     # Create a commit with any modified files, and push it to GitHub.
     echo "Commit changes..."
     git add "$CRAWLED_PACKAGE_DIR"
-    git -c "user.name=roxbot" -c "user.email=roxbot@stackrox.com" commit --message "🤖 Updated crawled packages"
+    git -c "user.name=$RHACS_BOT_GITHUB_USERNAME" -c "user.email=$RHACS_BOT_GITHUB_EMAIL" commit --message "🤖 Updated crawled packages"
 
     # redirect to devnull so this doesn't print the value of the token on failure.
     # temporary test branch
     echo "Push changes..."
-    git push pushtarget $BRANCH
+    git push pushtarget "$BRANCH"
     echo "Crawled packages have been pushed."
 }
 
