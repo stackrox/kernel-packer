@@ -95,7 +95,9 @@ jobs:
         if: github.event_name != 'pull_request'
         run: make robo-collector-commit
         env:
-          ROBOT_ROX_GITHUB_TOKEN: ${{ secrets.ROBOT_ROX_GITHUB_TOKEN }}
+          RHACS_BOT_GITHUB_TOKEN: ${{ secrets.RHACS_BOT_GITHUB_TOKEN }}
+          RHACS_BOT_GITHUB_EMAIL: ${{ vars.RHACS_BOT_GITHUB_EMAIL }}
+          RHACS_BOT_GITHUB_USERNAME: ${{ vars.RHACS_BOT_GITHUB_USERNAME }}
 
   notify:
     runs-on: ubuntu-latest
