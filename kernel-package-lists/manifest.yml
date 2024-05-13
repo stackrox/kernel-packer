@@ -815,6 +815,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1006_4.15.0-1006.6_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1006-gcp_4.15.0-1006.6_amd64.deb
+1d5f4e44ad6fdedb81a43a23750bd96fc6fb07e5369ee5795238e6e65a7ad76c:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18244.85.5-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18244.85.5-kernel-headers.tgz
 1a5c329b67882af712493b0d1d078d7a60c80732dd8aebe6407b92ef77bc3b3e:
   type: oracle
   packages:
@@ -4491,6 +4496,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-42-generic_4.15.0-42.45_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-4.15.0-42_4.15.0-42.45_all.deb
+6a9a255da5d57a783f9663a9880451461292995207b28921f836632624bcf71f:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.5.0-1022-azure_6.5.0-1022.23_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.5.0-1022_6.5.0-1022.23_all.deb
+  image: repackage-bookworm
 6a9e264d04144e5db4c7637ac2c49041502eeccc221e7f9e3754d6c03fd078e7:
   type: suse
   packages:
