@@ -315,6 +315,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-168-generic_5.4.0-168.186_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.4.0-168_5.4.0-168.186_all.deb
+0e660b173bafd42417eb9f17052e544d447273fd9f20f32e72bd3f73fd2ec454:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1101-fips_4.4.0-1101.108_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1101_4.4.0-1101.108_all.deb
 0a796df3efa178f096295630d58f6ed1cde14f293e169280c6da50b948fbc3a8:
   type: redhat
   packages:
@@ -11915,6 +11920,11 @@
   type: redhat
   packages:
   - https---cdn.redhat.com-content-dist-layered-rhel8-x86_64-rhocp-4.11-os-Packages-k-kernel-devel-4.18.0-372.78.1.el8_6.x86_64.rpm
+288acefb4297cc4bbe6b967c9d381e8b453813e59a44ee195f77d8d9260d1345:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2107-aws-fips_4.15.0-2107.113_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2107_4.15.0-2107.113_all.deb
 295c0dcbfe531355ef49a479638b7bcc9f23f136308e9b7b772d8870f5bc4b91:
   type: redhat
   packages:
@@ -19158,6 +19168,11 @@ aa739078b948832aad5ef9b58001529c247956127b059f44b1a07812c364ab18:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-gke-headers-5.4.0-1051_5.4.0-1051.54_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gke-linux-headers-5.4.0-1051-gke_5.4.0-1051.54_amd64.deb
+aa4625341a8e7f6fdbd685c7c5928368a5f35552fb99431870fac55e0fdf3ba0:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-gcp-fips-headers-4.15.0-2070_4.15.0-2070.75_amd64.deb
+  - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-gcp-fips-linux-headers-4.15.0-2070-gcp-fips_4.15.0-2070.75_amd64.deb
 aaa9b57d1e3e88da6e74839e434c7c52f1f8750b2224a343e2da9898ce42c0a9:
   type: coreos
   packages:
