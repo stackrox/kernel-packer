@@ -8495,10 +8495,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.17.4-300.fc36-x86_64-kernel-devel-5.17.4-300.fc36.x86_64.rpm
-37b0c75da1a7ddd8a2b5e294feb2552d0a12f55dcc0276ad943ceda44398bbe2:
-  type: coreos
-  packages:
-  - https---beta.release.flatcar-linux.net-amd64-usr-2765.1.0-flatcar_developer_container.bin.bz2
 37c4c3207731885762ed484ab28f68ff42df7ea8016f204af4d6266b75682a51:
   type: redhat
   packages:
@@ -18458,6 +18454,10 @@ a9ee9f6d058c8b38dc647df0fee6545263557b074ef06a4b89a1b33b2aa5fb01:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.4.0-1116-aws_5.4.0-1116.126_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.4.0-1116_5.4.0-1116.126_all.deb
+a9be88ab01d7c73af6aafa3a10ed878f0601205da6197f57ad9b12ee9587bcb2:
+  type: oracle
+  packages:
+  - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.537.3.el7uek.x86_64.rpm
 a11df5093e4119566049db2bb7de134fee7e2aa9a73ec41bc8c99763ddced5de:
   type: redhat
   packages:
@@ -27036,6 +27036,11 @@ f3f500bbced5a743e6e4bb6859d1baab03176a279458edcea05847d870d75587:
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.248-1.el7.elrepo.x86_64.rpm
+f3e970b4023375bbe493bb72720b7ce1de528a2d19df2d6dffd2db09712cf735:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-5.4.0-1131-azure_5.4.0-1131.138_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-5.4.0-1131_5.4.0-1131.138_all.deb
 f3a104936f981f776d18bbe8da2d74777a9e2741234cf93b4a0f7b059726aaf7:
   type: oracle
   packages:
