@@ -15916,6 +15916,11 @@
   type: redhat
   packages:
   - http---linux-mirrors.fnal.gov-linux-elrepo-archive-kernel-el7-x86_64-RPMS-kernel-lt-devel-5.4.184-1.el7.elrepo.x86_64.rpm
+059423ac11f1d1fbc494ddc8d4c2589a17a7fdba8e742d35ce31ffc73a9fad9d:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1162_4.15.0-1162.179-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1162-gcp_4.15.0-1162.179-16.04.1_amd64.deb
 60679f0ae2f7465f7768eefbb3ac40676f67ee15c6f2dff57afc5dcf77d08234:
   type: cos
   packages:
@@ -16259,6 +16264,11 @@
   packages:
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-4.15.0-1159_4.15.0-1159.176-16.04.1_amd64.deb
   - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-gcp-linux-headers-4.15.0-1159-gcp_4.15.0-1159.176-16.04.1_amd64.deb
+93161af0031b49342c42d58ed2919baeac8a1c7f636812224781f795493be02e:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.463.26-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.463.26-kernel-headers.tgz
 93225cf6863b5843886c86b11cc7dce4dbf1225e973c541d957dd525e0602d60:
   type: ubuntu
   packages:
@@ -19161,11 +19171,6 @@ aa4e58ea2026fc81e1eedbd808ccc3961fac4c90732de982592d6e5e31c55278:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-120f76f4baaf43c5d587ebcaeaabf89d082668271f8da40c5309fabc99d519ec-download
-aa5fdc528bfc1ec2a6aeae77f24786ae90092a813207463ef1fee3af3875008f:
-  type: ubuntu
-  packages:
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-headers-4.15.0-1162-azure_4.15.0-1162.177-16.04.1_amd64.deb
-  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-azure-linux-azure-headers-4.15.0-1162_4.15.0-1162.177-16.04.1_all.deb
 aa5ce2d37ed32600c03cb2f39c1b69a5259a6dc7f2fd2915cfb4409cd20c21ce:
   type: cos
   packages:
