@@ -8501,6 +8501,12 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-5.4.0-1011_5.4.0-1011.11_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-5.4.0-1011-gcp_5.4.0-1011.11_amd64.deb
+35cbcae95ee253c7630a5854996670d12a2c99b2e19ea4871ff530a154b6b290:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-41-generic_6.5.0-41.41_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-41_6.5.0-41.41_all.deb
+  image: repackage-bookworm
 35cd4407832ea4b595e7fc6d4282228b086a05d6eb17127e078657b4126550ef:
   type: redhat
   packages:
@@ -13507,6 +13513,12 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-96fec52bd60ed58b6183317b65322aa3d1ce960e773eeeb2ab6d11c95d85ecb1-download
+858fe2d4e03957c89d83e38e8a4d387e9259a735d510db5ebd0bc3fd9d3dc0e9:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-35-generic_6.8.0-35.35_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-35_6.8.0-35.35_all.deb
+  image: repackage-bookworm
 862a005d876c136f6b809732de072a43856cffef614f1d463630dcc2f9e988aa:
   type: redhat
   packages:
@@ -28765,6 +28777,10 @@ ff62666d923f36ea94c8d27fd0bfc9cb427d829274ecd866d11009078d33be24:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1409.8.0-coreos_developer_container.bin.bz2
+ffa00603a134d9051219b064a6fbe33ce5e85ffcf0b42bc690cd3a356aa8ddad:
+  type: redhat
+  packages:
+  - https---kojipkgs.fedoraproject.org-packages-kernel-6.9.1-200.fc40-x86_64-kernel-devel-6.9.1-200.fc40.x86_64.rpm
 ffac5c1e49aa690b6bca404534e7009dd4d0ac60202877ce746a1323d6eeead3:
   type: redhat
   packages:
