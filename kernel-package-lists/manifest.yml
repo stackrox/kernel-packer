@@ -24778,6 +24778,11 @@ da0317d54b3909213fd9a8b2ff78a1d39d061d03ffd73b35e98db9f14422a8ea:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1020_6.5.0-1020.20_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1020-gcp_6.5.0-1020.20_amd64.deb
   image: repackage-bookworm
+da738e4e6749e2cf4577efca0038ac3ad721ba4d1ea9f2e307560aeb94ce7add:
+  type: suse
+  packages:
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-noarch-kernel-devel-5.14.21-150500.55.65.1.noarch.rpm
+  - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP5-x86_64-update-x86_64-kernel-default-devel-5.14.21-150500.55.65.1.x86_64.rpm
 da199751cf45b3a506abec2a1edb549a42512624cbe660486e9bb2d6da74cef2:
   type: redhat
   packages:
