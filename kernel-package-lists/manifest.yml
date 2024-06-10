@@ -323,6 +323,11 @@
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.4.0-1101-fips_4.4.0-1101.108_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.4.0-1101_4.4.0-1101.108_all.deb
+0e0719c679cf1cea3296c50a9157c921349ab53dc43d29513017cc9e70c2c184:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-115-generic_5.15.0-115.125_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-5.15.0-115_5.15.0-115.125_all.deb
 0a796df3efa178f096295630d58f6ed1cde14f293e169280c6da50b948fbc3a8:
   type: redhat
   packages:
@@ -8150,6 +8155,12 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-noarch-kernel-devel-5.3.18-150300.59.71.2.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP3-x86_64-update-x86_64-kernel-default-devel-5.3.18-150300.59.71.2.x86_64.rpm
+28c6da06e5bae0c259b0cd96c72fad7a94e690ffaf0254d75a24fc9f92554ef0:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-38-generic_6.8.0-38.38_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.8.0-38_6.8.0-38.38_all.deb
+  image: repackage-bookworm
 28e465c66154506e13b4f7c76d0765cec82b5844d602c94852b29cafbab7f1d4:
   type: redhat
   packages:
@@ -20453,6 +20464,12 @@ b4fbcc0382bda9d3f0785c38c01ce39beae0e0ae1fb3ba53ec4601463b13ee77:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1143_4.15.0-1143.159_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1143-gcp_4.15.0-1143.159_amd64.deb
+b4cd5315d4d3035a542de528d7255f8fbf49fbcae7c62130ce39bd0c02d3ca6e:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-44-generic_6.5.0-44.44_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-44_6.5.0-44.44_all.deb
+  image: repackage-bookworm
 b4ae0e5cc689ff8560ff462088ffb8273d0b26064eb4341e92739af3c3df8879:
   type: ubuntu
   packages:
@@ -22250,6 +22267,10 @@ c6b1013e8c486535b7c76e9b9472562727431dad9c331274db93fd9f04729f11:
   packages:
   - https---storage.googleapis.com-cos-tools-15184.0.0-kernel-src.tar.gz
   - https---storage.googleapis.com-cos-tools-15184.0.0-kernel-headers.tgz
+c6cf10fe63bb9d482a3da87f9b2e38145d6af320a3df8de9c95af6940847d078:
+  type: oracle
+  packages:
+  - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.538.2.el7uek.x86_64.rpm
 c7f1f7449591fd2b07aa35401bf6821339296dfbc1f5a88e6cb8344d48ec4a86:
   type: ubuntu
   packages:
@@ -24948,6 +24969,10 @@ da199751cf45b3a506abec2a1edb549a42512624cbe660486e9bb2d6da74cef2:
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-46e6a67964f7e96457fa3a53d553899e21918652cc41da796555a0e6d4bb7df4-download
+daa3b6a582bb30751817cd3e74d62c0171a7bea41ef4014a5d384a51c4901ee9:
+  type: redhat
+  packages:
+  - https---mirrors.kernel.org-centos-7.9.2009-updates-x86_64-Packages-kernel-devel-3.10.0-1160.119.1.el7.x86_64.rpm
 dab52dd2cd9536b3891c4911380e8c0c1c02b68f16eaa91d39d53e07c65a4a95:
   type: coreos
   packages:
