@@ -16679,6 +16679,12 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.8.8-200.fc39-x86_64-kernel-devel-6.8.8-200.fc39.x86_64.rpm
+595761d24a8619e42d7a8e933ddfd01a8edc7baa825101df77b81cf58eb2b7ba:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-gcp-headers-6.5.0-1024_6.5.0-1024.26_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-linux-headers-6.5.0-1024-gcp_6.5.0-1024.26_amd64.deb
+  image: repackage-bookworm
 598749be9cad75c8fddb57351f74c1d1375b732f5eabef54ac46b35651633b20:
   type: cos
   packages:
