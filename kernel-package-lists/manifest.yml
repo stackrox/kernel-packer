@@ -20763,6 +20763,12 @@ b9cbf99d3dbc21503d206ccc800b1e10b6ff2bcd59af3379ee5a4d3691de966d:
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-5.16.18-200.fc35-x86_64-kernel-devel-5.16.18-200.fc35.x86_64.rpm
+b9acacbeea195380f683257083c9c76a22e678874667944337f23b51a25e9ea5:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.8.0-1010-azure_6.8.0-1010.10_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.8.0-1010_6.8.0-1010.10_all.deb
+  image: repackage-bookworm
 b9ed822b8264831e8f56295c1d301a039125297fa2b0fbcdb1e0fc70ecfb185f:
   type: redhat
   packages:
