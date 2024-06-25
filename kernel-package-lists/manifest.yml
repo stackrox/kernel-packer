@@ -6813,6 +6813,11 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-61f9065913dfb1a87bcd42ddf69672bd8ee02b2e4f670e2e47ddbd96ba125a6a-download
+9a9e812c8517a0f03f242496781cdd7140c42acead0a2b722123153793d22d87:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18514.0.0-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18514.0.0-kernel-headers.tgz
 9c9d5457f496003aa3b59e8e959090eb667533363e4968ca0bfad67448bdc4b7:
   type: ubuntu
   packages:
@@ -8836,6 +8841,11 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-4bca828e35fdc97310c6f81b425c1fbc4ca2462fee07bb1b88738eede735495c-kernel-devel-5.10.155-138.670.amzn2.x86_64.rpm
+40d4f8cb4af95ce303a446dc8a770f615770552d26a273db7a6231bb5617ad21:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17800.218.62-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17800.218.62-kernel-headers.tgz
 40d7eca4ae5ed3139371e96f7c5197dc0640f4a4a019869e6d8ca56927798d1a:
   type: ubuntu
   packages:
@@ -10094,6 +10104,12 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.8.3-200.fc39-x86_64-kernel-devel-6.8.3-200.fc39.x86_64.rpm
+66ee491126a3a22eb26daa940b8ca53838429072f5dc66ff7b8c5556cc827670:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-6.5-linux-headers-6.5.0-1024-azure_6.5.0-1024.25-22.04.1_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-6.5-linux-azure-6.5-headers-6.5.0-1024_6.5.0-1024.25-22.04.1_all.deb
+  image: repackage-bookworm
 66bfb888583d664b97959a354ac51e40ab5fe0de490f840076ec7a077ed2b668:
   type: suse
   packages:
@@ -19716,6 +19732,11 @@ aae38ce6a03d522b1c0cd06ba75228aca4ad28ee62ab2def08317013f291f6c7:
   type: oracle
   packages:
   - http---yum.oracle.com-repo-OracleLinux-OL7-developer_UEKR5-x86_64-getPackage-kernel-uek-devel-4.14.35-2047.508.0.el7uek.x86_64.rpm
+ab0bdfcf96edf760428255b3fd660a974e4b4edd86879d8b53d420db75db5c58:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-18244.85.39-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-18244.85.39-kernel-headers.tgz
 ab3e75539d15b3d5ec4d3b8145c9130573f1cf54275229745a75f47adc86c595:
   type: ubuntu
   packages:
@@ -26248,6 +26269,11 @@ e08a79a1c6f74453452b3ab7bb23a08023d5586533441aaffd19ec3af3c989a1:
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-gcp-4.15-headers-4.15.0-1103_4.15.0-1103.116_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-gcp-4.15-linux-headers-4.15.0-1103-gcp_4.15.0-1103.116_amd64.deb
+e9c02e73fb725419e6ecb1804492249f36ba1c5a827f9b3678c0757953638066:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17412.370.61-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17412.370.61-kernel-headers.tgz
 e9e6f5f87f56a3b1f041d222fdda18e7c130c3af1a7180d53b00e4576eeb9102:
   type: redhat
   packages:
@@ -29089,6 +29115,11 @@ fd15576d8d1c05e7c6696a1371ea330d4bb75c331b099ee452bb5adaff09f3e4:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-headers-4.15.0-1107-fips_4.15.0-1107.118_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-fips-linux-fips-headers-4.15.0-1107_4.15.0-1107.118_all.deb
+fd60242a451b16538c036de9a85ac6e13113e7858d186b446d9fb63c541fd745:
+  type: cos
+  packages:
+  - https---storage.googleapis.com-cos-tools-17162.463.51-kernel-src.tar.gz
+  - https---storage.googleapis.com-cos-tools-17162.463.51-kernel-headers.tgz
 fd2383860cb0cb1daf6c5c415a321658db5a8de712cd502b33c11f9c9f6c5ca3:
   type: redhat
   packages:
