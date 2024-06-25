@@ -8952,6 +8952,12 @@
   type: redhat
   packages:
   - https---api.access.redhat.com-management-v1-packages-a5406f469d132370936fa1d4b2c20f3bfd5792152633c68acfb3e50e3bd0db08-download
+041a6f51c67428ba36961563a74198980c8d5d1484c8cff9019785e066c7c2f3:
+  type: ubuntu
+  packages:
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-headers-6.5.0-1024-azure_6.5.0-1024.25_amd64.deb
+  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-linux-azure-headers-6.5.0-1024_6.5.0-1024.25_all.deb
+  image: repackage-bookworm
 041af0c2adef292716f4cf3fa073ab262233cfe6cba39d88b638a419dc9c6a33:
   type: redhat
   packages:
@@ -10104,12 +10110,6 @@
   type: redhat
   packages:
   - https---kojipkgs.fedoraproject.org-packages-kernel-6.8.3-200.fc39-x86_64-kernel-devel-6.8.3-200.fc39.x86_64.rpm
-66ee491126a3a22eb26daa940b8ca53838429072f5dc66ff7b8c5556cc827670:
-  type: ubuntu
-  packages:
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-6.5-linux-headers-6.5.0-1024-azure_6.5.0-1024.25-22.04.1_amd64.deb
-  - http---security.ubuntu.com-ubuntu-pool-main-l-linux-azure-6.5-linux-azure-6.5-headers-6.5.0-1024_6.5.0-1024.25-22.04.1_all.deb
-  image: repackage-bookworm
 66bfb888583d664b97959a354ac51e40ab5fe0de490f840076ec7a077ed2b668:
   type: suse
   packages:
