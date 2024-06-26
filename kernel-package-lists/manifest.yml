@@ -2828,6 +2828,12 @@
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-9-generic_6.5.0-9.9_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-linux-headers-6.5.0-9_6.5.0-9.9_all.deb
   image: repackage-bookworm
+3fdfd58bbd77c31e486bd0a0139191a41e85c194ef41d9eb175f758b83b3e056:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.316-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-27-amd64_4.19.316-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-27-common_4.19.316-1_all.deb
 3fe1c9299487362ad85ed0fa5af0c094145c7df2815eb8af2b5972861e70378e:
   type: redhat
   packages:
@@ -26530,6 +26536,12 @@ e62b7e6163aebeaaea450144843f0a4031171a8c006689556fc20626f1ef71e7:
   type: coreos
   packages:
   - http---stable.release.core-os.net-amd64-usr-1745.5.0-coreos_developer_container.bin.bz2
+e62b19b68e60ca2fbcd9a10bbad5682b582e199c1e56c906655d69c030f3906a:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.316-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-27-cloud-amd64_4.19.316-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-27-common_4.19.316-1_all.deb
 e63c5aa9d1277a9e1a90d8af7ff16784695893ae68e87c76b6d4d6986d9af72d:
   type: ubuntu
   packages:
