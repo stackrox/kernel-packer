@@ -2466,12 +2466,6 @@
   packages:
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-noarch-kernel-devel-4.12.14-197.26.1.noarch.rpm
   - https---updates.suse.com-SUSE-Updates-SLE-Module-Basesystem-15-SP1-x86_64-update-x86_64-kernel-default-devel-4.12.14-197.26.1.x86_64.rpm
-3c69d572729e343cd58d930d5f725f1f46acfca98afd5638c5151901226420c6:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.304-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-cloud-amd64_4.19.304-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-common_4.19.304-1_all.deb
 3a74c33405104e4a5d45d6d565fb4697100e6ebc38f9af5f794759f6e8759c8e:
   type: cos
   packages:
@@ -4403,6 +4397,11 @@
   packages:
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-headers-5.15.0-1041-aws_5.15.0-1041.46_amd64.deb
   - http---security.ubuntu.com-ubuntu-pool-main-l-linux-aws-linux-aws-headers-5.15.0-1041_5.15.0-1041.46_all.deb
+5adaf18d775d00ae397cea8a23f9c2737849d4ba20a9d59c31079531c4378897:
+  type: ubuntu
+  packages:
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-226-generic_4.15.0-226.238-16.04.1_amd64.deb
+  - https---esm.ubuntu.com-infra-ubuntu-pool-main-l-linux-hwe-linux-headers-4.15.0-226_4.15.0-226.238-16.04.1_all.deb
 5ddd5286e54ac98e56d2a4e21b10fba3a0ad25957a8ba0f77973ad428ad157b0:
   type: redhat
   packages:
@@ -4419,12 +4418,6 @@
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-kbuild-6.1_6.1.76-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-18-cloud-amd64_6.1.76-1_amd64.deb
   - http---debian.csail.mit.edu-debian-pool-main-l-linux-linux-headers-6.1.0-18-common_6.1.76-1_all.deb
-5ce83e71e73446d1391b95d0f465f2cf12b18e3703641abcf059cd86244ae3cd:
-  type: debian
-  packages:
-  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.304-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-amd64_4.19.304-1_amd64.deb
-  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-common_4.19.304-1_all.deb
 5be778ad9fec8bfef484c28f7833e4ddeaee2e8c9bc21a645617ab2f976e6e7b:
   type: redhat
   packages:
@@ -4533,6 +4526,12 @@
   type: redhat
   packages:
   - http---amazonlinux.us-west-2.amazonaws.com-blobstore-e3cdf44c0e0e6f058b33096b5db1b4284f6f83c8c49848fca9dc50428c656eb8-kernel-devel-4.14.198-152.320.amzn2.x86_64.rpm
+6a1f02110f8910d9266220881df6920b8d1bb79d79e1f5e1662435c72cda6996:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.316-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-amd64_4.19.304-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-common_4.19.304-1_all.deb
 6c1dfbcdd64910765b0072868287a093242fe7b3569b6b2b2dadcbcdfdc009c2:
   type: ubuntu
   packages:
@@ -24213,6 +24212,12 @@ d4fe7bfd66ebd1617e62a84eb80e72125d97a2ab897b60e785b017be8caad343:
   packages:
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-headers-4.15.0-2090-aws-fips_4.15.0-2090.96_amd64.deb
   - https---esm.ubuntu.com-fips-updates-ubuntu-pool-main-l-linux-aws-fips-linux-aws-fips-headers-4.15.0-2090_4.15.0-2090.96_all.deb
+d4ee1329de27322bf38397031e73fcf3f856755237670ca8d56607230a6eb623:
+  type: debian
+  packages:
+  - http---security.debian.org-pool-updates-main-l-linux-linux-kbuild-4.19_4.19.316-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-cloud-amd64_4.19.304-1_amd64.deb
+  - http---security.debian.org-pool-updates-main-l-linux-linux-headers-4.19.0-26-common_4.19.304-1_all.deb
 d4cff6cabd53fc0baf179602506990362722d18f6b5b267cf932a6dcbe0c7c23:
   type: suse
   packages:
